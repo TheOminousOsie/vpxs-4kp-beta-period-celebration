@@ -1,0 +1,385 @@
+{
+    "commit_count": 39,
+    "commits": [
+      {
+        "hash": "2833e9c0f54dc3c3661bbd0ed31281d603535809",
+        "date": "2026-09-09 22:52:36 -0400",
+        "author": "evilwraith",
+        "message": "Coffee Joe launcher updates 2\n\nAmerican Graffiti\nJP's Attack From Mars LE\nJames Cameron's Avatar\nBlack Pyramid\nChrono Trigger\nCreature From The Black Lagoon\nCirqus Voltaire\nHardbody\nF-14 Tomcat\nJudge Dredd\nDiner\nDr. Dude\nHigh Roller Casino\nJP's LOTR\nRobocop\nSimpsons Pinball Party\nStranger Things\nTaxi\nTMNT\nTMNT Remix - also folder rename\nTorpedo Alley\nTransformers Pro\nTransformers G1\nWhoa Nellie\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/launcher.png"}
+        ]
+      },
+      {
+        "hash": "2ab62c360d52ada0545e2cac6801810c79f84235",
+        "date": "2026-08-17 16:31:38 -0400",
+        "author": "evilwraith",
+        "message": "FPS updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 7d259146..0f72e87e 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -1,7 +1,7 @@\n ---\n backglassVPSId: \"-62c-nUf5t\"\n backglassChecksum: \"E6867A078132A7EEDC38ED9C1144D428\"\n-fps: 50\n+fps: 60\n romVPSId: \"d4nESeqt\"\n romChecksum: \"e1f87e7c99a9889e063049832601b733\"\n coloredROMVPSId: \"uJsvDC9nsB\""}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 1123dc46..7d259146 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassVPSId: \"-62c-nUf5t\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"E6867A078132A7EEDC38ED9C1144D428\"\n-  - \"B9823A08C45166F726FB02E6FC0DFB55\"\n-fps: 60\n+backglassChecksum: \"E6867A078132A7EEDC38ED9C1144D428\"\n+fps: 50\n romVPSId: \"d4nESeqt\"\n romChecksum: \"e1f87e7c99a9889e063049832601b733\"\n coloredROMVPSId: \"uJsvDC9nsB\"\n@@ -18,8 +15,5 @@ testers:\n   - \"mcap\"\n   - \"OminousOsie\"\n vpxVPSId: \"m78OeFSG\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"ead413c3d1199577bd11e7fe8c5ba2ff\"\n-  - \"7210BCEE152ED6D70F041C2C2D857A36\"\n+vpxChecksum: \"ead413c3d1199577bd11e7fe8c5ba2ff\"\n tableNotes: \"Download 1.3.rar\""}
+        ]
+      },
+      {
+        "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
+        "date": "2026-07-17 19:48:12 -0400",
+        "author": "evilwraith",
+        "message": "FPS updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 121dbcf5..1123dc46 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -4,7 +4,7 @@ backglassArchiveFormat: \"zip\"\n backglassChecksum:\n   - \"E6867A078132A7EEDC38ED9C1144D428\"\n   - \"B9823A08C45166F726FB02E6FC0DFB55\"\n-fps: 50\n+fps: 60\n romVPSId: \"d4nESeqt\"\n romChecksum: \"e1f87e7c99a9889e063049832601b733\"\n coloredROMVPSId: \"uJsvDC9nsB\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 7d259146..121dbcf5 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"-62c-nUf5t\"\n-backglassChecksum: \"E6867A078132A7EEDC38ED9C1144D428\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"E6867A078132A7EEDC38ED9C1144D428\"\n+  - \"B9823A08C45166F726FB02E6FC0DFB55\"\n fps: 50\n romVPSId: \"d4nESeqt\"\n romChecksum: \"e1f87e7c99a9889e063049832601b733\"\n@@ -15,5 +18,8 @@ testers:\n   - \"mcap\"\n   - \"OminousOsie\"\n vpxVPSId: \"m78OeFSG\"\n-vpxChecksum: \"ead413c3d1199577bd11e7fe8c5ba2ff\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"ead413c3d1199577bd11e7fe8c5ba2ff\"\n+  - \"7210BCEE152ED6D70F041C2C2D857A36\"\n tableNotes: \"Download 1.3.rar\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.ini", "diff": "diff --git a/external/vpx-cftbl/table.ini b/external/vpx-cftbl/table.ini\nindex 8453bcdf..2a4cd02a 100644\n--- a/external/vpx-cftbl/table.ini\n+++ b/external/vpx-cftbl/table.ini\n@@ -1,24 +1,23 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.291789\n-ViewCabScaleY = 1.068181\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.266145\n+ViewCabScaleY = 0.999641\n+ViewCabScaleZ = 0.931460\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 9.045301\n-ViewCabVOfs = -32.212208\n-ViewCabWindowTop = 376.987946\n+ViewCabHOfs = 12.844003\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 289.945862\n ViewCabWindowBot = 98.423241\n+ToneMapper = 0\n \n [Player]\n ScreenPlayerY = 16.256607\n ScreenPlayerZ = 95.316154\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.312510\n+EmissionScale = 0.403535\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n JoyAddCredit2Key = 1\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+AAFactor = 0.87\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 7de44257..7d259146 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -5,7 +5,8 @@ fps: 50\n romVPSId: \"d4nESeqt\"\n romChecksum: \"e1f87e7c99a9889e063049832601b733\"\n coloredROMVPSId: \"uJsvDC9nsB\"\n-coloredROMChecksum: \"96cba80f368abad3526ce8e97ac25a91\"\n+coloredROMChecksum: \"B1AD4E3FEDC499F965E6D083B2F9289E\"\n+coloredROMnotes: \"Download version 2.0.0\"\n tableVPSId: \"OiRcNWYu\"\n tagline: >-\n   \"The boys around here call it \"The Black Lagoon\"\n@@ -16,5 +17,3 @@ testers:\n vpxVPSId: \"m78OeFSG\"\n vpxChecksum: \"ead413c3d1199577bd11e7fe8c5ba2ff\"\n tableNotes: \"Download 1.3.rar\"\n-applyFixes:\n-  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex 902c833d..66e3ef2e 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -50,7 +50,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n <br>"}
+        ]
+      },
+      {
+        "hash": "f4b0cc799bc21114521ae37449fe8011cbb2de4a",
+        "date": "2025-06-01 22:40:16 -0300",
+        "author": "Bla1ze",
+        "message": "DUNE RM/CFTBL BG Update\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 44a26662..7de44257 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -1,6 +1,6 @@\n ---\n backglassVPSId: \"-62c-nUf5t\"\n-backglassChecksum: \"4b424ca8cb9be22000e7916183f0e1df\"\n+backglassChecksum: \"E6867A078132A7EEDC38ED9C1144D428\"\n fps: 50\n romVPSId: \"d4nESeqt\"\n romChecksum: \"e1f87e7c99a9889e063049832601b733\""}
+        ]
+      },
+      {
+        "hash": "43e06a78576a8d7069d79fee2da8885f7e817af7",
+        "date": "2025-04-30 11:28:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed BOM\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex 3b6c2441..902c833d 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -1,4 +1,4 @@\n-﻿﻿# Creature from the Black Lagoon (Bally 1992)\n+﻿# Creature from the Black Lagoon (Bally 1992)\n \n ![Table Preview](../../images/vpx-creature-preview.jpg)\n "}
+        ]
+      },
+      {
+        "hash": "5424a8122d5eb54371b2435888f2d337df05dc43",
+        "date": "2025-04-30 11:23:31 +0100",
+        "author": "OminousOsie",
+        "message": "Added lloydbraun to the wiz team\n\nAdded lloydbraun to the wiz team\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex 747c783a..3b6c2441 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -47,7 +47,7 @@ __*We hope you enjoy!!*__\n \n *The VPXS 4KP Wizard team:*\n <pre>\n-- n-i-x            - Mox\n+- n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n - mrandromeda      - SScorpio         - TechZombie"}
+        ]
+      },
+      {
+        "hash": "8eb058ced1aeb71415a3bc8868438b800d84772d",
+        "date": "2025-04-27 21:41:27 -0300",
+        "author": "Bla1ze",
+        "message": "Transparent Removal\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/launcher.png"}
+        ]
+      },
+      {
+        "hash": "689a96f7b8e1f1e29652add57cf2d0aded5f3b96",
+        "date": "2025-04-27 20:49:38 -0300",
+        "author": "Bla1ze",
+        "message": "Launcher Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/launcher.png"}
+        ]
+      },
+      {
+        "hash": "5781a74d394a0b5e5296225ece6bc90eb4544185",
+        "date": "2025-04-26 15:13:50 +0100",
+        "author": "OminousOsie",
+        "message": "Updated starship\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/launcher.png"}
+        ]
+      },
+      {
+        "hash": "01c7e252332b06a5a09e3bfaa60664142a54042f",
+        "date": "2025-04-16 10:44:26 +0100",
+        "author": "OminousOsie",
+        "message": "Added the full team to the readme\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex ef65f3dd..747c783a 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -1,4 +1,4 @@\n-﻿# Creature from the Black Lagoon (Bally 1992)\n+﻿﻿# Creature from the Black Lagoon (Bally 1992)\n \n ![Table Preview](../../images/vpx-creature-preview.jpg)\n \n@@ -41,7 +41,17 @@ This table is available through the Table Manager Wizard, which makes installati\n \n Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n <br>\n <br>"}
+        ]
+      },
+      {
+        "hash": "ea6d17c32b6201508759ff21067bbebd5da41606",
+        "date": "2025-04-08 22:51:49 -0400",
+        "author": "pointdablame",
+        "message": "Updated Wizard wave 1 images\n\nUpdating images to new standard resolutions and schemes, and  adding Legends Unchained logo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/launcher.png"}
+        ]
+      },
+      {
+        "hash": "6c2a220adac96b5ed5b84500eba9d819bca0cc87",
+        "date": "2025-04-08 15:22:54 +0100",
+        "author": "OminousOsie",
+        "message": "Italic the tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex 9b8f9de1..ef65f3dd 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -35,7 +35,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Creature from the Black Lagoon`**\n 5.  Follow the on-screen instructions to download and upload the required files\n-6. \"The boys around here call it \"The Black Lagoon\" - a paradise. Only they say nobody has ever come back to prove it.\"\n+6. *\"The boys around here call it \"The Black Lagoon\" - a paradise. Only they say nobody has ever come back to prove it.\"*\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "ec024f091d11b71aef0144fb31e7d1b020df9223",
+        "date": "2025-04-08 15:09:40 +0100",
+        "author": "OminousOsie",
+        "message": "Update to readmes to readd tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex 3724edd2..9b8f9de1 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -1,4 +1,4 @@\n-# Creature from the Black Lagoon (Bally 1992)\n+﻿# Creature from the Black Lagoon (Bally 1992)\n \n ![Table Preview](../../images/vpx-creature-preview.jpg)\n \n@@ -35,6 +35,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Creature from the Black Lagoon`**\n 5.  Follow the on-screen instructions to download and upload the required files\n+6. \"The boys around here call it \"The Black Lagoon\" - a paradise. Only they say nobody has ever come back to prove it.\"\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "fc0d56610828d67cf98a55aefbbc06a0957ab609",
+        "date": "2025-04-08 12:37:37 +0100",
+        "author": "OminousOsie",
+        "message": "More readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex f2081b12..3724edd2 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -2,35 +2,48 @@\n \n ![Table Preview](../../images/vpx-creature-preview.jpg)\n \n-Authors: [fuzzel](https://www.vpforums.org/index.php?showuser=69907)\n-Version: 1.3\n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13349)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-Version: 3.0\n-Download: [VP Universe](https://vpuniverse.com/files/file/12155-creature-from-the-black-lagoon-bally-1992-b2s-with-full-dmd/)\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n \n-ROM\n+<br>\n \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1169)\n+**VPXS 4KP Testers:**\n+  - mcap\n+  - OminousOsie 🌸\n \n-Color DMD\n+<br>\n \n-Author: [ebor](https://vpuniverse.com/profile/29168-ebor/)\n-Download: [VP Universe](https://vpuniverse.com/files/file/20079-creature-from-the-black-lagoon-bally-1992-dmd-64-colors-serum-format/)\n-Place the .cRZ file \"external\\vpx-cftbl\\pinmame\\altcolor\\cftbl_l4\" (create the folders if needed)\n+---\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Creature from the Black Lagoon`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-## Instructions\n+__*We hope you enjoy!!   - the VPXS 4KP team!*__\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-cftbl.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "5219f7cf2871459b52390eb7736ada33628a07b5",
+        "date": "2025-04-05 23:36:57 +0100",
+        "author": "OminousOsie",
+        "message": "Final updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "34a19ac19b1dd3f52bf5413bf64cd94ca93c44a3",
+        "date": "2025-04-05 09:18:06 -0400",
+        "author": "pointdablame",
+        "message": "Wizard tables - updated launcher images\n\nUpdated:\n- 1-2-3\n- 24\n- Ali\n- Andromeda\n- Adventures of Rocky & Bullwinkle\n- Asteroid Annie\n- Avengers, JP's\n- Banzai Run\n- Batman Forever\n- Baywatch\n- Big Trouble in Little China\n- Big Bang Bar\n- Black Pyramid\n- Cactus Canyon\n- Centigrade 37\n- Creature From the Black Lagoon\n- Champion Pub\n- Cosmic\n- Deadpool\n- Diner\n- Dirty Harry\n- Doctor Who\n- Dolly Parton\n- Drakor\n- F-14 Tomcat\n- Fathom\n- Firepower\n- Firepower II\n- Fortnite\n- Guns N' Roses\n- Godzilla\n- Guardians of the Galaxy\n- Hardbody\n- Bond 60th\n- Jurassic Park\n- Last Action Hero\n- Mata Hari\n- Meteor\n- Mission Impossible\n- Medieval Madness\n- Monster Bash\n- Mousin' Around\n- No Fear - Dangerous Sports\n- Quicksilver\n- Scared Stiff\n- Seawitch\n- Street Fighter II\n- South Park\n- Tales From the Crypt\n- Vortex\n- Wrath of Olympus\n- Whirlwind\n- Zissou\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/launcher.png"}
+        ]
+      },
+      {
+        "hash": "87cae9cd5bf355d8d03d06f3d98490e529b62e88",
+        "date": "2025-04-05 01:12:11 -0500",
+        "author": "Silentkat4000",
+        "message": "Free Play Updates 2\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "f4fd3d2eaf622c9b82a605a04be7c6b53cbd84ff",
+        "date": "2025-03-28 10:21:52 +0000",
+        "author": "OminousOsie",
+        "message": "Added wizard yml owners to testers list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 7420131d..44a26662 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -12,6 +12,7 @@ tagline: >-\n   - a paradise. Only they say nobody has ever come back to prove it.\"\n testers:\n   - \"mcap\"\n+  - \"OminousOsie\"\n vpxVPSId: \"m78OeFSG\"\n vpxChecksum: \"ead413c3d1199577bd11e7fe8c5ba2ff\"\n tableNotes: \"Download 1.3.rar\""}
+        ]
+      },
+      {
+        "hash": "7e67b094bef6bd4fdeca11e7d17ca950e087d474",
+        "date": "2025-03-24 17:55:05 +0000",
+        "author": "OminousOsie",
+        "message": "Added bass fixes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 6e39fe77..7420131d 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -15,3 +15,5 @@ testers:\n vpxVPSId: \"m78OeFSG\"\n vpxChecksum: \"ead413c3d1199577bd11e7fe8c5ba2ff\"\n tableNotes: \"Download 1.3.rar\"\n+applyFixes:\n+  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "1eb272befb77a48146ccd322d4099c845b20ca15",
+        "date": "2025-03-24 15:02:00 +0000",
+        "author": "OminousOsie",
+        "message": "Moved to >-\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 96a19c72..6e39fe77 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -7,7 +7,7 @@ romChecksum: \"e1f87e7c99a9889e063049832601b733\"\n coloredROMVPSId: \"uJsvDC9nsB\"\n coloredROMChecksum: \"96cba80f368abad3526ce8e97ac25a91\"\n tableVPSId: \"OiRcNWYu\"\n-tagline: |\n+tagline: >-\n   \"The boys around here call it \"The Black Lagoon\"\n   - a paradise. Only they say nobody has ever come back to prove it.\"\n testers:"}
+        ]
+      },
+      {
+        "hash": "aa75a01d12fb6adc748411703064f89982eb6d83",
+        "date": "2025-03-24 09:57:47 +0000",
+        "author": "OminousOsie",
+        "message": "Updated lit strings\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 447b6760..96a19c72 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -7,7 +7,9 @@ romChecksum: \"e1f87e7c99a9889e063049832601b733\"\n coloredROMVPSId: \"uJsvDC9nsB\"\n coloredROMChecksum: \"96cba80f368abad3526ce8e97ac25a91\"\n tableVPSId: \"OiRcNWYu\"\n-tagline: \"The boys around here call it \\\"The Black Lagoon\\\" - a paradise. Only they say nobody has ever come back to prove it.\"\n+tagline: |\n+  \"The boys around here call it \"The Black Lagoon\"\n+  - a paradise. Only they say nobody has ever come back to prove it.\"\n testers:\n   - \"mcap\"\n vpxVPSId: \"m78OeFSG\""}
+        ]
+      },
+      {
+        "hash": "0e92d265dcbd0a8fddf2606cafd3c2b7d70206d2",
+        "date": "2025-03-24 09:23:49 +0000",
+        "author": "OminousOsie",
+        "message": "Fixed yml and updated lint\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 2d6b845f..447b6760 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -7,7 +7,7 @@ romChecksum: \"e1f87e7c99a9889e063049832601b733\"\n coloredROMVPSId: \"uJsvDC9nsB\"\n coloredROMChecksum: \"96cba80f368abad3526ce8e97ac25a91\"\n tableVPSId: \"OiRcNWYu\"\n-tagline: \"The boys around here call it \"The Black Lagoon\" - a paradise. Only they say nobody has ever come back to prove it.\"\n+tagline: \"The boys around here call it \\\"The Black Lagoon\\\" - a paradise. Only they say nobody has ever come back to prove it.\"\n testers:\n   - \"mcap\"\n vpxVPSId: \"m78OeFSG\"\n"}
+        ]
+      },
+      {
+        "hash": "266821b169409b0dc1c37f85941fc2b36d39254d",
+        "date": "2025-03-24 01:26:39 +0000",
+        "author": "OminousOsie",
+        "message": "yml formatting\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 72e6cc41..2d6b845f 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -12,4 +12,4 @@ testers:\n   - \"mcap\"\n vpxVPSId: \"m78OeFSG\"\n vpxChecksum: \"ead413c3d1199577bd11e7fe8c5ba2ff\"\n-tableNotes: \"Download 1.3.rar\"\n\\ No newline at end of file\n+tableNotes: \"Download 1.3.rar\""}
+        ]
+      },
+      {
+        "hash": "f97b737805c3710c4206ec673c16ae88e53e1f52",
+        "date": "2025-03-24 01:18:39 +0000",
+        "author": "OminousOsie",
+        "message": "Added margin to all testers in ymls\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex 4c9f3d6b..72e6cc41 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -7,9 +7,9 @@ romChecksum: \"e1f87e7c99a9889e063049832601b733\"\n coloredROMVPSId: \"uJsvDC9nsB\"\n coloredROMChecksum: \"96cba80f368abad3526ce8e97ac25a91\"\n tableVPSId: \"OiRcNWYu\"\n-tagline: \"\"\n+tagline: \"The boys around here call it \"The Black Lagoon\" - a paradise. Only they say nobody has ever come back to prove it.\"\n testers:\n-- \"mcap\"\n+  - \"mcap\"\n vpxVPSId: \"m78OeFSG\"\n vpxChecksum: \"ead413c3d1199577bd11e7fe8c5ba2ff\"\n tableNotes: \"Download 1.3.rar\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "ea98b8544ce38b3e7f01f71b9c18e821bddbadf6",
+        "date": "2025-03-22 22:23:13 +0000",
+        "author": "OminousOsie",
+        "message": "Added dinner yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nindex c317cb37..4c9f3d6b 100644\n--- a/external/vpx-cftbl/table.yml\n+++ b/external/vpx-cftbl/table.yml\n@@ -1,7 +1,7 @@\n ---\n backglassVPSId: \"-62c-nUf5t\"\n backglassChecksum: \"4b424ca8cb9be22000e7916183f0e1df\"\n-fps: 40\n+fps: 50\n romVPSId: \"d4nESeqt\"\n romChecksum: \"e1f87e7c99a9889e063049832601b733\"\n coloredROMVPSId: \"uJsvDC9nsB\""}
+        ]
+      },
+      {
+        "hash": "2f13245c3e6e933e9853d83e4df579885d56a8e7",
+        "date": "2025-03-22 22:14:04 +0000",
+        "author": "OminousOsie",
+        "message": "Updated cftbl POV + FPS\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex 93d94fcc..f2081b12 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -27,7 +27,7 @@ Place the .cRZ file \"external\\vpx-cftbl\\pinmame\\altcolor\\cftbl_l4\" (create the f\n Minimum VPX Standalone build: 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n \n ## Instructions\n "},
+          {"status": "M", "path": "external/vpx-cftbl/table.ini", "diff": "diff --git a/external/vpx-cftbl/table.ini b/external/vpx-cftbl/table.ini\nindex ae89b3ce..8453bcdf 100644\n--- a/external/vpx-cftbl/table.ini\n+++ b/external/vpx-cftbl/table.ini\n@@ -1,17 +1,24 @@\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.291789\n+ViewCabScaleY = 1.068181\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 9.045301\n+ViewCabVOfs = -32.212208\n+ViewCabWindowTop = 376.987946\n+ViewCabWindowBot = 98.423241\n+\n [Player]\n-BallTrailStrength = 0.490196\n-OverrideTableEmissionScale = 0\n+ScreenPlayerY = 16.256607\n+ScreenPlayerZ = 95.316154\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.312510\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n JoyAddCredit2Key = 1\n \n-[TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.686207\n-ViewCabScaleY = 0.876622\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -68.714005\n-ViewCabPlayerY = 25.488993\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+[Standalone]\n+BackBufferScale = 0.416666\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "f4ebb62edbedd26e0f0a7cfd41bb03198ab09fa4",
+        "date": "2025-03-22 21:59:08 +0000",
+        "author": "OminousOsie",
+        "message": "Updated launcher.png and added cftbl yml\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-cftbl/table.yml", "diff": "diff --git a/external/vpx-cftbl/table.yml b/external/vpx-cftbl/table.yml\nnew file mode 100644\nindex 00000000..c317cb37\n--- /dev/null\n+++ b/external/vpx-cftbl/table.yml\n@@ -0,0 +1,15 @@\n+---\n+backglassVPSId: \"-62c-nUf5t\"\n+backglassChecksum: \"4b424ca8cb9be22000e7916183f0e1df\"\n+fps: 40\n+romVPSId: \"d4nESeqt\"\n+romChecksum: \"e1f87e7c99a9889e063049832601b733\"\n+coloredROMVPSId: \"uJsvDC9nsB\"\n+coloredROMChecksum: \"96cba80f368abad3526ce8e97ac25a91\"\n+tableVPSId: \"OiRcNWYu\"\n+tagline: \"\"\n+testers:\n+- \"mcap\"\n+vpxVPSId: \"m78OeFSG\"\n+vpxChecksum: \"ead413c3d1199577bd11e7fe8c5ba2ff\"\n+tableNotes: \"Download 1.3.rar\"\n\\ No newline at end of file\n"},
+          {"status": "M", "path": "external/vpx-cftbl/launcher.png"},
+          {"status": "M", "path": "external/vpx-cftbl/table.ini", "diff": "diff --git a/external/vpx-cftbl/table.ini b/external/vpx-cftbl/table.ini\nindex 3acbeeda..ae89b3ce 100644\n--- a/external/vpx-cftbl/table.ini\n+++ b/external/vpx-cftbl/table.ini\n@@ -1,6 +1,7 @@\n [Player]\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 0\n+JoyAddCredit2Key = 1\n \n [TableOverride]\n ViewCabMode = 0"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-cftbl/pinmame/altcolor/cftbl_l4/.gitkeep", "diff": "diff --git a/external/vpx-cftbl/pinmame/altcolor/cftbl_l4/.gitkeep b/external/vpx-cftbl/pinmame/altcolor/cftbl_l4/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-cftbl/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-cftbl/pinmame/cfg/.gitkeep b/external/vpx-cftbl/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-cftbl/pinmame/cfg/cftbl_l4.cfg", "diff": "diff --git a/external/vpx-cftbl/pinmame/cfg/cftbl_l4.cfg b/external/vpx-cftbl/pinmame/cfg/cftbl_l4.cfg\ndeleted file mode 100644\nindex 598dd7dc..00000000\nBinary files a/external/vpx-cftbl/pinmame/cfg/cftbl_l4.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-cftbl/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-cftbl/pinmame/cfg/default.cfg b/external/vpx-cftbl/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-cftbl/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-cftbl/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-cftbl/pinmame/ini/.gitkeep b/external/vpx-cftbl/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-cftbl/pinmame/ini/cftbl_l4.ini", "diff": "diff --git a/external/vpx-cftbl/pinmame/ini/cftbl_l4.ini b/external/vpx-cftbl/pinmame/ini/cftbl_l4.ini\ndeleted file mode 100644\nindex 28ec15cf..00000000\n--- a/external/vpx-cftbl/pinmame/ini/cftbl_l4.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-cftbl/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-cftbl/pinmame/nvram/.gitkeep b/external/vpx-cftbl/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-cftbl/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-cftbl/pinmame/roms/.gitkeep b/external/vpx-cftbl/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-cftbl/vpx-cftbl.xml", "diff": "diff --git a/external/vpx-cftbl/vpx-cftbl.xml b/external/vpx-cftbl/vpx-cftbl.xml\ndeleted file mode 100644\nindex db2ac702..00000000\n--- a/external/vpx-cftbl/vpx-cftbl.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Creature from the Black Lagoon</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-cftbl/Creature From The Black Lagoon (Bally 1992).ini->external/vpx-cftbl/table.ini", "diff": "diff --git a/external/vpx-cftbl/Creature From The Black Lagoon (Bally 1992).ini b/external/vpx-cftbl/table.ini\nsimilarity index 100%\nrename from external/vpx-cftbl/Creature From The Black Lagoon (Bally 1992).ini\nrename to external/vpx-cftbl/table.ini"},
+          {"status": "R-from", "path": "external/vpx-cftbl/pinmame/nvram/cftbl_l4.nv->external/vpx-cftbl/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-cftbl/vpx-cftbl.png->external/vpx-cftbl/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-cftbl/Creature From The Black Lagoon (Bally 1992).ini->external/vpx-cftbl/table.ini", "diff": "diff --git a/external/vpx-cftbl/Creature From The Black Lagoon (Bally 1992).ini b/external/vpx-cftbl/table.ini\nsimilarity index 100%\nrename from external/vpx-cftbl/Creature From The Black Lagoon (Bally 1992).ini\nrename to external/vpx-cftbl/table.ini"},
+          {"status": "R-to", "path": "external/vpx-cftbl/pinmame/nvram/cftbl_l4.nv->external/vpx-cftbl/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-cftbl/vpx-cftbl.png->external/vpx-cftbl/launcher.png"}
+        ]
+      },
+      {
+        "hash": "822aa6fe7d9748c9ba8fa25514a3cfc8f9f778a7",
+        "date": "2025-01-26 14:57:41 -0600",
+        "author": "bhhobb",
+        "message": "Update README.md moved image",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex 8b0d93fe..93d94fcc 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -1,6 +1,6 @@\n # Creature from the Black Lagoon (Bally 1992)\n \n-![Table Preview](https://github.com/bhobman/vpx-previews/blob/13360cabcdc1f230579a35ba1f4b4b1fc180898d/vpx-creature-preview.jpg)\n+![Table Preview](../../images/vpx-creature-preview.jpg)\n \n Authors: [fuzzel](https://www.vpforums.org/index.php?showuser=69907)\n Version: 1.3\n"}
+        ]
+      },
+      {
+        "hash": "d9b5f7f13744fa1e6ff68ff3ae51fe080ec068fb",
+        "date": "2025-01-17 23:19:59 -0600",
+        "author": "bhhobb",
+        "message": "Update README.md Preview Image",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex bdfb5f2d..8b0d93fe 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -1,6 +1,6 @@\n # Creature from the Black Lagoon (Bally 1992)\n \n-![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=68675&id=13349&full=1)\n+![Table Preview](https://github.com/bhobman/vpx-previews/blob/13360cabcdc1f230579a35ba1f4b4b1fc180898d/vpx-creature-preview.jpg)\n \n Authors: [fuzzel](https://www.vpforums.org/index.php?showuser=69907)\n Version: 1.3\n"}
+        ]
+      },
+      {
+        "hash": "def23209b4a2125c3701e64e406235c6304a5db0",
+        "date": "2024-08-06 22:31:14 -0400",
+        "author": "n-i-x",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex 85a9c51a..bdfb5f2d 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -20,7 +20,7 @@ Color DMD\n \n Author: [ebor](https://vpuniverse.com/profile/29168-ebor/)\n Download: [VP Universe](https://vpuniverse.com/files/file/20079-creature-from-the-black-lagoon-bally-1992-dmd-64-colors-serum-format/)\n-Place the .cRZ file \"external\\vpx-acdcluci\\pinmame\\altcolor\\cftbl_l4\" (create the folders if needed)\n+Place the .cRZ file \"external\\vpx-cftbl\\pinmame\\altcolor\\cftbl_l4\" (create the folders if needed)\n \n ## Status \n \n@@ -33,4 +33,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-cftbl.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file\n+- Download the table and directb2s versions listed above and copy them into this folder\n"}
+        ]
+      },
+      {
+        "hash": "e2b6223d19d8f0cd0adc80cf4dfb273685f156bc",
+        "date": "2024-08-06 20:31:14 -0500",
+        "author": "Mike",
+        "message": "added altcolor folders\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-cftbl/pinmame/altcolor/cftbl_l4/.gitkeep", "diff": "diff --git a/external/vpx-cftbl/pinmame/altcolor/cftbl_l4/.gitkeep b/external/vpx-cftbl/pinmame/altcolor/cftbl_l4/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b\n"}
+        ]
+      },
+      {
+        "hash": "42d1b25a3f0539003be2afddc59884e4effab7a1",
+        "date": "2024-08-06 20:28:59 -0500",
+        "author": "Mike",
+        "message": "added cRZ links\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex d798bace..85a9c51a 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -16,6 +16,12 @@ ROM\n \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1169)\n \n+Color DMD\n+\n+Author: [ebor](https://vpuniverse.com/profile/29168-ebor/)\n+Download: [VP Universe](https://vpuniverse.com/files/file/20079-creature-from-the-black-lagoon-bally-1992-dmd-64-colors-serum-format/)\n+Place the .cRZ file \"external\\vpx-acdcluci\\pinmame\\altcolor\\cftbl_l4\" (create the folders if needed)\n+\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n"}
+        ]
+      },
+      {
+        "hash": "6ca0dc65c4e9c8b2b06802b592806d73fb814850",
+        "date": "2024-08-06 10:14:52 -0500",
+        "author": "Mike",
+        "message": "mass update of readme's\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nindex ef485d82..d798bace 100644\n--- a/external/vpx-cftbl/README.md\n+++ b/external/vpx-cftbl/README.md\n@@ -16,9 +16,6 @@ ROM\n \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1169)\n \n-SHA: \n-MD5: \n-\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013"}
+        ]
+      },
+      {
+        "hash": "9ac62f42c616ec3bd69b0e34a621f90054a0c238",
+        "date": "2024-08-03 22:44:04 -0500",
+        "author": "Mike",
+        "message": "adding 12 vpx tables\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-cftbl/Creature From The Black Lagoon (Bally 1992).ini", "diff": "diff --git a/external/vpx-cftbl/Creature From The Black Lagoon (Bally 1992).ini b/external/vpx-cftbl/Creature From The Black Lagoon (Bally 1992).ini\nnew file mode 100644\nindex 00000000..3acbeeda\n--- /dev/null\n+++ b/external/vpx-cftbl/Creature From The Black Lagoon (Bally 1992).ini\t\n@@ -0,0 +1,16 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+OverrideTableEmissionScale = 0\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.686207\n+ViewCabScaleY = 0.876622\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -68.714005\n+ViewCabPlayerY = 25.488993\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-cftbl/README.md", "diff": "diff --git a/external/vpx-cftbl/README.md b/external/vpx-cftbl/README.md\nnew file mode 100644\nindex 00000000..ef485d82\n--- /dev/null\n+++ b/external/vpx-cftbl/README.md\n@@ -0,0 +1,33 @@\n+# Creature from the Black Lagoon (Bally 1992)\n+\n+![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=68675&id=13349&full=1)\n+\n+Authors: [fuzzel](https://www.vpforums.org/index.php?showuser=69907)\n+Version: 1.3\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13349)\n+\n+DirectB2S\n+\n+Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n+Version: 3.0\n+Download: [VP Universe](https://vpuniverse.com/files/file/12155-creature-from-the-black-lagoon-bally-1992-b2s-with-full-dmd/)\n+\n+ROM\n+\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1169)\n+\n+SHA: \n+MD5: \n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-cftbl.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-cftbl/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-cftbl/pinmame/cfg/.gitkeep b/external/vpx-cftbl/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-cftbl/pinmame/cfg/cftbl_l4.cfg", "diff": "diff --git a/external/vpx-cftbl/pinmame/cfg/cftbl_l4.cfg b/external/vpx-cftbl/pinmame/cfg/cftbl_l4.cfg\nnew file mode 100644\nindex 00000000..598dd7dc\nBinary files /dev/null and b/external/vpx-cftbl/pinmame/cfg/cftbl_l4.cfg differ"},
+          {"status": "A", "path": "external/vpx-cftbl/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-cftbl/pinmame/cfg/default.cfg b/external/vpx-cftbl/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-cftbl/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-cftbl/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-cftbl/pinmame/ini/.gitkeep b/external/vpx-cftbl/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-cftbl/pinmame/ini/cftbl_l4.ini", "diff": "diff --git a/external/vpx-cftbl/pinmame/ini/cftbl_l4.ini b/external/vpx-cftbl/pinmame/ini/cftbl_l4.ini\nnew file mode 100644\nindex 00000000..28ec15cf\n--- /dev/null\n+++ b/external/vpx-cftbl/pinmame/ini/cftbl_l4.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+cheat=0\n+sound=1\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-cftbl/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-cftbl/pinmame/nvram/.gitkeep b/external/vpx-cftbl/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-cftbl/pinmame/nvram/cftbl_l4.nv"},
+          {"status": "A", "path": "external/vpx-cftbl/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-cftbl/pinmame/roms/.gitkeep b/external/vpx-cftbl/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-cftbl/vpx-cftbl.png"},
+          {"status": "A", "path": "external/vpx-cftbl/vpx-cftbl.xml", "diff": "diff --git a/external/vpx-cftbl/vpx-cftbl.xml b/external/vpx-cftbl/vpx-cftbl.xml\nnew file mode 100644\nindex 00000000..db2ac702\n--- /dev/null\n+++ b/external/vpx-cftbl/vpx-cftbl.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Creature from the Black Lagoon</name>\n+</root>"}
+        ]
+      }
+    ]
+}

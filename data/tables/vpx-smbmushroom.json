@@ -1,0 +1,138 @@
+{
+    "commit_count": 11,
+    "commits": [
+      {
+        "hash": "9c964b3bc08604bd9b5b1333f23439f9ed234aea",
+        "date": "2026-08-12 22:38:15 -0400",
+        "author": "evilwraith",
+        "message": "Update SMBMW\n\nLauncher with new logo\nnvram in pinball mode with 2 balls\nadjusted ini\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-smbmushroom/launcher.png"},
+          {"status": "M", "path": "external/vpx-smbmushroom/nvram.nv"},
+          {"status": "M", "path": "external/vpx-smbmushroom/table.ini", "diff": "diff --git a/external/vpx-smbmushroom/table.ini b/external/vpx-smbmushroom/table.ini\nindex 785e8998..5862e6f5 100644\n--- a/external/vpx-smbmushroom/table.ini\n+++ b/external/vpx-smbmushroom/table.ini\n@@ -5,31 +5,32 @@ EmissionScale = 0.420000\n MusicVolume = 100\n SoundVolume = 100\n MaxTextDimension = 4096\n+ScreenPlayerY = 0.000000\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 0.850000\n-ViewCabScaleY = 1.035000\n+ViewCabScaleX = 0.745000\n+ViewCabScaleY = 0.880000\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = 0.000000\n-ViewCabWindowTop = 261.232178\n-ViewCabWindowBot = 97.818230\n+ViewCabVOfs = -3.000000\n+ViewCabWindowTop = 170.449463\n+ViewCabWindowBot = 0.000000\n ToneMapper = 0\n Difficulty = 0.500000\n \n-[Standalone]\n-POVLinkTableScaleXY = 0\n-\n [TableOption]\n-Ball Shadow = 0.000000\n+Ball Shadow = 1.000000\n Lut = 0.000000\n-Rails and rail lights in FS mode = 0.000000\n-Mars Light (Beacon) = 1.000000\n+Rails and rail lights in FS mode = 1.000000\n+Mars Light (Beacon) = 0.000000\n Flashers Intensity = 1.000000\n-Backglass Mode = 2.000000\n+Backglass Mode = 0.000000\n Instruction Cards = 0.000000\n-Side Blades = 0.000000\n+Side Blades = 3.000000\n PinCab Glass Scratches = 0.000000\n-Show VR options * Restart of options menu required = 0.000000\n\\ No newline at end of file\n+Show VR options * Restart of options menu required = 0.000000\n+\n+[Standalone]\n+POVLinkTableScaleXY = 0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "b34ee4c4b6d569904c98b3ff5dd1f9662bb7cea2",
+        "date": "2026-08-12 22:34:12 -0400",
+        "author": "MissleToad",
+        "message": "Add Super Mario Bros Mushroom World For PDubs (#2095)\n\n* Add smbmushroom\n\nAdding for pdubs\n\n* Update rom hash\n\n* Update nvram.nv\n\n* Update table.ini\n\n* Update launcher and nvram\n\nupdate to pionta's launcher and wraith's nvram",
+        "files": [
+          {"status": "A", "path": "external/vpx-smbmushroom/table.yml", "diff": "diff --git a/external/vpx-smbmushroom/table.yml b/external/vpx-smbmushroom/table.yml\nnew file mode 100644\nindex 00000000..99d5b8d5\n--- /dev/null\n+++ b/external/vpx-smbmushroom/table.yml\n@@ -0,0 +1,23 @@\n+---\n+backglassChecksum: \"147A65768A2144F7E139397A795724DF\"\n+backglassNotes: \"Download - Super Mario Brothers MW (Premier1992).zip\"\n+backglassVPSId: \"jFg5TNDfbA\"\n+coloredROMChecksum:\n+  - \"7EFED7904C7F82B4D64801E091BC0678\"\n+  - \"1EDD59FC2B3FF85E7A80FD540AA426F4\"\n+coloredROMNotes: \"Download - SMBMW.pal & SMBMW.vni\"\n+coloredROMPin2DMD: true\n+coloredROMVPSId: \"f3xxBNMCL-\"\n+fps: 60\n+romChecksum: \"AFAFCA672215A770F69EE8DD0198F920\"\n+romNotes: \"Download - smbmush.zip\"\n+romUrlOverride: \"https://pinballnirvana.com/forums/resources/smbmush.2318/\"\n+romVersionOverride: \"smbmush\"\n+tableNotes: \"Download - Super Mario Bros. Mushroom World (Premier 1992) v1.0.4i.vpx\"\n+tableVPSId: \"WC_n7c7q\"\n+tagline: \"It's me Mario. How many tickets can you win?\"\n+testers:\n+  - \"MissleToad\"\n+  - \"Wraith\"\n+vpxChecksum: \"153B20C5659DA35DA784C5A6CE94B92B\"\n+vpxVPSId: \"zVFKTgg6Dn\"\n"},
+          {"status": "M", "path": "external/vpx-smbmushroom/README.md", "diff": "diff --git a/external/vpx-smbmushroom/README.md b/external/vpx-smbmushroom/README.md\nindex 81126cd3..4e250365 100644\n--- a/external/vpx-smbmushroom/README.md\n+++ b/external/vpx-smbmushroom/README.md\n@@ -1,31 +1,61 @@\n-﻿# Super Mario Bros. Mushroom World (Premier 1992)\n+# Super Mario Bros. Mushroom World (Gottlieb 1992)\n \n-![Table Preview](../../images/vpx-smbmushroom.png)\n+![Table Preview](../../images/zVFKTgg6Dn-preview.webp)\n \n-Authors: [retro27](https://vpuniverse.com/profile/4085-retro27/)  \n-Version: 1.0.4i  \n-Download: [VP Universe](https://vpuniverse.com/files/file/20871-super-mario-bros-mushroom-world-premier-1992/)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 1.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/18003-super-mario-brothers-mushroom-world-premier-1992-b2s-with-full-dmd/)\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n-ROM\n+<br>\n \n-Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/smbmush.2318/)\n+**VPXS 4KP Testers:**\n+  - MissleToad\n+  - Wraith\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 45 |\n+---\n \n-## Instructions\n+<br>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+## ❇️ Available in the Wizard! 🪄✨\n \n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Super Mario Bros. Mushroom World (Gottlieb 1992)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"It's me Mario. How many tickets can you win?\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-smbmushroom/launcher.png"},
+          {"status": "M", "path": "external/vpx-smbmushroom/nvram.nv"},
+          {"status": "M", "path": "external/vpx-smbmushroom/table.ini", "diff": "diff --git a/external/vpx-smbmushroom/table.ini b/external/vpx-smbmushroom/table.ini\nindex 959ea90c..785e8998 100644\n--- a/external/vpx-smbmushroom/table.ini\n+++ b/external/vpx-smbmushroom/table.ini\n@@ -1,12 +1,35 @@\n+[Player]\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.420000\n+MusicVolume = 100\n+SoundVolume = 100\n+MaxTextDimension = 4096\n+\n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.898940\n-ViewCabScaleY = 0.808194\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 1.429992\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 0.850000\n+ViewCabScaleY = 1.035000\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 261.232178\n+ViewCabWindowBot = 97.818230\n+ToneMapper = 0\n+Difficulty = 0.500000\n+\n+[Standalone]\n+POVLinkTableScaleXY = 0\n+\n+[TableOption]\n+Ball Shadow = 0.000000\n+Lut = 0.000000\n+Rails and rail lights in FS mode = 0.000000\n+Mars Light (Beacon) = 1.000000\n+Flashers Intensity = 1.000000\n+Backglass Mode = 2.000000\n+Instruction Cards = 0.000000\n+Side Blades = 0.000000\n+PinCab Glass Scratches = 0.000000\n+Show VR options * Restart of options menu required = 0.000000\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-smbmushroom/README.md", "diff": "diff --git a/external/vpx-smbmushroom/README.md b/external/vpx-smbmushroom/README.md\nindex 53787976..81126cd3 100644\n--- a/external/vpx-smbmushroom/README.md\n+++ b/external/vpx-smbmushroom/README.md\n@@ -1,4 +1,4 @@\n-# Super Mario Bros. Mushroom World (Premier 1992)\n+﻿# Super Mario Bros. Mushroom World (Premier 1992)\n \n ![Table Preview](../../images/vpx-smbmushroom.png)\n \n@@ -26,6 +26,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-smbmushroom/README.md", "diff": "diff --git a/external/vpx-smbmushroom/README.md b/external/vpx-smbmushroom/README.md\nindex 837b0353..53787976 100644\n--- a/external/vpx-smbmushroom/README.md\n+++ b/external/vpx-smbmushroom/README.md\n@@ -25,7 +25,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-smbmushroom/README.md", "diff": "diff --git a/external/vpx-smbmushroom/README.md b/external/vpx-smbmushroom/README.md\nindex 131d846a..837b0353 100644\n--- a/external/vpx-smbmushroom/README.md\n+++ b/external/vpx-smbmushroom/README.md\n@@ -25,4 +25,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-smbmushroom/README.md", "diff": "diff --git a/external/vpx-smbmushroom/README.md b/external/vpx-smbmushroom/README.md\nindex 5c14cb89..131d846a 100644\n--- a/external/vpx-smbmushroom/README.md\n+++ b/external/vpx-smbmushroom/README.md\n@@ -25,9 +25,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-smbmush.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- Place ROM zip file into vpx-smbmushroom/pinmame/roms folder. DO NOT UNZIP!\n "}
+        ]
+      },
+      {
+        "hash": "8969f3cce6d9de7205da4af9bb3e4de6c73686a3",
+        "date": "2025-04-01 16:16:33 +0100",
+        "author": "OminousOsie",
+        "message": "Updated image links to ones in the repo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-smbmushroom/README.md", "diff": "diff --git a/external/vpx-smbmushroom/README.md b/external/vpx-smbmushroom/README.md\nindex 9d7515d0..5c14cb89 100644\n--- a/external/vpx-smbmushroom/README.md\n+++ b/external/vpx-smbmushroom/README.md\n@@ -1,6 +1,6 @@\n # Super Mario Bros. Mushroom World (Premier 1992)\n \n-![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_07/smbmwCabinet.png.02e3ce47ce5dedac1a32b48bfba6f790.png)\n+![Table Preview](../../images/vpx-smbmushroom.png)\n \n Authors: [retro27](https://vpuniverse.com/profile/4085-retro27/)  \n Version: 1.0.4i  \n@@ -30,3 +30,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Download the table and directb2s versions listed above and copy them into this folder\n - Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n - Place ROM zip file into vpx-smbmushroom/pinmame/roms folder. DO NOT UNZIP!\n+"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-smbmushroom/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/cfg/.gitkeep b/external/vpx-smbmushroom/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-smbmushroom/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/cfg/default.cfg b/external/vpx-smbmushroom/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-smbmushroom/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-smbmushroom/pinmame/cfg/smbmush.cfg", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/cfg/smbmush.cfg b/external/vpx-smbmushroom/pinmame/cfg/smbmush.cfg\ndeleted file mode 100644\nindex 11aaf3bb..00000000\nBinary files a/external/vpx-smbmushroom/pinmame/cfg/smbmush.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-smbmushroom/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/ini/.gitkeep b/external/vpx-smbmushroom/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-smbmushroom/pinmame/ini/smbmush.ini", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/ini/smbmush.ini b/external/vpx-smbmushroom/pinmame/ini/smbmush.ini\ndeleted file mode 100644\nindex 28ec15cf..00000000\n--- a/external/vpx-smbmushroom/pinmame/ini/smbmush.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-smbmushroom/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/nvram/.gitkeep b/external/vpx-smbmushroom/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-smbmushroom/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/roms/.gitkeep b/external/vpx-smbmushroom/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-smbmushroom/vpx-smbmushroom.xml", "diff": "diff --git a/external/vpx-smbmushroom/vpx-smbmushroom.xml b/external/vpx-smbmushroom/vpx-smbmushroom.xml\ndeleted file mode 100644\nindex d5d56605..00000000\n--- a/external/vpx-smbmushroom/vpx-smbmushroom.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Super Mario Bros. Mushroom World</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-smbmushroom/Super Mario Bros. Mushroom World (Premier 1992).ini->external/vpx-smbmushroom/table.ini", "diff": "diff --git a/external/vpx-smbmushroom/Super Mario Bros. Mushroom World (Premier 1992).ini b/external/vpx-smbmushroom/table.ini\nsimilarity index 100%\nrename from external/vpx-smbmushroom/Super Mario Bros. Mushroom World (Premier 1992).ini\nrename to external/vpx-smbmushroom/table.ini"},
+          {"status": "R-from", "path": "external/vpx-smbmushroom/pinmame/nvram/smbmush.nv->external/vpx-smbmushroom/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-smbmushroom/vpx-smbmushroom.png->external/vpx-smbmushroom/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-smbmushroom/Super Mario Bros. Mushroom World (Premier 1992).ini->external/vpx-smbmushroom/table.ini", "diff": "diff --git a/external/vpx-smbmushroom/Super Mario Bros. Mushroom World (Premier 1992).ini b/external/vpx-smbmushroom/table.ini\nsimilarity index 100%\nrename from external/vpx-smbmushroom/Super Mario Bros. Mushroom World (Premier 1992).ini\nrename to external/vpx-smbmushroom/table.ini"},
+          {"status": "R-to", "path": "external/vpx-smbmushroom/pinmame/nvram/smbmush.nv->external/vpx-smbmushroom/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-smbmushroom/vpx-smbmushroom.png->external/vpx-smbmushroom/launcher.png"}
+        ]
+      },
+      {
+        "hash": "5bfe75ace6a37f8ee68211cb42532e5714ca4b16",
+        "date": "2025-02-06 12:13:10 -0800",
+        "author": "CoffeeAtJoes",
+        "message": "Issue #1051 Fixes\n\nFixed:\nvpx naming convention\nreplaced nvram\nreplaced png\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-smbmushroom/vpx-smbmushroom.png"},
+          {"status": "D", "path": "external/vpx-smbmushroom/vpx-smbmush.png"},
+          {"status": "M", "path": "external/vpx-smbmushroom/pinmame/nvram/smbmush.nv"},
+          {"status": "R-from", "path": "external/vpx-smbmushroom/vpx-smbmush.xml->external/vpx-smbmushroom/vpx-smbmushroom.xml", "diff": "diff --git a/external/vpx-smbmushroom/vpx-smbmush.xml b/external/vpx-smbmushroom/vpx-smbmushroom.xml\nsimilarity index 100%\nrename from external/vpx-smbmushroom/vpx-smbmush.xml\nrename to external/vpx-smbmushroom/vpx-smbmushroom.xml\n"},
+          {"status": "R-to", "path": "external/vpx-smbmushroom/vpx-smbmush.xml->external/vpx-smbmushroom/vpx-smbmushroom.xml", "diff": "diff --git a/external/vpx-smbmushroom/vpx-smbmush.xml b/external/vpx-smbmushroom/vpx-smbmushroom.xml\nsimilarity index 100%\nrename from external/vpx-smbmushroom/vpx-smbmush.xml\nrename to external/vpx-smbmushroom/vpx-smbmushroom.xml\n"}
+        ]
+      },
+      {
+        "hash": "9ddf6c4f1512168ba489b1140936e53b4960aedd",
+        "date": "2024-09-02 15:42:29 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Instruction updates for vpx-smbmushroom",
+        "files": [
+          {"status": "M", "path": "external/vpx-smbmushroom/README.md", "diff": "diff --git a/external/vpx-smbmushroom/README.md b/external/vpx-smbmushroom/README.md\nindex 44a6f839..9d7515d0 100644\n--- a/external/vpx-smbmushroom/README.md\n+++ b/external/vpx-smbmushroom/README.md\n@@ -2,14 +2,14 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_07/smbmwCabinet.png.02e3ce47ce5dedac1a32b48bfba6f790.png)\n \n-Authors: [retro27](https://vpuniverse.com/profile/4085-retro27/)\n-Version: 1.0.4i\n+Authors: [retro27](https://vpuniverse.com/profile/4085-retro27/)  \n+Version: 1.0.4i  \n Download: [VP Universe](https://vpuniverse.com/files/file/20871-super-mario-bros-mushroom-world-premier-1992/)\n \n DirectB2S\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-Version: 1.0\n+Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+Version: 1.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/18003-super-mario-brothers-mushroom-world-premier-1992-b2s-with-full-dmd/)\n \n ROM\n@@ -27,4 +27,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-smbmush.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n+- Place ROM zip file into vpx-smbmushroom/pinmame/roms folder. DO NOT UNZIP!\n"}
+        ]
+      },
+      {
+        "hash": "b0c28b656c661ecb36150ba03634463b3affc13a",
+        "date": "2024-09-02 10:04:54 -0500",
+        "author": "Mike",
+        "message": "smbmush added\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-smbmushroom/README.md", "diff": "diff --git a/external/vpx-smbmushroom/README.md b/external/vpx-smbmushroom/README.md\nnew file mode 100644\nindex 00000000..44a6f839\n--- /dev/null\n+++ b/external/vpx-smbmushroom/README.md\n@@ -0,0 +1,30 @@\n+# Super Mario Bros. Mushroom World (Premier 1992)\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_07/smbmwCabinet.png.02e3ce47ce5dedac1a32b48bfba6f790.png)\n+\n+Authors: [retro27](https://vpuniverse.com/profile/4085-retro27/)\n+Version: 1.0.4i\n+Download: [VP Universe](https://vpuniverse.com/files/file/20871-super-mario-bros-mushroom-world-premier-1992/)\n+\n+DirectB2S\n+\n+Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n+Version: 1.0\n+Download: [VP Universe](https://vpuniverse.com/files/file/18003-super-mario-brothers-mushroom-world-premier-1992-b2s-with-full-dmd/)\n+\n+ROM\n+\n+Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/smbmush.2318/)\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 45 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-smbmush.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-smbmushroom/Super Mario Bros. Mushroom World (Premier 1992).ini", "diff": "diff --git a/external/vpx-smbmushroom/Super Mario Bros. Mushroom World (Premier 1992).ini b/external/vpx-smbmushroom/Super Mario Bros. Mushroom World (Premier 1992).ini\nnew file mode 100644\nindex 00000000..959ea90c\n--- /dev/null\n+++ b/external/vpx-smbmushroom/Super Mario Bros. Mushroom World (Premier 1992).ini\t\n@@ -0,0 +1,12 @@\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.898940\n+ViewCabScaleY = 0.808194\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 1.429992\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-smbmushroom/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/cfg/.gitkeep b/external/vpx-smbmushroom/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-smbmushroom/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/cfg/default.cfg b/external/vpx-smbmushroom/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-smbmushroom/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-smbmushroom/pinmame/cfg/smbmush.cfg", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/cfg/smbmush.cfg b/external/vpx-smbmushroom/pinmame/cfg/smbmush.cfg\nnew file mode 100644\nindex 00000000..11aaf3bb\nBinary files /dev/null and b/external/vpx-smbmushroom/pinmame/cfg/smbmush.cfg differ"},
+          {"status": "A", "path": "external/vpx-smbmushroom/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/ini/.gitkeep b/external/vpx-smbmushroom/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-smbmushroom/pinmame/ini/smbmush.ini", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/ini/smbmush.ini b/external/vpx-smbmushroom/pinmame/ini/smbmush.ini\nnew file mode 100644\nindex 00000000..28ec15cf\n--- /dev/null\n+++ b/external/vpx-smbmushroom/pinmame/ini/smbmush.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+cheat=0\n+sound=1\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-smbmushroom/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/nvram/.gitkeep b/external/vpx-smbmushroom/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-smbmushroom/pinmame/nvram/smbmush.nv"},
+          {"status": "A", "path": "external/vpx-smbmushroom/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-smbmushroom/pinmame/roms/.gitkeep b/external/vpx-smbmushroom/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-smbmushroom/vpx-smbmush.png"},
+          {"status": "A", "path": "external/vpx-smbmushroom/vpx-smbmush.xml", "diff": "diff --git a/external/vpx-smbmushroom/vpx-smbmush.xml b/external/vpx-smbmushroom/vpx-smbmush.xml\nnew file mode 100644\nindex 00000000..d5d56605\n--- /dev/null\n+++ b/external/vpx-smbmushroom/vpx-smbmush.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Super Mario Bros. Mushroom World</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

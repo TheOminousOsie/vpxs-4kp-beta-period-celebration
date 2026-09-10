@@ -1,0 +1,216 @@
+{
+    "commit_count": 20,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nindex b277469a..3a34d4c4 100644\n--- a/external/vpx-incrediblehulk/table.yml\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -12,8 +12,5 @@ tagline: \"'Don't make me angry. You won't like me when I'm angry.'\"\n testers:\n   - \"Wraith\"\n   - \"pointdablame\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"3C554326479202F39C30760AE3A846D5\"\n-  - \"5474FBB21E18B9BC85850659730F6DE8\"\n+vpxChecksum: \"3C554326479202F39C30760AE3A846D5\"\n vpxVPSId: \"bBFpBE0jtM\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nindex 3a34d4c4..b277469a 100644\n--- a/external/vpx-incrediblehulk/table.yml\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -12,5 +12,8 @@ tagline: \"'Don't make me angry. You won't like me when I'm angry.'\"\n testers:\n   - \"Wraith\"\n   - \"pointdablame\"\n-vpxChecksum: \"3C554326479202F39C30760AE3A846D5\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"3C554326479202F39C30760AE3A846D5\"\n+  - \"5474FBB21E18B9BC85850659730F6DE8\"\n vpxVPSId: \"bBFpBE0jtM\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/table.ini", "diff": "diff --git a/external/vpx-incrediblehulk/table.ini b/external/vpx-incrediblehulk/table.ini\nindex ba284558..aa17cbb8 100644\n--- a/external/vpx-incrediblehulk/table.ini\n+++ b/external/vpx-incrediblehulk/table.ini\n@@ -1,15 +1,19 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+\n [Player]\n BallTrailStrength = 0.392157\n OverrideTableEmissionScale = 0\n+ScreenPlayerY = 8.022799\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.169850\n-ViewCabScaleY = 1.130170\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.166323\n+ViewCabScaleY = 1.000172\n+ViewCabScaleZ = 0.870002\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -110.000000\n-ViewCabWindowTop = 325.541931\n-ViewCabWindowBot = 83.953270\n-Difficulty = 0.200310\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 88.676826\n+ViewCabWindowBot = 88.482269\n+Difficulty = 0.200310"},
+          {"status": "M", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nindex ec78d6d7..3a34d4c4 100644\n--- a/external/vpx-incrediblehulk/table.yml\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes:\n-  - \"bass\"\n backglassChecksum: \"5AE9E1DE1DD473B14B132D8121654F20\"\n backglassVPSId: \"A2zMJ7PnRB\"\n fps: 60"}
+        ]
+      },
+      {
+        "hash": "354da50cd9c167a8c82a9aa2948c46bfa2f54d17",
+        "date": "2025-11-17 22:32:42 +0000",
+        "author": "OminousOsie",
+        "message": "Readmes\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-incrediblehulk/dmd.png"},
+          {"status": "M", "path": "external/vpx-incrediblehulk/README.md", "diff": "diff --git a/external/vpx-incrediblehulk/README.md b/external/vpx-incrediblehulk/README.md\nindex f82cd27c..58f78597 100644\n--- a/external/vpx-incrediblehulk/README.md\n+++ b/external/vpx-incrediblehulk/README.md\n@@ -1,43 +1,61 @@\n-﻿The Incredible Hulk (Gottlieb 1979)\n+# Incredible Hulk, The (Gottlieb 1979)\n \n ![Table Preview](../../images/vpx-incrediblehulk.jpg)\n \n-Author: [STYX](https://www.vpforums.org/index.php?s=4f52c8e7de16f297b60b17013bd01932&app=core&module=search&do=user_activity&search_app=downloads&mid=62551)  \n+<br>\n \n-Tested by: Dr_Wraith\n+## *️⃣  Table Statistics\n \n-Version: 1.31\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=18278)\n+<br>\n \n-DirectB2S\n+**VPXS 4KP Testers:**\n+  - Wraith\n+  - pointdablame\n \n-Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+<br>\n \n-Version: 1.0.0\n+---\n \n-Download: [VP Universe](https://vpuniverse.com/files/file/15947-the-incredible-hulk-gottlieb-1979-b2s/)\n+<br>\n \n-ROM\n+## ❇️ Available in the Wizard! 🪄✨\n \n-Download: [Internet Archive](https://archive.org/details/hulk_20240824)\n+<br>\n \n-SHA: CAEA94ABD2E627D9F4A57494016549B705300DEB\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n-MD5: FAC1DF81F93B43F5B93A5E11EED079E9\n+### How to install:\n \n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Incredible Hulk, The (Gottlieb 1979)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"'Don't make me angry. You won't like me when I'm angry.'\"*\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-2026-3b68d7c\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-## Instructions\n+<br>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- \"Don't Make Me Hungry. You Wouldn't Like Me When I'm Hungry.\" 🐾\n+__*We hope you enjoy!!*__\n \n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "c79e36c690c0e686cc408b9e3604c7f635d9c515",
+        "date": "2025-11-17 22:20:45 +0000",
+        "author": "OminousOsie",
+        "message": "remove dmd image cause its capitalised\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-incrediblehulk/DMD.png"}
+        ]
+      },
+      {
+        "hash": "aad4a04cce2f37882b9da55db7adf91b137c10c2",
+        "date": "2025-11-10 23:16:54 -0500",
+        "author": "evilwraith",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nindex 69204815..ec78d6d7 100644\n--- a/external/vpx-incrediblehulk/table.yml\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -12,6 +12,7 @@ tableNotes: \"Download version 1.34\"\n tableVPSId: \"VrMnwhl6\"\n tagline: \"'Don't make me angry. You won't like me when I'm angry.'\"\n testers:\n-  - \"evilwraith\"\n+  - \"Wraith\"\n+  - \"pointdablame\"\n vpxChecksum: \"3C554326479202F39C30760AE3A846D5\"\n vpxVPSId: \"bBFpBE0jtM\"\n"}
+        ]
+      },
+      {
+        "hash": "9428b5857420708143c66f4f5365529a3538591e",
+        "date": "2025-11-09 18:57:49 -0500",
+        "author": "evilwraith",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nindex 55a2a744..69204815 100644\n--- a/external/vpx-incrediblehulk/table.yml\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -7,6 +7,7 @@ fps: 60\n romChecksum: \"46E6F39472FE5310F07C459064CCE4F0\"\n romNotes: \"Use the zip link\"\n romUrlOverride: \"https://archive.org/details/hulk_20240824\"\n+romVersionOverride: \"hulk\"\n tableNotes: \"Download version 1.34\"\n tableVPSId: \"VrMnwhl6\"\n tagline: \"'Don't make me angry. You won't like me when I'm angry.'\"\n"}
+        ]
+      },
+      {
+        "hash": "944f8d9bf5b945b513fc3daf846f7ffdd63e1ba8",
+        "date": "2025-09-06 15:41:57 -0400",
+        "author": "evilwraith",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nindex 70f50bb0..55a2a744 100644\n--- a/external/vpx-incrediblehulk/table.yml\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -4,7 +4,6 @@ applyFixes:\n backglassChecksum: \"5AE9E1DE1DD473B14B132D8121654F20\"\n backglassVPSId: \"A2zMJ7PnRB\"\n fps: 60\n-romBundled: true\n romChecksum: \"46E6F39472FE5310F07C459064CCE4F0\"\n romNotes: \"Use the zip link\"\n romUrlOverride: \"https://archive.org/details/hulk_20240824\"\n"}
+        ]
+      },
+      {
+        "hash": "6f615f19e96615c2f751844f569112165fb8ce38",
+        "date": "2025-08-29 21:19:30 -0400",
+        "author": "evilwraith",
+        "message": "Art!\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-incrediblehulk/DMD.png"},
+          {"status": "M", "path": "external/vpx-incrediblehulk/launcher.png"}
+        ]
+      },
+      {
+        "hash": "527547bddc5ac6233c22f03d431619d6427c25cb",
+        "date": "2025-08-29 12:15:17 -0400",
+        "author": "evilwraith",
+        "message": "yml and ini\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nnew file mode 100644\nindex 00000000..70f50bb0\n--- /dev/null\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -0,0 +1,17 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassChecksum: \"5AE9E1DE1DD473B14B132D8121654F20\"\n+backglassVPSId: \"A2zMJ7PnRB\"\n+fps: 60\n+romBundled: true\n+romChecksum: \"46E6F39472FE5310F07C459064CCE4F0\"\n+romNotes: \"Use the zip link\"\n+romUrlOverride: \"https://archive.org/details/hulk_20240824\"\n+tableNotes: \"Download version 1.34\"\n+tableVPSId: \"VrMnwhl6\"\n+tagline: \"'Don't make me angry. You won't like me when I'm angry.'\"\n+testers:\n+  - \"evilwraith\"\n+vpxChecksum: \"3C554326479202F39C30760AE3A846D5\"\n+vpxVPSId: \"bBFpBE0jtM\"\n"},
+          {"status": "M", "path": "external/vpx-incrediblehulk/table.ini", "diff": "diff --git a/external/vpx-incrediblehulk/table.ini b/external/vpx-incrediblehulk/table.ini\nindex 6a434288..ba284558 100644\n--- a/external/vpx-incrediblehulk/table.ini\n+++ b/external/vpx-incrediblehulk/table.ini\n@@ -3,14 +3,13 @@ BallTrailStrength = 0.392157\n OverrideTableEmissionScale = 0\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.800835\n-ViewCabScaleY = 0.922683\n-ViewCabScaleZ = 0.961380\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 7.806003\n-ViewCabPlayerY = 0.786999\n-ViewCabPlayerZ = -366.949982\n-ViewCabLookAt = -0.033200\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.169850\n+ViewCabScaleY = 1.130170\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -110.000000\n+ViewCabWindowTop = 325.541931\n+ViewCabWindowBot = 83.953270\n+Difficulty = 0.200310\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/README.md", "diff": "diff --git a/external/vpx-incrediblehulk/README.md b/external/vpx-incrediblehulk/README.md\nindex 3874ae49..f82cd27c 100644\n--- a/external/vpx-incrediblehulk/README.md\n+++ b/external/vpx-incrediblehulk/README.md\n@@ -1,4 +1,4 @@\n-The Incredible Hulk (Gottlieb 1979)\n+﻿The Incredible Hulk (Gottlieb 1979)\n \n ![Table Preview](../../images/vpx-incrediblehulk.jpg)\n \n@@ -37,7 +37,7 @@ Minimum VPX Standalone build: 10.8.0-2026-3b68d7c\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Don't Make Me Hungry. You Wouldn't Like Me When I'm Hungry.\" 🐾\n "}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/README.md", "diff": "diff --git a/external/vpx-incrediblehulk/README.md b/external/vpx-incrediblehulk/README.md\nindex 52a5d373..3874ae49 100644\n--- a/external/vpx-incrediblehulk/README.md\n+++ b/external/vpx-incrediblehulk/README.md\n@@ -36,8 +36,8 @@ Minimum VPX Standalone build: 10.8.0-2026-3b68d7c\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Don't Make Me Hungry. You Wouldn't Like Me When I'm Hungry.\" 🐾\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/README.md", "diff": "diff --git a/external/vpx-incrediblehulk/README.md b/external/vpx-incrediblehulk/README.md\nindex 2501d5ef..52a5d373 100644\n--- a/external/vpx-incrediblehulk/README.md\n+++ b/external/vpx-incrediblehulk/README.md\n@@ -36,5 +36,8 @@ Minimum VPX Standalone build: 10.8.0-2026-3b68d7c\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Don't Make Me Hungry. You Wouldn't Like Me When I'm Hungry.\" 🐾\n "}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/README.md", "diff": "diff --git a/external/vpx-incrediblehulk/README.md b/external/vpx-incrediblehulk/README.md\nindex c6ff923b..2501d5ef 100644\n--- a/external/vpx-incrediblehulk/README.md\n+++ b/external/vpx-incrediblehulk/README.md\n@@ -36,8 +36,5 @@ Minimum VPX Standalone build: 10.8.0-2026-3b68d7c\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-junkyard.elf\n-- Download the table, ROM and directb2s versions listed above and copy them into this folder\n - \"Don't Make Me Hungry. You Wouldn't Like Me When I'm Hungry.\" 🐾\n "}
+        ]
+      },
+      {
+        "hash": "b649b5f0abc2a4708232721d3bb5eeb93d09a3b3",
+        "date": "2025-04-01 17:30:08 +0100",
+        "author": "OminousOsie",
+        "message": "Updated the last files\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/README.md", "diff": "diff --git a/external/vpx-incrediblehulk/README.md b/external/vpx-incrediblehulk/README.md\nindex 2e9b39af..c6ff923b 100644\n--- a/external/vpx-incrediblehulk/README.md\n+++ b/external/vpx-incrediblehulk/README.md\n@@ -1,6 +1,6 @@\n The Incredible Hulk (Gottlieb 1979)\n \n-![Table Preview](https://github.com/Dr-Wraith/VPX-Images/blob/main/hulktablepreview.jpg)\n+![Table Preview](../../images/vpx-incrediblehulk.jpg)\n \n Author: [STYX](https://www.vpforums.org/index.php?s=4f52c8e7de16f297b60b17013bd01932&app=core&module=search&do=user_activity&search_app=downloads&mid=62551)  \n \n@@ -40,3 +40,4 @@ Minimum VPX Standalone build: 10.8.0-2026-3b68d7c\n - Add your personalized launcher.elf and rename it to vpx-junkyard.elf\n - Download the table, ROM and directb2s versions listed above and copy them into this folder\n - \"Don't Make Me Hungry. You Wouldn't Like Me When I'm Hungry.\" 🐾\n+"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-incrediblehulk/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/cfg/.gitkeep b/external/vpx-incrediblehulk/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-incrediblehulk/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/cfg/default.cfg b/external/vpx-incrediblehulk/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-incrediblehulk/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-incrediblehulk/pinmame/cfg/hulk.cfg", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/cfg/hulk.cfg b/external/vpx-incrediblehulk/pinmame/cfg/hulk.cfg\ndeleted file mode 100644\nindex d585847f..00000000\nBinary files a/external/vpx-incrediblehulk/pinmame/cfg/hulk.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-incrediblehulk/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/ini/.gitkeep b/external/vpx-incrediblehulk/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-incrediblehulk/pinmame/ini/hulk.ini", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/ini/hulk.ini b/external/vpx-incrediblehulk/pinmame/ini/hulk.ini\ndeleted file mode 100644\nindex 28ec15cf..00000000\n--- a/external/vpx-incrediblehulk/pinmame/ini/hulk.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-incrediblehulk/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/nvram/.gitkeep b/external/vpx-incrediblehulk/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-incrediblehulk/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/roms/.gitkeep b/external/vpx-incrediblehulk/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-incrediblehulk/vpx-incrediblehulk.xml", "diff": "diff --git a/external/vpx-incrediblehulk/vpx-incrediblehulk.xml b/external/vpx-incrediblehulk/vpx-incrediblehulk.xml\ndeleted file mode 100644\nindex 425eb480..00000000\n--- a/external/vpx-incrediblehulk/vpx-incrediblehulk.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Incredible Hulk</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini->external/vpx-incrediblehulk/table.ini", "diff": "diff --git a/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini b/external/vpx-incrediblehulk/table.ini\nsimilarity index 100%\nrename from external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini\nrename to external/vpx-incrediblehulk/table.ini"},
+          {"status": "R-from", "path": "external/vpx-incrediblehulk/pinmame/nvram/hulk.nv->external/vpx-incrediblehulk/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-incrediblehulk/vpx-incrediblehulk.png->external/vpx-incrediblehulk/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini->external/vpx-incrediblehulk/table.ini", "diff": "diff --git a/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini b/external/vpx-incrediblehulk/table.ini\nsimilarity index 100%\nrename from external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini\nrename to external/vpx-incrediblehulk/table.ini"},
+          {"status": "R-to", "path": "external/vpx-incrediblehulk/pinmame/nvram/hulk.nv->external/vpx-incrediblehulk/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-incrediblehulk/vpx-incrediblehulk.png->external/vpx-incrediblehulk/launcher.png"}
+        ]
+      },
+      {
+        "hash": "1846b4098cdffb47bd1e6343b06cf90716bc7a47",
+        "date": "2024-10-30 14:58:00 -0400",
+        "author": "Brandon",
+        "message": "Update Incredible Hulk, The (Gottlieb 1979).ini\n\nCorrect Incredible Hulk POV to make table better fit screen. It was previously cropped off left, bottom of cab was not aligned with bottom of screen, pov keystoned, etc.\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini", "diff": "diff --git a/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini b/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini\nindex 35c90963..6a434288 100644\n--- a/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini\t\n+++ b/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini\t\n@@ -4,13 +4,13 @@ OverrideTableEmissionScale = 0\n \n [TableOverride]\n ViewCabMode = 0\n-ViewCabScaleX = 0.744451\n-ViewCabScaleY = 0.866298\n-ViewCabScaleZ = 0.904995\n+ViewCabScaleX = 0.800835\n+ViewCabScaleY = 0.922683\n+ViewCabScaleZ = 0.961380\n ViewCabRotation = 90.000000\n-ViewCabPlayerX = 45.716999\n-ViewCabPlayerY = 8.272999\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n+ViewCabPlayerX = 7.806003\n+ViewCabPlayerY = 0.786999\n+ViewCabPlayerZ = -366.949982\n+ViewCabLookAt = -0.033200\n ViewCabFOV = 42.999908\n ViewCabLayback = 48.000000\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "db4db1537e32f4b349825c3a56a9b6cbdfd29cdd",
+        "date": "2024-08-29 02:07:37 -0400",
+        "author": "lilalien",
+        "message": "Update Incredible Hulk README.md - Fixing typo in word \"Archive\"",
+        "files": [
+          {"status": "M", "path": "external/vpx-incrediblehulk/README.md", "diff": "diff --git a/external/vpx-incrediblehulk/README.md b/external/vpx-incrediblehulk/README.md\nindex 644032fe..2e9b39af 100644\n--- a/external/vpx-incrediblehulk/README.md\n+++ b/external/vpx-incrediblehulk/README.md\n@@ -20,7 +20,7 @@ Download: [VP Universe](https://vpuniverse.com/files/file/15947-the-incredible-h\n \n ROM\n \n-Download: [Internet Arcive](https://archive.org/details/hulk_20240824)\n+Download: [Internet Archive](https://archive.org/details/hulk_20240824)\n \n SHA: CAEA94ABD2E627D9F4A57494016549B705300DEB\n \n"}
+        ]
+      },
+      {
+        "hash": "33c4ea1ad1a67b2087a77ad97a40469c8de386a3",
+        "date": "2024-08-25 16:43:49 -0400",
+        "author": "Dr-Wraith",
+        "message": "Fixed errors with Hulk.\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-incrediblehulk/VPReg.ini", "diff": "diff --git a/external/vpx-incrediblehulk/VPReg.ini b/external/vpx-incrediblehulk/VPReg.ini\ndeleted file mode 100644\nindex 5904ebbc..00000000\n--- a/external/vpx-incrediblehulk/VPReg.ini\n+++ /dev/null\n@@ -1,11 +0,0 @@\n-[jpsdeadpool]\n-HighScore1=100000\n-HighScore1Name=JSM\n-HighScore2=100000\n-HighScore2Name=NIX\n-HighScore3=100000\n-HighScore3Name=CTH\n-HighScore4=100000\n-HighScore4Name=VPX\n-Credits=0\n-TotalGamesPlayed=1\n\\ No newline at end of file\n"},
+          {"status": "M", "path": "external/vpx-incrediblehulk/README.md", "diff": "diff --git a/external/vpx-incrediblehulk/README.md b/external/vpx-incrediblehulk/README.md\nindex 4d2f8cfc..644032fe 100644\n--- a/external/vpx-incrediblehulk/README.md\n+++ b/external/vpx-incrediblehulk/README.md\n@@ -16,7 +16,7 @@ Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n \n Version: 1.0.0\n \n-Download: [VP Universe](https://vpuniverse.com/files/file/12323-junk-yard-williams-1995-b2s-with-full-dmd/)\n+Download: [VP Universe](https://vpuniverse.com/files/file/15947-the-incredible-hulk-gottlieb-1979-b2s/)\n \n ROM\n "},
+          {"status": "M", "path": "external/vpx-incrediblehulk/vpx-incrediblehulk.png"}
+        ]
+      },
+      {
+        "hash": "227213d99c27cc30964b3cbea28976eb31ae1236",
+        "date": "2024-08-25 12:27:47 -0400",
+        "author": "Dr-Wraith",
+        "message": "Incrediblehulk commit\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini", "diff": "diff --git a/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini b/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini\nnew file mode 100644\nindex 00000000..35c90963\n--- /dev/null\n+++ b/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini\t\n@@ -0,0 +1,16 @@\n+[Player]\n+BallTrailStrength = 0.392157\n+OverrideTableEmissionScale = 0\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.744451\n+ViewCabScaleY = 0.866298\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 45.716999\n+ViewCabPlayerY = 8.272999\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/README.md", "diff": "diff --git a/external/vpx-incrediblehulk/README.md b/external/vpx-incrediblehulk/README.md\nnew file mode 100644\nindex 00000000..4d2f8cfc\n--- /dev/null\n+++ b/external/vpx-incrediblehulk/README.md\n@@ -0,0 +1,42 @@\n+The Incredible Hulk (Gottlieb 1979)\n+\n+![Table Preview](https://github.com/Dr-Wraith/VPX-Images/blob/main/hulktablepreview.jpg)\n+\n+Author: [STYX](https://www.vpforums.org/index.php?s=4f52c8e7de16f297b60b17013bd01932&app=core&module=search&do=user_activity&search_app=downloads&mid=62551)  \n+\n+Tested by: Dr_Wraith\n+\n+Version: 1.31\n+\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=18278)\n+\n+DirectB2S\n+\n+Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+\n+Version: 1.0.0\n+\n+Download: [VP Universe](https://vpuniverse.com/files/file/12323-junk-yard-williams-1995-b2s-with-full-dmd/)\n+\n+ROM\n+\n+Download: [Internet Arcive](https://archive.org/details/hulk_20240824)\n+\n+SHA: CAEA94ABD2E627D9F4A57494016549B705300DEB\n+\n+MD5: FAC1DF81F93B43F5B93A5E11EED079E9\n+\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-2026-3b68d7c\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-junkyard.elf\n+- Download the table, ROM and directb2s versions listed above and copy them into this folder\n+- \"Don't Make Me Hungry. You Wouldn't Like Me When I'm Hungry.\" 🐾"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/VPReg.ini", "diff": "diff --git a/external/vpx-incrediblehulk/VPReg.ini b/external/vpx-incrediblehulk/VPReg.ini\nnew file mode 100644\nindex 00000000..5904ebbc\n--- /dev/null\n+++ b/external/vpx-incrediblehulk/VPReg.ini\n@@ -0,0 +1,11 @@\n+[jpsdeadpool]\n+HighScore1=100000\n+HighScore1Name=JSM\n+HighScore2=100000\n+HighScore2Name=NIX\n+HighScore3=100000\n+HighScore3Name=CTH\n+HighScore4=100000\n+HighScore4Name=VPX\n+Credits=0\n+TotalGamesPlayed=1\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/cfg/.gitkeep b/external/vpx-incrediblehulk/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/cfg/default.cfg b/external/vpx-incrediblehulk/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-incrediblehulk/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/pinmame/cfg/hulk.cfg", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/cfg/hulk.cfg b/external/vpx-incrediblehulk/pinmame/cfg/hulk.cfg\nnew file mode 100644\nindex 00000000..d585847f\nBinary files /dev/null and b/external/vpx-incrediblehulk/pinmame/cfg/hulk.cfg differ"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/ini/.gitkeep b/external/vpx-incrediblehulk/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/pinmame/ini/hulk.ini", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/ini/hulk.ini b/external/vpx-incrediblehulk/pinmame/ini/hulk.ini\nnew file mode 100644\nindex 00000000..28ec15cf\n--- /dev/null\n+++ b/external/vpx-incrediblehulk/pinmame/ini/hulk.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+cheat=0\n+sound=1\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/nvram/.gitkeep b/external/vpx-incrediblehulk/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/pinmame/nvram/hulk.nv"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-incrediblehulk/pinmame/roms/.gitkeep b/external/vpx-incrediblehulk/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/vpx-incrediblehulk.png"},
+          {"status": "A", "path": "external/vpx-incrediblehulk/vpx-incrediblehulk.xml", "diff": "diff --git a/external/vpx-incrediblehulk/vpx-incrediblehulk.xml b/external/vpx-incrediblehulk/vpx-incrediblehulk.xml\nnew file mode 100644\nindex 00000000..425eb480\n--- /dev/null\n+++ b/external/vpx-incrediblehulk/vpx-incrediblehulk.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Incredible Hulk</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

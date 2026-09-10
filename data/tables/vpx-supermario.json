@@ -1,0 +1,176 @@
+{
+    "commit_count": 16,
+    "commits": [
+      {
+        "hash": "380bfd85babef2f6fe36f0fe3076962c11def5fd",
+        "date": "2026-08-05 14:41:44 -0400",
+        "author": "evilwraith",
+        "message": "Update SMB\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/table.ini", "diff": "diff --git a/external/vpx-supermario/table.ini b/external/vpx-supermario/table.ini\nindex 229bcb50..2a49521f 100644\n--- a/external/vpx-supermario/table.ini\n+++ b/external/vpx-supermario/table.ini\n@@ -8,7 +8,7 @@ ScreenInclination = 0.000000\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.400000\n-AAFactor = 0.85\n+AAFactor = 0.90\n MusicVolume = 100\n SoundVolume = 100\n "},
+          {"status": "M", "path": "external/vpx-supermario/table.yml", "diff": "diff --git a/external/vpx-supermario/table.yml b/external/vpx-supermario/table.yml\nindex a6094113..cf090c29 100644\n--- a/external/vpx-supermario/table.yml\n+++ b/external/vpx-supermario/table.yml\n@@ -13,6 +13,7 @@ romVersionOverride: \"smb3\"\n tagline: \"It's-a me, Mario!\"\n testers:\n   - \"MissleToad\"\n+  - \"Wraith\"\n tableVPSId: \"fM3IOgUK\"\n vpxChecksum: \"0D8DCC33353BA7ED8FC611489FA7E2C6\"\n vpxVPSId: \"lzcdTBAV\"\n"}
+        ]
+      },
+      {
+        "hash": "07e5e390db4b04c8229927abead744d839d47fb0",
+        "date": "2026-08-03 22:25:56 -0400",
+        "author": "MissleToad",
+        "message": "Update smb .yml rom instructions  (#2086)\n\n* Update smb .yml rom url\n\nDon't need .zip in a .zip! Thanks Wraith\n\n* Update smb .yml rom instructions\n\nUpdate instructions to use smb3.zip instead of .zip within a .zip\n\n* Update SMB .yml rom instructions\n\npoints to smb3.zip vs. the .zip in a .zip\n\n* Update smb .yml rom instructions\n\nUpdate smb .yml rom instructions",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/table.yml", "diff": "diff --git a/external/vpx-supermario/table.yml b/external/vpx-supermario/table.yml\nindex 45ee70cf..a6094113 100644\n--- a/external/vpx-supermario/table.yml\n+++ b/external/vpx-supermario/table.yml\n@@ -7,7 +7,7 @@ coloredROMNotes: \"Download - smb3.cROMc\"\n coloredROMVPSId: \"b8LTuHqo7N\"\n fps: 60\n romChecksum: \"5BBBF451CDF5353B7B5D69BA17DA8825\"\n-romNotes: \"'smb3.zip' | Extract 'smb3.zip' from - 'smb3_rom for VPinMAME 3.5 (rev 9-20-2022) Zipped rom inside.zip'\"\n+romNotes: \"Download -  smb3.zip\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/smb3.2317/\"\n romVersionOverride: \"smb3\"\n tagline: \"It's-a me, Mario!\"\n"}
+        ]
+      },
+      {
+        "hash": "97285e44a14701f9f33e773469b1f027fd198863",
+        "date": "2026-08-03 14:32:12 -0400",
+        "author": "MissleToad",
+        "message": "Add Super Mario Bros. Gottlieb to Wizard. For Pdubs!  (#2084)\n\n* Add Super Mario Bros. To Wizard\n\nRuns at 60 FPS now.  For Pdubs!  He's been looking for this one 🍄🪠\n\n* Add bundled rom = true for SMB\n\n* Update SMB rom hash\n\nUsed parent.zip hash instead of rom.zip within\n\n* updated SMB rom notes to subord\n\n* Change to Bigus 3.0\n\n* Bigus typo MOD) fix\n\n* AAF and .yml smb3 update\n\n* SMB day_night reduction",
+        "files": [
+          {"status": "A", "path": "external/vpx-supermario/table.yml", "diff": "diff --git a/external/vpx-supermario/table.yml b/external/vpx-supermario/table.yml\nnew file mode 100644\nindex 00000000..45ee70cf\n--- /dev/null\n+++ b/external/vpx-supermario/table.yml\n@@ -0,0 +1,19 @@\n+---\n+backglassChecksum: \"3A3ACB997C7FACD276715F1D72E4D302\"\n+backglassNotes: \"Download - Super Mario Bros (Gottlieb 1992).zip\"\n+backglassVPSId: \"58uBddVSma\"\n+coloredROMChecksum: \"28EF4DD98753686BDE1E57A2F923FDBA\"\n+coloredROMNotes: \"Download - smb3.cROMc\"\n+coloredROMVPSId: \"b8LTuHqo7N\"\n+fps: 60\n+romChecksum: \"5BBBF451CDF5353B7B5D69BA17DA8825\"\n+romNotes: \"'smb3.zip' | Extract 'smb3.zip' from - 'smb3_rom for VPinMAME 3.5 (rev 9-20-2022) Zipped rom inside.zip'\"\n+romUrlOverride: \"https://pinballnirvana.com/forums/resources/smb3.2317/\"\n+romVersionOverride: \"smb3\"\n+tagline: \"It's-a me, Mario!\"\n+testers:\n+  - \"MissleToad\"\n+tableVPSId: \"fM3IOgUK\"\n+vpxChecksum: \"0D8DCC33353BA7ED8FC611489FA7E2C6\"\n+vpxVPSId: \"lzcdTBAV\"\n+tableNotes: \"Bigus (MOD) 3.0\"\n\\ No newline at end of file\n"},
+          {"status": "M", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nindex e4769012..84f37d1c 100644\n--- a/external/vpx-supermario/README.md\n+++ b/external/vpx-supermario/README.md\n@@ -1,36 +1,60 @@\n-﻿# Super Mario Bros. (Gottlieb 1992)\n+# Super Mario Bros. (Gottlieb 1992)\n \n-![Table Preview](../../images/vpx-supermario.png)\n+![Table Preview](../../images/tL02_KcmfI-preview.webp)\n \n-Author: [Gedankekojote97](https://vpuniverse.com/profile/42203-gedankekojote97/)  \n-Version: 1.1  \n-Download: [VP Universe](https://vpuniverse.com/files/file/10223-super-mario-brothers-mod-nfozzy-fleep-sounds-lut/)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Author: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 1.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/18004-super-mario-bros-gottlieb-1992-b2s-with-full-dmd/)\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n-ROM\n+<br>\n \n-Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/smb3.2317/)\n+**VPXS 4KP Testers:**\n+  - MissleToad\n \n-SHA: 0430b932b0f388d12ddcff736406f1b445b0c820\n-MD5: 5bbbf451cdf5353b7b5d69ba17da8825\n+<br>\n \n-## Status \n+---\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n+<br>\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 38 |\n+## ❇️ Available in the Wizard! 🪄✨\n \n-## Instructions\n+<br>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- Unzip \"NEW ROMS for VPinMAME v3.5 FINAL.zip\"; open the folder; use \"smb3.zip\" as the rom\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Super Mario Bros. (Gottlieb 1992)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"It's-a me, Mario!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-supermario/table.ini", "diff": "diff --git a/external/vpx-supermario/table.ini b/external/vpx-supermario/table.ini\nindex 6512fb2f..229bcb50 100644\n--- a/external/vpx-supermario/table.ini\n+++ b/external/vpx-supermario/table.ini\n@@ -1,15 +1,29 @@\n [Player]\n BallTrailStrength = 0.490196\n+ScreenPlayerY = 18.300003\n+ScreenPlayerZ = 97.300018\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.400000\n+AAFactor = 0.85\n+MusicVolume = 100\n+SoundVolume = 100\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.718640\n-ViewCabScaleY = 0.991027\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -27.987009\n-ViewCabPlayerY = 1.265000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.280000\n+ViewCabScaleY = 1.020000\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 261.232178\n+ViewCabWindowBot = 97.818230\n+ToneMapper = 0\n+Difficulty = 0.500000\n+\n+[Standalone]\n+POVLinkTableScaleXY = 0\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nindex 9384a90d..e4769012 100644\n--- a/external/vpx-supermario/README.md\n+++ b/external/vpx-supermario/README.md\n@@ -1,4 +1,4 @@\n-# Super Mario Bros. (Gottlieb 1992)\n+﻿# Super Mario Bros. (Gottlieb 1992)\n \n ![Table Preview](../../images/vpx-supermario.png)\n \n@@ -30,7 +30,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - Unzip \"NEW ROMS for VPinMAME v3.5 FINAL.zip\"; open the folder; use \"smb3.zip\" as the rom\n "}
+        ]
+      },
+      {
+        "hash": "013f69af2b69e407d1b79d8aa0339da5a479d54d",
+        "date": "2025-06-14 18:59:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated launcher images with points work\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/launcher.png"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nindex b143f1c9..9384a90d 100644\n--- a/external/vpx-supermario/README.md\n+++ b/external/vpx-supermario/README.md\n@@ -29,8 +29,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - Unzip \"NEW ROMS for VPinMAME v3.5 FINAL.zip\"; open the folder; use \"smb3.zip\" as the rom\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nindex a5625874..b143f1c9 100644\n--- a/external/vpx-supermario/README.md\n+++ b/external/vpx-supermario/README.md\n@@ -29,4 +29,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - Unzip \"NEW ROMS for VPinMAME v3.5 FINAL.zip\"; open the folder; use \"smb3.zip\" as the rom\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nindex 102401d0..a5625874 100644\n--- a/external/vpx-supermario/README.md\n+++ b/external/vpx-supermario/README.md\n@@ -29,8 +29,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-supermario.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- Unzip \"NEW ROMS for VPinMAME v3.5 FINAL.zip\"; open the folder; drag and drop \"smb3.zip\" to \"external\\vpx-supermario\\pinmame\\roms\"\n+- Unzip \"NEW ROMS for VPinMAME v3.5 FINAL.zip\"; open the folder; use \"smb3.zip\" as the rom"}
+        ]
+      },
+      {
+        "hash": "ae0263ecdbc0f4d964fd9224fc4797b10372d479",
+        "date": "2025-04-01 11:26:24 +0100",
+        "author": "OminousOsie",
+        "message": "Updated table preview images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nindex da5e04b6..102401d0 100644\n--- a/external/vpx-supermario/README.md\n+++ b/external/vpx-supermario/README.md\n@@ -1,6 +1,6 @@\n # Super Mario Bros. (Gottlieb 1992)\n \n-![Table Preview](https://i.imgur.com/2c6T9P7.png)\n+![Table Preview](../../images/vpx-supermario.png)\n \n Author: [Gedankekojote97](https://vpuniverse.com/profile/42203-gedankekojote97/)  \n Version: 1.1  "}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-supermario/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-supermario/pinmame/cfg/.gitkeep b/external/vpx-supermario/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-supermario/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-supermario/pinmame/cfg/default.cfg b/external/vpx-supermario/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-supermario/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-supermario/pinmame/cfg/smb3.cfg", "diff": "diff --git a/external/vpx-supermario/pinmame/cfg/smb3.cfg b/external/vpx-supermario/pinmame/cfg/smb3.cfg\ndeleted file mode 100644\nindex 1bf9ad3b..00000000\nBinary files a/external/vpx-supermario/pinmame/cfg/smb3.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-supermario/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-supermario/pinmame/ini/.gitkeep b/external/vpx-supermario/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-supermario/pinmame/ini/smb3.ini", "diff": "diff --git a/external/vpx-supermario/pinmame/ini/smb3.ini b/external/vpx-supermario/pinmame/ini/smb3.ini\ndeleted file mode 100644\nindex 28ec15cf..00000000\n--- a/external/vpx-supermario/pinmame/ini/smb3.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-supermario/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-supermario/pinmame/nvram/.gitkeep b/external/vpx-supermario/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-supermario/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-supermario/pinmame/roms/.gitkeep b/external/vpx-supermario/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-supermario/vpx-supermario.xml", "diff": "diff --git a/external/vpx-supermario/vpx-supermario.xml b/external/vpx-supermario/vpx-supermario.xml\ndeleted file mode 100644\nindex c2387839..00000000\n--- a/external/vpx-supermario/vpx-supermario.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Super Mario Bros.</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-supermario/Super Mario Bros (Gottlieb 1992).ini->external/vpx-supermario/table.ini", "diff": "diff --git a/external/vpx-supermario/Super Mario Bros (Gottlieb 1992).ini b/external/vpx-supermario/table.ini\nsimilarity index 100%\nrename from external/vpx-supermario/Super Mario Bros (Gottlieb 1992).ini\nrename to external/vpx-supermario/table.ini"},
+          {"status": "R-from", "path": "external/vpx-supermario/pinmame/nvram/smb3.nv->external/vpx-supermario/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-supermario/vpx-supermario.png->external/vpx-supermario/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-supermario/Super Mario Bros (Gottlieb 1992).ini->external/vpx-supermario/table.ini", "diff": "diff --git a/external/vpx-supermario/Super Mario Bros (Gottlieb 1992).ini b/external/vpx-supermario/table.ini\nsimilarity index 100%\nrename from external/vpx-supermario/Super Mario Bros (Gottlieb 1992).ini\nrename to external/vpx-supermario/table.ini"},
+          {"status": "R-to", "path": "external/vpx-supermario/pinmame/nvram/smb3.nv->external/vpx-supermario/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-supermario/vpx-supermario.png->external/vpx-supermario/launcher.png"}
+        ]
+      },
+      {
+        "hash": "b913143f15f074e54d9ae2f7b10f45b7f3d971ec",
+        "date": "2025-01-29 14:15:53 -0400",
+        "author": "Bla1ze",
+        "message": "Update README.md\n\nAdding ROM link.",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nindex 77215f14..da5e04b6 100644\n--- a/external/vpx-supermario/README.md\n+++ b/external/vpx-supermario/README.md\n@@ -14,7 +14,10 @@ Download: [VP Universe](https://vpuniverse.com/files/file/18004-super-mario-bros\n \n ROM\n \n-Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/new-roms-for-vpinmame-v3-5-final.8024/)\n+Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/smb3.2317/)\n+\n+SHA: 0430b932b0f388d12ddcff736406f1b445b0c820\n+MD5: 5bbbf451cdf5353b7b5d69ba17da8825\n \n ## Status \n \n"}
+        ]
+      },
+      {
+        "hash": "328db2f377c1f3b59d847d5c91cea3ba403cbc39",
+        "date": "2024-09-06 02:03:32 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-supermario",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nindex afc3328e..77215f14 100644\n--- a/external/vpx-supermario/README.md\n+++ b/external/vpx-supermario/README.md\n@@ -2,14 +2,14 @@\n \n ![Table Preview](https://i.imgur.com/2c6T9P7.png)\n \n-Authors: [Gedankekojote97](https://vpuniverse.com/profile/42203-gedankekojote97/)\n-Version: 1.1\n+Author: [Gedankekojote97](https://vpuniverse.com/profile/42203-gedankekojote97/)  \n+Version: 1.1  \n Download: [VP Universe](https://vpuniverse.com/files/file/10223-super-mario-brothers-mod-nfozzy-fleep-sounds-lut/)\n \n DirectB2S\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-Version: 1.0\n+Author: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+Version: 1.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/18004-super-mario-bros-gottlieb-1992-b2s-with-full-dmd/)\n \n ROM\n@@ -19,6 +19,7 @@ Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/new-roms\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 38 |\n"}
+        ]
+      },
+      {
+        "hash": "328589f2dcb1ead19c6dac02da6a53e1cfac9795",
+        "date": "2024-08-31 18:36:18 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Cleaning up vpx-supermario instructions",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nindex 629eef36..afc3328e 100644\n--- a/external/vpx-supermario/README.md\n+++ b/external/vpx-supermario/README.md\n@@ -15,7 +15,6 @@ Download: [VP Universe](https://vpuniverse.com/files/file/18004-super-mario-bros\n ROM\n \n Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/new-roms-for-vpinmame-v3-5-final.8024/)\n-Note: Unzip \"NEW ROMS for VPinMAME v3.5 FINAL.zip\"; open the folder; drag and drop \"smb3.zip\" to external\\vpx-supermario\\pinmame\\roms\n \n ## Status \n \n@@ -28,4 +27,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-supermario.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n+- Unzip \"NEW ROMS for VPinMAME v3.5 FINAL.zip\"; open the folder; drag and drop \"smb3.zip\" to \"external\\vpx-supermario\\pinmame\\roms\"\n"}
+        ]
+      },
+      {
+        "hash": "f962f5f5b06cee093d3aa18f06cdc10c9943604a",
+        "date": "2024-08-29 14:44:17 -0500",
+        "author": "Mike",
+        "message": "smb b2s change\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nindex 77d4e098..629eef36 100644\n--- a/external/vpx-supermario/README.md\n+++ b/external/vpx-supermario/README.md\n@@ -10,7 +10,7 @@ DirectB2S\n \n Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n Version: 1.0\n-Download: [VP Universe](https://vpuniverse.com/files/file/18003-super-mario-brothers-mushroom-world-premier-1992-b2s-with-full-dmd/)\n+Download: [VP Universe](https://vpuniverse.com/files/file/18004-super-mario-bros-gottlieb-1992-b2s-with-full-dmd/)\n \n ROM\n \n"}
+        ]
+      },
+      {
+        "hash": "378eb779166a69d41943fa24fb2f8bffb69a9844",
+        "date": "2024-08-16 09:43:55 -0500",
+        "author": "Mike",
+        "message": "table preview images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nindex e9f24c78..77d4e098 100644\n--- a/external/vpx-supermario/README.md\n+++ b/external/vpx-supermario/README.md\n@@ -1,6 +1,6 @@\n # Super Mario Bros. (Gottlieb 1992)\n \n-![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_06/441929458_SuperMarioBrothers1.1.png.4c8c29da2c8b9457a17aa2e77809faef.png)\n+![Table Preview](https://i.imgur.com/2c6T9P7.png)\n \n Authors: [Gedankekojote97](https://vpuniverse.com/profile/42203-gedankekojote97/)\n Version: 1.1\n"}
+        ]
+      },
+      {
+        "hash": "8390ed99083e70ca9a71e44ddee46861589d101a",
+        "date": "2024-08-16 08:43:54 -0500",
+        "author": "Mike",
+        "message": "8 gottlieb tables\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-supermario/README.md", "diff": "diff --git a/external/vpx-supermario/README.md b/external/vpx-supermario/README.md\nnew file mode 100644\nindex 00000000..e9f24c78\n--- /dev/null\n+++ b/external/vpx-supermario/README.md\n@@ -0,0 +1,31 @@\n+# Super Mario Bros. (Gottlieb 1992)\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_06/441929458_SuperMarioBrothers1.1.png.4c8c29da2c8b9457a17aa2e77809faef.png)\n+\n+Authors: [Gedankekojote97](https://vpuniverse.com/profile/42203-gedankekojote97/)\n+Version: 1.1\n+Download: [VP Universe](https://vpuniverse.com/files/file/10223-super-mario-brothers-mod-nfozzy-fleep-sounds-lut/)\n+\n+DirectB2S\n+\n+Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n+Version: 1.0\n+Download: [VP Universe](https://vpuniverse.com/files/file/18003-super-mario-brothers-mushroom-world-premier-1992-b2s-with-full-dmd/)\n+\n+ROM\n+\n+Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/new-roms-for-vpinmame-v3-5-final.8024/)\n+Note: Unzip \"NEW ROMS for VPinMAME v3.5 FINAL.zip\"; open the folder; drag and drop \"smb3.zip\" to external\\vpx-supermario\\pinmame\\roms\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 38 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-supermario.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-supermario/Super Mario Bros (Gottlieb 1992).ini", "diff": "diff --git a/external/vpx-supermario/Super Mario Bros (Gottlieb 1992).ini b/external/vpx-supermario/Super Mario Bros (Gottlieb 1992).ini\nnew file mode 100644\nindex 00000000..6512fb2f\n--- /dev/null\n+++ b/external/vpx-supermario/Super Mario Bros (Gottlieb 1992).ini\t\n@@ -0,0 +1,15 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.718640\n+ViewCabScaleY = 0.991027\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -27.987009\n+ViewCabPlayerY = 1.265000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-supermario/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-supermario/pinmame/cfg/.gitkeep b/external/vpx-supermario/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-supermario/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-supermario/pinmame/cfg/default.cfg b/external/vpx-supermario/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-supermario/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-supermario/pinmame/cfg/smb3.cfg", "diff": "diff --git a/external/vpx-supermario/pinmame/cfg/smb3.cfg b/external/vpx-supermario/pinmame/cfg/smb3.cfg\nnew file mode 100644\nindex 00000000..1bf9ad3b\nBinary files /dev/null and b/external/vpx-supermario/pinmame/cfg/smb3.cfg differ"},
+          {"status": "A", "path": "external/vpx-supermario/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-supermario/pinmame/ini/.gitkeep b/external/vpx-supermario/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-supermario/pinmame/ini/smb3.ini", "diff": "diff --git a/external/vpx-supermario/pinmame/ini/smb3.ini b/external/vpx-supermario/pinmame/ini/smb3.ini\nnew file mode 100644\nindex 00000000..28ec15cf\n--- /dev/null\n+++ b/external/vpx-supermario/pinmame/ini/smb3.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+cheat=0\n+sound=1\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-supermario/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-supermario/pinmame/nvram/.gitkeep b/external/vpx-supermario/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-supermario/pinmame/nvram/smb3.nv"},
+          {"status": "A", "path": "external/vpx-supermario/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-supermario/pinmame/roms/.gitkeep b/external/vpx-supermario/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-supermario/vpx-supermario.png"},
+          {"status": "A", "path": "external/vpx-supermario/vpx-supermario.xml", "diff": "diff --git a/external/vpx-supermario/vpx-supermario.xml b/external/vpx-supermario/vpx-supermario.xml\nnew file mode 100644\nindex 00000000..c2387839\n--- /dev/null\n+++ b/external/vpx-supermario/vpx-supermario.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Super Mario Bros.</name>\n+</root>"}
+        ]
+      }
+    ]
+}

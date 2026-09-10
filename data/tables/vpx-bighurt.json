@@ -1,0 +1,83 @@
+{
+    "commit_count": 8,
+    "commits": [
+      {
+        "hash": "2ac30646579bdf6edaf1eac1fa19af77eb0f198a",
+        "date": "2026-08-03 22:03:15 -0400",
+        "author": "evilwraith",
+        "message": "Update Big Hurt\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bighurt/table.ini", "diff": "diff --git a/external/vpx-bighurt/table.ini b/external/vpx-bighurt/table.ini\nindex ab06fc16..bf9971de 100644\n--- a/external/vpx-bighurt/table.ini\n+++ b/external/vpx-bighurt/table.ini\n@@ -1,19 +1,21 @@\n [Player]\n BallTrailStrength = 0.392157\n OverrideTableEmissionScale = 1\n-ScreenPlayerZ = 90.046921\n-ScreenPlayerY = 14.987705\n-DynamicDayNight = 0\n-EmissionScale = 0.400340\n+ScreenPlayerZ = 90.000000\n+ScreenPlayerY = 15.000000\n+EmissionScale = 0.40034\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.091676\n-ViewCabScaleY = 1.032920\n+ViewCabScaleX = 1.200000\n+ViewCabScaleY = 1.005000\n ViewCabScaleZ = 0.876709\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 9.073299\n+ViewCabHOfs = 0.003924\n ViewCabVOfs = 0.000000\n-ViewCabWindowTop = 162.163895\n-ViewCabWindowBot = 0.282165\n+ViewCabWindowTop = 238.999756\n+ViewCabWindowBot = 100.046387\n ToneMapper = 1\n+\n+[Standalone]\n+POVLinkTableScaleXY = 0\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-bighurt/table.yml", "diff": "diff --git a/external/vpx-bighurt/table.yml b/external/vpx-bighurt/table.yml\nindex f4a3a363..d724abc0 100644\n--- a/external/vpx-bighurt/table.yml\n+++ b/external/vpx-bighurt/table.yml\n@@ -2,17 +2,16 @@\n backglassChecksum: \"1E8EF06D0B1B3825603C2C6C90EA0277\"\n backglassNotes: \"Download 'Version 1.0.0'\"\n backglassVPSId: \"aYlNsefPgT\"\n-coloredROMUrlOverride: \"https://mrman2k7.synology.me:5001/sharing/1dsJGf3wR\"\n coloredROMChecksum: \"4E1A61FF3A60D3C490DE12E2E2248F75\"\n-coloredROMNotes: \"This is a mostly complete WIP\"\n+coloredROMVPSId: \"hWigP4a3_x\"\n fps: 60\n romChecksum: \"20392BF5DA7C349B0154A6978AF09789\"\n romNotes: \"Download 'bighurt.zip'\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/bighurt.1569/\"\n romVersionOverride: \"bighurt\"\n-tableNotes: \"Download 'Big Hurt (Gottlieb 1995) LW.zip'\"\n+tableNotes: \"Download 'Frank Thomas Big Hurt (Gottlieb 1995) LW.zip'\"\n tableVPSId: \"4IwkdORvo_\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"60AABAA5B4B8E6155BAFD07EC8D1AC67\"\n+vpxChecksum: \"EFE5FD0C980A0670B82A3AD22D46220A\"\n vpxVPSId: \"s11IFpCOdr\"\n"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bighurt/table.yml", "diff": "diff --git a/external/vpx-bighurt/table.yml b/external/vpx-bighurt/table.yml\nindex 97b7a07f..f4a3a363 100644\n--- a/external/vpx-bighurt/table.yml\n+++ b/external/vpx-bighurt/table.yml\n@@ -14,8 +14,5 @@ tableNotes: \"Download 'Big Hurt (Gottlieb 1995) LW.zip'\"\n tableVPSId: \"4IwkdORvo_\"\n testers:\n   - \"Wraith\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"60AABAA5B4B8E6155BAFD07EC8D1AC67\"\n-  - \"C3C11AB7F633CF193D870625B5B85404\"\n+vpxChecksum: \"60AABAA5B4B8E6155BAFD07EC8D1AC67\"\n vpxVPSId: \"s11IFpCOdr\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bighurt/table.yml", "diff": "diff --git a/external/vpx-bighurt/table.yml b/external/vpx-bighurt/table.yml\nindex f4a3a363..97b7a07f 100644\n--- a/external/vpx-bighurt/table.yml\n+++ b/external/vpx-bighurt/table.yml\n@@ -14,5 +14,8 @@ tableNotes: \"Download 'Big Hurt (Gottlieb 1995) LW.zip'\"\n tableVPSId: \"4IwkdORvo_\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"60AABAA5B4B8E6155BAFD07EC8D1AC67\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"60AABAA5B4B8E6155BAFD07EC8D1AC67\"\n+  - \"C3C11AB7F633CF193D870625B5B85404\"\n vpxVPSId: \"s11IFpCOdr\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bighurt/table.ini", "diff": "diff --git a/external/vpx-bighurt/table.ini b/external/vpx-bighurt/table.ini\nindex 6bc2a25e..ab06fc16 100644\n--- a/external/vpx-bighurt/table.ini\n+++ b/external/vpx-bighurt/table.ini\n@@ -1,16 +1,19 @@\n [Player]\n BallTrailStrength = 0.392157\n-OverrideTableEmissionScale = 0\n-ScreenPlayerZ = 94.692413\n-AAFactor = 0.95\n+OverrideTableEmissionScale = 1\n+ScreenPlayerZ = 90.046921\n+ScreenPlayerY = 14.987705\n+DynamicDayNight = 0\n+EmissionScale = 0.400340\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.219236\n-ViewCabScaleY = 1.143371\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.091676\n+ViewCabScaleY = 1.032920\n+ViewCabScaleZ = 0.876709\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 2.763500\n-ViewCabVOfs = -79.350433\n-ViewCabWindowTop = 361.652924\n-ViewCabWindowBot = 127.814201\n\\ No newline at end of file\n+ViewCabHOfs = 9.073299\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 162.163895\n+ViewCabWindowBot = 0.282165\n+ToneMapper = 1"},
+          {"status": "M", "path": "external/vpx-bighurt/table.yml", "diff": "diff --git a/external/vpx-bighurt/table.yml b/external/vpx-bighurt/table.yml\nindex 074815af..f4a3a363 100644\n--- a/external/vpx-bighurt/table.yml\n+++ b/external/vpx-bighurt/table.yml\n@@ -1,9 +1,10 @@\n ---\n-applyFixes:\n-  - \"bass\"\n-backglassChecksum: \"B210272690B39C9FE6F4605ACF9D2ACE\"\n-backglassNotes: \"Download 'Big Hurt (premier 1995).zip'\"\n-backglassVPSId: \"IbcnjPqKQn\"\n+backglassChecksum: \"1E8EF06D0B1B3825603C2C6C90EA0277\"\n+backglassNotes: \"Download 'Version 1.0.0'\"\n+backglassVPSId: \"aYlNsefPgT\"\n+coloredROMUrlOverride: \"https://mrman2k7.synology.me:5001/sharing/1dsJGf3wR\"\n+coloredROMChecksum: \"4E1A61FF3A60D3C490DE12E2E2248F75\"\n+coloredROMNotes: \"This is a mostly complete WIP\"\n fps: 60\n romChecksum: \"20392BF5DA7C349B0154A6978AF09789\"\n romNotes: \"Download 'bighurt.zip'\""}
+        ]
+      },
+      {
+        "hash": "b64d6fb5c00dae59722ffb39de3e06302d9b9cdd",
+        "date": "2025-11-17 17:46:31 -0500",
+        "author": "evilwraith",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bighurt/table.yml", "diff": "diff --git a/external/vpx-bighurt/table.yml b/external/vpx-bighurt/table.yml\nindex 49faa7c7..074815af 100644\n--- a/external/vpx-bighurt/table.yml\n+++ b/external/vpx-bighurt/table.yml\n@@ -5,7 +5,7 @@ backglassChecksum: \"B210272690B39C9FE6F4605ACF9D2ACE\"\n backglassNotes: \"Download 'Big Hurt (premier 1995).zip'\"\n backglassVPSId: \"IbcnjPqKQn\"\n fps: 60\n-romChecksum: \"439B34D6DA4DAA3CC2357D776217EDB6\"\n+romChecksum: \"20392BF5DA7C349B0154A6978AF09789\"\n romNotes: \"Download 'bighurt.zip'\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/bighurt.1569/\"\n romVersionOverride: \"bighurt\"\n"}
+        ]
+      },
+      {
+        "hash": "b414e028c63a43e2248bdaa07a7d9db74f8de95b",
+        "date": "2025-11-17 09:57:09 -0500",
+        "author": "evilwraith",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bighurt/table.yml", "diff": "diff --git a/external/vpx-bighurt/table.yml b/external/vpx-bighurt/table.yml\nindex ae306bbc..49faa7c7 100644\n--- a/external/vpx-bighurt/table.yml\n+++ b/external/vpx-bighurt/table.yml\n@@ -5,7 +5,7 @@ backglassChecksum: \"B210272690B39C9FE6F4605ACF9D2ACE\"\n backglassNotes: \"Download 'Big Hurt (premier 1995).zip'\"\n backglassVPSId: \"IbcnjPqKQn\"\n fps: 60\n-romChecksum: \"725445C979765433CBB761F76115B9E2\"\n+romChecksum: \"439B34D6DA4DAA3CC2357D776217EDB6\"\n romNotes: \"Download 'bighurt.zip'\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/bighurt.1569/\"\n romVersionOverride: \"bighurt\"\n"}
+        ]
+      },
+      {
+        "hash": "0fa55965d0992a3fb0fd14a2c4c2a605ec5a9bb6",
+        "date": "2025-11-17 09:38:55 -0500",
+        "author": "evilwraith",
+        "message": "Update launcher.png\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bighurt/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f917b12ed88ecb79ef77a1cee4d1a0e225daa40d",
+        "date": "2025-11-17 00:28:29 -0500",
+        "author": "evilwraith",
+        "message": "Big Hurt\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-bighurt/README.md", "diff": "diff --git a/external/vpx-bighurt/README.md b/external/vpx-bighurt/README.md\nnew file mode 100644\nindex 00000000..066e533e\n--- /dev/null\n+++ b/external/vpx-bighurt/README.md\n@@ -0,0 +1,60 @@\n+# Frank Thomas' Big Hurt (Gottlieb 1995)\n+\n+![Table Preview](../../images/s11IFpCOdr-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Wraith\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Frank Thomas' Big Hurt (Gottlieb 1995)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "A", "path": "external/vpx-bighurt/launcher.png"},
+          {"status": "A", "path": "external/vpx-bighurt/nvram.nv"},
+          {"status": "A", "path": "external/vpx-bighurt/table.ini", "diff": "diff --git a/external/vpx-bighurt/table.ini b/external/vpx-bighurt/table.ini\nnew file mode 100644\nindex 00000000..6bc2a25e\n--- /dev/null\n+++ b/external/vpx-bighurt/table.ini\n@@ -0,0 +1,16 @@\n+[Player]\n+BallTrailStrength = 0.392157\n+OverrideTableEmissionScale = 0\n+ScreenPlayerZ = 94.692413\n+AAFactor = 0.95\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.219236\n+ViewCabScaleY = 1.143371\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 2.763500\n+ViewCabVOfs = -79.350433\n+ViewCabWindowTop = 361.652924\n+ViewCabWindowBot = 127.814201\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-bighurt/table.yml", "diff": "diff --git a/external/vpx-bighurt/table.yml b/external/vpx-bighurt/table.yml\nnew file mode 100644\nindex 00000000..ae306bbc\n--- /dev/null\n+++ b/external/vpx-bighurt/table.yml\n@@ -0,0 +1,17 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassChecksum: \"B210272690B39C9FE6F4605ACF9D2ACE\"\n+backglassNotes: \"Download 'Big Hurt (premier 1995).zip'\"\n+backglassVPSId: \"IbcnjPqKQn\"\n+fps: 60\n+romChecksum: \"725445C979765433CBB761F76115B9E2\"\n+romNotes: \"Download 'bighurt.zip'\"\n+romUrlOverride: \"https://pinballnirvana.com/forums/resources/bighurt.1569/\"\n+romVersionOverride: \"bighurt\"\n+tableNotes: \"Download 'Big Hurt (Gottlieb 1995) LW.zip'\"\n+tableVPSId: \"4IwkdORvo_\"\n+testers:\n+  - \"Wraith\"\n+vpxChecksum: \"60AABAA5B4B8E6155BAFD07EC8D1AC67\"\n+vpxVPSId: \"s11IFpCOdr\"\n"}
+        ]
+      }
+    ]
+}

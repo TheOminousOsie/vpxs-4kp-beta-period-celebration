@@ -1,0 +1,53 @@
+{
+    "commit_count": 5,
+    "commits": [
+      {
+        "hash": "c72c0eed053f578f910ffca5a9fc407398ca0cd0",
+        "date": "2026-07-29 15:40:00 -0400",
+        "author": "evilwraith",
+        "message": "update hashes\n\nDiablo II\nSF2 cROMc\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-diablo2/table.yml", "diff": "diff --git a/external/vpx-diablo2/table.yml b/external/vpx-diablo2/table.yml\nindex 5590fe8a..e6f4d5d2 100644\n--- a/external/vpx-diablo2/table.yml\n+++ b/external/vpx-diablo2/table.yml\n@@ -3,12 +3,12 @@ backglassChecksum: \"F6BDDB5D68BC24FD4821119FB3CB7875\"\n backglassNotes: \"Download 'Diablo 2 (Original 2026) B2S with Full DMD.directb2s'\"\n backglassVPSId: \"BRSaMD1wpn\"\n fps: 60\n-tableNotes: \"Download version 1.2. Extract and move Diablo 2.FlexDMD to table root after install\"\n+tableNotes: \"Download version 1.2.1 Extract and move Diablo 2.FlexDMD to table root after install\"\n tableVPSId: \"XX-Vp5Jlt0\"\n tagline: \"Stay awhile, and listen...\"\n testers:\n   - \"Wraith\"\n   - \"Missile Toad\"\n   - \"pbw23\"\n-vpxChecksum: \"BAC17C6A6511B475A6D8C5B09D55B72D\"\n+vpxChecksum: \"65621624A2F084283B5186739D13551F\"\n vpxVPSId: \"zF8Wx1EpvP\""}
+        ]
+      },
+      {
+        "hash": "91a3716e7b3d0d77c38b06f8a5184ec08b2dcf34",
+        "date": "2026-07-24 11:43:32 -0400",
+        "author": "MissleToad",
+        "message": "Update Diablo II readme tester\n\nadded pbw23.  He playtested new version\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-diablo2/README.md", "diff": "diff --git a/external/vpx-diablo2/README.md b/external/vpx-diablo2/README.md\nindex 913b1b28..6b94623c 100644\n--- a/external/vpx-diablo2/README.md\n+++ b/external/vpx-diablo2/README.md\n@@ -15,6 +15,7 @@\n **VPXS 4KP Testers:**\n   - Wraith\n   - Missile Toad\n+  - pbw23\n \n <br>\n \n"}
+        ]
+      },
+      {
+        "hash": "e97a7f74ae456f12d3a7792a2f7489a91fb0d9e7",
+        "date": "2026-07-24 10:27:52 -0400",
+        "author": "MissleToad",
+        "message": "Diablo II v update to 1.2\n\nHash mismatch due to update.  Updated version to 1.2\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-diablo2/table.yml", "diff": "diff --git a/external/vpx-diablo2/table.yml b/external/vpx-diablo2/table.yml\nindex c8ea9097..5590fe8a 100644\n--- a/external/vpx-diablo2/table.yml\n+++ b/external/vpx-diablo2/table.yml\n@@ -1,13 +1,14 @@\n ---\n-backglassChecksum: \"f6bddb5d68bc24fd4821119fb3cb7875\"\n+backglassChecksum: \"F6BDDB5D68BC24FD4821119FB3CB7875\"\n backglassNotes: \"Download 'Diablo 2 (Original 2026) B2S with Full DMD.directb2s'\"\n backglassVPSId: \"BRSaMD1wpn\"\n fps: 60\n-tableNotes: \"Download version 1.1. Extract and move Diablo 2.FlexDMD to table root after install\"\n+tableNotes: \"Download version 1.2. Extract and move Diablo 2.FlexDMD to table root after install\"\n tableVPSId: \"XX-Vp5Jlt0\"\n tagline: \"Stay awhile, and listen...\"\n testers:\n   - \"Wraith\"\n   - \"Missile Toad\"\n-vpxChecksum: \"8b28e711d08ae5d2784ef81fc18214e2\"\n+  - \"pbw23\"\n+vpxChecksum: \"BAC17C6A6511B475A6D8C5B09D55B72D\"\n vpxVPSId: \"zF8Wx1EpvP\"\n"}
+        ]
+      },
+      {
+        "hash": "d6d3fbeff2c51c87cd8d404cdc1cb6eb037247f9",
+        "date": "2026-07-19 14:37:37 -0400",
+        "author": "MissleToad",
+        "message": "Diablo II .ymo update FlexDMD instructions\n\nAdd Flex DMD instructions to Tablenotes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-diablo2/table.yml", "diff": "diff --git a/external/vpx-diablo2/table.yml b/external/vpx-diablo2/table.yml\nindex a0feea68..c8ea9097 100644\n--- a/external/vpx-diablo2/table.yml\n+++ b/external/vpx-diablo2/table.yml\n@@ -3,7 +3,7 @@ backglassChecksum: \"f6bddb5d68bc24fd4821119fb3cb7875\"\n backglassNotes: \"Download 'Diablo 2 (Original 2026) B2S with Full DMD.directb2s'\"\n backglassVPSId: \"BRSaMD1wpn\"\n fps: 60\n-tableNotes: \"Version 1.1\"\n+tableNotes: \"Download version 1.1. Extract and move Diablo 2.FlexDMD to table root after install\"\n tableVPSId: \"XX-Vp5Jlt0\"\n tagline: \"Stay awhile, and listen...\"\n testers:\n"}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-diablo2/README.md", "diff": "diff --git a/external/vpx-diablo2/README.md b/external/vpx-diablo2/README.md\nnew file mode 100644\nindex 00000000..913b1b28\n--- /dev/null\n+++ b/external/vpx-diablo2/README.md\n@@ -0,0 +1,61 @@\n+# Diablo 2 (Original 2026)\n+\n+![Table Preview](../../images/zF8Wx1EpvP-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ❌ | ❌ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Wraith\n+  - Missile Toad\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Diablo 2 (Original 2026)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Stay awhile, and listen...\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "A", "path": "external/vpx-diablo2/launcher.png"},
+          {"status": "A", "path": "external/vpx-diablo2/table.ini", "diff": "diff --git a/external/vpx-diablo2/table.ini b/external/vpx-diablo2/table.ini\nnew file mode 100644\nindex 00000000..2af0e868\n--- /dev/null\n+++ b/external/vpx-diablo2/table.ini\n@@ -0,0 +1,34 @@\n+[TableOption]\n+Color Saturation = 1.000000\n+VR Room = 2.000000\n+Skulls = 1.000000\n+Scythes = 1.000000\n+Glass = 1.000000\n+Diablo Statue = 1.000000\n+Ramp Swords = 1.000000\n+Headstones = 1.000000\n+Backglass Art = 1.000000\n+Mech Volume = 0.800000\n+Ball Roll Volume = 0.500000\n+Ramp Roll Volume = 0.500000\n+Loot Glow = 10.000000\n+\n+[Player]\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.200000\n+MusicVolume = 100\n+SoundVolume = 100\n+ScreenPlayerY = 15.000000\n+ScreenPlayerZ = 90.000000\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.220000\n+ViewCabScaleY = 1.010000\n+ViewCabScaleZ = 0.859642\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 227.883301\n+ViewCabWindowBot = 55.581299\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-diablo2/table.yml", "diff": "diff --git a/external/vpx-diablo2/table.yml b/external/vpx-diablo2/table.yml\nnew file mode 100644\nindex 00000000..a0feea68\n--- /dev/null\n+++ b/external/vpx-diablo2/table.yml\n@@ -0,0 +1,13 @@\n+---\n+backglassChecksum: \"f6bddb5d68bc24fd4821119fb3cb7875\"\n+backglassNotes: \"Download 'Diablo 2 (Original 2026) B2S with Full DMD.directb2s'\"\n+backglassVPSId: \"BRSaMD1wpn\"\n+fps: 60\n+tableNotes: \"Version 1.1\"\n+tableVPSId: \"XX-Vp5Jlt0\"\n+tagline: \"Stay awhile, and listen...\"\n+testers:\n+  - \"Wraith\"\n+  - \"Missile Toad\"\n+vpxChecksum: \"8b28e711d08ae5d2784ef81fc18214e2\"\n+vpxVPSId: \"zF8Wx1EpvP\""}
+        ]
+      }
+    ]
+}

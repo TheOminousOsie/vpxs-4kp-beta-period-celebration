@@ -1,0 +1,341 @@
+{
+    "commit_count": 34,
+    "commits": [
+      {
+        "hash": "c72c0eed053f578f910ffca5a9fc407398ca0cd0",
+        "date": "2026-07-29 15:40:00 -0400",
+        "author": "evilwraith",
+        "message": "update hashes\n\nDiablo II\nSF2 cROMc\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex 98109bb5..71f12c92 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -4,7 +4,7 @@ backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n backglassNotes: \"Download - Street Fighter II (Gottlieb 1993).zip\"\n fps: 60\n coloredROMVPSId: \"_R_pi1tqAi\"\n-coloredROMChecksum: \"F2D868EE2AE6E392017919518A1FE903\"\n+coloredROMChecksum: \"5D4547A11FFE022C392601F8893D466A\"\n coloredROMNotes: \"Download sfight2.cROMc\"\n romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex 8eba834f..98109bb5 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"7AthvIhxFj\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"6576310D897011B1BF5B45256EB68345\"\n-  - \"393FB0C8B3E69E1C58D8BD05334BB8E9\"\n+backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n backglassNotes: \"Download - Street Fighter II (Gottlieb 1993).zip\"\n fps: 60\n coloredROMVPSId: \"_R_pi1tqAi\"\n@@ -19,8 +16,5 @@ testers:\n   - \"mcap\"\n   - \"evilwraith\"\n vpxVPSId: \"ChQLTP9w\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"6AEA9505968CD41F128205C7C4638326\"\n-  - \"75004AD49D119B82725B857F35E2A87E\"\n+vpxChecksum: \"6AEA9505968CD41F128205C7C4638326\"\n tableNotes: \"Version 6.0.0\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex 98109bb5..8eba834f 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"7AthvIhxFj\"\n-backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"6576310D897011B1BF5B45256EB68345\"\n+  - \"393FB0C8B3E69E1C58D8BD05334BB8E9\"\n backglassNotes: \"Download - Street Fighter II (Gottlieb 1993).zip\"\n fps: 60\n coloredROMVPSId: \"_R_pi1tqAi\"\n@@ -16,5 +19,8 @@ testers:\n   - \"mcap\"\n   - \"evilwraith\"\n vpxVPSId: \"ChQLTP9w\"\n-vpxChecksum: \"6AEA9505968CD41F128205C7C4638326\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"6AEA9505968CD41F128205C7C4638326\"\n+  - \"75004AD49D119B82725B857F35E2A87E\"\n tableNotes: \"Version 6.0.0\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.ini", "diff": "diff --git a/external/vpx-sfii/table.ini b/external/vpx-sfii/table.ini\nindex 7a3b7ae8..2f897d39 100644\n--- a/external/vpx-sfii/table.ini\n+++ b/external/vpx-sfii/table.ini\n@@ -1,19 +1,19 @@\n [Player]\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 0\n+ScreenPlayerY = 16.015259\n+ScreenPlayerZ = 85.347626\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.875020\n-ViewCabScaleY = 1.176103\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -48.500000\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n-\n-[Standalone]\n-WindowRenderMode = 0\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.297491\n+ViewCabScaleY = 1.043367\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 1.436086\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 116.639198"},
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex df8ee366..98109bb5 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -3,6 +3,9 @@ backglassVPSId: \"7AthvIhxFj\"\n backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n backglassNotes: \"Download - Street Fighter II (Gottlieb 1993).zip\"\n fps: 60\n+coloredROMVPSId: \"_R_pi1tqAi\"\n+coloredROMChecksum: \"F2D868EE2AE6E392017919518A1FE903\"\n+coloredROMNotes: \"Download sfight2.cROMc\"\n romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n romVersionOverride: \"sfight2\""}
+        ]
+      },
+      {
+        "hash": "688ec61c6bd9a567e41b60eb2948b47c6652ad0f",
+        "date": "2025-09-10 12:40:08 -0400",
+        "author": "evilwraith",
+        "message": "JPSalas v600 updates\n\nCurrent as of 9/10/25. More to come.\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex a38a9858..df8ee366 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -13,5 +13,5 @@ testers:\n   - \"mcap\"\n   - \"evilwraith\"\n vpxVPSId: \"ChQLTP9w\"\n-vpxChecksum: \"0AC85739532A19D00707B30FDB97061E\"\n-tableNotes: \"Version 5.5.0\"\n+vpxChecksum: \"6AEA9505968CD41F128205C7C4638326\"\n+tableNotes: \"Version 6.0.0\""}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nindex 3564bd3a..47fbb3bc 100644\n--- a/external/vpx-sfii/README.md\n+++ b/external/vpx-sfii/README.md\n@@ -50,7 +50,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n <br>"}
+        ]
+      },
+      {
+        "hash": "43e06a78576a8d7069d79fee2da8885f7e817af7",
+        "date": "2025-04-30 11:28:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed BOM\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nindex 6a9c93b3..3564bd3a 100644\n--- a/external/vpx-sfii/README.md\n+++ b/external/vpx-sfii/README.md\n@@ -1,4 +1,4 @@\n-﻿﻿# Street Fighter II, JP's (Gottlieb 1993)\n+﻿# Street Fighter II, JP's (Gottlieb 1993)\n \n ![Table Preview](../../images/vpx-jps-street-fighter-preview.jpg)\n "}
+        ]
+      },
+      {
+        "hash": "5424a8122d5eb54371b2435888f2d337df05dc43",
+        "date": "2025-04-30 11:23:31 +0100",
+        "author": "OminousOsie",
+        "message": "Added lloydbraun to the wiz team\n\nAdded lloydbraun to the wiz team\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nindex 6eb9b4ea..6a9c93b3 100644\n--- a/external/vpx-sfii/README.md\n+++ b/external/vpx-sfii/README.md\n@@ -47,7 +47,7 @@ __*We hope you enjoy!!*__\n \n *The VPXS 4KP Wizard team:*\n <pre>\n-- n-i-x            - Mox\n+- n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n - mrandromeda      - SScorpio         - TechZombie"}
+        ]
+      },
+      {
+        "hash": "01c7e252332b06a5a09e3bfaa60664142a54042f",
+        "date": "2025-04-16 10:44:26 +0100",
+        "author": "OminousOsie",
+        "message": "Added the full team to the readme\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nindex 39a220a4..6eb9b4ea 100644\n--- a/external/vpx-sfii/README.md\n+++ b/external/vpx-sfii/README.md\n@@ -1,4 +1,4 @@\n-﻿# Street Fighter II, JP's (Gottlieb 1993)\n+﻿﻿# Street Fighter II, JP's (Gottlieb 1993)\n \n ![Table Preview](../../images/vpx-jps-street-fighter-preview.jpg)\n \n@@ -41,7 +41,17 @@ This table is available through the Table Manager Wizard, which makes installati\n \n Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n <br>\n <br>"}
+        ]
+      },
+      {
+        "hash": "ea6d17c32b6201508759ff21067bbebd5da41606",
+        "date": "2025-04-08 22:51:49 -0400",
+        "author": "pointdablame",
+        "message": "Updated Wizard wave 1 images\n\nUpdating images to new standard resolutions and schemes, and  adding Legends Unchained logo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/launcher.png"}
+        ]
+      },
+      {
+        "hash": "6c2a220adac96b5ed5b84500eba9d819bca0cc87",
+        "date": "2025-04-08 15:22:54 +0100",
+        "author": "OminousOsie",
+        "message": "Italic the tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nindex 95f50834..39a220a4 100644\n--- a/external/vpx-sfii/README.md\n+++ b/external/vpx-sfii/README.md\n@@ -35,7 +35,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Street Fighter II, JP's`**\n 5.  Follow the on-screen instructions to download and upload the required files\n-6. \"You need to defeat Sheng Long to stand a chance...\"\n+6. *\"You need to defeat Sheng Long to stand a chance...\"*\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "ec024f091d11b71aef0144fb31e7d1b020df9223",
+        "date": "2025-04-08 15:09:40 +0100",
+        "author": "OminousOsie",
+        "message": "Update to readmes to readd tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nindex 4c555396..95f50834 100644\n--- a/external/vpx-sfii/README.md\n+++ b/external/vpx-sfii/README.md\n@@ -1,4 +1,4 @@\n-# Street Fighter II, JP's (Gottlieb 1993)\n+﻿# Street Fighter II, JP's (Gottlieb 1993)\n \n ![Table Preview](../../images/vpx-jps-street-fighter-preview.jpg)\n \n@@ -35,6 +35,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Street Fighter II, JP's`**\n 5.  Follow the on-screen instructions to download and upload the required files\n+6. \"You need to defeat Sheng Long to stand a chance...\"\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "3ea93065f85184f7f51db91cfab3789ae38a899e",
+        "date": "2025-04-08 14:38:42 +0100",
+        "author": "OminousOsie",
+        "message": "Finished readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nindex 82bab180..4c555396 100644\n--- a/external/vpx-sfii/README.md\n+++ b/external/vpx-sfii/README.md\n@@ -1,33 +1,49 @@\n-# Street Fighter II - JP (Gottlieb 1993)\n+# Street Fighter II, JP's (Gottlieb 1993)\n \n ![Table Preview](../../images/vpx-jps-street-fighter-preview.jpg)\n \n-Author: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.1.1  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12561)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Author: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 1.0.1  \n-Download: [VP Universe](https://vpuniverse.com/files/file/12548-street-fighter-ii-gottlieb-1993-b2s-with-full-dmd/)\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n \n-ROM\n+<br>\n \n-Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/sfight2.2281/)\n+**VPXS 4KP Testers:**\n+  - mcap\n+  - evilwraith\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n+---\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Street Fighter II, JP's`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-## Instructions\n+__*We hope you enjoy!!   - the VPXS 4KP team!*__\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-sfii.elf\n-- Download the table and directb2s versions listed above, extract and copy them into this folder\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- Place ROM zip file into vpx-sfii/pinmame/roms folder. DO NOT UNZIP!\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "34a19ac19b1dd3f52bf5413bf64cd94ca93c44a3",
+        "date": "2025-04-05 09:18:06 -0400",
+        "author": "pointdablame",
+        "message": "Wizard tables - updated launcher images\n\nUpdated:\n- 1-2-3\n- 24\n- Ali\n- Andromeda\n- Adventures of Rocky & Bullwinkle\n- Asteroid Annie\n- Avengers, JP's\n- Banzai Run\n- Batman Forever\n- Baywatch\n- Big Trouble in Little China\n- Big Bang Bar\n- Black Pyramid\n- Cactus Canyon\n- Centigrade 37\n- Creature From the Black Lagoon\n- Champion Pub\n- Cosmic\n- Deadpool\n- Diner\n- Dirty Harry\n- Doctor Who\n- Dolly Parton\n- Drakor\n- F-14 Tomcat\n- Fathom\n- Firepower\n- Firepower II\n- Fortnite\n- Guns N' Roses\n- Godzilla\n- Guardians of the Galaxy\n- Hardbody\n- Bond 60th\n- Jurassic Park\n- Last Action Hero\n- Mata Hari\n- Meteor\n- Mission Impossible\n- Medieval Madness\n- Monster Bash\n- Mousin' Around\n- No Fear - Dangerous Sports\n- Quicksilver\n- Scared Stiff\n- Seawitch\n- Street Fighter II\n- South Park\n- Tales From the Crypt\n- Vortex\n- Wrath of Olympus\n- Whirlwind\n- Zissou\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/launcher.png"}
+        ]
+      },
+      {
+        "hash": "00c8ae3ee7c189571a055b6798ac7b3cb7189fd7",
+        "date": "2025-03-29 08:29:40 +0000",
+        "author": "OminousOsie",
+        "message": "updated files from J-S testing Boris\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.ini", "diff": "diff --git a/external/vpx-sfii/table.ini b/external/vpx-sfii/table.ini\nindex 3e5225eb..7a3b7ae8 100644\n--- a/external/vpx-sfii/table.ini\n+++ b/external/vpx-sfii/table.ini\n@@ -13,4 +13,7 @@ ViewCabPlayerY = -0.000000\n ViewCabPlayerZ = -340.000000\n ViewCabLookAt = 5.000000\n ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabLayback = 48.000000\n+\n+[Standalone]\n+WindowRenderMode = 0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "37630bfcffb05d32a29d8f23e0c30aad35a7f8ac",
+        "date": "2025-03-28 10:02:45 +0000",
+        "author": "OminousOsie",
+        "message": "Added testers\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex fa8a6b03..a38a9858 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -11,6 +11,7 @@ tableVPSId: \"_8wsc4AY\"\n tagline: \"You need to defeat Sheng Long to stand a chance...\"\n testers:\n   - \"mcap\"\n+  - \"evilwraith\"\n vpxVPSId: \"ChQLTP9w\"\n vpxChecksum: \"0AC85739532A19D00707B30FDB97061E\"\n tableNotes: \"Version 5.5.0\""}
+        ]
+      },
+      {
+        "hash": "b61d986f3ee124f9b3350d06ed6570f2f3cb756b",
+        "date": "2025-03-25 21:33:44 +0000",
+        "author": "OminousOsie",
+        "message": "Updated using moxs files\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.ini", "diff": "diff --git a/external/vpx-sfii/table.ini b/external/vpx-sfii/table.ini\nindex 96891340..3e5225eb 100644\n--- a/external/vpx-sfii/table.ini\n+++ b/external/vpx-sfii/table.ini\n@@ -4,8 +4,8 @@ OverrideTableEmissionScale = 0\n \n [TableOverride]\n ViewCabMode = 0\n-ViewCabScaleX = 0.845524\n-ViewCabScaleY = 1.143404\n+ViewCabScaleX = 0.875020\n+ViewCabScaleY = 1.176103\n ViewCabScaleZ = 0.904995\n ViewCabRotation = 90.000000\n ViewCabPlayerX = -48.500000"},
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex f0e6dfdb..fa8a6b03 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -1,15 +1,16 @@\n ---\n backglassVPSId: \"7AthvIhxFj\"\n backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n-backglassNotes: \"Use Street Fighter II (Gottlieb 1993).zip in the download link\"\n+backglassNotes: \"Download - Street Fighter II (Gottlieb 1993).zip\"\n fps: 60\n romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n romVersionOverride: \"sfight2\"\n+romNotes: \"Download - sfight2.zip\"\n tableVPSId: \"_8wsc4AY\"\n tagline: \"You need to defeat Sheng Long to stand a chance...\"\n testers:\n   - \"mcap\"\n vpxVPSId: \"ChQLTP9w\"\n vpxChecksum: \"0AC85739532A19D00707B30FDB97061E\"\n-tableNotes: \"Download version 5.5.0\"\n+tableNotes: \"Version 5.5.0\""}
+        ]
+      },
+      {
+        "hash": "d14dd907a2aa6661a0033936d39abfacef43337e",
+        "date": "2025-03-25 16:19:00 -0500",
+        "author": "MoxAssault",
+        "message": "INI and YML Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.ini", "diff": "diff --git a/external/vpx-sfii/table.ini b/external/vpx-sfii/table.ini\nindex 96891340..3e5225eb 100644\n--- a/external/vpx-sfii/table.ini\n+++ b/external/vpx-sfii/table.ini\n@@ -4,8 +4,8 @@ OverrideTableEmissionScale = 0\n \n [TableOverride]\n ViewCabMode = 0\n-ViewCabScaleX = 0.845524\n-ViewCabScaleY = 1.143404\n+ViewCabScaleX = 0.875020\n+ViewCabScaleY = 1.176103\n ViewCabScaleZ = 0.904995\n ViewCabRotation = 90.000000\n ViewCabPlayerX = -48.500000"},
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex f0e6dfdb..fa8a6b03 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -1,15 +1,16 @@\n ---\n backglassVPSId: \"7AthvIhxFj\"\n backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n-backglassNotes: \"Use Street Fighter II (Gottlieb 1993).zip in the download link\"\n+backglassNotes: \"Download - Street Fighter II (Gottlieb 1993).zip\"\n fps: 60\n romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n romVersionOverride: \"sfight2\"\n+romNotes: \"Download - sfight2.zip\"\n tableVPSId: \"_8wsc4AY\"\n tagline: \"You need to defeat Sheng Long to stand a chance...\"\n testers:\n   - \"mcap\"\n vpxVPSId: \"ChQLTP9w\"\n vpxChecksum: \"0AC85739532A19D00707B30FDB97061E\"\n-tableNotes: \"Download version 5.5.0\"\n+tableNotes: \"Version 5.5.0\""}
+        ]
+      },
+      {
+        "hash": "12748a350056bc87750eb3dde9999e34c8b4eb2d",
+        "date": "2025-03-24 22:39:48 -0400",
+        "author": "n-i-x",
+        "message": "add romVersionOverride for sfight2",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex d919c2f7..f0e6dfdb 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -5,6 +5,7 @@ backglassNotes: \"Use Street Fighter II (Gottlieb 1993).zip in the download link\"\n fps: 60\n romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n+romVersionOverride: \"sfight2\"\n tableVPSId: \"_8wsc4AY\"\n tagline: \"You need to defeat Sheng Long to stand a chance...\"\n testers:\n"}
+        ]
+      },
+      {
+        "hash": "68395945a14bf315cfe1f4292329799fa1847eb8",
+        "date": "2025-03-24 18:58:48 +0000",
+        "author": "OminousOsie",
+        "message": "Added sfii tester\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex f981e280..d919c2f7 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -7,6 +7,8 @@ romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n tableVPSId: \"_8wsc4AY\"\n tagline: \"You need to defeat Sheng Long to stand a chance...\"\n+testers:\n+  - \"mcap\"\n vpxVPSId: \"ChQLTP9w\"\n vpxChecksum: \"0AC85739532A19D00707B30FDB97061E\"\n tableNotes: \"Download version 5.5.0\"\n"}
+        ]
+      },
+      {
+        "hash": "e6ca08cf9c777262cca146f59b4827451b727163",
+        "date": "2025-03-24 18:06:09 +0000",
+        "author": "OminousOsie",
+        "message": "Fixed yml issues\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex d9e41168..f981e280 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -2,7 +2,7 @@\n backglassVPSId: \"7AthvIhxFj\"\n backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n backglassNotes: \"Use Street Fighter II (Gottlieb 1993).zip in the download link\"\n-fps: \"60\"\n+fps: 60\n romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n tableVPSId: \"_8wsc4AY\""}
+        ]
+      },
+      {
+        "hash": "266821b169409b0dc1c37f85941fc2b36d39254d",
+        "date": "2025-03-24 01:26:39 +0000",
+        "author": "OminousOsie",
+        "message": "yml formatting\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex 344f4542..d9e41168 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -2,8 +2,6 @@\n backglassVPSId: \"7AthvIhxFj\"\n backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n backglassNotes: \"Use Street Fighter II (Gottlieb 1993).zip in the download link\"\n-coloredROMVPSId: \n-coloredROMChecksum: \n fps: \"60\"\n romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n@@ -12,4 +10,3 @@ tagline: \"You need to defeat Sheng Long to stand a chance...\"\n vpxVPSId: \"ChQLTP9w\"\n vpxChecksum: \"0AC85739532A19D00707B30FDB97061E\"\n tableNotes: \"Download version 5.5.0\"\n-mainNotes: \n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "f97b737805c3710c4206ec673c16ae88e53e1f52",
+        "date": "2025-03-24 01:18:39 +0000",
+        "author": "OminousOsie",
+        "message": "Added margin to all testers in ymls\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex 61a14f20..344f4542 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -9,8 +9,6 @@ romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n tableVPSId: \"_8wsc4AY\"\n tagline: \"You need to defeat Sheng Long to stand a chance...\"\n-testers: \n-- \n vpxVPSId: \"ChQLTP9w\"\n vpxChecksum: \"0AC85739532A19D00707B30FDB97061E\"\n tableNotes: \"Download version 5.5.0\""}
+        ]
+      },
+      {
+        "hash": "3bfa4757869bf45ed445280a1c355f182d19eec6",
+        "date": "2025-03-23 15:57:27 +0000",
+        "author": "OminousOsie",
+        "message": "Updated launcher pngs, and added some colour dmds!\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/launcher.png"}
+        ]
+      },
+      {
+        "hash": "c13f12795536d004c78e2331762558777a4695a9",
+        "date": "2025-03-22 12:28:26 -0400",
+        "author": "evilwraith",
+        "message": "3 table updates\n\nSFII- fixed wheel image, table notes\nTFTC - fixed table brightness and table ini formatting\nTOTAN - added settings to ini\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/launcher.png"},
+          {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex 8060bff0..61a14f20 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -13,5 +13,5 @@ testers:\n - \n vpxVPSId: \"ChQLTP9w\"\n vpxChecksum: \"0AC85739532A19D00707B30FDB97061E\"\n-tableNotes: \n+tableNotes: \"Download version 5.5.0\"\n mainNotes: \n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "ba2a2c075af30fc9a50fe27384dfae475bb4a45e",
+        "date": "2025-03-20 20:51:52 -0400",
+        "author": "evilwraith",
+        "message": "sfII and T2\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nnew file mode 100644\nindex 00000000..8060bff0\n--- /dev/null\n+++ b/external/vpx-sfii/table.yml\n@@ -0,0 +1,17 @@\n+---\n+backglassVPSId: \"7AthvIhxFj\"\n+backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n+backglassNotes: \"Use Street Fighter II (Gottlieb 1993).zip in the download link\"\n+coloredROMVPSId: \n+coloredROMChecksum: \n+fps: \"60\"\n+romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n+romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n+tableVPSId: \"_8wsc4AY\"\n+tagline: \"You need to defeat Sheng Long to stand a chance...\"\n+testers: \n+- \n+vpxVPSId: \"ChQLTP9w\"\n+vpxChecksum: \"0AC85739532A19D00707B30FDB97061E\"\n+tableNotes: \n+mainNotes: \n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "e95048490a38c8a89f14c9ce11766922b6fbf0ce",
+        "date": "2025-03-20 03:13:13 +0000",
+        "author": "n-i-x",
+        "message": "delete pinmame printer files\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-sfii/table.prt", "diff": "diff --git a/external/vpx-sfii/table.prt b/external/vpx-sfii/table.prt\ndeleted file mode 100644\nindex e69de29b..00000000"}
+        ]
+      },
+      {
+        "hash": "a77c9fc0b3aa2ea786042f2b4e1058a6a93d2017",
+        "date": "2025-03-10 14:28:08 +0000",
+        "author": "OminousOsie",
+        "message": "Re-added prts\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-sfii/table.prt", "diff": "diff --git a/external/vpx-sfii/table.prt b/external/vpx-sfii/table.prt\nnew file mode 100644\nindex 00000000..e69de29b"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-sfii/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-sfii/pinmame/cfg/.gitkeep b/external/vpx-sfii/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-sfii/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-sfii/pinmame/cfg/default.cfg b/external/vpx-sfii/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-sfii/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-sfii/pinmame/cfg/sfight2.cfg", "diff": "diff --git a/external/vpx-sfii/pinmame/cfg/sfight2.cfg b/external/vpx-sfii/pinmame/cfg/sfight2.cfg\ndeleted file mode 100644\nindex d486f57b..00000000\nBinary files a/external/vpx-sfii/pinmame/cfg/sfight2.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-sfii/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-sfii/pinmame/ini/.gitkeep b/external/vpx-sfii/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-sfii/pinmame/ini/sfight2.ini", "diff": "diff --git a/external/vpx-sfii/pinmame/ini/sfight2.ini b/external/vpx-sfii/pinmame/ini/sfight2.ini\ndeleted file mode 100644\nindex 15ca4cce..00000000\n--- a/external/vpx-sfii/pinmame/ini/sfight2.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-sound=1\n-cheat=0\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-sfii/pinmame/memcard/sfight2.prt", "diff": "diff --git a/external/vpx-sfii/pinmame/memcard/sfight2.prt b/external/vpx-sfii/pinmame/memcard/sfight2.prt\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-sfii/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-sfii/pinmame/nvram/.gitkeep b/external/vpx-sfii/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-sfii/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-sfii/pinmame/roms/.gitkeep b/external/vpx-sfii/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-sfii/vpx-sfii.xml", "diff": "diff --git a/external/vpx-sfii/vpx-sfii.xml b/external/vpx-sfii/vpx-sfii.xml\ndeleted file mode 100644\nindex 41d93316..00000000\n--- a/external/vpx-sfii/vpx-sfii.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Street Fighter II</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-sfii/JP's Street Fighter II (Gottlieb 1993).ini->external/vpx-sfii/table.ini", "diff": "diff --git a/external/vpx-sfii/JP's Street Fighter II (Gottlieb 1993).ini b/external/vpx-sfii/table.ini\nsimilarity index 100%\nrename from external/vpx-sfii/JP's Street Fighter II (Gottlieb 1993).ini\nrename to external/vpx-sfii/table.ini"},
+          {"status": "R-from", "path": "external/vpx-sfii/pinmame/nvram/sfight2.nv->external/vpx-sfii/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-sfii/vpx-sfii.png->external/vpx-sfii/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-sfii/JP's Street Fighter II (Gottlieb 1993).ini->external/vpx-sfii/table.ini", "diff": "diff --git a/external/vpx-sfii/JP's Street Fighter II (Gottlieb 1993).ini b/external/vpx-sfii/table.ini\nsimilarity index 100%\nrename from external/vpx-sfii/JP's Street Fighter II (Gottlieb 1993).ini\nrename to external/vpx-sfii/table.ini"},
+          {"status": "R-to", "path": "external/vpx-sfii/pinmame/nvram/sfight2.nv->external/vpx-sfii/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-sfii/vpx-sfii.png->external/vpx-sfii/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f99c1a2f20adbad8c6fdead7f414f4b0463fb11b",
+        "date": "2025-01-25 18:19:13 -0600",
+        "author": "bhhobb",
+        "message": "Update README.md preview image",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nindex f5673315..82bab180 100644\n--- a/external/vpx-sfii/README.md\n+++ b/external/vpx-sfii/README.md\n@@ -1,6 +1,6 @@\n # Street Fighter II - JP (Gottlieb 1993)\n \n-![Table Preview](https://www.vpforums.org/index.php?s=0da6a8a9567fe76d71e48a15ce6e354a&app=downloads&module=display&section=screenshot&record=112187&id=12561&full=1)\n+![Table Preview](../../images/vpx-jps-street-fighter-preview.jpg)\n \n Author: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n Version: 5.1.1  \n"}
+        ]
+      },
+      {
+        "hash": "c74987976855b449f1f39eafe88e4a9a985722cd",
+        "date": "2024-09-06 02:27:56 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-sfii",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nindex b9030d85..f5673315 100644\n--- a/external/vpx-sfii/README.md\n+++ b/external/vpx-sfii/README.md\n@@ -2,14 +2,14 @@\n \n ![Table Preview](https://www.vpforums.org/index.php?s=0da6a8a9567fe76d71e48a15ce6e354a&app=downloads&module=display&section=screenshot&record=112187&id=12561&full=1)\n \n-Authors: [jpsalas](https://www.vpforums.org/index.php?s=0da6a8a9567fe76d71e48a15ce6e354a&showuser=277)\n-Version: 5.1.1\n+Author: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n+Version: 5.1.1  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12561)\n \n DirectB2S\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-Version: 1.0.1\n+Author: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+Version: 1.0.1  \n Download: [VP Universe](https://vpuniverse.com/files/file/12548-street-fighter-ii-gottlieb-1993-b2s-with-full-dmd/)\n \n ROM\n@@ -19,6 +19,7 @@ Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/sfight2.\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n@@ -27,4 +28,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-sfii.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file\n+- Download the table and directb2s versions listed above, extract and copy them into this folder\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n+- Place ROM zip file into vpx-sfii/pinmame/roms folder. DO NOT UNZIP!\n"}
+        ]
+      },
+      {
+        "hash": "6ca0dc65c4e9c8b2b06802b592806d73fb814850",
+        "date": "2024-08-06 10:14:52 -0500",
+        "author": "Mike",
+        "message": "mass update of readme's\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nindex 2829038a..b9030d85 100644\n--- a/external/vpx-sfii/README.md\n+++ b/external/vpx-sfii/README.md\n@@ -16,9 +16,6 @@ ROM\n \n Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/sfight2.2281/)\n \n-SHA: \n-MD5: \n-\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013"}
+        ]
+      },
+      {
+        "hash": "c0fa255d2880a8fb67a47f8751a07ee77bec46ce",
+        "date": "2024-08-05 16:42:16 -0500",
+        "author": "Mike",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nindex fc4aa600..2829038a 100644\n--- a/external/vpx-sfii/README.md\n+++ b/external/vpx-sfii/README.md\n@@ -29,5 +29,5 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ## Instructions\n \n - Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-sfight2.elf\n+- Add your personalized launcher.elf and rename it to vpx-sfii.elf\n - Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "30803dd2cf46dbb20d598d0426a0d66fc8f991c2",
+        "date": "2024-08-05 15:23:57 -0500",
+        "author": "Mike",
+        "message": "added 3 vpx tables\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-sfii/JP's Street Fighter II (Gottlieb 1993).ini", "diff": "diff --git a/external/vpx-sfii/JP's Street Fighter II (Gottlieb 1993).ini b/external/vpx-sfii/JP's Street Fighter II (Gottlieb 1993).ini\nnew file mode 100644\nindex 00000000..96891340\n--- /dev/null\n+++ b/external/vpx-sfii/JP's Street Fighter II (Gottlieb 1993).ini\t\n@@ -0,0 +1,16 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+OverrideTableEmissionScale = 0\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.845524\n+ViewCabScaleY = 1.143404\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -48.500000\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-sfii/README.md", "diff": "diff --git a/external/vpx-sfii/README.md b/external/vpx-sfii/README.md\nnew file mode 100644\nindex 00000000..fc4aa600\n--- /dev/null\n+++ b/external/vpx-sfii/README.md\n@@ -0,0 +1,33 @@\n+# Street Fighter II - JP (Gottlieb 1993)\n+\n+![Table Preview](https://www.vpforums.org/index.php?s=0da6a8a9567fe76d71e48a15ce6e354a&app=downloads&module=display&section=screenshot&record=112187&id=12561&full=1)\n+\n+Authors: [jpsalas](https://www.vpforums.org/index.php?s=0da6a8a9567fe76d71e48a15ce6e354a&showuser=277)\n+Version: 5.1.1\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12561)\n+\n+DirectB2S\n+\n+Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n+Version: 1.0.1\n+Download: [VP Universe](https://vpuniverse.com/files/file/12548-street-fighter-ii-gottlieb-1993-b2s-with-full-dmd/)\n+\n+ROM\n+\n+Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/sfight2.2281/)\n+\n+SHA: \n+MD5: \n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-sfight2.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-sfii/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-sfii/pinmame/cfg/.gitkeep b/external/vpx-sfii/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-sfii/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-sfii/pinmame/cfg/default.cfg b/external/vpx-sfii/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-sfii/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-sfii/pinmame/cfg/sfight2.cfg", "diff": "diff --git a/external/vpx-sfii/pinmame/cfg/sfight2.cfg b/external/vpx-sfii/pinmame/cfg/sfight2.cfg\nnew file mode 100644\nindex 00000000..d486f57b\nBinary files /dev/null and b/external/vpx-sfii/pinmame/cfg/sfight2.cfg differ"},
+          {"status": "A", "path": "external/vpx-sfii/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-sfii/pinmame/ini/.gitkeep b/external/vpx-sfii/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-sfii/pinmame/ini/sfight2.ini", "diff": "diff --git a/external/vpx-sfii/pinmame/ini/sfight2.ini b/external/vpx-sfii/pinmame/ini/sfight2.ini\nnew file mode 100644\nindex 00000000..15ca4cce\n--- /dev/null\n+++ b/external/vpx-sfii/pinmame/ini/sfight2.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+sound=1\n+cheat=0\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-sfii/pinmame/memcard/sfight2.prt", "diff": "diff --git a/external/vpx-sfii/pinmame/memcard/sfight2.prt b/external/vpx-sfii/pinmame/memcard/sfight2.prt\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-sfii/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-sfii/pinmame/nvram/.gitkeep b/external/vpx-sfii/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-sfii/pinmame/nvram/sfight2.nv"},
+          {"status": "A", "path": "external/vpx-sfii/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-sfii/pinmame/roms/.gitkeep b/external/vpx-sfii/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-sfii/vpx-sfii.png"},
+          {"status": "A", "path": "external/vpx-sfii/vpx-sfii.xml", "diff": "diff --git a/external/vpx-sfii/vpx-sfii.xml b/external/vpx-sfii/vpx-sfii.xml\nnew file mode 100644\nindex 00000000..41d93316\n--- /dev/null\n+++ b/external/vpx-sfii/vpx-sfii.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Street Fighter II</name>\n+</root>"}
+        ]
+      }
+    ]
+}

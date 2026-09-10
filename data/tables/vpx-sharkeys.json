@@ -1,0 +1,45 @@
+{
+    "commit_count": 4,
+    "commits": [
+      {
+        "hash": "ac4627c92b84ec107b9adb23d6ad29bfbca2c001",
+        "date": "2026-08-11 14:45:28 -0400",
+        "author": "evilwraith",
+        "message": "POV updates\n\nSharkey's Shootout - fix posts always being up\nStar Trek 25th - Fix old ini\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sharkeys/table.ini", "diff": "diff --git a/external/vpx-sharkeys/table.ini b/external/vpx-sharkeys/table.ini\nindex 2dc36dfe..9a4bd899 100644\n--- a/external/vpx-sharkeys/table.ini\n+++ b/external/vpx-sharkeys/table.ini\n@@ -1,6 +1,11 @@\n [Player]\n ScreenPlayerY = 15.000000\n ScreenPlayerZ = 90.000000\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.330000\n+MusicVolume = 100\n+SoundVolume = 100\n \n [TableOverride]\n ViewCabMode = 2\n@@ -11,4 +16,13 @@ ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n ViewCabVOfs = 0.000000\n ViewCabWindowTop = 350.162354\n-ViewCabWindowBot = 101.899170\n\\ No newline at end of file\n+ViewCabWindowBot = 101.899170\n+ToneMapper = 0\n+Difficulty = 0.500000\n+\n+[TableOption]\n+Force Flipper Post Down = 1.000000\n+Mech Volume = 0.800000\n+Ball Roll Volume = 0.500000\n+Ramp Roll Volume = 0.500000\n+Rails Visible = 0.000000\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sharkeys/table.yml", "diff": "diff --git a/external/vpx-sharkeys/table.yml b/external/vpx-sharkeys/table.yml\nindex e27d221a..6f93b46a 100644\n--- a/external/vpx-sharkeys/table.yml\n+++ b/external/vpx-sharkeys/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"3156451d784b467fb37f4c8df07082f7\"\n-  - \"E574D157FB7115EE120644A5DBAE695E\"\n+backglassChecksum: \"3156451d784b467fb37f4c8df07082f7\"\n backglassVPSId: \"j1NszS361_\"\n fps: 60\n romChecksum: \"4f424c099c9c0687703926c71d17b60d\"\n@@ -11,8 +8,5 @@ tableVPSId: \"__fy1P9r\"\n tagline: \"Rack 'em up.\"\n testers:\n   - \"Wraith\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"dee3bce26785c99306444bdf801e6380\"\n-  - \"6801CEAD2F0A5E132F80354C30F4FD7E\"\n+vpxChecksum: \"dee3bce26785c99306444bdf801e6380\"\n vpxVPSId: \"W9LjWNMkD1\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sharkeys/table.yml", "diff": "diff --git a/external/vpx-sharkeys/table.yml b/external/vpx-sharkeys/table.yml\nindex 6f93b46a..e27d221a 100644\n--- a/external/vpx-sharkeys/table.yml\n+++ b/external/vpx-sharkeys/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"3156451d784b467fb37f4c8df07082f7\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"3156451d784b467fb37f4c8df07082f7\"\n+  - \"E574D157FB7115EE120644A5DBAE695E\"\n backglassVPSId: \"j1NszS361_\"\n fps: 60\n romChecksum: \"4f424c099c9c0687703926c71d17b60d\"\n@@ -8,5 +11,8 @@ tableVPSId: \"__fy1P9r\"\n tagline: \"Rack 'em up.\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"dee3bce26785c99306444bdf801e6380\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"dee3bce26785c99306444bdf801e6380\"\n+  - \"6801CEAD2F0A5E132F80354C30F4FD7E\"\n vpxVPSId: \"W9LjWNMkD1\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-sharkeys/README.md", "diff": "diff --git a/external/vpx-sharkeys/README.md b/external/vpx-sharkeys/README.md\nnew file mode 100644\nindex 00000000..ce984443\n--- /dev/null\n+++ b/external/vpx-sharkeys/README.md\n@@ -0,0 +1,61 @@\n+# Sharkey's Shootout (Stern 2000)\n+\n+![Table Preview](../../images/W9LjWNMkD1-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - evilwraith\n+  - Bla1ze\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Sharkey's Shootout (Stern 2000)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "A", "path": "external/vpx-sharkeys/launcher.png"},
+          {"status": "A", "path": "external/vpx-sharkeys/nvram.nv"},
+          {"status": "A", "path": "external/vpx-sharkeys/table.ini", "diff": "diff --git a/external/vpx-sharkeys/table.ini b/external/vpx-sharkeys/table.ini\nnew file mode 100644\nindex 00000000..2dc36dfe\n--- /dev/null\n+++ b/external/vpx-sharkeys/table.ini\n@@ -0,0 +1,14 @@\n+[Player]\n+ScreenPlayerY = 15.000000\n+ScreenPlayerZ = 90.000000\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.260000\n+ViewCabScaleY = 0.980000\n+ViewCabScaleZ = 0.859642\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 350.162354\n+ViewCabWindowBot = 101.899170\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-sharkeys/table.yml", "diff": "diff --git a/external/vpx-sharkeys/table.yml b/external/vpx-sharkeys/table.yml\nnew file mode 100644\nindex 00000000..6f93b46a\n--- /dev/null\n+++ b/external/vpx-sharkeys/table.yml\n@@ -0,0 +1,12 @@\n+---\n+backglassChecksum: \"3156451d784b467fb37f4c8df07082f7\"\n+backglassVPSId: \"j1NszS361_\"\n+fps: 60\n+romChecksum: \"4f424c099c9c0687703926c71d17b60d\"\n+romVPSId: \"usxwtR0Y\"\n+tableVPSId: \"__fy1P9r\"\n+tagline: \"Rack 'em up.\"\n+testers:\n+  - \"Wraith\"\n+vpxChecksum: \"dee3bce26785c99306444bdf801e6380\"\n+vpxVPSId: \"W9LjWNMkD1\""}
+        ]
+      }
+    ]
+}

@@ -1,0 +1,158 @@
+{
+    "commit_count": 14,
+    "commits": [
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-goldencue/nvram.nv"},
+          {"status": "M", "path": "external/vpx-goldencue/table.ini", "diff": "diff --git a/external/vpx-goldencue/table.ini b/external/vpx-goldencue/table.ini\nindex 6b04d511..e7ed11ab 100644\n--- a/external/vpx-goldencue/table.ini\n+++ b/external/vpx-goldencue/table.ini\n@@ -1,20 +1,17 @@\n [Player]\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 1\n-AAFactor = 0.95\n DynamicDayNight = 0\n EmissionScale = 0.302230\n+ScreenPlayerY = 15.009995\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.234576\n-ViewCabScaleY = 1.029698\n-ViewCabScaleZ = 0.883039\n+ViewCabScaleX = 1.230658\n+ViewCabScaleY = 0.992816\n+ViewCabScaleZ = 0.846157\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -19.513996\n-ViewCabWindowTop = 291.821014\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 203.251968\n ViewCabWindowBot = 83.953270\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-goldencue/table.yml", "diff": "diff --git a/external/vpx-goldencue/table.yml b/external/vpx-goldencue/table.yml\nindex 6b02ca78..e3422bb5 100644\n--- a/external/vpx-goldencue/table.yml\n+++ b/external/vpx-goldencue/table.yml\n@@ -11,8 +11,6 @@ testers:\n   - \"kaoticBPR\"\n   - \"OminousOsie\"\n   - \"evilwraith\"\n-vpxVPSId: \"8hOnTBtR_w\"\n-vpxChecksum: \"558c983d24d4187909740f52aa274409\"\n-tableNotes: \"Download 'Golden Cue (Sega 1998)-v1.4.zip'\"\n-applyFixes:\n-  - \"bass\"\n+vpxVPSId: \"-k2koNyQCq\"\n+vpxChecksum: \"BA628C44000941F1AA2A0036B8CA6505\"\n+tableNotes: \"Download 'Golden Cue v1.2 (Sega 1998).zip'\""}
+        ]
+      },
+      {
+        "hash": "eaa4b4ee246f714574d61e23dd94d8df58023409",
+        "date": "2025-10-13 12:02:23 +0100",
+        "author": "OminousOsie",
+        "message": "Updated table readmes for wiz release v1.0.18\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-goldencue/README.md", "diff": "diff --git a/external/vpx-goldencue/README.md b/external/vpx-goldencue/README.md\nindex 33b506f9..4bba8640 100644\n--- a/external/vpx-goldencue/README.md\n+++ b/external/vpx-goldencue/README.md\n@@ -1,36 +1,62 @@\n-﻿# Golden Cue (Sega 1998)\n-\n-Tested by: kaoticBPR\n+# Golden Cue (Sega 1998)\n \n ![Table Preview](../../images/vpx-goldencue.png)\n \n-Authors: [felsir](https://vpuniverse.com/profile/37000-felsir/)  \n-Version: 1.4  \n-Download: [VPUniverse](https://vpuniverse.com/files/file/11417-golden-cue-sega-1998/)\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - kaoticBPR\n+  - Ominous Osie 🌸\n+  - evilwraith\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n \n-DirectB2S\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n-Authors: [felsir](https://vpuniverse.com/profile/37000-felsir/)  \n-Version: 1.0.0  \n-Download: [VPUniverse](https://vpuniverse.com/files/file/11396-golden-cue-sega-1998/)\n+### How to install:\n \n-ROM\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Golden Cue (Sega 1998)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Learn from the best, Kelly Packard\"*\n \n-Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=198)  \n-ROM Name and version: goldcue\n+<br>\n \n-## Status \n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n+<br>\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 38 |\n+__*We hope you enjoy!!*__\n \n-## Instructions\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- \"Learn from the best, Kelly Packard\"\n \n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "56d7569ef858a787edc4ec1759a18014889174e6",
+        "date": "2025-09-22 16:18:56 -0400",
+        "author": "evilwraith",
+        "message": "HD and Golden Cue\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-goldencue/table.ini", "diff": "diff --git a/external/vpx-goldencue/table.ini b/external/vpx-goldencue/table.ini\nindex 54c02610..6b04d511 100644\n--- a/external/vpx-goldencue/table.ini\n+++ b/external/vpx-goldencue/table.ini\n@@ -1,16 +1,20 @@\n [Player]\n BallTrailStrength = 0.490196\n-OverrideTableEmissionScale = 0\n+OverrideTableEmissionScale = 1\n+AAFactor = 0.95\n+DynamicDayNight = 0\n+EmissionScale = 0.302230\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.820866\n-ViewCabScaleY = 1.028515\n-ViewCabScaleZ = 0.868848\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 38.176937\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 10.004210\n-ViewCabFOV = 31.629517\n-ViewCabLayback = 50.015289\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.234576\n+ViewCabScaleY = 1.029698\n+ViewCabScaleZ = 0.883039\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -19.513996\n+ViewCabWindowTop = 291.821014\n+ViewCabWindowBot = 83.953270\n+\n+[Standalone]\n+BackBufferScale = 0.416666\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-goldencue/table.yml", "diff": "diff --git a/external/vpx-goldencue/table.yml b/external/vpx-goldencue/table.yml\nindex 343f5d8d..6b02ca78 100644\n--- a/external/vpx-goldencue/table.yml\n+++ b/external/vpx-goldencue/table.yml\n@@ -2,7 +2,7 @@\n backglassVPSId: \"aKAU92HIYe\"\n backglassChecksum: \"4bbd4e71ec5ce89563f38f78be5d6ca0\"\n backglassNotes: \"Download version 1.0.0\"\n-fps: 54\n+fps: 60\n romVPSId: \"LmiEEC7cOd\"\n romChecksum: \"9246873bcb2218f0e6ee5d2b9a6ea74c\"\n tableVPSId: \"I_hPHP6Kta\"\n@@ -10,9 +10,9 @@ tagline: \"Learn from the best, Kelly Packard\"\n testers:\n   - \"kaoticBPR\"\n   - \"OminousOsie\"\n+  - \"evilwraith\"\n vpxVPSId: \"8hOnTBtR_w\"\n vpxChecksum: \"558c983d24d4187909740f52aa274409\"\n tableNotes: \"Download 'Golden Cue (Sega 1998)-v1.4.zip'\"\n-enabled: false\n applyFixes:\n   - \"bass\""}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-goldencue/README.md", "diff": "diff --git a/external/vpx-goldencue/README.md b/external/vpx-goldencue/README.md\nindex 7b7534d8..33b506f9 100644\n--- a/external/vpx-goldencue/README.md\n+++ b/external/vpx-goldencue/README.md\n@@ -1,4 +1,4 @@\n-# Golden Cue (Sega 1998)\n+﻿# Golden Cue (Sega 1998)\n \n Tested by: kaoticBPR\n \n@@ -30,7 +30,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Learn from the best, Kelly Packard\"\n "}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-goldencue/README.md", "diff": "diff --git a/external/vpx-goldencue/README.md b/external/vpx-goldencue/README.md\nindex 5274d781..7b7534d8 100644\n--- a/external/vpx-goldencue/README.md\n+++ b/external/vpx-goldencue/README.md\n@@ -29,8 +29,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Learn from the best, Kelly Packard\"\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-goldencue/README.md", "diff": "diff --git a/external/vpx-goldencue/README.md b/external/vpx-goldencue/README.md\nindex e4bef6a7..5274d781 100644\n--- a/external/vpx-goldencue/README.md\n+++ b/external/vpx-goldencue/README.md\n@@ -29,5 +29,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Learn from the best, Kelly Packard\"\n "}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-goldencue/README.md", "diff": "diff --git a/external/vpx-goldencue/README.md b/external/vpx-goldencue/README.md\nindex ad8fd021..e4bef6a7 100644\n--- a/external/vpx-goldencue/README.md\n+++ b/external/vpx-goldencue/README.md\n@@ -29,10 +29,5 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-goldencue.elf\n-- Download the table and directb2s versions listed above, extract and copy them to external/vpx-goldencue\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- Place goldcue.zip ROM in the external/vpx-goldencue/pinmame/roms folder. *Do Not unzip*!\n - \"Learn from the best, Kelly Packard\"\n "}
+        ]
+      },
+      {
+        "hash": "4260260eb760ee52565614af7e67cbd38cd26dfa",
+        "date": "2025-05-06 19:23:13 +0100",
+        "author": "OminousOsie",
+        "message": "Disabled tables not going with wiz wed\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-goldencue/table.yml", "diff": "diff --git a/external/vpx-goldencue/table.yml b/external/vpx-goldencue/table.yml\nindex 3209fa0b..343f5d8d 100644\n--- a/external/vpx-goldencue/table.yml\n+++ b/external/vpx-goldencue/table.yml\n@@ -13,5 +13,6 @@ testers:\n vpxVPSId: \"8hOnTBtR_w\"\n vpxChecksum: \"558c983d24d4187909740f52aa274409\"\n tableNotes: \"Download 'Golden Cue (Sega 1998)-v1.4.zip'\"\n+enabled: false\n applyFixes:\n   - \"bass\""}
+        ]
+      },
+      {
+        "hash": "f9401e924e3caf5c64e02ccca1903dc80f80ed7f",
+        "date": "2025-04-30 21:07:45 +0100",
+        "author": "OminousOsie",
+        "message": "Updated launchers, reverted startship yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-goldencue/launcher.png"}
+        ]
+      },
+      {
+        "hash": "565b103f8327589e88ddc132da642ee9e2043e1c",
+        "date": "2025-04-24 18:34:19 +0100",
+        "author": "OminousOsie",
+        "message": "Added ymls for the last of the segas\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-goldencue/table.yml", "diff": "diff --git a/external/vpx-goldencue/table.yml b/external/vpx-goldencue/table.yml\nnew file mode 100644\nindex 00000000..3209fa0b\n--- /dev/null\n+++ b/external/vpx-goldencue/table.yml\n@@ -0,0 +1,17 @@\n+---\n+backglassVPSId: \"aKAU92HIYe\"\n+backglassChecksum: \"4bbd4e71ec5ce89563f38f78be5d6ca0\"\n+backglassNotes: \"Download version 1.0.0\"\n+fps: 54\n+romVPSId: \"LmiEEC7cOd\"\n+romChecksum: \"9246873bcb2218f0e6ee5d2b9a6ea74c\"\n+tableVPSId: \"I_hPHP6Kta\"\n+tagline: \"Learn from the best, Kelly Packard\"\n+testers:\n+  - \"kaoticBPR\"\n+  - \"OminousOsie\"\n+vpxVPSId: \"8hOnTBtR_w\"\n+vpxChecksum: \"558c983d24d4187909740f52aa274409\"\n+tableNotes: \"Download 'Golden Cue (Sega 1998)-v1.4.zip'\"\n+applyFixes:\n+  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "8969f3cce6d9de7205da4af9bb3e4de6c73686a3",
+        "date": "2025-04-01 16:16:33 +0100",
+        "author": "OminousOsie",
+        "message": "Updated image links to ones in the repo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-goldencue/README.md", "diff": "diff --git a/external/vpx-goldencue/README.md b/external/vpx-goldencue/README.md\nindex 91fc3469..ad8fd021 100644\n--- a/external/vpx-goldencue/README.md\n+++ b/external/vpx-goldencue/README.md\n@@ -2,7 +2,7 @@\n \n Tested by: kaoticBPR\n \n-![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_10/GC-FullscreenMode.png.ed7e2bdde6e2b389ad119e7c8d8ad48f.png)\n+![Table Preview](../../images/vpx-goldencue.png)\n \n Authors: [felsir](https://vpuniverse.com/profile/37000-felsir/)  \n Version: 1.4  \n@@ -35,3 +35,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n - Place goldcue.zip ROM in the external/vpx-goldencue/pinmame/roms folder. *Do Not unzip*!\n - \"Learn from the best, Kelly Packard\"\n+"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-goldencue/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-goldencue/pinmame/cfg/.gitkeep b/external/vpx-goldencue/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-goldencue/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-goldencue/pinmame/cfg/default.cfg b/external/vpx-goldencue/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-goldencue/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-goldencue/pinmame/cfg/goldcue.cfg", "diff": "diff --git a/external/vpx-goldencue/pinmame/cfg/goldcue.cfg b/external/vpx-goldencue/pinmame/cfg/goldcue.cfg\ndeleted file mode 100644\nindex df348841..00000000\nBinary files a/external/vpx-goldencue/pinmame/cfg/goldcue.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-goldencue/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-goldencue/pinmame/ini/.gitkeep b/external/vpx-goldencue/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-goldencue/pinmame/ini/goldcue.ini", "diff": "diff --git a/external/vpx-goldencue/pinmame/ini/goldcue.ini b/external/vpx-goldencue/pinmame/ini/goldcue.ini\ndeleted file mode 100644\nindex 15ca4cce..00000000\n--- a/external/vpx-goldencue/pinmame/ini/goldcue.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-sound=1\n-cheat=0\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-goldencue/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-goldencue/pinmame/nvram/.gitkeep b/external/vpx-goldencue/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-goldencue/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-goldencue/pinmame/roms/.gitkeep b/external/vpx-goldencue/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-goldencue/vpx-goldencue.xml", "diff": "diff --git a/external/vpx-goldencue/vpx-goldencue.xml b/external/vpx-goldencue/vpx-goldencue.xml\ndeleted file mode 100644\nindex 6088a13f..00000000\n--- a/external/vpx-goldencue/vpx-goldencue.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Golden Cue (Sega 1998)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-goldencue/Golden Cue (Sega 1998).ini->external/vpx-goldencue/table.ini", "diff": "diff --git a/external/vpx-goldencue/Golden Cue (Sega 1998).ini b/external/vpx-goldencue/table.ini\nsimilarity index 100%\nrename from external/vpx-goldencue/Golden Cue (Sega 1998).ini\nrename to external/vpx-goldencue/table.ini"},
+          {"status": "R-from", "path": "external/vpx-goldencue/pinmame/nvram/goldcue.nv->external/vpx-goldencue/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-goldencue/vpx-goldencue.png->external/vpx-goldencue/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-goldencue/Golden Cue (Sega 1998).ini->external/vpx-goldencue/table.ini", "diff": "diff --git a/external/vpx-goldencue/Golden Cue (Sega 1998).ini b/external/vpx-goldencue/table.ini\nsimilarity index 100%\nrename from external/vpx-goldencue/Golden Cue (Sega 1998).ini\nrename to external/vpx-goldencue/table.ini"},
+          {"status": "R-to", "path": "external/vpx-goldencue/pinmame/nvram/goldcue.nv->external/vpx-goldencue/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-goldencue/vpx-goldencue.png->external/vpx-goldencue/launcher.png"}
+        ]
+      },
+      {
+        "hash": "8cc8fae51390bbc590f9a993aca7279ec07c3956",
+        "date": "2024-09-11 15:14:05 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-goldencue",
+        "files": [
+          {"status": "M", "path": "external/vpx-goldencue/README.md", "diff": "diff --git a/external/vpx-goldencue/README.md b/external/vpx-goldencue/README.md\nindex 0efc13ea..91fc3469 100644\n--- a/external/vpx-goldencue/README.md\n+++ b/external/vpx-goldencue/README.md\n@@ -1,26 +1,28 @@\n # Golden Cue (Sega 1998)\n+\n Tested by: kaoticBPR\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_10/GC-FullscreenMode.png.ed7e2bdde6e2b389ad119e7c8d8ad48f.png)\n \n-Authors: [felsir](https://vpuniverse.com/profile/37000-felsir/)\n-Version: 1.4\n+Authors: [felsir](https://vpuniverse.com/profile/37000-felsir/)  \n+Version: 1.4  \n Download: [VPUniverse](https://vpuniverse.com/files/file/11417-golden-cue-sega-1998/)\n \n DirectB2S\n \n-Authors: [felsir](https://vpuniverse.com/profile/37000-felsir/)\n-Version: 1.0.0\n+Authors: [felsir](https://vpuniverse.com/profile/37000-felsir/)  \n+Version: 1.0.0  \n Download: [VPUniverse](https://vpuniverse.com/files/file/11396-golden-cue-sega-1998/)\n \n ROM\n \n-Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=198)\n+Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=198)  \n ROM Name and version: goldcue\n \n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 38 |\n@@ -29,8 +31,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-goldencue.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n-- Make sure the vpx, direct2b, and ini files are all named the \"exact\" same\n-- Place goldcue.zip in the external/vpx-goldencue/pinmame/roms folder *Do Not unzip*\n+- Download the table and directb2s versions listed above, extract and copy them to external/vpx-goldencue\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n+- Place goldcue.zip ROM in the external/vpx-goldencue/pinmame/roms folder. *Do Not unzip*!\n - \"Learn from the best, Kelly Packard\"\n-\n"}
+        ]
+      },
+      {
+        "hash": "b43011165748a826dc12751e0979746a4ac06fd9",
+        "date": "2024-09-10 23:03:51 -0400",
+        "author": "Kaoticbpr",
+        "message": "adding sega's golden cue\n\nadding golden cue to repo\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-goldencue/Golden Cue (Sega 1998).ini", "diff": "diff --git a/external/vpx-goldencue/Golden Cue (Sega 1998).ini b/external/vpx-goldencue/Golden Cue (Sega 1998).ini\nnew file mode 100644\nindex 00000000..54c02610\n--- /dev/null\n+++ b/external/vpx-goldencue/Golden Cue (Sega 1998).ini\t\n@@ -0,0 +1,16 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+OverrideTableEmissionScale = 0\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.820866\n+ViewCabScaleY = 1.028515\n+ViewCabScaleZ = 0.868848\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 38.176937\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 10.004210\n+ViewCabFOV = 31.629517\n+ViewCabLayback = 50.015289\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-goldencue/README.md", "diff": "diff --git a/external/vpx-goldencue/README.md b/external/vpx-goldencue/README.md\nnew file mode 100644\nindex 00000000..0efc13ea\n--- /dev/null\n+++ b/external/vpx-goldencue/README.md\n@@ -0,0 +1,36 @@\n+# Golden Cue (Sega 1998)\n+Tested by: kaoticBPR\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_10/GC-FullscreenMode.png.ed7e2bdde6e2b389ad119e7c8d8ad48f.png)\n+\n+Authors: [felsir](https://vpuniverse.com/profile/37000-felsir/)\n+Version: 1.4\n+Download: [VPUniverse](https://vpuniverse.com/files/file/11417-golden-cue-sega-1998/)\n+\n+DirectB2S\n+\n+Authors: [felsir](https://vpuniverse.com/profile/37000-felsir/)\n+Version: 1.0.0\n+Download: [VPUniverse](https://vpuniverse.com/files/file/11396-golden-cue-sega-1998/)\n+\n+ROM\n+\n+Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=198)\n+ROM Name and version: goldcue\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 38 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-goldencue.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Make sure the vpx, direct2b, and ini files are all named the \"exact\" same\n+- Place goldcue.zip in the external/vpx-goldencue/pinmame/roms folder *Do Not unzip*\n+- \"Learn from the best, Kelly Packard\"\n+"},
+          {"status": "A", "path": "external/vpx-goldencue/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-goldencue/pinmame/cfg/.gitkeep b/external/vpx-goldencue/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-goldencue/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-goldencue/pinmame/cfg/default.cfg b/external/vpx-goldencue/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-goldencue/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-goldencue/pinmame/cfg/goldcue.cfg", "diff": "diff --git a/external/vpx-goldencue/pinmame/cfg/goldcue.cfg b/external/vpx-goldencue/pinmame/cfg/goldcue.cfg\nnew file mode 100644\nindex 00000000..df348841\nBinary files /dev/null and b/external/vpx-goldencue/pinmame/cfg/goldcue.cfg differ"},
+          {"status": "A", "path": "external/vpx-goldencue/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-goldencue/pinmame/ini/.gitkeep b/external/vpx-goldencue/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-goldencue/pinmame/ini/goldcue.ini", "diff": "diff --git a/external/vpx-goldencue/pinmame/ini/goldcue.ini b/external/vpx-goldencue/pinmame/ini/goldcue.ini\nnew file mode 100644\nindex 00000000..15ca4cce\n--- /dev/null\n+++ b/external/vpx-goldencue/pinmame/ini/goldcue.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+sound=1\n+cheat=0\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-goldencue/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-goldencue/pinmame/nvram/.gitkeep b/external/vpx-goldencue/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-goldencue/pinmame/nvram/goldcue.nv"},
+          {"status": "A", "path": "external/vpx-goldencue/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-goldencue/pinmame/roms/.gitkeep b/external/vpx-goldencue/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-goldencue/vpx-goldencue.png"},
+          {"status": "A", "path": "external/vpx-goldencue/vpx-goldencue.xml", "diff": "diff --git a/external/vpx-goldencue/vpx-goldencue.xml b/external/vpx-goldencue/vpx-goldencue.xml\nnew file mode 100644\nindex 00000000..6088a13f\n--- /dev/null\n+++ b/external/vpx-goldencue/vpx-goldencue.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Golden Cue (Sega 1998)</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

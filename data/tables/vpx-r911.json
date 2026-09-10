@@ -1,0 +1,204 @@
+{
+    "commit_count": 19,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/table.yml", "diff": "diff --git a/external/vpx-r911/table.yml b/external/vpx-r911/table.yml\nindex 65335d7a..8f0cface 100644\n--- a/external/vpx-r911/table.yml\n+++ b/external/vpx-r911/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"C62584F213846BF92C3561E16BDCACE0\"\n-  - \"3ABFD15CC6C397699055C5109DB5911F\"\n+backglassChecksum: \"C62584F213846BF92C3561E16BDCACE0\"\n backglassNotes: \"Download 'Rescue 911 (Gottilieb 1994).zip'\"\n backglassVPSId: \"QaeDuYum4q\"\n coloredROMChecksum: \"17A99C6CA5E3EC828521C1BBD6DAD7D3\"\n@@ -18,8 +15,5 @@ tableVPSId: \"W8KNgel5\"\n tagline: \"'Weeeewoooo Weeeeeewoooo'\"\n testers:\n   - \"Wraith\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"CCD902E3D81061EC8075F21D6883D581\"\n-  - \"706B5289BD7A7B85E81EDDB82A9F4271\"\n+vpxChecksum: \"CCD902E3D81061EC8075F21D6883D581\"\n vpxVPSId: \"BzkddwC8\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/table.yml", "diff": "diff --git a/external/vpx-r911/table.yml b/external/vpx-r911/table.yml\nindex 8f0cface..65335d7a 100644\n--- a/external/vpx-r911/table.yml\n+++ b/external/vpx-r911/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"C62584F213846BF92C3561E16BDCACE0\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"C62584F213846BF92C3561E16BDCACE0\"\n+  - \"3ABFD15CC6C397699055C5109DB5911F\"\n backglassNotes: \"Download 'Rescue 911 (Gottilieb 1994).zip'\"\n backglassVPSId: \"QaeDuYum4q\"\n coloredROMChecksum: \"17A99C6CA5E3EC828521C1BBD6DAD7D3\"\n@@ -15,5 +18,8 @@ tableVPSId: \"W8KNgel5\"\n tagline: \"'Weeeewoooo Weeeeeewoooo'\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"CCD902E3D81061EC8075F21D6883D581\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"CCD902E3D81061EC8075F21D6883D581\"\n+  - \"706B5289BD7A7B85E81EDDB82A9F4271\"\n vpxVPSId: \"BzkddwC8\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-r911/table.yml", "diff": "diff --git a/external/vpx-r911/table.yml b/external/vpx-r911/table.yml\nnew file mode 100644\nindex 00000000..8f0cface\n--- /dev/null\n+++ b/external/vpx-r911/table.yml\n@@ -0,0 +1,19 @@\n+---\n+backglassChecksum: \"C62584F213846BF92C3561E16BDCACE0\"\n+backglassNotes: \"Download 'Rescue 911 (Gottilieb 1994).zip'\"\n+backglassVPSId: \"QaeDuYum4q\"\n+coloredROMChecksum: \"17A99C6CA5E3EC828521C1BBD6DAD7D3\"\n+coloredROMNotes: \"Download and extract 'GLaltcolor.7z'. Use file in 'rescu911'\"\n+coloredROMUrlOverride: \"https://vpuniverse.com/files/file/5120-glaltcolor7z/\"\n+fps: 60\n+romChecksum: \"C4897D8D8F2AF353A980AAE47CD7DAFD\"\n+romNotes: \"Download 'rescu911.zip'\"\n+romUrlOverride: \"https://vpuniverse.com/files/file/1301-rescu911zip/\"\n+romVersionOverride: \"rescu911\"\n+tableNotes: \"Download '1036023482_Rescue911(Gottlieb1994)v1.0.zip'\"\n+tableVPSId: \"W8KNgel5\"\n+tagline: \"'Weeeewoooo Weeeeeewoooo'\"\n+testers:\n+  - \"Wraith\"\n+vpxChecksum: \"CCD902E3D81061EC8075F21D6883D581\"\n+vpxVPSId: \"BzkddwC8\""},
+          {"status": "M", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nindex ee89727b..132c726a 100644\n--- a/external/vpx-r911/README.md\n+++ b/external/vpx-r911/README.md\n@@ -1,42 +1,60 @@\n-﻿# Rescue 911 (Gottlieb, 1994) \n+# Rescue 911 (Gottlieb 1994)\n \n-![Table Preview](../../images/vpx-r911.png)\n+![Table Preview](../../images/BzkddwC8-preview.webp)\n \n-Author: [antisect](https://vpuniverse.com/profile/36923-antisect/) \n+<br>\n \n-Tested by: Bla1ze\n+## *️⃣  Table Statistics\n \n-Version: 1.0.0\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 50 |\n \n-Download: [VP Universe](https://vpuniverse.com/files/file/7089-rescue-911-gottlieb-1994/)\n+<br>\n \n-DirectB2S\n+**VPXS 4KP Testers:**\n+  - Wraith\n \n-Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+<br>\n \n-Version: 1.0.0\n+---\n \n-Download: [VP Universe](https://vpuniverse.com/files/file/19143-rescue-911-gottlieb-1994-b2s-full-dmd/)\n+<br>\n \n-ROM\n+## ❇️ Available in the Wizard! 🪄✨\n \n-Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/rescu911.3355/)\n+<br>\n \n-SHA: 49f2c22645cf78b8cd497fe43643c0f2d31a2c20\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n-MD5: c4897d8d8f2af353a980aae47cd7dafd\n+### How to install:\n \n-## Status \n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Rescue 911 (Gottlieb 1994)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"'Weeeewoooo Weeeeeewoooo'\"*\n \n-Minimum VPX Standalone build: 10.8.0-1983-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n+<br>\n \n-## Instructions\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- If you're looking for Shatner, he's not here! 🚑\n+<br>\n \n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-r911/nvram.nv"},
+          {"status": "M", "path": "external/vpx-r911/table.ini", "diff": "diff --git a/external/vpx-r911/table.ini b/external/vpx-r911/table.ini\nindex c4187f89..30c686fd 100644\n--- a/external/vpx-r911/table.ini\n+++ b/external/vpx-r911/table.ini\n@@ -7,22 +7,17 @@ EmissionScale = 0.100330\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n+ScreenPlayerY = 16.334351\n+ScreenPlayerZ = 90.251465\n+AAFactor = 0.90\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.229962\n-ViewCabScaleY = 1.092991\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.227589\n+ViewCabScaleY = 1.010147\n+ViewCabScaleZ = 0.919369\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.000000\n-ViewCabVOfs = -56.156002\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 116.545212\n-\n-[Standalone]\n-PinMAMEWindowX = 3840\n-PinMAMEWindowY = 0\n-PinMAMEWindowWidth = 1200\n-PinMAMEWindowHeight = 380\n-PinMAMEWindowRotation = 1\n-WindowRenderMode = 0\n\\ No newline at end of file\n+ViewCabHOfs = 0.038900\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 274.276031\n+ViewCabWindowBot = 83.716217\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nindex 0172efb5..ee89727b 100644\n--- a/external/vpx-r911/README.md\n+++ b/external/vpx-r911/README.md\n@@ -1,4 +1,4 @@\n-# Rescue 911 (Gottlieb, 1994) \n+﻿# Rescue 911 (Gottlieb, 1994) \n \n ![Table Preview](../../images/vpx-r911.png)\n \n@@ -36,7 +36,7 @@ Minimum VPX Standalone build: 10.8.0-1983-a764013\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - If you're looking for Shatner, he's not here! 🚑\n "}
+        ]
+      },
+      {
+        "hash": "013f69af2b69e407d1b79d8aa0339da5a479d54d",
+        "date": "2025-06-14 18:59:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated launcher images with points work\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/launcher.png"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nindex c9f0b46e..0172efb5 100644\n--- a/external/vpx-r911/README.md\n+++ b/external/vpx-r911/README.md\n@@ -35,8 +35,8 @@ Minimum VPX Standalone build: 10.8.0-1983-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - If you're looking for Shatner, he's not here! 🚑\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nindex acea4012..c9f0b46e 100644\n--- a/external/vpx-r911/README.md\n+++ b/external/vpx-r911/README.md\n@@ -35,4 +35,8 @@ Minimum VPX Standalone build: 10.8.0-1983-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - If you're looking for Shatner, he's not here! 🚑\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nindex a31474df..acea4012 100644\n--- a/external/vpx-r911/README.md\n+++ b/external/vpx-r911/README.md\n@@ -35,8 +35,4 @@ Minimum VPX Standalone build: 10.8.0-1983-a764013\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-r911.elf\n-- Download the table, and directb2s versions listed above, extract them, and copy them into this folder\n-- Download the ROM, and place it into the /vpx-r911/pinmame/roms folder. Do NOT UNZIP!\n-- If you're loking for Shatner, he's not here! 🚑\n+- If you're looking for Shatner, he's not here! 🚑"}
+        ]
+      },
+      {
+        "hash": "5607a804ffdf1b7aedccdb5c1ef8fac7ea5dd5e6",
+        "date": "2025-04-01 09:52:33 +0100",
+        "author": "OminousOsie",
+        "message": "Updated images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nindex 56f409c6..a31474df 100644\n--- a/external/vpx-r911/README.md\n+++ b/external/vpx-r911/README.md\n@@ -1,6 +1,6 @@\n # Rescue 911 (Gottlieb, 1994) \n \n-![Table Preview](https://github.com/Bla1ze/vpx-images/blob/main/vpx-r911.png)\n+![Table Preview](../../images/vpx-r911.png)\n \n Author: [antisect](https://vpuniverse.com/profile/36923-antisect/) \n "}
+        ]
+      },
+      {
+        "hash": "e95048490a38c8a89f14c9ce11766922b6fbf0ce",
+        "date": "2025-03-20 03:13:13 +0000",
+        "author": "n-i-x",
+        "message": "delete pinmame printer files\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-r911/table.prt", "diff": "diff --git a/external/vpx-r911/table.prt b/external/vpx-r911/table.prt\ndeleted file mode 100644\nindex e69de29b..00000000"}
+        ]
+      },
+      {
+        "hash": "a77c9fc0b3aa2ea786042f2b4e1058a6a93d2017",
+        "date": "2025-03-10 14:28:08 +0000",
+        "author": "OminousOsie",
+        "message": "Re-added prts\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-r911/table.prt", "diff": "diff --git a/external/vpx-r911/table.prt b/external/vpx-r911/table.prt\nnew file mode 100644\nindex 00000000..e69de29b"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-r911/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-r911/pinmame/cfg/.gitkeep b/external/vpx-r911/pinmame/cfg/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-r911/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-r911/pinmame/cfg/default.cfg b/external/vpx-r911/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-r911/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-r911/pinmame/cfg/rescu911.cfg", "diff": "diff --git a/external/vpx-r911/pinmame/cfg/rescu911.cfg b/external/vpx-r911/pinmame/cfg/rescu911.cfg\ndeleted file mode 100644\nindex d486f57b..00000000\nBinary files a/external/vpx-r911/pinmame/cfg/rescu911.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-r911/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-r911/pinmame/ini/.gitkeep b/external/vpx-r911/pinmame/ini/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-r911/pinmame/ini/rescu911.ini", "diff": "diff --git a/external/vpx-r911/pinmame/ini/rescu911.ini b/external/vpx-r911/pinmame/ini/rescu911.ini\ndeleted file mode 100644\nindex 15ca4cce..00000000\n--- a/external/vpx-r911/pinmame/ini/rescu911.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-sound=1\n-cheat=0\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-r911/pinmame/memcard/rescu911.prt", "diff": "diff --git a/external/vpx-r911/pinmame/memcard/rescu911.prt b/external/vpx-r911/pinmame/memcard/rescu911.prt\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-r911/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-r911/pinmame/nvram/.gitkeep b/external/vpx-r911/pinmame/nvram/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-r911/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-r911/pinmame/roms/.gitkeep b/external/vpx-r911/pinmame/roms/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-r911/vpx-r911.xml", "diff": "diff --git a/external/vpx-r911/vpx-r911.xml b/external/vpx-r911/vpx-r911.xml\ndeleted file mode 100755\nindex f3d57f68..00000000\n--- a/external/vpx-r911/vpx-r911.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Rescue 911 Gottlieb (1994)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini->external/vpx-r911/table.ini", "diff": "diff --git a/external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini b/external/vpx-r911/table.ini\nsimilarity index 95%\nrename from external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini\nrename to external/vpx-r911/table.ini\nindex 61db163e..c4187f89 100644\n--- a/external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini\t\n+++ b/external/vpx-r911/table.ini\n@@ -1,28 +1,28 @@\n-[Player]\n-BallTrailStrength = 0.117647\n-AlphaRampAccuracy = 10\n-OverrideTableEmissionScale = 1\n-DynamicDayNight = 0\n-EmissionScale = 0.100330\n-ScreenWidth = 0.000000\n-ScreenHeight = 0.000000\n-ScreenInclination = 0.000000\n-\n-[TableOverride]\n-ViewCabMode = 2\n-ViewCabScaleX = 1.229962\n-ViewCabScaleY = 1.092991\n-ViewCabScaleZ = 1.000000\n-ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.000000\n-ViewCabVOfs = -56.156002\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 116.545212\n-\n-[Standalone]\n-PinMAMEWindowX = 3840\n-PinMAMEWindowY = 0\n-PinMAMEWindowWidth = 1200\n-PinMAMEWindowHeight = 380\n-PinMAMEWindowRotation = 1\n+[Player]\n+BallTrailStrength = 0.117647\n+AlphaRampAccuracy = 10\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.100330\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.229962\n+ViewCabScaleY = 1.092991\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -56.156002\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 116.545212\n+\n+[Standalone]\n+PinMAMEWindowX = 3840\n+PinMAMEWindowY = 0\n+PinMAMEWindowWidth = 1200\n+PinMAMEWindowHeight = 380\n+PinMAMEWindowRotation = 1\n WindowRenderMode = 0\n\\ No newline at end of file"},
+          {"status": "R-from", "path": "external/vpx-r911/pinmame/nvram/rescu911.nv->external/vpx-r911/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-r911/vpx-r911.png->external/vpx-r911/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini->external/vpx-r911/table.ini", "diff": "diff --git a/external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini b/external/vpx-r911/table.ini\nsimilarity index 95%\nrename from external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini\nrename to external/vpx-r911/table.ini\nindex 61db163e..c4187f89 100644\n--- a/external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini\t\n+++ b/external/vpx-r911/table.ini\n@@ -1,28 +1,28 @@\n-[Player]\n-BallTrailStrength = 0.117647\n-AlphaRampAccuracy = 10\n-OverrideTableEmissionScale = 1\n-DynamicDayNight = 0\n-EmissionScale = 0.100330\n-ScreenWidth = 0.000000\n-ScreenHeight = 0.000000\n-ScreenInclination = 0.000000\n-\n-[TableOverride]\n-ViewCabMode = 2\n-ViewCabScaleX = 1.229962\n-ViewCabScaleY = 1.092991\n-ViewCabScaleZ = 1.000000\n-ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.000000\n-ViewCabVOfs = -56.156002\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 116.545212\n-\n-[Standalone]\n-PinMAMEWindowX = 3840\n-PinMAMEWindowY = 0\n-PinMAMEWindowWidth = 1200\n-PinMAMEWindowHeight = 380\n-PinMAMEWindowRotation = 1\n+[Player]\n+BallTrailStrength = 0.117647\n+AlphaRampAccuracy = 10\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.100330\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.229962\n+ViewCabScaleY = 1.092991\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -56.156002\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 116.545212\n+\n+[Standalone]\n+PinMAMEWindowX = 3840\n+PinMAMEWindowY = 0\n+PinMAMEWindowWidth = 1200\n+PinMAMEWindowHeight = 380\n+PinMAMEWindowRotation = 1\n WindowRenderMode = 0\n\\ No newline at end of file"},
+          {"status": "R-to", "path": "external/vpx-r911/pinmame/nvram/rescu911.nv->external/vpx-r911/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-r911/vpx-r911.png->external/vpx-r911/launcher.png"}
+        ]
+      },
+      {
+        "hash": "2ba41e061fd2aeadfdb88d37b485dd0d5ec159b6",
+        "date": "2024-09-03 19:51:42 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Updating instructions for vpx-r911",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nindex 281eef9d..56f409c6 100644\n--- a/external/vpx-r911/README.md\n+++ b/external/vpx-r911/README.md\n@@ -37,5 +37,6 @@ Minimum VPX Standalone build: 10.8.0-1983-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-r911.elf\n-- Download the table, ROM and directb2s versions listed above and copy them into this folder\n+- Download the table, and directb2s versions listed above, extract them, and copy them into this folder\n+- Download the ROM, and place it into the /vpx-r911/pinmame/roms folder. Do NOT UNZIP!\n - If you're loking for Shatner, he's not here! 🚑\n"}
+        ]
+      },
+      {
+        "hash": "d690a5c9b3cd0bd7ebfc3ced4bb2e6c00315695e",
+        "date": "2024-08-08 16:44:55 -0300",
+        "author": "Bla1ze",
+        "message": "Create Rescue 911 (Gottlieb, 1994)v1.0.ini\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini", "diff": "diff --git a/external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini b/external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini\nnew file mode 100644\nindex 00000000..61db163e\n--- /dev/null\n+++ b/external/vpx-r911/Rescue 911 (Gottlieb, 1994)v1.0.ini\t\n@@ -0,0 +1,28 @@\n+[Player]\n+BallTrailStrength = 0.117647\n+AlphaRampAccuracy = 10\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.100330\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.229962\n+ViewCabScaleY = 1.092991\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -56.156002\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 116.545212\n+\n+[Standalone]\n+PinMAMEWindowX = 3840\n+PinMAMEWindowY = 0\n+PinMAMEWindowWidth = 1200\n+PinMAMEWindowHeight = 380\n+PinMAMEWindowRotation = 1\n+WindowRenderMode = 0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "c40ce6ac373fe46e6a765dafb71915c8580ecdf5",
+        "date": "2024-08-08 16:42:53 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nindex ee023452..281eef9d 100644\n--- a/external/vpx-r911/README.md\n+++ b/external/vpx-r911/README.md\n@@ -31,7 +31,7 @@ MD5: c4897d8d8f2af353a980aae47cd7dafd\n Minimum VPX Standalone build: 10.8.0-1983-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 35 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n \n ## Instructions\n \n"}
+        ]
+      },
+      {
+        "hash": "8060350751b7959e50d92d3b8a71c33c3b9123dd",
+        "date": "2024-08-08 16:42:36 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nindex f02557a8..ee023452 100644\n--- a/external/vpx-r911/README.md\n+++ b/external/vpx-r911/README.md\n@@ -38,4 +38,4 @@ Minimum VPX Standalone build: 10.8.0-1983-a764013\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-r911.elf\n - Download the table, ROM and directb2s versions listed above and copy them into this folder\n-- If you're loking for Shatner, he's not here!\n+- If you're loking for Shatner, he's not here! 🚑\n"}
+        ]
+      },
+      {
+        "hash": "4a3aad043c9acac187e6c7053e327eb34f140d07",
+        "date": "2024-08-08 16:42:16 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nindex c5d0252d..f02557a8 100644\n--- a/external/vpx-r911/README.md\n+++ b/external/vpx-r911/README.md\n@@ -38,4 +38,4 @@ Minimum VPX Standalone build: 10.8.0-1983-a764013\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-r911.elf\n - Download the table, ROM and directb2s versions listed above and copy them into this folder\n-- GET BACK INTO THE RING.. IT'S TIME FOR THE WWF ROYAL RUMBLE!\n+- If you're loking for Shatner, he's not here!\n"}
+        ]
+      },
+      {
+        "hash": "fd04748aea5fd9f8ea26d5c453fef63a3eb69bf5",
+        "date": "2024-08-08 16:40:45 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nindex ed28b82f..c5d0252d 100644\n--- a/external/vpx-r911/README.md\n+++ b/external/vpx-r911/README.md\n@@ -1,6 +1,6 @@\n # Rescue 911 (Gottlieb, 1994) \n \n-![Table Preview](https://github.com/Bla1ze/vpx-images/blob/main/vpx-r991.png)\n+![Table Preview](https://github.com/Bla1ze/vpx-images/blob/main/vpx-r911.png)\n \n Author: [antisect](https://vpuniverse.com/profile/36923-antisect/) \n \n@@ -38,4 +38,4 @@ Minimum VPX Standalone build: 10.8.0-1983-a764013\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-r911.elf\n - Download the table, ROM and directb2s versions listed above and copy them into this folder\n-- GET BACK INTO THE RING.. IT'S TIME FOR THE WWF ROYAL RUMBLE!\n\\ No newline at end of file\n+- GET BACK INTO THE RING.. IT'S TIME FOR THE WWF ROYAL RUMBLE!\n"}
+        ]
+      },
+      {
+        "hash": "42a7af359fa0ba74538b4976d05db7d7f4d2be60",
+        "date": "2024-08-08 16:39:18 -0300",
+        "author": "Bla1ze",
+        "message": "Initial Commit\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-r911/README.md", "diff": "diff --git a/external/vpx-r911/README.md b/external/vpx-r911/README.md\nnew file mode 100644\nindex 00000000..ed28b82f\n--- /dev/null\n+++ b/external/vpx-r911/README.md\n@@ -0,0 +1,41 @@\n+# Rescue 911 (Gottlieb, 1994) \n+\n+![Table Preview](https://github.com/Bla1ze/vpx-images/blob/main/vpx-r991.png)\n+\n+Author: [antisect](https://vpuniverse.com/profile/36923-antisect/) \n+\n+Tested by: Bla1ze\n+\n+Version: 1.0.0\n+\n+Download: [VP Universe](https://vpuniverse.com/files/file/7089-rescue-911-gottlieb-1994/)\n+\n+DirectB2S\n+\n+Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+\n+Version: 1.0.0\n+\n+Download: [VP Universe](https://vpuniverse.com/files/file/19143-rescue-911-gottlieb-1994-b2s-full-dmd/)\n+\n+ROM\n+\n+Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/rescu911.3355/)\n+\n+SHA: 49f2c22645cf78b8cd497fe43643c0f2d31a2c20\n+\n+MD5: c4897d8d8f2af353a980aae47cd7dafd\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1983-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 35 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-r911.elf\n+- Download the table, ROM and directb2s versions listed above and copy them into this folder\n+- GET BACK INTO THE RING.. IT'S TIME FOR THE WWF ROYAL RUMBLE!\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-r911/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-r911/pinmame/cfg/.gitkeep b/external/vpx-r911/pinmame/cfg/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-r911/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-r911/pinmame/cfg/default.cfg b/external/vpx-r911/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-r911/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-r911/pinmame/cfg/rescu911.cfg", "diff": "diff --git a/external/vpx-r911/pinmame/cfg/rescu911.cfg b/external/vpx-r911/pinmame/cfg/rescu911.cfg\nnew file mode 100644\nindex 00000000..d486f57b\nBinary files /dev/null and b/external/vpx-r911/pinmame/cfg/rescu911.cfg differ"},
+          {"status": "A", "path": "external/vpx-r911/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-r911/pinmame/ini/.gitkeep b/external/vpx-r911/pinmame/ini/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-r911/pinmame/ini/rescu911.ini", "diff": "diff --git a/external/vpx-r911/pinmame/ini/rescu911.ini b/external/vpx-r911/pinmame/ini/rescu911.ini\nnew file mode 100644\nindex 00000000..15ca4cce\n--- /dev/null\n+++ b/external/vpx-r911/pinmame/ini/rescu911.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+sound=1\n+cheat=0\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-r911/pinmame/memcard/rescu911.prt", "diff": "diff --git a/external/vpx-r911/pinmame/memcard/rescu911.prt b/external/vpx-r911/pinmame/memcard/rescu911.prt\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-r911/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-r911/pinmame/nvram/.gitkeep b/external/vpx-r911/pinmame/nvram/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-r911/pinmame/nvram/rescu911.nv"},
+          {"status": "A", "path": "external/vpx-r911/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-r911/pinmame/roms/.gitkeep b/external/vpx-r911/pinmame/roms/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-r911/vpx-r911.png"},
+          {"status": "A", "path": "external/vpx-r911/vpx-r911.xml", "diff": "diff --git a/external/vpx-r911/vpx-r911.xml b/external/vpx-r911/vpx-r911.xml\nnew file mode 100755\nindex 00000000..f3d57f68\n--- /dev/null\n+++ b/external/vpx-r911/vpx-r911.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Rescue 911 Gottlieb (1994)</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

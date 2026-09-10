@@ -1,0 +1,145 @@
+{
+    "commit_count": 15,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/table.yml", "diff": "diff --git a/external/vpx-indylastmovie/table.yml b/external/vpx-indylastmovie/table.yml\nindex 16b7bdb6..7921a29b 100644\n--- a/external/vpx-indylastmovie/table.yml\n+++ b/external/vpx-indylastmovie/table.yml\n@@ -8,8 +8,5 @@ tagline: \"Snakes. Why’d it have to be snakes?\"\n testers:\n   - \"Silentkat\"\n vpxVPSId: \"I0ysaAqWSq\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"2939FA94010C503131DC79D9B6B36A5F\"\n-  - \"484166EBB194D60AE0E489866CDAE3CA\"\n+vpxChecksum: \"2939FA94010C503131DC79D9B6B36A5F\"\n tableNotes: \"Download version 3.0 (ignore .directb2s in zip)\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/table.yml", "diff": "diff --git a/external/vpx-indylastmovie/table.yml b/external/vpx-indylastmovie/table.yml\nindex 7921a29b..16b7bdb6 100644\n--- a/external/vpx-indylastmovie/table.yml\n+++ b/external/vpx-indylastmovie/table.yml\n@@ -8,5 +8,8 @@ tagline: \"Snakes. Why’d it have to be snakes?\"\n testers:\n   - \"Silentkat\"\n vpxVPSId: \"I0ysaAqWSq\"\n-vpxChecksum: \"2939FA94010C503131DC79D9B6B36A5F\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"2939FA94010C503131DC79D9B6B36A5F\"\n+  - \"484166EBB194D60AE0E489866CDAE3CA\"\n tableNotes: \"Download version 3.0 (ignore .directb2s in zip)\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/table.ini", "diff": "diff --git a/external/vpx-indylastmovie/table.ini b/external/vpx-indylastmovie/table.ini\nindex eca70caa..e94b5ecb 100644\n--- a/external/vpx-indylastmovie/table.ini\n+++ b/external/vpx-indylastmovie/table.ini\n@@ -2,7 +2,7 @@\n BallTrailStrength = 0.250980\n AlphaRampAccuracy = 10\n OverrideTableEmissionScale = 1\n-ScreenPlayerZ = 99.980461\n+ScreenPlayerZ = 99.983711\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n@@ -12,11 +12,11 @@ EmissionScale = 0.180000\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.167254\n-ViewCabScaleY = 1.015035\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.231527\n+ViewCabScaleY = 0.989214\n+ViewCabScaleZ = 0.974179\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 1.361400\n-ViewCabVOfs = -0.034360\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 98.162224\n\\ No newline at end of file\n+ViewCabHOfs = 0.013000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 338.331909\n+ViewCabWindowBot = 98.162224"},
+          {"status": "M", "path": "external/vpx-indylastmovie/table.yml", "diff": "diff --git a/external/vpx-indylastmovie/table.yml b/external/vpx-indylastmovie/table.yml\nindex 57545861..7921a29b 100644\n--- a/external/vpx-indylastmovie/table.yml\n+++ b/external/vpx-indylastmovie/table.yml\n@@ -2,7 +2,7 @@\n backglassVPSId: \"qlBEpFhNUD\"\n backglassChecksum: \"E6650289E8E215B689B19CD2783BB54B\"\n backglassNotes: \"Download version 1.0.0\"\n-fps: 55\n+fps: 60\n tableVPSId: \"R6SSuZg_pk\"\n tagline: \"Snakes. Why’d it have to be snakes?\"\n testers:\n@@ -10,5 +10,3 @@ testers:\n vpxVPSId: \"I0ysaAqWSq\"\n vpxChecksum: \"2939FA94010C503131DC79D9B6B36A5F\"\n tableNotes: \"Download version 3.0 (ignore .directb2s in zip)\"\n-applyFixes:\n-  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/README.md", "diff": "diff --git a/external/vpx-indylastmovie/README.md b/external/vpx-indylastmovie/README.md\nindex 8c352251..8ec70aa9 100644\n--- a/external/vpx-indylastmovie/README.md\n+++ b/external/vpx-indylastmovie/README.md\n@@ -49,7 +49,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n "}
+        ]
+      },
+      {
+        "hash": "40170a9f9bff5e0d8eca4f29b4a9f798b6f0a26c",
+        "date": "2025-06-04 09:52:31 +0100",
+        "author": "OminousOsie",
+        "message": "Slight tweaks\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/README.md", "diff": "diff --git a/external/vpx-indylastmovie/README.md b/external/vpx-indylastmovie/README.md\nindex b9205706..8c352251 100644\n--- a/external/vpx-indylastmovie/README.md\n+++ b/external/vpx-indylastmovie/README.md\n@@ -1,4 +1,4 @@\n-# Indiana Jones - The Last Movie (original 2023)\n+# Indiana Jones - The Last Movie (Original 2023)\n \n ![Table Preview](../../images/vpx-indylastmovie-preview.jpg)\n \n"}
+        ]
+      },
+      {
+        "hash": "1a7f6d1339f66721c03a4c0fe02ac860957614f9",
+        "date": "2025-06-04 09:27:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/README.md", "diff": "diff --git a/external/vpx-indylastmovie/README.md b/external/vpx-indylastmovie/README.md\nindex 49b4a089..b9205706 100644\n--- a/external/vpx-indylastmovie/README.md\n+++ b/external/vpx-indylastmovie/README.md\n@@ -1,30 +1,60 @@\n-# Indiana Jones the Last Movie (original 2023)\n+# Indiana Jones - The Last Movie (original 2023)\n \n ![Table Preview](../../images/vpx-indylastmovie-preview.jpg)\n \n-A## Files\n-| File Type | Link | Version | Author | \n-|-----------|--------|----------|--------------|\n-| **VPX** | [VP Universe](https://vpuniverse.com/files/file/14905-indiana-jones-the-last-movie/) | 3.0 | [marty02](https://vpuniverse.com/profile/16531-marty02/)\n-| **B2S** | [VP Universe](https://vpuniverse.com/files/file/14961-indiana-jones-the-last-movie-alternate-b2s/) | 1.0 | [topper2k](https://vpuniverse.com/profile/32127-topper2k/)\n-| **DMD** | N/A | N/A | N/A |\n-| **ROM** | N/A | N/A | N/A |\n+<br>\n \n-\n-Tested by: Silentkat \n-\n-## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n+## *️⃣  Table Statistics\n \n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | 55 |\n \n-## Instructions\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Silentkat\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Indiana Jones - The Last Movie`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Snakes. Why’d it have to be snakes?\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- Use the separate link for the backglass. Don't use the one that came with the table\n \n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "be07b6c4a87f0c5f59fab684e3f6c97bb8a5090a",
+        "date": "2025-06-03 15:59:47 +0100",
+        "author": "OminousOsie",
+        "message": "Updated notes for indy\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/table.yml", "diff": "diff --git a/external/vpx-indylastmovie/table.yml b/external/vpx-indylastmovie/table.yml\nindex 42a871a4..57545861 100644\n--- a/external/vpx-indylastmovie/table.yml\n+++ b/external/vpx-indylastmovie/table.yml\n@@ -1,6 +1,7 @@\n ---\n backglassVPSId: \"qlBEpFhNUD\"\n backglassChecksum: \"E6650289E8E215B689B19CD2783BB54B\"\n+backglassNotes: \"Download version 1.0.0\"\n fps: 55\n tableVPSId: \"R6SSuZg_pk\"\n tagline: \"Snakes. Why’d it have to be snakes?\"\n@@ -8,6 +9,6 @@ testers:\n   - \"Silentkat\"\n vpxVPSId: \"I0ysaAqWSq\"\n vpxChecksum: \"2939FA94010C503131DC79D9B6B36A5F\"\n-tableNotes: \"use the separate link for the backglass\"\n+tableNotes: \"Download version 3.0 (ignore .directb2s in zip)\"\n applyFixes:\n   - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "2b82e616884cecf0e8fe35d8aa53a0919d75012b",
+        "date": "2025-06-03 15:15:45 +0100",
+        "author": "OminousOsie",
+        "message": "Updated indys pov using Bla1zes ini\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/table.ini", "diff": "diff --git a/external/vpx-indylastmovie/table.ini b/external/vpx-indylastmovie/table.ini\nindex 0762141a..eca70caa 100644\n--- a/external/vpx-indylastmovie/table.ini\n+++ b/external/vpx-indylastmovie/table.ini\n@@ -1,16 +1,22 @@\n [Player]\n-BallTrailStrength = 0.392157\n-OverrideTableEmissionScale = 0\n+BallTrailStrength = 0.250980\n+AlphaRampAccuracy = 10\n+OverrideTableEmissionScale = 1\n+ScreenPlayerZ = 99.980461\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+ScreenPlayerY = 16.043634\n+DynamicDayNight = 0\n+EmissionScale = 0.180000\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.954437\n-ViewCabScaleY = 1.267132\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -26.266012\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = -3.741401\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.167254\n+ViewCabScaleY = 1.015035\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 1.361400\n+ViewCabVOfs = -0.034360\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 98.162224\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "aedde5c2aa536f8ecaf5355a2deeaea7511404cf",
+        "date": "2025-05-29 19:22:04 -0500",
+        "author": "Silentkat4000",
+        "message": "Update launcher for indy\n\nUpdate launcher for indy\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/launcher.png"}
+        ]
+      },
+      {
+        "hash": "2f467922f778ff2be75b7f4174728c8a109afccd",
+        "date": "2025-05-28 20:19:25 -0500",
+        "author": "Silentkat4000",
+        "message": "update table yml for Indy last movie\n\nupdate table yml for Indy last movie\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/table.yml", "diff": "diff --git a/external/vpx-indylastmovie/table.yml b/external/vpx-indylastmovie/table.yml\nindex cc375c72..42a871a4 100644\n--- a/external/vpx-indylastmovie/table.yml\n+++ b/external/vpx-indylastmovie/table.yml\n@@ -9,6 +9,5 @@ testers:\n vpxVPSId: \"I0ysaAqWSq\"\n vpxChecksum: \"2939FA94010C503131DC79D9B6B36A5F\"\n tableNotes: \"use the separate link for the backglass\"\n-enabled: false\n applyFixes:\n   - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/README.md", "diff": "diff --git a/external/vpx-indylastmovie/README.md b/external/vpx-indylastmovie/README.md\nindex 106acbd3..49b4a089 100644\n--- a/external/vpx-indylastmovie/README.md\n+++ b/external/vpx-indylastmovie/README.md\n@@ -23,8 +23,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - Use the separate link for the backglass. Don't use the one that came with the table\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/README.md", "diff": "diff --git a/external/vpx-indylastmovie/README.md b/external/vpx-indylastmovie/README.md\nindex 113b0dd5..106acbd3 100644\n--- a/external/vpx-indylastmovie/README.md\n+++ b/external/vpx-indylastmovie/README.md\n@@ -23,4 +23,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - Use the separate link for the backglass. Don't use the one that came with the table\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/README.md", "diff": "diff --git a/external/vpx-indylastmovie/README.md b/external/vpx-indylastmovie/README.md\nindex d8c9856d..113b0dd5 100644\n--- a/external/vpx-indylastmovie/README.md\n+++ b/external/vpx-indylastmovie/README.md\n@@ -23,7 +23,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-indylastmovie.elf\n-- Download the table, directb2s and listed above (use the separate link for the backglass. Don't use the one that came with the table), extract and copy them into this folder vpx-indylastmovie\n-- Make sure (.vpx), (.directb2s), (.ini) files are all named the same\n+- Use the separate link for the backglass. Don't use the one that came with the table"}
+        ]
+      },
+      {
+        "hash": "f4381cd4ee5acbe05e5ff55ec5eea9852a0a97ac",
+        "date": "2025-04-20 09:55:22 -0500",
+        "author": "Silentkat4000",
+        "message": "Update Readme file\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-indylastmovie/README.md", "diff": "diff --git a/external/vpx-indylastmovie/README.md b/external/vpx-indylastmovie/README.md\nindex 06c14a58..d8c9856d 100644\n--- a/external/vpx-indylastmovie/README.md\n+++ b/external/vpx-indylastmovie/README.md\n@@ -26,4 +26,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-indylastmovie.elf\n - Download the table, directb2s and listed above (use the separate link for the backglass. Don't use the one that came with the table), extract and copy them into this folder vpx-indylastmovie\n-- Make sure (.vpx), (.directb2s), (.ini) and (.vbs) files are all named the same\n+- Make sure (.vpx), (.directb2s), (.ini) files are all named the same\n"}
+        ]
+      },
+      {
+        "hash": "ba969a49cf6c24b7f0675791689241262f6083bc",
+        "date": "2025-04-20 09:39:35 -0500",
+        "author": "Silentkat4000",
+        "message": "Add ndiana jones the last movie Table\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-indylastmovie/README.md", "diff": "diff --git a/external/vpx-indylastmovie/README.md b/external/vpx-indylastmovie/README.md\nnew file mode 100644\nindex 00000000..06c14a58\n--- /dev/null\n+++ b/external/vpx-indylastmovie/README.md\n@@ -0,0 +1,29 @@\n+# Indiana Jones the Last Movie (original 2023)\n+\n+![Table Preview](../../images/vpx-indylastmovie-preview.jpg)\n+\n+A## Files\n+| File Type | Link | Version | Author | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [VP Universe](https://vpuniverse.com/files/file/14905-indiana-jones-the-last-movie/) | 3.0 | [marty02](https://vpuniverse.com/profile/16531-marty02/)\n+| **B2S** | [VP Universe](https://vpuniverse.com/files/file/14961-indiana-jones-the-last-movie-alternate-b2s/) | 1.0 | [topper2k](https://vpuniverse.com/profile/32127-topper2k/)\n+| **DMD** | N/A | N/A | N/A |\n+| **ROM** | N/A | N/A | N/A |\n+\n+\n+Tested by: Silentkat \n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | 55 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-indylastmovie.elf\n+- Download the table, directb2s and listed above (use the separate link for the backglass. Don't use the one that came with the table), extract and copy them into this folder vpx-indylastmovie\n+- Make sure (.vpx), (.directb2s), (.ini) and (.vbs) files are all named the same"},
+          {"status": "A", "path": "external/vpx-indylastmovie/VPReg.ini", "diff": "diff --git a/external/vpx-indylastmovie/VPReg.ini b/external/vpx-indylastmovie/VPReg.ini\nnew file mode 100644\nindex 00000000..1f623048\n--- /dev/null\n+++ b/external/vpx-indylastmovie/VPReg.ini\n@@ -0,0 +1,11 @@\n+[indiana_jones_last_movie]\n+HighScore1=4214300\n+HighScore1Name=MEL\n+HighScore2=100000\n+HighScore2Name=AAA\n+HighScore3=100000\n+HighScore3Name=BBB\n+HighScore4=100000\n+HighScore4Name=CCC\n+Credits=1\n+TotalGamesPlayed=4\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-indylastmovie/launcher.png"},
+          {"status": "A", "path": "external/vpx-indylastmovie/table.ini", "diff": "diff --git a/external/vpx-indylastmovie/table.ini b/external/vpx-indylastmovie/table.ini\nnew file mode 100644\nindex 00000000..0762141a\n--- /dev/null\n+++ b/external/vpx-indylastmovie/table.ini\n@@ -0,0 +1,16 @@\n+[Player]\n+BallTrailStrength = 0.392157\n+OverrideTableEmissionScale = 0\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.954437\n+ViewCabScaleY = 1.267132\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -26.266012\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = -3.741401\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-indylastmovie/table.yml", "diff": "diff --git a/external/vpx-indylastmovie/table.yml b/external/vpx-indylastmovie/table.yml\nnew file mode 100644\nindex 00000000..cc375c72\n--- /dev/null\n+++ b/external/vpx-indylastmovie/table.yml\n@@ -0,0 +1,14 @@\n+---\n+backglassVPSId: \"qlBEpFhNUD\"\n+backglassChecksum: \"E6650289E8E215B689B19CD2783BB54B\"\n+fps: 55\n+tableVPSId: \"R6SSuZg_pk\"\n+tagline: \"Snakes. Why’d it have to be snakes?\"\n+testers:\n+  - \"Silentkat\"\n+vpxVPSId: \"I0ysaAqWSq\"\n+vpxChecksum: \"2939FA94010C503131DC79D9B6B36A5F\"\n+tableNotes: \"use the separate link for the backglass\"\n+enabled: false\n+applyFixes:\n+  - \"bass\"\n"}
+        ]
+      }
+    ]
+}

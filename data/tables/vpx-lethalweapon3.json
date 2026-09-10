@@ -1,0 +1,157 @@
+{
+    "commit_count": 14,
+    "commits": [
+      {
+        "hash": "1557f300b40f3395dd66fe816a7a7cff022935bc",
+        "date": "2026-08-13 23:21:20 -0300",
+        "author": "Bla1ze",
+        "message": "Adding Lethal Weapon 3 (Wizard) (#2105)\n\n* Initial\n\n* Create fORSSJ2I-preview.webp\n\n* Update README.md\n\n* README",
+        "files": [
+          {"status": "A", "path": "external/vpx-lethalweapon3/table.ini", "diff": "diff --git a/external/vpx-lethalweapon3/table.ini b/external/vpx-lethalweapon3/table.ini\nnew file mode 100644\nindex 00000000..e7fcaa69\n--- /dev/null\n+++ b/external/vpx-lethalweapon3/table.ini\n@@ -0,0 +1,13 @@\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.200000\n+ViewCabScaleY = 0.930000\n+ViewCabScaleZ = 0.859642\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 88.399994\n+ViewCabWindowTop = 43.352974\n+ViewCabWindowBot = -14.821533\n+\n+[Standalone]\n+POVLinkTableScaleXY = 0\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/table.yml", "diff": "diff --git a/external/vpx-lethalweapon3/table.yml b/external/vpx-lethalweapon3/table.yml\nnew file mode 100644\nindex 00000000..0bbb9585\n--- /dev/null\n+++ b/external/vpx-lethalweapon3/table.yml\n@@ -0,0 +1,20 @@\n+---\n+backglassChecksum: \"552A46801901E65A4A189F3F25A5777B\"\n+backglassNotes: \"Download v1.5\"\n+backglassVPSId: \"TEdH8hAaXw\"\n+coloredROMChecksum: \"E498285F148BE45F196967530E77BCA8\"\n+coloredROMNotes: \"Download lw3_208.cROMc (v1.0.0)\"\n+coloredROMVPSId: \"JdSu3elald\"\n+fps: 60\n+romChecksum: \"700E4701347C34708CFB24E4F48B9AF6\"\n+romNotes: \"Download lw3_208.zip\"\n+romVPSId: \"jBSsrghM\"\n+tableNotes: \"Download  Lethal Weapon 3 (Data East 1992)_Bigus(MOD)3.0.vpx.zip\"\n+tableVPSId: \"jvGmSlPi\"\n+tagline: \"We're Back In Action!\"\n+testers:\n+  - \"Bla1ze\"\n+  - \"pinballwizard2023\"\n+tutorialVPSId: \"Ia49KYLN84\"\n+vpxChecksum: \"5549FC96C1261BDE990B7FE26131FAE0\"\n+vpxVPSId: \"fORSSJ2I\"\n"},
+          {"status": "M", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nindex d893ce07..b3a731ca 100644\n--- a/external/vpx-lethalweapon3/README.md\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -1,31 +1,61 @@\n-﻿# Lethal Weapon 3 (Data East 1992)\n+# Lethal Weapon 3 (Data East 1992)\n \n-![Table Preview](../../images/vpx-lethalweapon3-preview.png)\n+![Table Preview](../../images/fORSSJ2I-preview.webp)\n \n-Authors: [EBisLit](https://www.vpforums.org/index.php?showuser=150578)  \n-Version: 1.0.1  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15140)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 1.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/12409-lethal-weapon-3-data-east-1992-b2s-full-dmd/)\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n-ROM\n+<br>\n \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=302)\n+**VPXS 4KP Testers:**\n+  - Bla1ze\n+  - pinballwizard2023\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n+---\n \n-## Instructions\n+<br>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+## ❇️ Available in the Wizard! 🪄✨\n \n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Lethal Weapon 3 (Data East 1992)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"We're Back In Action!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-lethalweapon3/launcher.png"},
+          {"status": "M", "path": "external/vpx-lethalweapon3/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nindex 1b841267..d893ce07 100644\n--- a/external/vpx-lethalweapon3/README.md\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -1,4 +1,4 @@\n-# Lethal Weapon 3 (Data East 1992)\n+﻿# Lethal Weapon 3 (Data East 1992)\n \n ![Table Preview](../../images/vpx-lethalweapon3-preview.png)\n \n@@ -26,6 +26,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nindex 1a94bd55..1b841267 100644\n--- a/external/vpx-lethalweapon3/README.md\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -25,7 +25,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nindex 97a8e033..1a94bd55 100644\n--- a/external/vpx-lethalweapon3/README.md\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -25,3 +25,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nindex 1fbad955..97a8e033 100644\n--- a/external/vpx-lethalweapon3/README.md\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -25,6 +25,3 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-lethalweapon3.elf\n-- Download the table and directb2s versions listed above and copy them into this folder"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-lethalweapon3/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/cfg/.gitkeep b/external/vpx-lethalweapon3/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-lethalweapon3/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/cfg/default.cfg b/external/vpx-lethalweapon3/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-lethalweapon3/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-lethalweapon3/pinmame/cfg/lw3_208.cfg", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/cfg/lw3_208.cfg b/external/vpx-lethalweapon3/pinmame/cfg/lw3_208.cfg\ndeleted file mode 100644\nindex e8de8389..00000000\nBinary files a/external/vpx-lethalweapon3/pinmame/cfg/lw3_208.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-lethalweapon3/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/ini/.gitkeep b/external/vpx-lethalweapon3/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-lethalweapon3/pinmame/ini/lw3_208.ini", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/ini/lw3_208.ini b/external/vpx-lethalweapon3/pinmame/ini/lw3_208.ini\ndeleted file mode 100644\nindex 15ca4cce..00000000\n--- a/external/vpx-lethalweapon3/pinmame/ini/lw3_208.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-sound=1\n-cheat=0\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-lethalweapon3/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/nvram/.gitkeep b/external/vpx-lethalweapon3/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-lethalweapon3/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/roms/.gitkeep b/external/vpx-lethalweapon3/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-lethalweapon3/vpx-lethalweapon3.xml", "diff": "diff --git a/external/vpx-lethalweapon3/vpx-lethalweapon3.xml b/external/vpx-lethalweapon3/vpx-lethalweapon3.xml\ndeleted file mode 100644\nindex bcae698d..00000000\n--- a/external/vpx-lethalweapon3/vpx-lethalweapon3.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Lethal Weapon 3</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-lethalweapon3/pinmame/nvram/lw3_208.nv->external/vpx-lethalweapon3/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-lethalweapon3/vpx-lethalweapon3.png->external/vpx-lethalweapon3/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-lethalweapon3/pinmame/nvram/lw3_208.nv->external/vpx-lethalweapon3/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-lethalweapon3/vpx-lethalweapon3.png->external/vpx-lethalweapon3/launcher.png"}
+        ]
+      },
+      {
+        "hash": "14345c4ed3232d0e45291f7cedc5e27de0b6abe4",
+        "date": "2025-01-23 20:01:15 -0600",
+        "author": "bhhobb",
+        "message": "Update README.md preview image",
+        "files": [
+          {"status": "M", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nindex 47c65758..1fbad955 100644\n--- a/external/vpx-lethalweapon3/README.md\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -1,6 +1,6 @@\n # Lethal Weapon 3 (Data East 1992)\n \n-![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=101622&id=15078&full=1)\n+![Table Preview](../../images/vpx-lethalweapon3-preview.png)\n \n Authors: [EBisLit](https://www.vpforums.org/index.php?showuser=150578)  \n Version: 1.0.1  \n"}
+        ]
+      },
+      {
+        "hash": "6ca0dc65c4e9c8b2b06802b592806d73fb814850",
+        "date": "2024-08-06 10:14:52 -0500",
+        "author": "Mike",
+        "message": "mass update of readme's\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nindex 9a46edaf..47c65758 100644\n--- a/external/vpx-lethalweapon3/README.md\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -16,9 +16,6 @@ ROM\n \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=302)\n \n-SHA: \n-MD5: \n-\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013"}
+        ]
+      },
+      {
+        "hash": "93683c10369b0e2a3c69d164f622b911b15dfe67",
+        "date": "2024-07-31 23:45:18 -0400",
+        "author": "ShotgunSean",
+        "message": "Update README.md\n\nFixed elf name",
+        "files": [
+          {"status": "M", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nindex 16cc797c..9a46edaf 100644\n--- a/external/vpx-lethalweapon3/README.md\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -29,5 +29,5 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ## Instructions\n \n - Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-indianajones.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file\n+- Add your personalized launcher.elf and rename it to vpx-lethalweapon3.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n"}
+        ]
+      },
+      {
+        "hash": "f302f5e5568be5e415c073d14203444e675ea34d",
+        "date": "2024-07-25 17:07:22 -0400",
+        "author": "n-i-x",
+        "message": "Delete external/vpx-lethalweapon3/VPReg.ini",
+        "files": [
+          {"status": "D", "path": "external/vpx-lethalweapon3/VPReg.ini", "diff": "diff --git a/external/vpx-lethalweapon3/VPReg.ini b/external/vpx-lethalweapon3/VPReg.ini\ndeleted file mode 100644\nindex 9de8674d..00000000\n--- a/external/vpx-lethalweapon3/VPReg.ini\n+++ /dev/null\n@@ -1,10 +0,0 @@\n-[jpsdeadpool]\n-HighScore1=100000\n-HighScore1Name=JSM\n-HighScore2=100000\n-HighScore2Name=CTH\n-HighScore3=100000\n-HighScore3Name=NIX\n-HighScore4=100000\n-HighScore4Name=VPX\n-Credits=0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "fb66062f1cecc424b20b74ef0e7da970f9e19d76",
+        "date": "2024-07-25 14:51:37 -0500",
+        "author": "Mike",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nindex d79a1e39..16cc797c 100644\n--- a/external/vpx-lethalweapon3/README.md\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -1,6 +1,6 @@\n # Lethal Weapon 3 (Data East 1992)\n \n-![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=77994&id=15140&full=1)\n+![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=101622&id=15078&full=1)\n \n Authors: [EBisLit](https://www.vpforums.org/index.php?showuser=150578)  \n Version: 1.0.1  \n"}
+        ]
+      },
+      {
+        "hash": "14ab161d927a8dbdd4838577d6e0ee5fcd11d10e",
+        "date": "2024-07-25 14:40:44 -0500",
+        "author": "Mike",
+        "message": "vpx-lethalweapon3 adding table preview image\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nindex 3c4612b9..d79a1e39 100644\n--- a/external/vpx-lethalweapon3/README.md\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -1,6 +1,6 @@\n # Lethal Weapon 3 (Data East 1992)\n \n-![Table Preview]()\n+![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=77994&id=15140&full=1)\n \n Authors: [EBisLit](https://www.vpforums.org/index.php?showuser=150578)  \n Version: 1.0.1  \n"}
+        ]
+      },
+      {
+        "hash": "a53f0986577f7eb1466638136adfccd386010eac",
+        "date": "2024-07-25 14:39:05 -0500",
+        "author": "Mike",
+        "message": "vpx-lethalweapon3 table preview image removal\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nindex d79a1e39..3c4612b9 100644\n--- a/external/vpx-lethalweapon3/README.md\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -1,6 +1,6 @@\n # Lethal Weapon 3 (Data East 1992)\n \n-![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=77994&id=15140&full=1)\n+![Table Preview]()\n \n Authors: [EBisLit](https://www.vpforums.org/index.php?showuser=150578)  \n Version: 1.0.1  \n"}
+        ]
+      },
+      {
+        "hash": "ab2565ce4f4ce3dcabc3b0a1e9ad54d1bceef677",
+        "date": "2024-07-25 12:14:07 -0500",
+        "author": "Mike",
+        "message": "Adding16 Tables\n\nAdding vpx-avengersclassic\nAdding vpx-cyclone\nAdding vpx-fridaythe13th\nAdding vpx-grandprix\nAdding vpx-indianajones\nAdding vpx-itpinballmadness\nAdding vpx-johnnymnemonic\nAdding vpx-lethalweapon3\nAdding vpx-lordoftherings\nAdding vpx-seawitch\nAdding vpx-spiderman\nAdding vpx-taf\nAdding vpx-terminator3\nAdding vpx-thelostworldjp\nAdding vpx-thewalkingdead\nAdding vpx-whoanellie\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-lethalweapon3/README.md", "diff": "diff --git a/external/vpx-lethalweapon3/README.md b/external/vpx-lethalweapon3/README.md\nnew file mode 100644\nindex 00000000..d79a1e39\n--- /dev/null\n+++ b/external/vpx-lethalweapon3/README.md\n@@ -0,0 +1,33 @@\n+# Lethal Weapon 3 (Data East 1992)\n+\n+![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=77994&id=15140&full=1)\n+\n+Authors: [EBisLit](https://www.vpforums.org/index.php?showuser=150578)  \n+Version: 1.0.1  \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15140)\n+\n+DirectB2S\n+\n+Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+Version: 1.0  \n+Download: [VP Universe](https://vpuniverse.com/files/file/12409-lethal-weapon-3-data-east-1992-b2s-full-dmd/)\n+\n+ROM\n+\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=302)\n+\n+SHA: \n+MD5: \n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-indianajones.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/VPReg.ini", "diff": "diff --git a/external/vpx-lethalweapon3/VPReg.ini b/external/vpx-lethalweapon3/VPReg.ini\nnew file mode 100644\nindex 00000000..9de8674d\n--- /dev/null\n+++ b/external/vpx-lethalweapon3/VPReg.ini\n@@ -0,0 +1,10 @@\n+[jpsdeadpool]\n+HighScore1=100000\n+HighScore1Name=JSM\n+HighScore2=100000\n+HighScore2Name=CTH\n+HighScore3=100000\n+HighScore3Name=NIX\n+HighScore4=100000\n+HighScore4Name=VPX\n+Credits=0\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/cfg/.gitkeep b/external/vpx-lethalweapon3/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/cfg/default.cfg b/external/vpx-lethalweapon3/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-lethalweapon3/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/pinmame/cfg/lw3_208.cfg", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/cfg/lw3_208.cfg b/external/vpx-lethalweapon3/pinmame/cfg/lw3_208.cfg\nnew file mode 100644\nindex 00000000..e8de8389\nBinary files /dev/null and b/external/vpx-lethalweapon3/pinmame/cfg/lw3_208.cfg differ"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/ini/.gitkeep b/external/vpx-lethalweapon3/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/pinmame/ini/lw3_208.ini", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/ini/lw3_208.ini b/external/vpx-lethalweapon3/pinmame/ini/lw3_208.ini\nnew file mode 100644\nindex 00000000..15ca4cce\n--- /dev/null\n+++ b/external/vpx-lethalweapon3/pinmame/ini/lw3_208.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+sound=1\n+cheat=0\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/nvram/.gitkeep b/external/vpx-lethalweapon3/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/pinmame/nvram/lw3_208.nv"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-lethalweapon3/pinmame/roms/.gitkeep b/external/vpx-lethalweapon3/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/vpx-lethalweapon3.png"},
+          {"status": "A", "path": "external/vpx-lethalweapon3/vpx-lethalweapon3.xml", "diff": "diff --git a/external/vpx-lethalweapon3/vpx-lethalweapon3.xml b/external/vpx-lethalweapon3/vpx-lethalweapon3.xml\nnew file mode 100644\nindex 00000000..bcae698d\n--- /dev/null\n+++ b/external/vpx-lethalweapon3/vpx-lethalweapon3.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Lethal Weapon 3</name>\n+</root>"}
+        ]
+      }
+    ]
+}

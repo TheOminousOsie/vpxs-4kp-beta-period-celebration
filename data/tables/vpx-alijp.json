@@ -1,0 +1,390 @@
+{
+    "commit_count": 41,
+    "commits": [
+      {
+        "hash": "3c7c6e753b37af30b80e87e2c57d698afab88003",
+        "date": "2026-09-06 22:26:14 -0400",
+        "author": "pointdablame",
+        "message": "Launchers - logo update\n\nThis updates the following launchers to the new Legends Unchained Logo:  123, 24, 250cc Abra Ca Dabra, Ace High, Alaska, Ali, Ali JPs, Alice 1948, Alien Poker, Aliens Alien Star, Adventures of Rocky and Bullwinkle, The Addams Family\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex 9a1fbaf8..ea9a46ff 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"ZzEbu9jMsf\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"fad5c53b28abae0c024968f94ef3ca9e\"\n-  - \"C73D303E8EF45DEA1895F6D1BD98CD66\"\n+backglassChecksum: \"fad5c53b28abae0c024968f94ef3ca9e\"\n fps: 60\n romVPSId: \"9sHHwihv\"\n romChecksum: \"7bccd3b85a2f23dda5a37417f1a259fd\"\n@@ -16,8 +13,5 @@ testers:\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"jZlXak4Y\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"2E6F2F8D1F89C10218B98426430D69EC\"\n-  - \"C6F66DC15F669F6BB38873D33378C3E1\"\n+vpxChecksum: \"2E6F2F8D1F89C10218B98426430D69EC\"\n tableNotes: \"Download v600.zip\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex ea9a46ff..9a1fbaf8 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"ZzEbu9jMsf\"\n-backglassChecksum: \"fad5c53b28abae0c024968f94ef3ca9e\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"fad5c53b28abae0c024968f94ef3ca9e\"\n+  - \"C73D303E8EF45DEA1895F6D1BD98CD66\"\n fps: 60\n romVPSId: \"9sHHwihv\"\n romChecksum: \"7bccd3b85a2f23dda5a37417f1a259fd\"\n@@ -13,5 +16,8 @@ testers:\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"jZlXak4Y\"\n-vpxChecksum: \"2E6F2F8D1F89C10218B98426430D69EC\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"2E6F2F8D1F89C10218B98426430D69EC\"\n+  - \"C6F66DC15F669F6BB38873D33378C3E1\"\n tableNotes: \"Download v600.zip\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.ini", "diff": "diff --git a/external/vpx-alijp/table.ini b/external/vpx-alijp/table.ini\nindex 51fb295f..eaf39cfb 100644\n--- a/external/vpx-alijp/table.ini\n+++ b/external/vpx-alijp/table.ini\n@@ -1,38 +1,17 @@\n-[TableOverride]\n-ViewDTLookAt = 46.000000\n-ViewDTFOV = 40.000000\n-ViewDTLayback = 6.000000\n-ViewDTRotation = 0.000000\n-ViewDTScaleX = 1.200000\n-ViewDTScaleY = 1.100000\n-ViewDTScaleZ = 1.000000\n-ViewDTPlayerX = 0.000000\n-ViewDTPlayerY = 5.000000\n-ViewDTPlayerZ = -10.000000\n-ViewCabLookAt = 0.034995\n-ViewCabFOV = 40.007065\n-ViewCabLayback = 60.027042\n-ViewCabRotation = 90.000000\n-ViewCabScaleX = 0.800075\n-ViewCabScaleY = 0.899566\n-ViewCabScaleZ = 1.000187\n-ViewCabPlayerX = 49.778999\n-ViewCabPlayerY = 0.000000\n-ViewCabPlayerZ = -412.790070\n-ViewFSSLookAt = 52.000000\n-ViewFSSFOV = 45.000000\n-ViewFSSLayback = 0.000000\n-ViewFSSRotation = 0.000000\n-ViewFSSScaleX = 1.200000\n-ViewFSSScaleY = 1.100000\n-ViewFSSScaleZ = 1.000000\n-ViewFSSPlayerX = 0.000000\n-ViewFSSPlayerY = 30.000000\n-ViewFSSPlayerZ = -50.000000\n-ViewCabMode = 0\n-\n [Standalone]\n PinMAMEWindow = 0\n \n-[Player]\n-FXAA = 1\n\\ No newline at end of file\n+[TableOption]\n+Select LUT = 0.000000\n+Cabinet Rails = 0.000000\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.135184\n+ViewCabScaleY = 0.989428\n+ViewCabScaleZ = 0.851039\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.041922\n+ViewCabWindowTop = 51.978973\n+ViewCabWindowBot = 51.352272\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "496404c0932319b8d973b98898075b94cc7adc46",
+        "date": "2025-09-14 14:51:22 -0400",
+        "author": "evilwraith",
+        "message": "9-14 updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex 45cbff10..ea9a46ff 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -13,5 +13,5 @@ testers:\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"jZlXak4Y\"\n-vpxChecksum: \"9E16873FC853FB956CB4872B16F3BB03\"\n-tableNotes: \"Download v55_VPX8.zip\"\n+vpxChecksum: \"2E6F2F8D1F89C10218B98426430D69EC\"\n+tableNotes: \"Download v600.zip\""}
+        ]
+      },
+      {
+        "hash": "142bba6383541a6d77674980cfec9fd5972c34b7",
+        "date": "2025-07-18 15:33:27 +0100",
+        "author": "OminousOsie",
+        "message": "Added nvram to ali to stop droning sound\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alijp/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "6c469119d6ce4ca58f9259bde9e6eb44ed2ed248",
+        "date": "2025-06-26 11:49:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated ali wiz launcher\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/launcher.png"}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex ec34a297..d636595b 100644\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -51,7 +51,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n "}
+        ]
+      },
+      {
+        "hash": "43e06a78576a8d7069d79fee2da8885f7e817af7",
+        "date": "2025-04-30 11:28:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed BOM\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex 59467b9f..ec34a297 100644\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -1,4 +1,4 @@\n-﻿﻿# Ali (JP's, Stern 1980)\n+﻿# Ali (JP's, Stern 1980)\n \n ![Table Preview](../../images/vpx-alijp.jpg)\n "}
+        ]
+      },
+      {
+        "hash": "5424a8122d5eb54371b2435888f2d337df05dc43",
+        "date": "2025-04-30 11:23:31 +0100",
+        "author": "OminousOsie",
+        "message": "Added lloydbraun to the wiz team\n\nAdded lloydbraun to the wiz team\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex f8a702cb..59467b9f 100644\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -48,7 +48,7 @@ __*We hope you enjoy!!*__\n \n *The VPXS 4KP Wizard team:*\n <pre>\n-- n-i-x            - Mox\n+- n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n - mrandromeda      - SScorpio         - TechZombie"}
+        ]
+      },
+      {
+        "hash": "01c7e252332b06a5a09e3bfaa60664142a54042f",
+        "date": "2025-04-16 10:44:26 +0100",
+        "author": "OminousOsie",
+        "message": "Added the full team to the readme\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex de5ab9a2..f8a702cb 100644\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -1,4 +1,4 @@\n-﻿# Ali (JP's, Stern 1980)\n+﻿﻿# Ali (JP's, Stern 1980)\n \n ![Table Preview](../../images/vpx-alijp.jpg)\n \n@@ -42,7 +42,17 @@ This table is available through the Table Manager Wizard, which makes installati\n \n Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n \n <br>"}
+        ]
+      },
+      {
+        "hash": "6c2a220adac96b5ed5b84500eba9d819bca0cc87",
+        "date": "2025-04-08 15:22:54 +0100",
+        "author": "OminousOsie",
+        "message": "Italic the tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex d8d5ddae..de5ab9a2 100644\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -36,7 +36,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Ali`**\n 5.  Follow the on-screen instructions to download and upload the required files\n-6. \"If my mind can conceive it, if my heart can believe it–then I can achieve it.\"\n+6. *\"If my mind can conceive it, if my heart can believe it–then I can achieve it.\"*\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "ec024f091d11b71aef0144fb31e7d1b020df9223",
+        "date": "2025-04-08 15:09:40 +0100",
+        "author": "OminousOsie",
+        "message": "Update to readmes to readd tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex 3d37366b..d8d5ddae 100644\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -1,4 +1,4 @@\n-# Ali (JP's, Stern 1980)\n+﻿# Ali (JP's, Stern 1980)\n \n ![Table Preview](../../images/vpx-alijp.jpg)\n \n@@ -36,6 +36,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Ali`**\n 5.  Follow the on-screen instructions to download and upload the required files\n+6. \"If my mind can conceive it, if my heart can believe it–then I can achieve it.\"\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "1cdb5eb60cd44f653dcdac1e51935b657e705822",
+        "date": "2025-04-08 11:25:31 +0100",
+        "author": "OminousOsie",
+        "message": "More readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex 97c6281f..3d37366b 100644\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -1,4 +1,4 @@\n-# Ali, JP's (Stern 1980)\n+# Ali (JP's, Stern 1980)\n \n ![Table Preview](../../images/vpx-alijp.jpg)\n "}
+        ]
+      },
+      {
+        "hash": "43650ff0ea7f93f27d1e677e2071f06819b0d879",
+        "date": "2025-04-08 11:20:14 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex 8961985c..97c6281f 100644\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -2,31 +2,50 @@\n \n ![Table Preview](../../images/vpx-alijp.jpg)\n \n----\n-\n-## Files\n-| File Type | Link | Version | Author |\n-|:---------:|:----:|:-------:|:------:|\n-| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12902) | 5.5.0 | [JPSalas](https://www.vpforums.org/index.php?showuser=277) |\n-| B2S | [VP Universe](https://vpuniverse.com/files/file/21356-ali-stern-1980-b2s/) | 1.0.0 | [Wildman](https://vpuniverse.com/profile/5-wildman/) |\n-| DMD | N/A | N/A | N/A |\n-| ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=741) | N/A | N/A |\n+<br>\n \n-**Tested by:** [Boris]\n+## *️⃣  Table Statistics\n \n----\n-\n-## Status \n-**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n \n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Bla1ze\n+  - OminousOsie 🌸\n+  - CoffeeAtJoes\n+\n+<br>\n+\n ---\n \n-## Instructions\n-- Copy this repo folder into the \"external\" folder on your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-alijp.elf\n-- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alijp\n-- Make sure any (.vpx), (.directb2s), and (.ini) files are all named the same\n-- Download the ROM listed above and copy it to vpx-alijp\\pinmame\\roms -- DO NOT UNZIP!\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Ali`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "296e5131408a564e8f0bcc46e26766ca4f3e2ed3",
+        "date": "2025-03-28 10:41:55 +0000",
+        "author": "OminousOsie",
+        "message": "Added CoffeeAtJoes to the tester list of all with a dmd.png\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex fc0bb438..45cbff10 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -11,6 +11,7 @@ tagline: >-\n testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n+  - \"CoffeeAtJoes\"\n vpxVPSId: \"jZlXak4Y\"\n vpxChecksum: \"9E16873FC853FB956CB4872B16F3BB03\"\n tableNotes: \"Download v55_VPX8.zip\""}
+        ]
+      },
+      {
+        "hash": "f4fd3d2eaf622c9b82a605a04be7c6b53cbd84ff",
+        "date": "2025-03-28 10:21:52 +0000",
+        "author": "OminousOsie",
+        "message": "Added wizard yml owners to testers list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex 32241bbe..fc0bb438 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -10,6 +10,7 @@ tagline: >-\n   can believe it–then I can achieve it.\"\n testers:\n   - \"Bla1ze\"\n+  - \"OminousOsie\"\n vpxVPSId: \"jZlXak4Y\"\n vpxChecksum: \"9E16873FC853FB956CB4872B16F3BB03\"\n tableNotes: \"Download v55_VPX8.zip\""}
+        ]
+      },
+      {
+        "hash": "4755f99aaafcaf6dd938ec0d6557dc41c120688a",
+        "date": "2025-03-25 19:42:16 +0000",
+        "author": "OminousOsie",
+        "message": "Added bass fixes, inis, and color dmds\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.ini", "diff": "diff --git a/external/vpx-alijp/table.ini b/external/vpx-alijp/table.ini\nindex 66def128..51fb295f 100644\n--- a/external/vpx-alijp/table.ini\n+++ b/external/vpx-alijp/table.ini\n@@ -9,16 +9,16 @@ ViewDTScaleZ = 1.000000\n ViewDTPlayerX = 0.000000\n ViewDTPlayerY = 5.000000\n ViewDTPlayerZ = -10.000000\n-ViewCabLookAt = 16.199995\n-ViewCabFOV = 15.000000\n-ViewCabLayback = 35.000000\n+ViewCabLookAt = 0.034995\n+ViewCabFOV = 40.007065\n+ViewCabLayback = 60.027042\n ViewCabRotation = 90.000000\n-ViewCabScaleX = 1.000000\n-ViewCabScaleY = 1.100000\n-ViewCabScaleZ = 1.000000\n-ViewCabPlayerX = 0.000000\n+ViewCabScaleX = 0.800075\n+ViewCabScaleY = 0.899566\n+ViewCabScaleZ = 1.000187\n+ViewCabPlayerX = 49.778999\n ViewCabPlayerY = 0.000000\n-ViewCabPlayerZ = -300.000000\n+ViewCabPlayerZ = -412.790070\n ViewFSSLookAt = 52.000000\n ViewFSSFOV = 45.000000\n ViewFSSLayback = 0.000000"}
+        ]
+      },
+      {
+        "hash": "1eb272befb77a48146ccd322d4099c845b20ca15",
+        "date": "2025-03-24 15:02:00 +0000",
+        "author": "OminousOsie",
+        "message": "Moved to >-\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex e2c3db0d..32241bbe 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -5,7 +5,7 @@ fps: 60\n romVPSId: \"9sHHwihv\"\n romChecksum: \"7bccd3b85a2f23dda5a37417f1a259fd\"\n tableVPSId: \"z9BMLCAY\"\n-tagline: |\n+tagline: >-\n   \"If my mind can conceive it, if my heart\n   can believe it–then I can achieve it.\"\n testers:"}
+        ]
+      },
+      {
+        "hash": "aa75a01d12fb6adc748411703064f89982eb6d83",
+        "date": "2025-03-24 09:57:47 +0000",
+        "author": "OminousOsie",
+        "message": "Updated lit strings\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex b83a4fa3..e2c3db0d 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -6,8 +6,8 @@ romVPSId: \"9sHHwihv\"\n romChecksum: \"7bccd3b85a2f23dda5a37417f1a259fd\"\n tableVPSId: \"z9BMLCAY\"\n tagline: |\n-  If my mind can conceive it, if my heart\n-  can believe it–then I can achieve it.\n+  \"If my mind can conceive it, if my heart\n+  can believe it–then I can achieve it.\"\n testers:\n   - \"Bla1ze\"\n vpxVPSId: \"jZlXak4Y\""}
+        ]
+      },
+      {
+        "hash": "aa4250e18430b3da041dec1ab0edc1906a3457bf",
+        "date": "2025-03-24 09:33:37 +0000",
+        "author": "OminousOsie",
+        "message": "Removed space\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex 5fe9ef44..b83a4fa3 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -5,7 +5,7 @@ fps: 60\n romVPSId: \"9sHHwihv\"\n romChecksum: \"7bccd3b85a2f23dda5a37417f1a259fd\"\n tableVPSId: \"z9BMLCAY\"\n-tagline:  |\n+tagline: |\n   If my mind can conceive it, if my heart\n   can believe it–then I can achieve it.\n testers:\n"}
+        ]
+      },
+      {
+        "hash": "3b8ab8db093432b01883d8c38a67c5ee4f7eb968",
+        "date": "2025-03-24 09:30:29 +0000",
+        "author": "OminousOsie",
+        "message": "trying literal string\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex aa665079..5fe9ef44 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -5,9 +5,9 @@ fps: 60\n romVPSId: \"9sHHwihv\"\n romChecksum: \"7bccd3b85a2f23dda5a37417f1a259fd\"\n tableVPSId: \"z9BMLCAY\"\n-tagline: \n-  \"If my mind can conceive it, if my heart\" \n-  \"can believe it–then I can achieve it.\"\n+tagline:  |\n+  If my mind can conceive it, if my heart\n+  can believe it–then I can achieve it.\n testers:\n   - \"Bla1ze\"\n vpxVPSId: \"jZlXak4Y\"\n"}
+        ]
+      },
+      {
+        "hash": "8b6ee7838766a4b5b77f9cc4489ba437caad9645",
+        "date": "2025-03-24 09:27:35 +0000",
+        "author": "OminousOsie",
+        "message": "split lines\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex 66d349d6..aa665079 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -5,7 +5,9 @@ fps: 60\n romVPSId: \"9sHHwihv\"\n romChecksum: \"7bccd3b85a2f23dda5a37417f1a259fd\"\n tableVPSId: \"z9BMLCAY\"\n-tagline: \"If my mind can conceive it, if my heart can believe it–then I can achieve it.\"\n+tagline: \n+  \"If my mind can conceive it, if my heart\" \n+  \"can believe it–then I can achieve it.\"\n testers:\n   - \"Bla1ze\"\n vpxVPSId: \"jZlXak4Y\"\n"}
+        ]
+      },
+      {
+        "hash": "266821b169409b0dc1c37f85941fc2b36d39254d",
+        "date": "2025-03-24 01:26:39 +0000",
+        "author": "OminousOsie",
+        "message": "yml formatting\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex 89677912..66d349d6 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -10,4 +10,4 @@ testers:\n   - \"Bla1ze\"\n vpxVPSId: \"jZlXak4Y\"\n vpxChecksum: \"9E16873FC853FB956CB4872B16F3BB03\"\n-tableNotes: \"Download v55_VPX8.zip\"\n\\ No newline at end of file\n+tableNotes: \"Download v55_VPX8.zip\""}
+        ]
+      },
+      {
+        "hash": "f97b737805c3710c4206ec673c16ae88e53e1f52",
+        "date": "2025-03-24 01:18:39 +0000",
+        "author": "OminousOsie",
+        "message": "Added margin to all testers in ymls\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex 436c6769..89677912 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -7,7 +7,7 @@ romChecksum: \"7bccd3b85a2f23dda5a37417f1a259fd\"\n tableVPSId: \"z9BMLCAY\"\n tagline: \"If my mind can conceive it, if my heart can believe it–then I can achieve it.\"\n testers:\n-- \"Bla1ze\"\n+  - \"Bla1ze\"\n vpxVPSId: \"jZlXak4Y\"\n vpxChecksum: \"9E16873FC853FB956CB4872B16F3BB03\"\n tableNotes: \"Download v55_VPX8.zip\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "8f0040b4b9fa32105a63dc304eac712644b8418f",
+        "date": "2025-03-21 18:53:28 +0000",
+        "author": "OminousOsie",
+        "message": "Added dmd images for tables\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alijp/dmd.png"}
+        ]
+      },
+      {
+        "hash": "fa6657007c81f6ef3a30f42d40066418228d4c79",
+        "date": "2025-03-21 10:02:17 +0000",
+        "author": "OminousOsie",
+        "message": "Updated image links\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex 8358894f..8961985c 100644\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -1,6 +1,6 @@\n # Ali, JP's (Stern 1980)\n \n-![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-alijp.jpg)\n+![Table Preview](../../images/vpx-alijp.jpg)\n \n ---\n "}
+        ]
+      },
+      {
+        "hash": "53d6f9de08d98dfd49702619e7120a75fd7831b8",
+        "date": "2025-03-20 22:14:02 +0000",
+        "author": "OminousOsie",
+        "message": "Added quotes to wizard json values\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex 14d4106b..436c6769 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -1,13 +1,13 @@\n ---\n-backglassVPSId: ZzEbu9jMsf\n-backglassChecksum: fad5c53b28abae0c024968f94ef3ca9e\n+backglassVPSId: \"ZzEbu9jMsf\"\n+backglassChecksum: \"fad5c53b28abae0c024968f94ef3ca9e\"\n fps: 60\n-romVPSId: 9sHHwihv\n-romChecksum: 7bccd3b85a2f23dda5a37417f1a259fd\n-tableVPSId: z9BMLCAY\n+romVPSId: \"9sHHwihv\"\n+romChecksum: \"7bccd3b85a2f23dda5a37417f1a259fd\"\n+tableVPSId: \"z9BMLCAY\"\n tagline: \"If my mind can conceive it, if my heart can believe it–then I can achieve it.\"\n testers:\n-- Bla1ze\n-vpxVPSId: jZlXak4Y\n-vpxChecksum: 9E16873FC853FB956CB4872B16F3BB03\n+- \"Bla1ze\"\n+vpxVPSId: \"jZlXak4Y\"\n+vpxChecksum: \"9E16873FC853FB956CB4872B16F3BB03\"\n tableNotes: \"Download v55_VPX8.zip\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "ed52e3a5c956134348f9a31532a2fdf6fa059435",
+        "date": "2025-03-20 11:26:37 -0400",
+        "author": "Brandon",
+        "message": "Shore up stray Readmes for Ali JP and 4 Aces\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nold mode 100755\nnew mode 100644\nindex e30ff0ef..8358894f\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -2,34 +2,29 @@\n \n ![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-alijp.jpg)\n \n-Table\n+---\n \n-Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12902)\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12902) | 5.5.0 | [JPSalas](https://www.vpforums.org/index.php?showuser=277) |\n+| B2S | [VP Universe](https://vpuniverse.com/files/file/21356-ali-stern-1980-b2s/) | 1.0.0 | [Wildman](https://vpuniverse.com/profile/5-wildman/) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=741) | N/A | N/A |\n \n-DirectB2S\n+**Tested by:** [Boris]\n \n-Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 1.0.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/21356-ali-stern-1980-b2s/)\n-\n-ROM\n-\n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=741)\n-\n-Tested by: Boris\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy this repo folder into the \"external\" folder on your USB drive\n - Add your personalized launcher.elf and rename it to vpx-alijp.elf\n - Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alijp\n"}
+        ]
+      },
+      {
+        "hash": "54316962e450fb3d67e8e2ce71df3d0356b6b3b7",
+        "date": "2025-03-20 11:14:28 -0400",
+        "author": "Brandon",
+        "message": "Revert \"Delete external/vpx-alijp/README.md\"\n\nThis reverts commit d3b7ffda116c2a4668cddcb9cfdc9e48ad0b168a.\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nnew file mode 100755\nindex 00000000..e30ff0ef\n--- /dev/null\n+++ b/external/vpx-alijp/README.md\n@@ -0,0 +1,37 @@\n+# Ali, JP's (Stern 1980)\n+\n+![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-alijp.jpg)\n+\n+Table\n+\n+Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n+Version: 5.5.0  \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12902)\n+\n+DirectB2S\n+\n+Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+Version: 1.0.0  \n+Download: [VP Universe](https://vpuniverse.com/files/file/21356-ali-stern-1980-b2s/)\n+\n+ROM\n+\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=741)\n+\n+Tested by: Boris\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n+\n+## Instructions\n+\n+- Copy this repo folder into the \"external\" folder on your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-alijp.elf\n+- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alijp\n+- Make sure any (.vpx), (.directb2s), and (.ini) files are all named the same\n+- Download the ROM listed above and copy it to vpx-alijp\\pinmame\\roms -- DO NOT UNZIP!\n"}
+        ]
+      },
+      {
+        "hash": "d3b7ffda116c2a4668cddcb9cfdc9e48ad0b168a",
+        "date": "2025-03-20 10:41:56 -0400",
+        "author": "Brandon",
+        "message": "Delete external/vpx-alijp/README.md",
+        "files": [
+          {"status": "D", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\ndeleted file mode 100755\nindex e30ff0ef..00000000\n--- a/external/vpx-alijp/README.md\n+++ /dev/null\n@@ -1,37 +0,0 @@\n-# Ali, JP's (Stern 1980)\n-\n-![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-alijp.jpg)\n-\n-Table\n-\n-Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12902)\n-\n-DirectB2S\n-\n-Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 1.0.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/21356-ali-stern-1980-b2s/)\n-\n-ROM\n-\n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=741)\n-\n-Tested by: Boris\n-\n-## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n-\n-## Instructions\n-\n-- Copy this repo folder into the \"external\" folder on your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-alijp.elf\n-- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alijp\n-- Make sure any (.vpx), (.directb2s), and (.ini) files are all named the same\n-- Download the ROM listed above and copy it to vpx-alijp\\pinmame\\roms -- DO NOT UNZIP!\n"}
+        ]
+      },
+      {
+        "hash": "4dfe31cb920b8be2ff7cf4d17f0dfc1daba29b4b",
+        "date": "2025-03-19 23:44:02 -0500",
+        "author": "MoxAssault",
+        "message": "README Updates\n\nCorrection on some missed tags and Testers\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex bf716bc9..8358894f 100755\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -2,34 +2,29 @@\n \n ![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-alijp.jpg)\n \n-Table\n+---\n \n-Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12902)\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12902) | 5.5.0 | [JPSalas](https://www.vpforums.org/index.php?showuser=277) |\n+| B2S | [VP Universe](https://vpuniverse.com/files/file/21356-ali-stern-1980-b2s/) | 1.0.0 | [Wildman](https://vpuniverse.com/profile/5-wildman/) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=741) | N/A | N/A |\n \n-DirectB2S\n+**Tested by:** [Boris]\n \n-Authors: [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n-Version: 1.0.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/21356-ali-stern-1980-b2s/)\n-\n-ROM\n-\n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=741)\n-\n-Tested by: Boris\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy this repo folder into the \"external\" folder on your USB drive\n - Add your personalized launcher.elf and rename it to vpx-alijp.elf\n - Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alijp"}
+        ]
+      },
+      {
+        "hash": "5085769f53992295fe911fdc9f2eccd03a449472",
+        "date": "2025-03-19 19:05:56 +0000",
+        "author": "OminousOsie",
+        "message": "Updated alijp details\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex bed07378..14d4106b 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -1,7 +1,7 @@\n ---\n backglassVPSId: ZzEbu9jMsf\n-backglassChecksum: FAD5C53B28ABAE0C024968F94EF3CA9E\n-fps: 55\n+backglassChecksum: fad5c53b28abae0c024968f94ef3ca9e\n+fps: 60\n romVPSId: 9sHHwihv\n romChecksum: 7bccd3b85a2f23dda5a37417f1a259fd\n tableVPSId: z9BMLCAY\n"}
+        ]
+      },
+      {
+        "hash": "1aa8c61fa36cb8991816bcf3ca218f0db1a3078b",
+        "date": "2025-03-19 18:44:22 +0000",
+        "author": "OminousOsie",
+        "message": "Added second ali table yml\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nnew file mode 100644\nindex 00000000..bed07378\n--- /dev/null\n+++ b/external/vpx-alijp/table.yml\n@@ -0,0 +1,13 @@\n+---\n+backglassVPSId: ZzEbu9jMsf\n+backglassChecksum: FAD5C53B28ABAE0C024968F94EF3CA9E\n+fps: 55\n+romVPSId: 9sHHwihv\n+romChecksum: 7bccd3b85a2f23dda5a37417f1a259fd\n+tableVPSId: z9BMLCAY\n+tagline: \"If my mind can conceive it, if my heart can believe it–then I can achieve it.\"\n+testers:\n+- Bla1ze\n+vpxVPSId: jZlXak4Y\n+vpxChecksum: 9E16873FC853FB956CB4872B16F3BB03\n+tableNotes: \"Download v55_VPX8.zip\"\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "d11ed576924068391516292eca91979fbf6edf16",
+        "date": "2025-03-19 10:03:55 -0400",
+        "author": "Brandon",
+        "message": "Delete external/vpx-alijp/table.yml",
+        "files": [
+          {"status": "D", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\ndeleted file mode 100644\nindex bf6239f5..00000000\n--- a/external/vpx-alijp/table.yml\n+++ /dev/null\n@@ -1,5 +0,0 @@\n----\n-tableVPSId: fMnJZ27R\n-vpxVPSId: xxxNFKri-k\n-backglassVPSId: 9EdeU31vRp\n-romVPSId: Dip4UcCR\n"}
+        ]
+      },
+      {
+        "hash": "db6437ae6872823a246a411ab34c55c12cbef681",
+        "date": "2025-03-19 09:53:55 -0400",
+        "author": "Brandon",
+        "message": "Update table.yml",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nindex 76e2a2bc..bf6239f5 100644\n--- a/external/vpx-alijp/table.yml\n+++ b/external/vpx-alijp/table.yml\n@@ -3,4 +3,3 @@ tableVPSId: fMnJZ27R\n vpxVPSId: xxxNFKri-k\n backglassVPSId: 9EdeU31vRp\n romVPSId: Dip4UcCR\n-coloredROMVPSId:\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "9570e31c7e62f6f1178a35db3eef82051dab78e9",
+        "date": "2025-03-18 17:36:20 -0300",
+        "author": "Bla1ze",
+        "message": "Launcher Image Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/launcher.png"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-alijp/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-alijp/pinmame/cfg/.gitkeep b/external/vpx-alijp/pinmame/cfg/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-alijp/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-alijp/pinmame/ini/.gitkeep b/external/vpx-alijp/pinmame/ini/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-alijp/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-alijp/pinmame/nvram/.gitkeep b/external/vpx-alijp/pinmame/nvram/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-alijp/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-alijp/pinmame/roms/.gitkeep b/external/vpx-alijp/pinmame/roms/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-alijp/vpx-alijp.xml", "diff": "diff --git a/external/vpx-alijp/vpx-alijp.xml b/external/vpx-alijp/vpx-alijp.xml\ndeleted file mode 100755\nindex c7f10676..00000000\n--- a/external/vpx-alijp/vpx-alijp.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-\t<name>Ali, JP's (Stern 1980)</name>\n-</root>\n\\ No newline at end of file"},
+          {"status": "R-from", "path": "external/vpx-alijp/Ali (Stern 1980) v55_VPX8.ini->external/vpx-alijp/table.ini", "diff": "diff --git a/external/vpx-alijp/Ali (Stern 1980) v55_VPX8.ini b/external/vpx-alijp/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-alijp/Ali (Stern 1980) v55_VPX8.ini\nrename to external/vpx-alijp/table.ini"},
+          {"status": "R-from", "path": "external/vpx-alijp/vpx-alijp.png->external/vpx-alijp/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-alijp/Ali (Stern 1980) v55_VPX8.ini->external/vpx-alijp/table.ini", "diff": "diff --git a/external/vpx-alijp/Ali (Stern 1980) v55_VPX8.ini b/external/vpx-alijp/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-alijp/Ali (Stern 1980) v55_VPX8.ini\nrename to external/vpx-alijp/table.ini"},
+          {"status": "R-to", "path": "external/vpx-alijp/vpx-alijp.png->external/vpx-alijp/launcher.png"}
+        ]
+      },
+      {
+        "hash": "a20c28c275f2751f2109b5f182efb45e918c8d8b",
+        "date": "2025-02-26 14:31:51 -0500",
+        "author": "Brandon",
+        "message": "Add yml for smattering of tables\n\nBig Horse\nBig Indian\nBig Trouble\nBig Star\n250cc\n301 Bullseye\n4 Aces\nAce High\nAlice In Wonderland\nAli JP\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alijp/table.yml", "diff": "diff --git a/external/vpx-alijp/table.yml b/external/vpx-alijp/table.yml\nnew file mode 100644\nindex 00000000..76e2a2bc\n--- /dev/null\n+++ b/external/vpx-alijp/table.yml\n@@ -0,0 +1,6 @@\n+---\n+tableVPSId: fMnJZ27R\n+vpxVPSId: xxxNFKri-k\n+backglassVPSId: 9EdeU31vRp\n+romVPSId: Dip4UcCR\n+coloredROMVPSId:\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex bf716bc9..e30ff0ef 100755\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -10,7 +10,7 @@ Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=\n \n DirectB2S\n \n-Authors: [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n+Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n Version: 1.0.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/21356-ali-stern-1980-b2s/)\n "}
+        ]
+      },
+      {
+        "hash": "819d9c64090178b02a8562c43f7e0ad9008a6668",
+        "date": "2025-02-06 02:48:50 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-alijp",
+        "files": [
+          {"status": "M", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nindex f272b8ac..bf716bc9 100755\n--- a/external/vpx-alijp/README.md\n+++ b/external/vpx-alijp/README.md\n@@ -3,16 +3,19 @@\n ![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-alijp.jpg)\n \n Table\n+\n Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0 \n+Version: 5.5.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12902)\n \n DirectB2S\n-Authors: [Wildman](https://vpuniverse.com/profile/5-wildman/)\n-Version: 1.0.0\n+\n+Authors: [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n+Version: 1.0.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/21356-ali-stern-1980-b2s/)\n \n ROM\n+\n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=741)\n \n Tested by: Boris\n@@ -29,6 +32,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy this repo folder into the \"external\" folder on your USB drive\n - Add your personalized launcher.elf and rename it to vpx-alijp.elf\n-- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alijp/\n-- Make sure any (.vpx), (.directb2s), (.vbs), and (.ini) files are all named the same\n-- Download the ROM listed above and copy it to vpx-alijp\\pinmame\\roms. DO NOT UNZIP!\n+- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alijp\n+- Make sure any (.vpx), (.directb2s), and (.ini) files are all named the same\n+- Download the ROM listed above and copy it to vpx-alijp\\pinmame\\roms -- DO NOT UNZIP!\n"}
+        ]
+      },
+      {
+        "hash": "49280c4ea30e6f5cff6e648bb359ce615e2b6e6f",
+        "date": "2025-02-03 09:45:31 -0500",
+        "author": "Brandon",
+        "message": "vpx-alijp\n\nAdd Ali (JP version), update readme, add preview image\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alijp/Ali (Stern 1980) v55_VPX8.ini", "diff": "diff --git a/external/vpx-alijp/Ali (Stern 1980) v55_VPX8.ini b/external/vpx-alijp/Ali (Stern 1980) v55_VPX8.ini\nnew file mode 100755\nindex 00000000..66def128\n--- /dev/null\n+++ b/external/vpx-alijp/Ali (Stern 1980) v55_VPX8.ini\t\n@@ -0,0 +1,38 @@\n+[TableOverride]\n+ViewDTLookAt = 46.000000\n+ViewDTFOV = 40.000000\n+ViewDTLayback = 6.000000\n+ViewDTRotation = 0.000000\n+ViewDTScaleX = 1.200000\n+ViewDTScaleY = 1.100000\n+ViewDTScaleZ = 1.000000\n+ViewDTPlayerX = 0.000000\n+ViewDTPlayerY = 5.000000\n+ViewDTPlayerZ = -10.000000\n+ViewCabLookAt = 16.199995\n+ViewCabFOV = 15.000000\n+ViewCabLayback = 35.000000\n+ViewCabRotation = 90.000000\n+ViewCabScaleX = 1.000000\n+ViewCabScaleY = 1.100000\n+ViewCabScaleZ = 1.000000\n+ViewCabPlayerX = 0.000000\n+ViewCabPlayerY = 0.000000\n+ViewCabPlayerZ = -300.000000\n+ViewFSSLookAt = 52.000000\n+ViewFSSFOV = 45.000000\n+ViewFSSLayback = 0.000000\n+ViewFSSRotation = 0.000000\n+ViewFSSScaleX = 1.200000\n+ViewFSSScaleY = 1.100000\n+ViewFSSScaleZ = 1.000000\n+ViewFSSPlayerX = 0.000000\n+ViewFSSPlayerY = 30.000000\n+ViewFSSPlayerZ = -50.000000\n+ViewCabMode = 0\n+\n+[Standalone]\n+PinMAMEWindow = 0\n+\n+[Player]\n+FXAA = 1\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-alijp/README.md", "diff": "diff --git a/external/vpx-alijp/README.md b/external/vpx-alijp/README.md\nnew file mode 100755\nindex 00000000..f272b8ac\n--- /dev/null\n+++ b/external/vpx-alijp/README.md\n@@ -0,0 +1,34 @@\n+# Ali, JP's (Stern 1980)\n+\n+![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-alijp.jpg)\n+\n+Table\n+Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n+Version: 5.5.0 \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12902)\n+\n+DirectB2S\n+Authors: [Wildman](https://vpuniverse.com/profile/5-wildman/)\n+Version: 1.0.0\n+Download: [VP Universe](https://vpuniverse.com/files/file/21356-ali-stern-1980-b2s/)\n+\n+ROM\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=741)\n+\n+Tested by: Boris\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n+\n+## Instructions\n+\n+- Copy this repo folder into the \"external\" folder on your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-alijp.elf\n+- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alijp/\n+- Make sure any (.vpx), (.directb2s), (.vbs), and (.ini) files are all named the same\n+- Download the ROM listed above and copy it to vpx-alijp\\pinmame\\roms. DO NOT UNZIP!"},
+          {"status": "A", "path": "external/vpx-alijp/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-alijp/pinmame/cfg/.gitkeep b/external/vpx-alijp/pinmame/cfg/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-alijp/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-alijp/pinmame/ini/.gitkeep b/external/vpx-alijp/pinmame/ini/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-alijp/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-alijp/pinmame/nvram/.gitkeep b/external/vpx-alijp/pinmame/nvram/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-alijp/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-alijp/pinmame/roms/.gitkeep b/external/vpx-alijp/pinmame/roms/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-alijp/vpx-alijp.png"},
+          {"status": "A", "path": "external/vpx-alijp/vpx-alijp.xml", "diff": "diff --git a/external/vpx-alijp/vpx-alijp.xml b/external/vpx-alijp/vpx-alijp.xml\nnew file mode 100755\nindex 00000000..c7f10676\n--- /dev/null\n+++ b/external/vpx-alijp/vpx-alijp.xml\n@@ -0,0 +1,3 @@\n+<root>\n+\t<name>Ali, JP's (Stern 1980)</name>\n+</root>\n\\ No newline at end of file\n"}
+        ]
+      }
+    ]
+}

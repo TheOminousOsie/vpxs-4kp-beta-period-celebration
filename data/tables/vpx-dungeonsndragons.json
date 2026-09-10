@@ -1,0 +1,149 @@
+{
+    "commit_count": 13,
+    "commits": [
+      {
+        "hash": "1dc7e9059d05774d4af757ef1fe7d1253117cfa2",
+        "date": "2026-09-09 21:30:53 -0400",
+        "author": "pointdablame",
+        "message": "More Launcher Art Updates (#2207)\n\nThis updates the following launchers to the new Legends Unchained logo: Aaron Spelling, Apache, Batman 66 (Original), Big Bang Bar, Black Knight, Black Knight 2000, Black Magic 4, Black Rose, James Bond, Cactus Canyon, Cat Burglars, Cenobite, Centaur, Centigrade 37, Chrono Trigger, Cirqus Voltaire, Cleopatra, Clock of Eternal Fog, Cosmic, Crystal Ball, Dark Crystal, Deadpool, Devil Riders, Diner, Dirty Harry, Tron Legacy, Doctor Who, Doom Eternal, DBZ Budokai, Drakor, Dune, D&D, Earthshaker, F-14 Tomcat, Fathom, Fifth Element, Fireball II, Firepower, Firepower II",
+        "files": [
+          {"status": "M", "path": "external/vpx-dungeonsndragons/launcher.png"}
+        ]
+      },
+      {
+        "hash": "b6b195519389646b555eab14e713b0c9766277c8",
+        "date": "2026-08-12 22:27:10 -0400",
+        "author": "Wes Smith",
+        "message": "Dungeons and Dragons (#2101)\n\n* DandD\n\n* Fix unlit dot default\n\n* Update table.ini\n\n* launcher with new logo",
+        "files": [
+          {"status": "A", "path": "external/vpx-dungeonsndragons/table.yml", "diff": "diff --git a/external/vpx-dungeonsndragons/table.yml b/external/vpx-dungeonsndragons/table.yml\nnew file mode 100644\nindex 00000000..e36425c6\n--- /dev/null\n+++ b/external/vpx-dungeonsndragons/table.yml\n@@ -0,0 +1,12 @@\n+---\n+backglassChecksum: \"B01A7AF1C1DE0EBF430D1ABDF2007EA6\"\n+backglassVPSId: \"87xdMfV5-A\"\n+fps: 60\n+romChecksum: \"677B863C74006442DB347E097F532874\"\n+romVPSId: \"6a0_NBoLLz\"\n+tableVPSId: \"U3s7AsZP\"\n+testers:\n+  - \"Wraith\"\n+tutorialVPSId: \"V0iDZBHhRe\"\n+vpxChecksum: \"171FCE45C02C78DC91F4E13E868BD529\"\n+vpxVPSId: \"QrU6V1UoUr\"\n"},
+          {"status": "M", "path": "external/vpx-dungeonsndragons/README.md", "diff": "diff --git a/external/vpx-dungeonsndragons/README.md b/external/vpx-dungeonsndragons/README.md\nindex 377fb87c..4542de58 100644\n--- a/external/vpx-dungeonsndragons/README.md\n+++ b/external/vpx-dungeonsndragons/README.md\n@@ -1,35 +1,60 @@\n-﻿# Dungeons & Dragons (Bally 1987)\n+# Dungeons & Dragons (Bally 1987)\n \n-![Table Preview](../../images/vpx-dungeonsndragons.png)\n+![Table Preview](../../images/QrU6V1UoUr-preview.webp)\n \n-Authors: [siggi](https://vpuniverse.com/profile/8779-siggi/)  \n-Version: 1.0.0  \n-Download: [VPUniverse](https://vpuniverse.com/files/file/19244-dungeons-dragons-bally-1987-siggis-mod/)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [wildman](https://vpuniverse.com/profile/5-wildman/)  \n-Version: 2.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/2620-dungeons-and-dragons-bally-1987/)\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n-ROM\n+<br>\n \n-Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=718)  \n-Rom Name: dungdrag.zip\n+**VPXS 4KP Testers:**\n+  - Wraith\n \n-Tested by: kaoticBPR\n+<br>\n \n-## Status \n+---\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n+<br>\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n+## ❇️ Available in the Wizard! 🪄✨\n \n-## Instructions\n+<br>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Dungeons & Dragons (Bally 1987)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-dungeonsndragons/launcher.png"},
+          {"status": "M", "path": "external/vpx-dungeonsndragons/table.ini", "diff": "diff --git a/external/vpx-dungeonsndragons/table.ini b/external/vpx-dungeonsndragons/table.ini\nindex 8329170f..b594a427 100644\n--- a/external/vpx-dungeonsndragons/table.ini\n+++ b/external/vpx-dungeonsndragons/table.ini\n@@ -1,19 +1,18 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.296567\n-ViewCabScaleY = 1.077267\n+ViewCabScaleX = 1.170974\n+ViewCabScaleY = 0.917486\n ViewCabScaleZ = 0.873495\n-ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.000000\n-ViewCabVOfs = 0\n-ViewCabWindowTop = 268.330902\n-ViewCabWindowBot = 189.669479\n+ViewCabRotation = 180.0\n+ViewCabHOfs = 0.0\n+ViewCabVOfs = 0.0\n+ViewCabWindowTop = 83.175766\n+ViewCabWindowBot = 202.522583\n ToneMapper = 0\n \n [Player]\n-ScreenPlayerY = 46.999531\n-ScreenPlayerZ = 117.602905\n+ScreenPlayerY = 14.953233\n+ScreenPlayerZ = 89.991814\n OverrideTableEmissionScale = 1\n-DynamicDayNight = 0\n-EmissionScale = 0.115000\n-ScreenPlayerX = 0.274600\n+EmissionScale = 0.115\n+ScreenPlayerX = 0.0121"}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-dungeonsndragons/table.ini", "diff": "diff --git a/external/vpx-dungeonsndragons/table.ini b/external/vpx-dungeonsndragons/table.ini\nindex 439f942a..8329170f 100644\n--- a/external/vpx-dungeonsndragons/table.ini\n+++ b/external/vpx-dungeonsndragons/table.ini\n@@ -5,7 +5,7 @@ ViewCabScaleY = 1.077267\n ViewCabScaleZ = 0.873495\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -102.514114\n+ViewCabVOfs = 0\n ViewCabWindowTop = 268.330902\n ViewCabWindowBot = 189.669479\n ToneMapper = 0\n@@ -16,4 +16,4 @@ ScreenPlayerZ = 117.602905\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.115000\n-ScreenPlayerX = 0.274600\n\\ No newline at end of file\n+ScreenPlayerX = 0.274600"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-dungeonsndragons/README.md", "diff": "diff --git a/external/vpx-dungeonsndragons/README.md b/external/vpx-dungeonsndragons/README.md\nindex 4da4da44..377fb87c 100644\n--- a/external/vpx-dungeonsndragons/README.md\n+++ b/external/vpx-dungeonsndragons/README.md\n@@ -1,4 +1,4 @@\n-# Dungeons & Dragons (Bally 1987)\n+﻿# Dungeons & Dragons (Bally 1987)\n \n ![Table Preview](../../images/vpx-dungeonsndragons.png)\n \n@@ -30,6 +30,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-dungeonsndragons/README.md", "diff": "diff --git a/external/vpx-dungeonsndragons/README.md b/external/vpx-dungeonsndragons/README.md\nindex 0d72e015..4da4da44 100644\n--- a/external/vpx-dungeonsndragons/README.md\n+++ b/external/vpx-dungeonsndragons/README.md\n@@ -29,7 +29,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-dungeonsndragons/README.md", "diff": "diff --git a/external/vpx-dungeonsndragons/README.md b/external/vpx-dungeonsndragons/README.md\nindex 088d46ce..0d72e015 100644\n--- a/external/vpx-dungeonsndragons/README.md\n+++ b/external/vpx-dungeonsndragons/README.md\n@@ -29,4 +29,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-dungeonsndragons/README.md", "diff": "diff --git a/external/vpx-dungeonsndragons/README.md b/external/vpx-dungeonsndragons/README.md\nindex 93e42e1b..088d46ce 100644\n--- a/external/vpx-dungeonsndragons/README.md\n+++ b/external/vpx-dungeonsndragons/README.md\n@@ -29,9 +29,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-dungeonsndragons.elf\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-dungeonsndragons\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- Place dungdrag.zip ROM in the external/vpx-dungeonsndragons/pinmame/roms folder. *Do Not unzip*\n "}
+        ]
+      },
+      {
+        "hash": "8969f3cce6d9de7205da4af9bb3e4de6c73686a3",
+        "date": "2025-04-01 16:16:33 +0100",
+        "author": "OminousOsie",
+        "message": "Updated image links to ones in the repo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-dungeonsndragons/README.md", "diff": "diff --git a/external/vpx-dungeonsndragons/README.md b/external/vpx-dungeonsndragons/README.md\nindex c832c7dc..93e42e1b 100644\n--- a/external/vpx-dungeonsndragons/README.md\n+++ b/external/vpx-dungeonsndragons/README.md\n@@ -1,6 +1,6 @@\n # Dungeons & Dragons (Bally 1987)\n \n-![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_03/ddpffs.png.a1f1bcc180b9788c4d28ac95564b0bf6.png)\n+![Table Preview](../../images/vpx-dungeonsndragons.png)\n \n Authors: [siggi](https://vpuniverse.com/profile/8779-siggi/)  \n Version: 1.0.0  \n@@ -34,3 +34,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-dungeonsndragons\n - Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n - Place dungdrag.zip ROM in the external/vpx-dungeonsndragons/pinmame/roms folder. *Do Not unzip*\n+"}
+        ]
+      },
+      {
+        "hash": "f0142e5a0d83f1c7db9bffde1a0aa81b6f5d3d74",
+        "date": "2025-03-20 16:35:19 +0000",
+        "author": "OminousOsie",
+        "message": "Added Joes dmd.png files\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-dungeonsndragons/dmd.png"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-dungeonsndragons/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/cfg/.gitkeep b/external/vpx-dungeonsndragons/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-dungeonsndragons/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/cfg/default.cfg b/external/vpx-dungeonsndragons/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-dungeonsndragons/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-dungeonsndragons/pinmame/cfg/dungdrag.cfg", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/cfg/dungdrag.cfg b/external/vpx-dungeonsndragons/pinmame/cfg/dungdrag.cfg\ndeleted file mode 100644\nindex 042a9b3e..00000000\nBinary files a/external/vpx-dungeonsndragons/pinmame/cfg/dungdrag.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-dungeonsndragons/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/ini/.gitkeep b/external/vpx-dungeonsndragons/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-dungeonsndragons/pinmame/ini/dungdrag.ini", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/ini/dungdrag.ini b/external/vpx-dungeonsndragons/pinmame/ini/dungdrag.ini\ndeleted file mode 100644\nindex 28ec15cf..00000000\n--- a/external/vpx-dungeonsndragons/pinmame/ini/dungdrag.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-dungeonsndragons/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/nvram/.gitkeep b/external/vpx-dungeonsndragons/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-dungeonsndragons/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/roms/.gitkeep b/external/vpx-dungeonsndragons/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-dungeonsndragons/vpx-dungeonsndragons.xml", "diff": "diff --git a/external/vpx-dungeonsndragons/vpx-dungeonsndragons.xml b/external/vpx-dungeonsndragons/vpx-dungeonsndragons.xml\ndeleted file mode 100644\nindex fa0aff68..00000000\n--- a/external/vpx-dungeonsndragons/vpx-dungeonsndragons.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Dungeons and Dragons (Bally 1987)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-dungeonsndragons/Dungeons n Dragons (Bally 1987) Siggis Mod.ini->external/vpx-dungeonsndragons/table.ini", "diff": "diff --git a/external/vpx-dungeonsndragons/Dungeons n Dragons (Bally 1987) Siggis Mod.ini b/external/vpx-dungeonsndragons/table.ini\nsimilarity index 100%\nrename from external/vpx-dungeonsndragons/Dungeons n Dragons (Bally 1987) Siggis Mod.ini\nrename to external/vpx-dungeonsndragons/table.ini"},
+          {"status": "R-from", "path": "external/vpx-dungeonsndragons/pinmame/nvram/dungdrag.nv->external/vpx-dungeonsndragons/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-dungeonsndragons/vpx-dungeonsndragons.png->external/vpx-dungeonsndragons/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-dungeonsndragons/Dungeons n Dragons (Bally 1987) Siggis Mod.ini->external/vpx-dungeonsndragons/table.ini", "diff": "diff --git a/external/vpx-dungeonsndragons/Dungeons n Dragons (Bally 1987) Siggis Mod.ini b/external/vpx-dungeonsndragons/table.ini\nsimilarity index 100%\nrename from external/vpx-dungeonsndragons/Dungeons n Dragons (Bally 1987) Siggis Mod.ini\nrename to external/vpx-dungeonsndragons/table.ini"},
+          {"status": "R-to", "path": "external/vpx-dungeonsndragons/pinmame/nvram/dungdrag.nv->external/vpx-dungeonsndragons/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-dungeonsndragons/vpx-dungeonsndragons.png->external/vpx-dungeonsndragons/launcher.png"}
+        ]
+      },
+      {
+        "hash": "fc4d7b210fe2516d5506f564ed01c6755e15a1dd",
+        "date": "2024-11-25 02:53:18 -0500",
+        "author": "lilalien",
+        "message": "Update README.md...",
+        "files": [
+          {"status": "M", "path": "external/vpx-dungeonsndragons/README.md", "diff": "diff --git a/external/vpx-dungeonsndragons/README.md b/external/vpx-dungeonsndragons/README.md\nindex 2dac967c..c832c7dc 100644\n--- a/external/vpx-dungeonsndragons/README.md\n+++ b/external/vpx-dungeonsndragons/README.md\n@@ -1,26 +1,28 @@\n # Dungeons & Dragons (Bally 1987)\n-Tested by: kaoticBPR\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_03/ddpffs.png.a1f1bcc180b9788c4d28ac95564b0bf6.png)\n \n-Authors: [siggi](https://vpuniverse.com/profile/8779-siggi/)\n-Version: 1.0.0\n+Authors: [siggi](https://vpuniverse.com/profile/8779-siggi/)  \n+Version: 1.0.0  \n Download: [VPUniverse](https://vpuniverse.com/files/file/19244-dungeons-dragons-bally-1987-siggis-mod/)\n \n DirectB2S\n \n-Authors: [wildman](https://vpuniverse.com/profile/5-wildman/)\n-Version: 2.0\n+Authors: [wildman](https://vpuniverse.com/profile/5-wildman/)  \n+Version: 2.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/2620-dungeons-and-dragons-bally-1987/)\n \n ROM\n \n-Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=718)\n+Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=718)  \n Rom Name: dungdrag.zip\n \n+Tested by: kaoticBPR\n+\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n@@ -29,8 +31,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-dungeonsndragons.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-dungeonsndragons\n - Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n - Place dungdrag.zip ROM in the external/vpx-dungeonsndragons/pinmame/roms folder. *Do Not unzip*\n-\n-\n"}
+        ]
+      },
+      {
+        "hash": "216eee06c96ff24afc336713b3db148f6bd4ff10",
+        "date": "2024-08-31 21:36:32 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Added rename step to vpx-dungeonsndragons",
+        "files": [
+          {"status": "M", "path": "external/vpx-dungeonsndragons/README.md", "diff": "diff --git a/external/vpx-dungeonsndragons/README.md b/external/vpx-dungeonsndragons/README.md\nindex 1717cfd8..2dac967c 100644\n--- a/external/vpx-dungeonsndragons/README.md\n+++ b/external/vpx-dungeonsndragons/README.md\n@@ -30,6 +30,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-dungeonsndragons.elf\n - Download the table and directb2s versions listed above and copy them into this folder\n-- Place dungdrag.zip in the external/vpx-dungeonsndragons/pinmame/roms folder *Do Not unzip*\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n+- Place dungdrag.zip ROM in the external/vpx-dungeonsndragons/pinmame/roms folder. *Do Not unzip*\n \n \n"}
+        ]
+      },
+      {
+        "hash": "d8f8254796e02e94552a0fb5ae3a1cb76c81c622",
+        "date": "2024-08-19 12:56:03 -0400",
+        "author": "Kaoticbpr",
+        "message": "adding 4 tables\n\ndefender, dungeons & dragons, space cadet, spy hunter\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-dungeonsndragons/Dungeons n Dragons (Bally 1987) Siggis Mod.ini", "diff": "diff --git a/external/vpx-dungeonsndragons/Dungeons n Dragons (Bally 1987) Siggis Mod.ini b/external/vpx-dungeonsndragons/Dungeons n Dragons (Bally 1987) Siggis Mod.ini\nnew file mode 100644\nindex 00000000..439f942a\n--- /dev/null\n+++ b/external/vpx-dungeonsndragons/Dungeons n Dragons (Bally 1987) Siggis Mod.ini\t\n@@ -0,0 +1,19 @@\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.296567\n+ViewCabScaleY = 1.077267\n+ViewCabScaleZ = 0.873495\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -102.514114\n+ViewCabWindowTop = 268.330902\n+ViewCabWindowBot = 189.669479\n+ToneMapper = 0\n+\n+[Player]\n+ScreenPlayerY = 46.999531\n+ScreenPlayerZ = 117.602905\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.115000\n+ScreenPlayerX = 0.274600\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-dungeonsndragons/README.md", "diff": "diff --git a/external/vpx-dungeonsndragons/README.md b/external/vpx-dungeonsndragons/README.md\nnew file mode 100644\nindex 00000000..1717cfd8\n--- /dev/null\n+++ b/external/vpx-dungeonsndragons/README.md\n@@ -0,0 +1,35 @@\n+# Dungeons & Dragons (Bally 1987)\n+Tested by: kaoticBPR\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_03/ddpffs.png.a1f1bcc180b9788c4d28ac95564b0bf6.png)\n+\n+Authors: [siggi](https://vpuniverse.com/profile/8779-siggi/)\n+Version: 1.0.0\n+Download: [VPUniverse](https://vpuniverse.com/files/file/19244-dungeons-dragons-bally-1987-siggis-mod/)\n+\n+DirectB2S\n+\n+Authors: [wildman](https://vpuniverse.com/profile/5-wildman/)\n+Version: 2.0\n+Download: [VP Universe](https://vpuniverse.com/files/file/2620-dungeons-and-dragons-bally-1987/)\n+\n+ROM\n+\n+Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=718)\n+Rom Name: dungdrag.zip\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-dungeonsndragons.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Place dungdrag.zip in the external/vpx-dungeonsndragons/pinmame/roms folder *Do Not unzip*\n+\n+"},
+          {"status": "A", "path": "external/vpx-dungeonsndragons/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/cfg/.gitkeep b/external/vpx-dungeonsndragons/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-dungeonsndragons/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/cfg/default.cfg b/external/vpx-dungeonsndragons/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-dungeonsndragons/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-dungeonsndragons/pinmame/cfg/dungdrag.cfg", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/cfg/dungdrag.cfg b/external/vpx-dungeonsndragons/pinmame/cfg/dungdrag.cfg\nnew file mode 100644\nindex 00000000..042a9b3e\nBinary files /dev/null and b/external/vpx-dungeonsndragons/pinmame/cfg/dungdrag.cfg differ"},
+          {"status": "A", "path": "external/vpx-dungeonsndragons/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/ini/.gitkeep b/external/vpx-dungeonsndragons/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-dungeonsndragons/pinmame/ini/dungdrag.ini", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/ini/dungdrag.ini b/external/vpx-dungeonsndragons/pinmame/ini/dungdrag.ini\nnew file mode 100644\nindex 00000000..28ec15cf\n--- /dev/null\n+++ b/external/vpx-dungeonsndragons/pinmame/ini/dungdrag.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+cheat=0\n+sound=1\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-dungeonsndragons/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/nvram/.gitkeep b/external/vpx-dungeonsndragons/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-dungeonsndragons/pinmame/nvram/dungdrag.nv"},
+          {"status": "A", "path": "external/vpx-dungeonsndragons/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-dungeonsndragons/pinmame/roms/.gitkeep b/external/vpx-dungeonsndragons/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-dungeonsndragons/vpx-dungeonsndragons.png"},
+          {"status": "A", "path": "external/vpx-dungeonsndragons/vpx-dungeonsndragons.xml", "diff": "diff --git a/external/vpx-dungeonsndragons/vpx-dungeonsndragons.xml b/external/vpx-dungeonsndragons/vpx-dungeonsndragons.xml\nnew file mode 100644\nindex 00000000..fa0aff68\n--- /dev/null\n+++ b/external/vpx-dungeonsndragons/vpx-dungeonsndragons.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Dungeons and Dragons (Bally 1987)</name>\n+</root>"}
+        ]
+      }
+    ]
+}

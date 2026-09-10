@@ -1,0 +1,355 @@
+{
+    "commit_count": 37,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.yml", "diff": "diff --git a/external/vpx-monsterbashreskin/table.yml b/external/vpx-monsterbashreskin/table.yml\nindex 15ac190e..955d6e1b 100644\n--- a/external/vpx-monsterbashreskin/table.yml\n+++ b/external/vpx-monsterbashreskin/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"vV2HJCHnGz\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"D628EA78A9DB8D0D7A1B21CDB571449F\"\n-  - \"803FE9AFEFD71464395DE37758323998\"\n+backglassChecksum: \"D628EA78A9DB8D0D7A1B21CDB571449F\"\n backglassNotes: \"Download 'Monster Bash (Williams 1998) 3k full dmd.zip'\"\n coloredROMChecksum: \"AED56FA83951DBB8AF8F6EF4F789EF44\"\n coloredROMNotes: \"\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.yml", "diff": "diff --git a/external/vpx-monsterbashreskin/table.yml b/external/vpx-monsterbashreskin/table.yml\nindex 955d6e1b..15ac190e 100644\n--- a/external/vpx-monsterbashreskin/table.yml\n+++ b/external/vpx-monsterbashreskin/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"vV2HJCHnGz\"\n-backglassChecksum: \"D628EA78A9DB8D0D7A1B21CDB571449F\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"D628EA78A9DB8D0D7A1B21CDB571449F\"\n+  - \"803FE9AFEFD71464395DE37758323998\"\n backglassNotes: \"Download 'Monster Bash (Williams 1998) 3k full dmd.zip'\"\n coloredROMChecksum: \"AED56FA83951DBB8AF8F6EF4F789EF44\"\n coloredROMNotes: \"\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.ini", "diff": "diff --git a/external/vpx-monsterbashreskin/table.ini b/external/vpx-monsterbashreskin/table.ini\nindex b4daeaae..9216aa6a 100644\n--- a/external/vpx-monsterbashreskin/table.ini\n+++ b/external/vpx-monsterbashreskin/table.ini\n@@ -1,19 +1,14 @@\n-[Player]\n-BallTrailStrength = 0.490196\n-JoyAddCredit2Key = 1\n-\n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.818596\n-ViewCabScaleY = 1.037503\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 30.214006\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n+ViewCabMode = 2\n+ViewCabScaleX = 1.226016\n+ViewCabScaleY = 0.998427\n+ViewCabScaleZ = 0.859642\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.041922\n+ViewCabWindowTop = 296.597931\n+ViewCabWindowBot = 0.324268\n \n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+[Player]\n+ScreenPlayerY = 15.010940\n+ScreenPlayerZ = 89.989098\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.yml", "diff": "diff --git a/external/vpx-monsterbashreskin/table.yml b/external/vpx-monsterbashreskin/table.yml\nindex 5130f71e..955d6e1b 100644\n--- a/external/vpx-monsterbashreskin/table.yml\n+++ b/external/vpx-monsterbashreskin/table.yml\n@@ -1,8 +1,11 @@\n ---\n-backglassVPSId: \"Gx1F6eXkmq\"\n-backglassChecksum: \"2f0fa84f53aa4690668b2b2102529908\"\n-backglassNotes: \"Download v1.0\"\n-fps: 47\n+backglassVPSId: \"vV2HJCHnGz\"\n+backglassChecksum: \"D628EA78A9DB8D0D7A1B21CDB571449F\"\n+backglassNotes: \"Download 'Monster Bash (Williams 1998) 3k full dmd.zip'\"\n+coloredROMChecksum: \"AED56FA83951DBB8AF8F6EF4F789EF44\"\n+coloredROMNotes: \"\"\n+coloredROMVPSId: \"0rTSwXBq\"\n+fps: 60\n romVPSId: \"lyzB193o\"\n romChecksum: \"e7d457cb10715b66e95883f40a13c980\"\n tableVPSId: \"F1Skyh5h\"\n@@ -15,5 +18,3 @@ testers:\n vpxVPSId: \"ek56A_p7jJ\"\n vpxChecksum: \"52bcdf309a646564188dad8196dd1044\"\n tableNotes: \"Download v1.2\"\n-applyFixes:\n-  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/README.md", "diff": "diff --git a/external/vpx-monsterbashreskin/README.md b/external/vpx-monsterbashreskin/README.md\nindex 2f9a709f..c2e305e4 100644\n--- a/external/vpx-monsterbashreskin/README.md\n+++ b/external/vpx-monsterbashreskin/README.md\n@@ -52,7 +52,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n <br>"}
+        ]
+      },
+      {
+        "hash": "43e06a78576a8d7069d79fee2da8885f7e817af7",
+        "date": "2025-04-30 11:28:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed BOM\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/README.md", "diff": "diff --git a/external/vpx-monsterbashreskin/README.md b/external/vpx-monsterbashreskin/README.md\nindex 6c57ca4d..2f9a709f 100644\n--- a/external/vpx-monsterbashreskin/README.md\n+++ b/external/vpx-monsterbashreskin/README.md\n@@ -1,4 +1,4 @@\n-﻿﻿# Monster Bash (Williams 1998)\n+﻿# Monster Bash (Williams 1998)\n \n ![Table Preview](../../images/vpx-monsterbashreskin-preview.jpg)\n "}
+        ]
+      },
+      {
+        "hash": "5424a8122d5eb54371b2435888f2d337df05dc43",
+        "date": "2025-04-30 11:23:31 +0100",
+        "author": "OminousOsie",
+        "message": "Added lloydbraun to the wiz team\n\nAdded lloydbraun to the wiz team\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/README.md", "diff": "diff --git a/external/vpx-monsterbashreskin/README.md b/external/vpx-monsterbashreskin/README.md\nindex dbb5c5a9..6c57ca4d 100644\n--- a/external/vpx-monsterbashreskin/README.md\n+++ b/external/vpx-monsterbashreskin/README.md\n@@ -49,7 +49,7 @@ __*We hope you enjoy!!*__\n \n *The VPXS 4KP Wizard team:*\n <pre>\n-- n-i-x            - Mox\n+- n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n - mrandromeda      - SScorpio         - TechZombie"}
+        ]
+      },
+      {
+        "hash": "01c7e252332b06a5a09e3bfaa60664142a54042f",
+        "date": "2025-04-16 10:44:26 +0100",
+        "author": "OminousOsie",
+        "message": "Added the full team to the readme\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/README.md", "diff": "diff --git a/external/vpx-monsterbashreskin/README.md b/external/vpx-monsterbashreskin/README.md\nindex cb4b3f79..dbb5c5a9 100644\n--- a/external/vpx-monsterbashreskin/README.md\n+++ b/external/vpx-monsterbashreskin/README.md\n@@ -1,4 +1,4 @@\n-﻿# Monster Bash (Williams 1998)\n+﻿﻿# Monster Bash (Williams 1998)\n \n ![Table Preview](../../images/vpx-monsterbashreskin-preview.jpg)\n \n@@ -43,7 +43,17 @@ This table is available through the Table Manager Wizard, which makes installati\n \n Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n <br>\n <br>"}
+        ]
+      },
+      {
+        "hash": "6c2a220adac96b5ed5b84500eba9d819bca0cc87",
+        "date": "2025-04-08 15:22:54 +0100",
+        "author": "OminousOsie",
+        "message": "Italic the tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/README.md", "diff": "diff --git a/external/vpx-monsterbashreskin/README.md b/external/vpx-monsterbashreskin/README.md\nindex 6104d5d9..cb4b3f79 100644\n--- a/external/vpx-monsterbashreskin/README.md\n+++ b/external/vpx-monsterbashreskin/README.md\n@@ -37,7 +37,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Monster Bash`**\n 5.  Follow the on-screen instructions to download and upload the required files\n-6. \"Reunite the creatures of the night and get ready to rock!\"\n+6. *\"Reunite the creatures of the night and get ready to rock!\"*\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "ec024f091d11b71aef0144fb31e7d1b020df9223",
+        "date": "2025-04-08 15:09:40 +0100",
+        "author": "OminousOsie",
+        "message": "Update to readmes to readd tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/README.md", "diff": "diff --git a/external/vpx-monsterbashreskin/README.md b/external/vpx-monsterbashreskin/README.md\nindex 22afd71e..6104d5d9 100644\n--- a/external/vpx-monsterbashreskin/README.md\n+++ b/external/vpx-monsterbashreskin/README.md\n@@ -1,4 +1,4 @@\n-# Monster Bash (Williams 1998)\n+﻿# Monster Bash (Williams 1998)\n \n ![Table Preview](../../images/vpx-monsterbashreskin-preview.jpg)\n \n@@ -37,6 +37,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Monster Bash`**\n 5.  Follow the on-screen instructions to download and upload the required files\n+6. \"Reunite the creatures of the night and get ready to rock!\"\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "f817d4e8e77fcf89b8bfdd920df358a899e8b33d",
+        "date": "2025-04-08 14:29:30 +0100",
+        "author": "OminousOsie",
+        "message": "Readme updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/README.md", "diff": "diff --git a/external/vpx-monsterbashreskin/README.md b/external/vpx-monsterbashreskin/README.md\nindex 9278192d..22afd71e 100644\n--- a/external/vpx-monsterbashreskin/README.md\n+++ b/external/vpx-monsterbashreskin/README.md\n@@ -1,34 +1,51 @@\n-# Monster Bash (Williams 1998) Balutito Reskin\n+# Monster Bash (Williams 1998)\n \n ![Table Preview](../../images/vpx-monsterbashreskin-preview.jpg)\n \n----\n-\n-## Files\n-| File Type | Link | Version | Author | \n-|-----------|--------|----------|--------------|\n-| **VPX** | [VP Universe](https://vpuniverse.com/files/file/9606-monster-bash-balutito-reskin-mod/) | 1.2 | [balutito](https://vpuniverse.com/profile/36070-balutito/) |\n-| **B2S** | [VP Universe](https://vpuniverse.com/files/file/2576-monster-bash-williams-1998/) | 1.0 | [Wildman](https://vpuniverse.com/profile/5-wildman/) |\n-| **ROM** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1285) | mb_106b.zip | [destruk](https://www.vpforums.org/index.php?showuser=5) |\n+<br>\n \n----\n+## *️⃣  Table Statistics\n \n-## Status \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 47 |\n \n----\n+<br>\n \n-## Instructions\n+**VPXS 4KP Testers:**\n+  - psybocilin\n+  - Sscorpio\n+  - Boris\n+  - OminousOsie 🌸\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to `vpx-monsterbashreskin.elf`\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-monsterbashreskin` folder\n-- Place ROM zip file into `vpx-monsterbashreskin/pinmame/roms` folder. DO NOT UNZIP!\n-- Make sure `(.vpx)`, `(.direct2b2s)` and `(.ini)` are named the same.\n+<br>\n \n ---\n \n-**Tested by:** psybocilin\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Monster Bash`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "5219f7cf2871459b52390eb7736ada33628a07b5",
+        "date": "2025-04-05 23:36:57 +0100",
+        "author": "OminousOsie",
+        "message": "Final updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "7cb3f58a5a59f6e4d2ee1df61b64592600285e5d",
+        "date": "2025-03-31 23:04:21 -0500",
+        "author": "Silentkat4000",
+        "message": "free play updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "a47289727fbde4f76c437cff12142c40cd1c5a90",
+        "date": "2025-03-29 09:15:44 +0000",
+        "author": "OminousOsie",
+        "message": "Updated tester lists, MM brightness, and MB colour dmd\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/pinmame.ini", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame.ini b/external/vpx-monsterbashreskin/pinmame.ini\nnew file mode 100644\nindex 00000000..31c358e2\n--- /dev/null\n+++ b/external/vpx-monsterbashreskin/pinmame.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+cheat=0\n+sound=1\n+dmd_red=240\n+dmd_green=240\n+dmd_blue=240\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.yml", "diff": "diff --git a/external/vpx-monsterbashreskin/table.yml b/external/vpx-monsterbashreskin/table.yml\nindex dc39e4ae..5130f71e 100644\n--- a/external/vpx-monsterbashreskin/table.yml\n+++ b/external/vpx-monsterbashreskin/table.yml\n@@ -10,6 +10,8 @@ tagline: \"Reunite the creatures of the night and get ready to rock!\"\n testers:\n   - \"psybocilin\"\n   - \"Sscorpio\"\n+  - \"Boris\"\n+  - \"OminousOsie\"\n vpxVPSId: \"ek56A_p7jJ\"\n vpxChecksum: \"52bcdf309a646564188dad8196dd1044\"\n tableNotes: \"Download v1.2\"\n"}
+        ]
+      },
+      {
+        "hash": "0f1ab81777b75708e58cb1960ddcaf800d5845da",
+        "date": "2025-03-29 08:36:29 +0000",
+        "author": "OminousOsie",
+        "message": "updated ini to fix check issues\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.ini", "diff": "diff --git a/external/vpx-monsterbashreskin/table.ini b/external/vpx-monsterbashreskin/table.ini\nindex 0e363e9b..b4daeaae 100644\n--- a/external/vpx-monsterbashreskin/table.ini\n+++ b/external/vpx-monsterbashreskin/table.ini\n@@ -16,4 +16,4 @@ ViewCabFOV = 42.999908\n ViewCabLayback = 48.000000\n \n [Standalone]\n-BackBufferScale = .416666\n\\ No newline at end of file\n+BackBufferScale = 0.416666\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "00c8ae3ee7c189571a055b6798ac7b3cb7189fd7",
+        "date": "2025-03-29 08:29:40 +0000",
+        "author": "OminousOsie",
+        "message": "updated files from J-S testing Boris\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.ini", "diff": "diff --git a/external/vpx-monsterbashreskin/table.ini b/external/vpx-monsterbashreskin/table.ini\nindex c93137e6..0e363e9b 100644\n--- a/external/vpx-monsterbashreskin/table.ini\n+++ b/external/vpx-monsterbashreskin/table.ini\n@@ -13,4 +13,7 @@ ViewCabPlayerY = -0.000000\n ViewCabPlayerZ = -340.000000\n ViewCabLookAt = 5.000000\n ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabLayback = 48.000000\n+\n+[Standalone]\n+BackBufferScale = .416666\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "f4fd3d2eaf622c9b82a605a04be7c6b53cbd84ff",
+        "date": "2025-03-28 10:21:52 +0000",
+        "author": "OminousOsie",
+        "message": "Added wizard yml owners to testers list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.yml", "diff": "diff --git a/external/vpx-monsterbashreskin/table.yml b/external/vpx-monsterbashreskin/table.yml\nindex 230aa61d..dc39e4ae 100644\n--- a/external/vpx-monsterbashreskin/table.yml\n+++ b/external/vpx-monsterbashreskin/table.yml\n@@ -9,6 +9,7 @@ tableVPSId: \"F1Skyh5h\"\n tagline: \"Reunite the creatures of the night and get ready to rock!\"\n testers:\n   - \"psybocilin\"\n+  - \"Sscorpio\"\n vpxVPSId: \"ek56A_p7jJ\"\n vpxChecksum: \"52bcdf309a646564188dad8196dd1044\"\n tableNotes: \"Download v1.2\""}
+        ]
+      },
+      {
+        "hash": "d1289b4157a24bc4ff52df0ccc739975990cdb0d",
+        "date": "2025-03-26 00:02:26 +0000",
+        "author": "OminousOsie",
+        "message": "Updated notes + bass fixes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.yml", "diff": "diff --git a/external/vpx-monsterbashreskin/table.yml b/external/vpx-monsterbashreskin/table.yml\nindex d4c13877..230aa61d 100644\n--- a/external/vpx-monsterbashreskin/table.yml\n+++ b/external/vpx-monsterbashreskin/table.yml\n@@ -12,3 +12,5 @@ testers:\n vpxVPSId: \"ek56A_p7jJ\"\n vpxChecksum: \"52bcdf309a646564188dad8196dd1044\"\n tableNotes: \"Download v1.2\"\n+applyFixes:\n+  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "266821b169409b0dc1c37f85941fc2b36d39254d",
+        "date": "2025-03-24 01:26:39 +0000",
+        "author": "OminousOsie",
+        "message": "yml formatting\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.yml", "diff": "diff --git a/external/vpx-monsterbashreskin/table.yml b/external/vpx-monsterbashreskin/table.yml\nindex f8cbc6cc..d4c13877 100644\n--- a/external/vpx-monsterbashreskin/table.yml\n+++ b/external/vpx-monsterbashreskin/table.yml\n@@ -11,4 +11,4 @@ testers:\n   - \"psybocilin\"\n vpxVPSId: \"ek56A_p7jJ\"\n vpxChecksum: \"52bcdf309a646564188dad8196dd1044\"\n-tableNotes: \"Download v1.2\"\n\\ No newline at end of file\n+tableNotes: \"Download v1.2\""}
+        ]
+      },
+      {
+        "hash": "f97b737805c3710c4206ec673c16ae88e53e1f52",
+        "date": "2025-03-24 01:18:39 +0000",
+        "author": "OminousOsie",
+        "message": "Added margin to all testers in ymls\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.yml", "diff": "diff --git a/external/vpx-monsterbashreskin/table.yml b/external/vpx-monsterbashreskin/table.yml\nindex 1b44a5b1..f8cbc6cc 100644\n--- a/external/vpx-monsterbashreskin/table.yml\n+++ b/external/vpx-monsterbashreskin/table.yml\n@@ -8,7 +8,7 @@ romChecksum: \"e7d457cb10715b66e95883f40a13c980\"\n tableVPSId: \"F1Skyh5h\"\n tagline: \"Reunite the creatures of the night and get ready to rock!\"\n testers:\n-- \"psybocilin\"\n+  - \"psybocilin\"\n vpxVPSId: \"ek56A_p7jJ\"\n vpxChecksum: \"52bcdf309a646564188dad8196dd1044\"\n tableNotes: \"Download v1.2\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "50ca2fe0add7c9afd4a690e7da665b1ea7faefaa",
+        "date": "2025-03-23 12:00:59 -0400",
+        "author": "SScorpio",
+        "message": "Updated launcher images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/launcher.png"}
+        ]
+      },
+      {
+        "hash": "5bd43b08328f822e69d3325fe5ca4afe65a14c49",
+        "date": "2025-03-23 11:40:21 -0400",
+        "author": "SScorpio",
+        "message": "Coin and other fixes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.ini", "diff": "diff --git a/external/vpx-monsterbashreskin/table.ini b/external/vpx-monsterbashreskin/table.ini\nindex ea2e244c..c93137e6 100644\n--- a/external/vpx-monsterbashreskin/table.ini\n+++ b/external/vpx-monsterbashreskin/table.ini\n@@ -1,5 +1,6 @@\n [Player]\n BallTrailStrength = 0.490196\n+JoyAddCredit2Key = 1\n \n [TableOverride]\n ViewCabMode = 0"}
+        ]
+      },
+      {
+        "hash": "ebece910b305ae25ec95afb6ace1a824e7ff5d08",
+        "date": "2025-03-21 16:21:46 -0400",
+        "author": "SScorpio",
+        "message": "Quoted strings\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/table.yml", "diff": "diff --git a/external/vpx-monsterbashreskin/table.yml b/external/vpx-monsterbashreskin/table.yml\nindex b7bd7491..1b44a5b1 100644\n--- a/external/vpx-monsterbashreskin/table.yml\n+++ b/external/vpx-monsterbashreskin/table.yml\n@@ -1,14 +1,14 @@\n ---\n-backglassVPSId: Gx1F6eXkmq\n-backglassChecksum: 2f0fa84f53aa4690668b2b2102529908\n-backglassNotes: Download v1.0\n+backglassVPSId: \"Gx1F6eXkmq\"\n+backglassChecksum: \"2f0fa84f53aa4690668b2b2102529908\"\n+backglassNotes: \"Download v1.0\"\n fps: 47\n-romVPSId: lyzB193o\n-romChecksum: e7d457cb10715b66e95883f40a13c980\n-tableVPSId: F1Skyh5h\n-tagline: Reunite the creatures of the night and get ready to rock! \n+romVPSId: \"lyzB193o\"\n+romChecksum: \"e7d457cb10715b66e95883f40a13c980\"\n+tableVPSId: \"F1Skyh5h\"\n+tagline: \"Reunite the creatures of the night and get ready to rock!\"\n testers:\n-- psybocilin\n+- \"psybocilin\"\n vpxVPSId: \"ek56A_p7jJ\"\n-vpxChecksum: 52bcdf309a646564188dad8196dd1044\n-tableNotes: Download v1.2\n\\ No newline at end of file\n+vpxChecksum: \"52bcdf309a646564188dad8196dd1044\"\n+tableNotes: \"Download v1.2\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "302f69a34ea0056f67724538dca41b680ff1c0a1",
+        "date": "2025-03-20 20:01:00 -0400",
+        "author": "SScorpio",
+        "message": "Rest of the first batch of table.yml files\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/table.yml", "diff": "diff --git a/external/vpx-monsterbashreskin/table.yml b/external/vpx-monsterbashreskin/table.yml\nnew file mode 100644\nindex 00000000..b7bd7491\n--- /dev/null\n+++ b/external/vpx-monsterbashreskin/table.yml\n@@ -0,0 +1,14 @@\n+---\n+backglassVPSId: Gx1F6eXkmq\n+backglassChecksum: 2f0fa84f53aa4690668b2b2102529908\n+backglassNotes: Download v1.0\n+fps: 47\n+romVPSId: lyzB193o\n+romChecksum: e7d457cb10715b66e95883f40a13c980\n+tableVPSId: F1Skyh5h\n+tagline: Reunite the creatures of the night and get ready to rock! \n+testers:\n+- psybocilin\n+vpxVPSId: \"ek56A_p7jJ\"\n+vpxChecksum: 52bcdf309a646564188dad8196dd1044\n+tableNotes: Download v1.2\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-monsterbashreskin/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/cfg/default.cfg b/external/vpx-monsterbashreskin/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-monsterbashreskin/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-monsterbashreskin/pinmame/cfg/gitkeep", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/cfg/gitkeep b/external/vpx-monsterbashreskin/pinmame/cfg/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-monsterbashreskin/pinmame/cfg/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-monsterbashreskin/pinmame/cfg/mb_106b.cfg", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/cfg/mb_106b.cfg b/external/vpx-monsterbashreskin/pinmame/cfg/mb_106b.cfg\ndeleted file mode 100644\nindex 708555f4..00000000\nBinary files a/external/vpx-monsterbashreskin/pinmame/cfg/mb_106b.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-monsterbashreskin/pinmame/ini/gitkeep", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/ini/gitkeep b/external/vpx-monsterbashreskin/pinmame/ini/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-monsterbashreskin/pinmame/ini/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-monsterbashreskin/pinmame/ini/mb_106b.ini", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/ini/mb_106b.ini b/external/vpx-monsterbashreskin/pinmame/ini/mb_106b.ini\ndeleted file mode 100644\nindex 28ec15cf..00000000\n--- a/external/vpx-monsterbashreskin/pinmame/ini/mb_106b.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-monsterbashreskin/pinmame/nvram/gitkeep", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/nvram/gitkeep b/external/vpx-monsterbashreskin/pinmame/nvram/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-monsterbashreskin/pinmame/nvram/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-monsterbashreskin/pinmame/roms/gitkeep", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/roms/gitkeep b/external/vpx-monsterbashreskin/pinmame/roms/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-monsterbashreskin/pinmame/roms/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml", "diff": "diff --git a/external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml b/external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml\ndeleted file mode 100644\nindex 71a48c46..00000000\n--- a/external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Monster Bash (Williams 1998) Balutito Reskin </name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-monsterbashreskin/MonsterBashBalutitoMOD.ini->external/vpx-monsterbashreskin/table.ini", "diff": "diff --git a/external/vpx-monsterbashreskin/MonsterBashBalutitoMOD.ini b/external/vpx-monsterbashreskin/table.ini\nsimilarity index 100%\nrename from external/vpx-monsterbashreskin/MonsterBashBalutitoMOD.ini\nrename to external/vpx-monsterbashreskin/table.ini"},
+          {"status": "R-from", "path": "external/vpx-monsterbashreskin/pinmame/nvram/mb_106b.nv->external/vpx-monsterbashreskin/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-monsterbashreskin/vpx-monsterbashreskin.png->external/vpx-monsterbashreskin/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-monsterbashreskin/MonsterBashBalutitoMOD.ini->external/vpx-monsterbashreskin/table.ini", "diff": "diff --git a/external/vpx-monsterbashreskin/MonsterBashBalutitoMOD.ini b/external/vpx-monsterbashreskin/table.ini\nsimilarity index 100%\nrename from external/vpx-monsterbashreskin/MonsterBashBalutitoMOD.ini\nrename to external/vpx-monsterbashreskin/table.ini"},
+          {"status": "R-to", "path": "external/vpx-monsterbashreskin/pinmame/nvram/mb_106b.nv->external/vpx-monsterbashreskin/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-monsterbashreskin/vpx-monsterbashreskin.png->external/vpx-monsterbashreskin/launcher.png"}
+        ]
+      },
+      {
+        "hash": "63d1a9901bbfbcfdb33fa29fc13e0289e088def2",
+        "date": "2025-02-20 11:59:48 -0800",
+        "author": "psybocilin",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/README.md", "diff": "diff --git a/external/vpx-monsterbashreskin/README.md b/external/vpx-monsterbashreskin/README.md\nindex 5225e4bf..9278192d 100644\n--- a/external/vpx-monsterbashreskin/README.md\n+++ b/external/vpx-monsterbashreskin/README.md\n@@ -27,7 +27,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Add your personalized launcher.elf and rename it to `vpx-monsterbashreskin.elf`\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-monsterbashreskin` folder\n - Place ROM zip file into `vpx-monsterbashreskin/pinmame/roms` folder. DO NOT UNZIP!\n-- Make sure `(.vpx)` and `(.direct2b2s)` are named the same.\n+- Make sure `(.vpx)`, `(.direct2b2s)` and `(.ini)` are named the same.\n \n ---\n \n"}
+        ]
+      },
+      {
+        "hash": "cf6a3166666cd7001f861612685ac044d6cf79c4",
+        "date": "2025-02-20 11:44:39 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/MonsterBashBalutitoMOD.ini", "diff": "diff --git a/external/vpx-monsterbashreskin/MonsterBashBalutitoMOD.ini b/external/vpx-monsterbashreskin/MonsterBashBalutitoMOD.ini\nnew file mode 100644\nindex 00000000..ea2e244c\n--- /dev/null\n+++ b/external/vpx-monsterbashreskin/MonsterBashBalutitoMOD.ini\n@@ -0,0 +1,15 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.818596\n+ViewCabScaleY = 1.037503\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 30.214006\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "ccd281a12e5e0d54eeee4a9779a6dd7ba4d657c9",
+        "date": "2025-02-20 00:01:10 -0800",
+        "author": "psybocilin",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/README.md", "diff": "diff --git a/external/vpx-monsterbashreskin/README.md b/external/vpx-monsterbashreskin/README.md\nindex e18cea72..5225e4bf 100644\n--- a/external/vpx-monsterbashreskin/README.md\n+++ b/external/vpx-monsterbashreskin/README.md\n@@ -17,7 +17,7 @@\n Minimum VPX Standalone build: 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:: | :white_check_mark: | 47 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 47 |\n \n ---\n \n"}
+        ]
+      },
+      {
+        "hash": "e5b70d43b67fad28d02c39ec24a84499cc1fef5c",
+        "date": "2025-02-19 23:54:51 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/README.md", "diff": "diff --git a/external/vpx-monsterbashreskin/README.md b/external/vpx-monsterbashreskin/README.md\nnew file mode 100644\nindex 00000000..e18cea72\n--- /dev/null\n+++ b/external/vpx-monsterbashreskin/README.md\n@@ -0,0 +1,34 @@\n+# Monster Bash (Williams 1998) Balutito Reskin\n+\n+![Table Preview](../../images/vpx-monsterbashreskin-preview.jpg)\n+\n+---\n+\n+## Files\n+| File Type | Link | Version | Author | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [VP Universe](https://vpuniverse.com/files/file/9606-monster-bash-balutito-reskin-mod/) | 1.2 | [balutito](https://vpuniverse.com/profile/36070-balutito/) |\n+| **B2S** | [VP Universe](https://vpuniverse.com/files/file/2576-monster-bash-williams-1998/) | 1.0 | [Wildman](https://vpuniverse.com/profile/5-wildman/) |\n+| **ROM** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1285) | mb_106b.zip | [destruk](https://www.vpforums.org/index.php?showuser=5) |\n+\n+---\n+\n+## Status \n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:: | :white_check_mark: | 47 |\n+\n+---\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to `vpx-monsterbashreskin.elf`\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-monsterbashreskin` folder\n+- Place ROM zip file into `vpx-monsterbashreskin/pinmame/roms` folder. DO NOT UNZIP!\n+- Make sure `(.vpx)` and `(.direct2b2s)` are named the same.\n+\n+---\n+\n+**Tested by:** psybocilin\n"}
+        ]
+      },
+      {
+        "hash": "34a5709826835d436e837dba8b883b2fc66d293b",
+        "date": "2025-02-19 23:47:45 -0800",
+        "author": "psybocilin",
+        "message": "Update vpx-monsterbashreskin.xml",
+        "files": [
+          {"status": "M", "path": "external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml", "diff": "diff --git a/external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml b/external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml\nindex 7c3739f0..71a48c46 100644\n--- a/external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml\n+++ b/external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml\n@@ -1,3 +1,3 @@\n <root>\n-        <name>Monster Bash (Williams 1998) Reskin </name>\n+        <name>Monster Bash (Williams 1998) Balutito Reskin </name>\n </root>\n"}
+        ]
+      },
+      {
+        "hash": "86ec0948765ff415b0ce865b4d47e08b383674a5",
+        "date": "2025-02-19 23:38:36 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/vpx-monsterbashreskin.png"},
+          {"status": "A", "path": "external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml", "diff": "diff --git a/external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml b/external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml\nnew file mode 100644\nindex 00000000..7c3739f0\n--- /dev/null\n+++ b/external/vpx-monsterbashreskin/vpx-monsterbashreskin.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Monster Bash (Williams 1998) Reskin </name>\n+</root>\n"}
+        ]
+      },
+      {
+        "hash": "7b103920d1f64aa8ad6ad211dbb843a4b5dfe97d",
+        "date": "2025-02-19 23:37:46 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/pinmame/nvram/mb_106b.nv"}
+        ]
+      },
+      {
+        "hash": "0dec9a2d577e15c5b51e4c2c643d76200537dfc2",
+        "date": "2025-02-19 23:37:21 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/pinmame/roms/gitkeep", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/roms/gitkeep b/external/vpx-monsterbashreskin/pinmame/roms/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-monsterbashreskin/pinmame/roms/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      },
+      {
+        "hash": "6ed7ee91881e33d236edb12e0e0b1aa9935ec287",
+        "date": "2025-02-19 23:36:54 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/pinmame/nvram/gitkeep", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/nvram/gitkeep b/external/vpx-monsterbashreskin/pinmame/nvram/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-monsterbashreskin/pinmame/nvram/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      },
+      {
+        "hash": "9729165cdb8a42ca41d4ca2122ac80ad4ce2d8ae",
+        "date": "2025-02-19 23:36:09 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/pinmame/ini/mb_106b.ini", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/ini/mb_106b.ini b/external/vpx-monsterbashreskin/pinmame/ini/mb_106b.ini\nnew file mode 100644\nindex 00000000..28ec15cf\n--- /dev/null\n+++ b/external/vpx-monsterbashreskin/pinmame/ini/mb_106b.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+cheat=0\n+sound=1\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "eb9d420c4c0055a7a70f2d88b441cd3762363c38",
+        "date": "2025-02-19 23:35:50 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/pinmame/ini/gitkeep", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/ini/gitkeep b/external/vpx-monsterbashreskin/pinmame/ini/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-monsterbashreskin/pinmame/ini/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      },
+      {
+        "hash": "8367a8c648c73486ae035b80f8d4633c522521f1",
+        "date": "2025-02-19 23:34:16 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/cfg/default.cfg b/external/vpx-monsterbashreskin/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-monsterbashreskin/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-monsterbashreskin/pinmame/cfg/mb_106b.cfg", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/cfg/mb_106b.cfg b/external/vpx-monsterbashreskin/pinmame/cfg/mb_106b.cfg\nnew file mode 100644\nindex 00000000..708555f4\nBinary files /dev/null and b/external/vpx-monsterbashreskin/pinmame/cfg/mb_106b.cfg differ\n"}
+        ]
+      },
+      {
+        "hash": "3a6bb1f83461d7624174ff4b5f041aad3e740353",
+        "date": "2025-02-19 23:33:49 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-monsterbashreskin/pinmame/cfg/gitkeep", "diff": "diff --git a/external/vpx-monsterbashreskin/pinmame/cfg/gitkeep b/external/vpx-monsterbashreskin/pinmame/cfg/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-monsterbashreskin/pinmame/cfg/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      }
+    ]
+}

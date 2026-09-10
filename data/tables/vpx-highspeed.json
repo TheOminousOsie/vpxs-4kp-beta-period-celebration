@@ -1,0 +1,56 @@
+{
+    "commit_count": 5,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-highspeed/table.yml", "diff": "diff --git a/external/vpx-highspeed/table.yml b/external/vpx-highspeed/table.yml\nindex 7e3e78f7..fc5b36d0 100644\n--- a/external/vpx-highspeed/table.yml\n+++ b/external/vpx-highspeed/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"QyVZrGlZ_B\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"D5E2624CC2A70E009317C65C8B1843A3\"\n-  - \"ABEE638D7784BB700589F89D162D51E4\"\n+backglassChecksum: \"D5E2624CC2A70E009317C65C8B1843A3\"\n backglassNotes: \"Download version 1.0.0\"\n fps: 60\n romVPSId: \"dRxhd-zs\"\n@@ -13,8 +10,5 @@ tagline: \"Outplays and outsmarts all the others!\"\n testers:\n   - \"OminousOsie\"\n vpxVPSId: \"p1Ur8qLo\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"EF45AD997DCA04607ABDCE2A85C85E71\"\n-  - \"824C25634E6DB739D63FF48597239BDC\"\n+vpxChecksum: \"EF45AD997DCA04607ABDCE2A85C85E71\"\n tableNotes: \"Download version 2.0\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-highspeed/table.yml", "diff": "diff --git a/external/vpx-highspeed/table.yml b/external/vpx-highspeed/table.yml\nindex fc5b36d0..7e3e78f7 100644\n--- a/external/vpx-highspeed/table.yml\n+++ b/external/vpx-highspeed/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"QyVZrGlZ_B\"\n-backglassChecksum: \"D5E2624CC2A70E009317C65C8B1843A3\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"D5E2624CC2A70E009317C65C8B1843A3\"\n+  - \"ABEE638D7784BB700589F89D162D51E4\"\n backglassNotes: \"Download version 1.0.0\"\n fps: 60\n romVPSId: \"dRxhd-zs\"\n@@ -10,5 +13,8 @@ tagline: \"Outplays and outsmarts all the others!\"\n testers:\n   - \"OminousOsie\"\n vpxVPSId: \"p1Ur8qLo\"\n-vpxChecksum: \"EF45AD997DCA04607ABDCE2A85C85E71\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"EF45AD997DCA04607ABDCE2A85C85E71\"\n+  - \"824C25634E6DB739D63FF48597239BDC\"\n tableNotes: \"Download version 2.0\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-highspeed/nvram.nv"},
+          {"status": "M", "path": "external/vpx-highspeed/table.ini", "diff": "diff --git a/external/vpx-highspeed/table.ini b/external/vpx-highspeed/table.ini\nindex 8c67754d..4159f7fe 100644\n--- a/external/vpx-highspeed/table.ini\n+++ b/external/vpx-highspeed/table.ini\n@@ -1,6 +1,9 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+\n [Player]\n BallTrailStrength = 0.098039\n-ScreenPlayerZ = 100.301239\n+ScreenPlayerZ = 90.020828\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.130000\n@@ -11,11 +14,11 @@ ScreenPlayerY = 16.256104\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.109112\n-ViewCabScaleY = 1.093935\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.180061\n+ViewCabScaleY = 0.988947\n+ViewCabScaleZ = 0.895013\n ViewCabRotation = 180.000000\n-ViewCabHOfs = -4.604896\n-ViewCabVOfs = -39.817234\n-ViewCabWindowTop = 373.784912\n+ViewCabHOfs = 0.007505\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 149.894928\n ViewCabWindowBot = 116.245216\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-highspeed/table.yml", "diff": "diff --git a/external/vpx-highspeed/table.yml b/external/vpx-highspeed/table.yml\nindex 0f134a95..fc5b36d0 100644\n--- a/external/vpx-highspeed/table.yml\n+++ b/external/vpx-highspeed/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes:\n-  - \"bass\"\n backglassVPSId: \"QyVZrGlZ_B\"\n backglassChecksum: \"D5E2624CC2A70E009317C65C8B1843A3\"\n backglassNotes: \"Download version 1.0.0\""}
+        ]
+      },
+      {
+        "hash": "397c574acf42e18196e8dfd4cab305a64f021717",
+        "date": "2026-01-04 13:23:36 +0000",
+        "author": "OminousOsie",
+        "message": "Updated high speed artwork\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-highspeed/dmd.png"},
+          {"status": "M", "path": "external/vpx-highspeed/launcher.png"}
+        ]
+      },
+      {
+        "hash": "fd8359c3cb84a5fb0ef77536084f780e3ea04a25",
+        "date": "2026-01-03 09:58:37 +0000",
+        "author": "OminousOsie",
+        "message": "Added High Speed\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-highspeed/README.md", "diff": "diff --git a/external/vpx-highspeed/README.md b/external/vpx-highspeed/README.md\nnew file mode 100644\nindex 00000000..8af86b89\n--- /dev/null\n+++ b/external/vpx-highspeed/README.md\n@@ -0,0 +1,60 @@\n+# High Speed (Williams 1986)\n+\n+![Table Preview](../../images/p1Ur8qLo-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Ominous Osie 🌸\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`High Speed (Williams 1986)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Outplays and outsmarts all the others!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "A", "path": "external/vpx-highspeed/launcher.png"},
+          {"status": "A", "path": "external/vpx-highspeed/table.ini", "diff": "diff --git a/external/vpx-highspeed/table.ini b/external/vpx-highspeed/table.ini\nnew file mode 100644\nindex 00000000..8c67754d\n--- /dev/null\n+++ b/external/vpx-highspeed/table.ini\n@@ -0,0 +1,21 @@\n+[Player]\n+BallTrailStrength = 0.098039\n+ScreenPlayerZ = 100.301239\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.130000\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+ScreenPlayerY = 16.256104\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.109112\n+ViewCabScaleY = 1.093935\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = -4.604896\n+ViewCabVOfs = -39.817234\n+ViewCabWindowTop = 373.784912\n+ViewCabWindowBot = 116.245216\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-highspeed/table.yml", "diff": "diff --git a/external/vpx-highspeed/table.yml b/external/vpx-highspeed/table.yml\nnew file mode 100644\nindex 00000000..0f134a95\n--- /dev/null\n+++ b/external/vpx-highspeed/table.yml\n@@ -0,0 +1,16 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassVPSId: \"QyVZrGlZ_B\"\n+backglassChecksum: \"D5E2624CC2A70E009317C65C8B1843A3\"\n+backglassNotes: \"Download version 1.0.0\"\n+fps: 60\n+romVPSId: \"dRxhd-zs\"\n+romChecksum: \"555E29582994EBCB5EE8CF42F212EC60\"\n+tableVPSId: \"QaXyjXzr\"\n+tagline: \"Outplays and outsmarts all the others!\"\n+testers:\n+  - \"OminousOsie\"\n+vpxVPSId: \"p1Ur8qLo\"\n+vpxChecksum: \"EF45AD997DCA04607ABDCE2A85C85E71\"\n+tableNotes: \"Download version 2.0\"\n"}
+        ]
+      }
+    ]
+}

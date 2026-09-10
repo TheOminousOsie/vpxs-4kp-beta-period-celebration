@@ -1,0 +1,134 @@
+{
+    "commit_count": 11,
+    "commits": [
+      {
+        "hash": "04fb6c1a9916f8bd480af04118921294db1ee730",
+        "date": "2026-08-13 23:19:38 -0300",
+        "author": "Bla1ze",
+        "message": "Adding Airborne (Capcom 1996) Wizard (#2106)\n\n* Initial\n\n* Update nvram.nv\n\n* Update launcher.png\n\n* NVRAM / README\n\n- NVRAM Volume lowering\n- Wizard / Main README.\n\n* Update table.yml",
+        "files": [
+          {"status": "A", "path": "external/vpx-airborne/table.yml", "diff": "diff --git a/external/vpx-airborne/table.yml b/external/vpx-airborne/table.yml\nnew file mode 100644\nindex 00000000..2bc3fb0f\n--- /dev/null\n+++ b/external/vpx-airborne/table.yml\n@@ -0,0 +1,23 @@\n+---\n+backglassChecksum: \"2E8BB651877AD830668C80AB12B8875A\"\n+backglassNotes: \"Download Airborne (Capcom 1996) full dmd.zip (v1.0.0)\"\n+backglassVPSId: \"WH8SNVKCk0\"\n+diffAuthorsOverride:\n+  - \"capnclaw\"\n+diffChecksum: \"6EB97BE65B135BE289F0170553328662\"\n+diffNotes: \"Download Airborne (Capcom 1996).dif\"\n+diffUrlOverride: \"https://vpuniverse.com/files/file/23619-airborne-cabinet-side-blade-mod/\"\n+diffVersionOverride: \"1.1.0\"\n+fps: 60\n+romChecksum: \"C1BD3BD35DCC0267D13B99CC4F4283E5\"\n+romNotes: \"Download abv106.zip\"\n+romVPSId: \"yVrAFplB\"\n+tableNotes: \"Download Airborne (Capcom 1996) v1.0.vpx\"\n+tableVPSId: \"gNyJvD-k\"\n+tagline: \"Pilot, you're cleared for takeoff!\"\n+testers:\n+  - \"Bla1ze\"\n+  - \"Wraith\"\n+tutorialVPSId: \"8-VHcO7Hf3\"\n+vpxChecksum: \"8043B5FE8B3A37B8DBE371A25FDCB8A1\"\n+vpxVPSId: \"um2mEgU3gx\"\n"},
+          {"status": "M", "path": "external/vpx-airborne/README.md", "diff": "diff --git a/external/vpx-airborne/README.md b/external/vpx-airborne/README.md\nindex 9aeaf4fa..397f56fd 100644\n--- a/external/vpx-airborne/README.md\n+++ b/external/vpx-airborne/README.md\n@@ -1,32 +1,61 @@\n-﻿# Airborne (Capcom 1996)\n+# Airborne (Capcom 1996)\n \n-![Table Preview](../../images/vpx-airborne.png)\n+![Table Preview](../../images/um2mEgU3gx-preview.webp)\n \n----\n+<br>\n \n-## Files\n-| File Type | Link | Version | Author |\n-|:---------:|:----:|:-------:|:------:|\n-| VPX | [vpforums](https://vpuniverse.com/files/file/14791-airborne-capcom-1996/) | 1.0 | [versins77](https://vpuniverse.com/profile/29661-versins77/) |\n-| B2S | [VP Universe](https://vpuniverse.com/files/file/2184-airbornecapcom1996/) | 2.0 | [wildman](https://vpuniverse.com/profile/5-wildman/) |\n-| DMD | N/A | N/A | N/A |\n-| ROM | [vpforums](https://vpuniverse.com/files/file/1281-airborne-capcom-1996-abv106/) | abv106.zip | N/A |\n+## *️⃣  Table Statistics\n \n-**Tested by:** [kaoticBPR]\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n----\n+<br>\n \n-## Status\n-**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 37 |\n+**VPXS 4KP Testers:**\n+  - Bla1ze\n+  - Wraith\n+\n+<br>\n \n ---\n \n-## Instructions\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Airborne (Capcom 1996)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Pilot, you're cleared for takeoff!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n \n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-airborne/launcher.png"},
+          {"status": "M", "path": "external/vpx-airborne/nvram.nv"},
+          {"status": "M", "path": "external/vpx-airborne/table.ini", "diff": "diff --git a/external/vpx-airborne/table.ini b/external/vpx-airborne/table.ini\nindex 67b2b0ce..9d8cb93f 100644\n--- a/external/vpx-airborne/table.ini\n+++ b/external/vpx-airborne/table.ini\n@@ -2,18 +2,21 @@\n BallTrailStrength = 0.392157\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.353695\n+EmissionScale = 0.303860\n+ScreenPlayerY = 23.000000\n+ScreenPlayerZ = 70.000000\n \n [TableOverride]\n-Difficulty = 0.500715\n-ViewCabMode = 0\n-ViewCabScaleX = 1.130869\n-ViewCabScaleY = 1.549025\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -5.453000\n-ViewCabPlayerY = 365.999939\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.247138\n+ViewCabScaleY = 1.077549\n+ViewCabScaleZ = 0.967785\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -40.000000\n+ViewCabWindowTop = 348.755859\n+ViewCabWindowBot = 79.826591\n+ToneMapper = 0\n+\n+[Standalone]\n+POVLinkTableScaleXY = 0\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-airborne/README.md", "diff": "diff --git a/external/vpx-airborne/README.md b/external/vpx-airborne/README.md\nindex 778724f8..9aeaf4fa 100644\n--- a/external/vpx-airborne/README.md\n+++ b/external/vpx-airborne/README.md\n@@ -1,4 +1,4 @@\n-# Airborne (Capcom 1996)\n+﻿# Airborne (Capcom 1996)\n \n ![Table Preview](../../images/vpx-airborne.png)\n \n@@ -27,6 +27,6 @@\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-airborne/README.md", "diff": "diff --git a/external/vpx-airborne/README.md b/external/vpx-airborne/README.md\nindex b734e8f4..778724f8 100644\n--- a/external/vpx-airborne/README.md\n+++ b/external/vpx-airborne/README.md\n@@ -26,7 +26,7 @@\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-airborne/README.md", "diff": "diff --git a/external/vpx-airborne/README.md b/external/vpx-airborne/README.md\nindex 24ada20f..b734e8f4 100644\n--- a/external/vpx-airborne/README.md\n+++ b/external/vpx-airborne/README.md\n@@ -26,3 +26,7 @@\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-airborne/README.md", "diff": "diff --git a/external/vpx-airborne/README.md b/external/vpx-airborne/README.md\nindex 2ba7247d..24ada20f 100644\n--- a/external/vpx-airborne/README.md\n+++ b/external/vpx-airborne/README.md\n@@ -25,9 +25,4 @@\n ---\n \n ## Instructions\n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-airborne.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- Place abv106.zip in the external/vpx-airborne/pinmame/roms folder *Do Not unzip*\n "}
+        ]
+      },
+      {
+        "hash": "b649b5f0abc2a4708232721d3bb5eeb93d09a3b3",
+        "date": "2025-04-01 17:30:08 +0100",
+        "author": "OminousOsie",
+        "message": "Updated the last files\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-airborne/README.md", "diff": "diff --git a/external/vpx-airborne/README.md b/external/vpx-airborne/README.md\nindex 9d440a04..2ba7247d 100644\n--- a/external/vpx-airborne/README.md\n+++ b/external/vpx-airborne/README.md\n@@ -1,6 +1,6 @@\n # Airborne (Capcom 1996)\n \n-![Table Preview](https://vpuniverse.com/screenshots/monthly_2023_06/airborne_cab.png.2874ca98b961638249a9e4ebfc928c74.png)\n+![Table Preview](../../images/vpx-airborne.png)\n \n ---\n \n@@ -30,3 +30,4 @@\n - Download the table and directb2s versions listed above and copy them into this folder\n - Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n - Place abv106.zip in the external/vpx-airborne/pinmame/roms folder *Do Not unzip*\n+"}
+        ]
+      },
+      {
+        "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
+        "date": "2025-03-19 14:01:02 -0500",
+        "author": "MoxAssault",
+        "message": "Large README Updates\n\n46 README Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-airborne/README.md", "diff": "diff --git a/external/vpx-airborne/README.md b/external/vpx-airborne/README.md\nindex b052e899..9d440a04 100644\n--- a/external/vpx-airborne/README.md\n+++ b/external/vpx-airborne/README.md\n@@ -1,36 +1,32 @@\n # Airborne (Capcom 1996)\n-Tested by: kaoticBPR\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2023_06/airborne_cab.png.2874ca98b961638249a9e4ebfc928c74.png)\n \n-Authors: [versins77](https://vpuniverse.com/profile/29661-versins77/)\n-Version: 1.0\n-Download: [vpforums](https://vpuniverse.com/files/file/14791-airborne-capcom-1996/)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [vpforums](https://vpuniverse.com/files/file/14791-airborne-capcom-1996/) | 1.0 | [versins77](https://vpuniverse.com/profile/29661-versins77/) |\n+| B2S | [VP Universe](https://vpuniverse.com/files/file/2184-airbornecapcom1996/) | 2.0 | [wildman](https://vpuniverse.com/profile/5-wildman/) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [vpforums](https://vpuniverse.com/files/file/1281-airborne-capcom-1996-abv106/) | abv106.zip | N/A |\n \n-Authors: [wildman](https://vpuniverse.com/profile/5-wildman/)\n-Version: 2.0\n-Download: [VP Universe](https://vpuniverse.com/files/file/2184-airbornecapcom1996/)\n+**Tested by:** [kaoticBPR]\n \n-ROM\n+---\n \n-Download: [vpforums](https://vpuniverse.com/files/file/1281-airborne-capcom-1996-abv106/)\n-ROM Name: abv106\n-\n-## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n+## Status\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 37 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-airborne.elf\n - Download the table and directb2s versions listed above and copy them into this folder\n - Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n - Place abv106.zip in the external/vpx-airborne/pinmame/roms folder *Do Not unzip*\n-\n-"}
+        ]
+      },
+      {
+        "hash": "9570e31c7e62f6f1178a35db3eef82051dab78e9",
+        "date": "2025-03-18 17:36:20 -0300",
+        "author": "Bla1ze",
+        "message": "Launcher Image Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-airborne/launcher.png"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-airborne/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-airborne/pinmame/cfg/.gitkeep b/external/vpx-airborne/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-airborne/pinmame/cfg/abv106.cfg", "diff": "diff --git a/external/vpx-airborne/pinmame/cfg/abv106.cfg b/external/vpx-airborne/pinmame/cfg/abv106.cfg\ndeleted file mode 100644\nindex 2f5fa1e6..00000000\nBinary files a/external/vpx-airborne/pinmame/cfg/abv106.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-airborne/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-airborne/pinmame/cfg/default.cfg b/external/vpx-airborne/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-airborne/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-airborne/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-airborne/pinmame/ini/.gitkeep b/external/vpx-airborne/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-airborne/pinmame/ini/abv106.ini", "diff": "diff --git a/external/vpx-airborne/pinmame/ini/abv106.ini b/external/vpx-airborne/pinmame/ini/abv106.ini\ndeleted file mode 100644\nindex 28ec15cf..00000000\n--- a/external/vpx-airborne/pinmame/ini/abv106.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-airborne/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-airborne/pinmame/nvram/.gitkeep b/external/vpx-airborne/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-airborne/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-airborne/pinmame/roms/.gitkeep b/external/vpx-airborne/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-airborne/user/SLUT_abv106.txt", "diff": "diff --git a/external/vpx-airborne/user/SLUT_abv106.txt b/external/vpx-airborne/user/SLUT_abv106.txt\ndeleted file mode 100644\nindex 573541ac..00000000\n--- a/external/vpx-airborne/user/SLUT_abv106.txt\n+++ /dev/null\n@@ -1 +0,0 @@\n-0"},
+          {"status": "D", "path": "external/vpx-airborne/vpx-airborne.xml", "diff": "diff --git a/external/vpx-airborne/vpx-airborne.xml b/external/vpx-airborne/vpx-airborne.xml\ndeleted file mode 100644\nindex 66c4aacc..00000000\n--- a/external/vpx-airborne/vpx-airborne.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Airborne (Capcom 1996)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-airborne/Airborne (Capcom 1996).ini->external/vpx-airborne/table.ini", "diff": "diff --git a/external/vpx-airborne/Airborne (Capcom 1996).ini b/external/vpx-airborne/table.ini\nsimilarity index 100%\nrename from external/vpx-airborne/Airborne (Capcom 1996).ini\nrename to external/vpx-airborne/table.ini"},
+          {"status": "R-from", "path": "external/vpx-airborne/pinmame/nvram/abv106.nv->external/vpx-airborne/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-airborne/vpx-airborne.png->external/vpx-airborne/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-airborne/Airborne (Capcom 1996).ini->external/vpx-airborne/table.ini", "diff": "diff --git a/external/vpx-airborne/Airborne (Capcom 1996).ini b/external/vpx-airborne/table.ini\nsimilarity index 100%\nrename from external/vpx-airborne/Airborne (Capcom 1996).ini\nrename to external/vpx-airborne/table.ini"},
+          {"status": "R-to", "path": "external/vpx-airborne/pinmame/nvram/abv106.nv->external/vpx-airborne/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-airborne/vpx-airborne.png->external/vpx-airborne/launcher.png"}
+        ]
+      },
+      {
+        "hash": "e1b298820d8b37f06351524ef22dfa3f9f0296cb",
+        "date": "2024-08-31 21:48:40 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Adding renaming step for vpx-airborne",
+        "files": [
+          {"status": "M", "path": "external/vpx-airborne/README.md", "diff": "diff --git a/external/vpx-airborne/README.md b/external/vpx-airborne/README.md\nindex 93a998fc..b052e899 100644\n--- a/external/vpx-airborne/README.md\n+++ b/external/vpx-airborne/README.md\n@@ -30,6 +30,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-airborne.elf\n - Download the table and directb2s versions listed above and copy them into this folder\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n - Place abv106.zip in the external/vpx-airborne/pinmame/roms folder *Do Not unzip*\n \n \n"}
+        ]
+      },
+      {
+        "hash": "82db4f963818d833dacb2fcdd1e38eda6df79b3c",
+        "date": "2024-08-19 12:49:03 -0400",
+        "author": "Kaoticbpr",
+        "message": "adding 4 tables to repo\n\nadding airborne, barracora, breakshot, king kong\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-airborne/Airborne (Capcom 1996).ini", "diff": "diff --git a/external/vpx-airborne/Airborne (Capcom 1996).ini b/external/vpx-airborne/Airborne (Capcom 1996).ini\nnew file mode 100644\nindex 00000000..67b2b0ce\n--- /dev/null\n+++ b/external/vpx-airborne/Airborne (Capcom 1996).ini\t\n@@ -0,0 +1,19 @@\n+[Player]\n+BallTrailStrength = 0.392157\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.353695\n+\n+[TableOverride]\n+Difficulty = 0.500715\n+ViewCabMode = 0\n+ViewCabScaleX = 1.130869\n+ViewCabScaleY = 1.549025\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -5.453000\n+ViewCabPlayerY = 365.999939\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-airborne/README.md", "diff": "diff --git a/external/vpx-airborne/README.md b/external/vpx-airborne/README.md\nnew file mode 100644\nindex 00000000..93a998fc\n--- /dev/null\n+++ b/external/vpx-airborne/README.md\n@@ -0,0 +1,35 @@\n+# Airborne (Capcom 1996)\n+Tested by: kaoticBPR\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2023_06/airborne_cab.png.2874ca98b961638249a9e4ebfc928c74.png)\n+\n+Authors: [versins77](https://vpuniverse.com/profile/29661-versins77/)\n+Version: 1.0\n+Download: [vpforums](https://vpuniverse.com/files/file/14791-airborne-capcom-1996/)\n+\n+DirectB2S\n+\n+Authors: [wildman](https://vpuniverse.com/profile/5-wildman/)\n+Version: 2.0\n+Download: [VP Universe](https://vpuniverse.com/files/file/2184-airbornecapcom1996/)\n+\n+ROM\n+\n+Download: [vpforums](https://vpuniverse.com/files/file/1281-airborne-capcom-1996-abv106/)\n+ROM Name: abv106\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 37 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-airborne.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Place abv106.zip in the external/vpx-airborne/pinmame/roms folder *Do Not unzip*\n+\n+"},
+          {"status": "A", "path": "external/vpx-airborne/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-airborne/pinmame/cfg/.gitkeep b/external/vpx-airborne/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-airborne/pinmame/cfg/abv106.cfg", "diff": "diff --git a/external/vpx-airborne/pinmame/cfg/abv106.cfg b/external/vpx-airborne/pinmame/cfg/abv106.cfg\nnew file mode 100644\nindex 00000000..2f5fa1e6\nBinary files /dev/null and b/external/vpx-airborne/pinmame/cfg/abv106.cfg differ"},
+          {"status": "A", "path": "external/vpx-airborne/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-airborne/pinmame/cfg/default.cfg b/external/vpx-airborne/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-airborne/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-airborne/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-airborne/pinmame/ini/.gitkeep b/external/vpx-airborne/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-airborne/pinmame/ini/abv106.ini", "diff": "diff --git a/external/vpx-airborne/pinmame/ini/abv106.ini b/external/vpx-airborne/pinmame/ini/abv106.ini\nnew file mode 100644\nindex 00000000..28ec15cf\n--- /dev/null\n+++ b/external/vpx-airborne/pinmame/ini/abv106.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+cheat=0\n+sound=1\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-airborne/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-airborne/pinmame/nvram/.gitkeep b/external/vpx-airborne/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-airborne/pinmame/nvram/abv106.nv"},
+          {"status": "A", "path": "external/vpx-airborne/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-airborne/pinmame/roms/.gitkeep b/external/vpx-airborne/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-airborne/user/SLUT_abv106.txt", "diff": "diff --git a/external/vpx-airborne/user/SLUT_abv106.txt b/external/vpx-airborne/user/SLUT_abv106.txt\nnew file mode 100644\nindex 00000000..573541ac\n--- /dev/null\n+++ b/external/vpx-airborne/user/SLUT_abv106.txt\n@@ -0,0 +1 @@\n+0"},
+          {"status": "A", "path": "external/vpx-airborne/vpx-airborne.png"},
+          {"status": "A", "path": "external/vpx-airborne/vpx-airborne.xml", "diff": "diff --git a/external/vpx-airborne/vpx-airborne.xml b/external/vpx-airborne/vpx-airborne.xml\nnew file mode 100644\nindex 00000000..66c4aacc\n--- /dev/null\n+++ b/external/vpx-airborne/vpx-airborne.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Airborne (Capcom 1996)</name>\n+</root>"}
+        ]
+      }
+    ]
+}

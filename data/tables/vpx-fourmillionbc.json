@@ -1,0 +1,17 @@
+{
+    "commit_count": 1,
+    "commits": [
+      {
+        "hash": "4962f61d3dbff20708bbd029a4444678c2c0a4d3",
+        "date": "2026-08-05 14:39:20 -0400",
+        "author": "evilwraith",
+        "message": "Added Four Million BC\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-fourmillionbc/README.md", "diff": "diff --git a/external/vpx-fourmillionbc/README.md b/external/vpx-fourmillionbc/README.md\nnew file mode 100644\nindex 00000000..d3a12003\n--- /dev/null\n+++ b/external/vpx-fourmillionbc/README.md\n@@ -0,0 +1,60 @@\n+# Four Million B.C. (Bally 1971)\n+\n+![Table Preview](../../images/oGQExHwR-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ❌ | ❌ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Wraith\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Four Million B.C. (Bally 1971)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "A", "path": "external/vpx-fourmillionbc/launcher.png"},
+          {"status": "A", "path": "external/vpx-fourmillionbc/table.ini", "diff": "diff --git a/external/vpx-fourmillionbc/table.ini b/external/vpx-fourmillionbc/table.ini\nnew file mode 100644\nindex 00000000..8939a3ff\n--- /dev/null\n+++ b/external/vpx-fourmillionbc/table.ini\n@@ -0,0 +1,19 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+OverrideTableEmissionScale = 0\n+ScreenPlayerY = 15.000000\n+ScreenPlayerZ = 90.000000\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.085000\n+ViewCabScaleY = 1.015000\n+ViewCabScaleZ = 0.859642\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 64.844971\n+ViewCabWindowBot = 64.844971\n+\n+[Standalone]\n+POVLinkTableScaleXY = 0\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-fourmillionbc/table.yml", "diff": "diff --git a/external/vpx-fourmillionbc/table.yml b/external/vpx-fourmillionbc/table.yml\nnew file mode 100644\nindex 00000000..4932e974\n--- /dev/null\n+++ b/external/vpx-fourmillionbc/table.yml\n@@ -0,0 +1,10 @@\n+---\n+backglassBundled: true\n+backglassChecksum: \"57FB1CB7A3FA79C7CF7DC41D435B8302\"\n+backglassNotes: \"Included in table download\"\n+fps: 60\n+tableVPSId: \"DX92rfG_\"\n+testers:\n+  - \"Wraith\"\n+vpxChecksum: \"258765C80170B33EEC88777A66FBB3AD\"\n+vpxVPSId: \"oGQExHwR\"\n"}
+        ]
+      }
+    ]
+}

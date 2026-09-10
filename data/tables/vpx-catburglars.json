@@ -1,0 +1,242 @@
+{
+    "commit_count": 24,
+    "commits": [
+      {
+        "hash": "1dc7e9059d05774d4af757ef1fe7d1253117cfa2",
+        "date": "2026-09-09 21:30:53 -0400",
+        "author": "pointdablame",
+        "message": "More Launcher Art Updates (#2207)\n\nThis updates the following launchers to the new Legends Unchained logo: Aaron Spelling, Apache, Batman 66 (Original), Big Bang Bar, Black Knight, Black Knight 2000, Black Magic 4, Black Rose, James Bond, Cactus Canyon, Cat Burglars, Cenobite, Centaur, Centigrade 37, Chrono Trigger, Cirqus Voltaire, Cleopatra, Clock of Eternal Fog, Cosmic, Crystal Ball, Dark Crystal, Deadpool, Devil Riders, Diner, Dirty Harry, Tron Legacy, Doctor Who, Doom Eternal, DBZ Budokai, Drakor, Dune, D&D, Earthshaker, F-14 Tomcat, Fathom, Fifth Element, Fireball II, Firepower, Firepower II",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nindex 725292e2..1a6fc79f 100644\n--- a/external/vpx-catburglars/table.yml\n+++ b/external/vpx-catburglars/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassBundled: true\n backglassVPSId: \"6HSLnLwrwz\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n-  - \"EC87309E3FA0D8F67B5FEA0B6BC7ABF6\"\n+backglassChecksum: \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n backglassNotes: \"Included in VPX download\"\n fps: 60\n tableNotes: \"Download version 1.0.0\"\n@@ -16,7 +13,4 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"PointDaBlame\"\n vpxVPSId: \"yApb21FFAI\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"C19328B84AC1F64ED7A971AF9F52C772\"\n-  - \"EC87309E3FA0D8F67B5FEA0B6BC7ABF6\"\n+vpxChecksum: \"C19328B84AC1F64ED7A971AF9F52C772\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nindex 1a6fc79f..725292e2 100644\n--- a/external/vpx-catburglars/table.yml\n+++ b/external/vpx-catburglars/table.yml\n@@ -1,7 +1,10 @@\n ---\n backglassBundled: true\n backglassVPSId: \"6HSLnLwrwz\"\n-backglassChecksum: \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n+  - \"EC87309E3FA0D8F67B5FEA0B6BC7ABF6\"\n backglassNotes: \"Included in VPX download\"\n fps: 60\n tableNotes: \"Download version 1.0.0\"\n@@ -13,4 +16,7 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"PointDaBlame\"\n vpxVPSId: \"yApb21FFAI\"\n-vpxChecksum: \"C19328B84AC1F64ED7A971AF9F52C772\"\n\\ No newline at end of file\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"C19328B84AC1F64ED7A971AF9F52C772\"\n+  - \"EC87309E3FA0D8F67B5FEA0B6BC7ABF6\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/table.ini", "diff": "diff --git a/external/vpx-catburglars/table.ini b/external/vpx-catburglars/table.ini\nindex 84ce545f..63cf9f1a 100644\n--- a/external/vpx-catburglars/table.ini\n+++ b/external/vpx-catburglars/table.ini\n@@ -1,19 +1,22 @@\n+[Standalone]\n+B2SHideB2SDMD = 1\n+\n [Player]\n BallTrailStrength = 0.490196\n AlphaRampAccuracy = 10\n OverrideTableEmissionScale = 1\n-ScreenPlayerY = -4.750002\n+ScreenPlayerY = 8.045199\n ScreenPlayerZ = 100.251236\n DynamicDayNight = 0\n-EmissionScale = 0.232075\n+EmissionScale = 0.399760\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.305274\n-ViewCabScaleY = 1.129784\n-ViewCabScaleZ = 1.040290\n+ViewCabScaleX = 1.180848\n+ViewCabScaleY = 1.011123\n+ViewCabScaleZ = 0.925734\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -66.463478\n-ViewCabWindowTop = 261.541931\n-ViewCabWindowBot = 92.953217\n\\ No newline at end of file\n+ViewCabVOfs = 0.025826\n+ViewCabWindowTop = 75.622849\n+ViewCabWindowBot = -24.551805\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nindex b563beaa..1a6fc79f 100644\n--- a/external/vpx-catburglars/table.yml\n+++ b/external/vpx-catburglars/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes: \n-  - \"bass\"\n backglassBundled: true\n backglassVPSId: \"6HSLnLwrwz\"\n backglassChecksum: \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n@@ -15,5 +13,4 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"PointDaBlame\"\n vpxVPSId: \"yApb21FFAI\"\n-vpxChecksum: \"C19328B84AC1F64ED7A971AF9F52C772\"\n-enabled: false\n+vpxChecksum: \"C19328B84AC1F64ED7A971AF9F52C772\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "7aa33af561d151560926203eca734cad078ad95d",
+        "date": "2025-11-25 15:29:34 -0500",
+        "author": "evilwraith",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nindex c45a3601..b563beaa 100644\n--- a/external/vpx-catburglars/table.yml\n+++ b/external/vpx-catburglars/table.yml\n@@ -16,3 +16,4 @@ testers:\n   - \"PointDaBlame\"\n vpxVPSId: \"yApb21FFAI\"\n vpxChecksum: \"C19328B84AC1F64ED7A971AF9F52C772\"\n+enabled: false\n"}
+        ]
+      },
+      {
+        "hash": "5b29c5b8dd4a0d011184f4bdcf8b541aaaf6c3fc",
+        "date": "2025-06-25 11:05:05 +0100",
+        "author": "OminousOsie",
+        "message": "Final tweaks\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/README.md", "diff": "diff --git a/external/vpx-catburglars/README.md b/external/vpx-catburglars/README.md\nindex ffe624cb..968dca42 100644\n--- a/external/vpx-catburglars/README.md\n+++ b/external/vpx-catburglars/README.md\n@@ -15,6 +15,8 @@\n **VPXS 4KP Testers:**\n   - evilwraith\n   - Ominous Osie 🌸\n+  - CoffeeAtJoes\n+  - PointDaBlame\n \n <br>\n "},
+          {"status": "M", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nindex c1bd58a1..c45a3601 100644\n--- a/external/vpx-catburglars/table.yml\n+++ b/external/vpx-catburglars/table.yml\n@@ -12,5 +12,7 @@ tagline: \"Meow...?\"\n testers:\n   - \"evilwraith\"\n   - \"OminousOsie\"\n+  - \"CoffeeAtJoes\"\n+  - \"PointDaBlame\"\n vpxVPSId: \"yApb21FFAI\"\n vpxChecksum: \"C19328B84AC1F64ED7A971AF9F52C772\""}
+        ]
+      },
+      {
+        "hash": "079dc4b9c43f7f008c0e972ef14ef038a07fcbb9",
+        "date": "2025-06-25 10:06:22 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/README.md", "diff": "diff --git a/external/vpx-catburglars/README.md b/external/vpx-catburglars/README.md\nindex 5dbf8c92..ffe624cb 100644\n--- a/external/vpx-catburglars/README.md\n+++ b/external/vpx-catburglars/README.md\n@@ -1,32 +1,61 @@\n-# Cat Burglars (Anthias 2024)\n+# Cat Burglars (Original 2024)\n \n ![Table Preview](../../images/vpx-catburglars.jpg)\n \n-Authors: [Anthias](https://vpuniverse.com/profile/69616-anthias/)  \n-Version: 1.1  \n-Download: [VPUniverse](https://vpuniverse.com/files/file/22051-cat-burglars-anthias-2024-original-em-b2s/)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Included\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ❌ | ❌ | ❌ | 60 |\n \n-ROM\n+<br>\n \n-None\n+**VPXS 4KP Testers:**\n+  - evilwraith\n+  - Ominous Osie 🌸\n \n-Tested by: evilwraith\n+<br>\n \n-## Status \n+---\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n+<br>\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 60 |\n+## ❇️ Available in the Wizard! 🪄✨\n \n-## Instructions\n+<br>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Cat Burglars (Original 2024)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Meow...?\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "25b5ef4bf222ca8f611e575a42c399f3ab57d75d",
+        "date": "2025-06-20 14:00:34 +0100",
+        "author": "OminousOsie",
+        "message": "Enabled tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nindex f3a351b0..c1bd58a1 100644\n--- a/external/vpx-catburglars/table.yml\n+++ b/external/vpx-catburglars/table.yml\n@@ -5,7 +5,6 @@ backglassBundled: true\n backglassVPSId: \"6HSLnLwrwz\"\n backglassChecksum: \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n backglassNotes: \"Included in VPX download\"\n-enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n tableNotes: \"Download version 1.0.0\"\n tableVPSId: \"rV1GSKlvws\""}
+        ]
+      },
+      {
+        "hash": "6d4773e105da8e1956abe61f94fd45c84bf1da93",
+        "date": "2025-06-20 13:55:17 +0100",
+        "author": "OminousOsie",
+        "message": "Artwork\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-catburglars/dmd.png"}
+        ]
+      },
+      {
+        "hash": "48088897c11bedc4ffd37e0844832fff2702c477",
+        "date": "2025-06-18 08:25:41 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nindex c1bd58a1..f3a351b0 100644\n--- a/external/vpx-catburglars/table.yml\n+++ b/external/vpx-catburglars/table.yml\n@@ -5,6 +5,7 @@ backglassBundled: true\n backglassVPSId: \"6HSLnLwrwz\"\n backglassChecksum: \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n backglassNotes: \"Included in VPX download\"\n+enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n tableNotes: \"Download version 1.0.0\"\n tableVPSId: \"rV1GSKlvws\""}
+        ]
+      },
+      {
+        "hash": "f37c1d5daddd8fcf3bd7f5b37da3abbe2cdb0c9f",
+        "date": "2025-06-15 12:48:08 +0100",
+        "author": "OminousOsie",
+        "message": "and cat burgler\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nindex f3a351b0..c1bd58a1 100644\n--- a/external/vpx-catburglars/table.yml\n+++ b/external/vpx-catburglars/table.yml\n@@ -5,7 +5,6 @@ backglassBundled: true\n backglassVPSId: \"6HSLnLwrwz\"\n backglassChecksum: \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n backglassNotes: \"Included in VPX download\"\n-enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n tableNotes: \"Download version 1.0.0\"\n tableVPSId: \"rV1GSKlvws\"\n"}
+        ]
+      },
+      {
+        "hash": "1fd4da9459fa3424d3643db3d4e990008f6bd41a",
+        "date": "2025-06-14 18:11:31 +0100",
+        "author": "OminousOsie",
+        "message": "Launchers + enabled doom eternal\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/launcher.png"}
+        ]
+      },
+      {
+        "hash": "9b74a68136f79c7008e9ac4ed03fc85ec264625d",
+        "date": "2025-06-14 09:39:41 +0100",
+        "author": "OminousOsie",
+        "message": "Added Dark Crystal and Death Note, and make comment better\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nindex a5e79fb0..f3a351b0 100644\n--- a/external/vpx-catburglars/table.yml\n+++ b/external/vpx-catburglars/table.yml\n@@ -5,7 +5,7 @@ backglassBundled: true\n backglassVPSId: \"6HSLnLwrwz\"\n backglassChecksum: \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n backglassNotes: \"Included in VPX download\"\n-enabled: false # Osie: yml built in a batch, just needs testing\n+enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n tableNotes: \"Download version 1.0.0\"\n tableVPSId: \"rV1GSKlvws\""}
+        ]
+      },
+      {
+        "hash": "f7e769afd559d75957954554931f63651af42ec8",
+        "date": "2025-06-13 21:44:19 +0100",
+        "author": "OminousOsie",
+        "message": "re-disabled tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nindex c1bd58a1..a5e79fb0 100644\n--- a/external/vpx-catburglars/table.yml\n+++ b/external/vpx-catburglars/table.yml\n@@ -5,6 +5,7 @@ backglassBundled: true\n backglassVPSId: \"6HSLnLwrwz\"\n backglassChecksum: \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n backglassNotes: \"Included in VPX download\"\n+enabled: false # Osie: yml built in a batch, just needs testing\n fps: 60\n tableNotes: \"Download version 1.0.0\"\n tableVPSId: \"rV1GSKlvws\""}
+        ]
+      },
+      {
+        "hash": "4f2aa2e3a8fc6c8d736002a60dcb3aef5b153601",
+        "date": "2025-06-13 21:42:56 +0100",
+        "author": "OminousOsie",
+        "message": "Wiz tweaks to tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/table.ini", "diff": "diff --git a/external/vpx-catburglars/table.ini b/external/vpx-catburglars/table.ini\nindex 57ebbc9f..84ce545f 100644\n--- a/external/vpx-catburglars/table.ini\n+++ b/external/vpx-catburglars/table.ini\n@@ -1,13 +1,19 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+AlphaRampAccuracy = 10\n+OverrideTableEmissionScale = 1\n+ScreenPlayerY = -4.750002\n+ScreenPlayerZ = 100.251236\n+DynamicDayNight = 0\n+EmissionScale = 0.232075\n+\n [TableOverride]\n-ViewCabMode = 1\n-ViewCabScaleX = 1.119370\n-ViewCabScaleY = 0.920978\n-ViewCabScaleZ = 1.105699\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 0.000000\n-ViewCabPlayerY = -151.114868\n-ViewCabPlayerZ = 1404.774048\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 44.111809\n-ViewCabHOfs = 0.221300\n-ViewCabVOfs = 70.024551\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.305274\n+ViewCabScaleY = 1.129784\n+ViewCabScaleZ = 1.040290\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -66.463478\n+ViewCabWindowTop = 261.541931\n+ViewCabWindowBot = 92.953217\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "561137736bb36cdceefbe28e75ae5def3acb00f4",
+        "date": "2025-06-13 20:52:52 +0100",
+        "author": "OminousOsie",
+        "message": "Enabled a few tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nindex a5e79fb0..c1bd58a1 100644\n--- a/external/vpx-catburglars/table.yml\n+++ b/external/vpx-catburglars/table.yml\n@@ -5,7 +5,6 @@ backglassBundled: true\n backglassVPSId: \"6HSLnLwrwz\"\n backglassChecksum: \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n backglassNotes: \"Included in VPX download\"\n-enabled: false # Osie: yml built in a batch, just needs testing\n fps: 60\n tableNotes: \"Download version 1.0.0\"\n tableVPSId: \"rV1GSKlvws\""}
+        ]
+      },
+      {
+        "hash": "fcb939d3ae09a07f5deffeb79df2bd83367598a4",
+        "date": "2025-06-13 20:09:16 +0100",
+        "author": "OminousOsie",
+        "message": "More ymls\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-catburglars/table.yml", "diff": "diff --git a/external/vpx-catburglars/table.yml b/external/vpx-catburglars/table.yml\nnew file mode 100644\nindex 00000000..a5e79fb0\n--- /dev/null\n+++ b/external/vpx-catburglars/table.yml\n@@ -0,0 +1,17 @@\n+---\n+applyFixes: \n+  - \"bass\"\n+backglassBundled: true\n+backglassVPSId: \"6HSLnLwrwz\"\n+backglassChecksum: \"220DBCCDB4ABEC8AD5B1870098EDFC0F\"\n+backglassNotes: \"Included in VPX download\"\n+enabled: false # Osie: yml built in a batch, just needs testing\n+fps: 60\n+tableNotes: \"Download version 1.0.0\"\n+tableVPSId: \"rV1GSKlvws\"\n+tagline: \"Meow...?\"\n+testers:\n+  - \"evilwraith\"\n+  - \"OminousOsie\"\n+vpxVPSId: \"yApb21FFAI\"\n+vpxChecksum: \"C19328B84AC1F64ED7A971AF9F52C772\""}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/README.md", "diff": "diff --git a/external/vpx-catburglars/README.md b/external/vpx-catburglars/README.md\nindex 8e313bf6..5dbf8c92 100644\n--- a/external/vpx-catburglars/README.md\n+++ b/external/vpx-catburglars/README.md\n@@ -26,7 +26,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/README.md", "diff": "diff --git a/external/vpx-catburglars/README.md b/external/vpx-catburglars/README.md\nindex 5640018f..8e313bf6 100644\n--- a/external/vpx-catburglars/README.md\n+++ b/external/vpx-catburglars/README.md\n@@ -26,3 +26,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/README.md", "diff": "diff --git a/external/vpx-catburglars/README.md b/external/vpx-catburglars/README.md\nindex cdd9dcc4..5640018f 100644\n--- a/external/vpx-catburglars/README.md\n+++ b/external/vpx-catburglars/README.md\n@@ -26,7 +26,3 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-catburglars.elf\n-- Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-catburglars\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same"}
+        ]
+      },
+      {
+        "hash": "be93fc2c71d0df17df86569ff78f4bd17f8bc62c",
+        "date": "2025-04-01 12:05:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated file paths to relative\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/README.md", "diff": "diff --git a/external/vpx-catburglars/README.md b/external/vpx-catburglars/README.md\nindex 20bd331f..cdd9dcc4 100644\n--- a/external/vpx-catburglars/README.md\n+++ b/external/vpx-catburglars/README.md\n@@ -1,6 +1,6 @@\n # Cat Burglars (Anthias 2024)\n \n-![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-catburglars.jpg)\n+![Table Preview](../../images/vpx-catburglars.jpg)\n \n Authors: [Anthias](https://vpuniverse.com/profile/69616-anthias/)  \n Version: 1.1  "}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-catburglars/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-catburglars/pinmame/cfg/.gitkeep b/external/vpx-catburglars/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-catburglars/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-catburglars/pinmame/cfg/default.cfg b/external/vpx-catburglars/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-catburglars/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-catburglars/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-catburglars/pinmame/ini/.gitkeep b/external/vpx-catburglars/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-catburglars/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-catburglars/pinmame/nvram/.gitkeep b/external/vpx-catburglars/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-catburglars/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-catburglars/pinmame/roms/.gitkeep b/external/vpx-catburglars/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-catburglars/vpx-catburglars.png"},
+          {"status": "D", "path": "external/vpx-catburglars/vpx-catburglars.xml", "diff": "diff --git a/external/vpx-catburglars/vpx-catburglars.xml b/external/vpx-catburglars/vpx-catburglars.xml\ndeleted file mode 100644\nindex 99f05dea..00000000\n--- a/external/vpx-catburglars/vpx-catburglars.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Cat Burglars (Anthias 2024)</name>\n-</root>\n\\ No newline at end of file"},
+          {"status": "R-from", "path": "external/vpx-catburglars/CB wheel 2.png->external/vpx-catburglars/launcher.png"},
+          {"status": "R-from", "path": "external/vpx-catburglars/Cat Burglars (Anthias 2024).ini->external/vpx-catburglars/table.ini", "diff": "diff --git a/external/vpx-catburglars/Cat Burglars (Anthias 2024).ini b/external/vpx-catburglars/table.ini\nsimilarity index 100%\nrename from external/vpx-catburglars/Cat Burglars (Anthias 2024).ini\nrename to external/vpx-catburglars/table.ini"},
+          {"status": "R-to", "path": "external/vpx-catburglars/CB wheel 2.png->external/vpx-catburglars/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-catburglars/Cat Burglars (Anthias 2024).ini->external/vpx-catburglars/table.ini", "diff": "diff --git a/external/vpx-catburglars/Cat Burglars (Anthias 2024).ini b/external/vpx-catburglars/table.ini\nsimilarity index 100%\nrename from external/vpx-catburglars/Cat Burglars (Anthias 2024).ini\nrename to external/vpx-catburglars/table.ini"}
+        ]
+      },
+      {
+        "hash": "f2b2c0418771a1c1128be0d2cff658e2ff6aa815",
+        "date": "2024-10-29 20:57:23 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-catburglars",
+        "files": [
+          {"status": "M", "path": "external/vpx-catburglars/README.md", "diff": "diff --git a/external/vpx-catburglars/README.md b/external/vpx-catburglars/README.md\nindex 0ff2d0d2..20bd331f 100644\n--- a/external/vpx-catburglars/README.md\n+++ b/external/vpx-catburglars/README.md\n@@ -2,8 +2,8 @@\n \n ![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-catburglars.jpg)\n \n-Authors: [Anthias](https://vpuniverse.com/profile/69616-anthias/)\n-Version: 1.1\n+Authors: [Anthias](https://vpuniverse.com/profile/69616-anthias/)  \n+Version: 1.1  \n Download: [VPUniverse](https://vpuniverse.com/files/file/22051-cat-burglars-anthias-2024-original-em-b2s/)\n \n DirectB2S\n@@ -19,6 +19,7 @@ Tested by: evilwraith\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 60 |\n@@ -28,4 +29,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-catburglars.elf\n - Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-catburglars\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n\\ No newline at end of file\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n"}
+        ]
+      },
+      {
+        "hash": "e18ada22e0282de766ae9aa28e5ee33525a5a949",
+        "date": "2024-10-29 10:09:18 -0400",
+        "author": "evilwraith",
+        "message": "added Cat Burglars\n\nadded Cat Burglars (Anthea 2024)\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-catburglars/CB wheel 2.png"},
+          {"status": "A", "path": "external/vpx-catburglars/Cat Burglars (Anthias 2024).ini", "diff": "diff --git a/external/vpx-catburglars/Cat Burglars (Anthias 2024).ini b/external/vpx-catburglars/Cat Burglars (Anthias 2024).ini\nnew file mode 100644\nindex 00000000..57ebbc9f\n--- /dev/null\n+++ b/external/vpx-catburglars/Cat Burglars (Anthias 2024).ini\t\n@@ -0,0 +1,13 @@\n+[TableOverride]\n+ViewCabMode = 1\n+ViewCabScaleX = 1.119370\n+ViewCabScaleY = 0.920978\n+ViewCabScaleZ = 1.105699\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 0.000000\n+ViewCabPlayerY = -151.114868\n+ViewCabPlayerZ = 1404.774048\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 44.111809\n+ViewCabHOfs = 0.221300\n+ViewCabVOfs = 70.024551\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-catburglars/README.md", "diff": "diff --git a/external/vpx-catburglars/README.md b/external/vpx-catburglars/README.md\nnew file mode 100644\nindex 00000000..0ff2d0d2\n--- /dev/null\n+++ b/external/vpx-catburglars/README.md\n@@ -0,0 +1,31 @@\n+# Cat Burglars (Anthias 2024)\n+\n+![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-catburglars.jpg)\n+\n+Authors: [Anthias](https://vpuniverse.com/profile/69616-anthias/)\n+Version: 1.1\n+Download: [VPUniverse](https://vpuniverse.com/files/file/22051-cat-burglars-anthias-2024-original-em-b2s/)\n+\n+DirectB2S\n+\n+Included\n+\n+ROM\n+\n+None\n+\n+Tested by: evilwraith\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 60 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-catburglars.elf\n+- Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-catburglars\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-catburglars/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-catburglars/pinmame/cfg/.gitkeep b/external/vpx-catburglars/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-catburglars/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-catburglars/pinmame/cfg/default.cfg b/external/vpx-catburglars/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-catburglars/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-catburglars/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-catburglars/pinmame/ini/.gitkeep b/external/vpx-catburglars/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-catburglars/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-catburglars/pinmame/nvram/.gitkeep b/external/vpx-catburglars/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-catburglars/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-catburglars/pinmame/roms/.gitkeep b/external/vpx-catburglars/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-catburglars/vpx-catburglars.png"},
+          {"status": "A", "path": "external/vpx-catburglars/vpx-catburglars.xml", "diff": "diff --git a/external/vpx-catburglars/vpx-catburglars.xml b/external/vpx-catburglars/vpx-catburglars.xml\nnew file mode 100644\nindex 00000000..99f05dea\n--- /dev/null\n+++ b/external/vpx-catburglars/vpx-catburglars.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Cat Burglars (Anthias 2024)</name>\n+</root>\n\\ No newline at end of file\n"}
+        ]
+      }
+    ]
+}

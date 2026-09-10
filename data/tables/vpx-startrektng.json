@@ -1,0 +1,140 @@
+{
+    "commit_count": 12,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-startrektng/table.yml", "diff": "diff --git a/external/vpx-startrektng/table.yml b/external/vpx-startrektng/table.yml\nindex 88d39301..59acbec2 100644\n--- a/external/vpx-startrektng/table.yml\n+++ b/external/vpx-startrektng/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"F32086A3C0CB50D491797EC0DC083D55\"\n-  - \"3B63B4BDB36BB12C128564B5971337CF\"\n+backglassChecksum: \"F32086A3C0CB50D491797EC0DC083D55\"\n backglassNotes: \"Download version 3\"\n backglassVPSId: \"uAhOIbfCaC\"\n coloredROMChecksum: \"DE924355DB73DF180389BFDB2F7EC871\"\n@@ -17,8 +14,5 @@ tableVPSId: \"eKpfZo80\"\n tagline: \"'Engage...'\"\n testers:\n   - \"Wraith\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"563DB3D531270582F1C79DC3865C522A\"\n-  - \"5622E65874FA135DB1362C4527AA5F5C\"\n+vpxChecksum: \"563DB3D531270582F1C79DC3865C522A\"\n vpxVPSId: \"t6AxPZxsNk\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-startrektng/table.yml", "diff": "diff --git a/external/vpx-startrektng/table.yml b/external/vpx-startrektng/table.yml\nindex 59acbec2..88d39301 100644\n--- a/external/vpx-startrektng/table.yml\n+++ b/external/vpx-startrektng/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"F32086A3C0CB50D491797EC0DC083D55\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"F32086A3C0CB50D491797EC0DC083D55\"\n+  - \"3B63B4BDB36BB12C128564B5971337CF\"\n backglassNotes: \"Download version 3\"\n backglassVPSId: \"uAhOIbfCaC\"\n coloredROMChecksum: \"DE924355DB73DF180389BFDB2F7EC871\"\n@@ -14,5 +17,8 @@ tableVPSId: \"eKpfZo80\"\n tagline: \"'Engage...'\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"563DB3D531270582F1C79DC3865C522A\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"563DB3D531270582F1C79DC3865C522A\"\n+  - \"5622E65874FA135DB1362C4527AA5F5C\"\n vpxVPSId: \"t6AxPZxsNk\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-startrektng/table.yml", "diff": "diff --git a/external/vpx-startrektng/table.yml b/external/vpx-startrektng/table.yml\nnew file mode 100644\nindex 00000000..59acbec2\n--- /dev/null\n+++ b/external/vpx-startrektng/table.yml\n@@ -0,0 +1,18 @@\n+---\n+backglassChecksum: \"F32086A3C0CB50D491797EC0DC083D55\"\n+backglassNotes: \"Download version 3\"\n+backglassVPSId: \"uAhOIbfCaC\"\n+coloredROMChecksum: \"DE924355DB73DF180389BFDB2F7EC871\"\n+coloredROMNotes: \"Download sttng_l7.cROMc\"\n+coloredROMVPSId: \"Wa2jQyuEbT\"\n+fps: 60\n+romChecksum: \"22A3001B79399F3D8B92A8F85C9F3CB8\"\n+romNotes: \"Download sttng_l7.zip\"\n+romVPSId: \"zqTUBTgY\"\n+tableNotes: \"Download VPW Mod 1.1\"\n+tableVPSId: \"eKpfZo80\"\n+tagline: \"'Engage...'\"\n+testers:\n+  - \"Wraith\"\n+vpxChecksum: \"563DB3D531270582F1C79DC3865C522A\"\n+vpxVPSId: \"t6AxPZxsNk\""},
+          {"status": "M", "path": "external/vpx-startrektng/README.md", "diff": "diff --git a/external/vpx-startrektng/README.md b/external/vpx-startrektng/README.md\nindex 59303674..a0bb8ed3 100644\n--- a/external/vpx-startrektng/README.md\n+++ b/external/vpx-startrektng/README.md\n@@ -1,31 +1,60 @@\n-﻿# Star Trek The Next Generation (Williams 1993)\n+# Star Trek - The Next Generation (Williams 1993)\n \n-![Table Preview](../../images/vpx-startrektng.jpg)\n+![Table Preview](../../images/t6AxPZxsNk-preview.webp)\n \n-Authors: [VPinWorkshop](https://vpuniverse.com/profile/40692-vpinworkshop/)  \n-Version: 1.1\n-Download: [VP Forums](https://vpuniverse.com/files/file/13319-star-trek-the-next-generation-williams-1993-vpw-mod/)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n-Version: 2.0\n-Download: [VP Universe](https://vpuniverse.com/files/file/3084-star-trek-the-next-generation-williams-1993/)\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n-ROM\n+<br>\n \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=65)\n+**VPXS 4KP Testers:**\n+  - Wraith\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 38 |\n+---\n \n-## Instructions\n+<br>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+## ❇️ Available in the Wizard! 🪄✨\n \n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Star Trek - The Next Generation (Williams 1993)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"'Engage...'\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-startrektng/launcher.png"},
+          {"status": "M", "path": "external/vpx-startrektng/table.ini", "diff": "diff --git a/external/vpx-startrektng/table.ini b/external/vpx-startrektng/table.ini\nindex ceceb338..a28b25fa 100644\n--- a/external/vpx-startrektng/table.ini\n+++ b/external/vpx-startrektng/table.ini\n@@ -1,16 +1,16 @@\n [Player]\n BallTrailStrength = 1.000000\n OverrideTableEmissionScale = 0\n+ScreenPlayerY = 14.997301\n+ScreenPlayerZ = 90.048027\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.851815\n-ViewCabScaleY = 0.985890\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 11.893998\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.067235\n+ViewCabScaleY = 1.012871\n+ViewCabScaleZ = 0.874176\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 293.046967\n+ViewCabWindowBot = 83.953270\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-startrektng/README.md", "diff": "diff --git a/external/vpx-startrektng/README.md b/external/vpx-startrektng/README.md\nindex 4557f8f8..59303674 100644\n--- a/external/vpx-startrektng/README.md\n+++ b/external/vpx-startrektng/README.md\n@@ -1,4 +1,4 @@\n-# Star Trek The Next Generation (Williams 1993)\n+﻿# Star Trek The Next Generation (Williams 1993)\n \n ![Table Preview](../../images/vpx-startrektng.jpg)\n \n@@ -26,6 +26,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "013f69af2b69e407d1b79d8aa0339da5a479d54d",
+        "date": "2025-06-14 18:59:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated launcher images with points work\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-startrektng/launcher.png"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-startrektng/README.md", "diff": "diff --git a/external/vpx-startrektng/README.md b/external/vpx-startrektng/README.md\nindex c7c86ce2..4557f8f8 100644\n--- a/external/vpx-startrektng/README.md\n+++ b/external/vpx-startrektng/README.md\n@@ -25,7 +25,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-startrektng/README.md", "diff": "diff --git a/external/vpx-startrektng/README.md b/external/vpx-startrektng/README.md\nindex 6ab2c856..c7c86ce2 100644\n--- a/external/vpx-startrektng/README.md\n+++ b/external/vpx-startrektng/README.md\n@@ -24,3 +24,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 38 |\n \n ## Instructions\n+\n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-startrektng/README.md", "diff": "diff --git a/external/vpx-startrektng/README.md b/external/vpx-startrektng/README.md\nindex 39288f5b..6ab2c856 100644\n--- a/external/vpx-startrektng/README.md\n+++ b/external/vpx-startrektng/README.md\n@@ -24,7 +24,3 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 38 |\n \n ## Instructions\n-\n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-startrektng.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "ae0263ecdbc0f4d964fd9224fc4797b10372d479",
+        "date": "2025-04-01 11:26:24 +0100",
+        "author": "OminousOsie",
+        "message": "Updated table preview images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-startrektng/README.md", "diff": "diff --git a/external/vpx-startrektng/README.md b/external/vpx-startrektng/README.md\nindex b5cd4f7e..39288f5b 100644\n--- a/external/vpx-startrektng/README.md\n+++ b/external/vpx-startrektng/README.md\n@@ -1,6 +1,6 @@\n # Star Trek The Next Generation (Williams 1993)\n \n-![Table Preview](https://vpuniverse.com/screenshots/monthly_2023_02/sttng_cab.jpg.618f340c3d4aef7b2d312592b79804c7.jpg)\n+![Table Preview](../../images/vpx-startrektng.jpg)\n \n Authors: [VPinWorkshop](https://vpuniverse.com/profile/40692-vpinworkshop/)  \n Version: 1.1"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-startrektng/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-startrektng/pinmame/cfg/.gitkeep b/external/vpx-startrektng/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-startrektng/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-startrektng/pinmame/cfg/default.cfg b/external/vpx-startrektng/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-startrektng/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-startrektng/pinmame/cfg/sttng_l7.cfg", "diff": "diff --git a/external/vpx-startrektng/pinmame/cfg/sttng_l7.cfg b/external/vpx-startrektng/pinmame/cfg/sttng_l7.cfg\ndeleted file mode 100644\nindex 9453a64d..00000000\nBinary files a/external/vpx-startrektng/pinmame/cfg/sttng_l7.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-startrektng/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-startrektng/pinmame/ini/.gitkeep b/external/vpx-startrektng/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-startrektng/pinmame/ini/sttng_l7.ini", "diff": "diff --git a/external/vpx-startrektng/pinmame/ini/sttng_l7.ini b/external/vpx-startrektng/pinmame/ini/sttng_l7.ini\ndeleted file mode 100644\nindex 2b7d740e..00000000\n--- a/external/vpx-startrektng/pinmame/ini/sttng_l7.ini\n+++ /dev/null\n@@ -1,7 +0,0 @@\n-[settings]\n-rol=0\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-startrektng/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-startrektng/pinmame/nvram/.gitkeep b/external/vpx-startrektng/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-startrektng/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-startrektng/pinmame/roms/.gitkeep b/external/vpx-startrektng/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-startrektng/vpx-startrektng.xml", "diff": "diff --git a/external/vpx-startrektng/vpx-startrektng.xml b/external/vpx-startrektng/vpx-startrektng.xml\ndeleted file mode 100644\nindex be862c3f..00000000\n--- a/external/vpx-startrektng/vpx-startrektng.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Star Trek The Next Generation</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-startrektng/Star Trek The Next Generation (Williams 1993) VPW.ini->external/vpx-startrektng/table.ini", "diff": "diff --git a/external/vpx-startrektng/Star Trek The Next Generation (Williams 1993) VPW.ini b/external/vpx-startrektng/table.ini\nsimilarity index 100%\nrename from external/vpx-startrektng/Star Trek The Next Generation (Williams 1993) VPW.ini\nrename to external/vpx-startrektng/table.ini"},
+          {"status": "R-from", "path": "external/vpx-startrektng/pinmame/nvram/sttng_l7.nv->external/vpx-startrektng/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-startrektng/vpx-startrektng.png->external/vpx-startrektng/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-startrektng/Star Trek The Next Generation (Williams 1993) VPW.ini->external/vpx-startrektng/table.ini", "diff": "diff --git a/external/vpx-startrektng/Star Trek The Next Generation (Williams 1993) VPW.ini b/external/vpx-startrektng/table.ini\nsimilarity index 100%\nrename from external/vpx-startrektng/Star Trek The Next Generation (Williams 1993) VPW.ini\nrename to external/vpx-startrektng/table.ini"},
+          {"status": "R-to", "path": "external/vpx-startrektng/pinmame/nvram/sttng_l7.nv->external/vpx-startrektng/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-startrektng/vpx-startrektng.png->external/vpx-startrektng/launcher.png"}
+        ]
+      },
+      {
+        "hash": "6ca0dc65c4e9c8b2b06802b592806d73fb814850",
+        "date": "2024-08-06 10:14:52 -0500",
+        "author": "Mike",
+        "message": "mass update of readme's\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-startrektng/README.md", "diff": "diff --git a/external/vpx-startrektng/README.md b/external/vpx-startrektng/README.md\nindex 1f88f34f..b5cd4f7e 100644\n--- a/external/vpx-startrektng/README.md\n+++ b/external/vpx-startrektng/README.md\n@@ -16,9 +16,6 @@ ROM\n \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=65)\n \n-SHA: \n-MD5: \n-\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013"}
+        ]
+      },
+      {
+        "hash": "9ac62f42c616ec3bd69b0e34a621f90054a0c238",
+        "date": "2024-08-03 22:44:04 -0500",
+        "author": "Mike",
+        "message": "adding 12 vpx tables\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-startrektng/README.md", "diff": "diff --git a/external/vpx-startrektng/README.md b/external/vpx-startrektng/README.md\nnew file mode 100644\nindex 00000000..1f88f34f\n--- /dev/null\n+++ b/external/vpx-startrektng/README.md\n@@ -0,0 +1,33 @@\n+# Star Trek The Next Generation (Williams 1993)\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2023_02/sttng_cab.jpg.618f340c3d4aef7b2d312592b79804c7.jpg)\n+\n+Authors: [VPinWorkshop](https://vpuniverse.com/profile/40692-vpinworkshop/)  \n+Version: 1.1\n+Download: [VP Forums](https://vpuniverse.com/files/file/13319-star-trek-the-next-generation-williams-1993-vpw-mod/)\n+\n+DirectB2S\n+\n+Authors: [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n+Version: 2.0\n+Download: [VP Universe](https://vpuniverse.com/files/file/3084-star-trek-the-next-generation-williams-1993/)\n+\n+ROM\n+\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=65)\n+\n+SHA: \n+MD5: \n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 38 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-startrektng.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-startrektng/Star Trek The Next Generation (Williams 1993) VPW.ini", "diff": "diff --git a/external/vpx-startrektng/Star Trek The Next Generation (Williams 1993) VPW.ini b/external/vpx-startrektng/Star Trek The Next Generation (Williams 1993) VPW.ini\nnew file mode 100644\nindex 00000000..ceceb338\n--- /dev/null\n+++ b/external/vpx-startrektng/Star Trek The Next Generation (Williams 1993) VPW.ini\t\n@@ -0,0 +1,16 @@\n+[Player]\n+BallTrailStrength = 1.000000\n+OverrideTableEmissionScale = 0\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.851815\n+ViewCabScaleY = 0.985890\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 11.893998\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-startrektng/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-startrektng/pinmame/cfg/.gitkeep b/external/vpx-startrektng/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-startrektng/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-startrektng/pinmame/cfg/default.cfg b/external/vpx-startrektng/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-startrektng/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-startrektng/pinmame/cfg/sttng_l7.cfg", "diff": "diff --git a/external/vpx-startrektng/pinmame/cfg/sttng_l7.cfg b/external/vpx-startrektng/pinmame/cfg/sttng_l7.cfg\nnew file mode 100644\nindex 00000000..9453a64d\nBinary files /dev/null and b/external/vpx-startrektng/pinmame/cfg/sttng_l7.cfg differ"},
+          {"status": "A", "path": "external/vpx-startrektng/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-startrektng/pinmame/ini/.gitkeep b/external/vpx-startrektng/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-startrektng/pinmame/ini/sttng_l7.ini", "diff": "diff --git a/external/vpx-startrektng/pinmame/ini/sttng_l7.ini b/external/vpx-startrektng/pinmame/ini/sttng_l7.ini\nnew file mode 100644\nindex 00000000..2b7d740e\n--- /dev/null\n+++ b/external/vpx-startrektng/pinmame/ini/sttng_l7.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+rol=0\n+cheat=0\n+sound=1\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-startrektng/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-startrektng/pinmame/nvram/.gitkeep b/external/vpx-startrektng/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-startrektng/pinmame/nvram/sttng_l7.nv"},
+          {"status": "A", "path": "external/vpx-startrektng/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-startrektng/pinmame/roms/.gitkeep b/external/vpx-startrektng/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-startrektng/vpx-startrektng.png"},
+          {"status": "A", "path": "external/vpx-startrektng/vpx-startrektng.xml", "diff": "diff --git a/external/vpx-startrektng/vpx-startrektng.xml b/external/vpx-startrektng/vpx-startrektng.xml\nnew file mode 100644\nindex 00000000..be862c3f\n--- /dev/null\n+++ b/external/vpx-startrektng/vpx-startrektng.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Star Trek The Next Generation</name>\n+</root>"}
+        ]
+      }
+    ]
+}

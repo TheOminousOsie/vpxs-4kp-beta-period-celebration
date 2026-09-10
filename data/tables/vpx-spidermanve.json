@@ -1,0 +1,352 @@
+{
+    "commit_count": 36,
+    "commits": [
+      {
+        "hash": "beae2cad40fd0252e769870e3239f7136b475810",
+        "date": "2026-09-06 20:26:21 -0400",
+        "author": "Wes Smith",
+        "message": "Barb Wire wizard and art updates (#2188)\n\n* art updates\n\n* art updates\n\n* Create dmdframe.png\n\n* changes + art\n\n* SFW Backglass\n\n* ini updates",
+        "files": [
+          {"status": "A", "path": "external/vpx-spidermanve/dmdframe.png"},
+          {"status": "M", "path": "external/vpx-spidermanve/launcher.png"},
+          {"status": "M", "path": "external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/table.ini b/external/vpx-spidermanve/table.ini\nindex 95a069ad..cbcc67b5 100644\n--- a/external/vpx-spidermanve/table.ini\n+++ b/external/vpx-spidermanve/table.ini\n@@ -27,3 +27,6 @@ Mech Volume = 1.000000\n Ramp Volume = 1.000000\n Ball Roll Volume = 1.000000\n Staged Flippers = 0.000000\n+\n+[Standalone]\n+DMDFrame = 1\n"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 3a143da3..4d81e5f4 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"06fe139b4f6fa05eca9706a5b95526e9\"\n-  - \"5F8CC8795FAE7CE4B3A9403E7720B32E\"\n+backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n # yamllint disable-line rule:line-length\n backglassUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=15011\"\n@@ -16,8 +13,5 @@ testers:\n   - \"Bla1ze\"\n   - \"Sscorpio\"\n vpxVPSId: \"A_CodyKoS7\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"47ebcf7c39ddcbedccaa33198ee0a121\"\n-  - \"1A0F62EF49D948B3510F7B4DBECD0479\"\n+vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n tableNotes: \"Version 2.1\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 4d81e5f4..3a143da3 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"06fe139b4f6fa05eca9706a5b95526e9\"\n+  - \"5F8CC8795FAE7CE4B3A9403E7720B32E\"\n backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n # yamllint disable-line rule:line-length\n backglassUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=15011\"\n@@ -13,5 +16,8 @@ testers:\n   - \"Bla1ze\"\n   - \"Sscorpio\"\n vpxVPSId: \"A_CodyKoS7\"\n-vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"47ebcf7c39ddcbedccaa33198ee0a121\"\n+  - \"1A0F62EF49D948B3510F7B4DBECD0479\"\n tableNotes: \"Version 2.1\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/table.ini b/external/vpx-spidermanve/table.ini\nindex 30f780db..95a069ad 100644\n--- a/external/vpx-spidermanve/table.ini\n+++ b/external/vpx-spidermanve/table.ini\n@@ -1,26 +1,25 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.300211\n-ViewCabScaleY = 1.020362\n+ViewCabScaleX = 1.176447\n+ViewCabScaleY = 1.000122\n ViewCabScaleZ = 0.996211\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 3.959099\n-ViewCabVOfs = 2.200094\n-ViewCabWindowTop = 333.260742\n-ViewCabWindowBot = 138.340256\n+ViewCabHOfs = 0.038400\n+ViewCabVOfs = 0.020296\n+ViewCabWindowTop = 335.455841\n+ViewCabWindowBot = 54.520267\n \n [Player]\n JoyAddCredit2Key = 1\n-ScreenPlayerZ = 100.012512\n+ScreenPlayerZ = 90.010628\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 1.000000\n-MaxTexDimension = 3072\n-FXAA = 1\n-ScreenPlayerX = -0.030400\n+ScreenPlayerX = 0.026700\n+ScreenPlayerY = 14.957751\n \n [TableOption]\n Cabinet Mode = 1.000000\n@@ -28,7 +27,3 @@ Mech Volume = 1.000000\n Ramp Volume = 1.000000\n Ball Roll Volume = 1.000000\n Staged Flippers = 0.000000\n-\n-[Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.416666"},
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 89158319..4d81e5f4 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -3,7 +3,7 @@ backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n # yamllint disable-line rule:line-length\n backglassUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=15011\"\n-fps: 40\n+fps: 60\n romVPSId: \"AWiQu3VK\"\n romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n romNotes: \"Download - smanve_101.zip\"\n@@ -15,5 +15,3 @@ testers:\n vpxVPSId: \"A_CodyKoS7\"\n vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n tableNotes: \"Version 2.1\"\n-applyFixes:\n-  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "af511f8b962ddac07d8147614d02c04cb9d213fc",
+        "date": "2025-11-04 09:38:41 -0500",
+        "author": "evilwraith",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 587a2da6..89158319 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,7 +1,8 @@\n ---\n-backglassVPSId: \"JZN1nlsWkY\"\n backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n+# yamllint disable-line rule:line-length\n+backglassUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=15011\"\n fps: 40\n romVPSId: \"AWiQu3VK\"\n romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n"}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/README.md", "diff": "diff --git a/external/vpx-spidermanve/README.md b/external/vpx-spidermanve/README.md\nindex c91585c1..23b94f38 100644\n--- a/external/vpx-spidermanve/README.md\n+++ b/external/vpx-spidermanve/README.md\n@@ -50,7 +50,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n <br>"}
+        ]
+      },
+      {
+        "hash": "43e06a78576a8d7069d79fee2da8885f7e817af7",
+        "date": "2025-04-30 11:28:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed BOM\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/README.md", "diff": "diff --git a/external/vpx-spidermanve/README.md b/external/vpx-spidermanve/README.md\nindex cfa6eafe..c91585c1 100644\n--- a/external/vpx-spidermanve/README.md\n+++ b/external/vpx-spidermanve/README.md\n@@ -1,4 +1,4 @@\n-﻿﻿# Spider-Man (Vault Edition) (Stern 2016)\n+﻿# Spider-Man (Vault Edition) (Stern 2016)\n \n ![Table Preview](../../images/vpx-spidermanve.png)\n "}
+        ]
+      },
+      {
+        "hash": "5424a8122d5eb54371b2435888f2d337df05dc43",
+        "date": "2025-04-30 11:23:31 +0100",
+        "author": "OminousOsie",
+        "message": "Added lloydbraun to the wiz team\n\nAdded lloydbraun to the wiz team\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/README.md", "diff": "diff --git a/external/vpx-spidermanve/README.md b/external/vpx-spidermanve/README.md\nindex 9f63fe0a..cfa6eafe 100644\n--- a/external/vpx-spidermanve/README.md\n+++ b/external/vpx-spidermanve/README.md\n@@ -47,7 +47,7 @@ __*We hope you enjoy!!*__\n \n *The VPXS 4KP Wizard team:*\n <pre>\n-- n-i-x            - Mox\n+- n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n - mrandromeda      - SScorpio         - TechZombie"}
+        ]
+      },
+      {
+        "hash": "01c7e252332b06a5a09e3bfaa60664142a54042f",
+        "date": "2025-04-16 10:44:26 +0100",
+        "author": "OminousOsie",
+        "message": "Added the full team to the readme\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/README.md", "diff": "diff --git a/external/vpx-spidermanve/README.md b/external/vpx-spidermanve/README.md\nindex 108463a3..9f63fe0a 100644\n--- a/external/vpx-spidermanve/README.md\n+++ b/external/vpx-spidermanve/README.md\n@@ -1,4 +1,4 @@\n-﻿# Spider-Man (Vault Edition) (Stern 2016)\n+﻿﻿# Spider-Man (Vault Edition) (Stern 2016)\n \n ![Table Preview](../../images/vpx-spidermanve.png)\n \n@@ -41,7 +41,17 @@ This table is available through the Table Manager Wizard, which makes installati\n \n Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n <br>\n <br>"}
+        ]
+      },
+      {
+        "hash": "6c2a220adac96b5ed5b84500eba9d819bca0cc87",
+        "date": "2025-04-08 15:22:54 +0100",
+        "author": "OminousOsie",
+        "message": "Italic the tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/README.md", "diff": "diff --git a/external/vpx-spidermanve/README.md b/external/vpx-spidermanve/README.md\nindex ea339cdd..108463a3 100644\n--- a/external/vpx-spidermanve/README.md\n+++ b/external/vpx-spidermanve/README.md\n@@ -35,7 +35,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Spider-Man (Vault Edition)`**\n 5.  Follow the on-screen instructions to download and upload the required files\n-6. \"I'll never look at a sandcastle the same way again!\"\n+6. *\"I'll never look at a sandcastle the same way again!\"*\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "ec024f091d11b71aef0144fb31e7d1b020df9223",
+        "date": "2025-04-08 15:09:40 +0100",
+        "author": "OminousOsie",
+        "message": "Update to readmes to readd tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/README.md", "diff": "diff --git a/external/vpx-spidermanve/README.md b/external/vpx-spidermanve/README.md\nindex 55db17d4..ea339cdd 100644\n--- a/external/vpx-spidermanve/README.md\n+++ b/external/vpx-spidermanve/README.md\n@@ -1,4 +1,4 @@\n-# Spider-Man (Vault Edition) (Stern 2016)\n+﻿# Spider-Man (Vault Edition) (Stern 2016)\n \n ![Table Preview](../../images/vpx-spidermanve.png)\n \n@@ -35,6 +35,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Spider-Man (Vault Edition)`**\n 5.  Follow the on-screen instructions to download and upload the required files\n+6. \"I'll never look at a sandcastle the same way again!\"\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "3ea93065f85184f7f51db91cfab3789ae38a899e",
+        "date": "2025-04-08 14:38:42 +0100",
+        "author": "OminousOsie",
+        "message": "Finished readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/README.md", "diff": "diff --git a/external/vpx-spidermanve/README.md b/external/vpx-spidermanve/README.md\nindex a3d82a1f..55db17d4 100644\n--- a/external/vpx-spidermanve/README.md\n+++ b/external/vpx-spidermanve/README.md\n@@ -2,34 +2,48 @@\n \n ![Table Preview](../../images/vpx-spidermanve.png)\n \n----\n-\n-## Files\n-| File Type | Link | Version | Author | \n-|-----------|--------|----------|--------------|\n-| **VPX** | [VPUniverse](https://vpuniverse.com/files/file/6530-spider-man-vault-edition-siggis-mod-stern-2016-vpw-mod/) | 2.1 | [VPinWorkshop](https://vpuniverse.com/profile/40692-vpinworkshop/) |\n-| **B2S** | [VPUniverse](https://vpuniverse.com/files/file/13305-spider-man-stern-2007-alt-b2s-full-dmd/) | 1.5 |[hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n-| **DMD** | Included | - | - |\n-| **ROM** | [VPUniverse](https://vpuniverse.com/files/file/4202-spider-man-vault-edition-v101/) | smanve_101 | [stefanaustria](https://vpuniverse.com/profile/5730-stefanaustria/) |\n-\n-**Tested by:** [Bla1ze]\n-\n----\n+<br>\n \n-## Status \n-**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n+## *️⃣  Table Statistics\n \n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n \n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Bla1ze\n+  - Sscorpio\n+\n+<br>\n+\n ---\n \n-## Instructions\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Spider-Man (Vault Edition)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+__*We hope you enjoy!!   - the VPXS 4KP team!*__\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to `vpx-spidermanve.elf`\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-spidermanve.elf`\n-- Make sure `(.vpx)` `(.direct2b2s)` and `(.ini)` are all named the same.\n-- Rom file (smanve_101) stays in zip folder, place zip file in `vpx-spidermanvw/pinmame/roms`\n-- \"I'll never look at a sandcastle the same way again!\"\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "eca3746200de70ee4547742a9167e5125d6b705e",
+        "date": "2025-04-07 16:38:19 +0100",
+        "author": "OminousOsie",
+        "message": "Update table.yml",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 6d53058e..587a2da6 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,18 +1,18 @@\n ---\n-backglassVPSId: 'JZN1nlsWkY'\n-backglassChecksum: '06fe139b4f6fa05eca9706a5b95526e9'\n+backglassVPSId: \"JZN1nlsWkY\"\n+backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n fps: 40\n-romVPSId: 'AWiQu3VK'\n-romChecksum: '676b70c9a67ceca4a607e9a076358e80'\n-romNotes: 'Download - smanve_101.zip'\n-tableVPSId: '9cAcDFA8'\n+romVPSId: \"AWiQu3VK\"\n+romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n+romNotes: \"Download - smanve_101.zip\"\n+tableVPSId: \"9cAcDFA8\"\n tagline: \"I'll never look at a sandcastle the same way again!\"\n testers:\n-  - 'Bla1ze'\n-  - 'Sscorpio'\n-vpxVPSId: 'A_CodyKoS7'\n-vpxChecksum: '47ebcf7c39ddcbedccaa33198ee0a121'\n-tableNotes: 'Version 2.1'\n+  - \"Bla1ze\"\n+  - \"Sscorpio\"\n+vpxVPSId: \"A_CodyKoS7\"\n+vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n+tableNotes: \"Version 2.1\"\n applyFixes:\n-  - 'bass'\n+  - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "3953cd586db9815b870cd76141aeb1fd8c037296",
+        "date": "2025-04-06 21:26:40 -0300",
+        "author": "Bla1ze",
+        "message": "Update launcher.png\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/launcher.png"}
+        ]
+      },
+      {
+        "hash": "5219f7cf2871459b52390eb7736ada33628a07b5",
+        "date": "2025-04-05 23:36:57 +0100",
+        "author": "OminousOsie",
+        "message": "Final updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "5607a804ffdf1b7aedccdb5c1ef8fac7ea5dd5e6",
+        "date": "2025-04-01 09:52:33 +0100",
+        "author": "OminousOsie",
+        "message": "Updated images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/README.md", "diff": "diff --git a/external/vpx-spidermanve/README.md b/external/vpx-spidermanve/README.md\nindex ed10ecd6..a3d82a1f 100644\n--- a/external/vpx-spidermanve/README.md\n+++ b/external/vpx-spidermanve/README.md\n@@ -1,35 +1,35 @@\n-# Spider-Man (Vault Edition) (Stern 2016)\n-\n-![Table Preview](https://raw.githubusercontent.com/Bla1ze/vpx-images/refs/heads/main/vpx-spidermanve.png)\n-\n----\n-\n-## Files\n-| File Type | Link | Version | Author | \n-|-----------|--------|----------|--------------|\n-| **VPX** | [VPUniverse](https://vpuniverse.com/files/file/6530-spider-man-vault-edition-siggis-mod-stern-2016-vpw-mod/) | 2.1 | [VPinWorkshop](https://vpuniverse.com/profile/40692-vpinworkshop/) |\n-| **B2S** | [VPUniverse](https://vpuniverse.com/files/file/13305-spider-man-stern-2007-alt-b2s-full-dmd/) | 1.5 |[hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n-| **DMD** | Included | - | - |\n-| **ROM** | [VPUniverse](https://vpuniverse.com/files/file/4202-spider-man-vault-edition-v101/) | smanve_101 | [stefanaustria](https://vpuniverse.com/profile/5730-stefanaustria/) |\n-\n-**Tested by:** [Bla1ze]\n-\n----\n-\n-## Status \n-**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n-\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n-\n----\n-\n-## Instructions\n-\n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to `vpx-spidermanve.elf`\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-spidermanve.elf`\n-- Make sure `(.vpx)` `(.direct2b2s)` and `(.ini)` are all named the same.\n-- Rom file (smanve_101) stays in zip folder, place zip file in `vpx-spidermanvw/pinmame/roms`\n-- \"I'll never look at a sandcastle the same way again!\"\n+# Spider-Man (Vault Edition) (Stern 2016)\n+\n+![Table Preview](../../images/vpx-spidermanve.png)\n+\n+---\n+\n+## Files\n+| File Type | Link | Version | Author | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [VPUniverse](https://vpuniverse.com/files/file/6530-spider-man-vault-edition-siggis-mod-stern-2016-vpw-mod/) | 2.1 | [VPinWorkshop](https://vpuniverse.com/profile/40692-vpinworkshop/) |\n+| **B2S** | [VPUniverse](https://vpuniverse.com/files/file/13305-spider-man-stern-2007-alt-b2s-full-dmd/) | 1.5 |[hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| **DMD** | Included | - | - |\n+| **ROM** | [VPUniverse](https://vpuniverse.com/files/file/4202-spider-man-vault-edition-v101/) | smanve_101 | [stefanaustria](https://vpuniverse.com/profile/5730-stefanaustria/) |\n+\n+**Tested by:** [Bla1ze]\n+\n+---\n+\n+## Status \n+**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n+\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n+\n+---\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to `vpx-spidermanve.elf`\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-spidermanve.elf`\n+- Make sure `(.vpx)` `(.direct2b2s)` and `(.ini)` are all named the same.\n+- Rom file (smanve_101) stays in zip folder, place zip file in `vpx-spidermanvw/pinmame/roms`\n+- \"I'll never look at a sandcastle the same way again!\""}
+        ]
+      },
+      {
+        "hash": "7cb3f58a5a59f6e4d2ee1df61b64592600285e5d",
+        "date": "2025-03-31 23:04:21 -0500",
+        "author": "Silentkat4000",
+        "message": "free play updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "9fa29557e25aa47707a2ee0291e0dfabd01b030a",
+        "date": "2025-03-30 20:09:39 -0500",
+        "author": "MoxAssault",
+        "message": "Merge remote-tracking branch 'upstream/main'\n",
+        "files": [
+          {"status": "MM", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --cc external/vpx-spidermanve/table.yml\nindex 76b662eb,587a2da6..6d53058e\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@@ -1,15 -1,18 +1,18 @@@\n  ---\n- backglassVPSId: \"5zno3zre\"\n- backglassChecksum: \"ef65f0397200a125b3a57db35227d35e\"\n- backglassNotes: \"Download - Spider-Man (Stern 2007) alt full dmd.zip\"\n -backglassVPSId: \"JZN1nlsWkY\"\n -backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n++backglassVPSId: 'JZN1nlsWkY'\n++backglassChecksum: '06fe139b4f6fa05eca9706a5b95526e9'\n+ backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n  fps: 40\n--romVPSId: \"AWiQu3VK\"\n--romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n--romNotes: \"Download - smanve_101.zip\"\n--tableVPSId: \"9cAcDFA8\"\n++romVPSId: 'AWiQu3VK'\n++romChecksum: '676b70c9a67ceca4a607e9a076358e80'\n++romNotes: 'Download - smanve_101.zip'\n++tableVPSId: '9cAcDFA8'\n  tagline: \"I'll never look at a sandcastle the same way again!\"\n  testers:\n--  - \"Bla1ze\"\n -  - \"Sscorpio\"\n--vpxVPSId: \"A_CodyKoS7\"\n--vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n--tableNotes: \"Version 2.1\"\n++  - 'Bla1ze'\n++  - 'Sscorpio'\n++vpxVPSId: 'A_CodyKoS7'\n++vpxChecksum: '47ebcf7c39ddcbedccaa33198ee0a121'\n++tableNotes: 'Version 2.1'\n+ applyFixes:\n -  - \"bass\"\n++  - 'bass'"}
+        ]
+      },
+      {
+        "hash": "f4fd3d2eaf622c9b82a605a04be7c6b53cbd84ff",
+        "date": "2025-03-28 10:21:52 +0000",
+        "author": "OminousOsie",
+        "message": "Added wizard yml owners to testers list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 92e2da37..587a2da6 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -10,6 +10,7 @@ tableVPSId: \"9cAcDFA8\"\n tagline: \"I'll never look at a sandcastle the same way again!\"\n testers:\n   - \"Bla1ze\"\n+  - \"Sscorpio\"\n vpxVPSId: \"A_CodyKoS7\"\n vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n tableNotes: \"Version 2.1\""}
+        ]
+      },
+      {
+        "hash": "ef37bd9be64533051bd40539a4f2dec21f4e778d",
+        "date": "2025-03-26 12:18:13 +0000",
+        "author": "OminousOsie",
+        "message": "Fixed spiderman ini\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/table.ini b/external/vpx-spidermanve/table.ini\nindex f876f472..30f780db 100644\n--- a/external/vpx-spidermanve/table.ini\n+++ b/external/vpx-spidermanve/table.ini\n@@ -31,4 +31,4 @@ Staged Flippers = 0.000000\n \n [Standalone]\n WindowRenderMode = 0\n-BackBufferScale = 0.40\n+BackBufferScale = 0.416666\n"}
+        ]
+      },
+      {
+        "hash": "c7ba3c8db1dd8c64740452342723c35098a60018",
+        "date": "2025-03-26 00:14:01 +0000",
+        "author": "OminousOsie",
+        "message": "Updated backglass\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 56246c28..92e2da37 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,7 +1,7 @@\n ---\n-backglassVPSId: \"5zno3zre\"\n-backglassChecksum: \"ef65f0397200a125b3a57db35227d35e\"\n-backglassNotes: \"Download - Spider-Man (Stern 2007) alt full dmd.zip\"\n+backglassVPSId: \"JZN1nlsWkY\"\n+backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n+backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n fps: 40\n romVPSId: \"AWiQu3VK\"\n romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n"}
+        ]
+      },
+      {
+        "hash": "b61d986f3ee124f9b3350d06ed6570f2f3cb756b",
+        "date": "2025-03-25 21:33:44 +0000",
+        "author": "OminousOsie",
+        "message": "Updated using moxs files\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/table.ini b/external/vpx-spidermanve/table.ini\nindex 4caea1d2..f876f472 100644\n--- a/external/vpx-spidermanve/table.ini\n+++ b/external/vpx-spidermanve/table.ini\n@@ -1,17 +1,17 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.220417\n-ViewCabScaleY = 1.029570\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.300211\n+ViewCabScaleY = 1.020362\n+ViewCabScaleZ = 0.996211\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.212200\n-ViewCabVOfs = -9.836502\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 91.873215\n+ViewCabHOfs = 3.959099\n+ViewCabVOfs = 2.200094\n+ViewCabWindowTop = 333.260742\n+ViewCabWindowBot = 138.340256\n \n [Player]\n JoyAddCredit2Key = 1\n-ScreenPlayerZ = 103.346054\n+ScreenPlayerZ = 100.012512\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n@@ -20,6 +20,7 @@ DynamicDayNight = 0\n EmissionScale = 1.000000\n MaxTexDimension = 3072\n FXAA = 1\n+ScreenPlayerX = -0.030400\n \n [TableOption]\n Cabinet Mode = 1.000000"},
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 4da242c2..56246c28 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,10 +1,11 @@\n ---\n-backglassVPSId: \"JZN1nlsWkY\"\n-backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n-backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n+backglassVPSId: \"5zno3zre\"\n+backglassChecksum: \"ef65f0397200a125b3a57db35227d35e\"\n+backglassNotes: \"Download - Spider-Man (Stern 2007) alt full dmd.zip\"\n fps: 40\n romVPSId: \"AWiQu3VK\"\n romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n+romNotes: \"Download - smanve_101.zip\"\n tableVPSId: \"9cAcDFA8\"\n tagline: \"I'll never look at a sandcastle the same way again!\"\n testers:"}
+        ]
+      },
+      {
+        "hash": "be97bbdca9a0af48c7cadd27dc9f72ba32efd750",
+        "date": "2025-03-25 21:11:28 +0000",
+        "author": "OminousOsie",
+        "message": "Added bass fixes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 09b972a1..4da242c2 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -12,3 +12,5 @@ testers:\n vpxVPSId: \"A_CodyKoS7\"\n vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n tableNotes: \"Version 2.1\"\n+applyFixes:\n+  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "a6b597ea3b628b5115af9d31c296d0ad199a9236",
+        "date": "2025-03-25 21:09:37 +0000",
+        "author": "OminousOsie",
+        "message": "Updated bbb, mousin, and spiderman\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/launcher.png"},
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 3b007daa..09b972a1 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,7 +1,7 @@\n ---\n-backglassVPSId: \"5zno3zre\"\n-backglassChecksum: \"ef65f0397200a125b3a57db35227d35e\"\n-backglassNotes: \"Version 1.5\"\n+backglassVPSId: \"JZN1nlsWkY\"\n+backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n+backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n fps: 40\n romVPSId: \"AWiQu3VK\"\n romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n"}
+        ]
+      },
+      {
+        "hash": "d14dd907a2aa6661a0033936d39abfacef43337e",
+        "date": "2025-03-25 16:19:00 -0500",
+        "author": "MoxAssault",
+        "message": "INI and YML Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/table.ini b/external/vpx-spidermanve/table.ini\nindex 4caea1d2..f876f472 100644\n--- a/external/vpx-spidermanve/table.ini\n+++ b/external/vpx-spidermanve/table.ini\n@@ -1,17 +1,17 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.220417\n-ViewCabScaleY = 1.029570\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.300211\n+ViewCabScaleY = 1.020362\n+ViewCabScaleZ = 0.996211\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.212200\n-ViewCabVOfs = -9.836502\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 91.873215\n+ViewCabHOfs = 3.959099\n+ViewCabVOfs = 2.200094\n+ViewCabWindowTop = 333.260742\n+ViewCabWindowBot = 138.340256\n \n [Player]\n JoyAddCredit2Key = 1\n-ScreenPlayerZ = 103.346054\n+ScreenPlayerZ = 100.012512\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n@@ -20,6 +20,7 @@ DynamicDayNight = 0\n EmissionScale = 1.000000\n MaxTexDimension = 3072\n FXAA = 1\n+ScreenPlayerX = -0.030400\n \n [TableOption]\n Cabinet Mode = 1.000000"},
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 3b007daa..76b662eb 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,10 +1,11 @@\n ---\n backglassVPSId: \"5zno3zre\"\n backglassChecksum: \"ef65f0397200a125b3a57db35227d35e\"\n-backglassNotes: \"Version 1.5\"\n+backglassNotes: \"Download - Spider-Man (Stern 2007) alt full dmd.zip\"\n fps: 40\n romVPSId: \"AWiQu3VK\"\n romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n+romNotes: \"Download - smanve_101.zip\"\n tableVPSId: \"9cAcDFA8\"\n tagline: \"I'll never look at a sandcastle the same way again!\"\n testers:"}
+        ]
+      },
+      {
+        "hash": "266821b169409b0dc1c37f85941fc2b36d39254d",
+        "date": "2025-03-24 01:26:39 +0000",
+        "author": "OminousOsie",
+        "message": "yml formatting\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 6474dca3..3b007daa 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -11,4 +11,4 @@ testers:\n   - \"Bla1ze\"\n vpxVPSId: \"A_CodyKoS7\"\n vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n-tableNotes: \"Version 2.1\"\n\\ No newline at end of file\n+tableNotes: \"Version 2.1\""}
+        ]
+      },
+      {
+        "hash": "f97b737805c3710c4206ec673c16ae88e53e1f52",
+        "date": "2025-03-24 01:18:39 +0000",
+        "author": "OminousOsie",
+        "message": "Added margin to all testers in ymls\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 8f59c849..6474dca3 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -8,7 +8,7 @@ romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n tableVPSId: \"9cAcDFA8\"\n tagline: \"I'll never look at a sandcastle the same way again!\"\n testers:\n-- \"Bla1ze\"\n+  - \"Bla1ze\"\n vpxVPSId: \"A_CodyKoS7\"\n vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n tableNotes: \"Version 2.1\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "5bd43b08328f822e69d3325fe5ca4afe65a14c49",
+        "date": "2025-03-23 11:40:21 -0400",
+        "author": "SScorpio",
+        "message": "Coin and other fixes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/table.ini b/external/vpx-spidermanve/table.ini\nindex d1b5c3a2..4caea1d2 100644\n--- a/external/vpx-spidermanve/table.ini\n+++ b/external/vpx-spidermanve/table.ini\n@@ -10,6 +10,7 @@ ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 91.873215\n \n [Player]\n+JoyAddCredit2Key = 1\n ScreenPlayerZ = 103.346054\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n"}
+        ]
+      },
+      {
+        "hash": "ebece910b305ae25ec95afb6ace1a824e7ff5d08",
+        "date": "2025-03-21 16:21:46 -0400",
+        "author": "SScorpio",
+        "message": "Quoted strings\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex aba89fcb..8f59c849 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,14 +1,14 @@\n ---\n-backglassVPSId: 5zno3zre\n-backglassChecksum: ef65f0397200a125b3a57db35227d35e\n-backglassNotes: Version 1.5\n+backglassVPSId: \"5zno3zre\"\n+backglassChecksum: \"ef65f0397200a125b3a57db35227d35e\"\n+backglassNotes: \"Version 1.5\"\n fps: 40\n-romVPSId: AWiQu3VK\n-romChecksum: 676b70c9a67ceca4a607e9a076358e80\n-tableVPSId: 9cAcDFA8\n+romVPSId: \"AWiQu3VK\"\n+romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n+tableVPSId: \"9cAcDFA8\"\n tagline: \"I'll never look at a sandcastle the same way again!\"\n testers:\n-- Bla1ze\n+- \"Bla1ze\"\n vpxVPSId: \"A_CodyKoS7\"\n-vpxChecksum: 47ebcf7c39ddcbedccaa33198ee0a121\n-tableNotes: Version 2.1\n\\ No newline at end of file\n+vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n+tableNotes: \"Version 2.1\"\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "302f69a34ea0056f67724538dca41b680ff1c0a1",
+        "date": "2025-03-20 20:01:00 -0400",
+        "author": "SScorpio",
+        "message": "Rest of the first batch of table.yml files\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex af26223b..aba89fcb 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,8 +1,14 @@\n ---\n-tableVPSId: 9cAcDFA8\n-vpxVPSId: A_CodyKoS7\n backglassVPSId: 5zno3zre\n-romVPSId: AWiQu3VK\n+backglassChecksum: ef65f0397200a125b3a57db35227d35e\n+backglassNotes: Version 1.5\n fps: 40\n+romVPSId: AWiQu3VK\n+romChecksum: 676b70c9a67ceca4a607e9a076358e80\n+tableVPSId: 9cAcDFA8\n+tagline: \"I'll never look at a sandcastle the same way again!\"\n testers:\n-- Bla1ze\n\\ No newline at end of file\n+- Bla1ze\n+vpxVPSId: \"A_CodyKoS7\"\n+vpxChecksum: 47ebcf7c39ddcbedccaa33198ee0a121\n+tableNotes: Version 2.1\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "fe52869c09033a7a3cd48cda22ba5e5759cedb6f",
+        "date": "2025-03-18 22:42:30 -0400",
+        "author": "n-i-x",
+        "message": "Revert \"Revert \"Merge branch 'main' of https://github.com/Old-Cyrus/vpx-standalone-alp4k\"\"\n\nThis reverts commit 8e04ea31d019eb4611263dcd8a93eb5c74315f7f.\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/table.ini b/external/vpx-spidermanve/table.ini\nindex 86ce51a7..d1b5c3a2 100644\n--- a/external/vpx-spidermanve/table.ini\n+++ b/external/vpx-spidermanve/table.ini\n@@ -25,4 +25,8 @@ Cabinet Mode = 1.000000\n Mech Volume = 1.000000\n Ramp Volume = 1.000000\n Ball Roll Volume = 1.000000\n-Staged Flippers = 0.000000\n\\ No newline at end of file\n+Staged Flippers = 0.000000\n+\n+[Standalone]\n+WindowRenderMode = 0\n+BackBufferScale = 0.40"}
+        ]
+      },
+      {
+        "hash": "8e04ea31d019eb4611263dcd8a93eb5c74315f7f",
+        "date": "2025-03-17 19:56:26 -0500",
+        "author": "Old-Cyrus",
+        "message": "Revert \"Merge branch 'main' of https://github.com/Old-Cyrus/vpx-standalone-alp4k\"\n\nThis reverts commit 796d653482ab379c8564136fae32e2e2de1dac16, reversing\nchanges made to d1461b1698af300bfb14cb4eabbe740e910d8a90.\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/table.ini b/external/vpx-spidermanve/table.ini\nindex d1b5c3a2..86ce51a7 100644\n--- a/external/vpx-spidermanve/table.ini\n+++ b/external/vpx-spidermanve/table.ini\n@@ -25,8 +25,4 @@ Cabinet Mode = 1.000000\n Mech Volume = 1.000000\n Ramp Volume = 1.000000\n Ball Roll Volume = 1.000000\n-Staged Flippers = 0.000000\n-\n-[Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.40\n+Staged Flippers = 0.000000\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "6d7e8b1caf82c7a822980527c8d8dc647155f61b",
+        "date": "2025-03-14 01:23:05 -0300",
+        "author": "Bla1ze",
+        "message": "Update table.ini",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/table.ini b/external/vpx-spidermanve/table.ini\nindex 86ce51a7..d1b5c3a2 100644\n--- a/external/vpx-spidermanve/table.ini\n+++ b/external/vpx-spidermanve/table.ini\n@@ -25,4 +25,8 @@ Cabinet Mode = 1.000000\n Mech Volume = 1.000000\n Ramp Volume = 1.000000\n Ball Roll Volume = 1.000000\n-Staged Flippers = 0.000000\n\\ No newline at end of file\n+Staged Flippers = 0.000000\n+\n+[Standalone]\n+WindowRenderMode = 0\n+BackBufferScale = 0.40\n"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-spidermanve/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-spidermanve/pinmame/cfg/default.cfg b/external/vpx-spidermanve/pinmame/cfg/default.cfg\ndeleted file mode 100755\nindex de34d1c4..00000000\nBinary files a/external/vpx-spidermanve/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-spidermanve/pinmame/cfg/smanve_101.cfg", "diff": "diff --git a/external/vpx-spidermanve/pinmame/cfg/smanve_101.cfg b/external/vpx-spidermanve/pinmame/cfg/smanve_101.cfg\ndeleted file mode 100755\nindex 020aab41..00000000\nBinary files a/external/vpx-spidermanve/pinmame/cfg/smanve_101.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-spidermanve/pinmame/ini/smanve_101.ini", "diff": "diff --git a/external/vpx-spidermanve/pinmame/ini/smanve_101.ini b/external/vpx-spidermanve/pinmame/ini/smanve_101.ini\ndeleted file mode 100755\nindex 2b7d740e..00000000\n--- a/external/vpx-spidermanve/pinmame/ini/smanve_101.ini\n+++ /dev/null\n@@ -1,7 +0,0 @@\n-[settings]\n-rol=0\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-spidermanve/vpx-spidermanve.xml", "diff": "diff --git a/external/vpx-spidermanve/vpx-spidermanve.xml b/external/vpx-spidermanve/vpx-spidermanve.xml\ndeleted file mode 100755\nindex 8b89bd75..00000000\n--- a/external/vpx-spidermanve/vpx-spidermanve.xml\n+++ /dev/null\n@@ -1,4 +0,0 @@\n-<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n-<root>\n-    <name>Spider-Man (Vault Edition)</name>\n-</root>\n\\ No newline at end of file"},
+          {"status": "R-from", "path": "external/vpx-spidermanve/Spider-Man Classic (Stern 2007) VPW Mod 2.1.ini->external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/Spider-Man Classic (Stern 2007) VPW Mod 2.1.ini b/external/vpx-spidermanve/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-spidermanve/Spider-Man Classic (Stern 2007) VPW Mod 2.1.ini\nrename to external/vpx-spidermanve/table.ini"},
+          {"status": "R-from", "path": "external/vpx-spidermanve/pinmame/nvram/smanve_101.nv->external/vpx-spidermanve/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-spidermanve/vpx-spidermanve.png->external/vpx-spidermanve/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-spidermanve/Spider-Man Classic (Stern 2007) VPW Mod 2.1.ini->external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/Spider-Man Classic (Stern 2007) VPW Mod 2.1.ini b/external/vpx-spidermanve/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-spidermanve/Spider-Man Classic (Stern 2007) VPW Mod 2.1.ini\nrename to external/vpx-spidermanve/table.ini"},
+          {"status": "R-to", "path": "external/vpx-spidermanve/pinmame/nvram/smanve_101.nv->external/vpx-spidermanve/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-spidermanve/vpx-spidermanve.png->external/vpx-spidermanve/launcher.png"}
+        ]
+      },
+      {
+        "hash": "13dc61830b67e28dd9cd1c2c0404fff0447d7978",
+        "date": "2025-02-27 03:09:22 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-spidermanve",
+        "files": [
+          {"status": "M", "path": "external/vpx-spidermanve/README.md", "diff": "diff --git a/external/vpx-spidermanve/README.md b/external/vpx-spidermanve/README.md\nindex 66fbf273..ed10ecd6 100644\n--- a/external/vpx-spidermanve/README.md\n+++ b/external/vpx-spidermanve/README.md\n@@ -1,4 +1,4 @@\n-# Spider-Man (Vault Edition)\n+# Spider-Man (Vault Edition) (Stern 2016)\n \n ![Table Preview](https://raw.githubusercontent.com/Bla1ze/vpx-images/refs/heads/main/vpx-spidermanve.png)\n \n@@ -8,7 +8,7 @@\n | File Type | Link | Version | Author | \n |-----------|--------|----------|--------------|\n | **VPX** | [VPUniverse](https://vpuniverse.com/files/file/6530-spider-man-vault-edition-siggis-mod-stern-2016-vpw-mod/) | 2.1 | [VPinWorkshop](https://vpuniverse.com/profile/40692-vpinworkshop/) |\n-| **B2S** | [VPUniverse](https://vpuniverse.com/files/file/13305-spider-man-stern-2007-alt-b2s-full-dmd/) | 1.5 |[hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks//) |\n+| **B2S** | [VPUniverse](https://vpuniverse.com/files/file/13305-spider-man-stern-2007-alt-b2s-full-dmd/) | 1.5 |[hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n | **DMD** | Included | - | - |\n | **ROM** | [VPUniverse](https://vpuniverse.com/files/file/4202-spider-man-vault-edition-v101/) | smanve_101 | [stefanaustria](https://vpuniverse.com/profile/5730-stefanaustria/) |\n \n@@ -18,6 +18,7 @@\n \n ## Status \n **Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n@@ -29,6 +30,6 @@\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to `vpx-spidermanve.elf`\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-spidermanve.elf`\n+- Make sure `(.vpx)` `(.direct2b2s)` and `(.ini)` are all named the same.\n - Rom file (smanve_101) stays in zip folder, place zip file in `vpx-spidermanvw/pinmame/roms`\n-- Make sure `(.vpx)` `(.direct2b2s)` `(.vbs)` and `(.ini)` are all named the same.\n-- \"I'll never look at a sandcastle the same way again!\"\n\\ No newline at end of file\n+- \"I'll never look at a sandcastle the same way again!\"\n"}
+        ]
+      },
+      {
+        "hash": "05d4e019fa5bd8fe1a4329d627ab63ec5fcc221f",
+        "date": "2025-02-26 17:31:25 -0400",
+        "author": "Bla1ze",
+        "message": "Initial Commit\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-spidermanve/README.md", "diff": "diff --git a/external/vpx-spidermanve/README.md b/external/vpx-spidermanve/README.md\nnew file mode 100644\nindex 00000000..66fbf273\n--- /dev/null\n+++ b/external/vpx-spidermanve/README.md\n@@ -0,0 +1,34 @@\n+# Spider-Man (Vault Edition)\n+\n+![Table Preview](https://raw.githubusercontent.com/Bla1ze/vpx-images/refs/heads/main/vpx-spidermanve.png)\n+\n+---\n+\n+## Files\n+| File Type | Link | Version | Author | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [VPUniverse](https://vpuniverse.com/files/file/6530-spider-man-vault-edition-siggis-mod-stern-2016-vpw-mod/) | 2.1 | [VPinWorkshop](https://vpuniverse.com/profile/40692-vpinworkshop/) |\n+| **B2S** | [VPUniverse](https://vpuniverse.com/files/file/13305-spider-man-stern-2007-alt-b2s-full-dmd/) | 1.5 |[hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks//) |\n+| **DMD** | Included | - | - |\n+| **ROM** | [VPUniverse](https://vpuniverse.com/files/file/4202-spider-man-vault-edition-v101/) | smanve_101 | [stefanaustria](https://vpuniverse.com/profile/5730-stefanaustria/) |\n+\n+**Tested by:** [Bla1ze]\n+\n+---\n+\n+## Status \n+**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n+\n+---\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to `vpx-spidermanve.elf`\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-spidermanve.elf`\n+- Rom file (smanve_101) stays in zip folder, place zip file in `vpx-spidermanvw/pinmame/roms`\n+- Make sure `(.vpx)` `(.direct2b2s)` `(.vbs)` and `(.ini)` are all named the same.\n+- \"I'll never look at a sandcastle the same way again!\"\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-spidermanve/Spider-Man Classic (Stern 2007) VPW Mod 2.1.ini", "diff": "diff --git a/external/vpx-spidermanve/Spider-Man Classic (Stern 2007) VPW Mod 2.1.ini b/external/vpx-spidermanve/Spider-Man Classic (Stern 2007) VPW Mod 2.1.ini\nnew file mode 100755\nindex 00000000..86ce51a7\n--- /dev/null\n+++ b/external/vpx-spidermanve/Spider-Man Classic (Stern 2007) VPW Mod 2.1.ini\t\n@@ -0,0 +1,28 @@\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.220417\n+ViewCabScaleY = 1.029570\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.212200\n+ViewCabVOfs = -9.836502\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 91.873215\n+\n+[Player]\n+ScreenPlayerZ = 103.346054\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 1.000000\n+MaxTexDimension = 3072\n+FXAA = 1\n+\n+[TableOption]\n+Cabinet Mode = 1.000000\n+Mech Volume = 1.000000\n+Ramp Volume = 1.000000\n+Ball Roll Volume = 1.000000\n+Staged Flippers = 0.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-spidermanve/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-spidermanve/pinmame/cfg/default.cfg b/external/vpx-spidermanve/pinmame/cfg/default.cfg\nnew file mode 100755\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-spidermanve/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-spidermanve/pinmame/cfg/smanve_101.cfg", "diff": "diff --git a/external/vpx-spidermanve/pinmame/cfg/smanve_101.cfg b/external/vpx-spidermanve/pinmame/cfg/smanve_101.cfg\nnew file mode 100755\nindex 00000000..020aab41\nBinary files /dev/null and b/external/vpx-spidermanve/pinmame/cfg/smanve_101.cfg differ"},
+          {"status": "A", "path": "external/vpx-spidermanve/pinmame/ini/smanve_101.ini", "diff": "diff --git a/external/vpx-spidermanve/pinmame/ini/smanve_101.ini b/external/vpx-spidermanve/pinmame/ini/smanve_101.ini\nnew file mode 100755\nindex 00000000..2b7d740e\n--- /dev/null\n+++ b/external/vpx-spidermanve/pinmame/ini/smanve_101.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+rol=0\n+cheat=0\n+sound=1\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-spidermanve/pinmame/nvram/smanve_101.nv"},
+          {"status": "A", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nnew file mode 100644\nindex 00000000..af26223b\n--- /dev/null\n+++ b/external/vpx-spidermanve/table.yml\n@@ -0,0 +1,8 @@\n+---\n+tableVPSId: 9cAcDFA8\n+vpxVPSId: A_CodyKoS7\n+backglassVPSId: 5zno3zre\n+romVPSId: AWiQu3VK\n+fps: 40\n+testers:\n+- Bla1ze\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-spidermanve/vpx-spidermanve.png"},
+          {"status": "A", "path": "external/vpx-spidermanve/vpx-spidermanve.xml", "diff": "diff --git a/external/vpx-spidermanve/vpx-spidermanve.xml b/external/vpx-spidermanve/vpx-spidermanve.xml\nnew file mode 100755\nindex 00000000..8b89bd75\n--- /dev/null\n+++ b/external/vpx-spidermanve/vpx-spidermanve.xml\n@@ -0,0 +1,4 @@\n+<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n+<root>\n+    <name>Spider-Man (Vault Edition)</name>\n+</root>\n\\ No newline at end of file\n"}
+        ]
+      }
+    ]
+}

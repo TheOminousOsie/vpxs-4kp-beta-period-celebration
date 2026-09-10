@@ -1,0 +1,83 @@
+{
+    "commit_count": 8,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-machtwo/table.yml", "diff": "diff --git a/external/vpx-machtwo/table.yml b/external/vpx-machtwo/table.yml\nindex a5d35033..b7a0492f 100644\n--- a/external/vpx-machtwo/table.yml\n+++ b/external/vpx-machtwo/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"02D183D504A33D20EA3E385C4EF51507\"\n-  - \"1AB4F04FDDB8459AFAB93B3E6F3A8C58\"\n+backglassChecksum: \"02D183D504A33D20EA3E385C4EF51507\"\n backglassNotes: \"Download version 1.0.0\"\n backglassVPSId: \"jLc1XgWX1j\"\n fps: 60\n@@ -16,8 +13,5 @@ tagline: \"Are you ready for Mach 2.0.... two?\"\n testers:\n   - \"Bla1ze\"\n   - \"pointdablame\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"C40607A54BA52FA7EC138CCA4CF7013E\"\n-  - \"C08B3245DCD3D2B6C3FA5630E1A5C37D\"\n+vpxChecksum: \"C40607A54BA52FA7EC138CCA4CF7013E\"\n vpxVPSId: \"M2USRO02b9\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-machtwo/table.yml", "diff": "diff --git a/external/vpx-machtwo/table.yml b/external/vpx-machtwo/table.yml\nindex b7a0492f..a5d35033 100644\n--- a/external/vpx-machtwo/table.yml\n+++ b/external/vpx-machtwo/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"02D183D504A33D20EA3E385C4EF51507\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"02D183D504A33D20EA3E385C4EF51507\"\n+  - \"1AB4F04FDDB8459AFAB93B3E6F3A8C58\"\n backglassNotes: \"Download version 1.0.0\"\n backglassVPSId: \"jLc1XgWX1j\"\n fps: 60\n@@ -13,5 +16,8 @@ tagline: \"Are you ready for Mach 2.0.... two?\"\n testers:\n   - \"Bla1ze\"\n   - \"pointdablame\"\n-vpxChecksum: \"C40607A54BA52FA7EC138CCA4CF7013E\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"C40607A54BA52FA7EC138CCA4CF7013E\"\n+  - \"C08B3245DCD3D2B6C3FA5630E1A5C37D\"\n vpxVPSId: \"M2USRO02b9\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-machtwo/table.ini", "diff": "diff --git a/external/vpx-machtwo/table.ini b/external/vpx-machtwo/table.ini\nindex 5fa4dade..3439eef5 100644\n--- a/external/vpx-machtwo/table.ini\n+++ b/external/vpx-machtwo/table.ini\n@@ -1,13 +1,13 @@\n-[Standalone] \n-WindowRenderMode = 0\n-\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.185941\n-ViewCabScaleY = 1.150705\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.074591\n+ViewCabScaleY = 0.999868\n+ViewCabScaleZ = 0.849163\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -110.000000\n-ViewCabWindowTop = 325.541931\n-ViewCabWindowBot = 83.953270\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 73.767944\n+ViewCabWindowBot = 0.179253\n+\n+[Player]\n+ScreenPlayerY = 14.976651\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-machtwo/table.yml", "diff": "diff --git a/external/vpx-machtwo/table.yml b/external/vpx-machtwo/table.yml\nindex f8cbef98..b7a0492f 100644\n--- a/external/vpx-machtwo/table.yml\n+++ b/external/vpx-machtwo/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes:\n-  - \"bass\"\n backglassChecksum: \"02D183D504A33D20EA3E385C4EF51507\"\n backglassNotes: \"Download version 1.0.0\"\n backglassVPSId: \"jLc1XgWX1j\""}
+        ]
+      },
+      {
+        "hash": "facc194150f6957913b98dbde0699317f8a5b490",
+        "date": "2025-07-02 10:10:40 +0100",
+        "author": "OminousOsie",
+        "message": "Enabled wiz tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-machtwo/table.yml", "diff": "diff --git a/external/vpx-machtwo/table.yml b/external/vpx-machtwo/table.yml\nindex ad9ad45f..f8cbef98 100644\n--- a/external/vpx-machtwo/table.yml\n+++ b/external/vpx-machtwo/table.yml\n@@ -4,7 +4,6 @@ applyFixes:\n backglassChecksum: \"02D183D504A33D20EA3E385C4EF51507\"\n backglassNotes: \"Download version 1.0.0\"\n backglassVPSId: \"jLc1XgWX1j\"\n-enabled: false\n fps: 60\n romChecksum: \"432C874559E1B82A4A7B00926B0528ED\"\n romNotes: \"Download mach2.zip\""}
+        ]
+      },
+      {
+        "hash": "a8cd5aa6f4fe3aa9a55ddad9bd10fa9bd113c8de",
+        "date": "2025-06-25 10:02:23 +0100",
+        "author": "OminousOsie",
+        "message": "Enabled tables for wiz wed\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-machtwo/table.yml", "diff": "diff --git a/external/vpx-machtwo/table.yml b/external/vpx-machtwo/table.yml\nindex f8cbef98..ad9ad45f 100644\n--- a/external/vpx-machtwo/table.yml\n+++ b/external/vpx-machtwo/table.yml\n@@ -4,6 +4,7 @@ applyFixes:\n backglassChecksum: \"02D183D504A33D20EA3E385C4EF51507\"\n backglassNotes: \"Download version 1.0.0\"\n backglassVPSId: \"jLc1XgWX1j\"\n+enabled: false\n fps: 60\n romChecksum: \"432C874559E1B82A4A7B00926B0528ED\"\n romNotes: \"Download mach2.zip\""}
+        ]
+      },
+      {
+        "hash": "890bb12154fbc2257e7d225b71e0480543eaef15",
+        "date": "2025-06-23 19:37:38 -0300",
+        "author": "Bla1ze",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-machtwo/table.yml", "diff": "diff --git a/external/vpx-machtwo/table.yml b/external/vpx-machtwo/table.yml\nindex 32800b69..f8cbef98 100644\n--- a/external/vpx-machtwo/table.yml\n+++ b/external/vpx-machtwo/table.yml\n@@ -8,7 +8,7 @@ fps: 60\n romChecksum: \"432C874559E1B82A4A7B00926B0528ED\"\n romNotes: \"Download mach2.zip\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/mach2.2055/\"\n-romVersionOverride: \"mach2.zip\"\n+romVersionOverride: \"mach2\"\n tableNotes: \"Download version 1.1\"\n tableVPSId: \"VXjOK2S53j\"\n tagline: \"Are you ready for Mach 2.0.... two?\"\n"}
+        ]
+      },
+      {
+        "hash": "3c214a2ed21a8935aa1f7eaac874e0f2ecda2776",
+        "date": "2025-06-23 18:56:33 -0300",
+        "author": "Bla1ze",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-machtwo/table.yml", "diff": "diff --git a/external/vpx-machtwo/table.yml b/external/vpx-machtwo/table.yml\nindex a40e19c0..32800b69 100644\n--- a/external/vpx-machtwo/table.yml\n+++ b/external/vpx-machtwo/table.yml\n@@ -8,6 +8,7 @@ fps: 60\n romChecksum: \"432C874559E1B82A4A7B00926B0528ED\"\n romNotes: \"Download mach2.zip\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/mach2.2055/\"\n+romVersionOverride: \"mach2.zip\"\n tableNotes: \"Download version 1.1\"\n tableVPSId: \"VXjOK2S53j\"\n tagline: \"Are you ready for Mach 2.0.... two?\"\n"}
+        ]
+      },
+      {
+        "hash": "585b2b153545f3180f2bdd70e2e6255fdc92db83",
+        "date": "2025-06-23 13:19:35 -0300",
+        "author": "Bla1ze",
+        "message": "Initial Commit - Mach 2.0 Two\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-machtwo/README.md", "diff": "diff --git a/external/vpx-machtwo/README.md b/external/vpx-machtwo/README.md\nnew file mode 100644\nindex 00000000..7823f0f4\n--- /dev/null\n+++ b/external/vpx-machtwo/README.md\n@@ -0,0 +1,61 @@\n+# Mach 2.0 Two (Spinball S.A.L. 1995)\n+\n+![Table Preview](../../images/mach2-preview.png)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Bla1ze\n+  - pointdablame\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Mach 2.0 Two (Spinball S.A.L. 1995)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Are you ready for Mach 2.0.... two?\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "A", "path": "external/vpx-machtwo/launcher.png"},
+          {"status": "A", "path": "external/vpx-machtwo/nvram.nv"},
+          {"status": "A", "path": "external/vpx-machtwo/pinmame.ini", "diff": "diff --git a/external/vpx-machtwo/pinmame.ini b/external/vpx-machtwo/pinmame.ini\nnew file mode 100644\nindex 00000000..4478e1b2\n--- /dev/null\n+++ b/external/vpx-machtwo/pinmame.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+sound=1\n+rol=0\n+cheat=0\n+dmd_red=0\n+dmd_green=128\n+dmd_blue=255\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-machtwo/table.ini", "diff": "diff --git a/external/vpx-machtwo/table.ini b/external/vpx-machtwo/table.ini\nnew file mode 100644\nindex 00000000..5fa4dade\n--- /dev/null\n+++ b/external/vpx-machtwo/table.ini\n@@ -0,0 +1,13 @@\n+[Standalone] \n+WindowRenderMode = 0\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.185941\n+ViewCabScaleY = 1.150705\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -110.000000\n+ViewCabWindowTop = 325.541931\n+ViewCabWindowBot = 83.953270\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-machtwo/table.yml", "diff": "diff --git a/external/vpx-machtwo/table.yml b/external/vpx-machtwo/table.yml\nnew file mode 100644\nindex 00000000..a40e19c0\n--- /dev/null\n+++ b/external/vpx-machtwo/table.yml\n@@ -0,0 +1,18 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassChecksum: \"02D183D504A33D20EA3E385C4EF51507\"\n+backglassNotes: \"Download version 1.0.0\"\n+backglassVPSId: \"jLc1XgWX1j\"\n+fps: 60\n+romChecksum: \"432C874559E1B82A4A7B00926B0528ED\"\n+romNotes: \"Download mach2.zip\"\n+romUrlOverride: \"https://pinballnirvana.com/forums/resources/mach2.2055/\"\n+tableNotes: \"Download version 1.1\"\n+tableVPSId: \"VXjOK2S53j\"\n+tagline: \"Are you ready for Mach 2.0.... two?\"\n+testers:\n+  - \"Bla1ze\"\n+  - \"pointdablame\"\n+vpxChecksum: \"C40607A54BA52FA7EC138CCA4CF7013E\"\n+vpxVPSId: \"M2USRO02b9\"\n"}
+        ]
+      }
+    ]
+}

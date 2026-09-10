@@ -1,0 +1,553 @@
+{
+    "commit_count": 58,
+    "commits": [
+      {
+        "hash": "3c7c6e753b37af30b80e87e2c57d698afab88003",
+        "date": "2026-09-06 22:26:14 -0400",
+        "author": "pointdablame",
+        "message": "Launchers - logo update\n\nThis updates the following launchers to the new Legends Unchained Logo:  123, 24, 250cc Abra Ca Dabra, Ace High, Alaska, Ali, Ali JPs, Alice 1948, Alien Poker, Aliens Alien Star, Adventures of Rocky and Bullwinkle, The Addams Family\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/launcher.png"}
+        ]
+      },
+      {
+        "hash": "831c52f1de9b31cb5390ded0fe254b2db788f8c6",
+        "date": "2026-07-29 22:12:37 -0400",
+        "author": "evilwraith",
+        "message": "Table updates\n\nTRON Legacy\n24\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex 3645c407..bb5586fd 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -1,19 +1,19 @@\n ---\n-backglassVPSId: \"_SWGA7jJeW\"\n-backglassChecksum: \"947426bdecec0938dd987dbc58125674\"\n+backglassChecksum: \"947426BDECEC0938DD987DBC58125674\"\n backglassNotes: \"Download 24 (Stern 2009).zip\"\n-coloredROMVPSId: \"aIWgsQ7Po0\"\n+backglassVPSId: \"_SWGA7jJeW\"\n coloredROMChecksum: \"1DE5904599E29E0FA52FE3FDD774F8B8\"\n coloredROMNotes: \"Download version 1.0.1\"\n+coloredROMVPSId: \"aIWgsQ7Po0\"\n fps: 60\n-romVPSId: \"GhBaghhT\"\n romChecksum: \"B8E13521877C048CD8F198A3CBA105F8\"\n romNotes: \"Download twenty4_150.zip\"\n+romVPSId: \"GhBaghhT\"\n+tableNotes: \"Download '24 (Stern 2009)_Bigus(MOD)4.0.vpx.zip'\"\n tableVPSId: \"P15WeTaO\"\n-tableNotes: \"Download 24 (Stern 2009)_Bigus(MOD)3.0.vpx.zip\"\n tagline: \"The following takes place between 6 A.M. and 7 A.M\"\n testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n+vpxChecksum: \"A7D816E2653096758182004727150F6A\"\n vpxVPSId: \"6T98rAIp\"\n-vpxChecksum: \"4DC00F4F27F64EABC0E4AB2E07525B31\""}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex ac85eb7e..3645c407 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"_SWGA7jJeW\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"947426bdecec0938dd987dbc58125674\"\n-  - \"1861E4E877E91563F69A90604537A66C\"\n+backglassChecksum: \"947426bdecec0938dd987dbc58125674\"\n backglassNotes: \"Download 24 (Stern 2009).zip\"\n coloredROMVPSId: \"aIWgsQ7Po0\"\n coloredROMChecksum: \"1DE5904599E29E0FA52FE3FDD774F8B8\"\n@@ -19,7 +16,4 @@ testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n vpxVPSId: \"6T98rAIp\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"4DC00F4F27F64EABC0E4AB2E07525B31\"\n-  - \"335C7E1FE96B4A170AA0DC2499698752\"\n+vpxChecksum: \"4DC00F4F27F64EABC0E4AB2E07525B31\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex 3645c407..ac85eb7e 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"_SWGA7jJeW\"\n-backglassChecksum: \"947426bdecec0938dd987dbc58125674\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"947426bdecec0938dd987dbc58125674\"\n+  - \"1861E4E877E91563F69A90604537A66C\"\n backglassNotes: \"Download 24 (Stern 2009).zip\"\n coloredROMVPSId: \"aIWgsQ7Po0\"\n coloredROMChecksum: \"1DE5904599E29E0FA52FE3FDD774F8B8\"\n@@ -16,4 +19,7 @@ testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n vpxVPSId: \"6T98rAIp\"\n-vpxChecksum: \"4DC00F4F27F64EABC0E4AB2E07525B31\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"4DC00F4F27F64EABC0E4AB2E07525B31\"\n+  - \"335C7E1FE96B4A170AA0DC2499698752\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.ini", "diff": "diff --git a/external/vpx-24/table.ini b/external/vpx-24/table.ini\nindex f77209b0..9a381dc5 100644\n--- a/external/vpx-24/table.ini\n+++ b/external/vpx-24/table.ini\n@@ -1,21 +1,17 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.389598\n-ViewCabScaleY = 1.045558\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.320487\n+ViewCabScaleY = 1.000183\n+ViewCabScaleZ = 0.954625\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -38.180683\n-ViewCabWindowTop = 370.541931\n+ViewCabVOfs = 0.038627\n+ViewCabWindowTop = 281.266937\n ViewCabWindowBot = 82.953217\n ToneMapper = 0\n \n [Player]\n-BallAntiStretch = 1\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.500000\n-\n-[Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.355729\n\\ No newline at end of file\n+ScreenPlayerY = 15.008953"},
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex 470f30ed..3645c407 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -17,5 +17,3 @@ testers:\n   - \"OminousOsie\"\n vpxVPSId: \"6T98rAIp\"\n vpxChecksum: \"4DC00F4F27F64EABC0E4AB2E07525B31\"\n-applyFixes:\n-  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 6a525802..b0884387 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -50,7 +50,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n <br>"}
+        ]
+      },
+      {
+        "hash": "e87a57a47383a7e5b53606ae04de6119986c6208",
+        "date": "2025-05-26 00:10:07 -0300",
+        "author": "Bla1ze",
+        "message": "README Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 7e82c6ab..6a525802 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -8,7 +8,7 @@\n \n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 54 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n \n <br>\n \n"}
+        ]
+      },
+      {
+        "hash": "5833bca1c6bdc62a82cffcf3e44e88808bab7e8b",
+        "date": "2025-05-26 00:00:52 -0300",
+        "author": "Bla1ze",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex d5d0717a..470f30ed 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -4,6 +4,7 @@ backglassChecksum: \"947426bdecec0938dd987dbc58125674\"\n backglassNotes: \"Download 24 (Stern 2009).zip\"\n coloredROMVPSId: \"aIWgsQ7Po0\"\n coloredROMChecksum: \"1DE5904599E29E0FA52FE3FDD774F8B8\"\n+coloredROMNotes: \"Download version 1.0.1\"\n fps: 60\n romVPSId: \"GhBaghhT\"\n romChecksum: \"B8E13521877C048CD8F198A3CBA105F8\"\n"}
+        ]
+      },
+      {
+        "hash": "0d58b8e8b8618c43f366deff387e475115869a77",
+        "date": "2025-05-25 23:44:57 -0300",
+        "author": "Bla1ze",
+        "message": "24 - v3.0 Update\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/nvram.nv"},
+          {"status": "M", "path": "external/vpx-24/table.ini", "diff": "diff --git a/external/vpx-24/table.ini b/external/vpx-24/table.ini\nindex ed5f5adc..f77209b0 100644\n--- a/external/vpx-24/table.ini\n+++ b/external/vpx-24/table.ini\n@@ -10,13 +10,12 @@ ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 82.953217\n ToneMapper = 0\n \n-[Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.416666\n-\n [Player]\n BallAntiStretch = 1\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.500000\n-JoyAddCredit2Key = 1\n+\n+[Standalone]\n+WindowRenderMode = 0\n+BackBufferScale = 0.355729\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex e9b47509..d5d0717a 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -1,17 +1,20 @@\n ---\n backglassVPSId: \"_SWGA7jJeW\"\n backglassChecksum: \"947426bdecec0938dd987dbc58125674\"\n+backglassNotes: \"Download 24 (Stern 2009).zip\"\n coloredROMVPSId: \"aIWgsQ7Po0\"\n coloredROMChecksum: \"1DE5904599E29E0FA52FE3FDD774F8B8\"\n-fps: 54\n+fps: 60\n romVPSId: \"GhBaghhT\"\n romChecksum: \"B8E13521877C048CD8F198A3CBA105F8\"\n+romNotes: \"Download twenty4_150.zip\"\n tableVPSId: \"P15WeTaO\"\n+tableNotes: \"Download 24 (Stern 2009)_Bigus(MOD)3.0.vpx.zip\"\n tagline: \"The following takes place between 6 A.M. and 7 A.M\"\n testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n vpxVPSId: \"6T98rAIp\"\n-vpxChecksum: \"8DC5DDF640BC04608094D9A0EC76FFD5\"\n+vpxChecksum: \"4DC00F4F27F64EABC0E4AB2E07525B31\"\n applyFixes:\n   - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "43e06a78576a8d7069d79fee2da8885f7e817af7",
+        "date": "2025-04-30 11:28:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed BOM\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 947697ba..7e82c6ab 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -1,4 +1,4 @@\n-﻿﻿# 24 (Stern 2009)\n+﻿# 24 (Stern 2009)\n \n ![Table Preview](../../images/vpx-24-preview.png)\n "}
+        ]
+      },
+      {
+        "hash": "5424a8122d5eb54371b2435888f2d337df05dc43",
+        "date": "2025-04-30 11:23:31 +0100",
+        "author": "OminousOsie",
+        "message": "Added lloydbraun to the wiz team\n\nAdded lloydbraun to the wiz team\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 15aafbcd..947697ba 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -47,7 +47,7 @@ __*We hope you enjoy!!*__\n \n *The VPXS 4KP Wizard team:*\n <pre>\n-- n-i-x            - Mox\n+- n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n - mrandromeda      - SScorpio         - TechZombie"}
+        ]
+      },
+      {
+        "hash": "4a2f64670d3f2f883a960c9b8df8e8270e81036d",
+        "date": "2025-04-21 02:38:53 -0300",
+        "author": "Bla1ze",
+        "message": "Update table.yml\n\nSerum update, new checksum added.",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex 78401204..e9b47509 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -2,7 +2,7 @@\n backglassVPSId: \"_SWGA7jJeW\"\n backglassChecksum: \"947426bdecec0938dd987dbc58125674\"\n coloredROMVPSId: \"aIWgsQ7Po0\"\n-coloredROMChecksum: \"14EBF1B2B346AECDADB8314170535E20\"\n+coloredROMChecksum: \"1DE5904599E29E0FA52FE3FDD774F8B8\"\n fps: 54\n romVPSId: \"GhBaghhT\"\n romChecksum: \"B8E13521877C048CD8F198A3CBA105F8\"\n"}
+        ]
+      },
+      {
+        "hash": "01c7e252332b06a5a09e3bfaa60664142a54042f",
+        "date": "2025-04-16 10:44:26 +0100",
+        "author": "OminousOsie",
+        "message": "Added the full team to the readme\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 7172ceee..15aafbcd 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -1,4 +1,4 @@\n-﻿# 24 (Stern 2009)\n+﻿﻿# 24 (Stern 2009)\n \n ![Table Preview](../../images/vpx-24-preview.png)\n \n@@ -41,7 +41,17 @@ This table is available through the Table Manager Wizard, which makes installati\n \n Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n <br>\n <br>"}
+        ]
+      },
+      {
+        "hash": "44c5a147361d715dd05bd4290edea26d18140d91",
+        "date": "2025-04-15 22:38:23 -0300",
+        "author": "Bla1ze",
+        "message": "Update table.ini",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.ini", "diff": "diff --git a/external/vpx-24/table.ini b/external/vpx-24/table.ini\nindex 710306e6..ed5f5adc 100644\n--- a/external/vpx-24/table.ini\n+++ b/external/vpx-24/table.ini\n@@ -11,11 +11,7 @@ ViewCabWindowBot = 82.953217\n ToneMapper = 0\n \n [Standalone]\n-PinMAMEWindowX = 3840\n-PinMAMEWindowY = 0\n-PinMAMEWindowWidth = 1510\n-PinMAMEWindowHeight = 380\n-PinMAMEWindowRotation = 1\n+WindowRenderMode = 0\n BackBufferScale = 0.416666\n \n [Player]\n"}
+        ]
+      },
+      {
+        "hash": "ea6d17c32b6201508759ff21067bbebd5da41606",
+        "date": "2025-04-08 22:51:49 -0400",
+        "author": "pointdablame",
+        "message": "Updated Wizard wave 1 images\n\nUpdating images to new standard resolutions and schemes, and  adding Legends Unchained logo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/launcher.png"}
+        ]
+      },
+      {
+        "hash": "6c2a220adac96b5ed5b84500eba9d819bca0cc87",
+        "date": "2025-04-08 15:22:54 +0100",
+        "author": "OminousOsie",
+        "message": "Italic the tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex d90e06b4..7172ceee 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -35,7 +35,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`24`**\n 5.  Follow the on-screen instructions to download and upload the required files\n-6. \"The following takes place between 6 A.M. and 7 A.M\"\n+6. *\"The following takes place between 6 A.M. and 7 A.M\"*\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "ec024f091d11b71aef0144fb31e7d1b020df9223",
+        "date": "2025-04-08 15:09:40 +0100",
+        "author": "OminousOsie",
+        "message": "Update to readmes to readd tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex a5048a87..d90e06b4 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -1,4 +1,4 @@\n-# 24 (Stern 2009)\n+﻿# 24 (Stern 2009)\n \n ![Table Preview](../../images/vpx-24-preview.png)\n \n@@ -35,6 +35,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`24`**\n 5.  Follow the on-screen instructions to download and upload the required files\n+6. \"The following takes place between 6 A.M. and 7 A.M\"\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "43650ff0ea7f93f27d1e677e2071f06819b0d879",
+        "date": "2025-04-08 11:20:14 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 12f3fd84..a5048a87 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -34,9 +34,16 @@ This table is available through the Table Manager Wizard, which makes installati\n 2.  Click the **Add Table** button\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`24`**\n+5.  Follow the on-screen instructions to download and upload the required files\n \n <br>\n \n Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n __*We hope you enjoy!!   - the VPXS 4KP team!*__\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "5836b0355ffad7376a83462baab79fd43b89ce27",
+        "date": "2025-04-08 11:10:50 +0100",
+        "author": "OminousOsie",
+        "message": "Started updating readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex b2ffe133..12f3fd84 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -2,32 +2,41 @@\n \n ![Table Preview](../../images/vpx-24-preview.png)\n \n-## Files\n-| File Type | Link | Version | Author |\n-|:---------:|:----:|:-------:|:------:|\n-| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15460) | 2.0 | [bigus1](https://www.vpforums.org/index.php?showuser=107629)  |\n-| B2S | [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/) | N/A | [WildMan](https://vpuniverse.com/profile/5-wildman/) |\n-| DMD | [VP Universe](https://vpuniverse.com/files/file/20738-24-stern-2009-serum-colorization/) | N/A | [OdinBolt](https://vpuniverse.com/profile/24633-odinbolt/)  |\n-| ROM | [VP Universe](https://vpuniverse.com/files/file/3368-twenty4_150zip/) | N/A | N/A |\n+<br>\n \n-**Tested by:** [Bla1ze] & [OminousOsie]\n+## *️⃣  Table Statistics\n \n----\n-\n-## Status \n-\n-**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 54 |\n \n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Bla1ze\n+  - OminousOsie 🌸\n+\n+<br>\n+\n ---\n \n-## Instructions\n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-24.elf\n-- Download the table, ROM and directb2s versions listed above and copy them into this folder\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- The ROM zip file gets copied to pinmame/roms (do not unzip)\n-- If using the Alt Color, download and make an altcolor folder inside the pinmame folder. Inside the altcolor folder, make a twenty4_150 folder and place the .cRZ file inside. \n-- The following takes places between 6 A.M. and 7 A.M 🕕\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`24`**\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+__*We hope you enjoy!!   - the VPXS 4KP team!*__"}
+        ]
+      },
+      {
+        "hash": "93cc7702e6aa2928daa72f101c6113d312b2db72",
+        "date": "2025-04-05 18:14:35 +0100",
+        "author": "OminousOsie",
+        "message": "Added freeplay\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "34a19ac19b1dd3f52bf5413bf64cd94ca93c44a3",
+        "date": "2025-04-05 09:18:06 -0400",
+        "author": "pointdablame",
+        "message": "Wizard tables - updated launcher images\n\nUpdated:\n- 1-2-3\n- 24\n- Ali\n- Andromeda\n- Adventures of Rocky & Bullwinkle\n- Asteroid Annie\n- Avengers, JP's\n- Banzai Run\n- Batman Forever\n- Baywatch\n- Big Trouble in Little China\n- Big Bang Bar\n- Black Pyramid\n- Cactus Canyon\n- Centigrade 37\n- Creature From the Black Lagoon\n- Champion Pub\n- Cosmic\n- Deadpool\n- Diner\n- Dirty Harry\n- Doctor Who\n- Dolly Parton\n- Drakor\n- F-14 Tomcat\n- Fathom\n- Firepower\n- Firepower II\n- Fortnite\n- Guns N' Roses\n- Godzilla\n- Guardians of the Galaxy\n- Hardbody\n- Bond 60th\n- Jurassic Park\n- Last Action Hero\n- Mata Hari\n- Meteor\n- Mission Impossible\n- Medieval Madness\n- Monster Bash\n- Mousin' Around\n- No Fear - Dangerous Sports\n- Quicksilver\n- Scared Stiff\n- Seawitch\n- Street Fighter II\n- South Park\n- Tales From the Crypt\n- Vortex\n- Wrath of Olympus\n- Whirlwind\n- Zissou\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/launcher.png"}
+        ]
+      },
+      {
+        "hash": "a4401d5d0535ebae890616b8401c5d5c3ad5cd8b",
+        "date": "2025-03-29 17:11:09 +0000",
+        "author": "OminousOsie",
+        "message": "Updated 24 backglass\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex 6e859e11..78401204 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -1,6 +1,6 @@\n ---\n-backglassVPSId: \"vpfZXF3x\"\n-backglassChecksum: \"9342233E172907FB4AA7F21E4E3CE48C\"\n+backglassVPSId: \"_SWGA7jJeW\"\n+backglassChecksum: \"947426bdecec0938dd987dbc58125674\"\n coloredROMVPSId: \"aIWgsQ7Po0\"\n coloredROMChecksum: \"14EBF1B2B346AECDADB8314170535E20\"\n fps: 54\n"}
+        ]
+      },
+      {
+        "hash": "4755f99aaafcaf6dd938ec0d6557dc41c120688a",
+        "date": "2025-03-25 19:42:16 +0000",
+        "author": "OminousOsie",
+        "message": "Added bass fixes, inis, and color dmds\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex 14864237..6e859e11 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -13,3 +13,5 @@ testers:\n   - \"OminousOsie\"\n vpxVPSId: \"6T98rAIp\"\n vpxChecksum: \"8DC5DDF640BC04608094D9A0EC76FFD5\"\n+applyFixes:\n+  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "f97b737805c3710c4206ec673c16ae88e53e1f52",
+        "date": "2025-03-24 01:18:39 +0000",
+        "author": "OminousOsie",
+        "message": "Added margin to all testers in ymls\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex 2fadae1b..14864237 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -9,7 +9,7 @@ romChecksum: \"B8E13521877C048CD8F198A3CBA105F8\"\n tableVPSId: \"P15WeTaO\"\n tagline: \"The following takes place between 6 A.M. and 7 A.M\"\n testers:\n-- \"Bla1ze\"\n-- \"OminousOsie\"\n+  - \"Bla1ze\"\n+  - \"OminousOsie\"\n vpxVPSId: \"6T98rAIp\"\n vpxChecksum: \"8DC5DDF640BC04608094D9A0EC76FFD5\""}
+        ]
+      },
+      {
+        "hash": "a7b24a627af793e52d6a783a37135840c86d9f5e",
+        "date": "2025-03-22 18:58:53 +0000",
+        "author": "OminousOsie",
+        "message": "Added updated launcher images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/launcher.png"}
+        ]
+      },
+      {
+        "hash": "1758d6c7dbc57a19edad87f2bfca37452cb6cc1c",
+        "date": "2025-03-21 21:38:01 +0000",
+        "author": "OminousOsie",
+        "message": "Fixed 24 launcher png\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/launcher.png"}
+        ]
+      },
+      {
+        "hash": "92081dc0364bd61499189169a7bf975dfcd53bf6",
+        "date": "2025-03-21 21:33:57 +0000",
+        "author": "OminousOsie",
+        "message": "Added coin to ini\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.ini", "diff": "diff --git a/external/vpx-24/table.ini b/external/vpx-24/table.ini\nindex 92d17f8a..710306e6 100644\n--- a/external/vpx-24/table.ini\n+++ b/external/vpx-24/table.ini\n@@ -23,3 +23,4 @@ BallAntiStretch = 1\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.500000\n+JoyAddCredit2Key = 1\n"}
+        ]
+      },
+      {
+        "hash": "fa6657007c81f6ef3a30f42d40066418228d4c79",
+        "date": "2025-03-21 10:02:17 +0000",
+        "author": "OminousOsie",
+        "message": "Updated image links\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 36153745..b2ffe133 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -1,6 +1,6 @@\n # 24 (Stern 2009)\n \n-![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_06/24FS.png.c1cd691f0cacf7ee98f73adf3b696122.png)\n+![Table Preview](../../images/vpx-24-preview.png)\n \n ## Files\n | File Type | Link | Version | Author |"}
+        ]
+      },
+      {
+        "hash": "53d6f9de08d98dfd49702619e7120a75fd7831b8",
+        "date": "2025-03-20 22:14:02 +0000",
+        "author": "OminousOsie",
+        "message": "Added quotes to wizard json values\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex 1a0e5c63..2fadae1b 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -1,15 +1,15 @@\n ---\n-backglassVPSId: vpfZXF3x\n-backglassChecksum: 9342233E172907FB4AA7F21E4E3CE48C\n-coloredROMVPSId: aIWgsQ7Po0\n-coloredROMChecksum: 14EBF1B2B346AECDADB8314170535E20\n+backglassVPSId: \"vpfZXF3x\"\n+backglassChecksum: \"9342233E172907FB4AA7F21E4E3CE48C\"\n+coloredROMVPSId: \"aIWgsQ7Po0\"\n+coloredROMChecksum: \"14EBF1B2B346AECDADB8314170535E20\"\n fps: 54\n-romVPSId: GhBaghhT\n-romChecksum: B8E13521877C048CD8F198A3CBA105F8\n-tableVPSId: P15WeTaO\n+romVPSId: \"GhBaghhT\"\n+romChecksum: \"B8E13521877C048CD8F198A3CBA105F8\"\n+tableVPSId: \"P15WeTaO\"\n tagline: \"The following takes place between 6 A.M. and 7 A.M\"\n testers:\n-- Bla1ze\n-- OminousOsie\n-vpxVPSId: 6T98rAIp\n-vpxChecksum: 8DC5DDF640BC04608094D9A0EC76FFD5\n+- \"Bla1ze\"\n+- \"OminousOsie\"\n+vpxVPSId: \"6T98rAIp\"\n+vpxChecksum: \"8DC5DDF640BC04608094D9A0EC76FFD5\""}
+        ]
+      },
+      {
+        "hash": "2625d6631445da0e32b305beefe66168282bacb8",
+        "date": "2025-03-20 20:50:55 +0000",
+        "author": "OminousOsie",
+        "message": "Merge branch 'main' into main",
+        "files": [
+          {"status": "MM", "path": "external/vpx-24/README.md", "diff": "diff --cc external/vpx-24/README.md\nindex 2c25c102,0d0d6aea..36153745\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@@ -2,44 -2,30 +2,28 @@@\n  \n  ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_06/24FS.png.c1cd691f0cacf7ee98f73adf3b696122.png)\n  \n- Author: [bigus1](https://www.vpforums.org/index.php?showuser=107629) \n ----\n -\n+ ## Files\n+ | File Type | Link | Version | Author |\n+ |:---------:|:----:|:-------:|:------:|\n -| VPX | [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr/) | 2.1 | [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/) |\n++| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15460) | 2.0 | [bigus1](https://www.vpforums.org/index.php?showuser=107629)  |\n+ | B2S | [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/) | N/A | [WildMan](https://vpuniverse.com/profile/5-wildman/) |\n+ | DMD | [VP Universe](https://vpuniverse.com/files/file/20738-24-stern-2009-serum-colorization/) | N/A | [OdinBolt](https://vpuniverse.com/profile/24633-odinbolt/)  |\n+ | ROM | [VP Universe](https://vpuniverse.com/files/file/3368-twenty4_150zip/) | N/A | N/A |\n  \n- Tested by: Bla1ze & OminousOsie\n- \n- Version: 2.0\n- \n- Download: [VP Forum](https://www.vpforums.org/index.php?app=downloads&showfile=15460)\n- \n- DirectB2S\n- \n- Author: [WildMan](https://vpuniverse.com/profile/5-wildman/)\n- \n- Download [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/)\n- \n- ROM\n- \n- Download [VP Universe](https://vpuniverse.com/files/file/3368-twenty4_150zip/)\n- \n- SHA: 65c7e451980209dbc11cff479da1b3f6161d6229\n- \n- MD5: b8e13521877c048cd8f198a3cba105f8\n- \n- Alt Color DMD\n- \n- Author: [OdinBolt](https://vpuniverse.com/profile/24633-odinbolt/)\n- \n- Download [VP Universe](https://vpuniverse.com/files/file/20738-24-stern-2009-serum-colorization/)\n -**Tested by:** [Bla1ze]\n++**Tested by:** [Bla1ze] & [OminousOsie]\n  \n+ ---\n  \n  ## Status \n  \n- Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+ **Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n  | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n  |-----------|----------|-----------|-----|--------------|-----|\n -| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 30 |\n +| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 54 |\n  \n- ## Instructions\n+ ---\n  \n+ ## Instructions\n  - Copy the contents of this repo folder to your USB drive\n  - Add your personalized launcher.elf and rename it to vpx-24.elf\n  - Download the table, ROM and directb2s versions listed above and copy them into this folder"}
+        ]
+      },
+      {
+        "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
+        "date": "2025-03-19 14:01:02 -0500",
+        "author": "MoxAssault",
+        "message": "Large README Updates\n\n46 README Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 8ed598b3..0d0d6aea 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -2,44 +2,30 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_06/24FS.png.c1cd691f0cacf7ee98f73adf3b696122.png)\n \n-Author: [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/) \n+---\n \n-Tested by: Bla1ze \n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr/) | 2.1 | [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/) |\n+| B2S | [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/) | N/A | [WildMan](https://vpuniverse.com/profile/5-wildman/) |\n+| DMD | [VP Universe](https://vpuniverse.com/files/file/20738-24-stern-2009-serum-colorization/) | N/A | [OdinBolt](https://vpuniverse.com/profile/24633-odinbolt/)  |\n+| ROM | [VP Universe](https://vpuniverse.com/files/file/3368-twenty4_150zip/) | N/A | N/A |\n \n-Version: 2.1 \n-\n-Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr/)\n-\n-DirectB2S\n-\n-Author: [WildMan](https://vpuniverse.com/profile/5-wildman/)\n-\n-Download [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/)\n-\n-ROM\n-\n-Download [VP Universe](https://vpuniverse.com/files/file/3368-twenty4_150zip/)\n-\n-SHA: 65c7e451980209dbc11cff479da1b3f6161d6229\n-\n-MD5: b8e13521877c048cd8f198a3cba105f8\n-\n-Alt Color DMD\n-\n-Author: [OdinBolt](https://vpuniverse.com/profile/24633-odinbolt/)\n-\n-Download [VP Universe](https://vpuniverse.com/files/file/20738-24-stern-2009-serum-colorization/)\n+**Tested by:** [Bla1ze]\n \n+---\n \n ## Status \n \n-Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 30 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-24.elf\n - Download the table, ROM and directb2s versions listed above and copy them into this folder"}
+        ]
+      },
+      {
+        "hash": "b36c21e0fbc58585c32a6de294808138b81c10f2",
+        "date": "2025-03-19 10:47:26 +0000",
+        "author": "OminousOsie",
+        "message": "Updated 24 table readme, fixed POV and FPS, fixed yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 8ed598b3..2c25c102 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -2,13 +2,13 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_06/24FS.png.c1cd691f0cacf7ee98f73adf3b696122.png)\n \n-Author: [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/) \n+Author: [bigus1](https://www.vpforums.org/index.php?showuser=107629) \n \n-Tested by: Bla1ze \n+Tested by: Bla1ze & OminousOsie\n \n-Version: 2.1 \n+Version: 2.0\n \n-Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr/)\n+Download: [VP Forum](https://www.vpforums.org/index.php?app=downloads&showfile=15460)\n \n DirectB2S\n \n@@ -36,7 +36,7 @@ Download [VP Universe](https://vpuniverse.com/files/file/20738-24-stern-2009-ser\n Minimum VPX Standalone build: 10.8.0-1983-b84441e\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 30 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 54 |\n \n ## Instructions\n "},
+          {"status": "M", "path": "external/vpx-24/table.ini", "diff": "diff --git a/external/vpx-24/table.ini b/external/vpx-24/table.ini\nindex 270f2841..92d17f8a 100644\n--- a/external/vpx-24/table.ini\n+++ b/external/vpx-24/table.ini\n@@ -1,15 +1,14 @@\n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.727347\n-ViewCabScaleY = 1.037503\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -48.500000\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n+ViewCabMode = 2\n+ViewCabScaleX = 1.389598\n+ViewCabScaleY = 1.045558\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -38.180683\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 82.953217\n+ToneMapper = 0\n \n [Standalone]\n PinMAMEWindowX = 3840\n@@ -17,6 +16,10 @@ PinMAMEWindowY = 0\n PinMAMEWindowWidth = 1510\n PinMAMEWindowHeight = 380\n PinMAMEWindowRotation = 1\n+BackBufferScale = 0.416666\n \n [Player]\n BallAntiStretch = 1\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.500000"},
+          {"status": "M", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nindex c818a6bb..1a0e5c63 100644\n--- a/external/vpx-24/table.yml\n+++ b/external/vpx-24/table.yml\n@@ -1,6 +1,15 @@\n ---\n-tableVPSId: P15WeTaO\n-vpxVPSId: QcOG228URt\n backglassVPSId: vpfZXF3x\n-romVPSId: GhBaghhT\n+backglassChecksum: 9342233E172907FB4AA7F21E4E3CE48C\n coloredROMVPSId: aIWgsQ7Po0\n+coloredROMChecksum: 14EBF1B2B346AECDADB8314170535E20\n+fps: 54\n+romVPSId: GhBaghhT\n+romChecksum: B8E13521877C048CD8F198A3CBA105F8\n+tableVPSId: P15WeTaO\n+tagline: \"The following takes place between 6 A.M. and 7 A.M\"\n+testers:\n+- Bla1ze\n+- OminousOsie\n+vpxVPSId: 6T98rAIp\n+vpxChecksum: 8DC5DDF640BC04608094D9A0EC76FFD5\n"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-24/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-24/pinmame/cfg/.gitkeep b/external/vpx-24/pinmame/cfg/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-24/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-24/pinmame/cfg/default.cfg b/external/vpx-24/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-24/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-24/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-24/pinmame/ini/.gitkeep b/external/vpx-24/pinmame/ini/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-24/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-24/pinmame/nvram/.gitkeep b/external/vpx-24/pinmame/nvram/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-24/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-24/pinmame/roms/.gitkeep b/external/vpx-24/pinmame/roms/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-24/vpx-24.xml", "diff": "diff --git a/external/vpx-24/vpx-24.xml b/external/vpx-24/vpx-24.xml\ndeleted file mode 100755\nindex 332a9519..00000000\n--- a/external/vpx-24/vpx-24.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>24 (Stern 2009)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini->external/vpx-24/table.ini", "diff": "diff --git a/external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini b/external/vpx-24/table.ini\nsimilarity index 100%\nrename from external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini\nrename to external/vpx-24/table.ini"},
+          {"status": "R-from", "path": "external/vpx-24/pinmame/nvram/twenty4_150.nv->external/vpx-24/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-24/vpx-24.png->external/vpx-24/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini->external/vpx-24/table.ini", "diff": "diff --git a/external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini b/external/vpx-24/table.ini\nsimilarity index 100%\nrename from external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini\nrename to external/vpx-24/table.ini"},
+          {"status": "R-to", "path": "external/vpx-24/pinmame/nvram/twenty4_150.nv->external/vpx-24/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-24/vpx-24.png->external/vpx-24/launcher.png"}
+        ]
+      },
+      {
+        "hash": "b4eb4f1d061203263a83397988044dd6951205ad",
+        "date": "2025-02-24 11:02:07 -0500",
+        "author": "n-i-x",
+        "message": "Initial support for a wizard manifest. (#1300)\n\n* Create create-external-releases.yml\n\n* Update create-external-releases.yml\n\n* Update create-external-releases.yml\n\n* Update create-external-releases.yml\n\n* Update create-external-releases.yml\n\n* Update create-external-releases.yml\n\n* Update create-external-releases.yml\n\n* Update create-external-releases.yml\n\n* Update create-external-releases.yml\n\n* Update create-external-releases.yml\n\n* Update create-external-releases.yml\n\n* Create table.yml\n\n* Create table.yml\n\n* Create table.yml\n\n* Update create-external-releases.yml",
+        "files": [
+          {"status": "A", "path": "external/vpx-24/table.yml", "diff": "diff --git a/external/vpx-24/table.yml b/external/vpx-24/table.yml\nnew file mode 100644\nindex 00000000..c818a6bb\n--- /dev/null\n+++ b/external/vpx-24/table.yml\n@@ -0,0 +1,6 @@\n+---\n+tableVPSId: P15WeTaO\n+vpxVPSId: QcOG228URt\n+backglassVPSId: vpfZXF3x\n+romVPSId: GhBaghhT\n+coloredROMVPSId: aIWgsQ7Po0"}
+        ]
+      },
+      {
+        "hash": "1cc6df13ba10e96b071334eb4b789e4ce0821d68",
+        "date": "2024-08-31 00:48:58 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Instruction edits for vpx-24",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex d32bfe65..8ed598b3 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -42,6 +42,8 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-24.elf\n-- Download the table, ROM and directb2s versions listed above and copy them into this folder. The ROM zip gets copied to pinmame/roms (do not unzip). \n-- If using the Alt Color, make an altcolor folder inside the pinmame folder. Inside the altcolor folder, make a twenty4_150 folder and place the .cRZ file inside. \n+- Download the table, ROM and directb2s versions listed above and copy them into this folder\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n+- The ROM zip file gets copied to pinmame/roms (do not unzip)\n+- If using the Alt Color, download and make an altcolor folder inside the pinmame folder. Inside the altcolor folder, make a twenty4_150 folder and place the .cRZ file inside. \n - The following takes places between 6 A.M. and 7 A.M 🕕\n"}
+        ]
+      },
+      {
+        "hash": "4f5d33599a738f8800bb845a41cb7f92dab2d9cd",
+        "date": "2024-08-19 21:35:26 -0400",
+        "author": "tschules17",
+        "message": "Removing Readme related files from main\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-24/vpx-24.yml"},
+          {"status": "D", "path": "external/vpx-24/vpx-24_readme.md"}
+        ]
+      },
+      {
+        "hash": "346fe7b797d379556d02dc7c2b45552fb7eaaf10",
+        "date": "2024-08-18 14:14:04 +0000",
+        "author": "github-actions[bot]",
+        "message": "Updated Readme Files\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/vpx-24_readme.md"}
+        ]
+      },
+      {
+        "hash": "890b9324cc05c76285a26f2fe9e8663db0bf1439",
+        "date": "2024-08-17 19:05:29 +0000",
+        "author": "github-actions[bot]",
+        "message": "Updated Readme Files\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/vpx-24_readme.md"}
+        ]
+      },
+      {
+        "hash": "14fafeaa2b3b6b187c71e1b0488058543a3da54d",
+        "date": "2024-08-17 18:53:45 +0000",
+        "author": "github-actions[bot]",
+        "message": "Updated Readme Files\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-24/vpx-24_readme.md"}
+        ]
+      },
+      {
+        "hash": "7f7065bce24c4114400565c8f295cf615ce2eefd",
+        "date": "2024-08-17 14:28:18 -0400",
+        "author": "tschules17",
+        "message": "Switching to YAML based approach\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-24/vpx-24.yml"}
+        ]
+      },
+      {
+        "hash": "7860c2c9d4c3b20361947cb6589fe559ef9abb08",
+        "date": "2024-08-10 20:45:28 -0300",
+        "author": "Bla1ze",
+        "message": "Update 24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini", "diff": "diff --git a/external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini b/external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini\nindex 47d01f31..270f2841 100644\n--- a/external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini\t\n+++ b/external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini\t\n@@ -19,4 +19,4 @@ PinMAMEWindowHeight = 380\n PinMAMEWindowRotation = 1\n \n [Player]\n-BakllAntiStretch = 1\n\\ No newline at end of file\n+BallAntiStretch = 1\n"}
+        ]
+      },
+      {
+        "hash": "d7b6bb88bd2bc0534d379bb7787a2afc8a03d702",
+        "date": "2024-08-06 14:55:09 -0300",
+        "author": "Bla1ze",
+        "message": "Updated .cRZ instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 539cf31c..d32bfe65 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -42,5 +42,6 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-24.elf\n-- Download the table and directb2s versions listed above and copy them into this folder. The ROM zip gets copied to pinmame/roms (do not unzip). Alt Color DMD .cRZ file goes in altcolor folder which will need to be created if you wish to use it.\n+- Download the table, ROM and directb2s versions listed above and copy them into this folder. The ROM zip gets copied to pinmame/roms (do not unzip). \n+- If using the Alt Color, make an altcolor folder inside the pinmame folder. Inside the altcolor folder, make a twenty4_150 folder and place the .cRZ file inside. \n - The following takes places between 6 A.M. and 7 A.M 🕕"}
+        ]
+      },
+      {
+        "hash": "750ce47b3699e413c9c9862cb9b28ea81d1cce85",
+        "date": "2024-08-06 00:17:33 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 8159494f..539cf31c 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -2,8 +2,11 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_06/24FS.png.c1cd691f0cacf7ee98f73adf3b696122.png)\n \n-Author: [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/) Tested by: Bla1ze  \n-Version: 2.1\n+Author: [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/) \n+\n+Tested by: Bla1ze \n+\n+Version: 2.1 \n \n Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr/)\n \n"}
+        ]
+      },
+      {
+        "hash": "2bd73df197a177aaeb27065bb9970fcbf733b282",
+        "date": "2024-08-05 08:34:06 -0400",
+        "author": "n-i-x",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 14da1ff2..8159494f 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -39,5 +39,5 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-24.elf\n-- Download the table, ROM and directb2s versions listed above and copy them into this folder. Alt Color DMD .cRZ file goes in altcolor folder which will need to be created if you wish to use it.\n-- The following takes places between 6 A.M. and 7 A.M 🕕\n\\ No newline at end of file\n+- Download the table and directb2s versions listed above and copy them into this folder. The ROM zip gets copied to pinmame/roms (do not unzip). Alt Color DMD .cRZ file goes in altcolor folder which will need to be created if you wish to use it.\n+- The following takes places between 6 A.M. and 7 A.M 🕕\n"}
+        ]
+      },
+      {
+        "hash": "dff710f65aa19b7993547ff024e350fa2362671e",
+        "date": "2024-08-05 02:41:01 -0300",
+        "author": "Bla1ze",
+        "message": "README.md Clarification\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 352f515a..14da1ff2 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -39,5 +39,5 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-24.elf\n-- Download the table and directb2s versions listed above and copy them into this folder. Alt Color DMD .cRZ file goes in altcolor folder which will need to be created if you wish to use it.\n+- Download the table, ROM and directb2s versions listed above and copy them into this folder. Alt Color DMD .cRZ file goes in altcolor folder which will need to be created if you wish to use it.\n - The following takes places between 6 A.M. and 7 A.M 🕕\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "e09800e60d2842eacf209e13c3cc67fe6aa21054",
+        "date": "2024-08-05 02:16:23 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex a2ddd753..352f515a 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -31,9 +31,9 @@ Download [VP Universe](https://vpuniverse.com/files/file/20738-24-stern-2009-ser\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1983-b84441e\n-| Playfield | Controls | Backglass | DMD | FPS | \n-|-----------|----------|-----------|-----|----------|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 30 |\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 30 |\n \n ## Instructions\n \n"}
+        ]
+      },
+      {
+        "hash": "a180c93ea6efdae0aeb54df2f9e397fc83385a6e",
+        "date": "2024-07-26 00:46:43 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex d982e192..a2ddd753 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -17,7 +17,7 @@ ROM\n \n Download [VP Universe](https://vpuniverse.com/files/file/3368-twenty4_150zip/)\n \n-SHA:65c7e451980209dbc11cff479da1b3f6161d6229\n+SHA: 65c7e451980209dbc11cff479da1b3f6161d6229\n \n MD5: b8e13521877c048cd8f198a3cba105f8\n \n"}
+        ]
+      },
+      {
+        "hash": "b47e9d94fb069abed0b4f60a75a2b1d1a874f448",
+        "date": "2024-07-26 00:45:28 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 820888de..d982e192 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -24,6 +24,7 @@ MD5: b8e13521877c048cd8f198a3cba105f8\n Alt Color DMD\n \n Author: [OdinBolt](https://vpuniverse.com/profile/24633-odinbolt/)\n+\n Download [VP Universe](https://vpuniverse.com/files/file/20738-24-stern-2009-serum-colorization/)\n \n \n"}
+        ]
+      },
+      {
+        "hash": "759099d5cb8310f16fe14a73059fb06c5858f0a0",
+        "date": "2024-07-26 00:44:58 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 400e7caf..820888de 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -10,6 +10,7 @@ Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v2\n DirectB2S\n \n Author: [WildMan](https://vpuniverse.com/profile/5-wildman/)\n+\n Download [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/)\n \n ROM\n"}
+        ]
+      },
+      {
+        "hash": "b16772042308eedbc51553f2cff569cecf49cf22",
+        "date": "2024-07-26 00:44:23 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex a0f66f27..400e7caf 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -17,6 +17,7 @@ ROM\n Download [VP Universe](https://vpuniverse.com/files/file/3368-twenty4_150zip/)\n \n SHA:65c7e451980209dbc11cff479da1b3f6161d6229\n+\n MD5: b8e13521877c048cd8f198a3cba105f8\n \n Alt Color DMD\n"}
+        ]
+      },
+      {
+        "hash": "cca92dafe951dbc32087832d10d206663471a959",
+        "date": "2024-07-26 00:43:22 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex ff174542..a0f66f27 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -10,7 +10,6 @@ Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v2\n DirectB2S\n \n Author: [WildMan](https://vpuniverse.com/profile/5-wildman/)\n-\n Download [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/)\n \n ROM\n"}
+        ]
+      },
+      {
+        "hash": "170dc28db2005fdad847d8ad165cf33b2e389d56",
+        "date": "2024-07-26 00:42:45 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex faa5b6b8..ff174542 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -4,6 +4,7 @@\n \n Author: [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/) Tested by: Bla1ze  \n Version: 2.1\n+\n Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr/)\n \n DirectB2S\n"}
+        ]
+      },
+      {
+        "hash": "53b18b888b3332e462cd810592dedea8fa88784c",
+        "date": "2024-07-26 00:42:23 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 54f03b4b..faa5b6b8 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -2,8 +2,7 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_06/24FS.png.c1cd691f0cacf7ee98f73adf3b696122.png)\n \n-Author: [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/)\n-Tested by: Bla1ze  \n+Author: [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/) Tested by: Bla1ze  \n Version: 2.1\n Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr/)\n \n"}
+        ]
+      },
+      {
+        "hash": "86f29cae03c93d143fd97f738be3d464f00d7348",
+        "date": "2024-07-26 00:41:48 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 075e9e6b..54f03b4b 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -10,6 +10,7 @@ Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v2\n DirectB2S\n \n Author: [WildMan](https://vpuniverse.com/profile/5-wildman/)\n+\n Download [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/)\n \n ROM\n"}
+        ]
+      },
+      {
+        "hash": "bce649afaabc712654ad890389710be7c4d7dc7d",
+        "date": "2024-07-26 00:41:02 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 5e18208a..075e9e6b 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -5,7 +5,6 @@\n Author: [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/)\n Tested by: Bla1ze  \n Version: 2.1\n-\n Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr/)\n \n DirectB2S\n@@ -16,6 +15,7 @@ Download [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/)\n ROM\n \n Download [VP Universe](https://vpuniverse.com/files/file/3368-twenty4_150zip/)\n+\n SHA:65c7e451980209dbc11cff479da1b3f6161d6229\n MD5: b8e13521877c048cd8f198a3cba105f8\n \n"}
+        ]
+      },
+      {
+        "hash": "c125ba23b0a81e88eb705ac54504070fc1dd3936",
+        "date": "2024-07-26 00:39:20 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex aa7422a4..5e18208a 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -3,9 +3,7 @@\n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_06/24FS.png.c1cd691f0cacf7ee98f73adf3b696122.png)\n \n Author: [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/)\n-\n Tested by: Bla1ze  \n-\n Version: 2.1\n \n Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr/)\n@@ -13,21 +11,17 @@ Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v2\n DirectB2S\n \n Author: [WildMan](https://vpuniverse.com/profile/5-wildman/)\n-\n Download [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/)\n \n ROM\n \n Download [VP Universe](https://vpuniverse.com/files/file/3368-twenty4_150zip/)\n-\n SHA:65c7e451980209dbc11cff479da1b3f6161d6229\n-\n MD5: b8e13521877c048cd8f198a3cba105f8\n \n Alt Color DMD\n \n Author: [OdinBolt](https://vpuniverse.com/profile/24633-odinbolt/)\n-\n Download [VP Universe](https://vpuniverse.com/files/file/20738-24-stern-2009-serum-colorization/)\n \n \n"}
+        ]
+      },
+      {
+        "hash": "518d3c8cc642be503db48abb7a4ba9b55f96dc21",
+        "date": "2024-07-26 00:37:55 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nindex 33cbba27..aa7422a4 100755\n--- a/external/vpx-24/README.md\n+++ b/external/vpx-24/README.md\n@@ -3,24 +3,31 @@\n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_06/24FS.png.c1cd691f0cacf7ee98f73adf3b696122.png)\n \n Author: [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/)\n+\n Tested by: Bla1ze  \n+\n Version: 2.1\n+\n Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr/)\n \n DirectB2S\n \n Author: [WildMan](https://vpuniverse.com/profile/5-wildman/)\n+\n Download [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/)\n \n ROM\n \n Download [VP Universe](https://vpuniverse.com/files/file/3368-twenty4_150zip/)\n+\n SHA:65c7e451980209dbc11cff479da1b3f6161d6229\n+\n MD5: b8e13521877c048cd8f198a3cba105f8\n \n Alt Color DMD\n \n Author: [OdinBolt](https://vpuniverse.com/profile/24633-odinbolt/)\n+\n Download [VP Universe](https://vpuniverse.com/files/file/20738-24-stern-2009-serum-colorization/)\n \n \n"}
+        ]
+      },
+      {
+        "hash": "80e67c32ac2b95f91776b8ad19c07e29431a5ed3",
+        "date": "2024-07-26 00:34:50 -0300",
+        "author": "Bla1ze",
+        "message": "24 Initial Commit\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini", "diff": "diff --git a/external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini b/external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini\nnew file mode 100644\nindex 00000000..47d01f31\n--- /dev/null\n+++ b/external/vpx-24/24 (Stern 2009) VPX08 (DT-FS-FSS-VR) v.2.1.ini\t\n@@ -0,0 +1,22 @@\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.727347\n+ViewCabScaleY = 1.037503\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -48.500000\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n+\n+[Standalone]\n+PinMAMEWindowX = 3840\n+PinMAMEWindowY = 0\n+PinMAMEWindowWidth = 1510\n+PinMAMEWindowHeight = 380\n+PinMAMEWindowRotation = 1\n+\n+[Player]\n+BakllAntiStretch = 1\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-24/README.md", "diff": "diff --git a/external/vpx-24/README.md b/external/vpx-24/README.md\nnew file mode 100755\nindex 00000000..33cbba27\n--- /dev/null\n+++ b/external/vpx-24/README.md\n@@ -0,0 +1,39 @@\n+# 24 (Stern 2009)\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_06/24FS.png.c1cd691f0cacf7ee98f73adf3b696122.png)\n+\n+Author: [RobbyKingPin](https://vpuniverse.com/profile/10146-robbykingpin/)\n+Tested by: Bla1ze  \n+Version: 2.1\n+Download: [VP Universe](https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr/)\n+\n+DirectB2S\n+\n+Author: [WildMan](https://vpuniverse.com/profile/5-wildman/)\n+Download [VP Universe](https://vpuniverse.com/files/file/2438-24-stern-2009/)\n+\n+ROM\n+\n+Download [VP Universe](https://vpuniverse.com/files/file/3368-twenty4_150zip/)\n+SHA:65c7e451980209dbc11cff479da1b3f6161d6229\n+MD5: b8e13521877c048cd8f198a3cba105f8\n+\n+Alt Color DMD\n+\n+Author: [OdinBolt](https://vpuniverse.com/profile/24633-odinbolt/)\n+Download [VP Universe](https://vpuniverse.com/files/file/20738-24-stern-2009-serum-colorization/)\n+\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+| Playfield | Controls | Backglass | DMD | FPS | \n+|-----------|----------|-----------|-----|----------|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 30 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-24.elf\n+- Download the table and directb2s versions listed above and copy them into this folder. Alt Color DMD .cRZ file goes in altcolor folder which will need to be created if you wish to use it.\n+- The following takes places between 6 A.M. and 7 A.M 🕕\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-24/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-24/pinmame/cfg/.gitkeep b/external/vpx-24/pinmame/cfg/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-24/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-24/pinmame/cfg/default.cfg b/external/vpx-24/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-24/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-24/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-24/pinmame/ini/.gitkeep b/external/vpx-24/pinmame/ini/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-24/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-24/pinmame/nvram/.gitkeep b/external/vpx-24/pinmame/nvram/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-24/pinmame/nvram/twenty4_150.nv"},
+          {"status": "A", "path": "external/vpx-24/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-24/pinmame/roms/.gitkeep b/external/vpx-24/pinmame/roms/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-24/vpx-24.png"},
+          {"status": "A", "path": "external/vpx-24/vpx-24.xml", "diff": "diff --git a/external/vpx-24/vpx-24.xml b/external/vpx-24/vpx-24.xml\nnew file mode 100755\nindex 00000000..332a9519\n--- /dev/null\n+++ b/external/vpx-24/vpx-24.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>24 (Stern 2009)</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

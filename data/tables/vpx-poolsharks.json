@@ -1,0 +1,120 @@
+{
+    "commit_count": 10,
+    "commits": [
+      {
+        "hash": "7a1555ca67ae2dd621ec9eba585d54045b546e1f",
+        "date": "2026-09-03 15:45:50 -0400",
+        "author": "pinballwizard2023",
+        "message": "Adding Pool Sharks as Wizard (#2148)\n\n* Adding Pool Sharks as Wizard\n\n* Create table.yml\n\n* Update table.ini",
+        "files": [
+          {"status": "A", "path": "external/vpx-poolsharks/table.ini", "diff": "diff --git a/external/vpx-poolsharks/table.ini b/external/vpx-poolsharks/table.ini\nnew file mode 100644\nindex 00000000..f778d05c\n--- /dev/null\n+++ b/external/vpx-poolsharks/table.ini\n@@ -0,0 +1,32 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+FlexDMDWindow = 0\n+POVLinkTableScaleXY = 0\n+4kpVLMGIKeepPercent = 100\n+4kpVLMBakeBrightness = 1.000000\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.225000\n+ViewCabScaleY = 0.995000\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 220.472656\n+ViewCabWindowBot = 116.893242\n+\n+[Player]\n+ScreenPlayerY = 21.300003\n+ScreenPlayerZ = 94.300018\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+RaytracedBallShadows = 0\n+Refraction = 0\n+ForceBloomOff = 1\n+ForceAnisotropicFiltering = 1\n+\n+[TableOption]\n+Cabinet Rails = 0.000000\n+Select LUT = 0.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-poolsharks/table.yml", "diff": "diff --git a/external/vpx-poolsharks/table.yml b/external/vpx-poolsharks/table.yml\nnew file mode 100644\nindex 00000000..ed046538\n--- /dev/null\n+++ b/external/vpx-poolsharks/table.yml\n@@ -0,0 +1,11 @@\n+---\n+backglassChecksum: \"613AC7885669D9CFBBC0332C3365858C\"\n+backglassVPSId: \"LUT48mcq6P\"\n+fps: 60\n+romChecksum: \"60437630DBDF4EA506CEDD7C3C2B3F86\"\n+romVPSId: \"NrQ1AtdcMs\"\n+tableVPSId: \"ZRr0EPnA\"\n+testers:\n+  - \"PBW23\"\n+vpxChecksum: \"1C42E6B603A13874F31580744C3F1832\"\n+vpxVPSId: \"lyARPy7B\"\n"},
+          {"status": "M", "path": "external/vpx-poolsharks/README.md", "diff": "diff --git a/external/vpx-poolsharks/README.md b/external/vpx-poolsharks/README.md\nindex 3a900e69..d84847da 100644\n--- a/external/vpx-poolsharks/README.md\n+++ b/external/vpx-poolsharks/README.md\n@@ -2,32 +2,58 @@\n \n ![Table Preview](../../images/vpx-pool-sharks-preview.jpg)\n \n-Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0  \n-Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=13790)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 1.0.0  \n-Download: [vpuniverse](https://vpuniverse.com/files/file/16155-pool-sharks-bally-1990-b2s-with-full-dmd/)\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n \n-ROM\n+<br>\n \n-Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=947)  \n-ROM Name and version: pool_l7.zip\n+**VPXS 4KP Testers:**\n+  - PBW23\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 55 |\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Pool Sharks`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Don't trust a pool shark\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n \n-## Instructions\n+__*We hope you enjoy!!*__\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- \"Don't trust a pool shark\"\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n \n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-poolsharks/launcher.png"},
+          {"status": "M", "path": "external/vpx-poolsharks/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-poolsharks/README.md", "diff": "diff --git a/external/vpx-poolsharks/README.md b/external/vpx-poolsharks/README.md\nindex 7218edf0..3a900e69 100644\n--- a/external/vpx-poolsharks/README.md\n+++ b/external/vpx-poolsharks/README.md\n@@ -1,4 +1,4 @@\n-# Pool Sharks (Bally/Midway 1990)\n+﻿# Pool Sharks (Bally/Midway 1990)\n \n ![Table Preview](../../images/vpx-pool-sharks-preview.jpg)\n \n@@ -27,7 +27,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Don't trust a pool shark\"\n "}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-poolsharks/README.md", "diff": "diff --git a/external/vpx-poolsharks/README.md b/external/vpx-poolsharks/README.md\nindex 3897b989..7218edf0 100644\n--- a/external/vpx-poolsharks/README.md\n+++ b/external/vpx-poolsharks/README.md\n@@ -26,8 +26,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Don't trust a pool shark\"\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-poolsharks/README.md", "diff": "diff --git a/external/vpx-poolsharks/README.md b/external/vpx-poolsharks/README.md\nindex 5239767e..3897b989 100644\n--- a/external/vpx-poolsharks/README.md\n+++ b/external/vpx-poolsharks/README.md\n@@ -26,4 +26,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Don't trust a pool shark\"\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-poolsharks/README.md", "diff": "diff --git a/external/vpx-poolsharks/README.md b/external/vpx-poolsharks/README.md\nindex b2491490..5239767e 100644\n--- a/external/vpx-poolsharks/README.md\n+++ b/external/vpx-poolsharks/README.md\n@@ -26,9 +26,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-poolsharks.elf\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them into external/vpx-poolsharks\n-- Make sure the (.vpx), and (.directb2s) files are all named the \"exact\" same\n-- Place pool_l7.zip in the external/vpx-poolsharks/pinmame/roms folder *Do Not unzip*\n - \"Don't trust a pool shark\""}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-poolsharks/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-poolsharks/pinmame/cfg/.gitkeep b/external/vpx-poolsharks/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-poolsharks/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-poolsharks/pinmame/cfg/default.cfg b/external/vpx-poolsharks/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-poolsharks/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-poolsharks/pinmame/cfg/pool_l7.cfg", "diff": "diff --git a/external/vpx-poolsharks/pinmame/cfg/pool_l7.cfg b/external/vpx-poolsharks/pinmame/cfg/pool_l7.cfg\ndeleted file mode 100644\nindex e27e500e..00000000\nBinary files a/external/vpx-poolsharks/pinmame/cfg/pool_l7.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-poolsharks/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-poolsharks/pinmame/ini/.gitkeep b/external/vpx-poolsharks/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-poolsharks/pinmame/ini/pool_l7.ini", "diff": "diff --git a/external/vpx-poolsharks/pinmame/ini/pool_l7.ini b/external/vpx-poolsharks/pinmame/ini/pool_l7.ini\ndeleted file mode 100644\nindex a84ffc3b..00000000\n--- a/external/vpx-poolsharks/pinmame/ini/pool_l7.ini\n+++ /dev/null\n@@ -1,7 +0,0 @@\n-[settings]\n-rol=0\n-sound=1\n-cheat=0\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-poolsharks/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-poolsharks/pinmame/nvram/.gitkeep b/external/vpx-poolsharks/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-poolsharks/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-poolsharks/pinmame/roms/.gitkeep b/external/vpx-poolsharks/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-poolsharks/vpx-poolsharks.xml", "diff": "diff --git a/external/vpx-poolsharks/vpx-poolsharks.xml b/external/vpx-poolsharks/vpx-poolsharks.xml\ndeleted file mode 100644\nindex 4b5f5c6e..00000000\n--- a/external/vpx-poolsharks/vpx-poolsharks.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Pool Sharks (Bally 1990)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-poolsharks/pinmame/nvram/pool_l7.nv->external/vpx-poolsharks/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-poolsharks/vpx-poolsharks.png->external/vpx-poolsharks/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-poolsharks/pinmame/nvram/pool_l7.nv->external/vpx-poolsharks/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-poolsharks/vpx-poolsharks.png->external/vpx-poolsharks/launcher.png"}
+        ]
+      },
+      {
+        "hash": "5c3f6e29e36c6e69f584af4b3813f1d80ca26096",
+        "date": "2025-03-02 03:24:39 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-poolsharks",
+        "files": [
+          {"status": "M", "path": "external/vpx-poolsharks/README.md", "diff": "diff --git a/external/vpx-poolsharks/README.md b/external/vpx-poolsharks/README.md\nindex fe339834..b2491490 100644\n--- a/external/vpx-poolsharks/README.md\n+++ b/external/vpx-poolsharks/README.md\n@@ -2,19 +2,19 @@\n \n ![Table Preview](../../images/vpx-pool-sharks-preview.jpg)\n \n-Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)\n-Version: 5.5.0\n+Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n+Version: 5.5.0  \n Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=13790)\n \n DirectB2S\n \n-Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-Version: 1.0.0\n+Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+Version: 1.0.0  \n Download: [vpuniverse](https://vpuniverse.com/files/file/16155-pool-sharks-bally-1990-b2s-with-full-dmd/)\n \n ROM\n \n-Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=947)\n+Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=947)  \n ROM Name and version: pool_l7.zip\n \n ## Status \n@@ -28,8 +28,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-poolsharks.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n-- Make sure the vpx, direct2b, and ini files are all named the \"exact\" same\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them into external/vpx-poolsharks\n+- Make sure the (.vpx), and (.directb2s) files are all named the \"exact\" same\n - Place pool_l7.zip in the external/vpx-poolsharks/pinmame/roms folder *Do Not unzip*\n - \"Don't trust a pool shark\"\n-\n"}
+        ]
+      },
+      {
+        "hash": "0cfa0f7bc1a8864f5cc075e75b8e0bf6f423b7e3",
+        "date": "2025-03-01 21:00:14 -0500",
+        "author": "shavendave",
+        "message": "Updating JP Pool Sharks to 5.5\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-poolsharks/README.md", "diff": "diff --git a/external/vpx-poolsharks/README.md b/external/vpx-poolsharks/README.md\nindex a690240a..fe339834 100644\n--- a/external/vpx-poolsharks/README.md\n+++ b/external/vpx-poolsharks/README.md\n@@ -3,7 +3,7 @@\n ![Table Preview](../../images/vpx-pool-sharks-preview.jpg)\n \n Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)\n-Version: 4.0.0\n+Version: 5.5.0\n Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=13790)\n \n DirectB2S\n@@ -22,7 +22,7 @@ ROM Name and version: pool_l7.zip\n Minimum VPX Standalone build: 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 55 |\n \n ## Instructions\n \n"}
+        ]
+      },
+      {
+        "hash": "48991a6e8ef8241e7edfda901b8ee4bb4d89371e",
+        "date": "2025-01-25 17:40:30 -0600",
+        "author": "bhhobb",
+        "message": "Update README.md preview image",
+        "files": [
+          {"status": "M", "path": "external/vpx-poolsharks/README.md", "diff": "diff --git a/external/vpx-poolsharks/README.md b/external/vpx-poolsharks/README.md\nindex 440226cf..a690240a 100644\n--- a/external/vpx-poolsharks/README.md\n+++ b/external/vpx-poolsharks/README.md\n@@ -1,6 +1,6 @@\n # Pool Sharks (Bally/Midway 1990)\n \n-![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=104732&id=13790&full=1)\n+![Table Preview](../../images/vpx-pool-sharks-preview.jpg)\n \n Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)\n Version: 4.0.0\n"}
+        ]
+      },
+      {
+        "hash": "e0c13025b0784e4119342dab00bd171b8907e829",
+        "date": "2024-08-23 09:43:36 -0400",
+        "author": "Kaoticbpr",
+        "message": "adding 8 tables to the repo\n\nNFL, pinball magic, pool sharks, sorcerer, space mission, space station, viper, warlok\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-poolsharks/README.md", "diff": "diff --git a/external/vpx-poolsharks/README.md b/external/vpx-poolsharks/README.md\nnew file mode 100644\nindex 00000000..440226cf\n--- /dev/null\n+++ b/external/vpx-poolsharks/README.md\n@@ -0,0 +1,35 @@\n+# Pool Sharks (Bally/Midway 1990)\n+\n+![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=104732&id=13790&full=1)\n+\n+Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)\n+Version: 4.0.0\n+Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=13790)\n+\n+DirectB2S\n+\n+Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n+Version: 1.0.0\n+Download: [vpuniverse](https://vpuniverse.com/files/file/16155-pool-sharks-bally-1990-b2s-with-full-dmd/)\n+\n+ROM\n+\n+Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=947)\n+ROM Name and version: pool_l7.zip\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-poolsharks.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Make sure the vpx, direct2b, and ini files are all named the \"exact\" same\n+- Place pool_l7.zip in the external/vpx-poolsharks/pinmame/roms folder *Do Not unzip*\n+- \"Don't trust a pool shark\"\n+"},
+          {"status": "A", "path": "external/vpx-poolsharks/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-poolsharks/pinmame/cfg/.gitkeep b/external/vpx-poolsharks/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-poolsharks/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-poolsharks/pinmame/cfg/default.cfg b/external/vpx-poolsharks/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-poolsharks/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-poolsharks/pinmame/cfg/pool_l7.cfg", "diff": "diff --git a/external/vpx-poolsharks/pinmame/cfg/pool_l7.cfg b/external/vpx-poolsharks/pinmame/cfg/pool_l7.cfg\nnew file mode 100644\nindex 00000000..e27e500e\nBinary files /dev/null and b/external/vpx-poolsharks/pinmame/cfg/pool_l7.cfg differ"},
+          {"status": "A", "path": "external/vpx-poolsharks/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-poolsharks/pinmame/ini/.gitkeep b/external/vpx-poolsharks/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-poolsharks/pinmame/ini/pool_l7.ini", "diff": "diff --git a/external/vpx-poolsharks/pinmame/ini/pool_l7.ini b/external/vpx-poolsharks/pinmame/ini/pool_l7.ini\nnew file mode 100644\nindex 00000000..a84ffc3b\n--- /dev/null\n+++ b/external/vpx-poolsharks/pinmame/ini/pool_l7.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+rol=0\n+sound=1\n+cheat=0\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-poolsharks/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-poolsharks/pinmame/nvram/.gitkeep b/external/vpx-poolsharks/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-poolsharks/pinmame/nvram/pool_l7.nv"},
+          {"status": "A", "path": "external/vpx-poolsharks/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-poolsharks/pinmame/roms/.gitkeep b/external/vpx-poolsharks/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-poolsharks/vpx-poolsharks.png"},
+          {"status": "A", "path": "external/vpx-poolsharks/vpx-poolsharks.xml", "diff": "diff --git a/external/vpx-poolsharks/vpx-poolsharks.xml b/external/vpx-poolsharks/vpx-poolsharks.xml\nnew file mode 100644\nindex 00000000..4b5f5c6e\n--- /dev/null\n+++ b/external/vpx-poolsharks/vpx-poolsharks.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Pool Sharks (Bally 1990)</name>\n+</root>"}
+        ]
+      }
+    ]
+}

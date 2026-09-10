@@ -1,0 +1,208 @@
+{
+    "commit_count": 21,
+    "commits": [
+      {
+        "hash": "1dc7e9059d05774d4af757ef1fe7d1253117cfa2",
+        "date": "2026-09-09 21:30:53 -0400",
+        "author": "pointdablame",
+        "message": "More Launcher Art Updates (#2207)\n\nThis updates the following launchers to the new Legends Unchained logo: Aaron Spelling, Apache, Batman 66 (Original), Big Bang Bar, Black Knight, Black Knight 2000, Black Magic 4, Black Rose, James Bond, Cactus Canyon, Cat Burglars, Cenobite, Centaur, Centigrade 37, Chrono Trigger, Cirqus Voltaire, Cleopatra, Clock of Eternal Fog, Cosmic, Crystal Ball, Dark Crystal, Deadpool, Devil Riders, Diner, Dirty Harry, Tron Legacy, Doctor Who, Doom Eternal, DBZ Budokai, Drakor, Dune, D&D, Earthshaker, F-14 Tomcat, Fathom, Fifth Element, Fireball II, Firepower, Firepower II",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/table.yml", "diff": "diff --git a/external/vpx-apache/table.yml b/external/vpx-apache/table.yml\nindex 2e742390..f04e1c25 100644\n--- a/external/vpx-apache/table.yml\n+++ b/external/vpx-apache/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassBundled: true\n backglassVPSId: \"Q9Wxt1m8\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"0049B3B34AD915C72898D73456E2087C\"\n-  - \"2984120DEADC6181DF3CCE49E525F5A3\"\n+backglassChecksum: \"0049B3B34AD915C72898D73456E2087C\"\n backglassNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v55_VPX8.directb2s.zip'\"\n fps: 60\n tableNotes: \"Download 'Apache! (Taito do Brasil 1978) v600.zip'\"\n@@ -14,7 +11,4 @@ testers:\n   - \"Boris\"\n   - \"OminousOsie\"\n vpxVPSId: \"Q9Wxt1m8\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"0CA4D816EAC97D69527C668B164B0752\"\n-  - \"C83627116D2F9A744AEDC124B12973F5\"\n+vpxChecksum: \"0CA4D816EAC97D69527C668B164B0752\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/table.yml", "diff": "diff --git a/external/vpx-apache/table.yml b/external/vpx-apache/table.yml\nindex f04e1c25..2e742390 100644\n--- a/external/vpx-apache/table.yml\n+++ b/external/vpx-apache/table.yml\n@@ -1,7 +1,10 @@\n ---\n backglassBundled: true\n backglassVPSId: \"Q9Wxt1m8\"\n-backglassChecksum: \"0049B3B34AD915C72898D73456E2087C\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"0049B3B34AD915C72898D73456E2087C\"\n+  - \"2984120DEADC6181DF3CCE49E525F5A3\"\n backglassNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v55_VPX8.directb2s.zip'\"\n fps: 60\n tableNotes: \"Download 'Apache! (Taito do Brasil 1978) v600.zip'\"\n@@ -11,4 +14,7 @@ testers:\n   - \"Boris\"\n   - \"OminousOsie\"\n vpxVPSId: \"Q9Wxt1m8\"\n-vpxChecksum: \"0CA4D816EAC97D69527C668B164B0752\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"0CA4D816EAC97D69527C668B164B0752\"\n+  - \"C83627116D2F9A744AEDC124B12973F5\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/table.ini", "diff": "diff --git a/external/vpx-apache/table.ini b/external/vpx-apache/table.ini\nindex b375f885..701fa80b 100644\n--- a/external/vpx-apache/table.ini\n+++ b/external/vpx-apache/table.ini\n@@ -1,35 +1,19 @@\n+[TableOption]\n+Select LUT = 0.000000\n+Cabinet Rails = 0.000000\n+Balls per Game = 1.000000\n+\n [TableOverride]\n-ViewDTLookAt = 52.000000\n-ViewDTFOV = 32.000000\n-ViewDTLayback = 6.000000\n-ViewDTRotation = 0.000000\n-ViewDTScaleX = 1.000000\n-ViewDTScaleY = 1.000000\n-ViewDTScaleZ = 1.000000\n-ViewDTPlayerX = 0.000000\n-ViewDTPlayerY = -10.000000\n-ViewDTPlayerZ = -200.000000\n-ViewCabLookAt = 8.999996\n-ViewCabFOV = 27.000000\n-ViewCabLayback = 76.000000\n-ViewCabRotation = 90.000000\n-ViewCabScaleX = 1.000000\n-ViewCabScaleY = 1.150000\n-ViewCabScaleZ = 1.000000\n-ViewCabPlayerX = -12.276001\n-ViewCabPlayerY = 0.000000\n-ViewCabPlayerZ = -133.479996\n-ViewFSSLookAt = 52.000000\n-ViewFSSFOV = 45.000000\n-ViewFSSLayback = 0.000000\n-ViewFSSRotation = 0.000000\n-ViewFSSScaleX = 1.200000\n-ViewFSSScaleY = 1.100000\n-ViewFSSScaleZ = 1.000000\n-ViewFSSPlayerX = 0.000000\n-ViewFSSPlayerY = 30.000000\n-ViewFSSPlayerZ = -50.000000\n-ViewCabMode = 0\n+ViewCabMode = 2\n+ViewCabScaleX = 1.132334\n+ViewCabScaleY = 0.999741\n+ViewCabScaleZ = 0.869571\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.046999\n+ViewCabWindowTop = 19.202971\n+ViewCabWindowBot = 18.111271\n \n [Player]\n-FXAA = 1\n\\ No newline at end of file\n+ScreenPlayerY = 11.973153\n+ScreenPlayerZ = 89.987175\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-apache/table.yml", "diff": "diff --git a/external/vpx-apache/table.yml b/external/vpx-apache/table.yml\nindex ad9235c2..f04e1c25 100644\n--- a/external/vpx-apache/table.yml\n+++ b/external/vpx-apache/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes: \n-  - \"bass\"\n backglassBundled: true\n backglassVPSId: \"Q9Wxt1m8\"\n backglassChecksum: \"0049B3B34AD915C72898D73456E2087C\""}
+        ]
+      },
+      {
+        "hash": "b14d933a15b017fc8dfe50c926ecf5aa824dae7f",
+        "date": "2025-11-23 22:16:59 -0500",
+        "author": "evilwraith",
+        "message": "A13 fix\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-apache/dmd.png"}
+        ]
+      },
+      {
+        "hash": "39f936fcd2e53390a2ffb06d393b6d12a1aba995",
+        "date": "2025-11-23 19:13:27 -0500",
+        "author": "evilwraith",
+        "message": "Update table.yml\n\nInclude backglassBundled: true\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/table.yml", "diff": "diff --git a/external/vpx-apache/table.yml b/external/vpx-apache/table.yml\nindex 8768d450..ad9235c2 100644\n--- a/external/vpx-apache/table.yml\n+++ b/external/vpx-apache/table.yml\n@@ -1,6 +1,7 @@\n ---\n applyFixes: \n   - \"bass\"\n+backglassBundled: true\n backglassVPSId: \"Q9Wxt1m8\"\n backglassChecksum: \"0049B3B34AD915C72898D73456E2087C\"\n backglassNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v55_VPX8.directb2s.zip'\"\n"}
+        ]
+      },
+      {
+        "hash": "a85caefa461d469ff77775ac6644478daa9eae8a",
+        "date": "2025-10-08 12:12:16 -0400",
+        "author": "evilwraith",
+        "message": "Update table.yml\n\nChanged the Table note to specify the non-EM version\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/table.yml", "diff": "diff --git a/external/vpx-apache/table.yml b/external/vpx-apache/table.yml\nindex bfb8b6b2..8768d450 100644\n--- a/external/vpx-apache/table.yml\n+++ b/external/vpx-apache/table.yml\n@@ -5,7 +5,7 @@ backglassVPSId: \"Q9Wxt1m8\"\n backglassChecksum: \"0049B3B34AD915C72898D73456E2087C\"\n backglassNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v55_VPX8.directb2s.zip'\"\n fps: 60\n-tableNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v600.zip'\"\n+tableNotes: \"Download 'Apache! (Taito do Brasil 1978) v600.zip'\"\n tableVPSId: \"7ptpBtAd\"\n tagline: \"Same playfield layout as Gottlieb's 1975 'Fast Draw'.\"\n testers:\n"}
+        ]
+      },
+      {
+        "hash": "688ec61c6bd9a567e41b60eb2948b47c6652ad0f",
+        "date": "2025-09-10 12:40:08 -0400",
+        "author": "evilwraith",
+        "message": "JPSalas v600 updates\n\nCurrent as of 9/10/25. More to come.\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/table.yml", "diff": "diff --git a/external/vpx-apache/table.yml b/external/vpx-apache/table.yml\nindex d525f4ba..bfb8b6b2 100644\n--- a/external/vpx-apache/table.yml\n+++ b/external/vpx-apache/table.yml\n@@ -4,13 +4,12 @@ applyFixes:\n backglassVPSId: \"Q9Wxt1m8\"\n backglassChecksum: \"0049B3B34AD915C72898D73456E2087C\"\n backglassNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v55_VPX8.directb2s.zip'\"\n-enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n-tableNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v55_VPX8.zip'\"\n+tableNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v600.zip'\"\n tableVPSId: \"7ptpBtAd\"\n tagline: \"Same playfield layout as Gottlieb's 1975 'Fast Draw'.\"\n testers:\n   - \"Boris\"\n   - \"OminousOsie\"\n vpxVPSId: \"Q9Wxt1m8\"\n-vpxChecksum: \"9EC9CDC302A75C4E24DE019F551002B5\"\n+vpxChecksum: \"0CA4D816EAC97D69527C668B164B0752\""}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/README.md", "diff": "diff --git a/external/vpx-apache/README.md b/external/vpx-apache/README.md\nindex 632edf51..386656a2 100755\n--- a/external/vpx-apache/README.md\n+++ b/external/vpx-apache/README.md\n@@ -1,4 +1,4 @@\n-# Apache! (Taito do Brasil 1978)\n+﻿# Apache! (Taito do Brasil 1978)\n \n ![Table Preview](../../images/vpx-apache.jpg)\n \n@@ -27,6 +27,6 @@\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "9b74a68136f79c7008e9ac4ed03fc85ec264625d",
+        "date": "2025-06-14 09:39:41 +0100",
+        "author": "OminousOsie",
+        "message": "Added Dark Crystal and Death Note, and make comment better\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/table.yml", "diff": "diff --git a/external/vpx-apache/table.yml b/external/vpx-apache/table.yml\nindex b1addf63..d525f4ba 100644\n--- a/external/vpx-apache/table.yml\n+++ b/external/vpx-apache/table.yml\n@@ -4,7 +4,7 @@ applyFixes:\n backglassVPSId: \"Q9Wxt1m8\"\n backglassChecksum: \"0049B3B34AD915C72898D73456E2087C\"\n backglassNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v55_VPX8.directb2s.zip'\"\n-enabled: false # Osie: yml built in a batch, just needs testing\n+enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n tableNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v55_VPX8.zip'\"\n tableVPSId: \"7ptpBtAd\""}
+        ]
+      },
+      {
+        "hash": "32db8163361ee7d49e8112b424e8985756753714",
+        "date": "2025-06-13 12:58:38 +0100",
+        "author": "OminousOsie",
+        "message": "And added one more\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-apache/table.yml", "diff": "diff --git a/external/vpx-apache/table.yml b/external/vpx-apache/table.yml\nnew file mode 100644\nindex 00000000..b1addf63\n--- /dev/null\n+++ b/external/vpx-apache/table.yml\n@@ -0,0 +1,16 @@\n+---\n+applyFixes: \n+  - \"bass\"\n+backglassVPSId: \"Q9Wxt1m8\"\n+backglassChecksum: \"0049B3B34AD915C72898D73456E2087C\"\n+backglassNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v55_VPX8.directb2s.zip'\"\n+enabled: false # Osie: yml built in a batch, just needs testing\n+fps: 60\n+tableNotes: \"Download 'Apache! EM (Taito do Brasil 1978) v55_VPX8.zip'\"\n+tableVPSId: \"7ptpBtAd\"\n+tagline: \"Same playfield layout as Gottlieb's 1975 'Fast Draw'.\"\n+testers:\n+  - \"Boris\"\n+  - \"OminousOsie\"\n+vpxVPSId: \"Q9Wxt1m8\"\n+vpxChecksum: \"9EC9CDC302A75C4E24DE019F551002B5\"\n"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/README.md", "diff": "diff --git a/external/vpx-apache/README.md b/external/vpx-apache/README.md\nindex d7158c6c..632edf51 100755\n--- a/external/vpx-apache/README.md\n+++ b/external/vpx-apache/README.md\n@@ -26,7 +26,7 @@\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/README.md", "diff": "diff --git a/external/vpx-apache/README.md b/external/vpx-apache/README.md\nindex 4d6f3a14..d7158c6c 100755\n--- a/external/vpx-apache/README.md\n+++ b/external/vpx-apache/README.md\n@@ -26,3 +26,7 @@\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/README.md", "diff": "diff --git a/external/vpx-apache/README.md b/external/vpx-apache/README.md\nindex 88e9ef0d..4d6f3a14 100755\n--- a/external/vpx-apache/README.md\n+++ b/external/vpx-apache/README.md\n@@ -25,8 +25,4 @@\n ---\n \n ## Instructions\n-- Copy this repo folder into the \"external\" folder on your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-apache.elf\n-- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-apache\n-- Make sure any (.vpx), (.directb2s), and (.ini) files are all named the same\n "}
+        ]
+      },
+      {
+        "hash": "b649b5f0abc2a4708232721d3bb5eeb93d09a3b3",
+        "date": "2025-04-01 17:30:08 +0100",
+        "author": "OminousOsie",
+        "message": "Updated the last files\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/README.md", "diff": "diff --git a/external/vpx-apache/README.md b/external/vpx-apache/README.md\nindex 69c36863..88e9ef0d 100755\n--- a/external/vpx-apache/README.md\n+++ b/external/vpx-apache/README.md\n@@ -1,6 +1,6 @@\n # Apache! (Taito do Brasil 1978)\n \n-![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-apache.jpg)\n+![Table Preview](../../images/vpx-apache.jpg)\n \n ---\n \n@@ -29,3 +29,4 @@\n - Add your personalized launcher.elf and rename it to vpx-apache.elf\n - Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-apache\n - Make sure any (.vpx), (.directb2s), and (.ini) files are all named the same\n+"}
+        ]
+      },
+      {
+        "hash": "c39b72d777813f034464622e74569d472b437b43",
+        "date": "2025-03-20 00:43:11 -0500",
+        "author": "MoxAssault",
+        "message": "Additional README Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/README.md", "diff": "diff --git a/external/vpx-apache/README.md b/external/vpx-apache/README.md\nindex cda0f786..69c36863 100755\n--- a/external/vpx-apache/README.md\n+++ b/external/vpx-apache/README.md\n@@ -2,30 +2,29 @@\n \n ![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-apache.jpg)\n \n-Table\n+---\n \n-Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13885)\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13885) | 5.5.0 | [JPSalas](https://www.vpforums.org/index.php?showuser=277) |\n+| B2S | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13891) | 1.0 | [editoy](https://www.vpforums.org/index.php?showuser=80626) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | N/A | N/A | N/A |\n \n-DirectB2S\n+**Tested by:** [Boris]\n \n-Authors: [editoy](https://www.vpforums.org/index.php?showuser=80626)  \n-Version: 1.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13891)\n-\n-Tested by: Boris\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 60 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy this repo folder into the \"external\" folder on your USB drive\n - Add your personalized launcher.elf and rename it to vpx-apache.elf\n - Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-apache"}
+        ]
+      },
+      {
+        "hash": "9570e31c7e62f6f1178a35db3eef82051dab78e9",
+        "date": "2025-03-18 17:36:20 -0300",
+        "author": "Bla1ze",
+        "message": "Launcher Image Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/launcher.png"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-apache/pinmame/cfg/.gitkeep.txt", "diff": "diff --git a/external/vpx-apache/pinmame/cfg/.gitkeep.txt b/external/vpx-apache/pinmame/cfg/.gitkeep.txt\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-apache/pinmame/ini/.gitkeep.txt", "diff": "diff --git a/external/vpx-apache/pinmame/ini/.gitkeep.txt b/external/vpx-apache/pinmame/ini/.gitkeep.txt\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-apache/pinmame/nvram/.gitkeep.txt", "diff": "diff --git a/external/vpx-apache/pinmame/nvram/.gitkeep.txt b/external/vpx-apache/pinmame/nvram/.gitkeep.txt\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-apache/vpx-apache.xml", "diff": "diff --git a/external/vpx-apache/vpx-apache.xml b/external/vpx-apache/vpx-apache.xml\ndeleted file mode 100755\nindex acf10d26..00000000\n--- a/external/vpx-apache/vpx-apache.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-\t<name>Apache! (Taito do Brasil 1978)</name>\n-</root>\n\\ No newline at end of file"},
+          {"status": "R-from", "path": "external/vpx-apache/Apache! (Taito do Brasil - 1978) v55_VPX8.ini->external/vpx-apache/table.ini", "diff": "diff --git a/external/vpx-apache/Apache! (Taito do Brasil - 1978) v55_VPX8.ini b/external/vpx-apache/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-apache/Apache! (Taito do Brasil - 1978) v55_VPX8.ini\nrename to external/vpx-apache/table.ini"},
+          {"status": "R-from", "path": "external/vpx-apache/vpx-apache.png->external/vpx-apache/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-apache/Apache! (Taito do Brasil - 1978) v55_VPX8.ini->external/vpx-apache/table.ini", "diff": "diff --git a/external/vpx-apache/Apache! (Taito do Brasil - 1978) v55_VPX8.ini b/external/vpx-apache/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-apache/Apache! (Taito do Brasil - 1978) v55_VPX8.ini\nrename to external/vpx-apache/table.ini"},
+          {"status": "R-to", "path": "external/vpx-apache/vpx-apache.png->external/vpx-apache/launcher.png"}
+        ]
+      },
+      {
+        "hash": "dee643c904a4f979c34f33a7cbd32090c346704a",
+        "date": "2025-02-06 02:54:08 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Removing unneeded ROM step from vpx-apache",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/README.md", "diff": "diff --git a/external/vpx-apache/README.md b/external/vpx-apache/README.md\nindex fc763353..cda0f786 100755\n--- a/external/vpx-apache/README.md\n+++ b/external/vpx-apache/README.md\n@@ -30,4 +30,3 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Add your personalized launcher.elf and rename it to vpx-apache.elf\n - Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-apache\n - Make sure any (.vpx), (.directb2s), and (.ini) files are all named the same\n-- Download the ROM listed above and copy it to vpx-apache\\pinmame\\roms -- DO NOT UNZIP!\n"}
+        ]
+      },
+      {
+        "hash": "d120cffa3c0adadf15138c2ade9b46a5eda2e0e8",
+        "date": "2025-02-06 02:51:06 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-apache",
+        "files": [
+          {"status": "M", "path": "external/vpx-apache/README.md", "diff": "diff --git a/external/vpx-apache/README.md b/external/vpx-apache/README.md\nindex 050bd923..fc763353 100755\n--- a/external/vpx-apache/README.md\n+++ b/external/vpx-apache/README.md\n@@ -3,13 +3,15 @@\n ![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-apache.jpg)\n \n Table\n+\n Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0 \n+Version: 5.5.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13885)\n \n DirectB2S\n-Authors: [editoy](https://www.vpforums.org/index.php?showuser=80626)\n-Version: 1.0\n+\n+Authors: [editoy](https://www.vpforums.org/index.php?showuser=80626)  \n+Version: 1.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13891)\n \n Tested by: Boris\n@@ -26,6 +28,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy this repo folder into the \"external\" folder on your USB drive\n - Add your personalized launcher.elf and rename it to vpx-apache.elf\n-- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-apache/\n-- Make sure any (.vpx), (.directb2s), (.vbs), and (.ini) files are all named the same\n-- Download the ROM listed above and copy it to vpx-apache\\pinmame\\roms. DO NOT UNZIP!\n+- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-apache\n+- Make sure any (.vpx), (.directb2s), and (.ini) files are all named the same\n+- Download the ROM listed above and copy it to vpx-apache\\pinmame\\roms -- DO NOT UNZIP!\n"}
+        ]
+      },
+      {
+        "hash": "3d41e2686357c7db83cc99648c9cad5591ad1091",
+        "date": "2025-02-03 10:04:55 -0500",
+        "author": "Brandon",
+        "message": "Add Apache!\n\nadd vpx-apache, update root readme, add preview image\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-apache/Apache! (Taito do Brasil - 1978) v55_VPX8.ini", "diff": "diff --git a/external/vpx-apache/Apache! (Taito do Brasil - 1978) v55_VPX8.ini b/external/vpx-apache/Apache! (Taito do Brasil - 1978) v55_VPX8.ini\nnew file mode 100755\nindex 00000000..b375f885\n--- /dev/null\n+++ b/external/vpx-apache/Apache! (Taito do Brasil - 1978) v55_VPX8.ini\t\n@@ -0,0 +1,35 @@\n+[TableOverride]\n+ViewDTLookAt = 52.000000\n+ViewDTFOV = 32.000000\n+ViewDTLayback = 6.000000\n+ViewDTRotation = 0.000000\n+ViewDTScaleX = 1.000000\n+ViewDTScaleY = 1.000000\n+ViewDTScaleZ = 1.000000\n+ViewDTPlayerX = 0.000000\n+ViewDTPlayerY = -10.000000\n+ViewDTPlayerZ = -200.000000\n+ViewCabLookAt = 8.999996\n+ViewCabFOV = 27.000000\n+ViewCabLayback = 76.000000\n+ViewCabRotation = 90.000000\n+ViewCabScaleX = 1.000000\n+ViewCabScaleY = 1.150000\n+ViewCabScaleZ = 1.000000\n+ViewCabPlayerX = -12.276001\n+ViewCabPlayerY = 0.000000\n+ViewCabPlayerZ = -133.479996\n+ViewFSSLookAt = 52.000000\n+ViewFSSFOV = 45.000000\n+ViewFSSLayback = 0.000000\n+ViewFSSRotation = 0.000000\n+ViewFSSScaleX = 1.200000\n+ViewFSSScaleY = 1.100000\n+ViewFSSScaleZ = 1.000000\n+ViewFSSPlayerX = 0.000000\n+ViewFSSPlayerY = 30.000000\n+ViewFSSPlayerZ = -50.000000\n+ViewCabMode = 0\n+\n+[Player]\n+FXAA = 1\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-apache/README.md", "diff": "diff --git a/external/vpx-apache/README.md b/external/vpx-apache/README.md\nnew file mode 100755\nindex 00000000..050bd923\n--- /dev/null\n+++ b/external/vpx-apache/README.md\n@@ -0,0 +1,31 @@\n+# Apache! (Taito do Brasil 1978)\n+\n+![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-apache.jpg)\n+\n+Table\n+Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n+Version: 5.5.0 \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13885)\n+\n+DirectB2S\n+Authors: [editoy](https://www.vpforums.org/index.php?showuser=80626)\n+Version: 1.0\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13891)\n+\n+Tested by: Boris\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 60 |\n+\n+## Instructions\n+\n+- Copy this repo folder into the \"external\" folder on your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-apache.elf\n+- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-apache/\n+- Make sure any (.vpx), (.directb2s), (.vbs), and (.ini) files are all named the same\n+- Download the ROM listed above and copy it to vpx-apache\\pinmame\\roms. DO NOT UNZIP!"},
+          {"status": "A", "path": "external/vpx-apache/pinmame/cfg/.gitkeep.txt", "diff": "diff --git a/external/vpx-apache/pinmame/cfg/.gitkeep.txt b/external/vpx-apache/pinmame/cfg/.gitkeep.txt\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-apache/pinmame/ini/.gitkeep.txt", "diff": "diff --git a/external/vpx-apache/pinmame/ini/.gitkeep.txt b/external/vpx-apache/pinmame/ini/.gitkeep.txt\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-apache/pinmame/nvram/.gitkeep.txt", "diff": "diff --git a/external/vpx-apache/pinmame/nvram/.gitkeep.txt b/external/vpx-apache/pinmame/nvram/.gitkeep.txt\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-apache/vpx-apache.png"},
+          {"status": "A", "path": "external/vpx-apache/vpx-apache.xml", "diff": "diff --git a/external/vpx-apache/vpx-apache.xml b/external/vpx-apache/vpx-apache.xml\nnew file mode 100755\nindex 00000000..acf10d26\n--- /dev/null\n+++ b/external/vpx-apache/vpx-apache.xml\n@@ -0,0 +1,3 @@\n+<root>\n+\t<name>Apache! (Taito do Brasil 1978)</name>\n+</root>\n\\ No newline at end of file\n"}
+        ]
+      }
+    ]
+}

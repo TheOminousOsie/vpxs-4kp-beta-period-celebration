@@ -1,0 +1,63 @@
+{
+    "commit_count": 6,
+    "commits": [
+      {
+        "hash": "15e649ade9c3d5d9a35b0fd7f2b6f2075dce9b44",
+        "date": "2026-09-07 23:44:19 -0400",
+        "author": "pointdablame",
+        "message": "Launchers - Logo Updates (#2202)\n\nThis updates the following launchers to the new Legends Unchained logo:  Addams Family JPs, Al's Garage Band, Amazon Hunt, Andromeda, Apollo 13, Asterix, Attack from Mars JPs, Avengers JPs, Baby Pac Man, Back to the Future, Bad Cats, Banzai Run, Batman, Batman Forever, Batman The Dark Knight",
+        "files": [
+          {"status": "M", "path": "external/vpx-babypacman/launcher.png"}
+        ]
+      },
+      {
+        "hash": "0c79778866f792acc013e62474778fabce70d997",
+        "date": "2026-08-18 11:36:32 -0400",
+        "author": "n-i-x",
+        "message": "move button labels to buttons.ini\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-babypacman/buttons.ini", "diff": "diff --git a/external/vpx-babypacman/buttons.ini b/external/vpx-babypacman/buttons.ini\nnew file mode 100644\nindex 00000000..ae986970\n--- /dev/null\n+++ b/external/vpx-babypacman/buttons.ini\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+dpadUp = \"Up\"\n+dpadDown = \"Down\"\n+dpadLeft = \"Left\"\n+dpadRight = \"Right\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start / Menu Select\"\n+; menu = \"Menu\""}
+        ]
+      },
+      {
+        "hash": "213359f87074fc29b9096adedf5e5bba415cb4e5",
+        "date": "2026-07-20 17:55:21 -0400",
+        "author": "evilwraith",
+        "message": "Granny and the Gators\n\nUpdated VPXS required\nVPinballX_GL-10.8.0-5c6e9e6-1784580735-alp4k\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-babypacman/launcher.cfg", "diff": "diff --git a/external/vpx-babypacman/launcher.cfg b/external/vpx-babypacman/launcher.cfg\nnew file mode 100644\nindex 00000000..a7669c4d\n--- /dev/null\n+++ b/external/vpx-babypacman/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+dpadUp = \"Up\"\n+dpadDown = \"Down\"\n+dpadLeft = \"Left\"\n+dpadRight = \"Right\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start / Menu Select\"\n+; menu = \"Menu\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "a9c16d030baa945d4febdad9cd992e5f2996a5b0",
+        "date": "2026-07-17 23:26:00 -0400",
+        "author": "evilwraith",
+        "message": "Baby Pac fix\n\nDisable Fallout\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-babypacman/table.ini", "diff": "diff --git a/external/vpx-babypacman/table.ini b/external/vpx-babypacman/table.ini\nindex dd79a128..8c03d843 100644\n--- a/external/vpx-babypacman/table.ini\n+++ b/external/vpx-babypacman/table.ini\n@@ -5,13 +5,10 @@ PinMAMEVideoDisplayY = 0.095000\n PinMAMEVideoDisplayWidth = 0.425000\n PinMAMEVideoDisplayHeight = 0.800000\n \n-\n [Player]\n JoyPlungerKey = 0\n-JoyLMagnaSave = 14\n-JoyRMagnaSave = 15\n-JoyLTiltKey = 0\n-JoyRTiltKey = 0\n+JoyLMagnaSave = 0\n+JoyRMagnaSave = 0\n JoyFrameCount = 4\n JoyPMCoinDoor = 0\n JoyCustom1Key                   = 200"},
+          {"status": "M", "path": "external/vpx-babypacman/table.yml", "diff": "diff --git a/external/vpx-babypacman/table.yml b/external/vpx-babypacman/table.yml\nindex dce5174a..c7436276 100644\n--- a/external/vpx-babypacman/table.yml\n+++ b/external/vpx-babypacman/table.yml\n@@ -7,5 +7,5 @@ romVPSId: \"Uc-96fOM\"\n tableVPSId: \"wx8CpS-t\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"8b398fc0a9e41568a95aa69689388b3a\"\n-vpxVPSId: \"Nvwl4Sch3n\"\n\\ No newline at end of file\n+vpxChecksum: \"d82a6dfec7117638ab98924bd63fb6ef\"\n+vpxVPSId: \"ruMrSKqj\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "e89f79f0d6463c611e6341b4aeac9ff46d44398e",
+        "date": "2026-07-17 03:06:06 -0400",
+        "author": "evilwraith",
+        "message": "Fix Baby Pac-Man b2sid\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-babypacman/table.yml", "diff": "diff --git a/external/vpx-babypacman/table.yml b/external/vpx-babypacman/table.yml\nindex 2d510dae..dce5174a 100644\n--- a/external/vpx-babypacman/table.yml\n+++ b/external/vpx-babypacman/table.yml\n@@ -1,11 +1,11 @@\n ---\n backglassChecksum: \"e6231d220fba78a229e6af8a60965e55\"\n-backglassVPSId: \"ux2OJjUz\"\n+backglassVPSId: \"9xTRD5p1df\"\n fps: 60\n romChecksum: \"6816359197e29565e9a240c6b8c18146\"\n romVPSId: \"Uc-96fOM\"\n tableVPSId: \"wx8CpS-t\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"d82a6dfec7117638ab98924bd63fb6ef\"\n-vpxVPSId: \"ruMrSKqj\"\n\\ No newline at end of file\n+vpxChecksum: \"8b398fc0a9e41568a95aa69689388b3a\"\n+vpxVPSId: \"Nvwl4Sch3n\"\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-babypacman/README.md", "diff": "diff --git a/external/vpx-babypacman/README.md b/external/vpx-babypacman/README.md\nnew file mode 100644\nindex 00000000..7e503a00\n--- /dev/null\n+++ b/external/vpx-babypacman/README.md\n@@ -0,0 +1,60 @@\n+# Baby Pac-Man (Bally 1982)\n+\n+![Table Preview](../../images/Nvwl4Sch3n-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Wraith\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Baby Pac-Man (Bally 1982)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "A", "path": "external/vpx-babypacman/launcher.png"},
+          {"status": "A", "path": "external/vpx-babypacman/table.ini", "diff": "diff --git a/external/vpx-babypacman/table.ini b/external/vpx-babypacman/table.ini\nnew file mode 100644\nindex 00000000..dd79a128\n--- /dev/null\n+++ b/external/vpx-babypacman/table.ini\n@@ -0,0 +1,35 @@\n+[Standalone]\n+PinMAMEVideoDisplay = 1\n+PinMAMEVideoDisplayX = 0.275000\n+PinMAMEVideoDisplayY = 0.095000\n+PinMAMEVideoDisplayWidth = 0.425000\n+PinMAMEVideoDisplayHeight = 0.800000\n+\n+\n+[Player]\n+JoyPlungerKey = 0\n+JoyLMagnaSave = 14\n+JoyRMagnaSave = 15\n+JoyLTiltKey = 0\n+JoyRTiltKey = 0\n+JoyFrameCount = 4\n+JoyPMCoinDoor = 0\n+JoyCustom1Key                   = 200\n+JoyCustom2Key                   = 208\n+JoyCustom3Key                   = 203\n+JoyCustom4Key                   = 205\n+JoyCustom1                      = 6\n+JoyCustom2                      = 3\n+JoyCustom3                      = 8\n+JoyCustom4                      = 9\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 0.810000\n+ViewCabScaleY = 0.990000\n+ViewCabScaleZ = 0.859642\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 43.352974\n+ViewCabWindowBot = 42.445274\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-babypacman/table.yml", "diff": "diff --git a/external/vpx-babypacman/table.yml b/external/vpx-babypacman/table.yml\nnew file mode 100644\nindex 00000000..2d510dae\n--- /dev/null\n+++ b/external/vpx-babypacman/table.yml\n@@ -0,0 +1,11 @@\n+---\n+backglassChecksum: \"e6231d220fba78a229e6af8a60965e55\"\n+backglassVPSId: \"ux2OJjUz\"\n+fps: 60\n+romChecksum: \"6816359197e29565e9a240c6b8c18146\"\n+romVPSId: \"Uc-96fOM\"\n+tableVPSId: \"wx8CpS-t\"\n+testers:\n+  - \"Wraith\"\n+vpxChecksum: \"d82a6dfec7117638ab98924bd63fb6ef\"\n+vpxVPSId: \"ruMrSKqj\"\n\\ No newline at end of file"}
+        ]
+      }
+    ]
+}

@@ -1,0 +1,408 @@
+{
+    "commit_count": 42,
+    "commits": [
+      {
+        "hash": "0c79778866f792acc013e62474778fabce70d997",
+        "date": "2026-08-18 11:36:32 -0400",
+        "author": "n-i-x",
+        "message": "move button labels to buttons.ini\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-thelostworldjp/buttons.ini", "diff": "diff --git a/external/vpx-thelostworldjp/buttons.ini b/external/vpx-thelostworldjp/buttons.ini\nnew file mode 100644\nindex 00000000..889037b3\n--- /dev/null\n+++ b/external/vpx-thelostworldjp/buttons.ini\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+dpadUp = \"Launch / Smart Missile\"\n+; dpadDown = \"Down\"\n+; dpadLeft = \"Left\"\n+;padRight = \"Right\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+;start = \"Start / Menu Select\"\n+; menu = \"Menu\""}
+        ]
+      },
+      {
+        "hash": "2ab62c360d52ada0545e2cac6801810c79f84235",
+        "date": "2026-08-17 16:31:38 -0400",
+        "author": "evilwraith",
+        "message": "FPS updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.yml", "diff": "diff --git a/external/vpx-thelostworldjp/table.yml b/external/vpx-thelostworldjp/table.yml\nindex e3016b7a..732503be 100644\n--- a/external/vpx-thelostworldjp/table.yml\n+++ b/external/vpx-thelostworldjp/table.yml\n@@ -1,7 +1,7 @@\n ---\n backglassVPSId: \"yoOQCG70LN\"\n backglassChecksum: \"633d99e0951d3972f3b27f5acbb37ae4\"\n-fps: 48\n+fps: 60\n romVPSId: \"MwNXNR5C\"\n romChecksum: \"c1f08d90e478e14f7a6c99ea66d5a67b\"\n tableVPSId: \"YjT7iujj\"\n"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.yml", "diff": "diff --git a/external/vpx-thelostworldjp/table.yml b/external/vpx-thelostworldjp/table.yml\nindex 771102ca..e3016b7a 100644\n--- a/external/vpx-thelostworldjp/table.yml\n+++ b/external/vpx-thelostworldjp/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassVPSId: \"yoOQCG70LN\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"633d99e0951d3972f3b27f5acbb37ae4\"\n-  - \"A73ADCC532CE51A22CDFFEFA671FA284\"\n-fps: 60\n+backglassChecksum: \"633d99e0951d3972f3b27f5acbb37ae4\"\n+fps: 48\n romVPSId: \"MwNXNR5C\"\n romChecksum: \"c1f08d90e478e14f7a6c99ea66d5a67b\"\n tableVPSId: \"YjT7iujj\"\n@@ -13,8 +10,5 @@ testers:\n   - \"mcap\"\n   - \"OminousOsie\"\n vpxVPSId: \"dDnr4zRQ\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"184E6FFC7BAF42C886D33E446168432F\"\n-  - \"4AC2F4A8E2FD4C31920516FDA71E3C6B\"\n+vpxChecksum: \"184E6FFC7BAF42C886D33E446168432F\"\n tableNotes: \"Download v600.zip\""}
+        ]
+      },
+      {
+        "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
+        "date": "2026-07-17 19:48:12 -0400",
+        "author": "evilwraith",
+        "message": "FPS updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.yml", "diff": "diff --git a/external/vpx-thelostworldjp/table.yml b/external/vpx-thelostworldjp/table.yml\nindex 6fcfc4c7..771102ca 100644\n--- a/external/vpx-thelostworldjp/table.yml\n+++ b/external/vpx-thelostworldjp/table.yml\n@@ -4,7 +4,7 @@ backglassArchiveFormat: \"zip\"\n backglassChecksum:\n   - \"633d99e0951d3972f3b27f5acbb37ae4\"\n   - \"A73ADCC532CE51A22CDFFEFA671FA284\"\n-fps: 48\n+fps: 60\n romVPSId: \"MwNXNR5C\"\n romChecksum: \"c1f08d90e478e14f7a6c99ea66d5a67b\"\n tableVPSId: \"YjT7iujj\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.yml", "diff": "diff --git a/external/vpx-thelostworldjp/table.yml b/external/vpx-thelostworldjp/table.yml\nindex e3016b7a..6fcfc4c7 100644\n--- a/external/vpx-thelostworldjp/table.yml\n+++ b/external/vpx-thelostworldjp/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"yoOQCG70LN\"\n-backglassChecksum: \"633d99e0951d3972f3b27f5acbb37ae4\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"633d99e0951d3972f3b27f5acbb37ae4\"\n+  - \"A73ADCC532CE51A22CDFFEFA671FA284\"\n fps: 48\n romVPSId: \"MwNXNR5C\"\n romChecksum: \"c1f08d90e478e14f7a6c99ea66d5a67b\"\n@@ -10,5 +13,8 @@ testers:\n   - \"mcap\"\n   - \"OminousOsie\"\n vpxVPSId: \"dDnr4zRQ\"\n-vpxChecksum: \"184E6FFC7BAF42C886D33E446168432F\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"184E6FFC7BAF42C886D33E446168432F\"\n+  - \"4AC2F4A8E2FD4C31920516FDA71E3C6B\"\n tableNotes: \"Download v600.zip\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.ini", "diff": "diff --git a/external/vpx-thelostworldjp/table.ini b/external/vpx-thelostworldjp/table.ini\nindex dc3efc09..35916945 100644\n--- a/external/vpx-thelostworldjp/table.ini\n+++ b/external/vpx-thelostworldjp/table.ini\n@@ -1,12 +1,12 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.255725\n-ViewCabScaleY = 1.056334\n-ViewCabScaleZ = 1.046199\n+ViewCabScaleX = 1.217893\n+ViewCabScaleY = 0.984976\n+ViewCabScaleZ = 0.974841\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.896600\n-ViewCabVOfs = -11.865502\n-ViewCabWindowTop = 389.749908\n+ViewCabHOfs = 0.039600\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 369.813019\n ViewCabWindowBot = 92.594238\n ToneMapper = 0\n \n@@ -20,5 +20,8 @@ ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n \n-[Standalone]\n-WindowRenderMode = 0\n\\ No newline at end of file\n+[TableOption]\n+Select LUT = 0.000000\n+Desktop DMD = 0.000000\n+Cabinet Rails = 1.000000\n+Side Blades = 1.000000\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "688ec61c6bd9a567e41b60eb2948b47c6652ad0f",
+        "date": "2025-09-10 12:40:08 -0400",
+        "author": "evilwraith",
+        "message": "JPSalas v600 updates\n\nCurrent as of 9/10/25. More to come.\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.yml", "diff": "diff --git a/external/vpx-thelostworldjp/table.yml b/external/vpx-thelostworldjp/table.yml\nindex 263c70ed..e3016b7a 100644\n--- a/external/vpx-thelostworldjp/table.yml\n+++ b/external/vpx-thelostworldjp/table.yml\n@@ -10,5 +10,5 @@ testers:\n   - \"mcap\"\n   - \"OminousOsie\"\n vpxVPSId: \"dDnr4zRQ\"\n-vpxChecksum: \"5a26bca9249fac1005c66b461d6c720c\"\n-tableNotes: \"Download v55_VPX8.zip\"\n+vpxChecksum: \"184E6FFC7BAF42C886D33E446168432F\"\n+tableNotes: \"Download v600.zip\""}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/README.md", "diff": "diff --git a/external/vpx-thelostworldjp/README.md b/external/vpx-thelostworldjp/README.md\nindex 9027e5b1..32db1a36 100644\n--- a/external/vpx-thelostworldjp/README.md\n+++ b/external/vpx-thelostworldjp/README.md\n@@ -50,7 +50,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n <br>"}
+        ]
+      },
+      {
+        "hash": "216d6523aec9402ff2aab34dccd00ff5bb369852",
+        "date": "2025-06-13 16:28:54 +0100",
+        "author": "OminousOsie",
+        "message": "Updated nvram\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "1181adb17ec266f149c32633542c6165d4b6544f",
+        "date": "2025-06-13 14:27:34 +0100",
+        "author": "OminousOsie",
+        "message": "Added initals for JPLWs\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "5877ecd48eb45d9f6b1f6e14db77bc1cefb7c7a2",
+        "date": "2025-06-11 15:54:18 +0100",
+        "author": "OminousOsie",
+        "message": "Added Lost World (Sega)\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.ini", "diff": "diff --git a/external/vpx-thelostworldjp/table.ini b/external/vpx-thelostworldjp/table.ini\nindex ee633fba..dc3efc09 100644\n--- a/external/vpx-thelostworldjp/table.ini\n+++ b/external/vpx-thelostworldjp/table.ini\n@@ -1,5 +1,24 @@\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.255725\n+ViewCabScaleY = 1.056334\n+ViewCabScaleZ = 1.046199\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.896600\n+ViewCabVOfs = -11.865502\n+ViewCabWindowTop = 389.749908\n+ViewCabWindowBot = 92.594238\n+ToneMapper = 0\n+\n [Player]\n-JoyAddCredit2Key = 1\n+ScreenPlayerZ = 95.337433\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.257235\n+ScreenPlayerY = 16.333141\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n \n [Standalone]\n WindowRenderMode = 0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "43e06a78576a8d7069d79fee2da8885f7e817af7",
+        "date": "2025-04-30 11:28:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed BOM\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/README.md", "diff": "diff --git a/external/vpx-thelostworldjp/README.md b/external/vpx-thelostworldjp/README.md\nindex 2b188ac6..9027e5b1 100644\n--- a/external/vpx-thelostworldjp/README.md\n+++ b/external/vpx-thelostworldjp/README.md\n@@ -1,4 +1,4 @@\n-﻿﻿# Lost World Jurassic Park, JP's The (Sega 1997)\n+﻿# Lost World Jurassic Park, JP's The (Sega 1997)\n \n ![Table Preview](../../images/vpx-jps-the-lost-world-jurassic-park-preview.jpg)\n "}
+        ]
+      },
+      {
+        "hash": "5424a8122d5eb54371b2435888f2d337df05dc43",
+        "date": "2025-04-30 11:23:31 +0100",
+        "author": "OminousOsie",
+        "message": "Added lloydbraun to the wiz team\n\nAdded lloydbraun to the wiz team\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/README.md", "diff": "diff --git a/external/vpx-thelostworldjp/README.md b/external/vpx-thelostworldjp/README.md\nindex 8c5a3526..2b188ac6 100644\n--- a/external/vpx-thelostworldjp/README.md\n+++ b/external/vpx-thelostworldjp/README.md\n@@ -47,7 +47,7 @@ __*We hope you enjoy!!*__\n \n *The VPXS 4KP Wizard team:*\n <pre>\n-- n-i-x            - Mox\n+- n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n - mrandromeda      - SScorpio         - TechZombie"}
+        ]
+      },
+      {
+        "hash": "dd22ab13c5107d2ba8a0da72a03e3fdcd59ba7c7",
+        "date": "2025-04-30 09:12:42 +0100",
+        "author": "OminousOsie",
+        "message": "Added match percent\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "376fe36eaf72c115af7369b7303f2e6bec9f54d3",
+        "date": "2025-04-25 20:34:50 +0100",
+        "author": "OminousOsie",
+        "message": "Added match award back to tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "b973990d571c9991ca955d2eeb85c5a34b017816",
+        "date": "2025-04-16 18:57:39 +0100",
+        "author": "OminousOsie",
+        "message": "Added button layouts\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-thelostworldjp/launcher.cfg", "diff": "diff --git a/external/vpx-thelostworldjp/launcher.cfg b/external/vpx-thelostworldjp/launcher.cfg\nnew file mode 100644\nindex 00000000..025a8468\n--- /dev/null\n+++ b/external/vpx-thelostworldjp/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+dpadUp = \"Launch / Smart Missile\"\n+; dpadDown = \"Down\"\n+; dpadLeft = \"Left\"\n+;padRight = \"Right\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+;start = \"Start / Menu Select\"\n+; menu = \"Menu\"\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "01c7e252332b06a5a09e3bfaa60664142a54042f",
+        "date": "2025-04-16 10:44:26 +0100",
+        "author": "OminousOsie",
+        "message": "Added the full team to the readme\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/README.md", "diff": "diff --git a/external/vpx-thelostworldjp/README.md b/external/vpx-thelostworldjp/README.md\nindex 9c6df890..8c5a3526 100644\n--- a/external/vpx-thelostworldjp/README.md\n+++ b/external/vpx-thelostworldjp/README.md\n@@ -1,4 +1,4 @@\n-﻿# Lost World Jurassic Park, JP's The (Sega 1997)\n+﻿﻿# Lost World Jurassic Park, JP's The (Sega 1997)\n \n ![Table Preview](../../images/vpx-jps-the-lost-world-jurassic-park-preview.jpg)\n \n@@ -41,7 +41,17 @@ This table is available through the Table Manager Wizard, which makes installati\n \n Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n <br>\n <br>"}
+        ]
+      },
+      {
+        "hash": "ea6d17c32b6201508759ff21067bbebd5da41606",
+        "date": "2025-04-08 22:51:49 -0400",
+        "author": "pointdablame",
+        "message": "Updated Wizard wave 1 images\n\nUpdating images to new standard resolutions and schemes, and  adding Legends Unchained logo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/launcher.png"}
+        ]
+      },
+      {
+        "hash": "6c2a220adac96b5ed5b84500eba9d819bca0cc87",
+        "date": "2025-04-08 15:22:54 +0100",
+        "author": "OminousOsie",
+        "message": "Italic the tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/README.md", "diff": "diff --git a/external/vpx-thelostworldjp/README.md b/external/vpx-thelostworldjp/README.md\nindex ff3453ec..9c6df890 100644\n--- a/external/vpx-thelostworldjp/README.md\n+++ b/external/vpx-thelostworldjp/README.md\n@@ -35,7 +35,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Lost World Jurassic Park, JP's The`**\n 5.  Follow the on-screen instructions to download and upload the required files\n-6. \"First its Oooh, ahhh... Then later there's running & screaming!\"\n+6. *\"First its Oooh, ahhh... Then later there's running & screaming!\"*\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "ec024f091d11b71aef0144fb31e7d1b020df9223",
+        "date": "2025-04-08 15:09:40 +0100",
+        "author": "OminousOsie",
+        "message": "Update to readmes to readd tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/README.md", "diff": "diff --git a/external/vpx-thelostworldjp/README.md b/external/vpx-thelostworldjp/README.md\nindex e56309fa..ff3453ec 100644\n--- a/external/vpx-thelostworldjp/README.md\n+++ b/external/vpx-thelostworldjp/README.md\n@@ -1,4 +1,4 @@\n-# Lost World Jurassic Park, JP's The (Sega 1997)\n+﻿# Lost World Jurassic Park, JP's The (Sega 1997)\n \n ![Table Preview](../../images/vpx-jps-the-lost-world-jurassic-park-preview.jpg)\n \n@@ -35,6 +35,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Lost World Jurassic Park, JP's The`**\n 5.  Follow the on-screen instructions to download and upload the required files\n+6. \"First its Oooh, ahhh... Then later there's running & screaming!\"\n \n <br>\n "}
+        ]
+      },
+      {
+        "hash": "f817d4e8e77fcf89b8bfdd920df358a899e8b33d",
+        "date": "2025-04-08 14:29:30 +0100",
+        "author": "OminousOsie",
+        "message": "Readme updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/README.md", "diff": "diff --git a/external/vpx-thelostworldjp/README.md b/external/vpx-thelostworldjp/README.md\nindex db134631..e56309fa 100644\n--- a/external/vpx-thelostworldjp/README.md\n+++ b/external/vpx-thelostworldjp/README.md\n@@ -1,30 +1,49 @@\n-# JP's The Lost World Jurassic Park (Sega 1997)\n+# Lost World Jurassic Park, JP's The (Sega 1997)\n \n ![Table Preview](../../images/vpx-jps-the-lost-world-jurassic-park-preview.jpg)\n \n-Authors: [jpsalas](https://www.vpforums.org/index.php?s=543a5ca562cc33a89debe8ace8834f1e&showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15072)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 1.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/20374-the-lost-world-jurassic-park-sega-1997-b2s-full-dmd/)\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n \n-ROM\n+<br>\n \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1075)\n+**VPXS 4KP Testers:**\n+  - mcap\n+  - OminousOsie 🌸\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Lost World Jurassic Park, JP's The`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-## Instructions\n+__*We hope you enjoy!!   - the VPXS 4KP team!*__\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-thelostworldjp.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.yml", "diff": "diff --git a/external/vpx-thelostworldjp/table.yml b/external/vpx-thelostworldjp/table.yml\nindex 8b6c1327..263c70ed 100644\n--- a/external/vpx-thelostworldjp/table.yml\n+++ b/external/vpx-thelostworldjp/table.yml\n@@ -7,7 +7,7 @@ romChecksum: \"c1f08d90e478e14f7a6c99ea66d5a67b\"\n tableVPSId: \"YjT7iujj\"\n tagline: \"First its Oooh, ahhh... Then later there's running & screaming!\"\n testers:\n-  - \"mcap10\"\n+  - \"mcap\"\n   - \"OminousOsie\"\n vpxVPSId: \"dDnr4zRQ\"\n vpxChecksum: \"5a26bca9249fac1005c66b461d6c720c\"\n"}
+        ]
+      },
+      {
+        "hash": "b7ddf1a4c5980b09e9529df567f8fabfa352ff4d",
+        "date": "2025-04-05 16:27:29 +0100",
+        "author": "OminousOsie",
+        "message": "Updated JP Lost World\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "87cae9cd5bf355d8d03d06f3d98490e529b62e88",
+        "date": "2025-04-05 01:12:11 -0500",
+        "author": "Silentkat4000",
+        "message": "Free Play Updates 2\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "873acf58dd15fcab15f4c4639ce97b3aadbb4440",
+        "date": "2025-04-03 13:24:13 +0100",
+        "author": "OminousOsie",
+        "message": "updated lost world to freeplay + message\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "7cb3f58a5a59f6e4d2ee1df61b64592600285e5d",
+        "date": "2025-03-31 23:04:21 -0500",
+        "author": "Silentkat4000",
+        "message": "free play updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "f4fd3d2eaf622c9b82a605a04be7c6b53cbd84ff",
+        "date": "2025-03-28 10:21:52 +0000",
+        "author": "OminousOsie",
+        "message": "Added wizard yml owners to testers list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.yml", "diff": "diff --git a/external/vpx-thelostworldjp/table.yml b/external/vpx-thelostworldjp/table.yml\nindex 6bf61925..8b6c1327 100644\n--- a/external/vpx-thelostworldjp/table.yml\n+++ b/external/vpx-thelostworldjp/table.yml\n@@ -8,6 +8,7 @@ tableVPSId: \"YjT7iujj\"\n tagline: \"First its Oooh, ahhh... Then later there's running & screaming!\"\n testers:\n   - \"mcap10\"\n+  - \"OminousOsie\"\n vpxVPSId: \"dDnr4zRQ\"\n vpxChecksum: \"5a26bca9249fac1005c66b461d6c720c\"\n tableNotes: \"Download v55_VPX8.zip\"\n"}
+        ]
+      },
+      {
+        "hash": "3613be8f201d5d198224d3d42f5cb3051ce08b19",
+        "date": "2025-03-26 18:12:29 +0000",
+        "author": "OminousOsie",
+        "message": "updated table nvrams\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "dab6bc4f76187a4094b7533641f25020be69568f",
+        "date": "2025-03-26 09:35:40 +0000",
+        "author": "OminousOsie",
+        "message": "Added colour to the 2 JP table dmds\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-thelostworldjp/pinmame.ini", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame.ini b/external/vpx-thelostworldjp/pinmame.ini\nnew file mode 100644\nindex 00000000..02eefb4b\n--- /dev/null\n+++ b/external/vpx-thelostworldjp/pinmame.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+cheat=0\n+sound=1\n+dmd_red=7\n+dmd_green=130\n+dmd_blue=36\n+rol=0\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.ini", "diff": "diff --git a/external/vpx-thelostworldjp/table.ini b/external/vpx-thelostworldjp/table.ini\nindex ebca29e2..ee633fba 100644\n--- a/external/vpx-thelostworldjp/table.ini\n+++ b/external/vpx-thelostworldjp/table.ini\n@@ -1,2 +1,5 @@\n [Player]\n-JoyAddCredit2Key = 1\n\\ No newline at end of file\n+JoyAddCredit2Key = 1\n+\n+[Standalone]\n+WindowRenderMode = 0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "266821b169409b0dc1c37f85941fc2b36d39254d",
+        "date": "2025-03-24 01:26:39 +0000",
+        "author": "OminousOsie",
+        "message": "yml formatting\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.yml", "diff": "diff --git a/external/vpx-thelostworldjp/table.yml b/external/vpx-thelostworldjp/table.yml\nindex d56a6e67..6bf61925 100644\n--- a/external/vpx-thelostworldjp/table.yml\n+++ b/external/vpx-thelostworldjp/table.yml\n@@ -10,4 +10,4 @@ testers:\n   - \"mcap10\"\n vpxVPSId: \"dDnr4zRQ\"\n vpxChecksum: \"5a26bca9249fac1005c66b461d6c720c\"\n-tableNotes: \"Download v55_VPX8.zip\"\n\\ No newline at end of file\n+tableNotes: \"Download v55_VPX8.zip\""}
+        ]
+      },
+      {
+        "hash": "f97b737805c3710c4206ec673c16ae88e53e1f52",
+        "date": "2025-03-24 01:18:39 +0000",
+        "author": "OminousOsie",
+        "message": "Added margin to all testers in ymls\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.yml", "diff": "diff --git a/external/vpx-thelostworldjp/table.yml b/external/vpx-thelostworldjp/table.yml\nindex 175d922f..d56a6e67 100644\n--- a/external/vpx-thelostworldjp/table.yml\n+++ b/external/vpx-thelostworldjp/table.yml\n@@ -7,7 +7,7 @@ romChecksum: \"c1f08d90e478e14f7a6c99ea66d5a67b\"\n tableVPSId: \"YjT7iujj\"\n tagline: \"First its Oooh, ahhh... Then later there's running & screaming!\"\n testers:\n-- \"mcap10\"\n+  - \"mcap10\"\n vpxVPSId: \"dDnr4zRQ\"\n vpxChecksum: \"5a26bca9249fac1005c66b461d6c720c\"\n tableNotes: \"Download v55_VPX8.zip\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "f4ebb62edbedd26e0f0a7cfd41bb03198ab09fa4",
+        "date": "2025-03-22 21:59:08 +0000",
+        "author": "OminousOsie",
+        "message": "Updated launcher.png and added cftbl yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/launcher.png"}
+        ]
+      },
+      {
+        "hash": "a7b24a627af793e52d6a783a37135840c86d9f5e",
+        "date": "2025-03-22 18:58:53 +0000",
+        "author": "OminousOsie",
+        "message": "Added updated launcher images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/launcher.png"}
+        ]
+      },
+      {
+        "hash": "992aafdbe15b179caf2d4bb4e816c86aad95052b",
+        "date": "2025-03-21 18:53:59 -0300",
+        "author": "Bla1ze",
+        "message": "Launcher Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/launcher.png"}
+        ]
+      },
+      {
+        "hash": "766e974cc1e5d89128f0d74e92cae5d65b339584",
+        "date": "2025-03-21 09:29:49 +0000",
+        "author": "OminousOsie",
+        "message": "Updated coin amounts, and added wheel for Lost world\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-thelostworldjp/table.ini", "diff": "diff --git a/external/vpx-thelostworldjp/table.ini b/external/vpx-thelostworldjp/table.ini\nnew file mode 100644\nindex 00000000..ebca29e2\n--- /dev/null\n+++ b/external/vpx-thelostworldjp/table.ini\n@@ -0,0 +1,2 @@\n+[Player]\n+JoyAddCredit2Key = 1\n\\ No newline at end of file\n"},
+          {"status": "M", "path": "external/vpx-thelostworldjp/launcher.png"}
+        ]
+      },
+      {
+        "hash": "53d6f9de08d98dfd49702619e7120a75fd7831b8",
+        "date": "2025-03-20 22:14:02 +0000",
+        "author": "OminousOsie",
+        "message": "Added quotes to wizard json values\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/table.yml", "diff": "diff --git a/external/vpx-thelostworldjp/table.yml b/external/vpx-thelostworldjp/table.yml\nindex cd7b7a11..175d922f 100644\n--- a/external/vpx-thelostworldjp/table.yml\n+++ b/external/vpx-thelostworldjp/table.yml\n@@ -1,13 +1,13 @@\n ---\n-backglassVPSId: yoOQCG70LN\n-backglassChecksum: 633d99e0951d3972f3b27f5acbb37ae4\n+backglassVPSId: \"yoOQCG70LN\"\n+backglassChecksum: \"633d99e0951d3972f3b27f5acbb37ae4\"\n fps: 48\n-romVPSId: MwNXNR5C\n-romChecksum: c1f08d90e478e14f7a6c99ea66d5a67b\n-tableVPSId: YjT7iujj\n+romVPSId: \"MwNXNR5C\"\n+romChecksum: \"c1f08d90e478e14f7a6c99ea66d5a67b\"\n+tableVPSId: \"YjT7iujj\"\n tagline: \"First its Oooh, ahhh... Then later there's running & screaming!\"\n testers:\n-- mcap10\n-vpxVPSId: dDnr4zRQ\n-vpxChecksum: 5a26bca9249fac1005c66b461d6c720c\n+- \"mcap10\"\n+vpxVPSId: \"dDnr4zRQ\"\n+vpxChecksum: \"5a26bca9249fac1005c66b461d6c720c\"\n tableNotes: \"Download v55_VPX8.zip\"\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "2601e00b7109ff94dd5f43ecefd1d22afe34098c",
+        "date": "2025-03-19 20:30:24 +0000",
+        "author": "OminousOsie",
+        "message": "Added JP Lost world table yml\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-thelostworldjp/table.yml", "diff": "diff --git a/external/vpx-thelostworldjp/table.yml b/external/vpx-thelostworldjp/table.yml\nnew file mode 100644\nindex 00000000..cd7b7a11\n--- /dev/null\n+++ b/external/vpx-thelostworldjp/table.yml\n@@ -0,0 +1,13 @@\n+---\n+backglassVPSId: yoOQCG70LN\n+backglassChecksum: 633d99e0951d3972f3b27f5acbb37ae4\n+fps: 48\n+romVPSId: MwNXNR5C\n+romChecksum: c1f08d90e478e14f7a6c99ea66d5a67b\n+tableVPSId: YjT7iujj\n+tagline: \"First its Oooh, ahhh... Then later there's running & screaming!\"\n+testers:\n+- mcap10\n+vpxVPSId: dDnr4zRQ\n+vpxChecksum: 5a26bca9249fac1005c66b461d6c720c\n+tableNotes: \"Download v55_VPX8.zip\"\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-thelostworldjp/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/cfg/.gitkeep b/external/vpx-thelostworldjp/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-thelostworldjp/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/cfg/default.cfg b/external/vpx-thelostworldjp/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-thelostworldjp/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-thelostworldjp/pinmame/cfg/jplstw22.cfg", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/cfg/jplstw22.cfg b/external/vpx-thelostworldjp/pinmame/cfg/jplstw22.cfg\ndeleted file mode 100644\nindex df348841..00000000\nBinary files a/external/vpx-thelostworldjp/pinmame/cfg/jplstw22.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-thelostworldjp/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/ini/.gitkeep b/external/vpx-thelostworldjp/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-thelostworldjp/pinmame/ini/jplstw22.ini", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/ini/jplstw22.ini b/external/vpx-thelostworldjp/pinmame/ini/jplstw22.ini\ndeleted file mode 100644\nindex a84ffc3b..00000000\n--- a/external/vpx-thelostworldjp/pinmame/ini/jplstw22.ini\n+++ /dev/null\n@@ -1,7 +0,0 @@\n-[settings]\n-rol=0\n-sound=1\n-cheat=0\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-thelostworldjp/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/nvram/.gitkeep b/external/vpx-thelostworldjp/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-thelostworldjp/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/roms/.gitkeep b/external/vpx-thelostworldjp/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-thelostworldjp/vpx-thelostworldjp.xml", "diff": "diff --git a/external/vpx-thelostworldjp/vpx-thelostworldjp.xml b/external/vpx-thelostworldjp/vpx-thelostworldjp.xml\ndeleted file mode 100644\nindex 55055cc0..00000000\n--- a/external/vpx-thelostworldjp/vpx-thelostworldjp.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Lost World Jurassic Park, The</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-thelostworldjp/pinmame/nvram/jplstw22.nv->external/vpx-thelostworldjp/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-thelostworldjp/vpx-thelostworldjp.png->external/vpx-thelostworldjp/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-thelostworldjp/pinmame/nvram/jplstw22.nv->external/vpx-thelostworldjp/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-thelostworldjp/vpx-thelostworldjp.png->external/vpx-thelostworldjp/launcher.png"}
+        ]
+      },
+      {
+        "hash": "959e7e1fca8a7a120a54eefa9ac64911aa3a070a",
+        "date": "2025-01-26 14:13:10 -0600",
+        "author": "bhhobb",
+        "message": "Update README.md preview image",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/README.md", "diff": "diff --git a/external/vpx-thelostworldjp/README.md b/external/vpx-thelostworldjp/README.md\nindex ebd9eb1e..db134631 100644\n--- a/external/vpx-thelostworldjp/README.md\n+++ b/external/vpx-thelostworldjp/README.md\n@@ -1,6 +1,6 @@\n # JP's The Lost World Jurassic Park (Sega 1997)\n \n-![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=114081&id=15072&full=1)\n+![Table Preview](../../images/vpx-jps-the-lost-world-jurassic-park-preview.jpg)\n \n Authors: [jpsalas](https://www.vpforums.org/index.php?s=543a5ca562cc33a89debe8ace8834f1e&showuser=277)  \n Version: 5.5.0  \n@@ -27,4 +27,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-thelostworldjp.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file\n+- Download the table and directb2s versions listed above and copy them into this folder\n"}
+        ]
+      },
+      {
+        "hash": "d2d5b29ad2e94da89d3e99769075093b20fd9481",
+        "date": "2025-01-25 17:20:56 -0600",
+        "author": "HereForGear",
+        "message": "Updated/tested jpsalas v5.5 readme\n\nGrand Prix\nThe Lost World Jurassic Park\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/README.md", "diff": "diff --git a/external/vpx-thelostworldjp/README.md b/external/vpx-thelostworldjp/README.md\nindex c421d9bb..ebd9eb1e 100644\n--- a/external/vpx-thelostworldjp/README.md\n+++ b/external/vpx-thelostworldjp/README.md\n@@ -3,7 +3,7 @@\n ![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=114081&id=15072&full=1)\n \n Authors: [jpsalas](https://www.vpforums.org/index.php?s=543a5ca562cc33a89debe8ace8834f1e&showuser=277)  \n-Version: 4.3.0  \n+Version: 5.5.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15072)\n \n DirectB2S\n@@ -21,7 +21,7 @@ Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=\n Minimum VPX Standalone build: 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 47 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n \n ## Instructions\n \n"}
+        ]
+      },
+      {
+        "hash": "6ca0dc65c4e9c8b2b06802b592806d73fb814850",
+        "date": "2024-08-06 10:14:52 -0500",
+        "author": "Mike",
+        "message": "mass update of readme's\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-thelostworldjp/README.md", "diff": "diff --git a/external/vpx-thelostworldjp/README.md b/external/vpx-thelostworldjp/README.md\nindex e984a73b..c421d9bb 100644\n--- a/external/vpx-thelostworldjp/README.md\n+++ b/external/vpx-thelostworldjp/README.md\n@@ -16,9 +16,6 @@ ROM\n \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1075)\n \n-SHA: \n-MD5: \n-\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013"}
+        ]
+      },
+      {
+        "hash": "25a375a27adf3f3ea2ad28f623cd980d55abdabf",
+        "date": "2024-07-25 17:09:59 -0400",
+        "author": "n-i-x",
+        "message": "Delete external/vpx-thelostworldjp/VPReg.ini",
+        "files": [
+          {"status": "D", "path": "external/vpx-thelostworldjp/VPReg.ini", "diff": "diff --git a/external/vpx-thelostworldjp/VPReg.ini b/external/vpx-thelostworldjp/VPReg.ini\ndeleted file mode 100644\nindex 9de8674d..00000000\n--- a/external/vpx-thelostworldjp/VPReg.ini\n+++ /dev/null\n@@ -1,10 +0,0 @@\n-[jpsdeadpool]\n-HighScore1=100000\n-HighScore1Name=JSM\n-HighScore2=100000\n-HighScore2Name=CTH\n-HighScore3=100000\n-HighScore3Name=NIX\n-HighScore4=100000\n-HighScore4Name=VPX\n-Credits=0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "ab2565ce4f4ce3dcabc3b0a1e9ad54d1bceef677",
+        "date": "2024-07-25 12:14:07 -0500",
+        "author": "Mike",
+        "message": "Adding16 Tables\n\nAdding vpx-avengersclassic\nAdding vpx-cyclone\nAdding vpx-fridaythe13th\nAdding vpx-grandprix\nAdding vpx-indianajones\nAdding vpx-itpinballmadness\nAdding vpx-johnnymnemonic\nAdding vpx-lethalweapon3\nAdding vpx-lordoftherings\nAdding vpx-seawitch\nAdding vpx-spiderman\nAdding vpx-taf\nAdding vpx-terminator3\nAdding vpx-thelostworldjp\nAdding vpx-thewalkingdead\nAdding vpx-whoanellie\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-thelostworldjp/README.md", "diff": "diff --git a/external/vpx-thelostworldjp/README.md b/external/vpx-thelostworldjp/README.md\nnew file mode 100644\nindex 00000000..e984a73b\n--- /dev/null\n+++ b/external/vpx-thelostworldjp/README.md\n@@ -0,0 +1,33 @@\n+# JP's The Lost World Jurassic Park (Sega 1997)\n+\n+![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=114081&id=15072&full=1)\n+\n+Authors: [jpsalas](https://www.vpforums.org/index.php?s=543a5ca562cc33a89debe8ace8834f1e&showuser=277)  \n+Version: 4.3.0  \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15072)\n+\n+DirectB2S\n+\n+Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+Version: 1.0  \n+Download: [VP Universe](https://vpuniverse.com/files/file/20374-the-lost-world-jurassic-park-sega-1997-b2s-full-dmd/)\n+\n+ROM\n+\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1075)\n+\n+SHA: \n+MD5: \n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 47 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-thelostworldjp.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-thelostworldjp/VPReg.ini", "diff": "diff --git a/external/vpx-thelostworldjp/VPReg.ini b/external/vpx-thelostworldjp/VPReg.ini\nnew file mode 100644\nindex 00000000..9de8674d\n--- /dev/null\n+++ b/external/vpx-thelostworldjp/VPReg.ini\n@@ -0,0 +1,10 @@\n+[jpsdeadpool]\n+HighScore1=100000\n+HighScore1Name=JSM\n+HighScore2=100000\n+HighScore2Name=CTH\n+HighScore3=100000\n+HighScore3Name=NIX\n+HighScore4=100000\n+HighScore4Name=VPX\n+Credits=0\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-thelostworldjp/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/cfg/.gitkeep b/external/vpx-thelostworldjp/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-thelostworldjp/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/cfg/default.cfg b/external/vpx-thelostworldjp/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-thelostworldjp/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-thelostworldjp/pinmame/cfg/jplstw22.cfg", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/cfg/jplstw22.cfg b/external/vpx-thelostworldjp/pinmame/cfg/jplstw22.cfg\nnew file mode 100644\nindex 00000000..df348841\nBinary files /dev/null and b/external/vpx-thelostworldjp/pinmame/cfg/jplstw22.cfg differ"},
+          {"status": "A", "path": "external/vpx-thelostworldjp/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/ini/.gitkeep b/external/vpx-thelostworldjp/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-thelostworldjp/pinmame/ini/jplstw22.ini", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/ini/jplstw22.ini b/external/vpx-thelostworldjp/pinmame/ini/jplstw22.ini\nnew file mode 100644\nindex 00000000..a84ffc3b\n--- /dev/null\n+++ b/external/vpx-thelostworldjp/pinmame/ini/jplstw22.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+rol=0\n+sound=1\n+cheat=0\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-thelostworldjp/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/nvram/.gitkeep b/external/vpx-thelostworldjp/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-thelostworldjp/pinmame/nvram/jplstw22.nv"},
+          {"status": "A", "path": "external/vpx-thelostworldjp/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-thelostworldjp/pinmame/roms/.gitkeep b/external/vpx-thelostworldjp/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-thelostworldjp/vpx-thelostworldjp.png"},
+          {"status": "A", "path": "external/vpx-thelostworldjp/vpx-thelostworldjp.xml", "diff": "diff --git a/external/vpx-thelostworldjp/vpx-thelostworldjp.xml b/external/vpx-thelostworldjp/vpx-thelostworldjp.xml\nnew file mode 100644\nindex 00000000..55055cc0\n--- /dev/null\n+++ b/external/vpx-thelostworldjp/vpx-thelostworldjp.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Lost World Jurassic Park, The</name>\n+</root>"}
+        ]
+      }
+    ]
+}

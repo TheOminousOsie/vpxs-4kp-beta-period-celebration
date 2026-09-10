@@ -1,0 +1,65 @@
+{
+    "commit_count": 6,
+    "commits": [
+      {
+        "hash": "5357d79b6120bd091edad7705fdef8267845cf02",
+        "date": "2026-09-04 19:12:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed double quote\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-acdcprovault/table.yml", "diff": "diff --git a/external/vpx-acdcprovault/table.yml b/external/vpx-acdcprovault/table.yml\nindex 4ccc7e9c..887a76d0 100644\n--- a/external/vpx-acdcprovault/table.yml\n+++ b/external/vpx-acdcprovault/table.yml\n@@ -12,7 +12,7 @@ diffChecksum: \"150FF959A7E18D846CA647E23966321D\"\n diffNotes: \"Download 'AC-DC Pro Vault-1.0 Lighting Bug Fix.dif'\"\n diffVPSId: \"xk_hRDrZhp\"\n tagline: >-\n-   I'll give you black sensations up and down your spine... If you're into evil, you're a friend of mine\"\n+   I'll give you black sensations up and down your spine... If you're into evil, you're a friend of mine\n fps: 60\n romChecksum: \"E571F0E41C93990620B9D3254CEBA0F4\"\n romNotes: \"Download 'AC/DC Pro 1.70.0 Game Code'\"\n"}
+        ]
+      },
+      {
+        "hash": "a5ccc7524cd5aa7bdd633e55927f866cc37f554d",
+        "date": "2026-09-04 19:06:24 +0100",
+        "author": "OminousOsie",
+        "message": "Added tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-acdcprovault/table.yml", "diff": "diff --git a/external/vpx-acdcprovault/table.yml b/external/vpx-acdcprovault/table.yml\nindex 68c2ea15..4ccc7e9c 100644\n--- a/external/vpx-acdcprovault/table.yml\n+++ b/external/vpx-acdcprovault/table.yml\n@@ -11,6 +11,8 @@ coloredROMVPSId: \"WmF0x5DiQL\"\n diffChecksum: \"150FF959A7E18D846CA647E23966321D\"\n diffNotes: \"Download 'AC-DC Pro Vault-1.0 Lighting Bug Fix.dif'\"\n diffVPSId: \"xk_hRDrZhp\"\n+tagline: >-\n+   I'll give you black sensations up and down your spine... If you're into evil, you're a friend of mine\"\n fps: 60\n romChecksum: \"E571F0E41C93990620B9D3254CEBA0F4\"\n romNotes: \"Download 'AC/DC Pro 1.70.0 Game Code'\"\n"}
+        ]
+      },
+      {
+        "hash": "9d61c64b29c8273b5d8e637cefdd7ce4c65f81a8",
+        "date": "2026-09-04 10:20:05 +0100",
+        "author": "OminousOsie",
+        "message": "Updated BG to Full DMD one\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-acdcprovault/table.ini", "diff": "diff --git a/external/vpx-acdcprovault/table.ini b/external/vpx-acdcprovault/table.ini\nindex 82c6b3dd..f2967ef7 100644\n--- a/external/vpx-acdcprovault/table.ini\n+++ b/external/vpx-acdcprovault/table.ini\n@@ -14,4 +14,21 @@ ViewCabWindowTop = 313.108154\n ViewCabWindowBot = 113.015381\n \n [Standalone]\n-POVLinkTableScaleXY = 0\n\\ No newline at end of file\n+POVLinkTableScaleXY = 0\n+B2SDMDAutoPlaceTarget = DMD\n+B2SDMDAutoPlaceOffsetX = 205\n+B2SDMDAutoPlaceOffsetY = 15\n+B2SDMDAutoPlaceScaleLinked = 0\n+B2SDMDAutoPlaceScale = 2.170000\n+B2SDMDAutoPlaceScaleY = 2.030000\n+DMDDotTintPreset = 0\n+DMDDotTintR = 255\n+DMDDotTintG = 82\n+DMDDotTintB = 45\n+DMDDotSize = 0.750000\n+DMDDotSharpness = 0.900000\n+DMDDotBrightness = 1.000000\n+DMDDotUnlitPreset = 0\n+DMDDotUnlitColorR = 0\n+DMDDotUnlitColorG = 0\n+DMDDotUnlitColorB = 0\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-acdcprovault/table.yml", "diff": "diff --git a/external/vpx-acdcprovault/table.yml b/external/vpx-acdcprovault/table.yml\nindex a7d5d3cb..68c2ea15 100644\n--- a/external/vpx-acdcprovault/table.yml\n+++ b/external/vpx-acdcprovault/table.yml\n@@ -1,7 +1,10 @@\n ---\n-backglassChecksum: \"8C7ED6DB3C38E8D7A534A588D9659E25\"\n-backglassNotes: \"Download version 1.0\"\n-backglassVPSId: \"ilcSqv68JY\"\n+backglassAuthorsOverride:\n+  - \"hauntfreaks\"\n+backglassChecksum: \"433E38ECEADBB71E1B3E32259FB3A718\"\n+backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/s84WMRNZAW_1721302723703.webp\"\n+backglassNotes: \"Download 'ACDC (hells bells) (Stern 2013) full dmd.zip'\"\n+backglassUrlOverride: \"https://vpuniverse.com/files/file/10932-acdc-hells-bells-stern-2013-b2s-full-dmd/\"\n coloredROMChecksum: \"D301B63DE4753D0292A6395D6649A708\"\n coloredROMNotes: \"Download version 1.01\"\n coloredROMVPSId: \"WmF0x5DiQL\"\n"}
+        ]
+      },
+      {
+        "hash": "c7d8bd9c55adfd880258a986c2e1cd8e254dcf8d",
+        "date": "2026-09-04 09:56:02 +0100",
+        "author": "OminousOsie",
+        "message": "Updated to view mode 2\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-acdcprovault/table.ini", "diff": "diff --git a/external/vpx-acdcprovault/table.ini b/external/vpx-acdcprovault/table.ini\nindex dfc1c1de..82c6b3dd 100644\n--- a/external/vpx-acdcprovault/table.ini\n+++ b/external/vpx-acdcprovault/table.ini\n@@ -1,20 +1,17 @@\n [Player]\n-BallTrailStrength = 0.490196\n-AlphaRampAccuracy = 2\n-OverrideTableEmissionScale = 0\n+ScreenPlayerY = 15.000000\n+ScreenPlayerZ = 90.000000\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.762430\n-ViewCabScaleY = 1.020854\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 12.969238\n-ViewCabPlayerY = 0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n+ViewCabMode = 2\n+ViewCabScaleX = 1.240000\n+ViewCabScaleY = 1.000000\n+ViewCabScaleZ = 0.859642\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 313.108154\n+ViewCabWindowBot = 113.015381\n \n [Standalone]\n POVLinkTableScaleXY = 0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "39cc365b61ba1fa9f6218af67d94619be4e416c0",
+        "date": "2026-09-03 20:27:51 +0100",
+        "author": "OminousOsie",
+        "message": "Updated VBS to the diff one\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-acdcprovault/table.vbs", "diff": "diff --git a/external/vpx-acdcprovault/table.vbs b/external/vpx-acdcprovault/table.vbs\nindex e923f112..5855bf5d 100644\n--- a/external/vpx-acdcprovault/table.vbs\n+++ b/external/vpx-acdcprovault/table.vbs\n@@ -62,6 +62,7 @@\n 'RustyCardores for the Surround Sound MOD;\n 'rysr, Peter J and javier for the help with the pics.\n 'the VPDevTeam for the freaking amazing VPX\n+'MisterCoffee: Lighting bug fix\n \n Option explicit\n Randomize\n@@ -99,7 +100,7 @@ If CustomDMD OR (NOT DesktopMode AND NOT CustomDMD) Then UseVPMDMD = False\t\t'hid\n If DesktopMode AND NOT CustomDMD Then UseVPMDMD = True\t\t\t\t\t\t\t'shows the internal VPMDMD when in desktop mode and color ROM is not in use\n Scoretext.visible = NOT CustomDMD\t\t\t\t\t\t\t\t\t\t\t\t'hides the textbox when using the color ROM\n \n-LoadVPM \"02800000\", \"Sam.VBS\", 3.54\n+LoadVPM \"03060000\", \"Sam.VBS\", 3.54\n \n '********************\n 'Standard definitions\n@@ -120,6 +121,7 @@ Const SCoin = \"fx_coin\"\n '\t\t\t\t\t\t INIT TABLE\n '************************************************************************\n \n+\n Dim bsTrough, bsTEject, PlungerIM\n \n Sub ACDC_Init\n@@ -575,12 +577,12 @@ Sub UpdateGi(nr,enabled)\n \t\tIf enabled Then\n \t\t\tDOF 103, DOFOn\n \t\t\tACDC.ColorGradeImage=\"ColorGrade_on\"\n-\t\t\tFor Each ii in BandMembersPoster: ii.IntensityScale=1:Next\n-\t\t\tFor each ii in GI_Red: ii.state=1:Next\n-\t\t\tFor each ii in GI_White: ii.state=1:Next\n-\t\t\tFor each ii in GI_Blue: ii.state=1:Next\n-\t\t\tFor Each ii in BLRLights: ii.IntensityScale=1:Next\n-\t\t\tFor Each bulb in BLBLights: bulb.IntensityScale=1:Next\n+\t\t\tFor Each ii in BandMembersPoster: ii.IntensityScale=0.6:Next\n+\t\t\tFor each ii in GI_Red: ii.state=0.6:Next\n+\t\t\tFor each ii in GI_White: ii.state=0.4:Next\n+\t\t\tFor each ii in GI_Blue: ii.state=0.6:Next\n+\t\t\tFor Each ii in BLRLights: ii.IntensityScale=0.4:Next\n+\t\t\tFor Each bulb in BLBLights: bulb.IntensityScale=0.4:Next\n \t\t\tbulb1.BlendDisableLighting = 8\n \t\t\tbulb2.BlendDisableLighting = 8\n \t\t\tbulb3.BlendDisableLighting = 8\n@@ -881,11 +883,11 @@ End Sub\n Sub RGBLED (object,red,green,blue)\n \tIf TypeName(object) = \"Light\" Then\n \t\tobject.color = RGB(0,0,0)\n-\t\tobject.colorfull = RGB(2.5*red,2.5*green,2.5*blue)\n+\t\tobject.colorfull = RGB(0.25*red,0.25*green,0.25*blue)\n \t\tobject.state=1\n \tElseIf TypeName(object) = \"Flasher\" Then\n-\t\tobject.color = RGB(2.5*red,2.5*green,2.5*blue)\n-\t\tobject.IntensityScale = 1\n+\t\tobject.color = RGB(0.25*red,0.25*green,0.25*blue)\n+\t\tobject.IntensityScale = 0.25\n \tEnd If\n End Sub\n \n"}
+        ]
+      },
+      {
+        "hash": "d10f8e673521b735c4cd5b9eb01f8a3c0162133a",
+        "date": "2026-09-03 20:07:35 +0100",
+        "author": "OminousOsie",
+        "message": "Updated diff again\n",
+        "files": [
+          {"status": "R-to", "path": "external/vpx-acdcpro/README.md->external/vpx-acdcprovault/README.md", "diff": "diff --git a/external/vpx-acdcpro/README.md b/external/vpx-acdcprovault/README.md\nsimilarity index 100%\nrename from external/vpx-acdcpro/README.md\nrename to external/vpx-acdcprovault/README.md"},
+          {"status": "R-to", "path": "external/vpx-acdcpro/launcher.png->external/vpx-acdcprovault/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-acdcpro/nvram.nv->external/vpx-acdcprovault/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-acdcpro/table.ini->external/vpx-acdcprovault/table.ini", "diff": "diff --git a/external/vpx-acdcpro/table.ini b/external/vpx-acdcprovault/table.ini\nsimilarity index 100%\nrename from external/vpx-acdcpro/table.ini\nrename to external/vpx-acdcprovault/table.ini"},
+          {"status": "R-to", "path": "external/vpx-acdcpro/table.vbs->external/vpx-acdcprovault/table.vbs", "diff": "diff --git a/external/vpx-acdcpro/table.vbs b/external/vpx-acdcprovault/table.vbs\nsimilarity index 100%\nrename from external/vpx-acdcpro/table.vbs\nrename to external/vpx-acdcprovault/table.vbs"},
+          {"status": "R-to", "path": "external/vpx-acdcpro/table.yml->external/vpx-acdcprovault/table.yml", "diff": "diff --git a/external/vpx-acdcpro/table.yml b/external/vpx-acdcprovault/table.yml\nsimilarity index 82%\nrename from external/vpx-acdcpro/table.yml\nrename to external/vpx-acdcprovault/table.yml\nindex 9101195b..a7d5d3cb 100644\n--- a/external/vpx-acdcpro/table.yml\n+++ b/external/vpx-acdcprovault/table.yml\n@@ -5,6 +5,9 @@ backglassVPSId: \"ilcSqv68JY\"\n coloredROMChecksum: \"D301B63DE4753D0292A6395D6649A708\"\n coloredROMNotes: \"Download version 1.01\"\n coloredROMVPSId: \"WmF0x5DiQL\"\n+diffChecksum: \"150FF959A7E18D846CA647E23966321D\"\n+diffNotes: \"Download 'AC-DC Pro Vault-1.0 Lighting Bug Fix.dif'\"\n+diffVPSId: \"xk_hRDrZhp\"\n fps: 60\n romChecksum: \"E571F0E41C93990620B9D3254CEBA0F4\"\n romNotes: \"Download 'AC/DC Pro 1.70.0 Game Code'\"\n"}
+        ]
+      }
+    ]
+}

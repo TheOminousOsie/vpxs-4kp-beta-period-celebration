@@ -1,0 +1,89 @@
+{
+    "commit_count": 9,
+    "commits": [
+      {
+        "hash": "cbf957fc081e8ed656ee97e9f401c0e144f0c3e4",
+        "date": "2026-09-09 14:01:14 -0400",
+        "author": "evilwraith",
+        "message": "Update Bob Cuspe art\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bobcuspe/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bobcuspe/table.yml", "diff": "diff --git a/external/vpx-bobcuspe/table.yml b/external/vpx-bobcuspe/table.yml\nindex 1f53feba..57130096 100644\n--- a/external/vpx-bobcuspe/table.yml\n+++ b/external/vpx-bobcuspe/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassBundled: true\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"AB4AF0466BD9B5F85953AA7CA678326A\"\n-  - \"48F962B283A958D4BA18A200C60ED225\"\n+backglassChecksum: \"AB4AF0466BD9B5F85953AA7CA678326A\"\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/mFMtQFfnE4_1757621847294.webp\"\n backglassNotes: \"Download Bob Cuspe (Original 2025).directb2s.zip\"\n@@ -14,8 +11,5 @@ tableVPSId: \"0RtVShGUU9\"\n tagline: \"'Radical empathy is punk as hell'\"\n testers:\n   - \"evilwraith\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"F9A341843EA8667C7837021E32677783\"\n-  - \"17AB5770534CC7336648BF0668A495C1\"\n+vpxChecksum: \"F9A341843EA8667C7837021E32677783\"\n vpxVPSId: \"mFMtQFfnE4\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bobcuspe/table.yml", "diff": "diff --git a/external/vpx-bobcuspe/table.yml b/external/vpx-bobcuspe/table.yml\nindex 57130096..1f53feba 100644\n--- a/external/vpx-bobcuspe/table.yml\n+++ b/external/vpx-bobcuspe/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassBundled: true\n-backglassChecksum: \"AB4AF0466BD9B5F85953AA7CA678326A\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"AB4AF0466BD9B5F85953AA7CA678326A\"\n+  - \"48F962B283A958D4BA18A200C60ED225\"\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/mFMtQFfnE4_1757621847294.webp\"\n backglassNotes: \"Download Bob Cuspe (Original 2025).directb2s.zip\"\n@@ -11,5 +14,8 @@ tableVPSId: \"0RtVShGUU9\"\n tagline: \"'Radical empathy is punk as hell'\"\n testers:\n   - \"evilwraith\"\n-vpxChecksum: \"F9A341843EA8667C7837021E32677783\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"F9A341843EA8667C7837021E32677783\"\n+  - \"17AB5770534CC7336648BF0668A495C1\"\n vpxVPSId: \"mFMtQFfnE4\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bobcuspe/table.ini", "diff": "diff --git a/external/vpx-bobcuspe/table.ini b/external/vpx-bobcuspe/table.ini\nindex 75976cee..a406e63d 100644\n--- a/external/vpx-bobcuspe/table.ini\n+++ b/external/vpx-bobcuspe/table.ini\n@@ -1,10 +1,20 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.183776\n-ViewCabScaleY = 1.035883\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.101621\n+ViewCabScaleY = 0.994574\n+ViewCabScaleZ = 0.897219\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -30.318106\n-ViewCabWindowTop = 147.970810\n-ViewCabWindowBot = 83.953270\n\\ No newline at end of file\n+ViewCabWindowTop = 86.550819\n+ViewCabWindowBot = 0.614279\n+ViewCabVOfs = 0.008214\n+\n+[TableOption]\n+Select LUT = 0.000000\n+Cabinet Rails = 0.000000\n+\n+[Player]\n+ScreenPlayerY = 15.343555\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-bobcuspe/table.yml", "diff": "diff --git a/external/vpx-bobcuspe/table.yml b/external/vpx-bobcuspe/table.yml\nindex 82f66095..57130096 100644\n--- a/external/vpx-bobcuspe/table.yml\n+++ b/external/vpx-bobcuspe/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes:\n-  - \"bass\"\n backglassBundled: true\n backglassChecksum: \"AB4AF0466BD9B5F85953AA7CA678326A\"\n # yamllint disable-line rule:line-length"}
+        ]
+      },
+      {
+        "hash": "dc947ae75cd6d71ab87d062c6398ae875a067757",
+        "date": "2025-10-14 10:37:51 +0100",
+        "author": "OminousOsie",
+        "message": "Added readme for bob\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-bobcuspe/README.md", "diff": "diff --git a/external/vpx-bobcuspe/README.md b/external/vpx-bobcuspe/README.md\nnew file mode 100644\nindex 00000000..ee30a0e7\n--- /dev/null\n+++ b/external/vpx-bobcuspe/README.md\n@@ -0,0 +1,60 @@\n+# Bob Cuspe (Original 2025)\n+\n+![Table Preview](../../images/mFMtQFfnE4-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - evilwraith\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Bob Cuspe (Original 2025)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"'Radical empathy is punk as hell'\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>\n"}
+        ]
+      },
+      {
+        "hash": "a8d7f62e2bfc4650d8e88af1a5dd3604a078895f",
+        "date": "2025-10-14 10:36:21 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes of fireball tables + image for bob\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bobcuspe/table.yml", "diff": "diff --git a/external/vpx-bobcuspe/table.yml b/external/vpx-bobcuspe/table.yml\nindex 0d060927..82f66095 100644\n--- a/external/vpx-bobcuspe/table.yml\n+++ b/external/vpx-bobcuspe/table.yml\n@@ -3,6 +3,8 @@ applyFixes:\n   - \"bass\"\n backglassBundled: true\n backglassChecksum: \"AB4AF0466BD9B5F85953AA7CA678326A\"\n+# yamllint disable-line rule:line-length\n+backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/mFMtQFfnE4_1757621847294.webp\"\n backglassNotes: \"Download Bob Cuspe (Original 2025).directb2s.zip\"\n fps: 60\n romChecksum: \"5B1623F9A662809461917CC78C85D80E\""}
+        ]
+      },
+      {
+        "hash": "35ef487a9995fd76c273dbe2cf6cc42852bda348",
+        "date": "2025-10-13 09:52:33 -0400",
+        "author": "evilwraith",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-bobcuspe/table.yml", "diff": "diff --git a/external/vpx-bobcuspe/table.yml b/external/vpx-bobcuspe/table.yml\nindex e48a6f97..0d060927 100644\n--- a/external/vpx-bobcuspe/table.yml\n+++ b/external/vpx-bobcuspe/table.yml\n@@ -3,6 +3,7 @@ applyFixes:\n   - \"bass\"\n backglassBundled: true\n backglassChecksum: \"AB4AF0466BD9B5F85953AA7CA678326A\"\n+backglassNotes: \"Download Bob Cuspe (Original 2025).directb2s.zip\"\n fps: 60\n romChecksum: \"5B1623F9A662809461917CC78C85D80E\"\n romVPSId: \"oRjwaQMyq0\"\n"}
+        ]
+      },
+      {
+        "hash": "30687fcf060d26c7e01a61724542979b0295a590",
+        "date": "2025-09-12 16:42:37 -0400",
+        "author": "evilwraith",
+        "message": "Create table.yml\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-bobcuspe/table.yml", "diff": "diff --git a/external/vpx-bobcuspe/table.yml b/external/vpx-bobcuspe/table.yml\nnew file mode 100644\nindex 00000000..e48a6f97\n--- /dev/null\n+++ b/external/vpx-bobcuspe/table.yml\n@@ -0,0 +1,14 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassBundled: true\n+backglassChecksum: \"AB4AF0466BD9B5F85953AA7CA678326A\"\n+fps: 60\n+romChecksum: \"5B1623F9A662809461917CC78C85D80E\"\n+romVPSId: \"oRjwaQMyq0\"\n+tableVPSId: \"0RtVShGUU9\"\n+tagline: \"'Radical empathy is punk as hell'\"\n+testers:\n+  - \"evilwraith\"\n+vpxChecksum: \"F9A341843EA8667C7837021E32677783\"\n+vpxVPSId: \"mFMtQFfnE4\"\n"}
+        ]
+      },
+      {
+        "hash": "eebb3e630ddebda2a126aa7c8fb9a28719da5e2a",
+        "date": "2025-09-11 11:55:20 -0400",
+        "author": "evilwraith",
+        "message": "initial\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-bobcuspe/dmd.png"},
+          {"status": "A", "path": "external/vpx-bobcuspe/launcher.png"},
+          {"status": "A", "path": "external/vpx-bobcuspe/table.ini", "diff": "diff --git a/external/vpx-bobcuspe/table.ini b/external/vpx-bobcuspe/table.ini\nnew file mode 100644\nindex 00000000..75976cee\n--- /dev/null\n+++ b/external/vpx-bobcuspe/table.ini\n@@ -0,0 +1,10 @@\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.183776\n+ViewCabScaleY = 1.035883\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -30.318106\n+ViewCabWindowTop = 147.970810\n+ViewCabWindowBot = 83.953270\n\\ No newline at end of file\n"}
+        ]
+      }
+    ]
+}

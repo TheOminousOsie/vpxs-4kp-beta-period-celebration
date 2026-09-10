@@ -1,0 +1,171 @@
+{
+    "commit_count": 16,
+    "commits": [
+      {
+        "hash": "1dc7e9059d05774d4af757ef1fe7d1253117cfa2",
+        "date": "2026-09-09 21:30:53 -0400",
+        "author": "pointdablame",
+        "message": "More Launcher Art Updates (#2207)\n\nThis updates the following launchers to the new Legends Unchained logo: Aaron Spelling, Apache, Batman 66 (Original), Big Bang Bar, Black Knight, Black Knight 2000, Black Magic 4, Black Rose, James Bond, Cactus Canyon, Cat Burglars, Cenobite, Centaur, Centigrade 37, Chrono Trigger, Cirqus Voltaire, Cleopatra, Clock of Eternal Fog, Cosmic, Crystal Ball, Dark Crystal, Deadpool, Devil Riders, Diner, Dirty Harry, Tron Legacy, Doctor Who, Doom Eternal, DBZ Budokai, Drakor, Dune, D&D, Earthshaker, F-14 Tomcat, Fathom, Fifth Element, Fireball II, Firepower, Firepower II",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/launcher.png"}
+        ]
+      },
+      {
+        "hash": "0c79778866f792acc013e62474778fabce70d997",
+        "date": "2026-08-18 11:36:32 -0400",
+        "author": "n-i-x",
+        "message": "move button labels to buttons.ini\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-clockofetfog/buttons.ini", "diff": "diff --git a/external/vpx-clockofetfog/buttons.ini b/external/vpx-clockofetfog/buttons.ini\nnew file mode 100644\nindex 00000000..763069c1\n--- /dev/null\n+++ b/external/vpx-clockofetfog/buttons.ini\n@@ -0,0 +1,3 @@\n+[buttonLabels]\n+rightFlipper = \"Right Flipper/Start Game\"\n+leftFlipper = \"Left Flipper/Start Game\""}
+        ]
+      },
+      {
+        "hash": "15f31ac9008a70f1dedfc8fe2926e6632001e98e",
+        "date": "2026-07-20 19:48:39 -0400",
+        "author": "evilwraith",
+        "message": "Clock of Eternal Fog POV fix\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/table.ini", "diff": "diff --git a/external/vpx-clockofetfog/table.ini b/external/vpx-clockofetfog/table.ini\nindex f9a4cb70..ba550f18 100644\n--- a/external/vpx-clockofetfog/table.ini\n+++ b/external/vpx-clockofetfog/table.ini\n@@ -1,13 +1,14 @@\n [TableOverride]\n-ViewCabMode = 1\n-ViewCabScaleX = 0.938812\n-ViewCabScaleY = 0.996667\n-ViewCabScaleZ = 0.759980\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 3.528999\n-ViewCabPlayerY = 65.682129\n-ViewCabPlayerZ = 1562.012573\n-ViewCabLookAt = 5.387100\n-ViewCabFOV = 50.226585\n-ViewCabHOfs = 0.008600\n-ViewCabVOfs = 0\n+ViewCabMode = 2\n+ViewCabScaleX = 0.898864\n+ViewCabScaleY = 0.993890\n+ViewCabScaleZ = 0.859642\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.041922\n+ViewCabWindowTop = 430.450989\n+ViewCabWindowBot = -39.747723\n+\n+[Player]\n+ScreenPlayerY = 20.035051\n+ScreenPlayerZ = 90.302010\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/table.yml", "diff": "diff --git a/external/vpx-clockofetfog/table.yml b/external/vpx-clockofetfog/table.yml\nindex 28d171ac..be2fa1d4 100644\n--- a/external/vpx-clockofetfog/table.yml\n+++ b/external/vpx-clockofetfog/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"E2E649C67A7AEAAA5F61A8608F68A89E\"\n-  - \"7D10F44F93D110063A12A80A93AB954B\"\n+backglassChecksum: \"E2E649C67A7AEAAA5F61A8608F68A89E\"\n backglassNotes: \"Backglass contained in Clock B2S, Wheel, POV.zip\"\n backglassVPSId: \"xjZiQ1JnxT\"\n fps: 60\n@@ -10,8 +7,5 @@ tableNotes: \"Download all 4 rar files, extract from the file marked part 1. You\n tableVPSId: \"rtgqNfZHKc\"\n testers: \n   - \"evilwraith\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"65814BF76AF8660DF52A461AC95397DF\"\n-  - \"DBDD7339C768E0E95E99DE05C0D2A1C0\"\n+vpxChecksum: \"65814BF76AF8660DF52A461AC95397DF\"\n vpxVPSId: \"STKj6XJEoc\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/table.yml", "diff": "diff --git a/external/vpx-clockofetfog/table.yml b/external/vpx-clockofetfog/table.yml\nindex be2fa1d4..28d171ac 100644\n--- a/external/vpx-clockofetfog/table.yml\n+++ b/external/vpx-clockofetfog/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"E2E649C67A7AEAAA5F61A8608F68A89E\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"E2E649C67A7AEAAA5F61A8608F68A89E\"\n+  - \"7D10F44F93D110063A12A80A93AB954B\"\n backglassNotes: \"Backglass contained in Clock B2S, Wheel, POV.zip\"\n backglassVPSId: \"xjZiQ1JnxT\"\n fps: 60\n@@ -7,5 +10,8 @@ tableNotes: \"Download all 4 rar files, extract from the file marked part 1. You\n tableVPSId: \"rtgqNfZHKc\"\n testers: \n   - \"evilwraith\"\n-vpxChecksum: \"65814BF76AF8660DF52A461AC95397DF\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"65814BF76AF8660DF52A461AC95397DF\"\n+  - \"DBDD7339C768E0E95E99DE05C0D2A1C0\"\n vpxVPSId: \"STKj6XJEoc\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/table.ini", "diff": "diff --git a/external/vpx-clockofetfog/table.ini b/external/vpx-clockofetfog/table.ini\nindex 54971dfd..f9a4cb70 100644\n--- a/external/vpx-clockofetfog/table.ini\n+++ b/external/vpx-clockofetfog/table.ini\n@@ -10,4 +10,4 @@ ViewCabPlayerZ = 1562.012573\n ViewCabLookAt = 5.387100\n ViewCabFOV = 50.226585\n ViewCabHOfs = 0.008600\n-ViewCabVOfs = 76.035309\n\\ No newline at end of file\n+ViewCabVOfs = 0"},
+          {"status": "M", "path": "external/vpx-clockofetfog/table.yml", "diff": "diff --git a/external/vpx-clockofetfog/table.yml b/external/vpx-clockofetfog/table.yml\nindex ec3306f8..be2fa1d4 100644\n--- a/external/vpx-clockofetfog/table.yml\n+++ b/external/vpx-clockofetfog/table.yml\n@@ -1,10 +1,7 @@\n ---\n-applyFixes: \n-  - \"bass\"\n backglassChecksum: \"E2E649C67A7AEAAA5F61A8608F68A89E\"\n backglassNotes: \"Backglass contained in Clock B2S, Wheel, POV.zip\"\n backglassVPSId: \"xjZiQ1JnxT\"\n-enabled: false # Osie: Too Complex for the wiz for now\n fps: 60\n tableNotes: \"Download all 4 rar files, extract from the file marked part 1. You will need 7zip or WinRAR.\"\n tableVPSId: \"rtgqNfZHKc\""}
+        ]
+      },
+      {
+        "hash": "5368cfc7cb53e97d9156586acd4ea71d01e39dd8",
+        "date": "2025-06-12 17:16:39 +0100",
+        "author": "OminousOsie",
+        "message": "added bass fix to bugs\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/table.yml", "diff": "diff --git a/external/vpx-clockofetfog/table.yml b/external/vpx-clockofetfog/table.yml\nindex e123e11e..ec3306f8 100644\n--- a/external/vpx-clockofetfog/table.yml\n+++ b/external/vpx-clockofetfog/table.yml\n@@ -1,9 +1,10 @@\n+---\n applyFixes: \n   - \"bass\"\n backglassChecksum: \"E2E649C67A7AEAAA5F61A8608F68A89E\"\n backglassNotes: \"Backglass contained in Clock B2S, Wheel, POV.zip\"\n backglassVPSId: \"xjZiQ1JnxT\"\n-enabled: false # Osie: Batch for next week\n+enabled: false # Osie: Too Complex for the wiz for now\n fps: 60\n tableNotes: \"Download all 4 rar files, extract from the file marked part 1. You will need 7zip or WinRAR.\"\n tableVPSId: \"rtgqNfZHKc\"\n"}
+        ]
+      },
+      {
+        "hash": "1dc813dbf5a8543d0f47e8a5ede7f4d673d5b3a8",
+        "date": "2025-06-11 11:33:54 +0100",
+        "author": "OminousOsie",
+        "message": "Slight tweaks for wiz wed\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/table.yml", "diff": "diff --git a/external/vpx-clockofetfog/table.yml b/external/vpx-clockofetfog/table.yml\nindex 83650934..e123e11e 100644\n--- a/external/vpx-clockofetfog/table.yml\n+++ b/external/vpx-clockofetfog/table.yml\n@@ -3,6 +3,7 @@ applyFixes:\n backglassChecksum: \"E2E649C67A7AEAAA5F61A8608F68A89E\"\n backglassNotes: \"Backglass contained in Clock B2S, Wheel, POV.zip\"\n backglassVPSId: \"xjZiQ1JnxT\"\n+enabled: false # Osie: Batch for next week\n fps: 60\n tableNotes: \"Download all 4 rar files, extract from the file marked part 1. You will need 7zip or WinRAR.\"\n tableVPSId: \"rtgqNfZHKc\""}
+        ]
+      },
+      {
+        "hash": "b692f8418c0237c706412e79174cb157893d4b16",
+        "date": "2025-06-10 14:59:38 -0400",
+        "author": "evilwraith",
+        "message": "Add Clock of Eternal Fog to Wizard\n\nAdd Clock of Eternal Fog to Wizard\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-clockofetfog/dmd.png"},
+          {"status": "A", "path": "external/vpx-clockofetfog/launcher.cfg", "diff": "diff --git a/external/vpx-clockofetfog/launcher.cfg b/external/vpx-clockofetfog/launcher.cfg\nnew file mode 100644\nindex 00000000..763069c1\n--- /dev/null\n+++ b/external/vpx-clockofetfog/launcher.cfg\n@@ -0,0 +1,3 @@\n+[buttonLabels]\n+rightFlipper = \"Right Flipper/Start Game\"\n+leftFlipper = \"Left Flipper/Start Game\""},
+          {"status": "A", "path": "external/vpx-clockofetfog/table.yml", "diff": "diff --git a/external/vpx-clockofetfog/table.yml b/external/vpx-clockofetfog/table.yml\nnew file mode 100644\nindex 00000000..83650934\n--- /dev/null\n+++ b/external/vpx-clockofetfog/table.yml\n@@ -0,0 +1,12 @@\n+applyFixes: \n+  - \"bass\"\n+backglassChecksum: \"E2E649C67A7AEAAA5F61A8608F68A89E\"\n+backglassNotes: \"Backglass contained in Clock B2S, Wheel, POV.zip\"\n+backglassVPSId: \"xjZiQ1JnxT\"\n+fps: 60\n+tableNotes: \"Download all 4 rar files, extract from the file marked part 1. You will need 7zip or WinRAR.\"\n+tableVPSId: \"rtgqNfZHKc\"\n+testers: \n+  - \"evilwraith\"\n+vpxChecksum: \"65814BF76AF8660DF52A461AC95397DF\"\n+vpxVPSId: \"STKj6XJEoc\"\n\\ No newline at end of file\n"},
+          {"status": "M", "path": "external/vpx-clockofetfog/README.md", "diff": "diff --git a/external/vpx-clockofetfog/README.md b/external/vpx-clockofetfog/README.md\nindex cb2833b6..f9d4fbda 100644\n--- a/external/vpx-clockofetfog/README.md\n+++ b/external/vpx-clockofetfog/README.md\n@@ -8,7 +8,7 @@ Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=1\n \n DirectB2S\n \n-Included with table\n+Backglass contained in \"Clock B2S, Wheel, POV.zip\"\n \n ROM\n \n@@ -26,7 +26,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Download all 4 rar files, extract from the file marked part 1. You will need 7zip or WinRAR.\n+- Install this table through the Table Manager, using the `Add Table` > `Wizard` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Wizard](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B03%5D-%F0%9F%92%9A-Table-Manager-%E2%80%90-Wizard)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "},
+          {"status": "M", "path": "external/vpx-clockofetfog/launcher.png"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/README.md", "diff": "diff --git a/external/vpx-clockofetfog/README.md b/external/vpx-clockofetfog/README.md\nindex f17b85a7..cb2833b6 100644\n--- a/external/vpx-clockofetfog/README.md\n+++ b/external/vpx-clockofetfog/README.md\n@@ -26,7 +26,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/README.md", "diff": "diff --git a/external/vpx-clockofetfog/README.md b/external/vpx-clockofetfog/README.md\nindex f7dde31e..f17b85a7 100644\n--- a/external/vpx-clockofetfog/README.md\n+++ b/external/vpx-clockofetfog/README.md\n@@ -26,3 +26,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/README.md", "diff": "diff --git a/external/vpx-clockofetfog/README.md b/external/vpx-clockofetfog/README.md\nindex 98edbd82..f7dde31e 100644\n--- a/external/vpx-clockofetfog/README.md\n+++ b/external/vpx-clockofetfog/README.md\n@@ -26,7 +26,3 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-clockofetfog.elf\n-- Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-clockofetfog\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same"}
+        ]
+      },
+      {
+        "hash": "be93fc2c71d0df17df86569ff78f4bd17f8bc62c",
+        "date": "2025-04-01 12:05:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated file paths to relative\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/README.md", "diff": "diff --git a/external/vpx-clockofetfog/README.md b/external/vpx-clockofetfog/README.md\nindex 804c8150..98edbd82 100644\n--- a/external/vpx-clockofetfog/README.md\n+++ b/external/vpx-clockofetfog/README.md\n@@ -1,6 +1,6 @@\n # Clock of Eternal Fog (Original 2024)\n \n-![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-clockofetfog.png)\n+![Table Preview](../../images/vpx-clockofetfog.png)\n \n Authors: [CrimsonTurtle8](https://www.vpforums.org/index.php?showuser=49512)  \n Version: 1.1  "}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-clockofetfog/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-clockofetfog/pinmame/cfg/.gitkeep b/external/vpx-clockofetfog/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-clockofetfog/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-clockofetfog/pinmame/cfg/default.cfg b/external/vpx-clockofetfog/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-clockofetfog/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-clockofetfog/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-clockofetfog/pinmame/ini/.gitkeep b/external/vpx-clockofetfog/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-clockofetfog/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-clockofetfog/pinmame/nvram/.gitkeep b/external/vpx-clockofetfog/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-clockofetfog/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-clockofetfog/pinmame/roms/.gitkeep b/external/vpx-clockofetfog/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-clockofetfog/vpx-clockofetfog.xml", "diff": "diff --git a/external/vpx-clockofetfog/vpx-clockofetfog.xml b/external/vpx-clockofetfog/vpx-clockofetfog.xml\ndeleted file mode 100644\nindex f4fe1a71..00000000\n--- a/external/vpx-clockofetfog/vpx-clockofetfog.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Clock of Eternal Fog (Original 2024)</name>\n-</root>\n\\ No newline at end of file"},
+          {"status": "R-from", "path": "external/vpx-clockofetfog/Clock of Eternal Fog (Original 2024).ini->external/vpx-clockofetfog/table.ini", "diff": "diff --git a/external/vpx-clockofetfog/Clock of Eternal Fog (Original 2024).ini b/external/vpx-clockofetfog/table.ini\nsimilarity index 100%\nrename from external/vpx-clockofetfog/Clock of Eternal Fog (Original 2024).ini\nrename to external/vpx-clockofetfog/table.ini"},
+          {"status": "R-from", "path": "external/vpx-clockofetfog/vpx-clockofetfog.png->external/vpx-clockofetfog/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-clockofetfog/Clock of Eternal Fog (Original 2024).ini->external/vpx-clockofetfog/table.ini", "diff": "diff --git a/external/vpx-clockofetfog/Clock of Eternal Fog (Original 2024).ini b/external/vpx-clockofetfog/table.ini\nsimilarity index 100%\nrename from external/vpx-clockofetfog/Clock of Eternal Fog (Original 2024).ini\nrename to external/vpx-clockofetfog/table.ini"},
+          {"status": "R-to", "path": "external/vpx-clockofetfog/vpx-clockofetfog.png->external/vpx-clockofetfog/launcher.png"}
+        ]
+      },
+      {
+        "hash": "03a9cf93842b56b9b478ae20955b98f1a2234c7d",
+        "date": "2024-11-08 01:00:37 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-clockofetfog",
+        "files": [
+          {"status": "M", "path": "external/vpx-clockofetfog/README.md", "diff": "diff --git a/external/vpx-clockofetfog/README.md b/external/vpx-clockofetfog/README.md\nindex 9baece32..804c8150 100644\n--- a/external/vpx-clockofetfog/README.md\n+++ b/external/vpx-clockofetfog/README.md\n@@ -1,9 +1,9 @@\n # Clock of Eternal Fog (Original 2024)\n \n-![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-clockofetfog.jpg)\n+![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-clockofetfog.png)\n \n-Authors: [CrimsonTurtle8](https://www.vpforums.org/index.php?showuser=49512)\n-Version: 1.1\n+Authors: [CrimsonTurtle8](https://www.vpforums.org/index.php?showuser=49512)  \n+Version: 1.1  \n Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=18410)\n \n DirectB2S\n@@ -19,6 +19,7 @@ Tested by: evilwraith\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 60 |\n@@ -28,4 +29,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-clockofetfog.elf\n - Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-clockofetfog\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n\\ No newline at end of file\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n"}
+        ]
+      },
+      {
+        "hash": "e4739a5ccb8ef0ea83819ca5160b83d293b7faf9",
+        "date": "2024-11-07 15:23:28 -0500",
+        "author": "evilwraith",
+        "message": "Clock of Eternal Fog (Original 2024)\n\nClock of Eternal Fog (Original 2024)\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-clockofetfog/Clock of Eternal Fog (Original 2024).ini", "diff": "diff --git a/external/vpx-clockofetfog/Clock of Eternal Fog (Original 2024).ini b/external/vpx-clockofetfog/Clock of Eternal Fog (Original 2024).ini\nnew file mode 100644\nindex 00000000..54971dfd\n--- /dev/null\n+++ b/external/vpx-clockofetfog/Clock of Eternal Fog (Original 2024).ini\t\n@@ -0,0 +1,13 @@\n+[TableOverride]\n+ViewCabMode = 1\n+ViewCabScaleX = 0.938812\n+ViewCabScaleY = 0.996667\n+ViewCabScaleZ = 0.759980\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 3.528999\n+ViewCabPlayerY = 65.682129\n+ViewCabPlayerZ = 1562.012573\n+ViewCabLookAt = 5.387100\n+ViewCabFOV = 50.226585\n+ViewCabHOfs = 0.008600\n+ViewCabVOfs = 76.035309\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-clockofetfog/README.md", "diff": "diff --git a/external/vpx-clockofetfog/README.md b/external/vpx-clockofetfog/README.md\nnew file mode 100644\nindex 00000000..9baece32\n--- /dev/null\n+++ b/external/vpx-clockofetfog/README.md\n@@ -0,0 +1,31 @@\n+# Clock of Eternal Fog (Original 2024)\n+\n+![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-clockofetfog.jpg)\n+\n+Authors: [CrimsonTurtle8](https://www.vpforums.org/index.php?showuser=49512)\n+Version: 1.1\n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=18410)\n+\n+DirectB2S\n+\n+Included with table\n+\n+ROM\n+\n+None\n+\n+Tested by: evilwraith\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 60 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-clockofetfog.elf\n+- Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-clockofetfog\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-clockofetfog/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-clockofetfog/pinmame/cfg/.gitkeep b/external/vpx-clockofetfog/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-clockofetfog/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-clockofetfog/pinmame/cfg/default.cfg b/external/vpx-clockofetfog/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-clockofetfog/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-clockofetfog/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-clockofetfog/pinmame/ini/.gitkeep b/external/vpx-clockofetfog/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-clockofetfog/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-clockofetfog/pinmame/nvram/.gitkeep b/external/vpx-clockofetfog/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-clockofetfog/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-clockofetfog/pinmame/roms/.gitkeep b/external/vpx-clockofetfog/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-clockofetfog/vpx-clockofetfog.png"},
+          {"status": "A", "path": "external/vpx-clockofetfog/vpx-clockofetfog.xml", "diff": "diff --git a/external/vpx-clockofetfog/vpx-clockofetfog.xml b/external/vpx-clockofetfog/vpx-clockofetfog.xml\nnew file mode 100644\nindex 00000000..f4fe1a71\n--- /dev/null\n+++ b/external/vpx-clockofetfog/vpx-clockofetfog.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Clock of Eternal Fog (Original 2024)</name>\n+</root>\n\\ No newline at end of file\n"}
+        ]
+      }
+    ]
+}

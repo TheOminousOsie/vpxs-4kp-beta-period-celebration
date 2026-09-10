@@ -1,0 +1,202 @@
+{
+    "commit_count": 20,
+    "commits": [
+      {
+        "hash": "53cfd618b3019d80466fb707f08eeb275536a678",
+        "date": "2026-09-05 12:56:39 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed ball brightness on SW Trillogy\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-starwarstrilogy/table.dif", "diff": "diff --git a/external/vpx-starwarstrilogy/table.dif b/external/vpx-starwarstrilogy/table.dif\nnew file mode 100644\nindex 00000000..4344f808\nBinary files /dev/null and b/external/vpx-starwarstrilogy/table.dif differ\n"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/table.yml", "diff": "diff --git a/external/vpx-starwarstrilogy/table.yml b/external/vpx-starwarstrilogy/table.yml\nindex b3db5223..39a38399 100644\n--- a/external/vpx-starwarstrilogy/table.yml\n+++ b/external/vpx-starwarstrilogy/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"hripfXW8AB\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"D893635A634EF2D0A0F1196A714513E5\"\n-  - \"C4B8A1CD44C5D609490FF9FCE3502D09\"\n+backglassChecksum: \"D893635A634EF2D0A0F1196A714513E5\"\n coloredROMChecksum: \"39A414E4F6335AE56EB33DE77C4BC1F2\"\n coloredROMVPSId: \"RAXAfH14xP\"\n fps: 60\n@@ -16,7 +13,4 @@ testers:\n   - \"Mox\"\n   - \"OminousOsie\"\n vpxVPSId: \"FXFg6iyecu\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"DBD5E0737301BD1856D6669D3740FC88\"\n-  - \"62F9924622BC8F924A43DF9254D26812\"\n+vpxChecksum: \"DBD5E0737301BD1856D6669D3740FC88\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/table.yml", "diff": "diff --git a/external/vpx-starwarstrilogy/table.yml b/external/vpx-starwarstrilogy/table.yml\nindex 39a38399..b3db5223 100644\n--- a/external/vpx-starwarstrilogy/table.yml\n+++ b/external/vpx-starwarstrilogy/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"hripfXW8AB\"\n-backglassChecksum: \"D893635A634EF2D0A0F1196A714513E5\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"D893635A634EF2D0A0F1196A714513E5\"\n+  - \"C4B8A1CD44C5D609490FF9FCE3502D09\"\n coloredROMChecksum: \"39A414E4F6335AE56EB33DE77C4BC1F2\"\n coloredROMVPSId: \"RAXAfH14xP\"\n fps: 60\n@@ -13,4 +16,7 @@ testers:\n   - \"Mox\"\n   - \"OminousOsie\"\n vpxVPSId: \"FXFg6iyecu\"\n-vpxChecksum: \"DBD5E0737301BD1856D6669D3740FC88\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"DBD5E0737301BD1856D6669D3740FC88\"\n+  - \"62F9924622BC8F924A43DF9254D26812\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/table.ini", "diff": "diff --git a/external/vpx-starwarstrilogy/table.ini b/external/vpx-starwarstrilogy/table.ini\nindex 41b9dfd9..8269f952 100644\n--- a/external/vpx-starwarstrilogy/table.ini\n+++ b/external/vpx-starwarstrilogy/table.ini\n@@ -12,14 +12,11 @@ ScreenInclination = 0.000000\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.309106\n-ViewCabScaleY = 1.091064\n+ViewCabScaleX = 1.230624\n+ViewCabScaleY = 1.000240\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n-ViewCabHOfs = -3.103100\n-ViewCabVOfs = -58.532764\n-ViewCabWindowTop = 375.607941\n-ViewCabWindowBot = 135.015198\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+ViewCabHOfs = 0.016700\n+ViewCabVOfs = 0.015998\n+ViewCabWindowTop = 297.724976\n+ViewCabWindowBot = 0.069211\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-starwarstrilogy/table.yml", "diff": "diff --git a/external/vpx-starwarstrilogy/table.yml b/external/vpx-starwarstrilogy/table.yml\nindex 96ec2062..39a38399 100644\n--- a/external/vpx-starwarstrilogy/table.yml\n+++ b/external/vpx-starwarstrilogy/table.yml\n@@ -1,7 +1,9 @@\n ---\n backglassVPSId: \"hripfXW8AB\"\n backglassChecksum: \"D893635A634EF2D0A0F1196A714513E5\"\n-fps: 51\n+coloredROMChecksum: \"39A414E4F6335AE56EB33DE77C4BC1F2\"\n+coloredROMVPSId: \"RAXAfH14xP\"\n+fps: 60\n romVPSId: \"hLkQcyX9\"\n romChecksum: \"D8941885B640395E9D21EC52CBA8779D\"\n romNotes: \"Download - swtril43.zip\"\n@@ -12,5 +14,3 @@ testers:\n   - \"OminousOsie\"\n vpxVPSId: \"FXFg6iyecu\"\n vpxChecksum: \"DBD5E0737301BD1856D6669D3740FC88\"\n-applyFixes:\n-  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/README.md", "diff": "diff --git a/external/vpx-starwarstrilogy/README.md b/external/vpx-starwarstrilogy/README.md\nindex af8e63a3..c72d2205 100644\n--- a/external/vpx-starwarstrilogy/README.md\n+++ b/external/vpx-starwarstrilogy/README.md\n@@ -50,7 +50,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n <br>"}
+        ]
+      },
+      {
+        "hash": "43e06a78576a8d7069d79fee2da8885f7e817af7",
+        "date": "2025-04-30 11:28:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed BOM\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/README.md", "diff": "diff --git a/external/vpx-starwarstrilogy/README.md b/external/vpx-starwarstrilogy/README.md\nindex 11e37276..af8e63a3 100644\n--- a/external/vpx-starwarstrilogy/README.md\n+++ b/external/vpx-starwarstrilogy/README.md\n@@ -1,4 +1,4 @@\n-﻿# Star Wars Trilogy (Sega 1997)\n+# Star Wars Trilogy (Sega 1997)\n \n ![Table Preview](../../images/vpx-starwarstrilogy.png)\n "}
+        ]
+      },
+      {
+        "hash": "5424a8122d5eb54371b2435888f2d337df05dc43",
+        "date": "2025-04-30 11:23:31 +0100",
+        "author": "OminousOsie",
+        "message": "Added lloydbraun to the wiz team\n\nAdded lloydbraun to the wiz team\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/README.md", "diff": "diff --git a/external/vpx-starwarstrilogy/README.md b/external/vpx-starwarstrilogy/README.md\nindex f6be7248..11e37276 100644\n--- a/external/vpx-starwarstrilogy/README.md\n+++ b/external/vpx-starwarstrilogy/README.md\n@@ -1,4 +1,4 @@\n-# Star Wars Trilogy (Sega 1997)\n+﻿# Star Wars Trilogy (Sega 1997)\n \n ![Table Preview](../../images/vpx-starwarstrilogy.png)\n \n@@ -47,7 +47,7 @@ __*We hope you enjoy!!*__\n \n *The VPXS 4KP Wizard team:*\n <pre>\n-- n-i-x            - Mox\n+- n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n - mrandromeda      - SScorpio         - TechZombie"}
+        ]
+      },
+      {
+        "hash": "6810c245fea247d189e96eebfc142d3b70c256e9",
+        "date": "2025-04-23 12:37:35 +0100",
+        "author": "OminousOsie",
+        "message": "updated wiz dropdown reference in readme\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/README.md", "diff": "diff --git a/external/vpx-starwarstrilogy/README.md b/external/vpx-starwarstrilogy/README.md\nindex 0a12c761..f6be7248 100644\n--- a/external/vpx-starwarstrilogy/README.md\n+++ b/external/vpx-starwarstrilogy/README.md\n@@ -33,7 +33,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 1.  Open the **Table Manager**\n 2.  Click the **Add Table** button\n 3.  Select the **Wizard** tab\n-4.  Find and select this table from the dropdown menu: **`Star Wars Trilogy`**\n+4.  Find and select this table from the dropdown menu: **`Star Wars Trilogy Special Edition`**\n 5.  Follow the on-screen instructions to download and upload the required files\n 6. *\"Try not. Do, or do not. There is no try.\"*\n \n"}
+        ]
+      },
+      {
+        "hash": "1c0d0d027ecc4956796706d1862532b5cf8441ee",
+        "date": "2025-04-21 21:35:17 +0100",
+        "author": "OminousOsie",
+        "message": "Started work on updating all the readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/README.md", "diff": "diff --git a/external/vpx-starwarstrilogy/README.md b/external/vpx-starwarstrilogy/README.md\nindex 5d1cf021..0a12c761 100644\n--- a/external/vpx-starwarstrilogy/README.md\n+++ b/external/vpx-starwarstrilogy/README.md\n@@ -2,35 +2,59 @@\n \n ![Table Preview](../../images/vpx-starwarstrilogy.png)\n \n-Authors: [siggi](https://vpuniverse.com/profile/8779-siggi/)  \n-Version: 1.1  \n-Download: [VPUniverse](https://vpuniverse.com/files/file/11447-star-wars-trilogy-siggis-mod/)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: v2.0  \n-Download: [VPUniverse](https://vpuniverse.com/files/file/12429-star-wars-trilogy-sega-1997-b2s-with-full-dmd/)  \n-*Download the hi-res version\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n \n-ROM\n+<br>\n \n-Download: [vpforums](http://www.vpforums.org/index.php?app=downloads&showfile=1073)  \n-ROM Name and version: swtril43\n+**VPXS 4KP Testers:**\n+  - Mox\n+  - Ominous Osie 🌸\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n+---\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Star Wars Trilogy`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Try not. Do, or do not. There is no try.\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n \n-## Instructions\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-starwarstrilogy.elf\n-- Download the table and directb2s versions listed above, extract and copy them into this folder\n-- Make sure (.vpx), and (.directb2s) files are all named the same\n-- Place swtril43.zip ROM in the external/vpx-starwarstrilogy/pinmame/roms folder. *Do Not unzip*!\n-- \"May the force be with you!\"\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "7d444021ce10745c6dd86f3bb286dc51e434dedc",
+        "date": "2025-04-18 10:09:35 +0100",
+        "author": "OminousOsie",
+        "message": "Updated launcher / dmd images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/launcher.png"}
+        ]
+      },
+      {
+        "hash": "322e54678a9fe38a5d3410088f10d0e53f8e736d",
+        "date": "2025-04-17 22:15:00 +0100",
+        "author": "OminousOsie",
+        "message": "updated sw tril pov\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/table.ini", "diff": "diff --git a/external/vpx-starwarstrilogy/table.ini b/external/vpx-starwarstrilogy/table.ini\nindex e174bd0c..41b9dfd9 100644\n--- a/external/vpx-starwarstrilogy/table.ini\n+++ b/external/vpx-starwarstrilogy/table.ini\n@@ -1,17 +1,25 @@\n [Player]\n JoyAddCredit2Key = 1\n BallTrailStrength = 0.490196\n-OverrideTableEmissionScale = 0\n+OverrideTableEmissionScale = 1\n+ScreenPlayerY = 16.349201\n+ScreenPlayerZ = 96.289177\n+DynamicDayNight = 0\n+EmissionScale = 0.329880\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.805046\n-ViewCabScaleY = 1.059799\n-ViewCabScaleZ = 0.849778\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -8.640005\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -332.819977\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.309106\n+ViewCabScaleY = 1.091064\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = -3.103100\n+ViewCabVOfs = -58.532764\n+ViewCabWindowTop = 375.607941\n+ViewCabWindowBot = 135.015198\n+\n+[Standalone]\n+BackBufferScale = 0.416666\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "80fd53a6ef73822538d991ecd0e40d9c0bb9ffb9",
+        "date": "2025-04-17 21:58:50 +0100",
+        "author": "OminousOsie",
+        "message": "Added rom settings and colour\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-starwarstrilogy/nvram.nv"},
+          {"status": "A", "path": "external/vpx-starwarstrilogy/pinmame.ini", "diff": "diff --git a/external/vpx-starwarstrilogy/pinmame.ini b/external/vpx-starwarstrilogy/pinmame.ini\nnew file mode 100644\nindex 00000000..a10af18c\n--- /dev/null\n+++ b/external/vpx-starwarstrilogy/pinmame.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+rol=0\n+sound=1\n+cheat=0\n+dmd_red=255\n+dmd_green=231\n+dmd_blue=31\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-starwarstrilogy/table.yml", "diff": "diff --git a/external/vpx-starwarstrilogy/table.yml b/external/vpx-starwarstrilogy/table.yml\nindex 0291e7da..96ec2062 100644\n--- a/external/vpx-starwarstrilogy/table.yml\n+++ b/external/vpx-starwarstrilogy/table.yml\n@@ -9,6 +9,7 @@ tableVPSId: \"utPtyR_5\"\n tagline: \"Try not. Do, or do not. There is no try.\"\n testers:\n   - \"Mox\"\n+  - \"OminousOsie\"\n vpxVPSId: \"FXFg6iyecu\"\n vpxChecksum: \"DBD5E0737301BD1856D6669D3740FC88\"\n applyFixes:\n"}
+        ]
+      },
+      {
+        "hash": "eaef36bc1ce7c57832738869b86236490a57ec52",
+        "date": "2025-04-16 19:58:37 +0100",
+        "author": "OminousOsie",
+        "message": "Re-enabled tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/table.yml", "diff": "diff --git a/external/vpx-starwarstrilogy/table.yml b/external/vpx-starwarstrilogy/table.yml\nindex 0bbbc0e6..0291e7da 100644\n--- a/external/vpx-starwarstrilogy/table.yml\n+++ b/external/vpx-starwarstrilogy/table.yml\n@@ -11,6 +11,5 @@ testers:\n   - \"Mox\"\n vpxVPSId: \"FXFg6iyecu\"\n vpxChecksum: \"DBD5E0737301BD1856D6669D3740FC88\"\n-enabled: false\n applyFixes:\n   - \"bass\""}
+        ]
+      },
+      {
+        "hash": "28bf6708b18ec5fc2e1b8e117489b820ef21539d",
+        "date": "2025-04-07 19:32:31 +0100",
+        "author": "OminousOsie",
+        "message": "Updated so that we can release\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/table.yml", "diff": "diff --git a/external/vpx-starwarstrilogy/table.yml b/external/vpx-starwarstrilogy/table.yml\nindex 0291e7da..0bbbc0e6 100644\n--- a/external/vpx-starwarstrilogy/table.yml\n+++ b/external/vpx-starwarstrilogy/table.yml\n@@ -11,5 +11,6 @@ testers:\n   - \"Mox\"\n vpxVPSId: \"FXFg6iyecu\"\n vpxChecksum: \"DBD5E0737301BD1856D6669D3740FC88\"\n+enabled: false\n applyFixes:\n   - \"bass\""}
+        ]
+      },
+      {
+        "hash": "e565f5a0707da28cbde4842285daacb11838a42f",
+        "date": "2025-04-07 16:42:01 +0100",
+        "author": "OminousOsie",
+        "message": "Update table.yml",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/table.yml", "diff": "diff --git a/external/vpx-starwarstrilogy/table.yml b/external/vpx-starwarstrilogy/table.yml\nindex edd29714..0291e7da 100644\n--- a/external/vpx-starwarstrilogy/table.yml\n+++ b/external/vpx-starwarstrilogy/table.yml\n@@ -12,4 +12,4 @@ testers:\n vpxVPSId: \"FXFg6iyecu\"\n vpxChecksum: \"DBD5E0737301BD1856D6669D3740FC88\"\n applyFixes:\n-  - \"bass\"\n\\ No newline at end of file\n+  - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "ae0263ecdbc0f4d964fd9224fc4797b10372d479",
+        "date": "2025-04-01 11:26:24 +0100",
+        "author": "OminousOsie",
+        "message": "Updated table preview images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/README.md", "diff": "diff --git a/external/vpx-starwarstrilogy/README.md b/external/vpx-starwarstrilogy/README.md\nindex 92bb359d..5d1cf021 100644\n--- a/external/vpx-starwarstrilogy/README.md\n+++ b/external/vpx-starwarstrilogy/README.md\n@@ -1,6 +1,6 @@\n # Star Wars Trilogy (Sega 1997)\n \n-![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_09/SW.png.9734a65ae832b7903c3feb59b11234df.png)\n+![Table Preview](../../images/vpx-starwarstrilogy.png)\n \n Authors: [siggi](https://vpuniverse.com/profile/8779-siggi/)  \n Version: 1.1  "}
+        ]
+      },
+      {
+        "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
+        "date": "2025-03-30 19:40:27 -0500",
+        "author": "MoxAssault",
+        "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-starwarstrilogy/table.ini", "diff": "diff --git a/external/vpx-starwarstrilogy/table.ini b/external/vpx-starwarstrilogy/table.ini\nnew file mode 100644\nindex 00000000..e174bd0c\n--- /dev/null\n+++ b/external/vpx-starwarstrilogy/table.ini\n@@ -0,0 +1,17 @@\n+[Player]\n+JoyAddCredit2Key = 1\n+BallTrailStrength = 0.490196\n+OverrideTableEmissionScale = 0\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.805046\n+ViewCabScaleY = 1.059799\n+ViewCabScaleZ = 0.849778\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -8.640005\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -332.819977\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-starwarstrilogy/table.yml", "diff": "diff --git a/external/vpx-starwarstrilogy/table.yml b/external/vpx-starwarstrilogy/table.yml\nnew file mode 100644\nindex 00000000..edd29714\n--- /dev/null\n+++ b/external/vpx-starwarstrilogy/table.yml\n@@ -0,0 +1,15 @@\n+---\n+backglassVPSId: \"hripfXW8AB\"\n+backglassChecksum: \"D893635A634EF2D0A0F1196A714513E5\"\n+fps: 51\n+romVPSId: \"hLkQcyX9\"\n+romChecksum: \"D8941885B640395E9D21EC52CBA8779D\"\n+romNotes: \"Download - swtril43.zip\"\n+tableVPSId: \"utPtyR_5\"\n+tagline: \"Try not. Do, or do not. There is no try.\"\n+testers:\n+  - \"Mox\"\n+vpxVPSId: \"FXFg6iyecu\"\n+vpxChecksum: \"DBD5E0737301BD1856D6669D3740FC88\"\n+applyFixes:\n+  - \"bass\"\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-starwarstrilogy/launcher.png"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-starwarstrilogy/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-starwarstrilogy/pinmame/cfg/.gitkeep b/external/vpx-starwarstrilogy/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-starwarstrilogy/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-starwarstrilogy/pinmame/ini/.gitkeep b/external/vpx-starwarstrilogy/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-starwarstrilogy/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-starwarstrilogy/pinmame/nvram/.gitkeep b/external/vpx-starwarstrilogy/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-starwarstrilogy/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-starwarstrilogy/pinmame/roms/.gitkeep b/external/vpx-starwarstrilogy/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-starwarstrilogy/vpx-starwarstrilogy.xml", "diff": "diff --git a/external/vpx-starwarstrilogy/vpx-starwarstrilogy.xml b/external/vpx-starwarstrilogy/vpx-starwarstrilogy.xml\ndeleted file mode 100644\nindex d6f50be2..00000000\n--- a/external/vpx-starwarstrilogy/vpx-starwarstrilogy.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Star Wars Trilogy (Sega 1997)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-starwarstrilogy/vpx-starwarstrilogy.png->external/vpx-starwarstrilogy/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-starwarstrilogy/vpx-starwarstrilogy.png->external/vpx-starwarstrilogy/launcher.png"}
+        ]
+      },
+      {
+        "hash": "c05eceb1abb73a748b53a9b43a44f410cbff16cb",
+        "date": "2024-09-06 02:19:12 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-starwarstrilogy",
+        "files": [
+          {"status": "M", "path": "external/vpx-starwarstrilogy/README.md", "diff": "diff --git a/external/vpx-starwarstrilogy/README.md b/external/vpx-starwarstrilogy/README.md\nindex 73b65e83..92bb359d 100644\n--- a/external/vpx-starwarstrilogy/README.md\n+++ b/external/vpx-starwarstrilogy/README.md\n@@ -2,25 +2,26 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_09/SW.png.9734a65ae832b7903c3feb59b11234df.png)\n \n-Authors: [siggi](https://vpuniverse.com/profile/8779-siggi/)\n-Version: 1.1\n+Authors: [siggi](https://vpuniverse.com/profile/8779-siggi/)  \n+Version: 1.1  \n Download: [VPUniverse](https://vpuniverse.com/files/file/11447-star-wars-trilogy-siggis-mod/)\n \n DirectB2S\n \n-Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-Version: v2.0\n-Download: [VPUniverse](https://vpuniverse.com/files/file/12429-star-wars-trilogy-sega-1997-b2s-with-full-dmd/)\n+Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+Version: v2.0  \n+Download: [VPUniverse](https://vpuniverse.com/files/file/12429-star-wars-trilogy-sega-1997-b2s-with-full-dmd/)  \n *Download the hi-res version\n \n ROM\n \n-Download: [vpforums](http://www.vpforums.org/index.php?app=downloads&showfile=1073)\n+Download: [vpforums](http://www.vpforums.org/index.php?app=downloads&showfile=1073)  \n ROM Name and version: swtril43\n \n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n@@ -29,8 +30,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-starwarstrilogy.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n-- Make sure the vpx, direct2b, and ini files are all named the \"exact\" same\n-- Place swtril43.zip in the external/vpx-starwarstrilogy/pinmame/roms folder *Do Not unzip*\n+- Download the table and directb2s versions listed above, extract and copy them into this folder\n+- Make sure (.vpx), and (.directb2s) files are all named the same\n+- Place swtril43.zip ROM in the external/vpx-starwarstrilogy/pinmame/roms folder. *Do Not unzip*!\n - \"May the force be with you!\"\n-\n"}
+        ]
+      },
+      {
+        "hash": "38e9e363aaa6f678a58409989de52a5986a08ba4",
+        "date": "2024-08-23 11:15:06 -0400",
+        "author": "Kaoticbpr",
+        "message": "uploading star wars trilogy to repo\n\nvpx-starwarstrilogy\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-starwarstrilogy/README.md", "diff": "diff --git a/external/vpx-starwarstrilogy/README.md b/external/vpx-starwarstrilogy/README.md\nnew file mode 100644\nindex 00000000..73b65e83\n--- /dev/null\n+++ b/external/vpx-starwarstrilogy/README.md\n@@ -0,0 +1,36 @@\n+# Star Wars Trilogy (Sega 1997)\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_09/SW.png.9734a65ae832b7903c3feb59b11234df.png)\n+\n+Authors: [siggi](https://vpuniverse.com/profile/8779-siggi/)\n+Version: 1.1\n+Download: [VPUniverse](https://vpuniverse.com/files/file/11447-star-wars-trilogy-siggis-mod/)\n+\n+DirectB2S\n+\n+Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n+Version: v2.0\n+Download: [VPUniverse](https://vpuniverse.com/files/file/12429-star-wars-trilogy-sega-1997-b2s-with-full-dmd/)\n+*Download the hi-res version\n+\n+ROM\n+\n+Download: [vpforums](http://www.vpforums.org/index.php?app=downloads&showfile=1073)\n+ROM Name and version: swtril43\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-starwarstrilogy.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Make sure the vpx, direct2b, and ini files are all named the \"exact\" same\n+- Place swtril43.zip in the external/vpx-starwarstrilogy/pinmame/roms folder *Do Not unzip*\n+- \"May the force be with you!\"\n+"},
+          {"status": "A", "path": "external/vpx-starwarstrilogy/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-starwarstrilogy/pinmame/cfg/.gitkeep b/external/vpx-starwarstrilogy/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-starwarstrilogy/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-starwarstrilogy/pinmame/ini/.gitkeep b/external/vpx-starwarstrilogy/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-starwarstrilogy/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-starwarstrilogy/pinmame/nvram/.gitkeep b/external/vpx-starwarstrilogy/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-starwarstrilogy/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-starwarstrilogy/pinmame/roms/.gitkeep b/external/vpx-starwarstrilogy/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-starwarstrilogy/vpx-starwarstrilogy.png"},
+          {"status": "A", "path": "external/vpx-starwarstrilogy/vpx-starwarstrilogy.xml", "diff": "diff --git a/external/vpx-starwarstrilogy/vpx-starwarstrilogy.xml b/external/vpx-starwarstrilogy/vpx-starwarstrilogy.xml\nnew file mode 100644\nindex 00000000..d6f50be2\n--- /dev/null\n+++ b/external/vpx-starwarstrilogy/vpx-starwarstrilogy.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Star Wars Trilogy (Sega 1997)</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

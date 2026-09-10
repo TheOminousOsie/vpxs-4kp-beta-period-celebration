@@ -1,0 +1,27 @@
+{
+    "commit_count": 2,
+    "commits": [
+      {
+        "hash": "adc7e99d6dda2f92dfe2b4b67f06aa6360857258",
+        "date": "2026-09-07 15:23:09 -0400",
+        "author": "evilwraith",
+        "message": "Update launcher.png\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-lostinspacecomic/launcher.png"}
+        ]
+      },
+      {
+        "hash": "d4cfc0a530433929e8a8f5c2f528105ea327a4fb",
+        "date": "2026-08-28 01:50:58 -0400",
+        "author": "evilwraith",
+        "message": "Lost In Space Comic Ed\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-lostinspacecomic/README.md", "diff": "diff --git a/external/vpx-lostinspacecomic/README.md b/external/vpx-lostinspacecomic/README.md\nnew file mode 100644\nindex 00000000..fa06366f\n--- /dev/null\n+++ b/external/vpx-lostinspacecomic/README.md\n@@ -0,0 +1,62 @@\n+# Lost In Space Comic Book Edition (Sega 1998)\n+\n+![Table Preview](../../images/40Ne76_8Jn-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Wraith\n+  - Bla1ze\n+  - Missile Toad\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Lost In Space Comic Book Edition (Sega 1998)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "A", "path": "external/vpx-lostinspacecomic/launcher.png"},
+          {"status": "A", "path": "external/vpx-lostinspacecomic/nvram.nv"},
+          {"status": "A", "path": "external/vpx-lostinspacecomic/table.ini", "diff": "diff --git a/external/vpx-lostinspacecomic/table.ini b/external/vpx-lostinspacecomic/table.ini\nnew file mode 100644\nindex 00000000..34520cd6\n--- /dev/null\n+++ b/external/vpx-lostinspacecomic/table.ini\n@@ -0,0 +1,33 @@\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.236431\n+ViewCabScaleY = 1.043162\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = -6.483900\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 372.914917\n+ViewCabWindowBot = 118.496193\n+\n+[Player]\n+ScreenPlayerY = 25.277290\n+ScreenPlayerZ = 98.253578\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+\n+[Standalone]\n+POVLinkTableScaleXY = 0\n+DMDDotTintPreset = 5\n+DMDDotTintR = 40\n+DMDDotTintG = 100\n+DMDDotTintB = 255\n+DMDDotSize = 0.750000\n+DMDDotSharpness = 1.000000\n+DMDDotBrightness = 1.000000\n+DMDDotUnlitPreset = 6\n+DMDDotStyle = 1\n+DMDDotScale = 24\n+DMDDotUnlitColorR = 10\n+DMDDotUnlitColorG = 25\n+DMDDotUnlitColorB = 63\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-lostinspacecomic/table.yml", "diff": "diff --git a/external/vpx-lostinspacecomic/table.yml b/external/vpx-lostinspacecomic/table.yml\nnew file mode 100644\nindex 00000000..edf7144a\n--- /dev/null\n+++ b/external/vpx-lostinspacecomic/table.yml\n@@ -0,0 +1,14 @@\n+---\n+backglassChecksum: \"449AA2F297317D1996DA78A0F25D97A6\"\n+backglassVPSId: \"XpFJc540gP\"\n+fps: 60\n+romChecksum: \"2BC7D3E396F4E97A5ADB79D06854FCF6\"\n+romVPSId: \"z1PEadkF\"\n+tableNameOverride: \"Lost In Space Comic Book Edition\"\n+tableVPSId: \"jCico0Uk\"\n+testers:\n+  - \"Wraith\"\n+  - \"Bla1ze\"\n+  - \"Missile Toad\"\n+vpxChecksum: \"7014FBE240750E42DE2BF5EE25692CA7\"\n+vpxVPSId: \"40Ne76_8Jn\"\n"}
+        ]
+      }
+    ]
+}

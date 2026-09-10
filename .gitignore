@@ -1,0 +1,4 @@
+# Raw source materials used to build the site (git history logs, manifests,
+# unprocessed launcher art, the design handoff bundle). Not part of the
+# deployed site — see data/ and assets/, which are generated/copied from here.
+dev/

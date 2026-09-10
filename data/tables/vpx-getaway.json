@@ -1,0 +1,196 @@
+{
+    "commit_count": 18,
+    "commits": [
+      {
+        "hash": "0c79778866f792acc013e62474778fabce70d997",
+        "date": "2026-08-18 11:36:32 -0400",
+        "author": "n-i-x",
+        "message": "move button labels to buttons.ini\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-getaway/buttons.ini", "diff": "diff --git a/external/vpx-getaway/buttons.ini b/external/vpx-getaway/buttons.ini\nnew file mode 100644\nindex 00000000..8bc33836\n--- /dev/null\n+++ b/external/vpx-getaway/buttons.ini\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+dpadUp = \"Plunger / Shift Gears\"\n+; dpadDown = \"Down\"\n+; dpadLeft = \"Left\"\n+; dpadRight = \"Right\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+start = \"Start / Menu Select\"\n+; menu = \"Menu\""}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/table.yml", "diff": "diff --git a/external/vpx-getaway/table.yml b/external/vpx-getaway/table.yml\nindex 50609b12..bd2ef331 100644\n--- a/external/vpx-getaway/table.yml\n+++ b/external/vpx-getaway/table.yml\n@@ -13,8 +13,5 @@ testers:\n   - \"Silentkat\"\n   - \"OminousOsie\"\n vpxVPSId: \"YoXfmzDV\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"d2743cc3f2b27c4effb5dbb17c7e9385\"\n-  - \"3365CE3FDA8100D14DF0F5EC908E66FA\"\n+vpxChecksum: \"d2743cc3f2b27c4effb5dbb17c7e9385\"\n "}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/table.yml", "diff": "diff --git a/external/vpx-getaway/table.yml b/external/vpx-getaway/table.yml\nindex bd2ef331..50609b12 100644\n--- a/external/vpx-getaway/table.yml\n+++ b/external/vpx-getaway/table.yml\n@@ -13,5 +13,8 @@ testers:\n   - \"Silentkat\"\n   - \"OminousOsie\"\n vpxVPSId: \"YoXfmzDV\"\n-vpxChecksum: \"d2743cc3f2b27c4effb5dbb17c7e9385\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"d2743cc3f2b27c4effb5dbb17c7e9385\"\n+  - \"3365CE3FDA8100D14DF0F5EC908E66FA\"\n "}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/table.ini", "diff": "diff --git a/external/vpx-getaway/table.ini b/external/vpx-getaway/table.ini\nindex 00eca18f..4fd9364b 100644\n--- a/external/vpx-getaway/table.ini\n+++ b/external/vpx-getaway/table.ini\n@@ -1,12 +1,12 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.310169\n-ViewCabScaleY = 1.110978\n-ViewCabScaleZ = 0.990043\n+ViewCabScaleX = 1.278207\n+ViewCabScaleY = 0.988330\n+ViewCabScaleZ = 0.867395\n ViewCabRotation = 180.000000\n-ViewCabHOfs = -6.482100\n-ViewCabVOfs = -92.965157\n-ViewCabWindowTop = 384.576904\n+ViewCabHOfs = 0.038101\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 274.799988\n ViewCabWindowBot = 90.194214\n \n [Player]\n@@ -14,11 +14,4 @@ ScreenPlayerY = 22.309242\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.498290\n-ScreenPlayerZ = 93.264618\n-MaxTexDimension = 2048\n-FXAA = 1\n-WindowRenderMode = 0\n-\n-[Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.416666\n+ScreenPlayerZ = 93.264618\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-getaway/table.yml", "diff": "diff --git a/external/vpx-getaway/table.yml b/external/vpx-getaway/table.yml\nindex 62c4b38d..bd2ef331 100644\n--- a/external/vpx-getaway/table.yml\n+++ b/external/vpx-getaway/table.yml\n@@ -1,10 +1,8 @@\n ---\n-applyFixes:\n-  - \"bass\"\n-backglassChecksum: \"713e9289894c48ff5caf74c87d47f98e\"\n-backglassNotes: \"Download Version v2.0\"\n+backglassChecksum: \"751152334CD802FAE632DEA23194A3E7\"\n+backglassNotes: \"Download Version v3.0\"\n backglassVPSId: \"u7fa9sa2XM\"\n-fps: 55\n+fps: 60\n romNotes: \"Download gw_l5.zip\"\n romVPSId: \"4lxSLKB7\"\n romChecksum: \"54806be981bbb3fabe98fb1d5d0c0fb0\""}
+        ]
+      },
+      {
+        "hash": "6f29419a2dd976530a472efedb90976e9b348a9e",
+        "date": "2025-11-11 10:14:31 -0600",
+        "author": "Silentkat4000",
+        "message": "Add launcher.cfg to getaway\n\nAdd launcher.cfg to getaway\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-getaway/launcher.cfg", "diff": "diff --git a/external/vpx-getaway/launcher.cfg b/external/vpx-getaway/launcher.cfg\nnew file mode 100644\nindex 00000000..f805c508\n--- /dev/null\n+++ b/external/vpx-getaway/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+dpadUp = \"Plunger / Shift Gears\"\n+; dpadDown = \"Down\"\n+; dpadLeft = \"Left\"\n+; dpadRight = \"Right\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+start = \"Start / Menu Select\"\n+; menu = \"Menu\"\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "0c5d3077348a9036076e6e7c0862ba72587a6cc7",
+        "date": "2025-11-05 20:17:58 -0600",
+        "author": "Silentkat4000",
+        "message": "Updated getaway for wiz\n\nUpdated getaway for wiz\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-getaway/table.yml", "diff": "diff --git a/external/vpx-getaway/table.yml b/external/vpx-getaway/table.yml\nnew file mode 100644\nindex 00000000..62c4b38d\n--- /dev/null\n+++ b/external/vpx-getaway/table.yml\n@@ -0,0 +1,19 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassChecksum: \"713e9289894c48ff5caf74c87d47f98e\"\n+backglassNotes: \"Download Version v2.0\"\n+backglassVPSId: \"u7fa9sa2XM\"\n+fps: 55\n+romNotes: \"Download gw_l5.zip\"\n+romVPSId: \"4lxSLKB7\"\n+romChecksum: \"54806be981bbb3fabe98fb1d5d0c0fb0\"\n+tableNotes: \"Download Version 3.0\"\n+tableVPSId: \"cCV4A6uc\"\n+tagline: \"Shift into High Gear!\"\n+testers:\n+  - \"Silentkat\"\n+  - \"OminousOsie\"\n+vpxVPSId: \"YoXfmzDV\"\n+vpxChecksum: \"d2743cc3f2b27c4effb5dbb17c7e9385\"\n+\n"},
+          {"status": "M", "path": "external/vpx-getaway/README.md", "diff": "diff --git a/external/vpx-getaway/README.md b/external/vpx-getaway/README.md\nindex 1d8b2126..fd8569b8 100644\n--- a/external/vpx-getaway/README.md\n+++ b/external/vpx-getaway/README.md\n@@ -1,36 +1,61 @@\n-﻿# The Getaway - High Speed II\n+# Getaway - High Speed II, The (Williams 1992)\n \n-![Table Preview](../../images/vpx-getaway.jpg)\n+![Table Preview](../../images/YoXfmzDV-preview.webp)\n \n-Author: [ganjafarmer](https://www.vpforums.org/index.php?app=core&module=search&do=user_activity&search_app=downloads&mid=113960)  \n-Version: 1.2  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13130)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 2.0.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/11932-the-getaway-high-speed-ii-williams-1992-b2s-with-full-dmd/)\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 55 |\n \n-ROM\n+<br>\n \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1330)\n+**VPXS 4KP Testers:**\n+  - Silentkat\n+  - OminousOsie\n \n+<br>\n \n-## Status \n+---\n \n-Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+<br>\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: |:white_check_mark: | :white_check_mark: | 42 |\n+## ❇️ Available in the Wizard! 🪄✨\n \n+<br>\n \n-## Instructions\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- D-pad up (or joystick up on the arcade control panel) launch the ball and shift gears\n-- I can't drive 55\n+### How to install:\n \n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Getaway - High Speed II, The (Williams 1992)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Shift into High Gear!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-getaway/launcher.png"},
+          {"status": "M", "path": "external/vpx-getaway/nvram.nv"},
+          {"status": "M", "path": "external/vpx-getaway/table.ini", "diff": "diff --git a/external/vpx-getaway/table.ini b/external/vpx-getaway/table.ini\nindex 7b6a6268..00eca18f 100644\n--- a/external/vpx-getaway/table.ini\n+++ b/external/vpx-getaway/table.ini\n@@ -1,17 +1,24 @@\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.310169\n+ViewCabScaleY = 1.110978\n+ViewCabScaleZ = 0.990043\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = -6.482100\n+ViewCabVOfs = -92.965157\n+ViewCabWindowTop = 384.576904\n+ViewCabWindowBot = 90.194214\n+\n [Player]\n-BallTrailStrength = 0.149020\n-AlphaRampAccuracy = 10\n-OverrideTableEmissionScale = 0\n+ScreenPlayerY = 22.309242\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.498290\n+ScreenPlayerZ = 93.264618\n+MaxTexDimension = 2048\n+FXAA = 1\n+WindowRenderMode = 0\n \n-[TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.722598\n-ViewCabScaleY = 0.978738\n-ViewCabScaleZ = 0.923071\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -25.587011\n-ViewCabPlayerY = 3.137996\n-ViewCabPlayerZ = -343.549896\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 51.752701\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+[Standalone]\n+WindowRenderMode = 0\n+BackBufferScale = 0.416666"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/README.md", "diff": "diff --git a/external/vpx-getaway/README.md b/external/vpx-getaway/README.md\nindex 4e65197d..1d8b2126 100644\n--- a/external/vpx-getaway/README.md\n+++ b/external/vpx-getaway/README.md\n@@ -1,4 +1,4 @@\n-# The Getaway - High Speed II\n+﻿# The Getaway - High Speed II\n \n ![Table Preview](../../images/vpx-getaway.jpg)\n \n@@ -29,7 +29,7 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - D-pad up (or joystick up on the arcade control panel) launch the ball and shift gears\n - I can't drive 55"}
+        ]
+      },
+      {
+        "hash": "013f69af2b69e407d1b79d8aa0339da5a479d54d",
+        "date": "2025-06-14 18:59:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated launcher images with points work\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/launcher.png"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/README.md", "diff": "diff --git a/external/vpx-getaway/README.md b/external/vpx-getaway/README.md\nindex 5368327a..4e65197d 100644\n--- a/external/vpx-getaway/README.md\n+++ b/external/vpx-getaway/README.md\n@@ -28,8 +28,8 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - D-pad up (or joystick up on the arcade control panel) launch the ball and shift gears\n - I can't drive 55"}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/README.md", "diff": "diff --git a/external/vpx-getaway/README.md b/external/vpx-getaway/README.md\nindex b66bef5e..5368327a 100644\n--- a/external/vpx-getaway/README.md\n+++ b/external/vpx-getaway/README.md\n@@ -28,6 +28,9 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - D-pad up (or joystick up on the arcade control panel) launch the ball and shift gears\n - I can't drive 55\n "}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/README.md", "diff": "diff --git a/external/vpx-getaway/README.md b/external/vpx-getaway/README.md\nindex 336aa7aa..b66bef5e 100644\n--- a/external/vpx-getaway/README.md\n+++ b/external/vpx-getaway/README.md\n@@ -28,9 +28,6 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-getaway.elf\n-- Download the table, ROM and directb2s versions listed above and copy them into this folder\n - D-pad up (or joystick up on the arcade control panel) launch the ball and shift gears\n - I can't drive 55\n "}
+        ]
+      },
+      {
+        "hash": "8969f3cce6d9de7205da4af9bb3e4de6c73686a3",
+        "date": "2025-04-01 16:16:33 +0100",
+        "author": "OminousOsie",
+        "message": "Updated image links to ones in the repo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/README.md", "diff": "diff --git a/external/vpx-getaway/README.md b/external/vpx-getaway/README.md\nindex 56e89b6a..336aa7aa 100644\n--- a/external/vpx-getaway/README.md\n+++ b/external/vpx-getaway/README.md\n@@ -1,6 +1,6 @@\n # The Getaway - High Speed II\n \n-![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=63726&id=13130&full=1)\n+![Table Preview](../../images/vpx-getaway.jpg)\n \n Author: [ganjafarmer](https://www.vpforums.org/index.php?app=core&module=search&do=user_activity&search_app=downloads&mid=113960)  \n Version: 1.2  \n@@ -33,3 +33,4 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n - Download the table, ROM and directb2s versions listed above and copy them into this folder\n - D-pad up (or joystick up on the arcade control panel) launch the ball and shift gears\n - I can't drive 55\n+"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-getaway/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-getaway/pinmame/cfg/.gitkeep b/external/vpx-getaway/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-getaway/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-getaway/pinmame/cfg/default.cfg b/external/vpx-getaway/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-getaway/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-getaway/pinmame/cfg/gw_l5.cfg", "diff": "diff --git a/external/vpx-getaway/pinmame/cfg/gw_l5.cfg b/external/vpx-getaway/pinmame/cfg/gw_l5.cfg\ndeleted file mode 100644\nindex d5aa1fbd..00000000\nBinary files a/external/vpx-getaway/pinmame/cfg/gw_l5.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-getaway/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-getaway/pinmame/ini/.gitkeep b/external/vpx-getaway/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-getaway/pinmame/ini/gw_l5.ini", "diff": "diff --git a/external/vpx-getaway/pinmame/ini/gw_l5.ini b/external/vpx-getaway/pinmame/ini/gw_l5.ini\ndeleted file mode 100644\nindex 28ec15cf..00000000\n--- a/external/vpx-getaway/pinmame/ini/gw_l5.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-getaway/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-getaway/pinmame/nvram/.gitkeep b/external/vpx-getaway/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-getaway/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-getaway/pinmame/roms/.gitkeep b/external/vpx-getaway/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-getaway/vpx-getaway.xml", "diff": "diff --git a/external/vpx-getaway/vpx-getaway.xml b/external/vpx-getaway/vpx-getaway.xml\ndeleted file mode 100644\nindex 5b559ccd..00000000\n--- a/external/vpx-getaway/vpx-getaway.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>The Getaway - High Speed II</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-getaway/The Getaway - High Speed II v1.2.ini->external/vpx-getaway/table.ini", "diff": "diff --git a/external/vpx-getaway/The Getaway - High Speed II v1.2.ini b/external/vpx-getaway/table.ini\nsimilarity index 100%\nrename from external/vpx-getaway/The Getaway - High Speed II v1.2.ini\nrename to external/vpx-getaway/table.ini"},
+          {"status": "R-from", "path": "external/vpx-getaway/pinmame/nvram/gw_l5.nv->external/vpx-getaway/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-getaway/vpx-getaway.png->external/vpx-getaway/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-getaway/The Getaway - High Speed II v1.2.ini->external/vpx-getaway/table.ini", "diff": "diff --git a/external/vpx-getaway/The Getaway - High Speed II v1.2.ini b/external/vpx-getaway/table.ini\nsimilarity index 100%\nrename from external/vpx-getaway/The Getaway - High Speed II v1.2.ini\nrename to external/vpx-getaway/table.ini"},
+          {"status": "R-to", "path": "external/vpx-getaway/pinmame/nvram/gw_l5.nv->external/vpx-getaway/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-getaway/vpx-getaway.png->external/vpx-getaway/launcher.png"}
+        ]
+      },
+      {
+        "hash": "8658b65de0e1e6f06dd48d26c6ec1b795a5467f6",
+        "date": "2024-08-02 17:38:57 -0400",
+        "author": "n-i-x",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/README.md", "diff": "diff --git a/external/vpx-getaway/README.md b/external/vpx-getaway/README.md\nindex 6d55c56b..56e89b6a 100644\n--- a/external/vpx-getaway/README.md\n+++ b/external/vpx-getaway/README.md\n@@ -21,9 +21,9 @@ Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=\n \n Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n-| Table | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-------|-----------|----------|-----------|-----|--------------|-----|\n-| [The Getaway - High Speed II](external/vpx-getaway) | :white_check_mark: | :white_check_mark: | :white_check_mark: |:white_check_mark: | :white_check_mark: | 42 |\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: |:white_check_mark: | :white_check_mark: | 42 |\n \n \n ## Instructions\n"}
+        ]
+      },
+      {
+        "hash": "3f679d9d42867d429f6d7391c73b615ce44b9fde",
+        "date": "2024-07-28 11:13:31 -0500",
+        "author": "Officially-Unofficial",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/README.md", "diff": "diff --git a/external/vpx-getaway/README.md b/external/vpx-getaway/README.md\nindex ffece86c..6d55c56b 100644\n--- a/external/vpx-getaway/README.md\n+++ b/external/vpx-getaway/README.md\n@@ -8,8 +8,8 @@ Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=\n \n DirectB2S\n \n-Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-Version: 2.0.0\n+Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+Version: 2.0.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/11932-the-getaway-high-speed-ii-williams-1992-b2s-with-full-dmd/)\n \n ROM\n"}
+        ]
+      },
+      {
+        "hash": "2838354dcabb6c0c87d3b8086124a28fad8f9749",
+        "date": "2024-07-28 11:05:55 -0500",
+        "author": "Officially-Unofficial",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/README.md", "diff": "diff --git a/external/vpx-getaway/README.md b/external/vpx-getaway/README.md\nindex 42e6820a..ffece86c 100644\n--- a/external/vpx-getaway/README.md\n+++ b/external/vpx-getaway/README.md\n@@ -8,9 +8,9 @@ Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=\n \n DirectB2S\n \n-Author: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) \n-Version: 2.0\n-Download: [VP Universe] https://vpuniverse.com/files/file/11932-the-getaway-high-speed-ii-williams-1992-b2s-with-full-dmd/\n+Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n+Version: 2.0.0\n+Download: [VP Universe](https://vpuniverse.com/files/file/11932-the-getaway-high-speed-ii-williams-1992-b2s-with-full-dmd/)\n \n ROM\n \n@@ -32,4 +32,4 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n - Add your personalized launcher.elf and rename it to vpx-getaway.elf\n - Download the table, ROM and directb2s versions listed above and copy them into this folder\n - D-pad up (or joystick up on the arcade control panel) launch the ball and shift gears\n-- I can't drive 55\n\\ No newline at end of file\n+- I can't drive 55\n"}
+        ]
+      },
+      {
+        "hash": "d5e3eed21b3a171958cb63ac1ce7fd637ad2c85a",
+        "date": "2024-07-28 10:37:41 -0500",
+        "author": "Officially-Unofficial",
+        "message": "updated readme files\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-getaway/README.md", "diff": "diff --git a/external/vpx-getaway/README.md b/external/vpx-getaway/README.md\nindex b43ca294..42e6820a 100644\n--- a/external/vpx-getaway/README.md\n+++ b/external/vpx-getaway/README.md\n@@ -23,7 +23,7 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n | Table | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-------|-----------|----------|-----------|-----|--------------|-----|\n-| [The Getaway - High Speed II](external/vpx-24) | :white_check_mark: | :white_check_mark: | :white_check_mark: |:white_check_mark: | :white_check_mark: | 42 |\n+| [The Getaway - High Speed II](external/vpx-getaway) | :white_check_mark: | :white_check_mark: | :white_check_mark: |:white_check_mark: | :white_check_mark: | 42 |\n \n \n ## Instructions\n"}
+        ]
+      },
+      {
+        "hash": "11e4beaa11f5eff3577200b60d9078ab8363f95a",
+        "date": "2024-07-28 10:35:37 -0500",
+        "author": "Officially-Unofficial",
+        "message": "Adding vpx-getaway\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-getaway/README.md", "diff": "diff --git a/external/vpx-getaway/README.md b/external/vpx-getaway/README.md\nnew file mode 100644\nindex 00000000..b43ca294\n--- /dev/null\n+++ b/external/vpx-getaway/README.md\n@@ -0,0 +1,35 @@\n+# The Getaway - High Speed II\n+\n+![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=63726&id=13130&full=1)\n+\n+Author: [ganjafarmer](https://www.vpforums.org/index.php?app=core&module=search&do=user_activity&search_app=downloads&mid=113960)  \n+Version: 1.2  \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13130)\n+\n+DirectB2S\n+\n+Author: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) \n+Version: 2.0\n+Download: [VP Universe] https://vpuniverse.com/files/file/11932-the-getaway-high-speed-ii-williams-1992-b2s-with-full-dmd/\n+\n+ROM\n+\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1330)\n+\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+\n+| Table | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-------|-----------|----------|-----------|-----|--------------|-----|\n+| [The Getaway - High Speed II](external/vpx-24) | :white_check_mark: | :white_check_mark: | :white_check_mark: |:white_check_mark: | :white_check_mark: | 42 |\n+\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-getaway.elf\n+- Download the table, ROM and directb2s versions listed above and copy them into this folder\n+- D-pad up (or joystick up on the arcade control panel) launch the ball and shift gears\n+- I can't drive 55\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-getaway/The Getaway - High Speed II v1.2.ini", "diff": "diff --git a/external/vpx-getaway/The Getaway - High Speed II v1.2.ini b/external/vpx-getaway/The Getaway - High Speed II v1.2.ini\nnew file mode 100644\nindex 00000000..7b6a6268\n--- /dev/null\n+++ b/external/vpx-getaway/The Getaway - High Speed II v1.2.ini\t\n@@ -0,0 +1,17 @@\n+[Player]\n+BallTrailStrength = 0.149020\n+AlphaRampAccuracy = 10\n+OverrideTableEmissionScale = 0\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.722598\n+ViewCabScaleY = 0.978738\n+ViewCabScaleZ = 0.923071\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -25.587011\n+ViewCabPlayerY = 3.137996\n+ViewCabPlayerZ = -343.549896\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 51.752701\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-getaway/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-getaway/pinmame/cfg/.gitkeep b/external/vpx-getaway/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-getaway/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-getaway/pinmame/cfg/default.cfg b/external/vpx-getaway/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-getaway/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-getaway/pinmame/cfg/gw_l5.cfg", "diff": "diff --git a/external/vpx-getaway/pinmame/cfg/gw_l5.cfg b/external/vpx-getaway/pinmame/cfg/gw_l5.cfg\nnew file mode 100644\nindex 00000000..d5aa1fbd\nBinary files /dev/null and b/external/vpx-getaway/pinmame/cfg/gw_l5.cfg differ"},
+          {"status": "A", "path": "external/vpx-getaway/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-getaway/pinmame/ini/.gitkeep b/external/vpx-getaway/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-getaway/pinmame/ini/gw_l5.ini", "diff": "diff --git a/external/vpx-getaway/pinmame/ini/gw_l5.ini b/external/vpx-getaway/pinmame/ini/gw_l5.ini\nnew file mode 100644\nindex 00000000..28ec15cf\n--- /dev/null\n+++ b/external/vpx-getaway/pinmame/ini/gw_l5.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+cheat=0\n+sound=1\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-getaway/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-getaway/pinmame/nvram/.gitkeep b/external/vpx-getaway/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-getaway/pinmame/nvram/gw_l5.nv"},
+          {"status": "A", "path": "external/vpx-getaway/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-getaway/pinmame/roms/.gitkeep b/external/vpx-getaway/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-getaway/vpx-getaway.png"},
+          {"status": "A", "path": "external/vpx-getaway/vpx-getaway.xml", "diff": "diff --git a/external/vpx-getaway/vpx-getaway.xml b/external/vpx-getaway/vpx-getaway.xml\nnew file mode 100644\nindex 00000000..5b559ccd\n--- /dev/null\n+++ b/external/vpx-getaway/vpx-getaway.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>The Getaway - High Speed II</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

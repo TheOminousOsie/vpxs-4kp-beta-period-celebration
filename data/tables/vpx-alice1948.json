@@ -1,0 +1,286 @@
+{
+    "commit_count": 29,
+    "commits": [
+      {
+        "hash": "3c7c6e753b37af30b80e87e2c57d698afab88003",
+        "date": "2026-09-06 22:26:14 -0400",
+        "author": "pointdablame",
+        "message": "Launchers - logo update\n\nThis updates the following launchers to the new Legends Unchained Logo:  123, 24, 250cc Abra Ca Dabra, Ace High, Alaska, Ali, Ali JPs, Alice 1948, Alien Poker, Aliens Alien Star, Adventures of Rocky and Bullwinkle, The Addams Family\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/launcher.png"}
+        ]
+      },
+      {
+        "hash": "0c79778866f792acc013e62474778fabce70d997",
+        "date": "2026-08-18 11:36:32 -0400",
+        "author": "n-i-x",
+        "message": "move button labels to buttons.ini\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alice1948/buttons.ini", "diff": "diff --git a/external/vpx-alice1948/buttons.ini b/external/vpx-alice1948/buttons.ini\nnew file mode 100644\nindex 00000000..cb7542a6\n--- /dev/null\n+++ b/external/vpx-alice1948/buttons.ini\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+; dpadUp = \"Launch The Ball\"\n+; dpadDown = \"Down\"\n+; dpadLeft = \"Left\"\n+dpadRight = \"Load Ball from Hopper\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start / Menu Select\"\n+; menu = \"Menu\""}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex 5ac5ca99..969b9b44 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassBundled: true\n backglassVPSId: \"aE0MrrW6W3\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"ECE0EE9060A11417B1A515E9603589FF\"\n-  - \"34841D781FF0670BC47E2BEE36C9E70C\"\n+backglassChecksum: \"ECE0EE9060A11417B1A515E9603589FF\"\n backglassNotes: \"Download 'Alice in Wonderland (Gottlieb 1948).directb2s.zip'\"\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n@@ -17,7 +14,4 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"PointDaBlame\"\n vpxVPSId: \"EQParLHs3z\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"774D400223C623C40B66FBC6DECF65E7\"\n-  - \"A135CC755B369D603C5FE11D0DB8D070\"\n+vpxChecksum: \"774D400223C623C40B66FBC6DECF65E7\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex 969b9b44..5ac5ca99 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -1,7 +1,10 @@\n ---\n backglassBundled: true\n backglassVPSId: \"aE0MrrW6W3\"\n-backglassChecksum: \"ECE0EE9060A11417B1A515E9603589FF\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"ECE0EE9060A11417B1A515E9603589FF\"\n+  - \"34841D781FF0670BC47E2BEE36C9E70C\"\n backglassNotes: \"Download 'Alice in Wonderland (Gottlieb 1948).directb2s.zip'\"\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n@@ -14,4 +17,7 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"PointDaBlame\"\n vpxVPSId: \"EQParLHs3z\"\n-vpxChecksum: \"774D400223C623C40B66FBC6DECF65E7\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"774D400223C623C40B66FBC6DECF65E7\"\n+  - \"A135CC755B369D603C5FE11D0DB8D070\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/table.ini", "diff": "diff --git a/external/vpx-alice1948/table.ini b/external/vpx-alice1948/table.ini\nindex 232cf418..88e882d9 100644\n--- a/external/vpx-alice1948/table.ini\n+++ b/external/vpx-alice1948/table.ini\n@@ -1,22 +1,32 @@\n+[Standalone]\n+BackBufferScale = 0.666666\n+\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.308678\n-ViewCabScaleY = 1.139929\n-ViewCabScaleZ = 1.009267\n+ViewCabScaleX = 1.100972\n+ViewCabScaleY = 1.000188\n+ViewCabScaleZ = 0.774079\n ViewCabRotation = 180.000000\n-ViewCabHOfs = -6.306396\n-ViewCabVOfs = -96.075722\n-ViewCabWindowTop = 199.510925\n-ViewCabWindowBot = 93.825195\n-ToneMapper = 2\n+ViewCabHOfs = 0.013405\n+ViewCabVOfs = 0.034879\n+ViewCabWindowTop = 0.044891\n+ViewCabWindowBot = 0.696193\n+ToneMapper = 0\n Difficulty = 0.504290\n \n [Player]\n-ScreenPlayerZ = 91.825783\n+ScreenPlayerZ = 99.953476\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n-ScreenPlayerY = 18.294546\n+ScreenPlayerY = 7.986940\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.320580\n\\ No newline at end of file\n+EmissionScale = 0.320580\n+AAFactor = 0.90\n+\n+[TableOption]\n+Select LUT = 0.000000\n+Cabinet Rails = 1.000000\n+Balls per Game = 1.000000\n+Auto Ball Loading = 0.000000\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex 4a964ecd..969b9b44 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes: \n-  - \"bass\"\n backglassBundled: true\n backglassVPSId: \"aE0MrrW6W3\"\n backglassChecksum: \"ECE0EE9060A11417B1A515E9603589FF\""}
+        ]
+      },
+      {
+        "hash": "2bc87f4920d0f728fe66a865164e334ab1373297",
+        "date": "2025-10-08 16:08:45 -0400",
+        "author": "Wes Smith",
+        "message": "Update tableNotes for Alice in Wonderland table",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex e3cb06dc..4a964ecd 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -7,7 +7,7 @@ backglassChecksum: \"ECE0EE9060A11417B1A515E9603589FF\"\n backglassNotes: \"Download 'Alice in Wonderland (Gottlieb 1948).directb2s.zip'\"\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n-tableNotes: \"Download v55_VPX8.zip\"\n+tableNotes: \"Alice in Wonderland (Gottlieb 1948) v600.zip\"\n tableVPSId: \"9kjJEqftU6\"\n tagline: \"We're all mad here!\"\n testers:\n"}
+        ]
+      },
+      {
+        "hash": "688ec61c6bd9a567e41b60eb2948b47c6652ad0f",
+        "date": "2025-09-10 12:40:08 -0400",
+        "author": "evilwraith",
+        "message": "JPSalas v600 updates\n\nCurrent as of 9/10/25. More to come.\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex 57ebe495..e3cb06dc 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -16,4 +16,4 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"PointDaBlame\"\n vpxVPSId: \"EQParLHs3z\"\n-vpxChecksum: \"F97F13428CF80482326D03A7ABD90CB0\"\n+vpxChecksum: \"774D400223C623C40B66FBC6DECF65E7\""}
+        ]
+      },
+      {
+        "hash": "53255de849f5ff727fc28a3f9c325e4e36dc56f6",
+        "date": "2025-06-25 11:08:36 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed missing quote\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex 1fb02621..57ebe495 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -12,7 +12,7 @@ tableVPSId: \"9kjJEqftU6\"\n tagline: \"We're all mad here!\"\n testers:\n   - \"Boris\"\n-  - \"OminousOsie\n+  - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n   - \"PointDaBlame\"\n vpxVPSId: \"EQParLHs3z\"\n"}
+        ]
+      },
+      {
+        "hash": "5b29c5b8dd4a0d011184f4bdcf8b541aaaf6c3fc",
+        "date": "2025-06-25 11:05:05 +0100",
+        "author": "OminousOsie",
+        "message": "Final tweaks\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/README.md", "diff": "diff --git a/external/vpx-alice1948/README.md b/external/vpx-alice1948/README.md\nindex 64cee676..79fa3367 100755\n--- a/external/vpx-alice1948/README.md\n+++ b/external/vpx-alice1948/README.md\n@@ -15,6 +15,8 @@\n **VPXS 4KP Testers:**\n   - Boris\n   - Ominous Osie 🌸\n+  - CoffeeAtJoes\n+  - PointDaBlame\n \n <br>\n "},
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex a5f958f2..1fb02621 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -12,6 +12,8 @@ tableVPSId: \"9kjJEqftU6\"\n tagline: \"We're all mad here!\"\n testers:\n   - \"Boris\"\n-  - \"OminousOsie\"\n+  - \"OminousOsie\n+  - \"CoffeeAtJoes\"\n+  - \"PointDaBlame\"\n vpxVPSId: \"EQParLHs3z\"\n vpxChecksum: \"F97F13428CF80482326D03A7ABD90CB0\""}
+        ]
+      },
+      {
+        "hash": "079dc4b9c43f7f008c0e972ef14ef038a07fcbb9",
+        "date": "2025-06-25 10:06:22 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/README.md", "diff": "diff --git a/external/vpx-alice1948/README.md b/external/vpx-alice1948/README.md\nindex 6ba0c1f0..64cee676 100755\n--- a/external/vpx-alice1948/README.md\n+++ b/external/vpx-alice1948/README.md\n@@ -2,34 +2,60 @@\n \n ![Table Preview](../../images/vpx-alice1948.jpg)\n \n----\n+<br>\n \n-## Files\n-| File Type | Link | Version | Author |\n-|:---------:|:----:|:-------:|:------:|\n-| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17611) | 5.5.0 | [JPSalas](https://www.vpforums.org/index.php?showuser=277) |\n-| B2S | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17611) | 5.5.0 | [JPSalas](https://www.vpforums.org/index.php?showuser=277) |\n-| DMD | N/A | N/A | N/A |\n-| ROM | N/A | N/A | N/A |\n+## *️⃣  Table Statistics\n \n-**Tested by:** [Boris]\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ❌ | ❌ | ❌ | 60 |\n \n----\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Boris\n+  - Ominous Osie 🌸\n \n-## Status \n-**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 60 |\n+<br>\n \n ---\n \n-## Instructions\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Alice in Wonderland (Gottlieb 1948)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"We're all mad here!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n \n-## Notes\n-- Push right on the control panel to load a ball from the hopper.\n \n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "a8cd5aa6f4fe3aa9a55ddad9bd10fa9bd113c8de",
+        "date": "2025-06-25 10:02:23 +0100",
+        "author": "OminousOsie",
+        "message": "Enabled tables for wiz wed\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex a166f352..a5f958f2 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -5,7 +5,6 @@ backglassBundled: true\n backglassVPSId: \"aE0MrrW6W3\"\n backglassChecksum: \"ECE0EE9060A11417B1A515E9603589FF\"\n backglassNotes: \"Download 'Alice in Wonderland (Gottlieb 1948).directb2s.zip'\"\n-enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n tableNotes: \"Download v55_VPX8.zip\""}
+        ]
+      },
+      {
+        "hash": "9dd20d6d8c634096528cf7870bffb80a72d55161",
+        "date": "2025-06-23 17:40:00 +0100",
+        "author": "OminousOsie",
+        "message": "Added artwork for alice\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alice1948/backglass.png"},
+          {"status": "A", "path": "external/vpx-alice1948/dmd.png"}
+        ]
+      },
+      {
+        "hash": "48088897c11bedc4ffd37e0844832fff2702c477",
+        "date": "2025-06-18 08:25:41 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex a5f958f2..a166f352 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -5,6 +5,7 @@ backglassBundled: true\n backglassVPSId: \"aE0MrrW6W3\"\n backglassChecksum: \"ECE0EE9060A11417B1A515E9603589FF\"\n backglassNotes: \"Download 'Alice in Wonderland (Gottlieb 1948).directb2s.zip'\"\n+enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n tableNotes: \"Download v55_VPX8.zip\""}
+        ]
+      },
+      {
+        "hash": "99081cf98fc5c82edc54e684eb8854af3518feb0",
+        "date": "2025-06-14 20:15:35 +0100",
+        "author": "OminousOsie",
+        "message": "Tweaks\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/table.ini", "diff": "diff --git a/external/vpx-alice1948/table.ini b/external/vpx-alice1948/table.ini\nindex e9514e79..232cf418 100644\n--- a/external/vpx-alice1948/table.ini\n+++ b/external/vpx-alice1948/table.ini\n@@ -1,35 +1,22 @@\n [TableOverride]\n-ViewDTLookAt = 52.000000\n-ViewDTFOV = 32.000000\n-ViewDTLayback = 6.000000\n-ViewDTRotation = 0.000000\n-ViewDTScaleX = 1.000000\n-ViewDTScaleY = 1.000000\n-ViewDTScaleZ = 1.000000\n-ViewDTPlayerX = 0.000000\n-ViewDTPlayerY = -10.000000\n-ViewDTPlayerZ = -200.000000\n-ViewCabLookAt = 8.999996\n-ViewCabFOV = 27.000000\n-ViewCabLayback = 76.000000\n-ViewCabRotation = 90.000000\n-ViewCabScaleX = 1.000000\n-ViewCabScaleY = 1.150000\n-ViewCabScaleZ = 1.000000\n-ViewCabPlayerX = -15.000000\n-ViewCabPlayerY = 0.000000\n-ViewCabPlayerZ = -200.000000\n-ViewFSSLookAt = 52.000000\n-ViewFSSFOV = 45.000000\n-ViewFSSLayback = 0.000000\n-ViewFSSRotation = 0.000000\n-ViewFSSScaleX = 1.200000\n-ViewFSSScaleY = 1.100000\n-ViewFSSScaleZ = 1.000000\n-ViewFSSPlayerX = 0.000000\n-ViewFSSPlayerY = 30.000000\n-ViewFSSPlayerZ = -50.000000\n-ViewCabMode = 0\n+ViewCabMode = 2\n+ViewCabScaleX = 1.308678\n+ViewCabScaleY = 1.139929\n+ViewCabScaleZ = 1.009267\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = -6.306396\n+ViewCabVOfs = -96.075722\n+ViewCabWindowTop = 199.510925\n+ViewCabWindowBot = 93.825195\n+ToneMapper = 2\n+Difficulty = 0.504290\n \n [Player]\n-FXAA = 1\n\\ No newline at end of file\n+ScreenPlayerZ = 91.825783\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+ScreenPlayerY = 18.294546\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.320580\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "ec2ac89a406a42baae2adf543553fe7154960ed6",
+        "date": "2025-06-14 19:23:37 +0100",
+        "author": "OminousOsie",
+        "message": "More ymls + launcher images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/launcher.png"},
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex a166f352..a5f958f2 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -5,7 +5,6 @@ backglassBundled: true\n backglassVPSId: \"aE0MrrW6W3\"\n backglassChecksum: \"ECE0EE9060A11417B1A515E9603589FF\"\n backglassNotes: \"Download 'Alice in Wonderland (Gottlieb 1948).directb2s.zip'\"\n-enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n tableNotes: \"Download v55_VPX8.zip\""}
+        ]
+      },
+      {
+        "hash": "9b74a68136f79c7008e9ac4ed03fc85ec264625d",
+        "date": "2025-06-14 09:39:41 +0100",
+        "author": "OminousOsie",
+        "message": "Added Dark Crystal and Death Note, and make comment better\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex 3f86f35d..a166f352 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -5,7 +5,7 @@ backglassBundled: true\n backglassVPSId: \"aE0MrrW6W3\"\n backglassChecksum: \"ECE0EE9060A11417B1A515E9603589FF\"\n backglassNotes: \"Download 'Alice in Wonderland (Gottlieb 1948).directb2s.zip'\"\n-enabled: false # Osie: yml built in a batch, just needs testing\n+enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n tableNotes: \"Download v55_VPX8.zip\""}
+        ]
+      },
+      {
+        "hash": "b9d79e3f5466bc0a0faa38cb36b1006561605eb7",
+        "date": "2025-06-13 12:51:54 +0100",
+        "author": "OminousOsie",
+        "message": "Added first 5 tables in the wiz candidate list\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nnew file mode 100644\nindex 00000000..3f86f35d\n--- /dev/null\n+++ b/external/vpx-alice1948/table.yml\n@@ -0,0 +1,18 @@\n+---\n+applyFixes: \n+  - \"bass\"\n+backglassBundled: true\n+backglassVPSId: \"aE0MrrW6W3\"\n+backglassChecksum: \"ECE0EE9060A11417B1A515E9603589FF\"\n+backglassNotes: \"Download 'Alice in Wonderland (Gottlieb 1948).directb2s.zip'\"\n+enabled: false # Osie: yml built in a batch, just needs testing\n+fps: 60\n+mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n+tableNotes: \"Download v55_VPX8.zip\"\n+tableVPSId: \"9kjJEqftU6\"\n+tagline: \"We're all mad here!\"\n+testers:\n+  - \"Boris\"\n+  - \"OminousOsie\"\n+vpxVPSId: \"EQParLHs3z\"\n+vpxChecksum: \"F97F13428CF80482326D03A7ABD90CB0\""},
+          {"status": "M", "path": "external/vpx-alice1948/launcher.cfg", "diff": "diff --git a/external/vpx-alice1948/launcher.cfg b/external/vpx-alice1948/launcher.cfg\nindex 56642694..52a7ae1b 100644\n--- a/external/vpx-alice1948/launcher.cfg\n+++ b/external/vpx-alice1948/launcher.cfg\n@@ -1,12 +1,12 @@\n [buttonLabels]\n-; dpadUp = \"Up\"\n+; dpadUp = \"Launch The Ball\"\n ; dpadDown = \"Down\"\n ; dpadLeft = \"Left\"\n-dpadRight = \"Release Ball\"\n+dpadRight = \"Load Ball from Hopper\"\n ; leftFlipper = \"Left Flipper\"\n ; rightFlipper = \"Right Flipper\"\n ; leftNudge = \"Left Nudge\"\n ; rightNudge = \"Right Nudge\"\n ; nudge = \"Nudge\"\n-; start = \"Start\"\n+; start = \"Start / Menu Select\"\n ; menu = \"Menu\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/README.md", "diff": "diff --git a/external/vpx-alice1948/README.md b/external/vpx-alice1948/README.md\nindex cb5a8230..6ba0c1f0 100755\n--- a/external/vpx-alice1948/README.md\n+++ b/external/vpx-alice1948/README.md\n@@ -26,8 +26,8 @@\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n \n ## Notes"}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/README.md", "diff": "diff --git a/external/vpx-alice1948/README.md b/external/vpx-alice1948/README.md\nindex 1a093fd8..cb5a8230 100755\n--- a/external/vpx-alice1948/README.md\n+++ b/external/vpx-alice1948/README.md\n@@ -26,6 +26,10 @@\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+\n ## Notes\n - Push right on the control panel to load a ball from the hopper.\n "}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/README.md", "diff": "diff --git a/external/vpx-alice1948/README.md b/external/vpx-alice1948/README.md\nindex 5078de3e..1a093fd8 100755\n--- a/external/vpx-alice1948/README.md\n+++ b/external/vpx-alice1948/README.md\n@@ -25,10 +25,6 @@\n ---\n \n ## Instructions\n-- Copy this repo folder into the \"external\" folder on your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-alice1948.elf\n-- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alice1948\n-- Make sure any (.vpx), (.directb2s), and (.ini) files are all named the same\n \n ## Notes\n - Push right on the control panel to load a ball from the hopper."}
+        ]
+      },
+      {
+        "hash": "b649b5f0abc2a4708232721d3bb5eeb93d09a3b3",
+        "date": "2025-04-01 17:30:08 +0100",
+        "author": "OminousOsie",
+        "message": "Updated the last files\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/README.md", "diff": "diff --git a/external/vpx-alice1948/README.md b/external/vpx-alice1948/README.md\nindex 54ed7a78..5078de3e 100755\n--- a/external/vpx-alice1948/README.md\n+++ b/external/vpx-alice1948/README.md\n@@ -1,6 +1,6 @@\n # Alice in Wonderland (Gottlieb 1948)\n \n-![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-alice1948.jpg)\n+![Table Preview](../../images/vpx-alice1948.jpg)\n \n ---\n \n@@ -32,3 +32,4 @@\n \n ## Notes\n - Push right on the control panel to load a ball from the hopper.\n+"}
+        ]
+      },
+      {
+        "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
+        "date": "2025-03-19 14:01:02 -0500",
+        "author": "MoxAssault",
+        "message": "Large README Updates\n\n46 README Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/README.md", "diff": "diff --git a/external/vpx-alice1948/README.md b/external/vpx-alice1948/README.md\nindex cd7ef10f..54ed7a78 100755\n--- a/external/vpx-alice1948/README.md\n+++ b/external/vpx-alice1948/README.md\n@@ -2,34 +2,33 @@\n \n ![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-alice1948.jpg)\n \n-Table\n+---\n \n-Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17611)\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17611) | 5.5.0 | [JPSalas](https://www.vpforums.org/index.php?showuser=277) |\n+| B2S | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17611) | 5.5.0 | [JPSalas](https://www.vpforums.org/index.php?showuser=277) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | N/A | N/A | N/A |\n \n-DirectB2S\n+**Tested by:** [Boris]\n \n-Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17611)\n-\n-Tested by: Boris\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 60 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy this repo folder into the \"external\" folder on your USB drive\n - Add your personalized launcher.elf and rename it to vpx-alice1948.elf\n - Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alice1948\n - Make sure any (.vpx), (.directb2s), and (.ini) files are all named the same\n \n ## Notes\n-Push right on the control panel to load a ball from the hopper. \n+- Push right on the control panel to load a ball from the hopper."}
+        ]
+      },
+      {
+        "hash": "1ee6d5fea2db24b160837df344a9d3433605a6f0",
+        "date": "2025-03-19 10:04:09 -0400",
+        "author": "Brandon",
+        "message": "Delete external/vpx-alice1948/table.yml",
+        "files": [
+          {"status": "D", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\ndeleted file mode 100644\nindex 67513c88..00000000\n--- a/external/vpx-alice1948/table.yml\n+++ /dev/null\n@@ -1,5 +0,0 @@\n----\n-tableVPSId: jZlXak4Y\n-vpxVPSId: EQParLHs3z\n-backglassVPSId: ZzEbu9jMsf\n-romVPSId: 9sHHwihv\n"}
+        ]
+      },
+      {
+        "hash": "1752e9c3e517958430a3b13cf2c4121c5a5955bc",
+        "date": "2025-03-19 09:53:43 -0400",
+        "author": "Brandon",
+        "message": "Update table.yml",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex e04fe973..67513c88 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -3,4 +3,3 @@ tableVPSId: jZlXak4Y\n vpxVPSId: EQParLHs3z\n backglassVPSId: ZzEbu9jMsf\n romVPSId: 9sHHwihv\n-coloredROMVPSId:\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-alice1948/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-alice1948/pinmame/cfg/.gitkeep b/external/vpx-alice1948/pinmame/cfg/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-alice1948/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-alice1948/pinmame/ini/.gitkeep b/external/vpx-alice1948/pinmame/ini/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-alice1948/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-alice1948/pinmame/nvram/.gitkeep b/external/vpx-alice1948/pinmame/nvram/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-alice1948/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-alice1948/pinmame/roms/.gitkeep b/external/vpx-alice1948/pinmame/roms/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-alice1948/vpx-alice1948.xml", "diff": "diff --git a/external/vpx-alice1948/vpx-alice1948.xml b/external/vpx-alice1948/vpx-alice1948.xml\ndeleted file mode 100755\nindex 99556039..00000000\n--- a/external/vpx-alice1948/vpx-alice1948.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-\t<name>Alice in Wonderland (Gottlieb 1948)</name>\n-</root>\n\\ No newline at end of file"},
+          {"status": "R-from", "path": "external/vpx-alice1948/Alice in Wonderland (Gottlieb 1948) v55_VPX8.ini->external/vpx-alice1948/table.ini", "diff": "diff --git a/external/vpx-alice1948/Alice in Wonderland (Gottlieb 1948) v55_VPX8.ini b/external/vpx-alice1948/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-alice1948/Alice in Wonderland (Gottlieb 1948) v55_VPX8.ini\nrename to external/vpx-alice1948/table.ini"},
+          {"status": "R-from", "path": "external/vpx-alice1948/vpx-alice1948.png->external/vpx-alice1948/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-alice1948/Alice in Wonderland (Gottlieb 1948) v55_VPX8.ini->external/vpx-alice1948/table.ini", "diff": "diff --git a/external/vpx-alice1948/Alice in Wonderland (Gottlieb 1948) v55_VPX8.ini b/external/vpx-alice1948/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-alice1948/Alice in Wonderland (Gottlieb 1948) v55_VPX8.ini\nrename to external/vpx-alice1948/table.ini"},
+          {"status": "R-to", "path": "external/vpx-alice1948/vpx-alice1948.png->external/vpx-alice1948/launcher.png"}
+        ]
+      },
+      {
+        "hash": "61ddb955a1e2052e2ac4be1472de7710585ed99b",
+        "date": "2025-03-07 12:30:50 -0500",
+        "author": "Brandon",
+        "message": "Add launcher configs to multiple tables\n\nHumpty Dumpty > Right, Release ball\nAlice in Wonderland  > Right, Release ball\nThe Shadow > Right, Toggle ramps\nAttack From Mars > Up, Launcher\nT2 > Up, Launcher\nWWE Royal Rumble > Left, Right, Mag Saves (I think)\nJohnny Mnemonic >left and right change table colors. (Sorry don't know what the effect is called )\nWCS - Left is magnasave\nBlack Knight 2000 > Right, mag save\nBlack Knight: L/R nudge = L/R magna save\nBlack Knight 2000: L/R nudge = L/R magna save\nViper: L nudge = viper reverse, R nudge = viper strike\nMedusa: R nudge = shield post\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alice1948/launcher.cfg", "diff": "diff --git a/external/vpx-alice1948/launcher.cfg b/external/vpx-alice1948/launcher.cfg\nnew file mode 100644\nindex 00000000..56642694\n--- /dev/null\n+++ b/external/vpx-alice1948/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+; dpadUp = \"Up\"\n+; dpadDown = \"Down\"\n+; dpadLeft = \"Left\"\n+dpadRight = \"Release Ball\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start\"\n+; menu = \"Menu\"\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "a20c28c275f2751f2109b5f182efb45e918c8d8b",
+        "date": "2025-02-26 14:31:51 -0500",
+        "author": "Brandon",
+        "message": "Add yml for smattering of tables\n\nBig Horse\nBig Indian\nBig Trouble\nBig Star\n250cc\n301 Bullseye\n4 Aces\nAce High\nAlice In Wonderland\nAli JP\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nnew file mode 100644\nindex 00000000..e04fe973\n--- /dev/null\n+++ b/external/vpx-alice1948/table.yml\n@@ -0,0 +1,6 @@\n+---\n+tableVPSId: jZlXak4Y\n+vpxVPSId: EQParLHs3z\n+backglassVPSId: ZzEbu9jMsf\n+romVPSId: 9sHHwihv\n+coloredROMVPSId:\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "2c8cd5495b4201b3f702c9ba5a389322e131db48",
+        "date": "2025-02-08 02:00:36 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-alice1948",
+        "files": [
+          {"status": "M", "path": "external/vpx-alice1948/README.md", "diff": "diff --git a/external/vpx-alice1948/README.md b/external/vpx-alice1948/README.md\nindex bc72e123..cd7ef10f 100755\n--- a/external/vpx-alice1948/README.md\n+++ b/external/vpx-alice1948/README.md\n@@ -3,13 +3,15 @@\n ![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-alice1948.jpg)\n \n Table\n+\n Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0 \n+Version: 5.5.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17611)\n \n DirectB2S\n+\n Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0 \n+Version: 5.5.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17611)\n \n Tested by: Boris\n@@ -26,8 +28,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy this repo folder into the \"external\" folder on your USB drive\n - Add your personalized launcher.elf and rename it to vpx-alice1948.elf\n-- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alice1948/\n-- Make sure any (.vpx), (.directb2s), (.vbs), and (.ini) files are all named the same\n+- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alice1948\n+- Make sure any (.vpx), (.directb2s), and (.ini) files are all named the same\n \n ## Notes\n-Push right on the control panel to load a ball from the hopper. \n\\ No newline at end of file\n+Push right on the control panel to load a ball from the hopper. \n"}
+        ]
+      },
+      {
+        "hash": "a41bccdc3de144bb9dddcf6b70217e419a21aa65",
+        "date": "2025-02-03 09:56:41 -0500",
+        "author": "Brandon",
+        "message": "Add Alice in Wonderland\n\nadd vpx-alice1948, update root readme, add preview image\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-alice1948/Alice in Wonderland (Gottlieb 1948) v55_VPX8.ini", "diff": "diff --git a/external/vpx-alice1948/Alice in Wonderland (Gottlieb 1948) v55_VPX8.ini b/external/vpx-alice1948/Alice in Wonderland (Gottlieb 1948) v55_VPX8.ini\nnew file mode 100755\nindex 00000000..e9514e79\n--- /dev/null\n+++ b/external/vpx-alice1948/Alice in Wonderland (Gottlieb 1948) v55_VPX8.ini\t\n@@ -0,0 +1,35 @@\n+[TableOverride]\n+ViewDTLookAt = 52.000000\n+ViewDTFOV = 32.000000\n+ViewDTLayback = 6.000000\n+ViewDTRotation = 0.000000\n+ViewDTScaleX = 1.000000\n+ViewDTScaleY = 1.000000\n+ViewDTScaleZ = 1.000000\n+ViewDTPlayerX = 0.000000\n+ViewDTPlayerY = -10.000000\n+ViewDTPlayerZ = -200.000000\n+ViewCabLookAt = 8.999996\n+ViewCabFOV = 27.000000\n+ViewCabLayback = 76.000000\n+ViewCabRotation = 90.000000\n+ViewCabScaleX = 1.000000\n+ViewCabScaleY = 1.150000\n+ViewCabScaleZ = 1.000000\n+ViewCabPlayerX = -15.000000\n+ViewCabPlayerY = 0.000000\n+ViewCabPlayerZ = -200.000000\n+ViewFSSLookAt = 52.000000\n+ViewFSSFOV = 45.000000\n+ViewFSSLayback = 0.000000\n+ViewFSSRotation = 0.000000\n+ViewFSSScaleX = 1.200000\n+ViewFSSScaleY = 1.100000\n+ViewFSSScaleZ = 1.000000\n+ViewFSSPlayerX = 0.000000\n+ViewFSSPlayerY = 30.000000\n+ViewFSSPlayerZ = -50.000000\n+ViewCabMode = 0\n+\n+[Player]\n+FXAA = 1\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-alice1948/README.md", "diff": "diff --git a/external/vpx-alice1948/README.md b/external/vpx-alice1948/README.md\nnew file mode 100755\nindex 00000000..bc72e123\n--- /dev/null\n+++ b/external/vpx-alice1948/README.md\n@@ -0,0 +1,33 @@\n+# Alice in Wonderland (Gottlieb 1948)\n+\n+![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-alice1948.jpg)\n+\n+Table\n+Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n+Version: 5.5.0 \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17611)\n+\n+DirectB2S\n+Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n+Version: 5.5.0 \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17611)\n+\n+Tested by: Boris\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 60 |\n+\n+## Instructions\n+\n+- Copy this repo folder into the \"external\" folder on your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-alice1948.elf\n+- Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-alice1948/\n+- Make sure any (.vpx), (.directb2s), (.vbs), and (.ini) files are all named the same\n+\n+## Notes\n+Push right on the control panel to load a ball from the hopper. \n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-alice1948/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-alice1948/pinmame/cfg/.gitkeep b/external/vpx-alice1948/pinmame/cfg/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-alice1948/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-alice1948/pinmame/ini/.gitkeep b/external/vpx-alice1948/pinmame/ini/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-alice1948/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-alice1948/pinmame/nvram/.gitkeep b/external/vpx-alice1948/pinmame/nvram/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-alice1948/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-alice1948/pinmame/roms/.gitkeep b/external/vpx-alice1948/pinmame/roms/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-alice1948/vpx-alice1948.png"},
+          {"status": "A", "path": "external/vpx-alice1948/vpx-alice1948.xml", "diff": "diff --git a/external/vpx-alice1948/vpx-alice1948.xml b/external/vpx-alice1948/vpx-alice1948.xml\nnew file mode 100755\nindex 00000000..99556039\n--- /dev/null\n+++ b/external/vpx-alice1948/vpx-alice1948.xml\n@@ -0,0 +1,3 @@\n+<root>\n+\t<name>Alice in Wonderland (Gottlieb 1948)</name>\n+</root>\n\\ No newline at end of file\n"}
+        ]
+      }
+    ]
+}

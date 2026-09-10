@@ -1,0 +1,172 @@
+{
+    "commit_count": 16,
+    "commits": [
+      {
+        "hash": "98ea6467798f90720dc32771e21f4f72ac6248d3",
+        "date": "2026-09-10 01:25:42 -0400",
+        "author": "evilwraith",
+        "message": "Flight 2000 version update\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-flight2000/table.yml", "diff": "diff --git a/external/vpx-flight2000/table.yml b/external/vpx-flight2000/table.yml\nindex 01b833ce..7017f8b1 100644\n--- a/external/vpx-flight2000/table.yml\n+++ b/external/vpx-flight2000/table.yml\n@@ -1,16 +1,14 @@\n ---\n-backglassVPSId: \"iuyKhYEo\"\n backglassChecksum: \"43DCB060FC6D3A7C3E0A143D4443478E\"\n backglassNotes: \"Download v1.0\"\n+backglassVPSId: \"iuyKhYEo\"\n fps: 60\n-romVPSId: \"oIofzNVL\"\n romChecksum: \"1F4C9DFF8929CA6DB1F58CE872DF09BF\"\n romNotes: \"Download flight2k.zip\"\n-tableNotes: \"Download v2.0\"\n+romVPSId: \"oIofzNVL\"\n tableVPSId: \"uoti2kZZ\"\n tagline: \"Stern's first talking Pinball Game is Really Taking Off!\"\n testers:\n-  - \"\"\n   - \"OminousOsie\"\n+vpxChecksum: \"536C3A8895244D7CBFDAB68A59030C23\"\n vpxVPSId: \"rbuCfaN0Ba\"\n-vpxChecksum: \"56D0107B6D255E0C94DD8F1DF89982FE\"\n"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-flight2000/table.yml", "diff": "diff --git a/external/vpx-flight2000/table.yml b/external/vpx-flight2000/table.yml\nindex 82c64fc0..01b833ce 100644\n--- a/external/vpx-flight2000/table.yml\n+++ b/external/vpx-flight2000/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"iuyKhYEo\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"43DCB060FC6D3A7C3E0A143D4443478E\"\n-  - \"8839B3E7FAF3D375B4E4E9CC1277863F\"\n+backglassChecksum: \"43DCB060FC6D3A7C3E0A143D4443478E\"\n backglassNotes: \"Download v1.0\"\n fps: 60\n romVPSId: \"oIofzNVL\"\n@@ -16,7 +13,4 @@ testers:\n   - \"\"\n   - \"OminousOsie\"\n vpxVPSId: \"rbuCfaN0Ba\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"56D0107B6D255E0C94DD8F1DF89982FE\"\n-  - \"3765C1124AF8518F0F1A91DF6C135A32\"\n+vpxChecksum: \"56D0107B6D255E0C94DD8F1DF89982FE\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-flight2000/table.yml", "diff": "diff --git a/external/vpx-flight2000/table.yml b/external/vpx-flight2000/table.yml\nindex 01b833ce..82c64fc0 100644\n--- a/external/vpx-flight2000/table.yml\n+++ b/external/vpx-flight2000/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"iuyKhYEo\"\n-backglassChecksum: \"43DCB060FC6D3A7C3E0A143D4443478E\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"43DCB060FC6D3A7C3E0A143D4443478E\"\n+  - \"8839B3E7FAF3D375B4E4E9CC1277863F\"\n backglassNotes: \"Download v1.0\"\n fps: 60\n romVPSId: \"oIofzNVL\"\n@@ -13,4 +16,7 @@ testers:\n   - \"\"\n   - \"OminousOsie\"\n vpxVPSId: \"rbuCfaN0Ba\"\n-vpxChecksum: \"56D0107B6D255E0C94DD8F1DF89982FE\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"56D0107B6D255E0C94DD8F1DF89982FE\"\n+  - \"3765C1124AF8518F0F1A91DF6C135A32\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-flight2000/nvram.nv"},
+          {"status": "M", "path": "external/vpx-flight2000/table.ini", "diff": "diff --git a/external/vpx-flight2000/table.ini b/external/vpx-flight2000/table.ini\nindex 53356d19..0708b764 100644\n--- a/external/vpx-flight2000/table.ini\n+++ b/external/vpx-flight2000/table.ini\n@@ -1,19 +1,19 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.110059\n-ViewCabScaleY = 1.135868\n-ViewCabScaleZ = 0.999944\n+ViewCabScaleX = 1.058495\n+ViewCabScaleY = 0.986663\n+ViewCabScaleZ = 0.880256\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -103.991684\n-ViewCabWindowTop = 325.541931\n-ViewCabWindowBot = 83.953270\n+ViewCabVOfs = 23.165613\n+ViewCabWindowTop = 0.238954\n+ViewCabWindowBot = 0.199257\n \n [Player]\n MusicVolume = 60\n SoundVolume = 60\n-ScreenPlayerY = 8\n-ScreenPlayerZ = 100\n+ScreenPlayerY = 8.001500\n+ScreenPlayerZ = 100.043365\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n-ScreenInclination = 0.000000\n\\ No newline at end of file\n+ScreenInclination = 0.000000"},
+          {"status": "M", "path": "external/vpx-flight2000/table.yml", "diff": "diff --git a/external/vpx-flight2000/table.yml b/external/vpx-flight2000/table.yml\nindex 62e500cb..01b833ce 100644\n--- a/external/vpx-flight2000/table.yml\n+++ b/external/vpx-flight2000/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes: \n-  - \"bass\"\n backglassVPSId: \"iuyKhYEo\"\n backglassChecksum: \"43DCB060FC6D3A7C3E0A143D4443478E\"\n backglassNotes: \"Download v1.0\""}
+        ]
+      },
+      {
+        "hash": "71cb8f303ba40c97e0653aedb34babc7e9f2ef66",
+        "date": "2025-07-09 13:01:56 +0100",
+        "author": "OminousOsie",
+        "message": "Updated all readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-flight2000/README.md", "diff": "diff --git a/external/vpx-flight2000/README.md b/external/vpx-flight2000/README.md\nindex 39772180..60a2f02b 100644\n--- a/external/vpx-flight2000/README.md\n+++ b/external/vpx-flight2000/README.md\n@@ -2,36 +2,60 @@\n \n ![Table Preview](../../images/vpx-flight2000.png)\n \n-Authors: [Bigus](https://www.vpforums.org/index.php?showuser=107629)  \n-Version: 2.0  \n-Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=16799)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [htamas](https://www.vpforums.org/index.php?showuser=16933)  \n-Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=7683)\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n-ROM\n+<br>\n \n-ROM Name: flight2k.zip  \n-Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=746)  \n+**VPXS 4KP Testers:**\n+  - \n+  - Ominous Osie 🌸\n \n-SHA1: 6878EF1BD1F855D2318CA382F7C7D2013060BA62  \n-MD5:  1F4C9DFF8929CA6DB1F58CE872DF09BF\n+<br>\n \n-Tested by: evilwraith\n+---\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n+## ❇️ Available in the Wizard! 🪄✨\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n+<br>\n \n-## Instructions\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+### How to install:\n \n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Flight 2000 (Stern 1980)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Stern's first talking Pinball Game is Really Taking Off!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "9da7b6155bcd10d4087fc86cb79129efad27a212",
+        "date": "2025-07-09 10:14:51 +0100",
+        "author": "OminousOsie",
+        "message": "enabled/disable for wiz wed\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-flight2000/table.yml", "diff": "diff --git a/external/vpx-flight2000/table.yml b/external/vpx-flight2000/table.yml\nindex 3691a6c4..62e500cb 100644\n--- a/external/vpx-flight2000/table.yml\n+++ b/external/vpx-flight2000/table.yml\n@@ -4,7 +4,6 @@ applyFixes:\n backglassVPSId: \"iuyKhYEo\"\n backglassChecksum: \"43DCB060FC6D3A7C3E0A143D4443478E\"\n backglassNotes: \"Download v1.0\"\n-enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n romVPSId: \"oIofzNVL\"\n romChecksum: \"1F4C9DFF8929CA6DB1F58CE872DF09BF\""}
+        ]
+      },
+      {
+        "hash": "4bd6640bfa5c45c63eac2d931e759859e72094b1",
+        "date": "2025-07-02 09:53:03 +0100",
+        "author": "OminousOsie",
+        "message": "Updates to tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-flight2000/table.yml", "diff": "diff --git a/external/vpx-flight2000/table.yml b/external/vpx-flight2000/table.yml\nindex ed5a9c30..3691a6c4 100644\n--- a/external/vpx-flight2000/table.yml\n+++ b/external/vpx-flight2000/table.yml\n@@ -4,7 +4,7 @@ applyFixes:\n backglassVPSId: \"iuyKhYEo\"\n backglassChecksum: \"43DCB060FC6D3A7C3E0A143D4443478E\"\n backglassNotes: \"Download v1.0\"\n-#enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n+enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n romVPSId: \"oIofzNVL\"\n romChecksum: \"1F4C9DFF8929CA6DB1F58CE872DF09BF\""}
+        ]
+      },
+      {
+        "hash": "43291b57cf3f0db2825f2f2224afb36805816d3c",
+        "date": "2025-07-01 10:53:46 -0400",
+        "author": "evilwraith",
+        "message": "3 adds and a change\n\nAdded Skyscraper (Bally 1934)\nAdded Fleet Jr (Bally 1934)\nAdded Futurama (Original 2024)\n\nModified Cleopatra (Gottlieb 1977) for spelling and POV.\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-flight2000/dmd.png"},
+          {"status": "M", "path": "external/vpx-flight2000/launcher.png"},
+          {"status": "M", "path": "external/vpx-flight2000/table.ini", "diff": "diff --git a/external/vpx-flight2000/table.ini b/external/vpx-flight2000/table.ini\nindex 72919553..53356d19 100644\n--- a/external/vpx-flight2000/table.ini\n+++ b/external/vpx-flight2000/table.ini\n@@ -1,13 +1,19 @@\n [TableOverride]\n-ViewCabMode = 1\n-ViewCabScaleX = 0.999973\n-ViewCabScaleY = 0.907463\n-ViewCabScaleZ = 0.975244\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 0.000000\n-ViewCabPlayerY = -151.114868\n-ViewCabPlayerZ = 1404.774048\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 44.111809\n-ViewCabHOfs = 0.221300\n-ViewCabVOfs = 72.487213\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.110059\n+ViewCabScaleY = 1.135868\n+ViewCabScaleZ = 0.999944\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -103.991684\n+ViewCabWindowTop = 325.541931\n+ViewCabWindowBot = 83.953270\n+\n+[Player]\n+MusicVolume = 60\n+SoundVolume = 60\n+ScreenPlayerY = 8\n+ScreenPlayerZ = 100\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-flight2000/table.yml", "diff": "diff --git a/external/vpx-flight2000/table.yml b/external/vpx-flight2000/table.yml\nindex 3691a6c4..ed5a9c30 100644\n--- a/external/vpx-flight2000/table.yml\n+++ b/external/vpx-flight2000/table.yml\n@@ -4,7 +4,7 @@ applyFixes:\n backglassVPSId: \"iuyKhYEo\"\n backglassChecksum: \"43DCB060FC6D3A7C3E0A143D4443478E\"\n backglassNotes: \"Download v1.0\"\n-enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n+#enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n romVPSId: \"oIofzNVL\"\n romChecksum: \"1F4C9DFF8929CA6DB1F58CE872DF09BF\""}
+        ]
+      },
+      {
+        "hash": "ec2ac89a406a42baae2adf543553fe7154960ed6",
+        "date": "2025-06-14 19:23:37 +0100",
+        "author": "OminousOsie",
+        "message": "More ymls + launcher images\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-flight2000/table.yml", "diff": "diff --git a/external/vpx-flight2000/table.yml b/external/vpx-flight2000/table.yml\nnew file mode 100644\nindex 00000000..3691a6c4\n--- /dev/null\n+++ b/external/vpx-flight2000/table.yml\n@@ -0,0 +1,19 @@\n+---\n+applyFixes: \n+  - \"bass\"\n+backglassVPSId: \"iuyKhYEo\"\n+backglassChecksum: \"43DCB060FC6D3A7C3E0A143D4443478E\"\n+backglassNotes: \"Download v1.0\"\n+enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n+fps: 60\n+romVPSId: \"oIofzNVL\"\n+romChecksum: \"1F4C9DFF8929CA6DB1F58CE872DF09BF\"\n+romNotes: \"Download flight2k.zip\"\n+tableNotes: \"Download v2.0\"\n+tableVPSId: \"uoti2kZZ\"\n+tagline: \"Stern's first talking Pinball Game is Really Taking Off!\"\n+testers:\n+  - \"\"\n+  - \"OminousOsie\"\n+vpxVPSId: \"rbuCfaN0Ba\"\n+vpxChecksum: \"56D0107B6D255E0C94DD8F1DF89982FE\"\n"},
+          {"status": "M", "path": "external/vpx-flight2000/launcher.png"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-flight2000/README.md", "diff": "diff --git a/external/vpx-flight2000/README.md b/external/vpx-flight2000/README.md\nindex 3cbca950..39772180 100644\n--- a/external/vpx-flight2000/README.md\n+++ b/external/vpx-flight2000/README.md\n@@ -31,7 +31,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-flight2000/README.md", "diff": "diff --git a/external/vpx-flight2000/README.md b/external/vpx-flight2000/README.md\nindex 2163bcfb..3cbca950 100644\n--- a/external/vpx-flight2000/README.md\n+++ b/external/vpx-flight2000/README.md\n@@ -31,3 +31,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-flight2000/README.md", "diff": "diff --git a/external/vpx-flight2000/README.md b/external/vpx-flight2000/README.md\nindex 6f609c37..2163bcfb 100644\n--- a/external/vpx-flight2000/README.md\n+++ b/external/vpx-flight2000/README.md\n@@ -31,8 +31,3 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-flight2000.elf\n-- Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-flight2000\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- The ROM zip file gets copied to vpx-flight2000/pinmame/roms (Do not unzip)"}
+        ]
+      },
+      {
+        "hash": "be93fc2c71d0df17df86569ff78f4bd17f8bc62c",
+        "date": "2025-04-01 12:05:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated file paths to relative\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-flight2000/README.md", "diff": "diff --git a/external/vpx-flight2000/README.md b/external/vpx-flight2000/README.md\nindex fcc11235..6f609c37 100644\n--- a/external/vpx-flight2000/README.md\n+++ b/external/vpx-flight2000/README.md\n@@ -1,6 +1,6 @@\n # Flight 2000 (Stern 1980)\n \n-![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-flight2000.png)\n+![Table Preview](../../images/vpx-flight2000.png)\n \n Authors: [Bigus](https://www.vpforums.org/index.php?showuser=107629)  \n Version: 2.0  "}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-flight2000/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-flight2000/pinmame/cfg/.gitkeep b/external/vpx-flight2000/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-flight2000/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-flight2000/pinmame/cfg/default.cfg b/external/vpx-flight2000/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-flight2000/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-flight2000/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-flight2000/pinmame/ini/.gitkeep b/external/vpx-flight2000/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-flight2000/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-flight2000/pinmame/nvram/.gitkeep b/external/vpx-flight2000/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-flight2000/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-flight2000/pinmame/roms/.gitkeep b/external/vpx-flight2000/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-flight2000/vpx-flight2000.xml", "diff": "diff --git a/external/vpx-flight2000/vpx-flight2000.xml b/external/vpx-flight2000/vpx-flight2000.xml\ndeleted file mode 100644\nindex 297150c0..00000000\n--- a/external/vpx-flight2000/vpx-flight2000.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Flight 2000 (Stern 1980)</name>\n-</root>\n\\ No newline at end of file"},
+          {"status": "R-from", "path": "external/vpx-flight2000/Flight 2000 (Stern 1980).ini->external/vpx-flight2000/table.ini", "diff": "diff --git a/external/vpx-flight2000/Flight 2000 (Stern 1980).ini b/external/vpx-flight2000/table.ini\nsimilarity index 100%\nrename from external/vpx-flight2000/Flight 2000 (Stern 1980).ini\nrename to external/vpx-flight2000/table.ini"},
+          {"status": "R-from", "path": "external/vpx-flight2000/vpx-flight2000.png->external/vpx-flight2000/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-flight2000/Flight 2000 (Stern 1980).ini->external/vpx-flight2000/table.ini", "diff": "diff --git a/external/vpx-flight2000/Flight 2000 (Stern 1980).ini b/external/vpx-flight2000/table.ini\nsimilarity index 100%\nrename from external/vpx-flight2000/Flight 2000 (Stern 1980).ini\nrename to external/vpx-flight2000/table.ini"},
+          {"status": "R-to", "path": "external/vpx-flight2000/vpx-flight2000.png->external/vpx-flight2000/launcher.png"}
+        ]
+      },
+      {
+        "hash": "4d9c1f30ee8e51bcbbdb48312a423cac59095b38",
+        "date": "2024-11-06 14:24:02 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-flight2000",
+        "files": [
+          {"status": "M", "path": "external/vpx-flight2000/README.md", "diff": "diff --git a/external/vpx-flight2000/README.md b/external/vpx-flight2000/README.md\nindex e993a8db..fcc11235 100644\n--- a/external/vpx-flight2000/README.md\n+++ b/external/vpx-flight2000/README.md\n@@ -2,20 +2,21 @@\n \n ![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-flight2000.png)\n \n-Authors: [Bigus](https://www.vpforums.org/index.php?showuser=107629)\n-Version: 2.0\n+Authors: [Bigus](https://www.vpforums.org/index.php?showuser=107629)  \n+Version: 2.0  \n Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=16799)\n \n DirectB2S\n \n-Authors: [htamas](https://www.vpforums.org/index.php?showuser=16933)\n+Authors: [htamas](https://www.vpforums.org/index.php?showuser=16933)  \n Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=7683)\n \n ROM\n \n-ROM Name: flight2k.zip\n-Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=746)\n-SHA1: 6878EF1BD1F855D2318CA382F7C7D2013060BA62\n+ROM Name: flight2k.zip  \n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=746)  \n+\n+SHA1: 6878EF1BD1F855D2318CA382F7C7D2013060BA62  \n MD5:  1F4C9DFF8929CA6DB1F58CE872DF09BF\n \n Tested by: evilwraith\n@@ -23,6 +24,7 @@ Tested by: evilwraith\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n@@ -33,4 +35,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Add your personalized launcher.elf and rename it to vpx-flight2000.elf\n - Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-flight2000\n - Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- The ROM zip file gets copied to vpx-flight2000/pinmame/roms (Do not unzip)\n\\ No newline at end of file\n+- The ROM zip file gets copied to vpx-flight2000/pinmame/roms (Do not unzip)\n"}
+        ]
+      },
+      {
+        "hash": "fb7db3b2467a0d97286f689c662760181895addc",
+        "date": "2024-11-06 11:35:04 -0500",
+        "author": "evilwraith",
+        "message": "Added Flight 2000\n\nAdded Flight 2000 (Stern 1980) by request\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-flight2000/Flight 2000 (Stern 1980).ini", "diff": "diff --git a/external/vpx-flight2000/Flight 2000 (Stern 1980).ini b/external/vpx-flight2000/Flight 2000 (Stern 1980).ini\nnew file mode 100644\nindex 00000000..72919553\n--- /dev/null\n+++ b/external/vpx-flight2000/Flight 2000 (Stern 1980).ini\t\n@@ -0,0 +1,13 @@\n+[TableOverride]\n+ViewCabMode = 1\n+ViewCabScaleX = 0.999973\n+ViewCabScaleY = 0.907463\n+ViewCabScaleZ = 0.975244\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 0.000000\n+ViewCabPlayerY = -151.114868\n+ViewCabPlayerZ = 1404.774048\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 44.111809\n+ViewCabHOfs = 0.221300\n+ViewCabVOfs = 72.487213\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-flight2000/README.md", "diff": "diff --git a/external/vpx-flight2000/README.md b/external/vpx-flight2000/README.md\nnew file mode 100644\nindex 00000000..e993a8db\n--- /dev/null\n+++ b/external/vpx-flight2000/README.md\n@@ -0,0 +1,36 @@\n+# Flight 2000 (Stern 1980)\n+\n+![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-flight2000.png)\n+\n+Authors: [Bigus](https://www.vpforums.org/index.php?showuser=107629)\n+Version: 2.0\n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=16799)\n+\n+DirectB2S\n+\n+Authors: [htamas](https://www.vpforums.org/index.php?showuser=16933)\n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=7683)\n+\n+ROM\n+\n+ROM Name: flight2k.zip\n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=746)\n+SHA1: 6878EF1BD1F855D2318CA382F7C7D2013060BA62\n+MD5:  1F4C9DFF8929CA6DB1F58CE872DF09BF\n+\n+Tested by: evilwraith\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-flight2000.elf\n+- Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-flight2000\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n+- The ROM zip file gets copied to vpx-flight2000/pinmame/roms (Do not unzip)\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-flight2000/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-flight2000/pinmame/cfg/.gitkeep b/external/vpx-flight2000/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-flight2000/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-flight2000/pinmame/cfg/default.cfg b/external/vpx-flight2000/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-flight2000/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-flight2000/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-flight2000/pinmame/ini/.gitkeep b/external/vpx-flight2000/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-flight2000/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-flight2000/pinmame/nvram/.gitkeep b/external/vpx-flight2000/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-flight2000/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-flight2000/pinmame/roms/.gitkeep b/external/vpx-flight2000/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-flight2000/vpx-flight2000.png"},
+          {"status": "A", "path": "external/vpx-flight2000/vpx-flight2000.xml", "diff": "diff --git a/external/vpx-flight2000/vpx-flight2000.xml b/external/vpx-flight2000/vpx-flight2000.xml\nnew file mode 100644\nindex 00000000..297150c0\n--- /dev/null\n+++ b/external/vpx-flight2000/vpx-flight2000.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Flight 2000 (Stern 1980)</name>\n+</root>\n\\ No newline at end of file\n"}
+        ]
+      }
+    ]
+}

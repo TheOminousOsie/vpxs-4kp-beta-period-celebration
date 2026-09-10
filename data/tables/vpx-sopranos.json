@@ -1,0 +1,374 @@
+{
+    "commit_count": 38,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/table.yml", "diff": "diff --git a/external/vpx-sopranos/table.yml b/external/vpx-sopranos/table.yml\nindex 251ab7f9..5f78b567 100644\n--- a/external/vpx-sopranos/table.yml\n+++ b/external/vpx-sopranos/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"rY8wUQoIY_\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"8D29B7B3EA600B3471DB4130F51EBC48\"\n-  - \"56B3E2D6C1C319CC2B07E048D89CD97E\"\n+backglassChecksum: \"8D29B7B3EA600B3471DB4130F51EBC48\"\n coloredROMChecksum: \"FD10BB79ED4CCBC648C83E30D1ED86E4\"\n coloredROMNotes: 'Download \"sopranos.cROMc\"'\n coloredROMVPSId: \"uvIIO1SjvD\"\n@@ -16,7 +13,4 @@ testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n vpxVPSId: \"Waeu5yEAHY\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"4EE397F6B739AAEA9D9051ED205E6749\"\n-  - \"AD7E02F91B0B3223AE52A212DA7C8AC2\"\n+vpxChecksum: \"4EE397F6B739AAEA9D9051ED205E6749\""}
+        ]
+      },
+      {
+        "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
+        "date": "2026-07-17 19:48:12 -0400",
+        "author": "evilwraith",
+        "message": "FPS updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/table.yml", "diff": "diff --git a/external/vpx-sopranos/table.yml b/external/vpx-sopranos/table.yml\nindex fe0cb6f7..251ab7f9 100644\n--- a/external/vpx-sopranos/table.yml\n+++ b/external/vpx-sopranos/table.yml\n@@ -7,7 +7,7 @@ backglassChecksum:\n coloredROMChecksum: \"FD10BB79ED4CCBC648C83E30D1ED86E4\"\n coloredROMNotes: 'Download \"sopranos.cROMc\"'\n coloredROMVPSId: \"uvIIO1SjvD\"\n-fps: 60\n+fps: 56\n romVPSId: \"tD819oJaBW\"\n romChecksum: \"15ECF8C5A7CEE365CAD0BE16EBBED414\"\n tableVPSId: \"0j2uPCod\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/table.yml", "diff": "diff --git a/external/vpx-sopranos/table.yml b/external/vpx-sopranos/table.yml\nindex 79ae4994..fe0cb6f7 100644\n--- a/external/vpx-sopranos/table.yml\n+++ b/external/vpx-sopranos/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"rY8wUQoIY_\"\n-backglassChecksum: \"8D29B7B3EA600B3471DB4130F51EBC48\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"8D29B7B3EA600B3471DB4130F51EBC48\"\n+  - \"56B3E2D6C1C319CC2B07E048D89CD97E\"\n coloredROMChecksum: \"FD10BB79ED4CCBC648C83E30D1ED86E4\"\n coloredROMNotes: 'Download \"sopranos.cROMc\"'\n coloredROMVPSId: \"uvIIO1SjvD\"\n@@ -13,4 +16,7 @@ testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n vpxVPSId: \"Waeu5yEAHY\"\n-vpxChecksum: \"4EE397F6B739AAEA9D9051ED205E6749\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"4EE397F6B739AAEA9D9051ED205E6749\"\n+  - \"AD7E02F91B0B3223AE52A212DA7C8AC2\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/table.ini", "diff": "diff --git a/external/vpx-sopranos/table.ini b/external/vpx-sopranos/table.ini\nindex 10198476..3865fd4d 100644\n--- a/external/vpx-sopranos/table.ini\n+++ b/external/vpx-sopranos/table.ini\n@@ -5,7 +5,7 @@ ViewCabScaleY = 1.038858\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -18.440231\n+ViewCabVOfs = -10.114792\n ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 88.953217\n \n@@ -16,5 +16,3 @@ DynamicDayNight = 0\n EmissionScale = 0.299950\n JoyAddCredit2Key = 1\n \n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-sopranos/table.yml", "diff": "diff --git a/external/vpx-sopranos/table.yml b/external/vpx-sopranos/table.yml\nindex 99ac7a2c..79ae4994 100644\n--- a/external/vpx-sopranos/table.yml\n+++ b/external/vpx-sopranos/table.yml\n@@ -1,7 +1,10 @@\n ---\n backglassVPSId: \"rY8wUQoIY_\"\n backglassChecksum: \"8D29B7B3EA600B3471DB4130F51EBC48\"\n-fps: 50\n+coloredROMChecksum: \"FD10BB79ED4CCBC648C83E30D1ED86E4\"\n+coloredROMNotes: 'Download \"sopranos.cROMc\"'\n+coloredROMVPSId: \"uvIIO1SjvD\"\n+fps: 60\n romVPSId: \"tD819oJaBW\"\n romChecksum: \"15ECF8C5A7CEE365CAD0BE16EBBED414\"\n tableVPSId: \"0j2uPCod\"\n@@ -11,5 +14,3 @@ testers:\n   - \"OminousOsie\"\n vpxVPSId: \"Waeu5yEAHY\"\n vpxChecksum: \"4EE397F6B739AAEA9D9051ED205E6749\"\n-applyFixes:\n-  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex 7898ce93..ab8a8e40 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -50,7 +50,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n "}
+        ]
+      },
+      {
+        "hash": "43e06a78576a8d7069d79fee2da8885f7e817af7",
+        "date": "2025-04-30 11:28:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed BOM\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex 1bdcb12a..7898ce93 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -1,4 +1,4 @@\n-﻿# Sopranos, The (Stern 2005)\n+# Sopranos, The (Stern 2005)\n \n ![Table Preview](../../images/vpx-sopranos.png)\n "}
+        ]
+      },
+      {
+        "hash": "5424a8122d5eb54371b2435888f2d337df05dc43",
+        "date": "2025-04-30 11:23:31 +0100",
+        "author": "OminousOsie",
+        "message": "Added lloydbraun to the wiz team\n\nAdded lloydbraun to the wiz team\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex b4049bb0..1bdcb12a 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -47,7 +47,7 @@ __*We hope you enjoy!!*__\n \n *The VPXS 4KP Wizard team:*\n <pre>\n-- n-i-x            - Mox\n+- n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n - mrandromeda      - SScorpio         - TechZombie"}
+        ]
+      },
+      {
+        "hash": "689a96f7b8e1f1e29652add57cf2d0aded5f3b96",
+        "date": "2025-04-27 20:49:38 -0300",
+        "author": "Bla1ze",
+        "message": "Launcher Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/launcher.png"}
+        ]
+      },
+      {
+        "hash": "01c7e252332b06a5a09e3bfaa60664142a54042f",
+        "date": "2025-04-16 10:44:26 +0100",
+        "author": "OminousOsie",
+        "message": "Added the full team to the readme\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex 6d32f605..b4049bb0 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -1,4 +1,4 @@\n-# Sopranos, The (Stern 2005)\n+﻿# Sopranos, The (Stern 2005)\n \n ![Table Preview](../../images/vpx-sopranos.png)\n \n@@ -41,7 +41,17 @@ This table is available through the Table Manager Wizard, which makes installati\n \n Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n \n <br>"}
+        ]
+      },
+      {
+        "hash": "acfa30515979a4b5bf327339a53cb841e287dfd9",
+        "date": "2025-04-09 13:22:59 +0100",
+        "author": "OminousOsie",
+        "message": "Updated all readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex d902f28b..6d32f605 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -1,40 +1,52 @@\n-# The Sopranos Siggis Mod\n+# Sopranos, The (Stern 2005)\n \n ![Table Preview](../../images/vpx-sopranos.png)\n \n-Author: [Siggi](https://vpuniverse.com/profile/8779-siggi/)  \n+<br>\n \n-Tested by: Bla1ze\n+## *️⃣  Table Statistics\n \n-Version: 1.0.0  \n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50|\n \n-Download: [VP Universe](https://vpuniverse.com/files/file/18652-the-sopranos-siggis-mod/)\n+<br>\n \n-DirectB2S\n+**VPXS 4KP Testers:**\n+  - Bla1ze\n+  - OminousOsie 🌸\n \n-Author: [Ryguy417](https://vpuniverse.com/profile/31096-ryguy417/)  \n+<br>\n \n-Version: 2.0  \n+---\n \n-Download: [VP Universe](https://vpuniverse.com/files/file/12991-sopranos-stern-2005-b2s-with-full-dmd/)\n+<br>\n \n-ROM\n+## ❇️ Available in the Wizard! 🪄✨\n \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=287)\n+<br>\n \n-SHA: 1f6965d6f7b350a3cab52bd843f63270b159f703\n-MD5:15ecf8c5a7cee365cad0be16ebbed414\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n-## Status \n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Sopranos, The`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Party like you're at The Bing!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+__*We hope you enjoy!!   - the VPXS 4KP team!*__\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50|\n \n-## Instructions\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-sopranos.elf\n-- Download the table and directb2s versions listed above and copy them into this folder. The ROM zip gets copied to pinmame/roms (do not unzip).\n-- Party like you're at The Bing!"},
+          {"status": "M", "path": "external/vpx-sopranos/table.yml", "diff": "diff --git a/external/vpx-sopranos/table.yml b/external/vpx-sopranos/table.yml\nindex e595dd3e..99ac7a2c 100644\n--- a/external/vpx-sopranos/table.yml\n+++ b/external/vpx-sopranos/table.yml\n@@ -8,6 +8,7 @@ tableVPSId: \"0j2uPCod\"\n tagline: \"Party like you're at The Bing!\"\n testers:\n   - \"Bla1ze\"\n+  - \"OminousOsie\"\n vpxVPSId: \"Waeu5yEAHY\"\n vpxChecksum: \"4EE397F6B739AAEA9D9051ED205E6749\"\n applyFixes:"}
+        ]
+      },
+      {
+        "hash": "d5944c81283c698f2f59bbbab90fbd38c0a74eb6",
+        "date": "2025-04-09 12:24:37 +0100",
+        "author": "OminousOsie",
+        "message": "Updated Sopranos dmd to dollar green\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/pinmame.ini", "diff": "diff --git a/external/vpx-sopranos/pinmame.ini b/external/vpx-sopranos/pinmame.ini\nindex b8b303ff..e987a804 100644\n--- a/external/vpx-sopranos/pinmame.ini\n+++ b/external/vpx-sopranos/pinmame.ini\n@@ -1,6 +1,6 @@\n [settings]\n sound=1\n cheat=0\n-dmd_red=255\n-dmd_green=255\n-dmd_blue=255\n\\ No newline at end of file\n+dmd_red=26\n+dmd_green=101\n+dmd_blue=42\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "7701806a241aef74f2ff0d2b8f8ca9fa767f0a79",
+        "date": "2025-04-07 19:50:11 +0100",
+        "author": "OminousOsie",
+        "message": "Updates to sopranos\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/nvram.nv"},
+          {"status": "M", "path": "external/vpx-sopranos/pinmame.ini", "diff": "diff --git a/external/vpx-sopranos/pinmame.ini b/external/vpx-sopranos/pinmame.ini\nindex ddde7379..b8b303ff 100644\n--- a/external/vpx-sopranos/pinmame.ini\n+++ b/external/vpx-sopranos/pinmame.ini\n@@ -1,6 +1,6 @@\n [settings]\n sound=1\n cheat=0\n-dmd_red=204\n-dmd_green=0\n-dmd_blue=0\n\\ No newline at end of file\n+dmd_red=255\n+dmd_green=255\n+dmd_blue=255\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "184dbf1f58b55dc6cf0fbc5f9f15d6230e1eaf3c",
+        "date": "2025-04-07 19:28:34 -0400",
+        "author": "Brandon",
+        "message": "update 3 tables\n\ndevilriders\nstar wars\nsopranos\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "9a9671a6f3aa1da5c3f86f0efdf6dada1e1d22e9",
+        "date": "2025-04-07 19:20:45 -0400",
+        "author": "Brandon",
+        "message": "Create nvram.nv\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-sopranos/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "f1972c5f2ea6976257651822a56538afad23ecb5",
+        "date": "2025-04-07 19:19:58 -0400",
+        "author": "Brandon",
+        "message": "Delete nvram.nv\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-sopranos/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "6bb6d44b93d853557534a8238cb28a71db60dc9b",
+        "date": "2025-04-07 15:37:24 +0100",
+        "author": "OminousOsie",
+        "message": "Set freeplay\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "651e1c7055504f8030ea01744dc6a2b89543c195",
+        "date": "2025-04-04 15:59:35 -0300",
+        "author": "Bla1ze",
+        "message": "Credit Override\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/table.ini", "diff": "diff --git a/external/vpx-sopranos/table.ini b/external/vpx-sopranos/table.ini\nindex 6f268c0f..10198476 100644\n--- a/external/vpx-sopranos/table.ini\n+++ b/external/vpx-sopranos/table.ini\n@@ -14,6 +14,7 @@ ScreenPlayerZ = 95.250931\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.299950\n+JoyAddCredit2Key = 1\n \n [Standalone]\n BackBufferScale = 0.416666\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "a758ddd0e6df3a235c6b15c19c316efc09433dae",
+        "date": "2025-04-04 00:33:28 -0300",
+        "author": "Bla1ze",
+        "message": "Create pinmame.ini\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-sopranos/pinmame.ini", "diff": "diff --git a/external/vpx-sopranos/pinmame.ini b/external/vpx-sopranos/pinmame.ini\nnew file mode 100644\nindex 00000000..ddde7379\n--- /dev/null\n+++ b/external/vpx-sopranos/pinmame.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+sound=1\n+cheat=0\n+dmd_red=204\n+dmd_green=0\n+dmd_blue=0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "d520a9a229bc0f5cdad891012d80cfe3b07d7882",
+        "date": "2025-04-04 00:01:54 -0300",
+        "author": "Bla1ze",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/table.yml", "diff": "diff --git a/external/vpx-sopranos/table.yml b/external/vpx-sopranos/table.yml\nindex 0ff1b1e9..e595dd3e 100644\n--- a/external/vpx-sopranos/table.yml\n+++ b/external/vpx-sopranos/table.yml\n@@ -8,7 +8,7 @@ tableVPSId: \"0j2uPCod\"\n tagline: \"Party like you're at The Bing!\"\n testers:\n   - \"Bla1ze\"\n-vpxVPSId: \"d70mjMQg\"\n+vpxVPSId: \"Waeu5yEAHY\"\n vpxChecksum: \"4EE397F6B739AAEA9D9051ED205E6749\"\n applyFixes:\n   - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "9555095b1acb899d377badb59ab2bf29619f6fb9",
+        "date": "2025-04-03 23:54:17 -0300",
+        "author": "Bla1ze",
+        "message": "Create table.yml\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-sopranos/table.yml", "diff": "diff --git a/external/vpx-sopranos/table.yml b/external/vpx-sopranos/table.yml\nnew file mode 100644\nindex 00000000..0ff1b1e9\n--- /dev/null\n+++ b/external/vpx-sopranos/table.yml\n@@ -0,0 +1,14 @@\n+---\n+backglassVPSId: \"rY8wUQoIY_\"\n+backglassChecksum: \"8D29B7B3EA600B3471DB4130F51EBC48\"\n+fps: 50\n+romVPSId: \"tD819oJaBW\"\n+romChecksum: \"15ECF8C5A7CEE365CAD0BE16EBBED414\"\n+tableVPSId: \"0j2uPCod\"\n+tagline: \"Party like you're at The Bing!\"\n+testers:\n+  - \"Bla1ze\"\n+vpxVPSId: \"d70mjMQg\"\n+vpxChecksum: \"4EE397F6B739AAEA9D9051ED205E6749\"\n+applyFixes:\n+  - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "ae0263ecdbc0f4d964fd9224fc4797b10372d479",
+        "date": "2025-04-01 11:26:24 +0100",
+        "author": "OminousOsie",
+        "message": "Updated table preview images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex e3623041..d902f28b 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -1,6 +1,6 @@\n # The Sopranos Siggis Mod\n \n-![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-sopranos-preview.png)\n+![Table Preview](../../images/vpx-sopranos.png)\n \n Author: [Siggi](https://vpuniverse.com/profile/8779-siggi/)  \n "}
+        ]
+      },
+      {
+        "hash": "c0e71a4ab0a722ed3bbacb919a84e4d85a3bd3ea",
+        "date": "2025-03-31 16:17:47 -0300",
+        "author": "Bla1ze",
+        "message": "INI FPS Improvements / Preview Link / README\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex 6e7df0c9..e3623041 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -1,6 +1,6 @@\n # The Sopranos Siggis Mod\n \n-![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_02/Sop_pf_FS.png.f0e3941b1a67ab063f837d0fb843197b.png)\n+![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-sopranos-preview.png)\n \n Author: [Siggi](https://vpuniverse.com/profile/8779-siggi/)  \n \n@@ -30,7 +30,7 @@ MD5:15ecf8c5a7cee365cad0be16ebbed414\n Minimum VPX Standalone build: 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50|\n \n ## Instructions\n "},
+          {"status": "M", "path": "external/vpx-sopranos/launcher.png"},
+          {"status": "M", "path": "external/vpx-sopranos/table.ini", "diff": "diff --git a/external/vpx-sopranos/table.ini b/external/vpx-sopranos/table.ini\nindex df801384..6f268c0f 100644\n--- a/external/vpx-sopranos/table.ini\n+++ b/external/vpx-sopranos/table.ini\n@@ -1,22 +1,19 @@\n-[Standalone]\n-PinMAMEWindowX = 3840\n-PinMAMEWindowY = 0\n-PinMAMEWindowWidth = 1500\n-PinMAMEWindowHeight = 380\n-PinMAMEWindowRotation = 1\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.340485\n+ViewCabScaleY = 1.038858\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -18.440231\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 88.953217\n \n [Player]\n-BallAntiStretch = 1\n+ScreenPlayerZ = 95.250931\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.299950\n \n-[TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.843153\n-ViewCabScaleY = 1.199704\n-ViewCabScaleZ = 0.914387\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -1.530995\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+[Standalone]\n+BackBufferScale = 0.416666\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-sopranos/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-sopranos/pinmame/cfg/default.cfg b/external/vpx-sopranos/pinmame/cfg/default.cfg\ndeleted file mode 100755\nindex de34d1c4..00000000\nBinary files a/external/vpx-sopranos/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-sopranos/pinmame/cfg/sopranos.cfg", "diff": "diff --git a/external/vpx-sopranos/pinmame/cfg/sopranos.cfg b/external/vpx-sopranos/pinmame/cfg/sopranos.cfg\ndeleted file mode 100755\nindex df348841..00000000\nBinary files a/external/vpx-sopranos/pinmame/cfg/sopranos.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-sopranos/pinmame/ini/sopranos.ini", "diff": "diff --git a/external/vpx-sopranos/pinmame/ini/sopranos.ini b/external/vpx-sopranos/pinmame/ini/sopranos.ini\ndeleted file mode 100755\nindex 15ca4cce..00000000\n--- a/external/vpx-sopranos/pinmame/ini/sopranos.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-sound=1\n-cheat=0\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-sopranos/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-sopranos/pinmame/roms/.gitkeep b/external/vpx-sopranos/pinmame/roms/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-sopranos/user/SopranosLUT.txt", "diff": "diff --git a/external/vpx-sopranos/user/SopranosLUT.txt b/external/vpx-sopranos/user/SopranosLUT.txt\ndeleted file mode 100755\nindex f0c2fe3e..00000000\n--- a/external/vpx-sopranos/user/SopranosLUT.txt\n+++ /dev/null\n@@ -1 +0,0 @@\n-12"},
+          {"status": "D", "path": "external/vpx-sopranos/vpx-sopranos.xml", "diff": "diff --git a/external/vpx-sopranos/vpx-sopranos.xml b/external/vpx-sopranos/vpx-sopranos.xml\ndeleted file mode 100755\nindex 6726cfda..00000000\n--- a/external/vpx-sopranos/vpx-sopranos.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>The Sopranos (Siggis Mod)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini->external/vpx-sopranos/table.ini", "diff": "diff --git a/external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini b/external/vpx-sopranos/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini\nrename to external/vpx-sopranos/table.ini"},
+          {"status": "R-from", "path": "external/vpx-sopranos/pinmame/nvram/sopranos.nv->external/vpx-sopranos/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-sopranos/vpx-sopranos.png->external/vpx-sopranos/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini->external/vpx-sopranos/table.ini", "diff": "diff --git a/external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini b/external/vpx-sopranos/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini\nrename to external/vpx-sopranos/table.ini"},
+          {"status": "R-to", "path": "external/vpx-sopranos/pinmame/nvram/sopranos.nv->external/vpx-sopranos/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-sopranos/vpx-sopranos.png->external/vpx-sopranos/launcher.png"}
+        ]
+      },
+      {
+        "hash": "b68ea1d6aef8630276bab7ada38013b90f1bffe1",
+        "date": "2024-08-06 00:21:21 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex 7e903277..6e7df0c9 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -2,7 +2,9 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_02/Sop_pf_FS.png.f0e3941b1a67ab063f837d0fb843197b.png)\n \n-Author: [Siggi](https://vpuniverse.com/profile/8779-siggi/)  Tested by: Bla1ze\n+Author: [Siggi](https://vpuniverse.com/profile/8779-siggi/)  \n+\n+Tested by: Bla1ze\n \n Version: 1.0.0  \n \n"}
+        ]
+      },
+      {
+        "hash": "07fd53f53b9c95c034b2ba2d754c702cb68caa6b",
+        "date": "2024-08-06 00:02:48 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex 05d5492a..7e903277 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -2,14 +2,18 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_02/Sop_pf_FS.png.f0e3941b1a67ab063f837d0fb843197b.png)\n \n-Author: [Siggi](https://vpuniverse.com/profile/8779-siggi/)  \n+Author: [Siggi](https://vpuniverse.com/profile/8779-siggi/)  Tested by: Bla1ze\n+\n Version: 1.0.0  \n+\n Download: [VP Universe](https://vpuniverse.com/files/file/18652-the-sopranos-siggis-mod/)\n \n DirectB2S\n \n Author: [Ryguy417](https://vpuniverse.com/profile/31096-ryguy417/)  \n+\n Version: 2.0  \n+\n Download: [VP Universe](https://vpuniverse.com/files/file/12991-sopranos-stern-2005-b2s-with-full-dmd/)\n \n ROM\n"}
+        ]
+      },
+      {
+        "hash": "17745a249f3706ebfc8d47c3d6e8c8e500c2fb06",
+        "date": "2024-08-05 08:35:38 -0400",
+        "author": "n-i-x",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex 1460f1c0..05d5492a 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -30,5 +30,5 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-sopranos.elf\n-- Download the table, ROM and directb2s versions listed above and copy them into this folder\n-- Party like you're at The Bing!\n\\ No newline at end of file\n+- Download the table and directb2s versions listed above and copy them into this folder. The ROM zip gets copied to pinmame/roms (do not unzip).\n+- Party like you're at The Bing!\n"}
+        ]
+      },
+      {
+        "hash": "dff710f65aa19b7993547ff024e350fa2362671e",
+        "date": "2024-08-05 02:41:01 -0300",
+        "author": "Bla1ze",
+        "message": "README.md Clarification\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex b58de098..1460f1c0 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -30,5 +30,5 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-sopranos.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n+- Download the table, ROM and directb2s versions listed above and copy them into this folder\n - Party like you're at The Bing!\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "6deaf1e180249d739845e29edca10f7f81e09942",
+        "date": "2024-07-21 01:16:54 -0300",
+        "author": "Bla1ze",
+        "message": "Merge branch 'LegendsUnchained:main' into main\n",
+        "files": [
+          {"status": "MM", "path": "external/vpx-sopranos/README.md"}
+        ]
+      },
+      {
+        "hash": "51ceeed8113c33aa4151cb66eb326bf56d70c0d8",
+        "date": "2024-07-21 01:14:48 -0300",
+        "author": "Bla1ze",
+        "message": "Additional links\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex ca5a0b1e..37161784 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -15,6 +15,7 @@ Download: [VP Universe](https://vpuniverse.com/files/file/12991-sopranos-stern-2\n ROM\n \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=287)\n+\n SHA: 1f6965d6f7b350a3cab52bd843f63270b159f703\n MD5:15ecf8c5a7cee365cad0be16ebbed414\n \n"}
+        ]
+      },
+      {
+        "hash": "9725b1e8652ec4a80d2768331359c75aed73bc26",
+        "date": "2024-07-21 01:11:56 -0300",
+        "author": "Bla1ze",
+        "message": "Additional links\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex 04b70ba8..ca5a0b1e 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -12,6 +12,12 @@ Author: [Ryguy417](https://vpuniverse.com/profile/31096-ryguy417/)\n Version: 2.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/12991-sopranos-stern-2005-b2s-with-full-dmd/)\n \n+ROM\n+\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=287)\n+SHA: 1f6965d6f7b350a3cab52bd843f63270b159f703\n+MD5:15ecf8c5a7cee365cad0be16ebbed414\n+\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n"}
+        ]
+      },
+      {
+        "hash": "ddc9cbdcd34cfcb67b9d3c94918b6c0e02ab29ab",
+        "date": "2024-07-20 23:45:54 -0400",
+        "author": "n-i-x",
+        "message": "Add ROM required column to status tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex 04b70ba8..862da96d 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -15,9 +15,9 @@ Download: [VP Universe](https://vpuniverse.com/files/file/12991-sopranos-stern-2\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | FPS | \n-|-----------|----------|-----------|-----|----------|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n \n ## Instructions\n \n"}
+        ]
+      },
+      {
+        "hash": "fe78c61cf9ba54d5c6ee4ad1d251bce1a4d8e59d",
+        "date": "2024-07-20 00:50:19 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex d77ddd7b..04b70ba8 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -4,7 +4,7 @@\n \n Author: [Siggi](https://vpuniverse.com/profile/8779-siggi/)  \n Version: 1.0.0  \n-Download: [VP Forums](https://vpuniverse.com/files/file/18652-the-sopranos-siggis-mod/)\n+Download: [VP Universe](https://vpuniverse.com/files/file/18652-the-sopranos-siggis-mod/)\n \n DirectB2S\n \n"}
+        ]
+      },
+      {
+        "hash": "b88a0db65d7fd5d6059136bd5e8b1734d7d2f568",
+        "date": "2024-07-20 00:48:54 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex de7039b3..d77ddd7b 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -2,7 +2,7 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_02/Sop_pf_FS.png.f0e3941b1a67ab063f837d0fb843197b.png)\n \n-Author: [Siggi](https://www.vpforums.org/index.php?app=core&module=search&do=user_activity&sid=40128d9b02d204ff0a868b9c159c7f81&mid=277&search_app=downloads&userMode=all&search_app_filters%5Bdownloads%5D%5BsearchInKey%5D=files&search_app_filters%5Bdownloads%5D%5Bfiles%5D%5BsortKey%5D=update&search_app_filters%5Bdownloads%5D%5Bfiles%5D%5BsortDir%5D=)  \n+Author: [Siggi](https://vpuniverse.com/profile/8779-siggi/)  \n Version: 1.0.0  \n Download: [VP Forums](https://vpuniverse.com/files/file/18652-the-sopranos-siggis-mod/)\n \n"}
+        ]
+      },
+      {
+        "hash": "6ec01115be458ba607213c739a360792b99a3857",
+        "date": "2024-07-20 00:35:54 -0300",
+        "author": "Bla1ze",
+        "message": "Delete VPReg.ini\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-sopranos/VPReg.ini", "diff": "diff --git a/external/vpx-sopranos/VPReg.ini b/external/vpx-sopranos/VPReg.ini\ndeleted file mode 100755\nindex 64a83a66..00000000\n--- a/external/vpx-sopranos/VPReg.ini\n+++ /dev/null\n@@ -1,10 +0,0 @@\n-[jpsdeadpool]\n-HighScore1=100000\n-HighScore1Name=JSM\n-HighScore2=100000\n-HighScore2Name=NIX\n-HighScore3=100000\n-HighScore3Name=CTH\n-HighScore4=100000\n-HighScore4Name=VPX\n-Credits=0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "f83365aecbca383129c604d7d4a92094bd694736",
+        "date": "2024-07-20 00:26:22 -0300",
+        "author": "Bla1ze",
+        "message": "Delete external/vpx-sopranos/pinmame/roms/sopranos.zip",
+        "files": [
+          {"status": "D", "path": "external/vpx-sopranos/pinmame/roms/sopranos.zip"}
+        ]
+      },
+      {
+        "hash": "6500cdc97ae9980c88492d55d8b5e5d162401e3b",
+        "date": "2024-07-20 00:22:06 -0300",
+        "author": "Bla1ze",
+        "message": "Update The Sopranos (Stern 2005) Siggis Mod 1.0.ini\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini", "diff": "diff --git a/external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini b/external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini\nindex ed06f39c..df801384 100755\n--- a/external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini\t\n+++ b/external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini\t\n@@ -19,5 +19,4 @@ ViewCabPlayerY = -0.000000\n ViewCabPlayerZ = -340.000000\n ViewCabLookAt = 5.000000\n ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n-ToneMapper = 0\n\\ No newline at end of file\n+ViewCabLayback = 48.000000\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "b111a88a3dbed2ca3b4f789a5c3dec84c50ff12c",
+        "date": "2024-07-20 00:20:27 -0300",
+        "author": "Bla1ze",
+        "message": "Update README.md\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nindex f9d6534d..de7039b3 100755\n--- a/external/vpx-sopranos/README.md\n+++ b/external/vpx-sopranos/README.md\n@@ -17,7 +17,7 @@ Download: [VP Universe](https://vpuniverse.com/files/file/12991-sopranos-stern-2\n Minimum VPX Standalone build: 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | FPS | \n |-----------|----------|-----------|-----|----------|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n \n ## Instructions\n \n"}
+        ]
+      },
+      {
+        "hash": "2ff31f07051ad5866f567c2ea0232682dec40c7c",
+        "date": "2024-07-20 00:18:53 -0300",
+        "author": "Bla1ze",
+        "message": "Initial commit\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-sopranos/README.md", "diff": "diff --git a/external/vpx-sopranos/README.md b/external/vpx-sopranos/README.md\nnew file mode 100755\nindex 00000000..f9d6534d\n--- /dev/null\n+++ b/external/vpx-sopranos/README.md\n@@ -0,0 +1,27 @@\n+# The Sopranos Siggis Mod\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2024_02/Sop_pf_FS.png.f0e3941b1a67ab063f837d0fb843197b.png)\n+\n+Author: [Siggi](https://www.vpforums.org/index.php?app=core&module=search&do=user_activity&sid=40128d9b02d204ff0a868b9c159c7f81&mid=277&search_app=downloads&userMode=all&search_app_filters%5Bdownloads%5D%5BsearchInKey%5D=files&search_app_filters%5Bdownloads%5D%5Bfiles%5D%5BsortKey%5D=update&search_app_filters%5Bdownloads%5D%5Bfiles%5D%5BsortDir%5D=)  \n+Version: 1.0.0  \n+Download: [VP Forums](https://vpuniverse.com/files/file/18652-the-sopranos-siggis-mod/)\n+\n+DirectB2S\n+\n+Author: [Ryguy417](https://vpuniverse.com/profile/31096-ryguy417/)  \n+Version: 2.0  \n+Download: [VP Universe](https://vpuniverse.com/files/file/12991-sopranos-stern-2005-b2s-with-full-dmd/)\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | FPS | \n+|-----------|----------|-----------|-----|----------|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-sopranos.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Party like you're at The Bing!\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini", "diff": "diff --git a/external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini b/external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini\nnew file mode 100755\nindex 00000000..ed06f39c\n--- /dev/null\n+++ b/external/vpx-sopranos/The Sopranos (Stern 2005) Siggis Mod 1.0.ini\t\n@@ -0,0 +1,23 @@\n+[Standalone]\n+PinMAMEWindowX = 3840\n+PinMAMEWindowY = 0\n+PinMAMEWindowWidth = 1500\n+PinMAMEWindowHeight = 380\n+PinMAMEWindowRotation = 1\n+\n+[Player]\n+BallAntiStretch = 1\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.843153\n+ViewCabScaleY = 1.199704\n+ViewCabScaleZ = 0.914387\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -1.530995\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n+ToneMapper = 0\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-sopranos/VPReg.ini", "diff": "diff --git a/external/vpx-sopranos/VPReg.ini b/external/vpx-sopranos/VPReg.ini\nnew file mode 100755\nindex 00000000..64a83a66\n--- /dev/null\n+++ b/external/vpx-sopranos/VPReg.ini\n@@ -0,0 +1,10 @@\n+[jpsdeadpool]\n+HighScore1=100000\n+HighScore1Name=JSM\n+HighScore2=100000\n+HighScore2Name=NIX\n+HighScore3=100000\n+HighScore3Name=CTH\n+HighScore4=100000\n+HighScore4Name=VPX\n+Credits=0\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-sopranos/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-sopranos/pinmame/cfg/default.cfg b/external/vpx-sopranos/pinmame/cfg/default.cfg\nnew file mode 100755\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-sopranos/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-sopranos/pinmame/cfg/sopranos.cfg", "diff": "diff --git a/external/vpx-sopranos/pinmame/cfg/sopranos.cfg b/external/vpx-sopranos/pinmame/cfg/sopranos.cfg\nnew file mode 100755\nindex 00000000..df348841\nBinary files /dev/null and b/external/vpx-sopranos/pinmame/cfg/sopranos.cfg differ"},
+          {"status": "A", "path": "external/vpx-sopranos/pinmame/ini/sopranos.ini", "diff": "diff --git a/external/vpx-sopranos/pinmame/ini/sopranos.ini b/external/vpx-sopranos/pinmame/ini/sopranos.ini\nnew file mode 100755\nindex 00000000..15ca4cce\n--- /dev/null\n+++ b/external/vpx-sopranos/pinmame/ini/sopranos.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+sound=1\n+cheat=0\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-sopranos/pinmame/nvram/sopranos.nv"},
+          {"status": "A", "path": "external/vpx-sopranos/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-sopranos/pinmame/roms/.gitkeep b/external/vpx-sopranos/pinmame/roms/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-sopranos/pinmame/roms/sopranos.zip"},
+          {"status": "A", "path": "external/vpx-sopranos/user/SopranosLUT.txt", "diff": "diff --git a/external/vpx-sopranos/user/SopranosLUT.txt b/external/vpx-sopranos/user/SopranosLUT.txt\nnew file mode 100755\nindex 00000000..f0c2fe3e\n--- /dev/null\n+++ b/external/vpx-sopranos/user/SopranosLUT.txt\n@@ -0,0 +1 @@\n+12"},
+          {"status": "A", "path": "external/vpx-sopranos/vpx-sopranos.png"},
+          {"status": "A", "path": "external/vpx-sopranos/vpx-sopranos.xml", "diff": "diff --git a/external/vpx-sopranos/vpx-sopranos.xml b/external/vpx-sopranos/vpx-sopranos.xml\nnew file mode 100755\nindex 00000000..6726cfda\n--- /dev/null\n+++ b/external/vpx-sopranos/vpx-sopranos.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>The Sopranos (Siggis Mod)</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

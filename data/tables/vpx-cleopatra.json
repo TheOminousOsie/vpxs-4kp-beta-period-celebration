@@ -1,0 +1,287 @@
+{
+    "commit_count": 30,
+    "commits": [
+      {
+        "hash": "1dc7e9059d05774d4af757ef1fe7d1253117cfa2",
+        "date": "2026-09-09 21:30:53 -0400",
+        "author": "pointdablame",
+        "message": "More Launcher Art Updates (#2207)\n\nThis updates the following launchers to the new Legends Unchained logo: Aaron Spelling, Apache, Batman 66 (Original), Big Bang Bar, Black Knight, Black Knight 2000, Black Magic 4, Black Rose, James Bond, Cactus Canyon, Cat Burglars, Cenobite, Centaur, Centigrade 37, Chrono Trigger, Cirqus Voltaire, Cleopatra, Clock of Eternal Fog, Cosmic, Crystal Ball, Dark Crystal, Deadpool, Devil Riders, Diner, Dirty Harry, Tron Legacy, Doctor Who, Doom Eternal, DBZ Budokai, Drakor, Dune, D&D, Earthshaker, F-14 Tomcat, Fathom, Fifth Element, Fireball II, Firepower, Firepower II",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex 904f4f54..fecfd894 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"xNs1RD-E\"\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"963DBC5ABE37DA71D54FFFD8156D0221\"\n-  - \"F189B908F1B0D48AFD18514F5A7BC4D5\"\n+backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n backglassNotes: \"Download version 2.0\"\n fps: 60\n romChecksum: \"517EE749BFC5C2FF16C84A54375EBA4D\"\n@@ -18,7 +15,4 @@ testers:\n   - \"OminousOsie\"\n   - \"evilwraith\"\n vpxVPSId: \"BfR8VwhE\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"0706BA2A21EADE9DD3572B39166D0F9B\"\n-  - \"216EADA805ED5D9A370C41D0257531FE\"\n+vpxChecksum: \"0706BA2A21EADE9DD3572B39166D0F9B\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex fecfd894..904f4f54 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"xNs1RD-E\"\n-backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"963DBC5ABE37DA71D54FFFD8156D0221\"\n+  - \"F189B908F1B0D48AFD18514F5A7BC4D5\"\n backglassNotes: \"Download version 2.0\"\n fps: 60\n romChecksum: \"517EE749BFC5C2FF16C84A54375EBA4D\"\n@@ -15,4 +18,7 @@ testers:\n   - \"OminousOsie\"\n   - \"evilwraith\"\n vpxVPSId: \"BfR8VwhE\"\n-vpxChecksum: \"0706BA2A21EADE9DD3572B39166D0F9B\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"0706BA2A21EADE9DD3572B39166D0F9B\"\n+  - \"216EADA805ED5D9A370C41D0257531FE\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.ini", "diff": "diff --git a/external/vpx-cleopatra/table.ini b/external/vpx-cleopatra/table.ini\nindex e6cf07c6..2964a6df 100644\n--- a/external/vpx-cleopatra/table.ini\n+++ b/external/vpx-cleopatra/table.ini\n@@ -1,19 +1,22 @@\n+[Standalone]\n+B2SHideB2SDMD = 1\n+\n [Player]\n-ScreenPlayerY = -4.750002\n-ScreenPlayerZ = 100.251236\n+ScreenPlayerY = 7.971099\n+ScreenPlayerZ = 99.986732\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.405465\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.235899\n-ViewCabScaleY = 1.070751\n-ViewCabScaleZ = 0.970914\n+ViewCabScaleX = 1.118659\n+ViewCabScaleY = 0.992399\n+ViewCabScaleZ = 0.892562\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 5.525097\n-ViewCabVOfs = -53.073616\n-ViewCabWindowTop = 261.541931\n-ViewCabWindowBot = 92.953217\n+ViewCabHOfs = 0.022997\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 54.219913\n+ViewCabWindowBot = 0.770231\n ToneMapper = 2\n-Difficulty = 0.603675\n\\ No newline at end of file\n+Difficulty = 0.603675"},
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex 79ef8a25..fecfd894 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes: \n-  - \"bass\"\n backglassVPSId: \"xNs1RD-E\"\n backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n backglassNotes: \"Download version 2.0\"\n@@ -16,6 +14,5 @@ testers:\n   - \"psybocilin\"\n   - \"OminousOsie\"\n   - \"evilwraith\"\n-  - \"pointdablame\"\n vpxVPSId: \"BfR8VwhE\"\n vpxChecksum: \"0706BA2A21EADE9DD3572B39166D0F9B\""}
+        ]
+      },
+      {
+        "hash": "1b8fbd06786d6f8802913307e13a470672f2e360",
+        "date": "2025-07-02 10:46:32 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/README.md", "diff": "diff --git a/external/vpx-cleopatra/README.md b/external/vpx-cleopatra/README.md\nindex 25feff39..bbdb9a09 100644\n--- a/external/vpx-cleopatra/README.md\n+++ b/external/vpx-cleopatra/README.md\n@@ -1,34 +1,63 @@\n-# Cleopatra (Gottlieb 1977)\n+# Cleopatra (SS) (Gottlieb 1977)\n \n ![Table Preview](../../images/vpx-cleopatra.jpg)\n \n+<br>\n \n-Authors: [Goldchicco](https://vpuniverse.com/profile/23579-goldchicco/)  \n-Version: 1.0.B  \n-Cleopatra (Gottlieb 1977) 1.0b.vpx  \n-Download: [VP Universe](https://vpuniverse.com/files/file/7289-cleopatra-gottlieb-1977/)\n+## *️⃣  Table Statistics\n \n-DirectB2S\n-Authors [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n-Version: 2.0  \n-Cleopatra (Gottlieb 1977).directb2s    \n-Download: [VP Universe](https://vpuniverse.com/files/file/2333-cleopatragottlieb-1977/)  \n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n-ROM\n-Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/new-fixed-roms-for-vpinmame-v3-6-0-963-beta.8379/)    \n-ROM Name and version: cleoptra.zip  \n+<br>\n \n-## Status \n+**VPXS 4KP Testers:**\n+  - psybocilin\n+  - Ominous Osie 🌸\n+  - evilwraith\n+  - pointdablame\n \n-Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+<br>\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n+---\n \n-## Instructions\n+<br>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+## ❇️ Available in the Wizard! 🪄✨\n \n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Cleopatra (SS) (Gottlieb 1977)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Fun Fact: Cleopatra was in Rome when Caesar was killed!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "0ab9a06dca10f5ebb8c8e0a55c1fdf1edd7195d6",
+        "date": "2025-07-02 10:41:48 +0100",
+        "author": "OminousOsie",
+        "message": "Fixes for torpedo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex 21ddb0b2..79ef8a25 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -16,5 +16,6 @@ testers:\n   - \"psybocilin\"\n   - \"OminousOsie\"\n   - \"evilwraith\"\n+  - \"pointdablame\"\n vpxVPSId: \"BfR8VwhE\"\n vpxChecksum: \"0706BA2A21EADE9DD3572B39166D0F9B\""}
+        ]
+      },
+      {
+        "hash": "43291b57cf3f0db2825f2f2224afb36805816d3c",
+        "date": "2025-07-01 10:53:46 -0400",
+        "author": "evilwraith",
+        "message": "3 adds and a change\n\nAdded Skyscraper (Bally 1934)\nAdded Fleet Jr (Bally 1934)\nAdded Futurama (Original 2024)\n\nModified Cleopatra (Gottlieb 1977) for spelling and POV.\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex 7b3e0a3c..21ddb0b2 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -4,17 +4,17 @@ applyFixes:\n backglassVPSId: \"xNs1RD-E\"\n backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n backglassNotes: \"Download version 2.0\"\n-enabled: false\n fps: 60\n-romChecksum: \"BB3FB373CE7B3AA53BBE847193A34D7D\"\n-romUrlOverride: \"https://pinballnirvana.com/forums/resources/new-fixed-roms-for-vpinmame-v3-6-0-963-beta.8379/\"\n+romChecksum: \"517EE749BFC5C2FF16C84A54375EBA4D\"\n+romUrlOverride: \"https://vpuniverse.com/files/file/1597-cleopatra/\"\n romVersionOverride: \"cleoptra\"\n-romNotes: \"Use 'cleoptra.zip' found within the download\"\n+romNotes: \"Use 'cleoptra.zip'\"\n tableNotes: \"Download version 1.0.B\"\n tableVPSId: \"rz1xr4bm\"\n-tagline: \"Fun Fact: Cleoptra was in Rome when Caesar was killed!\"\n+tagline: \"Fun Fact: Cleopatra was in Rome when Caesar was killed!\"\n testers:\n   - \"psybocilin\"\n   - \"OminousOsie\"\n+  - \"evilwraith\"\n vpxVPSId: \"BfR8VwhE\"\n vpxChecksum: \"0706BA2A21EADE9DD3572B39166D0F9B\""}
+        ]
+      },
+      {
+        "hash": "a8cd5aa6f4fe3aa9a55ddad9bd10fa9bd113c8de",
+        "date": "2025-06-25 10:02:23 +0100",
+        "author": "OminousOsie",
+        "message": "Enabled tables for wiz wed\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex 4e5e84cd..7b3e0a3c 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -4,6 +4,7 @@ applyFixes:\n backglassVPSId: \"xNs1RD-E\"\n backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n backglassNotes: \"Download version 2.0\"\n+enabled: false\n fps: 60\n romChecksum: \"BB3FB373CE7B3AA53BBE847193A34D7D\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/new-fixed-roms-for-vpinmame-v3-6-0-963-beta.8379/\""}
+        ]
+      },
+      {
+        "hash": "cf014c2b8ea742de1ff81877b0626a58e67fc278",
+        "date": "2025-06-24 10:11:38 +0100",
+        "author": "OminousOsie",
+        "message": "Enabled tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex a609a8ab..4e5e84cd 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -4,7 +4,6 @@ applyFixes:\n backglassVPSId: \"xNs1RD-E\"\n backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n backglassNotes: \"Download version 2.0\"\n-enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n romChecksum: \"BB3FB373CE7B3AA53BBE847193A34D7D\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/new-fixed-roms-for-vpinmame-v3-6-0-963-beta.8379/\""}
+        ]
+      },
+      {
+        "hash": "48088897c11bedc4ffd37e0844832fff2702c477",
+        "date": "2025-06-18 08:25:41 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex 4e5e84cd..a609a8ab 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -4,6 +4,7 @@ applyFixes:\n backglassVPSId: \"xNs1RD-E\"\n backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n backglassNotes: \"Download version 2.0\"\n+enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n romChecksum: \"BB3FB373CE7B3AA53BBE847193A34D7D\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/new-fixed-roms-for-vpinmame-v3-6-0-963-beta.8379/\""}
+        ]
+      },
+      {
+        "hash": "a7a70bcf3ee45eaa275ef934f35a6d510cd45c1f",
+        "date": "2025-06-15 13:01:55 +0100",
+        "author": "OminousOsie",
+        "message": "cleo pov tweaks\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.ini", "diff": "diff --git a/external/vpx-cleopatra/table.ini b/external/vpx-cleopatra/table.ini\nindex 9e7ab231..e6cf07c6 100644\n--- a/external/vpx-cleopatra/table.ini\n+++ b/external/vpx-cleopatra/table.ini\n@@ -3,17 +3,17 @@ ScreenPlayerY = -4.750002\n ScreenPlayerZ = 100.251236\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.289320\n+EmissionScale = 0.405465\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.261340\n-ViewCabScaleY = 1.085850\n-ViewCabScaleZ = 0.996355\n+ViewCabScaleX = 1.235899\n+ViewCabScaleY = 1.070751\n+ViewCabScaleZ = 0.970914\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 4.035999\n-ViewCabVOfs = -63.799717\n+ViewCabHOfs = 5.525097\n+ViewCabVOfs = -53.073616\n ViewCabWindowTop = 261.541931\n ViewCabWindowBot = 92.953217\n-ToneMapper = 0\n-Difficulty = 0.500000\n\\ No newline at end of file\n+ToneMapper = 2\n+Difficulty = 0.603675\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "b9d5dfd0993ff1ad93cdd4c0aa6b931048894793",
+        "date": "2025-06-15 12:21:55 +0100",
+        "author": "OminousOsie",
+        "message": "Enabled cleao\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex a609a8ab..4e5e84cd 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -4,7 +4,6 @@ applyFixes:\n backglassVPSId: \"xNs1RD-E\"\n backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n backglassNotes: \"Download version 2.0\"\n-enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n romChecksum: \"BB3FB373CE7B3AA53BBE847193A34D7D\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/new-fixed-roms-for-vpinmame-v3-6-0-963-beta.8379/\"\n"}
+        ]
+      },
+      {
+        "hash": "3a5c7b4d3b7a6ba1a660cde7f2602bb1c0539e02",
+        "date": "2025-06-15 12:03:32 +0100",
+        "author": "OminousOsie",
+        "message": "Updated artwork\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-cleopatra/dmd.png"},
+          {"status": "M", "path": "external/vpx-cleopatra/launcher.png"}
+        ]
+      },
+      {
+        "hash": "9b74a68136f79c7008e9ac4ed03fc85ec264625d",
+        "date": "2025-06-14 09:39:41 +0100",
+        "author": "OminousOsie",
+        "message": "Added Dark Crystal and Death Note, and make comment better\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex 63cea738..a609a8ab 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -4,7 +4,7 @@ applyFixes:\n backglassVPSId: \"xNs1RD-E\"\n backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n backglassNotes: \"Download version 2.0\"\n-enabled: false # Osie: yml built in a batch, just needs testing\n+enabled: false # Osie: Easy table for wizard release. YML built - Just needs simple stuff (POV/ Free Play/ Artwork)\n fps: 60\n romChecksum: \"BB3FB373CE7B3AA53BBE847193A34D7D\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/new-fixed-roms-for-vpinmame-v3-6-0-963-beta.8379/\""}
+        ]
+      },
+      {
+        "hash": "f7e769afd559d75957954554931f63651af42ec8",
+        "date": "2025-06-13 21:44:19 +0100",
+        "author": "OminousOsie",
+        "message": "re-disabled tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex 4e5e84cd..63cea738 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -4,6 +4,7 @@ applyFixes:\n backglassVPSId: \"xNs1RD-E\"\n backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n backglassNotes: \"Download version 2.0\"\n+enabled: false # Osie: yml built in a batch, just needs testing\n fps: 60\n romChecksum: \"BB3FB373CE7B3AA53BBE847193A34D7D\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/new-fixed-roms-for-vpinmame-v3-6-0-963-beta.8379/\"\n"}
+        ]
+      },
+      {
+        "hash": "4f2aa2e3a8fc6c8d736002a60dcb3aef5b153601",
+        "date": "2025-06-13 21:42:56 +0100",
+        "author": "OminousOsie",
+        "message": "Wiz tweaks to tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.ini", "diff": "diff --git a/external/vpx-cleopatra/table.ini b/external/vpx-cleopatra/table.ini\nindex 949b0699..9e7ab231 100644\n--- a/external/vpx-cleopatra/table.ini\n+++ b/external/vpx-cleopatra/table.ini\n@@ -1,18 +1,19 @@\n [Player]\n-BallTrailStrength = 0.490196\n+ScreenPlayerY = -4.750002\n+ScreenPlayerZ = 100.251236\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.499570\n+EmissionScale = 0.289320\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.854022\n-ViewCabScaleY = 1.010775\n-ViewCabScaleZ = 0.904934\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 82.757980\n-ViewCabPlayerY = -0.080990\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = -0.042900\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.261340\n+ViewCabScaleY = 1.085850\n+ViewCabScaleZ = 0.996355\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 4.035999\n+ViewCabVOfs = -63.799717\n+ViewCabWindowTop = 261.541931\n+ViewCabWindowBot = 92.953217\n+ToneMapper = 0\n+Difficulty = 0.500000\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "561137736bb36cdceefbe28e75ae5def3acb00f4",
+        "date": "2025-06-13 20:52:52 +0100",
+        "author": "OminousOsie",
+        "message": "Enabled a few tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nindex 63cea738..4e5e84cd 100644\n--- a/external/vpx-cleopatra/table.yml\n+++ b/external/vpx-cleopatra/table.yml\n@@ -4,7 +4,6 @@ applyFixes:\n backglassVPSId: \"xNs1RD-E\"\n backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n backglassNotes: \"Download version 2.0\"\n-enabled: false # Osie: yml built in a batch, just needs testing\n fps: 60\n romChecksum: \"BB3FB373CE7B3AA53BBE847193A34D7D\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/new-fixed-roms-for-vpinmame-v3-6-0-963-beta.8379/\"\n"}
+        ]
+      },
+      {
+        "hash": "fcb939d3ae09a07f5deffeb79df2bd83367598a4",
+        "date": "2025-06-13 20:09:16 +0100",
+        "author": "OminousOsie",
+        "message": "More ymls\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-cleopatra/table.yml", "diff": "diff --git a/external/vpx-cleopatra/table.yml b/external/vpx-cleopatra/table.yml\nnew file mode 100644\nindex 00000000..63cea738\n--- /dev/null\n+++ b/external/vpx-cleopatra/table.yml\n@@ -0,0 +1,20 @@\n+---\n+applyFixes: \n+  - \"bass\"\n+backglassVPSId: \"xNs1RD-E\"\n+backglassChecksum: \"963DBC5ABE37DA71D54FFFD8156D0221\"\n+backglassNotes: \"Download version 2.0\"\n+enabled: false # Osie: yml built in a batch, just needs testing\n+fps: 60\n+romChecksum: \"BB3FB373CE7B3AA53BBE847193A34D7D\"\n+romUrlOverride: \"https://pinballnirvana.com/forums/resources/new-fixed-roms-for-vpinmame-v3-6-0-963-beta.8379/\"\n+romVersionOverride: \"cleoptra\"\n+romNotes: \"Use 'cleoptra.zip' found within the download\"\n+tableNotes: \"Download version 1.0.B\"\n+tableVPSId: \"rz1xr4bm\"\n+tagline: \"Fun Fact: Cleoptra was in Rome when Caesar was killed!\"\n+testers:\n+  - \"psybocilin\"\n+  - \"OminousOsie\"\n+vpxVPSId: \"BfR8VwhE\"\n+vpxChecksum: \"0706BA2A21EADE9DD3572B39166D0F9B\"\n"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/README.md", "diff": "diff --git a/external/vpx-cleopatra/README.md b/external/vpx-cleopatra/README.md\nindex 0d84d005..25feff39 100644\n--- a/external/vpx-cleopatra/README.md\n+++ b/external/vpx-cleopatra/README.md\n@@ -28,7 +28,7 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/README.md", "diff": "diff --git a/external/vpx-cleopatra/README.md b/external/vpx-cleopatra/README.md\nindex 806e0145..0d84d005 100644\n--- a/external/vpx-cleopatra/README.md\n+++ b/external/vpx-cleopatra/README.md\n@@ -28,4 +28,7 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n "}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/README.md", "diff": "diff --git a/external/vpx-cleopatra/README.md b/external/vpx-cleopatra/README.md\nindex e0d79baf..806e0145 100644\n--- a/external/vpx-cleopatra/README.md\n+++ b/external/vpx-cleopatra/README.md\n@@ -28,9 +28,4 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-cleopatra.elf\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them into the external/vpx-cleopatra folder\n-- Make sure (.vpx), (.directb2s) and (.ini) files are all named the same\n-- Place cleoptra.zip in the external/vpx-cleopatra/pinmame/roms folder. DO NOT UNZIP!  \n "}
+        ]
+      },
+      {
+        "hash": "b649b5f0abc2a4708232721d3bb5eeb93d09a3b3",
+        "date": "2025-04-01 17:30:08 +0100",
+        "author": "OminousOsie",
+        "message": "Updated the last files\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/README.md", "diff": "diff --git a/external/vpx-cleopatra/README.md b/external/vpx-cleopatra/README.md\nindex 586154ba..e0d79baf 100644\n--- a/external/vpx-cleopatra/README.md\n+++ b/external/vpx-cleopatra/README.md\n@@ -1,6 +1,6 @@\n # Cleopatra (Gottlieb 1977)\n \n-![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-cleopatra-preview.jpg)\n+![Table Preview](../../images/vpx-cleopatra.jpg)\n \n \n Authors: [Goldchicco](https://vpuniverse.com/profile/23579-goldchicco/)  \n@@ -33,3 +33,4 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them into the external/vpx-cleopatra folder\n - Make sure (.vpx), (.directb2s) and (.ini) files are all named the same\n - Place cleoptra.zip in the external/vpx-cleopatra/pinmame/roms folder. DO NOT UNZIP!  \n+"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-cleopatra/pinmame/cfg/gitkeep", "diff": "diff --git a/external/vpx-cleopatra/pinmame/cfg/gitkeep b/external/vpx-cleopatra/pinmame/cfg/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-cleopatra/pinmame/cfg/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-cleopatra/pinmame/ini/gitkeep", "diff": "diff --git a/external/vpx-cleopatra/pinmame/ini/gitkeep b/external/vpx-cleopatra/pinmame/ini/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-cleopatra/pinmame/ini/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-cleopatra/pinmame/nvram/gitkeep", "diff": "diff --git a/external/vpx-cleopatra/pinmame/nvram/gitkeep b/external/vpx-cleopatra/pinmame/nvram/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-cleopatra/pinmame/nvram/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-cleopatra/pinmame/roms/gitkeep", "diff": "diff --git a/external/vpx-cleopatra/pinmame/roms/gitkeep b/external/vpx-cleopatra/pinmame/roms/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-cleopatra/pinmame/roms/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-cleopatra/vpx-cleopatra.xml", "diff": "diff --git a/external/vpx-cleopatra/vpx-cleopatra.xml b/external/vpx-cleopatra/vpx-cleopatra.xml\ndeleted file mode 100644\nindex 749cd4e1..00000000\n--- a/external/vpx-cleopatra/vpx-cleopatra.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Cleopatra (Gottlieb 1977)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-cleopatra/Cleopatra (Gottlieb 1977) 1.0b.ini->external/vpx-cleopatra/table.ini", "diff": "diff --git a/external/vpx-cleopatra/Cleopatra (Gottlieb 1977) 1.0b.ini b/external/vpx-cleopatra/table.ini\nsimilarity index 100%\nrename from external/vpx-cleopatra/Cleopatra (Gottlieb 1977) 1.0b.ini\nrename to external/vpx-cleopatra/table.ini"},
+          {"status": "R-from", "path": "external/vpx-cleopatra/vpx-cleopatra.png->external/vpx-cleopatra/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-cleopatra/Cleopatra (Gottlieb 1977) 1.0b.ini->external/vpx-cleopatra/table.ini", "diff": "diff --git a/external/vpx-cleopatra/Cleopatra (Gottlieb 1977) 1.0b.ini b/external/vpx-cleopatra/table.ini\nsimilarity index 100%\nrename from external/vpx-cleopatra/Cleopatra (Gottlieb 1977) 1.0b.ini\nrename to external/vpx-cleopatra/table.ini"},
+          {"status": "R-to", "path": "external/vpx-cleopatra/vpx-cleopatra.png->external/vpx-cleopatra/launcher.png"}
+        ]
+      },
+      {
+        "hash": "86866e9d8ec45dc6fe130c0b17d99c1b92200290",
+        "date": "2025-02-18 23:44:28 -0800",
+        "author": "psybocilin",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-cleopatra/README.md", "diff": "diff --git a/external/vpx-cleopatra/README.md b/external/vpx-cleopatra/README.md\nindex 0b9dbd1c..586154ba 100644\n--- a/external/vpx-cleopatra/README.md\n+++ b/external/vpx-cleopatra/README.md\n@@ -1,6 +1,6 @@\n # Cleopatra (Gottlieb 1977)\n \n-![Table Preview](https://github.com/psybocilin/vpx-standalone-alp4k/blob/vpx-cleopatra/images/vpx-cleopatra-preview.jpg)\n+![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-cleopatra-preview.jpg)\n \n \n Authors: [Goldchicco](https://vpuniverse.com/profile/23579-goldchicco/)  \n"}
+        ]
+      },
+      {
+        "hash": "35e974c9ef23a584ef245cc6c2d907c9b094fc51",
+        "date": "2025-02-16 23:20:03 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-cleopatra/README.md", "diff": "diff --git a/external/vpx-cleopatra/README.md b/external/vpx-cleopatra/README.md\nnew file mode 100644\nindex 00000000..0b9dbd1c\n--- /dev/null\n+++ b/external/vpx-cleopatra/README.md\n@@ -0,0 +1,35 @@\n+# Cleopatra (Gottlieb 1977)\n+\n+![Table Preview](https://github.com/psybocilin/vpx-standalone-alp4k/blob/vpx-cleopatra/images/vpx-cleopatra-preview.jpg)\n+\n+\n+Authors: [Goldchicco](https://vpuniverse.com/profile/23579-goldchicco/)  \n+Version: 1.0.B  \n+Cleopatra (Gottlieb 1977) 1.0b.vpx  \n+Download: [VP Universe](https://vpuniverse.com/files/file/7289-cleopatra-gottlieb-1977/)\n+\n+DirectB2S\n+Authors [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n+Version: 2.0  \n+Cleopatra (Gottlieb 1977).directb2s    \n+Download: [VP Universe](https://vpuniverse.com/files/file/2333-cleopatragottlieb-1977/)  \n+\n+ROM\n+Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/new-fixed-roms-for-vpinmame-v3-6-0-963-beta.8379/)    \n+ROM Name and version: cleoptra.zip  \n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-cleopatra.elf\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them into the external/vpx-cleopatra folder\n+- Make sure (.vpx), (.directb2s) and (.ini) files are all named the same\n+- Place cleoptra.zip in the external/vpx-cleopatra/pinmame/roms folder. DO NOT UNZIP!  \n"}
+        ]
+      },
+      {
+        "hash": "fd4cd01920d1378a8cf42228d21eb2543f6a0238",
+        "date": "2025-02-16 23:07:16 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-cleopatra/Cleopatra (Gottlieb 1977) 1.0b.ini", "diff": "diff --git a/external/vpx-cleopatra/Cleopatra (Gottlieb 1977) 1.0b.ini b/external/vpx-cleopatra/Cleopatra (Gottlieb 1977) 1.0b.ini\nnew file mode 100644\nindex 00000000..949b0699\n--- /dev/null\n+++ b/external/vpx-cleopatra/Cleopatra (Gottlieb 1977) 1.0b.ini\t\n@@ -0,0 +1,18 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.499570\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.854022\n+ViewCabScaleY = 1.010775\n+ViewCabScaleZ = 0.904934\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 82.757980\n+ViewCabPlayerY = -0.080990\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = -0.042900\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-cleopatra/vpx-cleopatra.png"},
+          {"status": "A", "path": "external/vpx-cleopatra/vpx-cleopatra.xml", "diff": "diff --git a/external/vpx-cleopatra/vpx-cleopatra.xml b/external/vpx-cleopatra/vpx-cleopatra.xml\nnew file mode 100644\nindex 00000000..749cd4e1\n--- /dev/null\n+++ b/external/vpx-cleopatra/vpx-cleopatra.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Cleopatra (Gottlieb 1977)</name>\n+</root>\n"}
+        ]
+      },
+      {
+        "hash": "3bcf72111363414925c27790d9073a8218f864f5",
+        "date": "2025-02-16 23:06:21 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-cleopatra/pinmame/roms/gitkeep", "diff": "diff --git a/external/vpx-cleopatra/pinmame/roms/gitkeep b/external/vpx-cleopatra/pinmame/roms/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-cleopatra/pinmame/roms/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      },
+      {
+        "hash": "70454e3049ae4fffc497811a01094ec36780c591",
+        "date": "2025-02-16 23:06:03 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-cleopatra/pinmame/nvram/gitkeep", "diff": "diff --git a/external/vpx-cleopatra/pinmame/nvram/gitkeep b/external/vpx-cleopatra/pinmame/nvram/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-cleopatra/pinmame/nvram/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      },
+      {
+        "hash": "97a5b86ff0bcf6278806c2cb29064fa535141bdf",
+        "date": "2025-02-16 23:05:44 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-cleopatra/pinmame/ini/gitkeep", "diff": "diff --git a/external/vpx-cleopatra/pinmame/ini/gitkeep b/external/vpx-cleopatra/pinmame/ini/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-cleopatra/pinmame/ini/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      },
+      {
+        "hash": "550d2f63abb39a248b792a18c16106b1f54fabdd",
+        "date": "2025-02-16 23:05:23 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-cleopatra/pinmame/cfg/gitkeep", "diff": "diff --git a/external/vpx-cleopatra/pinmame/cfg/gitkeep b/external/vpx-cleopatra/pinmame/cfg/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-cleopatra/pinmame/cfg/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      }
+    ]
+}

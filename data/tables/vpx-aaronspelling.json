@@ -1,0 +1,187 @@
+{
+    "commit_count": 18,
+    "commits": [
+      {
+        "hash": "1dc7e9059d05774d4af757ef1fe7d1253117cfa2",
+        "date": "2026-09-09 21:30:53 -0400",
+        "author": "pointdablame",
+        "message": "More Launcher Art Updates (#2207)\n\nThis updates the following launchers to the new Legends Unchained logo: Aaron Spelling, Apache, Batman 66 (Original), Big Bang Bar, Black Knight, Black Knight 2000, Black Magic 4, Black Rose, James Bond, Cactus Canyon, Cat Burglars, Cenobite, Centaur, Centigrade 37, Chrono Trigger, Cirqus Voltaire, Cleopatra, Clock of Eternal Fog, Cosmic, Crystal Ball, Dark Crystal, Deadpool, Devil Riders, Diner, Dirty Harry, Tron Legacy, Doctor Who, Doom Eternal, DBZ Budokai, Drakor, Dune, D&D, Earthshaker, F-14 Tomcat, Fathom, Fifth Element, Fireball II, Firepower, Firepower II",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/table.yml", "diff": "diff --git a/external/vpx-aaronspelling/table.yml b/external/vpx-aaronspelling/table.yml\nindex 6d46feda..53db3ed3 100644\n--- a/external/vpx-aaronspelling/table.yml\n+++ b/external/vpx-aaronspelling/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassVPSId: \"7ZXnsDJc\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"9B3C1B7FF58F3259CB704C4D43EE89B8\"\n-  - \"8E1CFB2885F16ECFC3FE74FE64B43A5D\"\n-fps: 52\n+backglassChecksum: \"9B3C1B7FF58F3259CB704C4D43EE89B8\"\n+fps: 55\n romVPSId: \"r639KgLM\"\n romChecksum: \"478E5CAD11E44424D0B68EB60054B8D8\"\n romNotes: \"Download - aar_101.zip\"\n@@ -14,7 +11,4 @@ testers:\n   - \"evilwraith\"\n   - \"Mox\"\n vpxVPSId: \"YS5Mj1_B\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"8D8EA7F28BB8AE04423D8B49F2D3CD97\"\n-  - \"9195FDDC7EE1F346BAAF6816F730DFE0\"\n+vpxChecksum: \"8D8EA7F28BB8AE04423D8B49F2D3CD97\""}
+        ]
+      },
+      {
+        "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
+        "date": "2026-07-17 19:48:12 -0400",
+        "author": "evilwraith",
+        "message": "FPS updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/table.yml", "diff": "diff --git a/external/vpx-aaronspelling/table.yml b/external/vpx-aaronspelling/table.yml\nindex 0614370f..6d46feda 100644\n--- a/external/vpx-aaronspelling/table.yml\n+++ b/external/vpx-aaronspelling/table.yml\n@@ -4,7 +4,7 @@ backglassArchiveFormat: \"zip\"\n backglassChecksum:\n   - \"9B3C1B7FF58F3259CB704C4D43EE89B8\"\n   - \"8E1CFB2885F16ECFC3FE74FE64B43A5D\"\n-fps: 55\n+fps: 52\n romVPSId: \"r639KgLM\"\n romChecksum: \"478E5CAD11E44424D0B68EB60054B8D8\"\n romNotes: \"Download - aar_101.zip\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/table.yml", "diff": "diff --git a/external/vpx-aaronspelling/table.yml b/external/vpx-aaronspelling/table.yml\nindex 53db3ed3..0614370f 100644\n--- a/external/vpx-aaronspelling/table.yml\n+++ b/external/vpx-aaronspelling/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"7ZXnsDJc\"\n-backglassChecksum: \"9B3C1B7FF58F3259CB704C4D43EE89B8\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"9B3C1B7FF58F3259CB704C4D43EE89B8\"\n+  - \"8E1CFB2885F16ECFC3FE74FE64B43A5D\"\n fps: 55\n romVPSId: \"r639KgLM\"\n romChecksum: \"478E5CAD11E44424D0B68EB60054B8D8\"\n@@ -11,4 +14,7 @@ testers:\n   - \"evilwraith\"\n   - \"Mox\"\n vpxVPSId: \"YS5Mj1_B\"\n-vpxChecksum: \"8D8EA7F28BB8AE04423D8B49F2D3CD97\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"8D8EA7F28BB8AE04423D8B49F2D3CD97\"\n+  - \"9195FDDC7EE1F346BAAF6816F730DFE0\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/table.ini", "diff": "diff --git a/external/vpx-aaronspelling/table.ini b/external/vpx-aaronspelling/table.ini\nindex f998c8f7..0fdb001e 100644\n--- a/external/vpx-aaronspelling/table.ini\n+++ b/external/vpx-aaronspelling/table.ini\n@@ -1,13 +1,16 @@\n+[Standalone]\n+BackBufferScale = 0.666666\n+\n+[Player]\n+AAFactor = 0.90 \n+\n [TableOverride]\n-ViewCabMode = 1\n-ViewCabScaleX = 1.235042\n-ViewCabScaleY = 1.030393\n-ViewCabScaleZ = 1.064970\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 0.381000\n-ViewCabPlayerY = -92.657883\n-ViewCabPlayerZ = 1501.613037\n-ViewCabLookAt = 12.992802\n-ViewCabFOV = 44.534603\n-ViewCabHOfs = 0.016200\n-ViewCabVOfs = 53.473915\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.297940\n+ViewCabScaleY = 1.044127\n+ViewCabScaleZ = 0.920351\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.019212\n+ViewCabWindowTop = 276.650879\n+ViewCabWindowBot = 83.953270\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-aaronspelling/table.yml", "diff": "diff --git a/external/vpx-aaronspelling/table.yml b/external/vpx-aaronspelling/table.yml\nindex a05c67cf..53db3ed3 100644\n--- a/external/vpx-aaronspelling/table.yml\n+++ b/external/vpx-aaronspelling/table.yml\n@@ -12,5 +12,3 @@ testers:\n   - \"Mox\"\n vpxVPSId: \"YS5Mj1_B\"\n vpxChecksum: \"8D8EA7F28BB8AE04423D8B49F2D3CD97\"\n-applyFixes:\n-  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/README.md", "diff": "diff --git a/external/vpx-aaronspelling/README.md b/external/vpx-aaronspelling/README.md\nindex 483bcdff..19c0e328 100644\n--- a/external/vpx-aaronspelling/README.md\n+++ b/external/vpx-aaronspelling/README.md\n@@ -50,7 +50,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n "}
+        ]
+      },
+      {
+        "hash": "43e06a78576a8d7069d79fee2da8885f7e817af7",
+        "date": "2025-04-30 11:28:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed BOM\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/README.md", "diff": "diff --git a/external/vpx-aaronspelling/README.md b/external/vpx-aaronspelling/README.md\nindex 6fcabe15..483bcdff 100644\n--- a/external/vpx-aaronspelling/README.md\n+++ b/external/vpx-aaronspelling/README.md\n@@ -1,4 +1,4 @@\n-﻿# Aaron Spelling (Data East 1992)\n+# Aaron Spelling (Data East 1992)\n \n ![Table Preview](../../images/vpx-aaronspelling.png)\n "}
+        ]
+      },
+      {
+        "hash": "5424a8122d5eb54371b2435888f2d337df05dc43",
+        "date": "2025-04-30 11:23:31 +0100",
+        "author": "OminousOsie",
+        "message": "Added lloydbraun to the wiz team\n\nAdded lloydbraun to the wiz team\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/README.md", "diff": "diff --git a/external/vpx-aaronspelling/README.md b/external/vpx-aaronspelling/README.md\nindex 7b9b5710..6fcabe15 100644\n--- a/external/vpx-aaronspelling/README.md\n+++ b/external/vpx-aaronspelling/README.md\n@@ -47,7 +47,7 @@ __*We hope you enjoy!!*__\n \n *The VPXS 4KP Wizard team:*\n <pre>\n-- n-i-x            - Mox\n+- n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n - mrandromeda      - SScorpio         - TechZombie"}
+        ]
+      },
+      {
+        "hash": "01c7e252332b06a5a09e3bfaa60664142a54042f",
+        "date": "2025-04-16 10:44:26 +0100",
+        "author": "OminousOsie",
+        "message": "Added the full team to the readme\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/README.md", "diff": "diff --git a/external/vpx-aaronspelling/README.md b/external/vpx-aaronspelling/README.md\nindex cd551149..7b9b5710 100644\n--- a/external/vpx-aaronspelling/README.md\n+++ b/external/vpx-aaronspelling/README.md\n@@ -1,4 +1,4 @@\n-# Aaron Spelling (Data East 1992)\n+﻿# Aaron Spelling (Data East 1992)\n \n ![Table Preview](../../images/vpx-aaronspelling.png)\n \n@@ -41,7 +41,17 @@ This table is available through the Table Manager Wizard, which makes installati\n \n Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n \n <br>"}
+        ]
+      },
+      {
+        "hash": "acfa30515979a4b5bf327339a53cb841e287dfd9",
+        "date": "2025-04-09 13:22:59 +0100",
+        "author": "OminousOsie",
+        "message": "Updated all readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/README.md", "diff": "diff --git a/external/vpx-aaronspelling/README.md b/external/vpx-aaronspelling/README.md\nindex ff989149..cd551149 100644\n--- a/external/vpx-aaronspelling/README.md\n+++ b/external/vpx-aaronspelling/README.md\n@@ -2,31 +2,50 @@\n \n ![Table Preview](../../images/vpx-aaronspelling.png)\n \n----\n-\n-## Files\n-| File Type | Link | Version | Author |\n-|:---------:|:----:|:-------:|:------:|\n-| VPX | [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=15478) | 1.02 | [balater](https://www.vpforums.org/index.php?showuser=112487) |\n-| B2S | [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=15489) | N/A | [roccodimarco](https://www.vpforums.org/index.php?showuser=116076) |\n-| DMD | N/A | N/A | N/A |\n-| ROM | [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=844) | N/A | N/A |\n+<br>\n \n-**Tested by:** [evilwraith]\n+## *️⃣  Table Statistics\n \n----\n-\n-## Status \n-**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 55 |\n \n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - evilwraith\n+  - Mox\n+\n+<br>\n+\n ---\n \n-## Instructions\n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-aaronspelling.elf\n-- Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-aaronspelling\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- The ROM zip file gets copied to vpx-aaronspelling/pinmame/roms (Do not unzip)\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Aaron Spelling`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"I love you daddy.\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"}
+        ]
+      },
+      {
+        "hash": "8a7a7ba0fc0c6a79a15f7e6462cf25cdfea2b0ee",
+        "date": "2025-04-07 18:03:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated some aaron spelling settings\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-aaronspelling/nvram.nv"},
+          {"status": "A", "path": "external/vpx-aaronspelling/pinmame.ini", "diff": "diff --git a/external/vpx-aaronspelling/pinmame.ini b/external/vpx-aaronspelling/pinmame.ini\nnew file mode 100644\nindex 00000000..15f76a18\n--- /dev/null\n+++ b/external/vpx-aaronspelling/pinmame.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+rol=1\n+sound=1\n+cheat=0\n+dmd_red=0\n+dmd_green=175\n+dmd_blue=255\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "be93fc2c71d0df17df86569ff78f4bd17f8bc62c",
+        "date": "2025-04-01 12:05:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated file paths to relative\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/README.md", "diff": "diff --git a/external/vpx-aaronspelling/README.md b/external/vpx-aaronspelling/README.md\nindex c621f952..ff989149 100644\n--- a/external/vpx-aaronspelling/README.md\n+++ b/external/vpx-aaronspelling/README.md\n@@ -1,6 +1,6 @@\n # Aaron Spelling (Data East 1992)\n \n-![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-aaronspelling.png)\n+![Table Preview](../../images/vpx-aaronspelling.png)\n \n ---\n "}
+        ]
+      },
+      {
+        "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
+        "date": "2025-03-30 19:40:27 -0500",
+        "author": "MoxAssault",
+        "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-aaronspelling/table.yml", "diff": "diff --git a/external/vpx-aaronspelling/table.yml b/external/vpx-aaronspelling/table.yml\nnew file mode 100644\nindex 00000000..a05c67cf\n--- /dev/null\n+++ b/external/vpx-aaronspelling/table.yml\n@@ -0,0 +1,16 @@\n+---\n+backglassVPSId: \"7ZXnsDJc\"\n+backglassChecksum: \"9B3C1B7FF58F3259CB704C4D43EE89B8\"\n+fps: 55\n+romVPSId: \"r639KgLM\"\n+romChecksum: \"478E5CAD11E44424D0B68EB60054B8D8\"\n+romNotes: \"Download - aar_101.zip\"\n+tableVPSId: \"7O0Ir6NU\"\n+tagline: \"I love you daddy.\"\n+testers:\n+  - \"evilwraith\"\n+  - \"Mox\"\n+vpxVPSId: \"YS5Mj1_B\"\n+vpxChecksum: \"8D8EA7F28BB8AE04423D8B49F2D3CD97\"\n+applyFixes:\n+  - \"bass\""},
+          {"status": "M", "path": "external/vpx-aaronspelling/table.ini", "diff": "diff --git a/external/vpx-aaronspelling/table.ini b/external/vpx-aaronspelling/table.ini\nindex 57ebbc9f..f998c8f7 100644\n--- a/external/vpx-aaronspelling/table.ini\n+++ b/external/vpx-aaronspelling/table.ini\n@@ -1,13 +1,13 @@\n [TableOverride]\n ViewCabMode = 1\n-ViewCabScaleX = 1.119370\n-ViewCabScaleY = 0.920978\n-ViewCabScaleZ = 1.105699\n+ViewCabScaleX = 1.235042\n+ViewCabScaleY = 1.030393\n+ViewCabScaleZ = 1.064970\n ViewCabRotation = 90.000000\n-ViewCabPlayerX = 0.000000\n-ViewCabPlayerY = -151.114868\n-ViewCabPlayerZ = 1404.774048\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 44.111809\n-ViewCabHOfs = 0.221300\n-ViewCabVOfs = 70.024551\n\\ No newline at end of file\n+ViewCabPlayerX = 0.381000\n+ViewCabPlayerY = -92.657883\n+ViewCabPlayerZ = 1501.613037\n+ViewCabLookAt = 12.992802\n+ViewCabFOV = 44.534603\n+ViewCabHOfs = 0.016200\n+ViewCabVOfs = 53.473915\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
+        "date": "2025-03-19 14:01:02 -0500",
+        "author": "MoxAssault",
+        "message": "Large README Updates\n\n46 README Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/README.md", "diff": "diff --git a/external/vpx-aaronspelling/README.md b/external/vpx-aaronspelling/README.md\nindex 44f8e440..c621f952 100644\n--- a/external/vpx-aaronspelling/README.md\n+++ b/external/vpx-aaronspelling/README.md\n@@ -2,35 +2,29 @@\n \n ![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-aaronspelling.png)\n \n-Authors: [balater](https://www.vpforums.org/index.php?showuser=112487)  \n-Version: 1.02  \n-Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=15478)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=15478) | 1.02 | [balater](https://www.vpforums.org/index.php?showuser=112487) |\n+| B2S | [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=15489) | N/A | [roccodimarco](https://www.vpforums.org/index.php?showuser=116076) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=844) | N/A | N/A |\n \n-Authors: [roccodimarco](https://www.vpforums.org/index.php?showuser=116076)  \n-Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=15489)\n+**Tested by:** [evilwraith]\n \n-ROM\n-\n-ROM Name: aar_101.zip  \n-Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=844)  \n-\n-SHA1: 0C660C0362F7A15E6EC5D7587F80CD0D68E9A12E  \n-MD5:  478E5CAD11E44424D0B68EB60054B8D8 \n-\n-Tested by: evilwraith\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 55 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-aaronspelling.elf\n - Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-aaronspelling"}
+        ]
+      },
+      {
+        "hash": "9570e31c7e62f6f1178a35db3eef82051dab78e9",
+        "date": "2025-03-18 17:36:20 -0300",
+        "author": "Bla1ze",
+        "message": "Launcher Image Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/launcher.png"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-aaronspelling/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-aaronspelling/pinmame/cfg/.gitkeep b/external/vpx-aaronspelling/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-aaronspelling/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-aaronspelling/pinmame/cfg/default.cfg b/external/vpx-aaronspelling/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-aaronspelling/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-aaronspelling/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-aaronspelling/pinmame/ini/.gitkeep b/external/vpx-aaronspelling/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-aaronspelling/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-aaronspelling/pinmame/nvram/.gitkeep b/external/vpx-aaronspelling/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-aaronspelling/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-aaronspelling/pinmame/roms/.gitkeep b/external/vpx-aaronspelling/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-aaronspelling/vpx-aaronspelling.xml", "diff": "diff --git a/external/vpx-aaronspelling/vpx-aaronspelling.xml b/external/vpx-aaronspelling/vpx-aaronspelling.xml\ndeleted file mode 100644\nindex 42614ddc..00000000\n--- a/external/vpx-aaronspelling/vpx-aaronspelling.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Aaron Spelling (Data East 1992)</name>\n-</root>\n\\ No newline at end of file"},
+          {"status": "R-from", "path": "external/vpx-aaronspelling/Aaron Spelling (Data East 1992).ini->external/vpx-aaronspelling/table.ini", "diff": "diff --git a/external/vpx-aaronspelling/Aaron Spelling (Data East 1992).ini b/external/vpx-aaronspelling/table.ini\nsimilarity index 100%\nrename from external/vpx-aaronspelling/Aaron Spelling (Data East 1992).ini\nrename to external/vpx-aaronspelling/table.ini"},
+          {"status": "R-from", "path": "external/vpx-aaronspelling/vpx-aaronspelling.png->external/vpx-aaronspelling/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-aaronspelling/Aaron Spelling (Data East 1992).ini->external/vpx-aaronspelling/table.ini", "diff": "diff --git a/external/vpx-aaronspelling/Aaron Spelling (Data East 1992).ini b/external/vpx-aaronspelling/table.ini\nsimilarity index 100%\nrename from external/vpx-aaronspelling/Aaron Spelling (Data East 1992).ini\nrename to external/vpx-aaronspelling/table.ini"},
+          {"status": "R-to", "path": "external/vpx-aaronspelling/vpx-aaronspelling.png->external/vpx-aaronspelling/launcher.png"}
+        ]
+      },
+      {
+        "hash": "4eef136db530e711b26686f3ecc6436506ec5aa2",
+        "date": "2024-11-16 02:47:05 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-aaronspelling",
+        "files": [
+          {"status": "M", "path": "external/vpx-aaronspelling/README.md", "diff": "diff --git a/external/vpx-aaronspelling/README.md b/external/vpx-aaronspelling/README.md\nindex cbdf17bf..44f8e440 100644\n--- a/external/vpx-aaronspelling/README.md\n+++ b/external/vpx-aaronspelling/README.md\n@@ -2,20 +2,21 @@\n \n ![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-aaronspelling.png)\n \n-Authors: [balater](https://www.vpforums.org/index.php?showuser=112487)\n-Version: 1.02\n+Authors: [balater](https://www.vpforums.org/index.php?showuser=112487)  \n+Version: 1.02  \n Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=15478)\n \n DirectB2S\n \n-Authors: [roccodimarco](https://www.vpforums.org/index.php?showuser=116076)\n+Authors: [roccodimarco](https://www.vpforums.org/index.php?showuser=116076)  \n Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=15489)\n \n ROM\n \n-ROM Name: aar_101.zip\n-Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=844)\n-SHA1: 0C660C0362F7A15E6EC5D7587F80CD0D68E9A12E\n+ROM Name: aar_101.zip  \n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=844)  \n+\n+SHA1: 0C660C0362F7A15E6EC5D7587F80CD0D68E9A12E  \n MD5:  478E5CAD11E44424D0B68EB60054B8D8 \n \n Tested by: evilwraith\n@@ -23,6 +24,7 @@ Tested by: evilwraith\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 55 |\n@@ -33,4 +35,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Add your personalized launcher.elf and rename it to vpx-aaronspelling.elf\n - Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-aaronspelling\n - Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- The ROM zip file gets copied to vpx-aaronspelling/pinmame/roms (Do not unzip)\n\\ No newline at end of file\n+- The ROM zip file gets copied to vpx-aaronspelling/pinmame/roms (Do not unzip)\n"}
+        ]
+      },
+      {
+        "hash": "9cfad1994c097bb618f72bb6b358a70004c245cc",
+        "date": "2024-11-14 15:41:32 -0500",
+        "author": "evilwraith",
+        "message": "added Aaron Spelling (Data East 1992)\n\nAaron Spelling (Data East 1992)\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-aaronspelling/Aaron Spelling (Data East 1992).ini", "diff": "diff --git a/external/vpx-aaronspelling/Aaron Spelling (Data East 1992).ini b/external/vpx-aaronspelling/Aaron Spelling (Data East 1992).ini\nnew file mode 100644\nindex 00000000..57ebbc9f\n--- /dev/null\n+++ b/external/vpx-aaronspelling/Aaron Spelling (Data East 1992).ini\t\n@@ -0,0 +1,13 @@\n+[TableOverride]\n+ViewCabMode = 1\n+ViewCabScaleX = 1.119370\n+ViewCabScaleY = 0.920978\n+ViewCabScaleZ = 1.105699\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 0.000000\n+ViewCabPlayerY = -151.114868\n+ViewCabPlayerZ = 1404.774048\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 44.111809\n+ViewCabHOfs = 0.221300\n+ViewCabVOfs = 70.024551\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-aaronspelling/README.md", "diff": "diff --git a/external/vpx-aaronspelling/README.md b/external/vpx-aaronspelling/README.md\nnew file mode 100644\nindex 00000000..cbdf17bf\n--- /dev/null\n+++ b/external/vpx-aaronspelling/README.md\n@@ -0,0 +1,36 @@\n+# Aaron Spelling (Data East 1992)\n+\n+![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-aaronspelling.png)\n+\n+Authors: [balater](https://www.vpforums.org/index.php?showuser=112487)\n+Version: 1.02\n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=15478)\n+\n+DirectB2S\n+\n+Authors: [roccodimarco](https://www.vpforums.org/index.php?showuser=116076)\n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=15489)\n+\n+ROM\n+\n+ROM Name: aar_101.zip\n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=844)\n+SHA1: 0C660C0362F7A15E6EC5D7587F80CD0D68E9A12E\n+MD5:  478E5CAD11E44424D0B68EB60054B8D8 \n+\n+Tested by: evilwraith\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 55 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-aaronspelling.elf\n+- Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-aaronspelling\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n+- The ROM zip file gets copied to vpx-aaronspelling/pinmame/roms (Do not unzip)\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-aaronspelling/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-aaronspelling/pinmame/cfg/.gitkeep b/external/vpx-aaronspelling/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-aaronspelling/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-aaronspelling/pinmame/cfg/default.cfg b/external/vpx-aaronspelling/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-aaronspelling/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-aaronspelling/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-aaronspelling/pinmame/ini/.gitkeep b/external/vpx-aaronspelling/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-aaronspelling/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-aaronspelling/pinmame/nvram/.gitkeep b/external/vpx-aaronspelling/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-aaronspelling/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-aaronspelling/pinmame/roms/.gitkeep b/external/vpx-aaronspelling/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-aaronspelling/vpx-aaronspelling.png"},
+          {"status": "A", "path": "external/vpx-aaronspelling/vpx-aaronspelling.xml", "diff": "diff --git a/external/vpx-aaronspelling/vpx-aaronspelling.xml b/external/vpx-aaronspelling/vpx-aaronspelling.xml\nnew file mode 100644\nindex 00000000..42614ddc\n--- /dev/null\n+++ b/external/vpx-aaronspelling/vpx-aaronspelling.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Aaron Spelling (Data East 1992)</name>\n+</root>\n\\ No newline at end of file\n"}
+        ]
+      }
+    ]
+}

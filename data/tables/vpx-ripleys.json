@@ -1,0 +1,323 @@
+{
+    "commit_count": 32,
+    "commits": [
+      {
+        "hash": "34266eca947bbcbd4557476c480c7da1b080beab",
+        "date": "2026-07-21 12:12:08 -0400",
+        "author": "evilwraith",
+        "message": "Revert to JPSala sversion\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex c53db063..a78b8ca8 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -1,21 +1,17 @@\n ---\n-backglassVPSId: \"z3tmoQbcUo\"\n backglassChecksum: \"10546D619D78B39DFAD8A3A0B681B840\"\n backglassNotes: \"Download 'Ripley's Believe It Or Not (Stern 2004).zip'\"\n+backglassVPSId: \"z3tmoQbcUo\"\n coloredROMChecksum: \"5A59A2305722E9862D4A2E113F459EB2\"\n-coloredROMNotes: \"\"\n coloredROMVPSId: \"jwXC_1pvvj\"\n fps: 60\n-romVPSId: \"H55zvdt4\"\n romChecksum: \"555BD09C06F23116DAB1ABF943C17A39\"\n romNotes: \"Download version 3.20\"\n+romVPSId: \"H55zvdt4\"\n tableVPSId: \"MBiAY_Tg\"\n-tableNotes: \"Download v600.zip\"\n-tagline: >-\n-  I have traveled to the world's farthest\n-  corners and seen the most incredible things.\n+tagline: \"I have traveled to the world's farthest corners and seen the most incredible things.\"\n testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n-vpxVPSId: \"K9My93lAbN\"\n-vpxChecksum: \"A68613375E5A7F5366FF641A5960F103\"\n+vpxChecksum: \"146E0C62CF6C86ABDC66EA1738F2DF8D\"\n+vpxVPSId: \"_N9Usy6Q\"\n"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex 022b1b7a..c53db063 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"z3tmoQbcUo\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"10546D619D78B39DFAD8A3A0B681B840\"\n-  - \"8A714E85ABB402828CEF4C407BEA0B07\"\n+backglassChecksum: \"10546D619D78B39DFAD8A3A0B681B840\"\n backglassNotes: \"Download 'Ripley's Believe It Or Not (Stern 2004).zip'\"\n coloredROMChecksum: \"5A59A2305722E9862D4A2E113F459EB2\"\n coloredROMNotes: \"\"\n@@ -21,7 +18,4 @@ testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n vpxVPSId: \"K9My93lAbN\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"A68613375E5A7F5366FF641A5960F103\"\n-  - \"E5EEB90343A2E3BEED73F0C10B28E860\"\n+vpxChecksum: \"A68613375E5A7F5366FF641A5960F103\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex c53db063..022b1b7a 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"z3tmoQbcUo\"\n-backglassChecksum: \"10546D619D78B39DFAD8A3A0B681B840\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"10546D619D78B39DFAD8A3A0B681B840\"\n+  - \"8A714E85ABB402828CEF4C407BEA0B07\"\n backglassNotes: \"Download 'Ripley's Believe It Or Not (Stern 2004).zip'\"\n coloredROMChecksum: \"5A59A2305722E9862D4A2E113F459EB2\"\n coloredROMNotes: \"\"\n@@ -18,4 +21,7 @@ testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n vpxVPSId: \"K9My93lAbN\"\n-vpxChecksum: \"A68613375E5A7F5366FF641A5960F103\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"A68613375E5A7F5366FF641A5960F103\"\n+  - \"E5EEB90343A2E3BEED73F0C10B28E860\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/table.ini", "diff": "diff --git a/external/vpx-ripleys/table.ini b/external/vpx-ripleys/table.ini\nindex 2a39de14..984c5702 100644\n--- a/external/vpx-ripleys/table.ini\n+++ b/external/vpx-ripleys/table.ini\n@@ -10,16 +10,18 @@ ScreenInclination = 0.000000\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.200516\n-ViewCabScaleY = 1.027843\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.201062\n+ViewCabScaleY = 0.988155\n+ViewCabScaleZ = 0.960312\n ViewCabRotation = 180.000000\n-ViewCabHOfs = -0.328200\n+ViewCabHOfs = 0.015700\n ViewCabVOfs = 0.000000\n-ViewCabWindowTop = 372.965942\n+ViewCabWindowTop = 325.570892\n ViewCabWindowBot = 116.865250\n ToneMapper = 0\n \n-[Standalone]\n-BackBufferScale = 0.416666\n-WindowRenderMode = 0\n\\ No newline at end of file\n+[TableOption]\n+Select LUT = 0.000000\n+Desktop DMD = 0.000000\n+Cabinet Rails = 0.000000\n+Side Blades = 1.000000\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex da5abddf..c53db063 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -1,7 +1,10 @@\n ---\n-backglassVPSId: \"ktyjU-4Y\"\n-backglassChecksum: \"0092FA141A8F069A7D7C8BB3FA8E47B7\"\n-backglassNotes: \"Download version 2.0\"\n+backglassVPSId: \"z3tmoQbcUo\"\n+backglassChecksum: \"10546D619D78B39DFAD8A3A0B681B840\"\n+backglassNotes: \"Download 'Ripley's Believe It Or Not (Stern 2004).zip'\"\n+coloredROMChecksum: \"5A59A2305722E9862D4A2E113F459EB2\"\n+coloredROMNotes: \"\"\n+coloredROMVPSId: \"jwXC_1pvvj\"\n fps: 60\n romVPSId: \"H55zvdt4\"\n romChecksum: \"555BD09C06F23116DAB1ABF943C17A39\"\n@@ -14,7 +17,5 @@ tagline: >-\n testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n-vpxVPSId: \"_N9Usy6Q\"\n-vpxChecksum: \"146E0C62CF6C86ABDC66EA1738F2DF8D\"\n-applyFixes:\n-  - \"bass\"\n+vpxVPSId: \"K9My93lAbN\"\n+vpxChecksum: \"A68613375E5A7F5366FF641A5960F103\""}
+        ]
+      },
+      {
+        "hash": "688ec61c6bd9a567e41b60eb2948b47c6652ad0f",
+        "date": "2025-09-10 12:40:08 -0400",
+        "author": "evilwraith",
+        "message": "JPSalas v600 updates\n\nCurrent as of 9/10/25. More to come.\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex a212114e..da5abddf 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -7,7 +7,7 @@ romVPSId: \"H55zvdt4\"\n romChecksum: \"555BD09C06F23116DAB1ABF943C17A39\"\n romNotes: \"Download version 3.20\"\n tableVPSId: \"MBiAY_Tg\"\n-tableNotes: \"Download v551_VPX8.zip\"\n+tableNotes: \"Download v600.zip\"\n tagline: >-\n   I have traveled to the world's farthest\n   corners and seen the most incredible things.\n@@ -15,6 +15,6 @@ testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n vpxVPSId: \"_N9Usy6Q\"\n-vpxChecksum: \"C0D1D2CBE0CF76C2562867DF1D6760DB\"\n+vpxChecksum: \"146E0C62CF6C86ABDC66EA1738F2DF8D\"\n applyFixes:\n   - \"bass\""}
+        ]
+      },
+      {
+        "hash": "e746650ae1685c1c20c8b005ae5edd0d328115f2",
+        "date": "2025-07-21 14:26:11 -0400",
+        "author": "evilwraith",
+        "message": "3 table updates\n\nRipley's Believe It Or Not!\nThe Lost World: Jurassic Park\nX-Men Wolverine LE\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex 9950f4e9..a212114e 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -7,7 +7,7 @@ romVPSId: \"H55zvdt4\"\n romChecksum: \"555BD09C06F23116DAB1ABF943C17A39\"\n romNotes: \"Download version 3.20\"\n tableVPSId: \"MBiAY_Tg\"\n-tableNotes: \"Download v55_VPX8.zip\"\n+tableNotes: \"Download v551_VPX8.zip\"\n tagline: >-\n   I have traveled to the world's farthest\n   corners and seen the most incredible things.\n@@ -15,6 +15,6 @@ testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n vpxVPSId: \"_N9Usy6Q\"\n-vpxChecksum: \"FAC4E8171AD1A55680FF41AE7FD34A28\"\n+vpxChecksum: \"C0D1D2CBE0CF76C2562867DF1D6760DB\"\n applyFixes:\n   - \"bass\""}
+        ]
+      },
+      {
+        "hash": "4cdbc41451db769ef3cbe98c158ed3f1bb36cf1d",
+        "date": "2025-06-15 15:03:19 -0400",
+        "author": "evilwraith",
+        "message": "Create nvram.nv\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-ripleys/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex 877486a1..a332b290 100755\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -50,7 +50,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n "}
+        ]
+      },
+      {
+        "hash": "b55418a31c607de551fb1d0343fb76282aa87002",
+        "date": "2025-06-13 15:54:31 -0400",
+        "author": "evilwraith",
+        "message": "Ripley's nvram fix\n\nRipley's Believe It or Not\nChanged default high score initials to our defaults.\nAdded our standard message.\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-ripleys/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "180f4a43b69ac44ebde864a58a1b6b53068eed32",
+        "date": "2025-06-12 18:42:49 -0700",
+        "author": "damien-crypto",
+        "message": "Update table.ini\n\nadded windowrendermode= to fix dmd lag\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/table.ini", "diff": "diff --git a/external/vpx-ripleys/table.ini b/external/vpx-ripleys/table.ini\nindex 9a2271c5..2a39de14 100644\n--- a/external/vpx-ripleys/table.ini\n+++ b/external/vpx-ripleys/table.ini\n@@ -21,4 +21,5 @@ ViewCabWindowBot = 116.865250\n ToneMapper = 0\n \n [Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+BackBufferScale = 0.416666\n+WindowRenderMode = 0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "dad45aa2eac168eb1069e8e358f20d4f0e5b6f07",
+        "date": "2025-06-12 08:33:26 -0700",
+        "author": "Reboot",
+        "message": "Update nvram.nv\n\nreduced volume to fix crackle\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "1a7f6d1339f66721c03a4c0fe02ac860957614f9",
+        "date": "2025-06-04 09:27:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex 5c14b385..877486a1 100755\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -2,33 +2,60 @@\n \n ![Table Preview](../../images/vpx-ripleys-believe-it-or-not-preview.jpg)\n \n-Author: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13043)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Author: [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n-Version: 2.0.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/5067-ripleys-believe-it-or-not-stern-2003/)\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n \n-ROM\n+<br>\n \n-Version 3.20  \n-Download [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=317)\n+**VPXS 4KP Testers:**\n+  - Kaoticbpr\n+  - OminousOsie 🌸\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+---\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Ripley's Believe it or Not!`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"I have traveled to the world's farthest corners and seen the most incredible things.\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n \n-## Instructions\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- \"I have traveled to the world's farthest corners and seen the most incredible things.\"\n \n+<br>\n+<br>\n+<br>\n+<br>\n+<br>\n"}
+        ]
+      },
+      {
+        "hash": "0f431531351ee46e549389f9b337b66af16dcad6",
+        "date": "2025-06-03 14:33:55 +0100",
+        "author": "OminousOsie",
+        "message": "Double checked all the manual readmes + disabled those not releasing\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex 8763b4bb..5c14b385 100755\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -23,7 +23,7 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n \n ## Instructions\n "}
+        ]
+      },
+      {
+        "hash": "5c3a1e44d8a5272f061ccdd7e2495ab98e76e218",
+        "date": "2025-05-31 13:32:55 +0100",
+        "author": "OminousOsie",
+        "message": "Wiz tweaks to ripleys\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-ripleys/pinmame.ini", "diff": "diff --git a/external/vpx-ripleys/pinmame.ini b/external/vpx-ripleys/pinmame.ini\nnew file mode 100644\nindex 00000000..7c8c6e01\n--- /dev/null\n+++ b/external/vpx-ripleys/pinmame.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+sound=1\n+rol=0\n+cheat=0\n+dmd_red=181\n+dmd_green=148\n+dmd_blue=16\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-ripleys/nvram.nv"},
+          {"status": "M", "path": "external/vpx-ripleys/table.ini", "diff": "diff --git a/external/vpx-ripleys/table.ini b/external/vpx-ripleys/table.ini\nindex e0eb4445..9a2271c5 100644\n--- a/external/vpx-ripleys/table.ini\n+++ b/external/vpx-ripleys/table.ini\n@@ -1,17 +1,24 @@\n+[Player]\n+ScreenPlayerY = 17.330893\n+ScreenPlayerZ = 96.346596\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.250130\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+\n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 1.000000\n-ViewCabScaleY = 1.330000\n+ViewCabMode = 2\n+ViewCabScaleX = 1.200516\n+ViewCabScaleY = 1.027843\n ViewCabScaleZ = 1.000000\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -37.018013\n-ViewCabPlayerY = 0.000000\n-ViewCabPlayerZ = -480.760010\n-ViewCabLookAt = 6.000000\n-ViewCabFOV = 25.000000\n-ViewCabLayback = 60.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = -0.328200\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 372.965942\n+ViewCabWindowBot = 116.865250\n+ToneMapper = 0\n \n-[Player]\n-ScreenPlayerX = 0.000000\n-ScreenPlayerY = 0.000000\n-ScreenPlayerZ = 70.000000\n\\ No newline at end of file\n+[Standalone]\n+BackBufferScale = 0.416666\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex c741f8cf..9950f4e9 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -2,7 +2,7 @@\n backglassVPSId: \"ktyjU-4Y\"\n backglassChecksum: \"0092FA141A8F069A7D7C8BB3FA8E47B7\"\n backglassNotes: \"Download version 2.0\"\n-fps: 50\n+fps: 60\n romVPSId: \"H55zvdt4\"\n romChecksum: \"555BD09C06F23116DAB1ABF943C17A39\"\n romNotes: \"Download version 3.20\"\n"}
+        ]
+      },
+      {
+        "hash": "69de260ceacfdc896ce150c10b97f5f0a8868903",
+        "date": "2025-05-31 12:39:20 +0100",
+        "author": "OminousOsie",
+        "message": "Updated launchers, and no fear tweaks\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/launcher.png"}
+        ]
+      },
+      {
+        "hash": "6dabd3365869a9e4d2a3841ac69c4ccde7e7bd00",
+        "date": "2025-05-30 10:37:46 +0100",
+        "author": "OminousOsie",
+        "message": "reenabled ripley\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex 5fd5ba98..c741f8cf 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -15,7 +15,6 @@ testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n vpxVPSId: \"_N9Usy6Q\"\n-enabled: false\n vpxChecksum: \"FAC4E8171AD1A55680FF41AE7FD34A28\"\n applyFixes:\n   - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "b3eaaf767fb3e46adc6778cad4b7740299ec3dd7",
+        "date": "2025-05-30 10:29:37 +0100",
+        "author": "OminousOsie",
+        "message": "Updated main readme and disabled ripleys for a PR\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex c741f8cf..5fd5ba98 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -15,6 +15,7 @@ testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n vpxVPSId: \"_N9Usy6Q\"\n+enabled: false\n vpxChecksum: \"FAC4E8171AD1A55680FF41AE7FD34A28\"\n applyFixes:\n   - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "5b7134d20797272f89f0b8b70d2cd08d4afd455b",
+        "date": "2025-05-29 19:05:49 +0100",
+        "author": "OminousOsie",
+        "message": "Added ripleys\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nnew file mode 100644\nindex 00000000..c741f8cf\n--- /dev/null\n+++ b/external/vpx-ripleys/table.yml\n@@ -0,0 +1,20 @@\n+---\n+backglassVPSId: \"ktyjU-4Y\"\n+backglassChecksum: \"0092FA141A8F069A7D7C8BB3FA8E47B7\"\n+backglassNotes: \"Download version 2.0\"\n+fps: 50\n+romVPSId: \"H55zvdt4\"\n+romChecksum: \"555BD09C06F23116DAB1ABF943C17A39\"\n+romNotes: \"Download version 3.20\"\n+tableVPSId: \"MBiAY_Tg\"\n+tableNotes: \"Download v55_VPX8.zip\"\n+tagline: >-\n+  I have traveled to the world's farthest\n+  corners and seen the most incredible things.\n+testers:\n+  - \"Kaoticbpr\"\n+  - \"OminousOsie\"\n+vpxVPSId: \"_N9Usy6Q\"\n+vpxChecksum: \"FAC4E8171AD1A55680FF41AE7FD34A28\"\n+applyFixes:\n+  - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex 623b3611..8763b4bb 100755\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -27,8 +27,8 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"I have traveled to the world's farthest corners and seen the most incredible things.\"\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex 7a5b0218..623b3611 100755\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -27,4 +27,8 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"I have traveled to the world's farthest corners and seen the most incredible things.\"\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex 0407f1d9..7a5b0218 100755\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -27,9 +27,4 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-ripleys.elf\n-- Download the table and directb2s versions listed above and copy them to external/vpx-ripleys\n-- Make sure (.vpx), and (.directb2s) files are all named the same\n-- Place ROM file (which remains as a .zip) into \"vpx-ripleys/pinmame/roms\"\n - \"I have traveled to the world's farthest corners and seen the most incredible things.\""}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-ripleys/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-ripleys/pinmame/cfg/.gitkeep b/external/vpx-ripleys/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-ripleys/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-ripleys/pinmame/cfg/default.cfg b/external/vpx-ripleys/pinmame/cfg/default.cfg\ndeleted file mode 100755\nindex de34d1c4..00000000\nBinary files a/external/vpx-ripleys/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-ripleys/pinmame/cfg/ripleys.cfg", "diff": "diff --git a/external/vpx-ripleys/pinmame/cfg/ripleys.cfg b/external/vpx-ripleys/pinmame/cfg/ripleys.cfg\ndeleted file mode 100755\nindex df348841..00000000\nBinary files a/external/vpx-ripleys/pinmame/cfg/ripleys.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-ripleys/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-ripleys/pinmame/ini/.gitkeep b/external/vpx-ripleys/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-ripleys/pinmame/ini/ripleys.ini", "diff": "diff --git a/external/vpx-ripleys/pinmame/ini/ripleys.ini b/external/vpx-ripleys/pinmame/ini/ripleys.ini\ndeleted file mode 100755\nindex d964f733..00000000\n--- a/external/vpx-ripleys/pinmame/ini/ripleys.ini\n+++ /dev/null\n@@ -1,7 +0,0 @@\n-[settings]\n-sound=1\n-rol=0\n-cheat=0\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-ripleys/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-ripleys/pinmame/nvram/.gitkeep b/external/vpx-ripleys/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-ripleys/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-ripleys/pinmame/roms/.gitkeep b/external/vpx-ripleys/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-ripleys/vpx-ripleys.xml", "diff": "diff --git a/external/vpx-ripleys/vpx-ripleys.xml b/external/vpx-ripleys/vpx-ripleys.xml\ndeleted file mode 100755\nindex e00c6028..00000000\n--- a/external/vpx-ripleys/vpx-ripleys.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Ripley's Believe it or not</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-ripleys/Ripleys Believe It or Not (Stern 2004) v55_VPX8.ini->external/vpx-ripleys/table.ini", "diff": "diff --git a/external/vpx-ripleys/Ripleys Believe It or Not (Stern 2004) v55_VPX8.ini b/external/vpx-ripleys/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-ripleys/Ripleys Believe It or Not (Stern 2004) v55_VPX8.ini\nrename to external/vpx-ripleys/table.ini"},
+          {"status": "R-from", "path": "external/vpx-ripleys/pinmame/nvram/ripleys.nv->external/vpx-ripleys/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-ripleys/vpx-ripleys.png->external/vpx-ripleys/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-ripleys/Ripleys Believe It or Not (Stern 2004) v55_VPX8.ini->external/vpx-ripleys/table.ini", "diff": "diff --git a/external/vpx-ripleys/Ripleys Believe It or Not (Stern 2004) v55_VPX8.ini b/external/vpx-ripleys/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-ripleys/Ripleys Believe It or Not (Stern 2004) v55_VPX8.ini\nrename to external/vpx-ripleys/table.ini"},
+          {"status": "R-to", "path": "external/vpx-ripleys/pinmame/nvram/ripleys.nv->external/vpx-ripleys/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-ripleys/vpx-ripleys.png->external/vpx-ripleys/launcher.png"}
+        ]
+      },
+      {
+        "hash": "20858e3e5b04acbdec1d95d90cd6c01fd781c806",
+        "date": "2025-02-02 20:09:32 -0400",
+        "author": "Bla1ze",
+        "message": "Adding missing configs\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-ripleys/Ripleys Believe It or Not (Stern 2004) v55_VPX8.ini", "diff": "diff --git a/external/vpx-ripleys/Ripleys Believe It or Not (Stern 2004) v55_VPX8.ini b/external/vpx-ripleys/Ripleys Believe It or Not (Stern 2004) v55_VPX8.ini\nnew file mode 100755\nindex 00000000..e0eb4445\n--- /dev/null\n+++ b/external/vpx-ripleys/Ripleys Believe It or Not (Stern 2004) v55_VPX8.ini\t\n@@ -0,0 +1,17 @@\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 1.000000\n+ViewCabScaleY = 1.330000\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -37.018013\n+ViewCabPlayerY = 0.000000\n+ViewCabPlayerZ = -480.760010\n+ViewCabLookAt = 6.000000\n+ViewCabFOV = 25.000000\n+ViewCabLayback = 60.000000\n+\n+[Player]\n+ScreenPlayerX = 0.000000\n+ScreenPlayerY = 0.000000\n+ScreenPlayerZ = 70.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-ripleys/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-ripleys/pinmame/cfg/default.cfg b/external/vpx-ripleys/pinmame/cfg/default.cfg\nnew file mode 100755\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-ripleys/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-ripleys/pinmame/cfg/ripleys.cfg", "diff": "diff --git a/external/vpx-ripleys/pinmame/cfg/ripleys.cfg b/external/vpx-ripleys/pinmame/cfg/ripleys.cfg\nnew file mode 100755\nindex 00000000..df348841\nBinary files /dev/null and b/external/vpx-ripleys/pinmame/cfg/ripleys.cfg differ"},
+          {"status": "A", "path": "external/vpx-ripleys/pinmame/ini/ripleys.ini", "diff": "diff --git a/external/vpx-ripleys/pinmame/ini/ripleys.ini b/external/vpx-ripleys/pinmame/ini/ripleys.ini\nnew file mode 100755\nindex 00000000..d964f733\n--- /dev/null\n+++ b/external/vpx-ripleys/pinmame/ini/ripleys.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+sound=1\n+rol=0\n+cheat=0\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-ripleys/pinmame/nvram/ripleys.nv"},
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nold mode 100644\nnew mode 100755\nindex d8cc22e7..0407f1d9\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -3,7 +3,7 @@\n ![Table Preview](../../images/vpx-ripleys-believe-it-or-not-preview.jpg)\n \n Author: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 4.3.0  \n+Version: 5.5.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13043)\n \n DirectB2S\n@@ -29,7 +29,7 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-ripleys.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n+- Download the table and directb2s versions listed above and copy them to external/vpx-ripleys\n - Make sure (.vpx), and (.directb2s) files are all named the same\n - Place ROM file (which remains as a .zip) into \"vpx-ripleys/pinmame/roms\"\n - \"I have traveled to the world's farthest corners and seen the most incredible things.\""},
+          {"status": "M", "path": "external/vpx-ripleys/vpx-ripleys.png"},
+          {"status": "M", "path": "external/vpx-ripleys/vpx-ripleys.xml", "diff": "diff --git a/external/vpx-ripleys/vpx-ripleys.xml b/external/vpx-ripleys/vpx-ripleys.xml\nold mode 100644\nnew mode 100755\n"}
+        ]
+      },
+      {
+        "hash": "d2faa2e32bf3eec5046da310424644e14fa370bd",
+        "date": "2025-02-01 17:26:11 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-ripleys",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex 25561e53..0407f1d9 100644\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -29,7 +29,7 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-ripleys.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n+- Download the table and directb2s versions listed above and copy them to external/vpx-ripleys\n - Make sure (.vpx), and (.directb2s) files are all named the same\n - Place ROM file (which remains as a .zip) into \"vpx-ripleys/pinmame/roms\"\n - \"I have traveled to the world's farthest corners and seen the most incredible things.\"\n"}
+        ]
+      },
+      {
+        "hash": "15e805eb6a855cede3e426923357c2c2a3d8eaaf",
+        "date": "2025-02-01 09:14:24 -0600",
+        "author": "HereForGear",
+        "message": "Merge branch 'main' of https://github.com/HereForGear/vpx-standalone-alp4k\n",
+        "files": [
+          {"status": "MM", "path": "external/vpx-ripleys/README.md", "diff": "diff --cc external/vpx-ripleys/README.md\nindex 84fd4991,d8cc22e7..25561e53\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@@ -1,9 -1,9 +1,9 @@@\n  # Ripley's Believe it or Not! (Stern 2004)\n  \n- ![Table Preview](https://www.vpforums.org/index.php?s=d77dd11d3a10617da44805808363ef29&app=downloads&module=display&section=screenshot&record=114134&id=13043&full=1)\n+ ![Table Preview](../../images/vpx-ripleys-believe-it-or-not-preview.jpg)\n  \n  Author: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n -Version: 4.3.0  \n +Version: 5.5.0  \n  Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13043)\n  \n  DirectB2S\n"}
+        ]
+      },
+      {
+        "hash": "4ef360ac6802246e4c256a93e4d062e279260944",
+        "date": "2025-02-01 09:14:03 -0600",
+        "author": "HereForGear",
+        "message": "2 Testing/Readme updates + 1 Readme update\n\n1. Updated readme & delete links to 'media.'  Bigus(MOD)1.1 vpx has embedded music; tested & works w/o the music files; adding/deleting/changing those tracks does nothing to music in game.\n2. Updated/tested jpsalas table 'Ripleys' at v5.5; works well.\n3. Update Readme for 'POTC' to mention re-naming of files.\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex bc45f15a..84fd4991 100644\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -3,7 +3,7 @@\n ![Table Preview](https://www.vpforums.org/index.php?s=d77dd11d3a10617da44805808363ef29&app=downloads&module=display&section=screenshot&record=114134&id=13043&full=1)\n \n Author: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 4.3.0  \n+Version: 5.5.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13043)\n \n DirectB2S\n"}
+        ]
+      },
+      {
+        "hash": "74c8918764069a3e18efb9469ca93f23347322ee",
+        "date": "2025-01-25 17:41:46 -0600",
+        "author": "bhhobb",
+        "message": "Update README.md preview image",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex bc45f15a..d8cc22e7 100644\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -1,6 +1,6 @@\n # Ripley's Believe it or Not! (Stern 2004)\n \n-![Table Preview](https://www.vpforums.org/index.php?s=d77dd11d3a10617da44805808363ef29&app=downloads&module=display&section=screenshot&record=114134&id=13043&full=1)\n+![Table Preview](../../images/vpx-ripleys-believe-it-or-not-preview.jpg)\n \n Author: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n Version: 4.3.0  \n"}
+        ]
+      },
+      {
+        "hash": "371feac428423741f9015f55a51fdbc73f35838f",
+        "date": "2024-09-06 02:25:56 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Minor update to vpx-ripleys",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex 45b8b5e9..bc45f15a 100644\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -3,7 +3,7 @@\n ![Table Preview](https://www.vpforums.org/index.php?s=d77dd11d3a10617da44805808363ef29&app=downloads&module=display&section=screenshot&record=114134&id=13043&full=1)\n \n Author: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 4.3.0 \n+Version: 4.3.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13043)\n \n DirectB2S\n"}
+        ]
+      },
+      {
+        "hash": "6c51d8d13045395076908f7a85c17153a4520ac4",
+        "date": "2024-09-06 02:25:15 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-ripleys",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex 35b473bc..45b8b5e9 100644\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -2,23 +2,25 @@\n \n ![Table Preview](https://www.vpforums.org/index.php?s=d77dd11d3a10617da44805808363ef29&app=downloads&module=display&section=screenshot&record=114134&id=13043&full=1)\n \n-Author(s): [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n+Author: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n Version: 4.3.0 \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13043)\n \n DirectB2S\n \n-Authors: [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n+Author: [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n Version: 2.0.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/5067-ripleys-believe-it-or-not-stern-2003/)\n \n-ROM:\n-Version 3.20\n+ROM\n+\n+Version 3.20  \n Download [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=317)\n \n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n"}
+        ]
+      },
+      {
+        "hash": "c1b9ec6205e40931c685fb04cc63cae10db28569",
+        "date": "2024-09-01 19:43:12 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Instructions updates for vpx-ripleys",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex 0940ed7c..35b473bc 100644\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -2,7 +2,7 @@\n \n ![Table Preview](https://www.vpforums.org/index.php?s=d77dd11d3a10617da44805808363ef29&app=downloads&module=display&section=screenshot&record=114134&id=13043&full=1)\n \n-Author(s): jpsalas(https://www.vpforums.org/index.php?showuser=277)  \n+Author(s): [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n Version: 4.3.0 \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13043)\n \n@@ -16,7 +16,6 @@ ROM:\n Version 3.20\n Download [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=317)\n \n-\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1983-b84441e\n"}
+        ]
+      },
+      {
+        "hash": "8716e0b26b58bba5018781e881347a8155422727",
+        "date": "2024-08-31 17:58:28 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Various README fixes for vpx-ripleys",
+        "files": [
+          {"status": "M", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nindex df7ca877..0940ed7c 100644\n--- a/external/vpx-ripleys/README.md\n+++ b/external/vpx-ripleys/README.md\n@@ -14,7 +14,7 @@ Download: [VP Universe](https://vpuniverse.com/files/file/5067-ripleys-believe-i\n \n ROM:\n Version 3.20\n-Download (https://www.vpforums.org/index.php?app=downloads&showfile=317)\n+Download [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=317)\n \n \n ## Status \n@@ -29,5 +29,6 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-ripleys.elf\n - Download the table and directb2s versions listed above and copy them into this folder\n-- Rom file stays in zip folder, place zip file in vpx-ripleys/pinmame/roms\n-- \"I have traveled to the world's farthest corners and seen the most incredible things.\"\n\\ No newline at end of file\n+- Make sure (.vpx), and (.directb2s) files are all named the same\n+- Place ROM file (which remains as a .zip) into \"vpx-ripleys/pinmame/roms\"\n+- \"I have traveled to the world's farthest corners and seen the most incredible things.\"\n"}
+        ]
+      },
+      {
+        "hash": "04d39581a67cc56e21bd8be0f1576fd14d1b45ab",
+        "date": "2024-07-29 23:02:10 -0400",
+        "author": "Kaoticbpr",
+        "message": "adding vpx-Ripleys to the Repo\n\nRipley's Believe it or not testing complete and ready to be uploaded to the repo\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-ripleys/README.md", "diff": "diff --git a/external/vpx-ripleys/README.md b/external/vpx-ripleys/README.md\nnew file mode 100644\nindex 00000000..df7ca877\n--- /dev/null\n+++ b/external/vpx-ripleys/README.md\n@@ -0,0 +1,33 @@\n+# Ripley's Believe it or Not! (Stern 2004)\n+\n+![Table Preview](https://www.vpforums.org/index.php?s=d77dd11d3a10617da44805808363ef29&app=downloads&module=display&section=screenshot&record=114134&id=13043&full=1)\n+\n+Author(s): jpsalas(https://www.vpforums.org/index.php?showuser=277)  \n+Version: 4.3.0 \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13043)\n+\n+DirectB2S\n+\n+Authors: [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n+Version: 2.0.0  \n+Download: [VP Universe](https://vpuniverse.com/files/file/5067-ripleys-believe-it-or-not-stern-2003/)\n+\n+ROM:\n+Version 3.20\n+Download (https://www.vpforums.org/index.php?app=downloads&showfile=317)\n+\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-ripleys.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Rom file stays in zip folder, place zip file in vpx-ripleys/pinmame/roms\n+- \"I have traveled to the world's farthest corners and seen the most incredible things.\"\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-ripleys/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-ripleys/pinmame/cfg/.gitkeep b/external/vpx-ripleys/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-ripleys/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-ripleys/pinmame/ini/.gitkeep b/external/vpx-ripleys/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-ripleys/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-ripleys/pinmame/nvram/.gitkeep b/external/vpx-ripleys/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-ripleys/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-ripleys/pinmame/roms/.gitkeep b/external/vpx-ripleys/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-ripleys/vpx-ripleys.png"},
+          {"status": "A", "path": "external/vpx-ripleys/vpx-ripleys.xml", "diff": "diff --git a/external/vpx-ripleys/vpx-ripleys.xml b/external/vpx-ripleys/vpx-ripleys.xml\nnew file mode 100644\nindex 00000000..e00c6028\n--- /dev/null\n+++ b/external/vpx-ripleys/vpx-ripleys.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Ripley's Believe it or not</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

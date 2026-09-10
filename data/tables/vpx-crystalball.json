@@ -1,0 +1,54 @@
+{
+    "commit_count": 5,
+    "commits": [
+      {
+        "hash": "1dc7e9059d05774d4af757ef1fe7d1253117cfa2",
+        "date": "2026-09-09 21:30:53 -0400",
+        "author": "pointdablame",
+        "message": "More Launcher Art Updates (#2207)\n\nThis updates the following launchers to the new Legends Unchained logo: Aaron Spelling, Apache, Batman 66 (Original), Big Bang Bar, Black Knight, Black Knight 2000, Black Magic 4, Black Rose, James Bond, Cactus Canyon, Cat Burglars, Cenobite, Centaur, Centigrade 37, Chrono Trigger, Cirqus Voltaire, Cleopatra, Clock of Eternal Fog, Cosmic, Crystal Ball, Dark Crystal, Deadpool, Devil Riders, Diner, Dirty Harry, Tron Legacy, Doctor Who, Doom Eternal, DBZ Budokai, Drakor, Dune, D&D, Earthshaker, F-14 Tomcat, Fathom, Fifth Element, Fireball II, Firepower, Firepower II",
+        "files": [
+          {"status": "M", "path": "external/vpx-crystalball/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-crystalball/table.yml", "diff": "diff --git a/external/vpx-crystalball/table.yml b/external/vpx-crystalball/table.yml\nindex 7aadedb7..26beff9e 100644\n--- a/external/vpx-crystalball/table.yml\n+++ b/external/vpx-crystalball/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassBundled: true\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"28cdbcf86d55805903b6015cab45c10e\"\n-  - \"CE42703F838E830F34DD5A00EB44B02E\"\n+backglassChecksum: \"28cdbcf86d55805903b6015cab45c10e\"\n backglassNotes: \"Download the B2S available with VPX\"\n fps: 60\n tableNotes: \"Download version 6.0.0\"\n@@ -11,8 +8,5 @@ tableVPSId: \"H9itrq1vOS\"\n tagline: \"¡Final Partida!\"\n testers:\n   - \"Curt\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"40ef4e8ef3781de50e2aa5fe8f7db2c8\"\n-  - \"54DFBB154D9E3A506004BBCC4EFB033D\"\n+vpxChecksum: \"40ef4e8ef3781de50e2aa5fe8f7db2c8\"\n vpxVPSId: \"XlkcKBd1vm\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-crystalball/table.yml", "diff": "diff --git a/external/vpx-crystalball/table.yml b/external/vpx-crystalball/table.yml\nindex 26beff9e..7aadedb7 100644\n--- a/external/vpx-crystalball/table.yml\n+++ b/external/vpx-crystalball/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassBundled: true\n-backglassChecksum: \"28cdbcf86d55805903b6015cab45c10e\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"28cdbcf86d55805903b6015cab45c10e\"\n+  - \"CE42703F838E830F34DD5A00EB44B02E\"\n backglassNotes: \"Download the B2S available with VPX\"\n fps: 60\n tableNotes: \"Download version 6.0.0\"\n@@ -8,5 +11,8 @@ tableVPSId: \"H9itrq1vOS\"\n tagline: \"¡Final Partida!\"\n testers:\n   - \"Curt\"\n-vpxChecksum: \"40ef4e8ef3781de50e2aa5fe8f7db2c8\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"40ef4e8ef3781de50e2aa5fe8f7db2c8\"\n+  - \"54DFBB154D9E3A506004BBCC4EFB033D\"\n vpxVPSId: \"XlkcKBd1vm\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-crystalball/table.yml", "diff": "diff --git a/external/vpx-crystalball/table.yml b/external/vpx-crystalball/table.yml\nindex 22ec15de..26beff9e 100644\n--- a/external/vpx-crystalball/table.yml\n+++ b/external/vpx-crystalball/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes:\n-  - \"bass\"\n backglassBundled: true\n backglassChecksum: \"28cdbcf86d55805903b6015cab45c10e\"\n backglassNotes: \"Download the B2S available with VPX\"\n@@ -11,4 +9,4 @@ tagline: \"¡Final Partida!\"\n testers:\n   - \"Curt\"\n vpxChecksum: \"40ef4e8ef3781de50e2aa5fe8f7db2c8\"\n-vpxVPSId: \"MzE5Y6Cqhi\"\n+vpxVPSId: \"XlkcKBd1vm\""}
+        ]
+      },
+      {
+        "hash": "756174ccaed156eb3d1156a9857491487abd698e",
+        "date": "2026-06-19 14:58:03 -0500",
+        "author": "Old-Cyrus",
+        "message": "Adding 'Crystal-Ball'\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-crystalball/README.md", "diff": "diff --git a/external/vpx-crystalball/README.md b/external/vpx-crystalball/README.md\nnew file mode 100644\nindex 00000000..f8bc50dc\n--- /dev/null\n+++ b/external/vpx-crystalball/README.md\n@@ -0,0 +1,33 @@\n+# Crystal-Ball (Talleres del Llobregat 1970)\n+\n+![Table Preview](../../images/MzE5Y6Cqhi-preview.jpg)\n+\n+---\n+\n+## Files\n+| File Type | Link | Version | Author(s) | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [vpuniverse](https://vpuniverse.com/files/file/20408-crystal-ball-talleres-del-llobregat-1970-jp-vpx8-vr-mr-ext2k/) | 1.0.0 | Ext2k, JPSalas |\n+| **B2S** | [vpuniverse](https://vpuniverse.com/files/file/20408-crystal-ball-talleres-del-llobregat-1970-jp-vpx8-vr-mr-ext2k/) | 1.0.0 | Ext2k, JPSalas |\n+| **ROM** | [N/A](#) | N/A | N/A |\n+| **SERUM** | [N/A](#) | N/A | N/A |\n+| **PUPPACK** | [N/A](#) | N/A | N/A |\n+\n+**Tested by:** Curt\n+\n+---\n+\n+## Status \n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ❌ | ❌ | ❌ | 60 |\n+\n+---\n+\n+## Instructions\n+\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+- ¡Final Partida!"},
+          {"status": "A", "path": "external/vpx-crystalball/dmd.png"},
+          {"status": "A", "path": "external/vpx-crystalball/launcher.png"},
+          {"status": "A", "path": "external/vpx-crystalball/table.ini", "diff": "diff --git a/external/vpx-crystalball/table.ini b/external/vpx-crystalball/table.ini\nnew file mode 100644\nindex 00000000..20b1ab13\n--- /dev/null\n+++ b/external/vpx-crystalball/table.ini\n@@ -0,0 +1,20 @@\n+[Player]\n+OverrideTableEmissionScale = 0\n+ScreenPlayerY = 0.00\n+MaxTexDimension = 3072\n+AAFactor = 0.95\n+FXAA = 1\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.130000\n+ViewCabScaleY = 1.130000\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -110.000000\n+ViewCabWindowTop = 325.541931\n+ViewCabWindowBot = 83.953270\n+\n+[Standalone]\n+BackBufferScale = 0.416666\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-crystalball/table.yml", "diff": "diff --git a/external/vpx-crystalball/table.yml b/external/vpx-crystalball/table.yml\nnew file mode 100644\nindex 00000000..22ec15de\n--- /dev/null\n+++ b/external/vpx-crystalball/table.yml\n@@ -0,0 +1,14 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassBundled: true\n+backglassChecksum: \"28cdbcf86d55805903b6015cab45c10e\"\n+backglassNotes: \"Download the B2S available with VPX\"\n+fps: 60\n+tableNotes: \"Download version 6.0.0\"\n+tableVPSId: \"H9itrq1vOS\"\n+tagline: \"¡Final Partida!\"\n+testers:\n+  - \"Curt\"\n+vpxChecksum: \"40ef4e8ef3781de50e2aa5fe8f7db2c8\"\n+vpxVPSId: \"MzE5Y6Cqhi\"\n"}
+        ]
+      }
+    ]
+}

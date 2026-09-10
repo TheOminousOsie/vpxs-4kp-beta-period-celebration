@@ -1,0 +1,54 @@
+{
+    "commit_count": 5,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-jpslimer/table.yml", "diff": "diff --git a/external/vpx-jpslimer/table.yml b/external/vpx-jpslimer/table.yml\nindex cf23d2e3..465caadb 100644\n--- a/external/vpx-jpslimer/table.yml\n+++ b/external/vpx-jpslimer/table.yml\n@@ -1,16 +1,10 @@\n ---\n tableVPSId: \"4Rkn0Owa\"\n vpxVPSId: \"BQ_20OCc\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"63C749DC6E2B1158BF3E9DB81180D115\"\n-  - \"3076ED2C66BFAEF4086434BA74D9A63D\"\n+vpxChecksum: \"63C749DC6E2B1158BF3E9DB81180D115\"\n tableNotes: \"Download 'JPs Ghostbusters Slimer v602.zip'\"\n backglassVPSId: \"oPS8YWqV\"\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"1fa5ca526a3e88c878fbb89e4d356ad4\"\n-  - \"53C866CB8BE797EDD4FE0F237107D455\"\n+backglassChecksum: \"1fa5ca526a3e88c878fbb89e4d356ad4\"\n backglassNotes: \"Download 'JP Ghostbusters Slimer.rar'\"\n backglassAuthorsOverride:\n   - \"hauntfreaks\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-jpslimer/table.yml", "diff": "diff --git a/external/vpx-jpslimer/table.yml b/external/vpx-jpslimer/table.yml\nindex 465caadb..cf23d2e3 100644\n--- a/external/vpx-jpslimer/table.yml\n+++ b/external/vpx-jpslimer/table.yml\n@@ -1,10 +1,16 @@\n ---\n tableVPSId: \"4Rkn0Owa\"\n vpxVPSId: \"BQ_20OCc\"\n-vpxChecksum: \"63C749DC6E2B1158BF3E9DB81180D115\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"63C749DC6E2B1158BF3E9DB81180D115\"\n+  - \"3076ED2C66BFAEF4086434BA74D9A63D\"\n tableNotes: \"Download 'JPs Ghostbusters Slimer v602.zip'\"\n backglassVPSId: \"oPS8YWqV\"\n-backglassChecksum: \"1fa5ca526a3e88c878fbb89e4d356ad4\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"1fa5ca526a3e88c878fbb89e4d356ad4\"\n+  - \"53C866CB8BE797EDD4FE0F237107D455\"\n backglassNotes: \"Download 'JP Ghostbusters Slimer.rar'\"\n backglassAuthorsOverride:\n   - \"hauntfreaks\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-jpslimer/table.ini", "diff": "diff --git a/external/vpx-jpslimer/table.ini b/external/vpx-jpslimer/table.ini\nindex fb5f2f6f..66433ebc 100644\n--- a/external/vpx-jpslimer/table.ini\n+++ b/external/vpx-jpslimer/table.ini\n@@ -5,18 +5,15 @@ ScreenPlayerZ = 100.101227\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.243982\n-ViewCabScaleY = 1.047007\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.214842\n+ViewCabScaleY = 0.980054\n+ViewCabScaleZ = 0.940278\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.016498\n-ViewCabVOfs = -38.109917\n-ViewCabWindowTop = 512.074097\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 392.281097\n ViewCabWindowBot = 90.770432\n \n-;[Standalone]\n-;BackBufferScale = 0.416666\n-\n [TableOption]\n Select LUT = 0.000000\n DMD Type = 1.000000\n@@ -26,4 +23,4 @@ Side Blades = 1.000000\n Balls per Game = 0.000000\n Free Play = 1.000000\n Music = 1.000000\n-Music Volume = 0.300000\n\\ No newline at end of file\n+Music Volume = 0.300000"}
+        ]
+      },
+      {
+        "hash": "51c00d0fcd9990a79cba74acd640e1f29066a18b",
+        "date": "2025-11-24 13:33:22 -0500",
+        "author": "evilwraith",
+        "message": "JP's Slimer version update\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-jpslimer/table.yml", "diff": "diff --git a/external/vpx-jpslimer/table.yml b/external/vpx-jpslimer/table.yml\nindex fb1caa32..465caadb 100644\n--- a/external/vpx-jpslimer/table.yml\n+++ b/external/vpx-jpslimer/table.yml\n@@ -1,8 +1,8 @@\n ---\n tableVPSId: \"4Rkn0Owa\"\n vpxVPSId: \"BQ_20OCc\"\n-vpxChecksum: \"0DBE2AF8F2C3B685A5690139AB80EB48\"\n-tableNotes: \"Download 'JPs Ghostbusters Slimer v601.zip'\"\n+vpxChecksum: \"63C749DC6E2B1158BF3E9DB81180D115\"\n+tableNotes: \"Download 'JPs Ghostbusters Slimer v602.zip'\"\n backglassVPSId: \"oPS8YWqV\"\n backglassChecksum: \"1fa5ca526a3e88c878fbb89e4d356ad4\"\n backglassNotes: \"Download 'JP Ghostbusters Slimer.rar'\"\n"}
+        ]
+      },
+      {
+        "hash": "52992572392988a85dd58d359ed3c38dc6d5b25a",
+        "date": "2025-10-25 19:19:41 -0400",
+        "author": "evilwraith",
+        "message": "Wizard omnibus update\n\nRenamed several of JPSalas' tables specifically named JP's <tablename> to reduce confusion and unify naming.\n\nvpx-avengersclassic to vpx-jpavengersclassic\nvpx-ironman2jp to vpx-jpironman2\nvpx-slimerjp to vpx-jpslimer\nvpx-startreklejp to vpx-jpstartrekle\nvpx-t2jp to vpx-jpt2\n\nUpdated BigBang Bar SERUM to v2\nUpdated JP's Avengers Classic to 6.0.0\nUpdated Bram Stoker's Dracula to 3.0\n",
+        "files": [
+          {"status": "R-to", "path": "external/vpx-slimerjp/README.md->external/vpx-jpslimer/README.md", "diff": "diff --git a/external/vpx-slimerjp/README.md b/external/vpx-jpslimer/README.md\nsimilarity index 100%\nrename from external/vpx-slimerjp/README.md\nrename to external/vpx-jpslimer/README.md"},
+          {"status": "R-to", "path": "external/vpx-slimerjp/VPReg.ini->external/vpx-jpslimer/VPReg.ini", "diff": "diff --git a/external/vpx-slimerjp/VPReg.ini b/external/vpx-jpslimer/VPReg.ini\nsimilarity index 100%\nrename from external/vpx-slimerjp/VPReg.ini\nrename to external/vpx-jpslimer/VPReg.ini"},
+          {"status": "R-to", "path": "external/vpx-slimerjp/launcher.png->external/vpx-jpslimer/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-slimerjp/table.ini->external/vpx-jpslimer/table.ini", "diff": "diff --git a/external/vpx-slimerjp/table.ini b/external/vpx-jpslimer/table.ini\nsimilarity index 100%\nrename from external/vpx-slimerjp/table.ini\nrename to external/vpx-jpslimer/table.ini"},
+          {"status": "R-to", "path": "external/vpx-slimerjp/table.yml->external/vpx-jpslimer/table.yml", "diff": "diff --git a/external/vpx-slimerjp/table.yml b/external/vpx-jpslimer/table.yml\nsimilarity index 100%\nrename from external/vpx-slimerjp/table.yml\nrename to external/vpx-jpslimer/table.yml"}
+        ]
+      }
+    ]
+}

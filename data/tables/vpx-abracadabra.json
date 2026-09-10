@@ -1,0 +1,167 @@
+{
+    "commit_count": 16,
+    "commits": [
+      {
+        "hash": "3c7c6e753b37af30b80e87e2c57d698afab88003",
+        "date": "2026-09-06 22:26:14 -0400",
+        "author": "pointdablame",
+        "message": "Launchers - logo update\n\nThis updates the following launchers to the new Legends Unchained Logo:  123, 24, 250cc Abra Ca Dabra, Ace High, Alaska, Ali, Ali JPs, Alice 1948, Alien Poker, Aliens Alien Star, Adventures of Rocky and Bullwinkle, The Addams Family\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-abracadabra/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f8c4eaf5866e51161d0285e15411516c7ba5cc8c",
+        "date": "2026-08-05 14:37:52 -0400",
+        "author": "evilwraith",
+        "message": "Abra Ca Dabra updates\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-abracadabra/table.yml", "diff": "diff --git a/external/vpx-abracadabra/table.yml b/external/vpx-abracadabra/table.yml\nnew file mode 100644\nindex 00000000..54f62d23\n--- /dev/null\n+++ b/external/vpx-abracadabra/table.yml\n@@ -0,0 +1,14 @@\n+---\n+backglassChecksum: \"6612F824930E70199AA5387334E65486\"\n+backglassNotes: \"Download Version 1.0\"\n+backglassVPSId: \"hrkNeksvoF\"\n+fps: 60\n+tableNotes: \"Download version 8.0\"\n+tableVPSId: \"OmWHC8EW\"\n+tagline: \"Abra Ca Dabra, B!\"\n+testers:\n+  - \"Boris\"\n+  - \"Curt\"\n+tutorialVPSId: \"e8yfmtuTNQ\"\n+vpxChecksum: \"6CADB785E85635B4406407FD8DF31A9E\"\n+vpxVPSId: \"VcgDWPC7\"\n"},
+          {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex 4a2aea97..9f939f0f 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -1,33 +1,30 @@\n-﻿# Abra Ca Dabra (Gottlieb 1975)\n+# Abra Ca Dabra (Gottlieb 1975)\n \n-![Table Preview](../../images/vpx-abracadabra.png)\n+![Table Preview](../../images/VcgDWPC7-preview.webp)\n \n ---\n \n ## Files\n-| File Type | Link | Version | Author |\n-|:---------:|:----:|:-------:|:------:|\n-| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13283) | 1.1 | [Batch](https://www.vpforums.org/index.php?showuser=30858) |\n-| B2S | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13216) | 1.0 | [hauntfreaks](https://www.vpforums.org/index.php?showuser=73849) |\n-| DMD | N/A | N/A | N/A |\n-| ROM | N/A | N/A | N/A |\n+| File Type | Link | Version | Author(s) | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=13283) | 8.0 | Batch, Pinuck, BorgDog |\n+| **B2S** | [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=13216) | 1.0 | HauntFreaks |\n \n-**Tested by:** [Boris]\n+**Tested by:** Boris, Curt\n \n ---\n \n ## Status \n-**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 49 |\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ❌ | ❌ | ❌ | 60 |\n \n ---\n \n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information can be found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- \"Abra Ca Dabra, B! \"\n-\n+- \"Abra Ca Dabra, B!\""},
+          {"status": "M", "path": "external/vpx-abracadabra/table.ini", "diff": "diff --git a/external/vpx-abracadabra/table.ini b/external/vpx-abracadabra/table.ini\nindex dccfd7a6..bcfc4e45 100644\n--- a/external/vpx-abracadabra/table.ini\n+++ b/external/vpx-abracadabra/table.ini\n@@ -1,37 +1,10 @@\n-[Player]\n-BallTrailStrength = 0.392157\n-AlphaRampAccuracy = 10\n-OverrideTableEmissionScale = 0\n-\n [TableOverride]\n-ViewDTLookAt = 50.000000\n-ViewDTFOV = 36.000000\n-ViewDTLayback = 0.000000\n-ViewDTRotation = 0.000000\n-ViewDTScaleX = 1.000000\n-ViewDTScaleY = 1.000000\n-ViewDTScaleZ = 1.000000\n-ViewDTPlayerX = 0.000000\n-ViewDTPlayerY = 0.000000\n-ViewDTPlayerZ = -250.000000\n-ViewCabLookAt = 2.315498\n-ViewCabFOV = 26.000000\n-ViewCabLayback = 76.000000\n-ViewCabRotation = 90.000000\n-ViewCabScaleX = 0.900000\n-ViewCabScaleY = 1.050000\n-ViewCabScaleZ = 1.000000\n-ViewCabPlayerX = -10.201999\n-ViewCabPlayerY = 0.000000\n-ViewCabPlayerZ = -371.050018\n-ViewFSSLookAt = 54.000000\n-ViewFSSFOV = 32.000000\n-ViewFSSLayback = 0.000000\n-ViewFSSRotation = 180.000000\n-ViewFSSScaleX = 1.130000\n-ViewFSSScaleY = 1.130000\n-ViewFSSScaleZ = 1.000000\n-ViewFSSPlayerX = 0.000000\n-ViewFSSPlayerY = 0.000000\n-ViewFSSPlayerZ = 0.000000\n-ViewCabMode = 0\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.07725\n+ViewCabScaleY = 1.019094\n+ViewCabScaleZ = 1.0\n+ViewCabRotation = 180.0\n+ViewCabHOfs = 0.0\n+ViewCabVOfs = 0.0175\n+ViewCabWindowTop = 60.488689\n+ViewCabWindowBot = 61.315472"}
+        ]
+      },
+      {
+        "hash": "fea6ea48f1bcafe489a0e38c0b71310819839754",
+        "date": "2026-08-04 18:40:02 -0400",
+        "author": "evilwraith",
+        "message": "Update AbraCaDabra art\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-abracadabra/dmd.png"},
+          {"status": "M", "path": "external/vpx-abracadabra/launcher.png"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex 806a2207..4a2aea97 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -1,4 +1,4 @@\n-# Abra Ca Dabra (Gottlieb 1975)\n+﻿# Abra Ca Dabra (Gottlieb 1975)\n \n ![Table Preview](../../images/vpx-abracadabra.png)\n \n@@ -27,7 +27,7 @@\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Abra Ca Dabra, B! \"\n "}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex 52ed6469..806a2207 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -26,8 +26,8 @@\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Abra Ca Dabra, B! \"\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex 87124e6b..52ed6469 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -25,4 +25,9 @@\n ---\n \n ## Instructions\n+\n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Abra Ca Dabra, B! \"\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex c00ebf60..87124e6b 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -25,8 +25,4 @@\n ---\n \n ## Instructions\n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-abracadabra.elf\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-abracadabra\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n - \"Abra Ca Dabra, B! \""}
+        ]
+      },
+      {
+        "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
+        "date": "2025-03-19 14:01:02 -0500",
+        "author": "MoxAssault",
+        "message": "Large README Updates\n\n46 README Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex 5d9450a1..c00ebf60 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -2,28 +2,29 @@\n \n ![Table Preview](../../images/vpx-abracadabra.png)\n \n-Authors: [Batch](https://www.vpforums.org/index.php?showuser=30858)  \n-Version: 1.1  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13283)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13283) | 1.1 | [Batch](https://www.vpforums.org/index.php?showuser=30858) |\n+| B2S | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13216) | 1.0 | [hauntfreaks](https://www.vpforums.org/index.php?showuser=73849) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | N/A | N/A | N/A |\n \n-Authors: [hauntfreaks](https://www.vpforums.org/index.php?showuser=73849)  \n-Version 1.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13216) \n+**Tested by:** [Boris]\n \n-Tested by: Boris\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 49 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-abracadabra.elf\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-abracadabra"}
+        ]
+      },
+      {
+        "hash": "3c477066d5f42047d6243f2876b8c9b3310213a6",
+        "date": "2025-03-19 10:04:31 -0400",
+        "author": "Brandon",
+        "message": "Delete external/vpx-abracadabra/table.yml",
+        "files": [
+          {"status": "D", "path": "external/vpx-abracadabra/table.yml", "diff": "diff --git a/external/vpx-abracadabra/table.yml b/external/vpx-abracadabra/table.yml\ndeleted file mode 100644\nindex 58d7afa8..00000000\n--- a/external/vpx-abracadabra/table.yml\n+++ /dev/null\n@@ -1,6 +0,0 @@\n----\n-tableVPSId: FDc21ZJEP9\n-vpxVPSId: TOF-LubuVs\n-backglassVPSId: NZXXtTMgoJ\n-romVPSId: \n-coloredROMVPSId:\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "9570e31c7e62f6f1178a35db3eef82051dab78e9",
+        "date": "2025-03-18 17:36:20 -0300",
+        "author": "Bla1ze",
+        "message": "Launcher Image Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-abracadabra/launcher.png"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-abracadabra/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-abracadabra/pinmame/cfg/.gitkeep b/external/vpx-abracadabra/pinmame/cfg/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-abracadabra/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-abracadabra/pinmame/ini/.gitkeep b/external/vpx-abracadabra/pinmame/ini/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-abracadabra/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-abracadabra/pinmame/nvram/.gitkeep b/external/vpx-abracadabra/pinmame/nvram/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-abracadabra/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-abracadabra/pinmame/roms/.gitkeep b/external/vpx-abracadabra/pinmame/roms/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-abracadabra/vpx-abracadabra.xml", "diff": "diff --git a/external/vpx-abracadabra/vpx-abracadabra.xml b/external/vpx-abracadabra/vpx-abracadabra.xml\ndeleted file mode 100755\nindex c7a665f6..00000000\n--- a/external/vpx-abracadabra/vpx-abracadabra.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Abra Ca Dabra (Gottlieb 1975)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini->external/vpx-abracadabra/table.ini", "diff": "diff --git a/external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini b/external/vpx-abracadabra/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini\nrename to external/vpx-abracadabra/table.ini"},
+          {"status": "R-from", "path": "external/vpx-abracadabra/vpx-abracadabra.png->external/vpx-abracadabra/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini->external/vpx-abracadabra/table.ini", "diff": "diff --git a/external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini b/external/vpx-abracadabra/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini\nrename to external/vpx-abracadabra/table.ini"},
+          {"status": "R-to", "path": "external/vpx-abracadabra/vpx-abracadabra.png->external/vpx-abracadabra/launcher.png"}
+        ]
+      },
+      {
+        "hash": "a20c28c275f2751f2109b5f182efb45e918c8d8b",
+        "date": "2025-02-26 14:31:51 -0500",
+        "author": "Brandon",
+        "message": "Add yml for smattering of tables\n\nBig Horse\nBig Indian\nBig Trouble\nBig Star\n250cc\n301 Bullseye\n4 Aces\nAce High\nAlice In Wonderland\nAli JP\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-abracadabra/table.yml", "diff": "diff --git a/external/vpx-abracadabra/table.yml b/external/vpx-abracadabra/table.yml\nnew file mode 100644\nindex 00000000..58d7afa8\n--- /dev/null\n+++ b/external/vpx-abracadabra/table.yml\n@@ -0,0 +1,6 @@\n+---\n+tableVPSId: FDc21ZJEP9\n+vpxVPSId: TOF-LubuVs\n+backglassVPSId: NZXXtTMgoJ\n+romVPSId: \n+coloredROMVPSId:\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "30af48fd4f9bccf84b667a750f42ce3a10f74cf8",
+        "date": "2025-02-23 08:41:48 -0500",
+        "author": "Brandon",
+        "message": "Fix image path abracadabra",
+        "files": [
+          {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex 6194f2c4..5d9450a1 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -1,6 +1,6 @@\n # Abra Ca Dabra (Gottlieb 1975)\n \n-![Table Preview](../../vpx-abracadabra.png)\n+![Table Preview](../../images/vpx-abracadabra.png)\n \n Authors: [Batch](https://www.vpforums.org/index.php?showuser=30858)  \n Version: 1.1  \n"}
+        ]
+      },
+      {
+        "hash": "1f02914d05b9785f64382a82076c6960ebfed237",
+        "date": "2025-02-21 15:26:53 -0500",
+        "author": "Brandon",
+        "message": "Add preview images to repo and update readmes\n\nTables affected:\nvpx-\nabracadabra\ncapersville\ncountdownjp\npirategold\nwhoanellie\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex 0a0c622f..6194f2c4 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -1,6 +1,6 @@\n # Abra Ca Dabra (Gottlieb 1975)\n \n-![Table Preview](https://github.com/BorisUndead/vpx-images/blob/main/vpx-abracadabra.png)\n+![Table Preview](../../vpx-abracadabra.png)\n \n Authors: [Batch](https://www.vpforums.org/index.php?showuser=30858)  \n Version: 1.1  "}
+        ]
+      },
+      {
+        "hash": "d8c468a797680f17f675f21015135b28ebe1f591",
+        "date": "2025-01-14 02:57:21 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-abracadabra",
+        "files": [
+          {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex f29e5558..0a0c622f 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -8,8 +8,8 @@ Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=\n \n DirectB2S\n \n-Authors: [hauntfreaks](https://www.vpforums.org/index.php?showuser=73849)\n-Version 1.0\n+Authors: [hauntfreaks](https://www.vpforums.org/index.php?showuser=73849)  \n+Version 1.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13216) \n \n Tested by: Boris\n"}
+        ]
+      },
+      {
+        "hash": "42d1afd80c0374c47fbc084efa10be6aec010ad9",
+        "date": "2025-01-13 12:47:49 -0500",
+        "author": "Brandon",
+        "message": "Add vpx-abracadabra\n\nAdd vpx-abracadabra table and update rootme Readme\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini", "diff": "diff --git a/external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini b/external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini\nnew file mode 100755\nindex 00000000..dccfd7a6\n--- /dev/null\n+++ b/external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini\t\n@@ -0,0 +1,37 @@\n+[Player]\n+BallTrailStrength = 0.392157\n+AlphaRampAccuracy = 10\n+OverrideTableEmissionScale = 0\n+\n+[TableOverride]\n+ViewDTLookAt = 50.000000\n+ViewDTFOV = 36.000000\n+ViewDTLayback = 0.000000\n+ViewDTRotation = 0.000000\n+ViewDTScaleX = 1.000000\n+ViewDTScaleY = 1.000000\n+ViewDTScaleZ = 1.000000\n+ViewDTPlayerX = 0.000000\n+ViewDTPlayerY = 0.000000\n+ViewDTPlayerZ = -250.000000\n+ViewCabLookAt = 2.315498\n+ViewCabFOV = 26.000000\n+ViewCabLayback = 76.000000\n+ViewCabRotation = 90.000000\n+ViewCabScaleX = 0.900000\n+ViewCabScaleY = 1.050000\n+ViewCabScaleZ = 1.000000\n+ViewCabPlayerX = -10.201999\n+ViewCabPlayerY = 0.000000\n+ViewCabPlayerZ = -371.050018\n+ViewFSSLookAt = 54.000000\n+ViewFSSFOV = 32.000000\n+ViewFSSLayback = 0.000000\n+ViewFSSRotation = 180.000000\n+ViewFSSScaleX = 1.130000\n+ViewFSSScaleY = 1.130000\n+ViewFSSScaleZ = 1.000000\n+ViewFSSPlayerX = 0.000000\n+ViewFSSPlayerY = 0.000000\n+ViewFSSPlayerZ = 0.000000\n+ViewCabMode = 0\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nnew file mode 100755\nindex 00000000..f29e5558\n--- /dev/null\n+++ b/external/vpx-abracadabra/README.md\n@@ -0,0 +1,31 @@\n+# Abra Ca Dabra (Gottlieb 1975)\n+\n+![Table Preview](https://github.com/BorisUndead/vpx-images/blob/main/vpx-abracadabra.png)\n+\n+Authors: [Batch](https://www.vpforums.org/index.php?showuser=30858)  \n+Version: 1.1  \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13283)\n+\n+DirectB2S\n+\n+Authors: [hauntfreaks](https://www.vpforums.org/index.php?showuser=73849)\n+Version 1.0\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13216) \n+\n+Tested by: Boris\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 49 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-abracadabra.elf\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-abracadabra\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n+- \"Abra Ca Dabra, B! \""},
+          {"status": "A", "path": "external/vpx-abracadabra/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-abracadabra/pinmame/cfg/.gitkeep b/external/vpx-abracadabra/pinmame/cfg/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-abracadabra/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-abracadabra/pinmame/ini/.gitkeep b/external/vpx-abracadabra/pinmame/ini/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-abracadabra/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-abracadabra/pinmame/nvram/.gitkeep b/external/vpx-abracadabra/pinmame/nvram/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-abracadabra/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-abracadabra/pinmame/roms/.gitkeep b/external/vpx-abracadabra/pinmame/roms/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-abracadabra/vpx-abracadabra.png"},
+          {"status": "A", "path": "external/vpx-abracadabra/vpx-abracadabra.xml", "diff": "diff --git a/external/vpx-abracadabra/vpx-abracadabra.xml b/external/vpx-abracadabra/vpx-abracadabra.xml\nnew file mode 100755\nindex 00000000..c7a665f6\n--- /dev/null\n+++ b/external/vpx-abracadabra/vpx-abracadabra.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Abra Ca Dabra (Gottlieb 1975)</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

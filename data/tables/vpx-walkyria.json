@@ -1,0 +1,90 @@
+{
+    "commit_count": 9,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-walkyria/table.yml", "diff": "diff --git a/external/vpx-walkyria/table.yml b/external/vpx-walkyria/table.yml\nindex b6b53c70..b709a111 100644\n--- a/external/vpx-walkyria/table.yml\n+++ b/external/vpx-walkyria/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"AA96857C96C85072BB20580261B5EB4A\"\n-  - \"5D8BBE8E49B760CFECC3E01B15580D39\"\n+backglassChecksum: \"AA96857C96C85072BB20580261B5EB4A\"\n backglassVPSId: \"HdSynapg\"\n fps: 60\n romChecksum: \"3BBE56AF04DDE85B31491CFB4077EDE3\"\n@@ -12,8 +9,5 @@ tagline: \"'WE RIDE!'\"\n testers:\n   - \"evilwraith\"\n   - \"CoffeeAtJoes\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"C17A4C9087BCC5DA8FACEF776D82ED37\"\n-  - \"E9F4EE8A35A94BA181E29F81CBB6C18E\"\n+vpxChecksum: \"C17A4C9087BCC5DA8FACEF776D82ED37\"\n vpxVPSId: \"L0OZJWWk\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-walkyria/table.yml", "diff": "diff --git a/external/vpx-walkyria/table.yml b/external/vpx-walkyria/table.yml\nindex b709a111..b6b53c70 100644\n--- a/external/vpx-walkyria/table.yml\n+++ b/external/vpx-walkyria/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"AA96857C96C85072BB20580261B5EB4A\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"AA96857C96C85072BB20580261B5EB4A\"\n+  - \"5D8BBE8E49B760CFECC3E01B15580D39\"\n backglassVPSId: \"HdSynapg\"\n fps: 60\n romChecksum: \"3BBE56AF04DDE85B31491CFB4077EDE3\"\n@@ -9,5 +12,8 @@ tagline: \"'WE RIDE!'\"\n testers:\n   - \"evilwraith\"\n   - \"CoffeeAtJoes\"\n-vpxChecksum: \"C17A4C9087BCC5DA8FACEF776D82ED37\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"C17A4C9087BCC5DA8FACEF776D82ED37\"\n+  - \"E9F4EE8A35A94BA181E29F81CBB6C18E\"\n vpxVPSId: \"L0OZJWWk\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-walkyria/table.ini", "diff": "diff --git a/external/vpx-walkyria/table.ini b/external/vpx-walkyria/table.ini\nindex 43a2c85a..3fb72aeb 100644\n--- a/external/vpx-walkyria/table.ini\n+++ b/external/vpx-walkyria/table.ini\n@@ -8,6 +8,9 @@ ViewCabScaleY = 1.050068\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -46.723194\n+ViewCabVOfs = 0\n ViewCabWindowTop = 159.471008\n-ViewCabWindowBot = 85.967270\n\\ No newline at end of file\n+ViewCabWindowBot = 85.967270\n+\n+[Standalone]\n+PinMAMEWindow = 0\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-walkyria/table.yml", "diff": "diff --git a/external/vpx-walkyria/table.yml b/external/vpx-walkyria/table.yml\nindex 338b97ca..b709a111 100644\n--- a/external/vpx-walkyria/table.yml\n+++ b/external/vpx-walkyria/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes:\n-  - \"bass\"\n backglassChecksum: \"AA96857C96C85072BB20580261B5EB4A\"\n backglassVPSId: \"HdSynapg\"\n fps: 60"}
+        ]
+      },
+      {
+        "hash": "1747f64e37c732cfdd658993b5d9d1b089da3503",
+        "date": "2025-07-16 11:12:33 +0100",
+        "author": "OminousOsie",
+        "message": "Readmes\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-walkyria/README.md", "diff": "diff --git a/external/vpx-walkyria/README.md b/external/vpx-walkyria/README.md\nnew file mode 100644\nindex 00000000..d3bae39a\n--- /dev/null\n+++ b/external/vpx-walkyria/README.md\n@@ -0,0 +1,61 @@\n+# Walkyria (Joctronic 1986)\n+\n+![Table Preview](../../images/L0OZJWWk-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - evilwraith\n+  - CoffeeAtJoes\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Walkyria (Joctronic 1986)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"'WE RIDE!'\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-walkyria/table.yml", "diff": "diff --git a/external/vpx-walkyria/table.yml b/external/vpx-walkyria/table.yml\nindex b6dff2b4..338b97ca 100644\n--- a/external/vpx-walkyria/table.yml\n+++ b/external/vpx-walkyria/table.yml\n@@ -10,5 +10,6 @@ tableVPSId: \"cPtxPZvi\"\n tagline: \"'WE RIDE!'\"\n testers:\n   - \"evilwraith\"\n+  - \"CoffeeAtJoes\"\n vpxChecksum: \"C17A4C9087BCC5DA8FACEF776D82ED37\"\n vpxVPSId: \"L0OZJWWk\"\n"}
+        ]
+      },
+      {
+        "hash": "22b28b0312693056774fae0038f4c897e6a6f088",
+        "date": "2025-07-16 09:20:30 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed rom checksum\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-walkyria/table.yml", "diff": "diff --git a/external/vpx-walkyria/table.yml b/external/vpx-walkyria/table.yml\nindex 0b23f14a..b6dff2b4 100644\n--- a/external/vpx-walkyria/table.yml\n+++ b/external/vpx-walkyria/table.yml\n@@ -4,7 +4,7 @@ applyFixes:\n backglassChecksum: \"AA96857C96C85072BB20580261B5EB4A\"\n backglassVPSId: \"HdSynapg\"\n fps: 60\n-romChecksum: \"E29ED46FE6F46E1D66ECFBBF713E6E13\"\n+romChecksum: \"3BBE56AF04DDE85B31491CFB4077EDE3\"\n romVPSId: \"YRqE-V3V\"\n tableVPSId: \"cPtxPZvi\"\n tagline: \"'WE RIDE!'\"\n"}
+        ]
+      },
+      {
+        "hash": "81545654ac498c9b279830c67f4eb763aa385290",
+        "date": "2025-07-14 16:51:14 -0400",
+        "author": "evilwraith",
+        "message": "Updated launchers and dmds\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-walkyria/dmd.png"},
+          {"status": "M", "path": "external/vpx-walkyria/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f62edd824f5e1838a3244dae2a13f9b1bcce67bc",
+        "date": "2025-07-09 11:12:49 -0400",
+        "author": "evilwraith",
+        "message": "Fixed launcher names\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-walkyria/launcher.png"}
+        ]
+      },
+      {
+        "hash": "8f627a9546c37c9f99eb1415ac7299c210c55ef4",
+        "date": "2025-07-08 23:04:56 -0400",
+        "author": "evilwraith",
+        "message": "fixed the rom CRCs\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-walkyria/table.yml", "diff": "diff --git a/external/vpx-walkyria/table.yml b/external/vpx-walkyria/table.yml\nindex b6dff2b4..0b23f14a 100644\n--- a/external/vpx-walkyria/table.yml\n+++ b/external/vpx-walkyria/table.yml\n@@ -4,7 +4,7 @@ applyFixes:\n backglassChecksum: \"AA96857C96C85072BB20580261B5EB4A\"\n backglassVPSId: \"HdSynapg\"\n fps: 60\n-romChecksum: \"3BBE56AF04DDE85B31491CFB4077EDE3\"\n+romChecksum: \"E29ED46FE6F46E1D66ECFBBF713E6E13\"\n romVPSId: \"YRqE-V3V\"\n tableVPSId: \"cPtxPZvi\"\n tagline: \"'WE RIDE!'\"\n"}
+        ]
+      },
+      {
+        "hash": "cfa493ef1ce16c1fdaa62e0cd5cd4d7012978200",
+        "date": "2025-07-08 13:53:38 -0400",
+        "author": "evilwraith",
+        "message": "Walkyries\n\nWalkyrie (Joetronic 1986)\nWalkure (Original 2025)\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-walkyria/table.ini", "diff": "diff --git a/external/vpx-walkyria/table.ini b/external/vpx-walkyria/table.ini\nnew file mode 100644\nindex 00000000..43a2c85a\n--- /dev/null\n+++ b/external/vpx-walkyria/table.ini\n@@ -0,0 +1,13 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.169850\n+ViewCabScaleY = 1.050068\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -46.723194\n+ViewCabWindowTop = 159.471008\n+ViewCabWindowBot = 85.967270\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-walkyria/table.yml", "diff": "diff --git a/external/vpx-walkyria/table.yml b/external/vpx-walkyria/table.yml\nnew file mode 100644\nindex 00000000..b6dff2b4\n--- /dev/null\n+++ b/external/vpx-walkyria/table.yml\n@@ -0,0 +1,14 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassChecksum: \"AA96857C96C85072BB20580261B5EB4A\"\n+backglassVPSId: \"HdSynapg\"\n+fps: 60\n+romChecksum: \"3BBE56AF04DDE85B31491CFB4077EDE3\"\n+romVPSId: \"YRqE-V3V\"\n+tableVPSId: \"cPtxPZvi\"\n+tagline: \"'WE RIDE!'\"\n+testers:\n+  - \"evilwraith\"\n+vpxChecksum: \"C17A4C9087BCC5DA8FACEF776D82ED37\"\n+vpxVPSId: \"L0OZJWWk\"\n"}
+        ]
+      }
+    ]
+}

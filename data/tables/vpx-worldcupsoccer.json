@@ -1,0 +1,242 @@
+{
+    "commit_count": 24,
+    "commits": [
+      {
+        "hash": "4b09eb5e3aafa0af901a907c426cd90b9705ebf6",
+        "date": "2026-09-03 13:08:59 -0500",
+        "author": "dasme",
+        "message": "Adding The Amazing Spider-Man: Sinister Six Edition to Wizard + World Cup Soccer color rom & nvram fixes. (#2169)\n\n* Adding World Cup Soccer to Wizard\n\n* World Cup Soccer NVRAM fix + new POV\n\n* Added color ROM + fix low ROM volume\n\nAdded colored ROM support to the YML and updated the nvram file to have freeplay and better default audio.\n\n* Add The Amazing Spider-Man Sinister Six Edition to Wizard\n\n* Hook Backglass update\n\n* Add The Amazing Spider-Man Sinister Six Edition to Wizard\n\n* Update README.md\n\n* Adding new Art Team art to Spidey: Sinister Six\n\n* Small Spidey launcher.png update\n\n* Fixed link in .yml\n\n* Updated to Wraith's POV in table.ini\n\n---------\n\nCo-authored-by: evilwraith <evilwraith@gmail.com>",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/nvram.nv"},
+          {"status": "M", "path": "external/vpx-worldcupsoccer/table.yml", "diff": "diff --git a/external/vpx-worldcupsoccer/table.yml b/external/vpx-worldcupsoccer/table.yml\nindex 87be4cdb..b7a57a2e 100644\n--- a/external/vpx-worldcupsoccer/table.yml\n+++ b/external/vpx-worldcupsoccer/table.yml\n@@ -1,6 +1,8 @@\n ---\n backglassChecksum: \"EC2F3E5D46E6DBD279ED9667214A4B49\"\n backglassVPSId: \"0ol4Z2YIKN\"\n+coloredROMChecksum: \"A03CD176A07894A0969FBD0577F3607A\"\n+coloredROMVPSId: \"53WhN4BOwF\"\n fps: 60\n romChecksum: \"383F9C5D132E88F4BA2D784606BA0314\"\n romVPSId: \"W6yjp7tT\"\n"}
+        ]
+      },
+      {
+        "hash": "2b9a686c0ce91a3227ddbd4fadaae4c370c256f2",
+        "date": "2026-08-26 14:16:16 -0400",
+        "author": "evilwraith",
+        "message": "WCS updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/table.ini", "diff": "diff --git a/external/vpx-worldcupsoccer/table.ini b/external/vpx-worldcupsoccer/table.ini\nindex 98e50455..17199fcb 100644\n--- a/external/vpx-worldcupsoccer/table.ini\n+++ b/external/vpx-worldcupsoccer/table.ini\n@@ -2,12 +2,15 @@\n BallTrailStrength = 0.490196\n ForceAnisotropicFiltering = 1\n AAFactor = 1.000000\n-ForceBloomOff = 0\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.500000\n MusicVolume = 100\n SoundVolume = 100\n+ScreenPlayerY = 15.000000\n+ScreenPlayerZ = 90.000000\n+MaxTexDimension = 4096\n+ForceBloomOff = 0\n RaytracedBallShadows = 0\n Refraction = 0\n \n@@ -15,7 +18,7 @@ Refraction = 0\n 4kpVLMGIKeepPercent = 100\n 4kpVLMBakeBrightness = 1.000000\n BackBufferScale = 0.416666\n-POVLinkTableScaleXY = 1\n+POVLinkTableScaleXY = 0\n DMDDotTintPreset = 0\n DMDDotTintR = 255\n DMDDotTintG = 82\n@@ -30,13 +33,13 @@ DMDDotScale = 20\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.005000\n-ViewCabScaleY = 0.851259\n+ViewCabScaleX = 1.155000\n+ViewCabScaleY = 1.035000\n ViewCabScaleZ = 0.859642\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n ViewCabVOfs = 0.000000\n-ViewCabWindowTop = -96.340820\n-ViewCabWindowBot = -466.882812\n+ViewCabWindowTop = 218.619873\n+ViewCabWindowBot = 0.000000\n ToneMapper = 0\n Difficulty = 0.500000\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "a975ff70486420ba90e89284395d97165cf36e3c",
+        "date": "2026-08-26 13:01:43 -0500",
+        "author": "dasme",
+        "message": "Adding World Cup Soccer to Wizard (#2122)\n\n* Adding World Cup Soccer to Wizard\n\n* World Cup Soccer NVRAM fix + new POV",
+        "files": [
+          {"status": "A", "path": "external/vpx-worldcupsoccer/table.yml", "diff": "diff --git a/external/vpx-worldcupsoccer/table.yml b/external/vpx-worldcupsoccer/table.yml\nnew file mode 100644\nindex 00000000..87be4cdb\n--- /dev/null\n+++ b/external/vpx-worldcupsoccer/table.yml\n@@ -0,0 +1,14 @@\n+---\n+backglassChecksum: \"EC2F3E5D46E6DBD279ED9667214A4B49\"\n+backglassVPSId: \"0ol4Z2YIKN\"\n+fps: 60\n+romChecksum: \"383F9C5D132E88F4BA2D784606BA0314\"\n+romVPSId: \"W6yjp7tT\"\n+tableVPSId: \"GXsgeoz_\"\n+tagline: \"How did he make that save!?\"\n+testers:\n+  - \"psybocilin\"\n+  - \"Dasme\"\n+tutorialVPSId: \"LG7vDKZoGV\"\n+vpxChecksum: \"14396C6150F8459FDE3B78AD4C49EF97\"\n+vpxVPSId: \"x8o6jTGv\"\n"},
+          {"status": "M", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nindex d092a7ef..5549cd27 100644\n--- a/external/vpx-worldcupsoccer/README.md\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -1,43 +1,64 @@\n ﻿# World Cup Soccer (Bally 1994)\n \n-![Table Preview](../../images/vpx-worldcupsoccer-preview.jpg)\n+!\\[Table Preview](../../images/x8o6jTGv-preview.webp)\n \n----\n+<br>\n+\n+## \\*️⃣  Table Statistics\n+\n+|Backglass|DMD|ROM Required|Has Puppack|FPS|\n+|-|-|-|-|-|\n+|✅|✅|✅|❌|60|\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+\n+* psybocilin\n+* Dasme\n+\n+<br>\n+\n+\\---\n \n-## Files\n-| File Type | Link | Version | Author |\n-|:---------:|:----:|:-------:|:------:|\n-| VPX | [VP Universe](https://vpuniverse.com/files/file/10534-world-cup-soccer-bally-1994/) | 1.4 | [VPUStaff](https://vpuniverse.com/profile/50-vpustaff/content/?type=downloads_file) |\n-| B2S | [VP Universe](https://vpuniverse.com/files/file/4873-world-cup-soccer-bally-midway-1994/) | 1.0.0 - 2&3_scr_big_DMD.directb2s| [Blacksad](https://vpuniverse.com/profile/9127-blacksad/content/?type=downloads_file) |\n-| DMD | N/A | N/A | N/A |\n-| ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=296) | wcs_l2.zip | [destruk](https://www.vpforums.org/index.php?showuser=5) |\n+<br>\n \n-**Tested by:** [psybocilin]\n+## ❇️ Available in the Wizard! 🪄✨\n \n <br>\n \n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n-## ⚠️ Warning\n+### How to install:\n \n-There is a known bug on this table, if you soft plunge there is a chance the ball could \n-get stuck in the coin flip rail. It is recommended to always full plunge.\n+1. Open the **Table Manager**\n+2. Click the **Add Table** button\n+3. Select the **Wizard** tab\n+4. Find and select this table from the dropdown menu: **`World Cup Soccer (Bally 1994)`**\n+5. Follow the on-screen instructions to download and upload the required files\n+6. *\"How did he make that save!?\"*\n \n <br>\n \n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+***We hope you enjoy!!***\n+\n+*The VPXS 4KP Wizard team:*\n \n-## Status \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 32 |\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n \n----\n \n-## Instructions\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>\n \n-## Note \n-- Table file is listed as version 1.4 on download page but the vpx file in the downloaded .rar is version 1.5."},
+          {"status": "M", "path": "external/vpx-worldcupsoccer/launcher.png"},
+          {"status": "M", "path": "external/vpx-worldcupsoccer/nvram.nv"},
+          {"status": "M", "path": "external/vpx-worldcupsoccer/table.ini", "diff": "diff --git a/external/vpx-worldcupsoccer/table.ini b/external/vpx-worldcupsoccer/table.ini\nindex 442287bd..98e50455 100644\n--- a/external/vpx-worldcupsoccer/table.ini\n+++ b/external/vpx-worldcupsoccer/table.ini\n@@ -1,20 +1,42 @@\n [Player]\n BallTrailStrength = 0.490196\n-ScreenPlayerY = 21.303751\n-ScreenPlayerZ = 65.305420\n-ScreenWidth = 0.000000\n-ScreenHeight = 0.000000\n-ScreenInclination = 0.000000\n-MaxTexDimension = 3072\n-FXAA = 1\n+ForceAnisotropicFiltering = 1\n+AAFactor = 1.000000\n+ForceBloomOff = 0\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.500000\n+MusicVolume = 100\n+SoundVolume = 100\n+RaytracedBallShadows = 0\n+Refraction = 0\n+\n+[Standalone]\n+4kpVLMGIKeepPercent = 100\n+4kpVLMBakeBrightness = 1.000000\n+BackBufferScale = 0.416666\n+POVLinkTableScaleXY = 1\n+DMDDotTintPreset = 0\n+DMDDotTintR = 255\n+DMDDotTintG = 82\n+DMDDotTintB = 45\n+DMDDotSize = 0.750000\n+DMDDotSharpness = 0.900000\n+DMDDotBrightness = 1.000000\n+DMDDotUnlitColorR = 0\n+DMDDotUnlitColorG = 0\n+DMDDotUnlitColorB = 0\n+DMDDotScale = 20\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.235503\n-ViewCabScaleY = 1.169086\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.005000\n+ViewCabScaleY = 0.851259\n+ViewCabScaleZ = 0.859642\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = 0\n-ViewCabWindowTop = 357.925842\n-ViewCabWindowBot = 60.891216\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = -96.340820\n+ViewCabWindowBot = -466.882812\n+ToneMapper = 0\n+Difficulty = 0.500000\n\\ No newline at end of file"}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/table.ini", "diff": "diff --git a/external/vpx-worldcupsoccer/table.ini b/external/vpx-worldcupsoccer/table.ini\nindex 67486b10..442287bd 100644\n--- a/external/vpx-worldcupsoccer/table.ini\n+++ b/external/vpx-worldcupsoccer/table.ini\n@@ -15,6 +15,6 @@ ViewCabScaleY = 1.169086\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -35.293404\n+ViewCabVOfs = 0\n ViewCabWindowTop = 357.925842\n-ViewCabWindowBot = 60.891216\n\\ No newline at end of file\n+ViewCabWindowBot = 60.891216"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nindex 57e38737..d092a7ef 100644\n--- a/external/vpx-worldcupsoccer/README.md\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -1,4 +1,4 @@\n-# World Cup Soccer (Bally 1994)\n+﻿# World Cup Soccer (Bally 1994)\n \n ![Table Preview](../../images/vpx-worldcupsoccer-preview.jpg)\n \n@@ -36,7 +36,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n \n ## Note "}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nindex 9f5c031d..57e38737 100644\n--- a/external/vpx-worldcupsoccer/README.md\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -35,8 +35,8 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n \n ## Note "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nindex 101f7015..9f5c031d 100644\n--- a/external/vpx-worldcupsoccer/README.md\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -35,5 +35,9 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+\n ## Note \n - Table file is listed as version 1.4 on download page but the vpx file in the downloaded .rar is version 1.5."}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nindex 9b4d433e..101f7015 100644\n--- a/external/vpx-worldcupsoccer/README.md\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -34,11 +34,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ---\n \n ## Instructions\n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to `vpx-worldcupsoccer.elf`\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-worldcupsoccer` folder\n-- Place ROM zip file into `vpx-worldcupsoccer/pinmame/roms` folder. DO NOT UNZIP!\n-- Make sure `(.vpx)` `(.direct2b2s)` and `(.ini)` are all named the same.\n \n ## Note \n - Table file is listed as version 1.4 on download page but the vpx file in the downloaded .rar is version 1.5."}
+        ]
+      },
+      {
+        "hash": "eb21e04a80952aa3788cedac009ee5dc895a786e",
+        "date": "2025-04-08 22:40:50 +0100",
+        "author": "OminousOsie",
+        "message": "Style tweak\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nindex 383710d6..9b4d433e 100644\n--- a/external/vpx-worldcupsoccer/README.md\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -15,7 +15,6 @@\n **Tested by:** [psybocilin]\n \n <br>\n-<br>\n \n \n ## ⚠️ Warning\n@@ -25,7 +24,6 @@ get stuck in the coin flip rail. It is recommended to always full plunge.\n \n <br>\n \n----\n \n ## Status \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n"}
+        ]
+      },
+      {
+        "hash": "874a5137646a2d419f8890deaf2d8385bed33a1f",
+        "date": "2025-04-08 22:40:27 +0100",
+        "author": "OminousOsie",
+        "message": "tweak to style\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nindex 82a907c1..383710d6 100644\n--- a/external/vpx-worldcupsoccer/README.md\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -14,7 +14,8 @@\n \n **Tested by:** [psybocilin]\n \n----\n+<br>\n+<br>\n \n \n ## ⚠️ Warning\n"}
+        ]
+      },
+      {
+        "hash": "0261b4c82f64cfccb5a9396b44a8209967c44899",
+        "date": "2025-04-08 22:39:08 +0100",
+        "author": "OminousOsie",
+        "message": "Added warnings\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nindex 9f9eea00..82a907c1 100644\n--- a/external/vpx-worldcupsoccer/README.md\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -16,11 +16,13 @@\n \n ---\n \n-```diff\n-!   Warning: \n-!   There is a known bug on this table, if you soft plunge there is a chance the ball \n-!   could get stuck in the coin flip rail. It is recommended to always full plunge.\n-```\n+\n+## ⚠️ Warning\n+\n+There is a known bug on this table, if you soft plunge there is a chance the ball could \n+get stuck in the coin flip rail. It is recommended to always full plunge.\n+\n+<br>\n \n ---\n \n"}
+        ]
+      },
+      {
+        "hash": "588d52746a8c3ca0f0e538bfc2d1ba9d4e2e9e9f",
+        "date": "2025-03-31 19:04:35 +0100",
+        "author": "OminousOsie",
+        "message": "Moved warning to the right table\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nindex 4b4a9a56..9f9eea00 100644\n--- a/external/vpx-worldcupsoccer/README.md\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -16,6 +16,14 @@\n \n ---\n \n+```diff\n+!   Warning: \n+!   There is a known bug on this table, if you soft plunge there is a chance the ball \n+!   could get stuck in the coin flip rail. It is recommended to always full plunge.\n+```\n+\n+---\n+\n ## Status \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n"}
+        ]
+      },
+      {
+        "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
+        "date": "2025-03-19 14:01:02 -0500",
+        "author": "MoxAssault",
+        "message": "Large README Updates\n\n46 README Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nindex 6c9af70a..4b4a9a56 100644\n--- a/external/vpx-worldcupsoccer/README.md\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -5,17 +5,14 @@\n ---\n \n ## Files\n-| File Type | Link | Version | Author | \n-|-----------|--------|----------|--------------|\n-| **VPX** | [VP Universe](https://vpuniverse.com/files/file/10534-world-cup-soccer-bally-1994/) | 1.4 | [VPUStaff](https://vpuniverse.com/profile/50-vpustaff/content/?type=downloads_file) |\n-| **B2S** | [VP Universe](https://vpuniverse.com/files/file/4873-world-cup-soccer-bally-midway-1994/) | 1.0.0 - 2&3_scr_big_DMD.directb2s| [Blacksad](https://vpuniverse.com/profile/9127-blacksad/content/?type=downloads_file) |\n-| **ROM** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=296) | wcs_l2.zip | [destruk](https://www.vpforums.org/index.php?showuser=5) |\n-\n----\n-\n-## Note \n-Table file is listed as version 1.4 on download page but the vpx file in the downloaded .rar is version 1.5.\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Universe](https://vpuniverse.com/files/file/10534-world-cup-soccer-bally-1994/) | 1.4 | [VPUStaff](https://vpuniverse.com/profile/50-vpustaff/content/?type=downloads_file) |\n+| B2S | [VP Universe](https://vpuniverse.com/files/file/4873-world-cup-soccer-bally-midway-1994/) | 1.0.0 - 2&3_scr_big_DMD.directb2s| [Blacksad](https://vpuniverse.com/profile/9127-blacksad/content/?type=downloads_file) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=296) | wcs_l2.zip | [destruk](https://www.vpforums.org/index.php?showuser=5) |\n \n+**Tested by:** [psybocilin]\n \n ---\n \n@@ -28,13 +25,11 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n ---\n \n ## Instructions\n-\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to `vpx-worldcupsoccer.elf`\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-worldcupsoccer` folder\n - Place ROM zip file into `vpx-worldcupsoccer/pinmame/roms` folder. DO NOT UNZIP!\n - Make sure `(.vpx)` `(.direct2b2s)` and `(.ini)` are all named the same.\n \n----\n-\n-**Tested by:** psybocilin\n+## Note \n+- Table file is listed as version 1.4 on download page but the vpx file in the downloaded .rar is version 1.5."}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-worldcupsoccer/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/cfg/default.cfg b/external/vpx-worldcupsoccer/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-worldcupsoccer/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-worldcupsoccer/pinmame/cfg/gitkeep", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/cfg/gitkeep b/external/vpx-worldcupsoccer/pinmame/cfg/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-worldcupsoccer/pinmame/cfg/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-worldcupsoccer/pinmame/cfg/wcs_l2.cfg", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/cfg/wcs_l2.cfg b/external/vpx-worldcupsoccer/pinmame/cfg/wcs_l2.cfg\ndeleted file mode 100644\nindex e8e8d458..00000000\nBinary files a/external/vpx-worldcupsoccer/pinmame/cfg/wcs_l2.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-worldcupsoccer/pinmame/ini/gitkeep", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/ini/gitkeep b/external/vpx-worldcupsoccer/pinmame/ini/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-worldcupsoccer/pinmame/ini/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-worldcupsoccer/pinmame/ini/wcs_l2.ini", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/ini/wcs_l2.ini b/external/vpx-worldcupsoccer/pinmame/ini/wcs_l2.ini\ndeleted file mode 100644\nindex 2b7d740e..00000000\n--- a/external/vpx-worldcupsoccer/pinmame/ini/wcs_l2.ini\n+++ /dev/null\n@@ -1,7 +0,0 @@\n-[settings]\n-rol=0\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-worldcupsoccer/pinmame/nvram/gitkeep", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/nvram/gitkeep b/external/vpx-worldcupsoccer/pinmame/nvram/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-worldcupsoccer/pinmame/nvram/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-worldcupsoccer/pinmame/roms/gitkeep", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/roms/gitkeep b/external/vpx-worldcupsoccer/pinmame/roms/gitkeep\ndeleted file mode 100644\nindex 8b137891..00000000\n--- a/external/vpx-worldcupsoccer/pinmame/roms/gitkeep\n+++ /dev/null\n@@ -1 +0,0 @@\n-"},
+          {"status": "D", "path": "external/vpx-worldcupsoccer/vpx-worldcupsoccer.xml", "diff": "diff --git a/external/vpx-worldcupsoccer/vpx-worldcupsoccer.xml b/external/vpx-worldcupsoccer/vpx-worldcupsoccer.xml\ndeleted file mode 100644\nindex e69a76fc..00000000\n--- a/external/vpx-worldcupsoccer/vpx-worldcupsoccer.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>World Cup Soccer (Bally 1994)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini->external/vpx-worldcupsoccer/table.ini", "diff": "diff --git a/external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini b/external/vpx-worldcupsoccer/table.ini\nsimilarity index 95%\nrename from external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini\nrename to external/vpx-worldcupsoccer/table.ini\nindex f4d2c4c0..67486b10 100644\n--- a/external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini\t\n+++ b/external/vpx-worldcupsoccer/table.ini\n@@ -1,20 +1,20 @@\n-[Player]\n-BallTrailStrength = 0.490196\n-ScreenPlayerY = 21.303751\n-ScreenPlayerZ = 65.305420\n-ScreenWidth = 0.000000\n-ScreenHeight = 0.000000\n-ScreenInclination = 0.000000\n-MaxTexDimension = 3072\n-FXAA = 1\n-\n-[TableOverride]\n-ViewCabMode = 2\n-ViewCabScaleX = 1.235503\n-ViewCabScaleY = 1.169086\n-ViewCabScaleZ = 1.000000\n-ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.000000\n-ViewCabVOfs = -35.293404\n-ViewCabWindowTop = 357.925842\n+[Player]\n+BallTrailStrength = 0.490196\n+ScreenPlayerY = 21.303751\n+ScreenPlayerZ = 65.305420\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+MaxTexDimension = 3072\n+FXAA = 1\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.235503\n+ViewCabScaleY = 1.169086\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -35.293404\n+ViewCabWindowTop = 357.925842\n ViewCabWindowBot = 60.891216\n\\ No newline at end of file"},
+          {"status": "R-from", "path": "external/vpx-worldcupsoccer/pinmame/nvram/wcs_l2.nv->external/vpx-worldcupsoccer/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-worldcupsoccer/vpx-worldcupsoccer.png->external/vpx-worldcupsoccer/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini->external/vpx-worldcupsoccer/table.ini", "diff": "diff --git a/external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini b/external/vpx-worldcupsoccer/table.ini\nsimilarity index 95%\nrename from external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini\nrename to external/vpx-worldcupsoccer/table.ini\nindex f4d2c4c0..67486b10 100644\n--- a/external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini\t\n+++ b/external/vpx-worldcupsoccer/table.ini\n@@ -1,20 +1,20 @@\n-[Player]\n-BallTrailStrength = 0.490196\n-ScreenPlayerY = 21.303751\n-ScreenPlayerZ = 65.305420\n-ScreenWidth = 0.000000\n-ScreenHeight = 0.000000\n-ScreenInclination = 0.000000\n-MaxTexDimension = 3072\n-FXAA = 1\n-\n-[TableOverride]\n-ViewCabMode = 2\n-ViewCabScaleX = 1.235503\n-ViewCabScaleY = 1.169086\n-ViewCabScaleZ = 1.000000\n-ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.000000\n-ViewCabVOfs = -35.293404\n-ViewCabWindowTop = 357.925842\n+[Player]\n+BallTrailStrength = 0.490196\n+ScreenPlayerY = 21.303751\n+ScreenPlayerZ = 65.305420\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+MaxTexDimension = 3072\n+FXAA = 1\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.235503\n+ViewCabScaleY = 1.169086\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -35.293404\n+ViewCabWindowTop = 357.925842\n ViewCabWindowBot = 60.891216\n\\ No newline at end of file"},
+          {"status": "R-to", "path": "external/vpx-worldcupsoccer/pinmame/nvram/wcs_l2.nv->external/vpx-worldcupsoccer/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-worldcupsoccer/vpx-worldcupsoccer.png->external/vpx-worldcupsoccer/launcher.png"}
+        ]
+      },
+      {
+        "hash": "5044892315fe0618828473d2009efb4533e991b6",
+        "date": "2025-02-19 01:08:28 -0800",
+        "author": "psybocilin",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nindex 9930a5c8..6c9af70a 100644\n--- a/external/vpx-worldcupsoccer/README.md\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -8,7 +8,7 @@\n | File Type | Link | Version | Author | \n |-----------|--------|----------|--------------|\n | **VPX** | [VP Universe](https://vpuniverse.com/files/file/10534-world-cup-soccer-bally-1994/) | 1.4 | [VPUStaff](https://vpuniverse.com/profile/50-vpustaff/content/?type=downloads_file) |\n-| **B2S** | [VP Universe](https://vpuniverse.com/files/file/4873-world-cup-soccer-bally-midway-1994/) | 1.0.0 | [Blacksad](https://vpuniverse.com/profile/9127-blacksad/content/?type=downloads_file) |\n+| **B2S** | [VP Universe](https://vpuniverse.com/files/file/4873-world-cup-soccer-bally-midway-1994/) | 1.0.0 - 2&3_scr_big_DMD.directb2s| [Blacksad](https://vpuniverse.com/profile/9127-blacksad/content/?type=downloads_file) |\n | **ROM** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=296) | wcs_l2.zip | [destruk](https://www.vpforums.org/index.php?showuser=5) |\n \n ---\n"}
+        ]
+      },
+      {
+        "hash": "e419eaa9e8d73d1317c3b5394537a371611c9a8b",
+        "date": "2025-02-19 01:00:22 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-worldcupsoccer/README.md", "diff": "diff --git a/external/vpx-worldcupsoccer/README.md b/external/vpx-worldcupsoccer/README.md\nnew file mode 100644\nindex 00000000..9930a5c8\n--- /dev/null\n+++ b/external/vpx-worldcupsoccer/README.md\n@@ -0,0 +1,40 @@\n+# World Cup Soccer (Bally 1994)\n+\n+![Table Preview](../../images/vpx-worldcupsoccer-preview.jpg)\n+\n+---\n+\n+## Files\n+| File Type | Link | Version | Author | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [VP Universe](https://vpuniverse.com/files/file/10534-world-cup-soccer-bally-1994/) | 1.4 | [VPUStaff](https://vpuniverse.com/profile/50-vpustaff/content/?type=downloads_file) |\n+| **B2S** | [VP Universe](https://vpuniverse.com/files/file/4873-world-cup-soccer-bally-midway-1994/) | 1.0.0 | [Blacksad](https://vpuniverse.com/profile/9127-blacksad/content/?type=downloads_file) |\n+| **ROM** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=296) | wcs_l2.zip | [destruk](https://www.vpforums.org/index.php?showuser=5) |\n+\n+---\n+\n+## Note \n+Table file is listed as version 1.4 on download page but the vpx file in the downloaded .rar is version 1.5.\n+\n+\n+---\n+\n+## Status \n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 32 |\n+\n+---\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to `vpx-worldcupsoccer.elf`\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-worldcupsoccer` folder\n+- Place ROM zip file into `vpx-worldcupsoccer/pinmame/roms` folder. DO NOT UNZIP!\n+- Make sure `(.vpx)` `(.direct2b2s)` and `(.ini)` are all named the same.\n+\n+---\n+\n+**Tested by:** psybocilin\n"}
+        ]
+      },
+      {
+        "hash": "1c5b675524ebb58808ce2bb42ef6f45bd1b77bc9",
+        "date": "2025-02-19 00:39:34 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini", "diff": "diff --git a/external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini b/external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini\nnew file mode 100644\nindex 00000000..f4d2c4c0\n--- /dev/null\n+++ b/external/vpx-worldcupsoccer/World Cup Soccer (Bally 1994) 1.5.ini\t\n@@ -0,0 +1,20 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+ScreenPlayerY = 21.303751\n+ScreenPlayerZ = 65.305420\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+MaxTexDimension = 3072\n+FXAA = 1\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.235503\n+ViewCabScaleY = 1.169086\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -35.293404\n+ViewCabWindowTop = 357.925842\n+ViewCabWindowBot = 60.891216\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-worldcupsoccer/vpx-worldcupsoccer.png"},
+          {"status": "A", "path": "external/vpx-worldcupsoccer/vpx-worldcupsoccer.xml", "diff": "diff --git a/external/vpx-worldcupsoccer/vpx-worldcupsoccer.xml b/external/vpx-worldcupsoccer/vpx-worldcupsoccer.xml\nnew file mode 100644\nindex 00000000..e69a76fc\n--- /dev/null\n+++ b/external/vpx-worldcupsoccer/vpx-worldcupsoccer.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>World Cup Soccer (Bally 1994)</name>\n+</root>\n"}
+        ]
+      },
+      {
+        "hash": "c12e453bdc30e7921f4725c0233c2ecaa7eed213",
+        "date": "2025-02-19 00:38:10 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-worldcupsoccer/pinmame/roms/gitkeep", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/roms/gitkeep b/external/vpx-worldcupsoccer/pinmame/roms/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-worldcupsoccer/pinmame/roms/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      },
+      {
+        "hash": "2221efce88958cfb1ed2b63f20ee2e33c7fc4314",
+        "date": "2025-02-19 00:37:29 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-worldcupsoccer/pinmame/nvram/wcs_l2.nv"}
+        ]
+      },
+      {
+        "hash": "6399d7ba6181c04c276eb52cdd29af99f32ee136",
+        "date": "2025-02-19 00:37:12 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-worldcupsoccer/pinmame/nvram/gitkeep", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/nvram/gitkeep b/external/vpx-worldcupsoccer/pinmame/nvram/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-worldcupsoccer/pinmame/nvram/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      },
+      {
+        "hash": "90e281893df25acf7697e35a86b713be0e9259d0",
+        "date": "2025-02-19 00:36:34 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-worldcupsoccer/pinmame/ini/wcs_l2.ini", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/ini/wcs_l2.ini b/external/vpx-worldcupsoccer/pinmame/ini/wcs_l2.ini\nnew file mode 100644\nindex 00000000..2b7d740e\n--- /dev/null\n+++ b/external/vpx-worldcupsoccer/pinmame/ini/wcs_l2.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+rol=0\n+cheat=0\n+sound=1\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "8e28fc90278c5e3395347f330b2f964868d16fc7",
+        "date": "2025-02-19 00:36:18 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-worldcupsoccer/pinmame/ini/gitkeep", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/ini/gitkeep b/external/vpx-worldcupsoccer/pinmame/ini/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-worldcupsoccer/pinmame/ini/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      },
+      {
+        "hash": "f9893fbb4be0d0f37ffa4d715194d88b9b5e67c2",
+        "date": "2025-02-19 00:35:21 -0800",
+        "author": "psybocilin",
+        "message": "Add files via upload",
+        "files": [
+          {"status": "A", "path": "external/vpx-worldcupsoccer/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/cfg/default.cfg b/external/vpx-worldcupsoccer/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-worldcupsoccer/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-worldcupsoccer/pinmame/cfg/wcs_l2.cfg", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/cfg/wcs_l2.cfg b/external/vpx-worldcupsoccer/pinmame/cfg/wcs_l2.cfg\nnew file mode 100644\nindex 00000000..e8e8d458\nBinary files /dev/null and b/external/vpx-worldcupsoccer/pinmame/cfg/wcs_l2.cfg differ\n"}
+        ]
+      },
+      {
+        "hash": "4cbaabffbb7b2b056fdad22730982f46d923c90e",
+        "date": "2025-02-19 00:34:56 -0800",
+        "author": "psybocilin",
+        "message": "Create gitkeep",
+        "files": [
+          {"status": "A", "path": "external/vpx-worldcupsoccer/pinmame/cfg/gitkeep", "diff": "diff --git a/external/vpx-worldcupsoccer/pinmame/cfg/gitkeep b/external/vpx-worldcupsoccer/pinmame/cfg/gitkeep\nnew file mode 100644\nindex 00000000..8b137891\n--- /dev/null\n+++ b/external/vpx-worldcupsoccer/pinmame/cfg/gitkeep\n@@ -0,0 +1 @@\n+\n"}
+        ]
+      }
+    ]
+}

@@ -1,0 +1,375 @@
+{
+    "commit_count": 39,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 68a3d352..3ef9b60d 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"a1f72df571a56475a263275f0b5ab837\"\n-  - \"48721E372187EF9AEB3BC7C42F8B89E7\"\n+backglassChecksum: \"a1f72df571a56475a263275f0b5ab837\"\n backglassNotes: \"Bundled with VPX\"\n backglassVPSId: \"HlwBrgVRlU\"\n backglassBundled: true\n@@ -16,7 +13,4 @@ testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"IPhDfXdVtv\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n-  - \"48721E372187EF9AEB3BC7C42F8B89E7\"\n+vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n"}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 3ef9b60d..68a3d352 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"a1f72df571a56475a263275f0b5ab837\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"a1f72df571a56475a263275f0b5ab837\"\n+  - \"48721E372187EF9AEB3BC7C42F8B89E7\"\n backglassNotes: \"Bundled with VPX\"\n backglassVPSId: \"HlwBrgVRlU\"\n backglassBundled: true\n@@ -13,4 +16,7 @@ testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"IPhDfXdVtv\"\n-vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n+  - \"48721E372187EF9AEB3BC7C42F8B89E7\"\n"}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.ini", "diff": "diff --git a/external/vpx-zissou/table.ini b/external/vpx-zissou/table.ini\nindex ada4281e..b1547e44 100755\n--- a/external/vpx-zissou/table.ini\n+++ b/external/vpx-zissou/table.ini\n@@ -1,18 +1,16 @@\n [Player]\n BallTrailStrength = 0.490196\n+OverrideTableEmissionScale = 0\n+ScreenPlayerY = 14.967547\n+ScreenPlayerZ = 90.018509\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 1.372444\n-ViewCabScaleY = 1.591352\n-ViewCabScaleZ = 1.458843\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -48.500000\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -263.139954\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.089395\n+ViewCabScaleY = 1.011456\n+ViewCabScaleZ = 0.889901\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.039497\n+ViewCabWindowTop = 52.163860\n+ViewCabWindowBot = 51.366272\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex fefa37f5..3ef9b60d 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -3,7 +3,7 @@ backglassChecksum: \"a1f72df571a56475a263275f0b5ab837\"\n backglassNotes: \"Bundled with VPX\"\n backglassVPSId: \"HlwBrgVRlU\"\n backglassBundled: true\n-fps: 46\n+fps: 60\n tableVPSId: \"pSJnLZYNt7\"\n tagline: >-\n   I'm going to find it and I'm going to destroy it.\n@@ -14,5 +14,3 @@ testers:\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"IPhDfXdVtv\"\n vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n-applyFixes:\n-  - \"bass\""}
+        ]
+      },
+      {
+        "hash": "ee6e91c12e9a199aba13f13d2e9842ae95234afc",
+        "date": "2025-06-14 19:04:05 +0100",
+        "author": "OminousOsie",
+        "message": "Added point to wiz team list\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex 250b9ab1..d3380387 100755\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -51,7 +51,7 @@ __*We hope you enjoy!!*__\n - n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - TechZombie\n+- mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n <br>\n"}
+        ]
+      },
+      {
+        "hash": "43e06a78576a8d7069d79fee2da8885f7e817af7",
+        "date": "2025-04-30 11:28:52 +0100",
+        "author": "OminousOsie",
+        "message": "Removed BOM\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex 67b76cec..250b9ab1 100755\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -1,4 +1,4 @@\n-﻿﻿# Zissou - The Life Aquatic (Original 2022)\n+﻿# Zissou - The Life Aquatic (Original 2022)\n \n ![Table Preview](../../images/vpx-zissou.png)\n \n"}
+        ]
+      },
+      {
+        "hash": "5424a8122d5eb54371b2435888f2d337df05dc43",
+        "date": "2025-04-30 11:23:31 +0100",
+        "author": "OminousOsie",
+        "message": "Added lloydbraun to the wiz team\n\nAdded lloydbraun to the wiz team\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex e09ac182..67b76cec 100755\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -48,7 +48,7 @@ __*We hope you enjoy!!*__\n \n *The VPXS 4KP Wizard team:*\n <pre>\n-- n-i-x            - Mox\n+- n-i-x            - Mox              - Lloydbraun\n - Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n - Bla1ze           - evilwraith       - Silentkat        \n - mrandromeda      - SScorpio         - TechZombie\n"}
+        ]
+      },
+      {
+        "hash": "01c7e252332b06a5a09e3bfaa60664142a54042f",
+        "date": "2025-04-16 10:44:26 +0100",
+        "author": "OminousOsie",
+        "message": "Added the full team to the readme\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex dfa98bb6..e09ac182 100755\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -1,4 +1,4 @@\n-﻿# Zissou - The Life Aquatic (Original 2022)\n+﻿﻿# Zissou - The Life Aquatic (Original 2022)\n \n ![Table Preview](../../images/vpx-zissou.png)\n \n@@ -42,7 +42,17 @@ This table is available through the Table Manager Wizard, which makes installati\n \n Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n \n-__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - TechZombie\n+</pre>\n \n <br>\n <br>\n"}
+        ]
+      },
+      {
+        "hash": "ea6d17c32b6201508759ff21067bbebd5da41606",
+        "date": "2025-04-08 22:51:49 -0400",
+        "author": "pointdablame",
+        "message": "Updated Wizard wave 1 images\n\nUpdating images to new standard resolutions and schemes, and  adding Legends Unchained logo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/launcher.png"}
+        ]
+      },
+      {
+        "hash": "6c2a220adac96b5ed5b84500eba9d819bca0cc87",
+        "date": "2025-04-08 15:22:54 +0100",
+        "author": "OminousOsie",
+        "message": "Italic the tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex b1f955d5..dfa98bb6 100755\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -36,7 +36,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Zissou - The Life Aquatic`**\n 5.  Follow the on-screen instructions to download and upload the required files\n-6. I'm going to find it and I'm going to destroy it. I don't know how yet, maybe dynamite.\"\n+6. *I'm going to find it and I'm going to destroy it. I don't know how yet, maybe dynamite.\"*\n \n <br>\n \n"}
+        ]
+      },
+      {
+        "hash": "ec024f091d11b71aef0144fb31e7d1b020df9223",
+        "date": "2025-04-08 15:09:40 +0100",
+        "author": "OminousOsie",
+        "message": "Update to readmes to readd tagline\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex 9e5ef895..b1f955d5 100755\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -1,4 +1,4 @@\n-# Zissou - The Life Aquatic (Original 2022)\n+﻿# Zissou - The Life Aquatic (Original 2022)\n \n ![Table Preview](../../images/vpx-zissou.png)\n \n@@ -36,6 +36,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 3.  Select the **Wizard** tab\n 4.  Find and select this table from the dropdown menu: **`Zissou - The Life Aquatic`**\n 5.  Follow the on-screen instructions to download and upload the required files\n+6. I'm going to find it and I'm going to destroy it. I don't know how yet, maybe dynamite.\"\n \n <br>\n \n"}
+        ]
+      },
+      {
+        "hash": "3ea93065f85184f7f51db91cfab3789ae38a899e",
+        "date": "2025-04-08 14:38:42 +0100",
+        "author": "OminousOsie",
+        "message": "Finished readmes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex 54a40b3d..9e5ef895 100755\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -2,30 +2,49 @@\n \n ![Table Preview](../../images/vpx-zissou.png)\n \n----\n-\n-## Files\n-| File Type | Link | Version | Author |\n-|:---------:|:----:|:-------:|:------:|\n-| VPX | [VP Unviverse](https://vpuniverse.com/files/file/10727-zissou-the-life-aquatic/) | 1.2 | [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/)  |\n-| B2S | Included with VPX | N/A | N/A |\n-| DMD | Included with VPX | N/A | N/A |\n-| ROM | N/A | N/A | N/A |\n+<br>\n \n-**Tested by:** [Boris]\n-\n----\n+## *️⃣  Table Statistics\n \n-## Status \n-**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 46 |\n \n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Boris\n+  - Bla1ze\n+  - CoffeeAtJoes\n+\n+<br>\n+\n ---\n \n-## Instructions\n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to `vpx-zissou.elf`\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them to `external/vpx-zissou`\n-- Make sure `(.vpx)` `(.direct2b2s)` and `(.ini)` are all named the same\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Zissou - The Life Aquatic`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+__*We hope you enjoy!!   - the VPXS 4KP team!*__\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>\n"}
+        ]
+      },
+      {
+        "hash": "34a19ac19b1dd3f52bf5413bf64cd94ca93c44a3",
+        "date": "2025-04-05 09:18:06 -0400",
+        "author": "pointdablame",
+        "message": "Wizard tables - updated launcher images\n\nUpdated:\n- 1-2-3\n- 24\n- Ali\n- Andromeda\n- Adventures of Rocky & Bullwinkle\n- Asteroid Annie\n- Avengers, JP's\n- Banzai Run\n- Batman Forever\n- Baywatch\n- Big Trouble in Little China\n- Big Bang Bar\n- Black Pyramid\n- Cactus Canyon\n- Centigrade 37\n- Creature From the Black Lagoon\n- Champion Pub\n- Cosmic\n- Deadpool\n- Diner\n- Dirty Harry\n- Doctor Who\n- Dolly Parton\n- Drakor\n- F-14 Tomcat\n- Fathom\n- Firepower\n- Firepower II\n- Fortnite\n- Guns N' Roses\n- Godzilla\n- Guardians of the Galaxy\n- Hardbody\n- Bond 60th\n- Jurassic Park\n- Last Action Hero\n- Mata Hari\n- Meteor\n- Mission Impossible\n- Medieval Madness\n- Monster Bash\n- Mousin' Around\n- No Fear - Dangerous Sports\n- Quicksilver\n- Scared Stiff\n- Seawitch\n- Street Fighter II\n- South Park\n- Tales From the Crypt\n- Vortex\n- Wrath of Olympus\n- Whirlwind\n- Zissou\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/launcher.png"}
+        ]
+      },
+      {
+        "hash": "ae0263ecdbc0f4d964fd9224fc4797b10372d479",
+        "date": "2025-04-01 11:26:24 +0100",
+        "author": "OminousOsie",
+        "message": "Updated table preview images\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex a29d06aa..54a40b3d 100755\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -1,6 +1,6 @@\n # Zissou - The Life Aquatic (Original 2022)\n \n-![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_07/Zissou_Desktop.png.1d3e7e69b1dd342d8e7c1c0090b58734.png)\n+![Table Preview](../../images/vpx-zissou.png)\n \n ---\n "}
+        ]
+      },
+      {
+        "hash": "b7a5acfb777002b9f8cdb76fd5e7fb80e64a3487",
+        "date": "2025-03-28 22:00:57 +0000",
+        "author": "OminousOsie",
+        "message": "Updates from joe\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 16e5ad89..fefa37f5 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -14,3 +14,5 @@ testers:\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"IPhDfXdVtv\"\n vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n+applyFixes:\n+  - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "296e5131408a564e8f0bcc46e26766ca4f3e2ed3",
+        "date": "2025-03-28 10:41:55 +0000",
+        "author": "OminousOsie",
+        "message": "Added CoffeeAtJoes to the tester list of all with a dmd.png\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 33209d37..16e5ad89 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -11,5 +11,6 @@ tagline: >-\n testers:\n   - \"Boris\"\n   - \"Bla1ze\"\n+  - \"CoffeeAtJoes\"\n vpxVPSId: \"IPhDfXdVtv\"\n vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n"}
+        ]
+      },
+      {
+        "hash": "797ea700cb3fe0edfb75ed2445202dc48a285612",
+        "date": "2025-03-27 18:40:51 +0000",
+        "author": "OminousOsie",
+        "message": "Corrected buffer number\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.ini", "diff": "diff --git a/external/vpx-zissou/table.ini b/external/vpx-zissou/table.ini\nindex 68ae8f95..ada4281e 100755\n--- a/external/vpx-zissou/table.ini\n+++ b/external/vpx-zissou/table.ini\n@@ -15,4 +15,4 @@ ViewCabFOV = 42.999908\n ViewCabLayback = 48.000000\n \n [Standalone]\n-BackBufferScale = .416666\n\\ No newline at end of file\n+BackBufferScale = 0.416666\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "b6405c733daeb9e66613237a8cafa5a6bae0c56e",
+        "date": "2025-03-27 18:38:21 +0000",
+        "author": "OminousOsie",
+        "message": "Updated table configs\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.ini", "diff": "diff --git a/external/vpx-zissou/table.ini b/external/vpx-zissou/table.ini\nindex 14bed9ef..68ae8f95 100755\n--- a/external/vpx-zissou/table.ini\n+++ b/external/vpx-zissou/table.ini\n@@ -12,4 +12,7 @@ ViewCabPlayerY = -0.000000\n ViewCabPlayerZ = -263.139954\n ViewCabLookAt = 5.000000\n ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabLayback = 48.000000\n+\n+[Standalone]\n+BackBufferScale = .416666\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "d9fbd09d7c59b1366f8925f644d8736b84172fee",
+        "date": "2025-03-27 18:20:31 +0000",
+        "author": "OminousOsie",
+        "message": "Swapped zissou back to original\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 808f9093..33209d37 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -11,5 +11,5 @@ tagline: >-\n testers:\n   - \"Boris\"\n   - \"Bla1ze\"\n-vpxVPSId: \"Z5aLqBt3Nl\"\n-vpxChecksum: \"572EDEC645B93B8914188C641B296AF2\"\n+vpxVPSId: \"IPhDfXdVtv\"\n+vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n"}
+        ]
+      },
+      {
+        "hash": "6ef81c6b1a9db4d9cbf1353046a8c87281cdba07",
+        "date": "2025-03-27 15:22:17 +0000",
+        "author": "OminousOsie",
+        "message": "added bundled flag to zissou\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex ae4bf6e0..808f9093 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -2,6 +2,7 @@\n backglassChecksum: \"a1f72df571a56475a263275f0b5ab837\"\n backglassNotes: \"Bundled with VPX\"\n backglassVPSId: \"HlwBrgVRlU\"\n+backglassBundled: true\n fps: 46\n tableVPSId: \"pSJnLZYNt7\"\n tagline: >-\n"}
+        ]
+      },
+      {
+        "hash": "e803c36defd6e7cd94ccf7e842a4ed66894e27e4",
+        "date": "2025-03-25 23:35:32 +0000",
+        "author": "OminousOsie",
+        "message": "zissou yml update\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 77da743c..ae4bf6e0 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -1,6 +1,6 @@\n ---\n backglassChecksum: \"a1f72df571a56475a263275f0b5ab837\"\n-backglassNotes: \"Included in VPX download\"\n+backglassNotes: \"Bundled with VPX\"\n backglassVPSId: \"HlwBrgVRlU\"\n fps: 46\n tableVPSId: \"pSJnLZYNt7\"\n@@ -10,7 +10,5 @@ tagline: >-\n testers:\n   - \"Boris\"\n   - \"Bla1ze\"\n-vpxVPSId: \"IPhDfXdVtv\"\n-vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n-applyFixes:\n-  - \"bass\"\n+vpxVPSId: \"Z5aLqBt3Nl\"\n+vpxChecksum: \"572EDEC645B93B8914188C641B296AF2\"\n"}
+        ]
+      },
+      {
+        "hash": "7e510a6876cc97b65ddc7b553fb82f30576d4ac4",
+        "date": "2025-03-25 21:15:01 +0000",
+        "author": "OminousOsie",
+        "message": "bass fixes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 2ea852d6..77da743c 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -12,3 +12,5 @@ testers:\n   - \"Bla1ze\"\n vpxVPSId: \"IPhDfXdVtv\"\n vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n+applyFixes:\n+  - \"bass\"\n"}
+        ]
+      },
+      {
+        "hash": "c7c6dcb3af07c59fb4ef4c6a87b8d6a3bc483903",
+        "date": "2025-03-24 23:27:13 -0400",
+        "author": "n-i-x",
+        "message": "fix zissou backglass id",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 81213fe4..2ea852d6 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -1,7 +1,7 @@\n ---\n backglassChecksum: \"a1f72df571a56475a263275f0b5ab837\"\n backglassNotes: \"Included in VPX download\"\n-backglassVPSId: \"IPhDfXdVtv\"\n+backglassVPSId: \"HlwBrgVRlU\"\n fps: 46\n tableVPSId: \"pSJnLZYNt7\"\n tagline: >-\n"}
+        ]
+      },
+      {
+        "hash": "d6e65cf6a8c4aab74b102604fb59f03bd486587d",
+        "date": "2025-03-24 23:24:41 -0400",
+        "author": "n-i-x",
+        "message": "add backglassNotes for zissou",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 80dedf89..81213fe4 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -1,6 +1,7 @@\n ---\n-backglassVPSId: \"IPhDfXdVtv\"\n backglassChecksum: \"a1f72df571a56475a263275f0b5ab837\"\n+backglassNotes: \"Included in VPX download\"\n+backglassVPSId: \"IPhDfXdVtv\"\n fps: 46\n tableVPSId: \"pSJnLZYNt7\"\n tagline: >-\n"}
+        ]
+      },
+      {
+        "hash": "1eb272befb77a48146ccd322d4099c845b20ca15",
+        "date": "2025-03-24 15:02:00 +0000",
+        "author": "OminousOsie",
+        "message": "Moved to >-\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 8f3e7d11..80dedf89 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -3,7 +3,7 @@ backglassVPSId: \"IPhDfXdVtv\"\n backglassChecksum: \"a1f72df571a56475a263275f0b5ab837\"\n fps: 46\n tableVPSId: \"pSJnLZYNt7\"\n-tagline: |\n+tagline: >-\n   I'm going to find it and I'm going to destroy it.\n   I don't know how yet, maybe dynamite.\"\n testers:\n"}
+        ]
+      },
+      {
+        "hash": "b5c345e4eb09c08e84605734ecf427c19877e355",
+        "date": "2025-03-24 10:50:51 +0000",
+        "author": "OminousOsie",
+        "message": "Spaces\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex e53fb178..8f3e7d11 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -1,9 +1,9 @@\n ---\n backglassVPSId: \"IPhDfXdVtv\"\n backglassChecksum: \"a1f72df571a56475a263275f0b5ab837\"\n-fps: \"46\"\n+fps: 46\n tableVPSId: \"pSJnLZYNt7\"\n-tagline: | \n+tagline: |\n   I'm going to find it and I'm going to destroy it.\n   I don't know how yet, maybe dynamite.\"\n testers:\n"}
+        ]
+      },
+      {
+        "hash": "f52791bbb8952e42c34b08d54880b5c401e1645c",
+        "date": "2025-03-24 10:10:55 +0000",
+        "author": "OminousOsie",
+        "message": "last joe dmd, plus yml issue\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-zissou/dmd.png"}
+        ]
+      },
+      {
+        "hash": "aa75a01d12fb6adc748411703064f89982eb6d83",
+        "date": "2025-03-24 09:57:47 +0000",
+        "author": "OminousOsie",
+        "message": "Updated lit strings\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 99235556..e53fb178 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -3,7 +3,9 @@ backglassVPSId: \"IPhDfXdVtv\"\n backglassChecksum: \"a1f72df571a56475a263275f0b5ab837\"\n fps: \"46\"\n tableVPSId: \"pSJnLZYNt7\"\n-tagline: \"I'm going to find it and I'm going to destroy it. I don't know how yet, maybe dynamite.\"\n+tagline: | \n+  I'm going to find it and I'm going to destroy it.\n+  I don't know how yet, maybe dynamite.\"\n testers:\n   - \"Boris\"\n   - \"Bla1ze\"\n"}
+        ]
+      },
+      {
+        "hash": "266821b169409b0dc1c37f85941fc2b36d39254d",
+        "date": "2025-03-24 01:26:39 +0000",
+        "author": "OminousOsie",
+        "message": "yml formatting\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 8792e3b0..99235556 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -8,4 +8,4 @@ testers:\n   - \"Boris\"\n   - \"Bla1ze\"\n vpxVPSId: \"IPhDfXdVtv\"\n-vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n\\ No newline at end of file\n+vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n"}
+        ]
+      },
+      {
+        "hash": "f97b737805c3710c4206ec673c16ae88e53e1f52",
+        "date": "2025-03-24 01:18:39 +0000",
+        "author": "OminousOsie",
+        "message": "Added margin to all testers in ymls\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex 712796e7..8792e3b0 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -5,7 +5,7 @@ fps: \"46\"\n tableVPSId: \"pSJnLZYNt7\"\n tagline: \"I'm going to find it and I'm going to destroy it. I don't know how yet, maybe dynamite.\"\n testers:\n-- \"Boris\"\n-- \"Bla1ze\"\n+  - \"Boris\"\n+  - \"Bla1ze\"\n vpxVPSId: \"IPhDfXdVtv\"\n vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "75183e4d86a30ceee06eb7b09817a81b75437326",
+        "date": "2025-03-22 23:58:17 +0000",
+        "author": "OminousOsie",
+        "message": "Merge branch 'main' of https://github.com/Bla1ze/vpx-standalone-alp4k\n",
+        "files": [
+          {"status": "MM", "path": "external/vpx-zissou/table.yml", "diff": "diff --cc external/vpx-zissou/table.yml\nindex e96869a4,52d807f2..712796e7\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@@ -8,4 -8,4 +8,4 @@@ testers\n  - \"Boris\"\n  - \"Bla1ze\"\n  vpxVPSId: \"IPhDfXdVtv\"\n- vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n -vpxChecksum: \"11BCD0BF36F3ED1FEFFA577A9B60FD65\"\n++vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n"}
+        ]
+      },
+      {
+        "hash": "86db5dc70b2c430ee8eeb28d1636f9b1cc3a150a",
+        "date": "2025-03-22 15:00:51 -0300",
+        "author": "Bla1ze",
+        "message": "YAML Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex cc5c2580..52d807f2 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -1,6 +1,6 @@\n ---\n backglassVPSId: \"IPhDfXdVtv\"\n-backglassChecksum: \"11BCD0BF36F3ED1FEFFA577A9B60FD65\"\n+backglassChecksum: \"A1F72DF571A56475A263275F0B5AB837\"\n fps: \"46\"\n tableVPSId: \"pSJnLZYNt7\"\n tagline: \"I'm going to find it and I'm going to destroy it. I don't know how yet, maybe dynamite.\"\n@@ -8,4 +8,4 @@ testers:\n - \"Boris\"\n - \"Bla1ze\"\n vpxVPSId: \"IPhDfXdVtv\"\n-vpxChecksum: \"A1F72DF571A56475A263275F0B5AB837\"\n+vpxChecksum: \"11BCD0BF36F3ED1FEFFA577A9B60FD65\"\n"}
+        ]
+      },
+      {
+        "hash": "f9312af5f291eec336f0a2af18903e999f255343",
+        "date": "2025-03-22 09:51:32 +0000",
+        "author": "OminousOsie",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nindex cc5c2580..e96869a4 100644\n--- a/external/vpx-zissou/table.yml\n+++ b/external/vpx-zissou/table.yml\n@@ -1,6 +1,6 @@\n ---\n backglassVPSId: \"IPhDfXdVtv\"\n-backglassChecksum: \"11BCD0BF36F3ED1FEFFA577A9B60FD65\"\n+backglassChecksum: \"a1f72df571a56475a263275f0b5ab837\"\n fps: \"46\"\n tableVPSId: \"pSJnLZYNt7\"\n tagline: \"I'm going to find it and I'm going to destroy it. I don't know how yet, maybe dynamite.\"\n@@ -8,4 +8,4 @@ testers:\n - \"Boris\"\n - \"Bla1ze\"\n vpxVPSId: \"IPhDfXdVtv\"\n-vpxChecksum: \"A1F72DF571A56475A263275F0B5AB837\"\n+vpxChecksum: \"11bcd0bf36f3ed1feffa577a9b60fd65\"\n"}
+        ]
+      },
+      {
+        "hash": "bf90244e357bd1e5f4077ae4f7a08c53b34f7995",
+        "date": "2025-03-21 16:35:59 -0300",
+        "author": "Bla1ze",
+        "message": "Launcher / YAML\n\n- Launcher updated\n-YAML added\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-zissou/table.yml", "diff": "diff --git a/external/vpx-zissou/table.yml b/external/vpx-zissou/table.yml\nnew file mode 100644\nindex 00000000..cc5c2580\n--- /dev/null\n+++ b/external/vpx-zissou/table.yml\n@@ -0,0 +1,11 @@\n+---\n+backglassVPSId: \"IPhDfXdVtv\"\n+backglassChecksum: \"11BCD0BF36F3ED1FEFFA577A9B60FD65\"\n+fps: \"46\"\n+tableVPSId: \"pSJnLZYNt7\"\n+tagline: \"I'm going to find it and I'm going to destroy it. I don't know how yet, maybe dynamite.\"\n+testers:\n+- \"Boris\"\n+- \"Bla1ze\"\n+vpxVPSId: \"IPhDfXdVtv\"\n+vpxChecksum: \"A1F72DF571A56475A263275F0B5AB837\"\n"},
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nold mode 100644\nnew mode 100755"},
+          {"status": "M", "path": "external/vpx-zissou/launcher.png"},
+          {"status": "M", "path": "external/vpx-zissou/table.ini", "diff": "diff --git a/external/vpx-zissou/table.ini b/external/vpx-zissou/table.ini\nold mode 100644\nnew mode 100755"}
+        ]
+      },
+      {
+        "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
+        "date": "2025-03-19 14:01:02 -0500",
+        "author": "MoxAssault",
+        "message": "Large README Updates\n\n46 README Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex 4e9329ea..a29d06aa 100644\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -5,20 +5,19 @@\n ---\n \n ## Files\n-| File Type | Link | Version | Author | \n-|-----------|--------|----------|--------------|\n-| **VPX** | [VP Unviverse](https://vpuniverse.com/files/file/10727-zissou-the-life-aquatic/) | 1.2 | [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/)  |\n-| **B2S & DMD** | *Included in table download* | 1.2 | [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/) |\n-| **ROM** | none |  |  |\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Unviverse](https://vpuniverse.com/files/file/10727-zissou-the-life-aquatic/) | 1.2 | [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/)  |\n+| B2S | Included with VPX | N/A | N/A |\n+| DMD | Included with VPX | N/A | N/A |\n+| ROM | N/A | N/A | N/A |\n \n-**Tested by:** Boris\n+**Tested by:** [Boris]\n \n ---\n \n ## Status \n-\n **Minimum VPX Standalone build:** 10.8.0-1989-a764013\n-\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 46 |\n@@ -26,7 +25,6 @@\n ---\n \n ## Instructions\n-\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to `vpx-zissou.elf`\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them to `external/vpx-zissou`"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-zissou/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-zissou/pinmame/cfg/.gitkeep b/external/vpx-zissou/pinmame/cfg/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-zissou/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-zissou/pinmame/ini/.gitkeep b/external/vpx-zissou/pinmame/ini/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-zissou/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-zissou/pinmame/nvram/.gitkeep b/external/vpx-zissou/pinmame/nvram/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-zissou/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-zissou/pinmame/roms/.gitkeep b/external/vpx-zissou/pinmame/roms/.gitkeep\ndeleted file mode 100755\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-zissou/vpx-zissou.xml", "diff": "diff --git a/external/vpx-zissou/vpx-zissou.xml b/external/vpx-zissou/vpx-zissou.xml\ndeleted file mode 100755\nindex fb7345c7..00000000\n--- a/external/vpx-zissou/vpx-zissou.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Zissou - The Life Aquatic (Original 2022)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-zissou/Zissou -The Life Aquatic (Original 2022) 1.2.ini->external/vpx-zissou/table.ini", "diff": "diff --git a/external/vpx-zissou/Zissou -The Life Aquatic (Original 2022) 1.2.ini b/external/vpx-zissou/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-zissou/Zissou -The Life Aquatic (Original 2022) 1.2.ini\nrename to external/vpx-zissou/table.ini"},
+          {"status": "R-from", "path": "external/vpx-zissou/vpx-zissou.png->external/vpx-zissou/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-zissou/Zissou -The Life Aquatic (Original 2022) 1.2.ini->external/vpx-zissou/table.ini", "diff": "diff --git a/external/vpx-zissou/Zissou -The Life Aquatic (Original 2022) 1.2.ini b/external/vpx-zissou/table.ini\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-zissou/Zissou -The Life Aquatic (Original 2022) 1.2.ini\nrename to external/vpx-zissou/table.ini"},
+          {"status": "R-to", "path": "external/vpx-zissou/vpx-zissou.png->external/vpx-zissou/launcher.png"}
+        ]
+      },
+      {
+        "hash": "4987e7bf4ff1e4b9489537055733502dee31eb80",
+        "date": "2025-01-21 00:01:03 -0500",
+        "author": "lilalien",
+        "message": "Update README.md",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex 747bf2ea..4e9329ea 100644\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -11,6 +11,8 @@\n | **B2S & DMD** | *Included in table download* | 1.2 | [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/) |\n | **ROM** | none |  |  |\n \n+**Tested by:** Boris\n+\n ---\n \n ## Status \n@@ -27,5 +29,5 @@\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to `vpx-zissou.elf`\n-- Download the table, ROM and directb2s versions listed above and copy them into the `vpx-zissou`\n-- Make sure `(.vpx)` `(.direct2b2s)` and `(.ini)` are all named the same. s\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them to `external/vpx-zissou`\n+- Make sure `(.vpx)` `(.direct2b2s)` and `(.ini)` are all named the same\n"}
+        ]
+      },
+      {
+        "hash": "b209361bb62c29b4a5f4af6374c8cdf45e5cadb7",
+        "date": "2025-01-19 14:29:49 -0600",
+        "author": "James Rainaldi",
+        "message": "chore: updated vpx-zissou docs\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex 64de862c..747bf2ea 100644\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -2,30 +2,30 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_07/Zissou_Desktop.png.1d3e7e69b1dd342d8e7c1c0090b58734.png)\n \n-Authors: [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/)  \n-Version: 1.2  \n-Download: [VP Unviverse](https://vpuniverse.com/files/file/10727-zissou-the-life-aquatic/)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [VP Unviverse](https://vpuniverse.com/files/file/10727-zissou-the-life-aquatic/) | 1.2 | [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/)  |\n+| **B2S & DMD** | *Included in table download* | 1.2 | [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/) |\n+| **ROM** | none |  |  |\n \n-Authors: [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/)  \n-Version: 1.2  \n-Download: INCLUDED IN TABLE DOWNLOAD  \n-\n-Tested by: Boris\n+---\n \n ## Status \n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n \n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 46 |\n \n+---\n+\n ## Instructions\n \n - Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-zissou.elf\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-zissou\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- \"Are you finding what you were looking for... out here with me? I hope so.\"\n+- Add your personalized launcher.elf and rename it to `vpx-zissou.elf`\n+- Download the table, ROM and directb2s versions listed above and copy them into the `vpx-zissou`\n+- Make sure `(.vpx)` `(.direct2b2s)` and `(.ini)` are all named the same. s\n"}
+        ]
+      },
+      {
+        "hash": "e47ea3c0fa8c83631b2460cac68ada9768565bbb",
+        "date": "2024-11-30 17:48:33 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-zissou",
+        "files": [
+          {"status": "M", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nindex 41cbc49c..64de862c 100644\n--- a/external/vpx-zissou/README.md\n+++ b/external/vpx-zissou/README.md\n@@ -1,15 +1,15 @@\n-# Zissou - The Life Aquatic\n+# Zissou - The Life Aquatic (Original 2022)\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_07/Zissou_Desktop.png.1d3e7e69b1dd342d8e7c1c0090b58734.png)\n \n Authors: [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/)  \n-Version: 1.2 \n-Download: [VP Unviverse](https://vpuniverse.com/files/file/10727-zissou-the-life-aquatic/)  \n+Version: 1.2  \n+Download: [VP Unviverse](https://vpuniverse.com/files/file/10727-zissou-the-life-aquatic/)\n \n DirectB2S\n \n-Authors: [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/) \n-Version: 1.2\n+Authors: [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/)  \n+Version: 1.2  \n Download: INCLUDED IN TABLE DOWNLOAD  \n \n Tested by: Boris\n@@ -17,6 +17,7 @@ Tested by: Boris\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 46 |\n@@ -25,6 +26,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-zissou.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-zissou\n - Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n - \"Are you finding what you were looking for... out here with me? I hope so.\"\n"}
+        ]
+      },
+      {
+        "hash": "dc9374567a046d4037152e3cf5a8c863966b946b",
+        "date": "2024-11-30 07:44:43 -0500",
+        "author": "Brandon",
+        "message": "vpx-zissou add\n\nAdd Zissou - The Life Aquatic table and update root readme\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-zissou/README.md", "diff": "diff --git a/external/vpx-zissou/README.md b/external/vpx-zissou/README.md\nnew file mode 100644\nindex 00000000..41cbc49c\n--- /dev/null\n+++ b/external/vpx-zissou/README.md\n@@ -0,0 +1,30 @@\n+# Zissou - The Life Aquatic\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_07/Zissou_Desktop.png.1d3e7e69b1dd342d8e7c1c0090b58734.png)\n+\n+Authors: [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/)  \n+Version: 1.2 \n+Download: [VP Unviverse](https://vpuniverse.com/files/file/10727-zissou-the-life-aquatic/)  \n+\n+DirectB2S\n+\n+Authors: [Manbearpig](https://vpuniverse.com/profile/32743-manbearpig/) \n+Version: 1.2\n+Download: INCLUDED IN TABLE DOWNLOAD  \n+\n+Tested by: Boris\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 46 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-zissou.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n+- \"Are you finding what you were looking for... out here with me? I hope so.\""},
+          {"status": "A", "path": "external/vpx-zissou/Zissou -The Life Aquatic (Original 2022) 1.2.ini", "diff": "diff --git a/external/vpx-zissou/Zissou -The Life Aquatic (Original 2022) 1.2.ini b/external/vpx-zissou/Zissou -The Life Aquatic (Original 2022) 1.2.ini\nnew file mode 100755\nindex 00000000..14bed9ef\n--- /dev/null\n+++ b/external/vpx-zissou/Zissou -The Life Aquatic (Original 2022) 1.2.ini\t\n@@ -0,0 +1,15 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 1.372444\n+ViewCabScaleY = 1.591352\n+ViewCabScaleZ = 1.458843\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -48.500000\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -263.139954\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-zissou/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-zissou/pinmame/cfg/.gitkeep b/external/vpx-zissou/pinmame/cfg/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-zissou/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-zissou/pinmame/ini/.gitkeep b/external/vpx-zissou/pinmame/ini/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-zissou/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-zissou/pinmame/nvram/.gitkeep b/external/vpx-zissou/pinmame/nvram/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-zissou/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-zissou/pinmame/roms/.gitkeep b/external/vpx-zissou/pinmame/roms/.gitkeep\nnew file mode 100755\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-zissou/vpx-zissou.png"},
+          {"status": "A", "path": "external/vpx-zissou/vpx-zissou.xml", "diff": "diff --git a/external/vpx-zissou/vpx-zissou.xml b/external/vpx-zissou/vpx-zissou.xml\nnew file mode 100755\nindex 00000000..fb7345c7\n--- /dev/null\n+++ b/external/vpx-zissou/vpx-zissou.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Zissou - The Life Aquatic (Original 2022)</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

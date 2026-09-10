@@ -1,0 +1,160 @@
+{
+    "commit_count": 15,
+    "commits": [
+      {
+        "hash": "9dfe6864f7f95c89f6604a4d445c68bb925c2e4c",
+        "date": "2026-09-03 00:41:14 -0300",
+        "author": "Bla1ze",
+        "message": "Updating: RollerCoaster Tycoon (Stern 2002) - Wizard (#2129)\n\n* Initial\n\n* Credits\n\n* Update launcher.png\n\n* Update table.yml\n\n* Update table.ini",
+        "files": [
+          {"status": "A", "path": "external/vpx-rctycn/nvram.nv"},
+          {"status": "A", "path": "external/vpx-rctycn/table.ini", "diff": "diff --git a/external/vpx-rctycn/table.ini b/external/vpx-rctycn/table.ini\nnew file mode 100644\nindex 00000000..61f48fd7\n--- /dev/null\n+++ b/external/vpx-rctycn/table.ini\n@@ -0,0 +1,39 @@\n+[TableOverride]\n+ViewCabMode      = 2\n+ViewCabScaleX    = 1.225000\n+ViewCabScaleY    = 1.000000\n+ViewCabScaleZ    = 0.859642\n+ViewCabRotation  = 180.000000\n+ViewCabHOfs      = 0.000000\n+ViewCabVOfs      = 0.000000\n+ViewCabWindowTop = 376.100098\n+ViewCabWindowBot = 142.658691\n+ToneMapper       = 0\n+Difficulty       = 0.500000\n+\n+[Standalone]\n+POVLinkTableScaleXY  = 0\n+4kpVLMGIKeepPercent  = 100\n+4kpVLMBakeBrightness = 1.000000\n+BackBufferScale      = 0.500000\n+\n+[TableOption]\n+Select LUT    = 3.000000\n+Desktop DMD   = 1.000000\n+Cabinet Rails = 1.000000\n+Side Blades   = 1.000000\n+\n+[Player]\n+OverrideTableEmissionScale = 1\n+DynamicDayNight            = 0\n+EmissionScale              = 0.330000\n+MusicVolume                = 100\n+SoundVolume                = 100\n+ForceAnisotropicFiltering  = 1\n+AAFactor                   = 1.000000\n+MaxTexDimension            = 4096\n+ScreenPlayerY = 15.000000\n+ScreenPlayerZ = 90.000000\n+ForceBloomOff = 0\n+RaytracedBallShadows = 0\n+Refraction = 0"},
+          {"status": "A", "path": "external/vpx-rctycn/table.yml", "diff": "diff --git a/external/vpx-rctycn/table.yml b/external/vpx-rctycn/table.yml\nnew file mode 100644\nindex 00000000..9b0fb970\n--- /dev/null\n+++ b/external/vpx-rctycn/table.yml\n@@ -0,0 +1,23 @@\n+---\n+backglassChecksum: \"3CC412DF6BBB9C7C13771932428154DC\"\n+backglassNotes: \"Download Rollercoaster Tycoon (Stern 2002) full dmd.zip (v1.0.0)\"\n+backglassVPSId: \"Jp7_e1MY96\"\n+coloredROMChecksum:\n+  - \"323E147C5204AB6093BD8F8A9F45E5CD\"\n+  - \"7204D721984E1E692681307D2C43B349\"\n+coloredROMNotes: \"Download rctycn vpin 2019 11 21.zip\"\n+coloredROMPin2DMD: true\n+coloredROMVPSId: \"_eIU2-bfAC\"\n+fps: 60\n+romChecksum: \"F09F559574952E24060CA41457C9C6AB\"\n+romNotes: \"Download rctycn.zip\"\n+romVPSId: \"xAQkjAzN\"\n+tableNotes: \"Download Rollercoaster Tycoon (Stern 2002) v600.zip\"\n+tableVPSId: \"ta8-Js_-\"\n+tagline: \"Be a tycoon!\"\n+testers:\n+  - \"Bla1ze\"\n+  - \"MissleToad\"\n+tutorialVPSId: \"wMpzy6ynfc\"\n+vpxChecksum: \"9F2D10C2B044414004E61156CB3FC49E\"\n+vpxVPSId: \"d45qfpP_\"\n"},
+          {"status": "M", "path": "external/vpx-rctycn/README.md", "diff": "diff --git a/external/vpx-rctycn/README.md b/external/vpx-rctycn/README.md\nindex 68e291f4..3d43dbfd 100644\n--- a/external/vpx-rctycn/README.md\n+++ b/external/vpx-rctycn/README.md\n@@ -1,35 +1,61 @@\n-﻿# Rollercoaster Tycoon (Stern 2002)\n+# RollerCoaster Tycoon (Stern 2002)\n \n-![Table Preview](../../images/preview-rollercoaster-tycoon-preview.jpg)\n+![Table Preview](../../images/d45qfpP_-preview.webp)\n \n-Author(s): [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13920)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 1.0.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/15971-rollercoaster-tycoon-stern-2002-b2s-with-full-dmd/)\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n-ROM  \n+<br>\n \n-Version 7.2.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1125)\n+**VPXS 4KP Testers:**\n+  - Bla1ze\n+  - MissleToad\n \n+<br>\n \n-## Status \n+---\n \n-Minimum VPX Standalone build: 10.8.0-1983-b84441e  \n+<br>\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n+## ❇️ Available in the Wizard! 🪄✨\n \n-## Instructions\n+<br>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- \"If you build it, they will come!\"\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`RollerCoaster Tycoon (Stern 2002)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Be a tycoon!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-rctycn/launcher.png"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-rctycn/README.md", "diff": "diff --git a/external/vpx-rctycn/README.md b/external/vpx-rctycn/README.md\nindex 3c774e64..68e291f4 100644\n--- a/external/vpx-rctycn/README.md\n+++ b/external/vpx-rctycn/README.md\n@@ -1,4 +1,4 @@\n-# Rollercoaster Tycoon (Stern 2002)\n+﻿# Rollercoaster Tycoon (Stern 2002)\n \n ![Table Preview](../../images/preview-rollercoaster-tycoon-preview.jpg)\n \n@@ -29,7 +29,7 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"If you build it, they will come!\"\n "}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-rctycn/README.md", "diff": "diff --git a/external/vpx-rctycn/README.md b/external/vpx-rctycn/README.md\nindex 97d1b0b8..3c774e64 100644\n--- a/external/vpx-rctycn/README.md\n+++ b/external/vpx-rctycn/README.md\n@@ -28,8 +28,8 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"If you build it, they will come!\"\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-rctycn/README.md", "diff": "diff --git a/external/vpx-rctycn/README.md b/external/vpx-rctycn/README.md\nindex 0770d6f4..97d1b0b8 100644\n--- a/external/vpx-rctycn/README.md\n+++ b/external/vpx-rctycn/README.md\n@@ -28,4 +28,8 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"If you build it, they will come!\"\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-rctycn/README.md", "diff": "diff --git a/external/vpx-rctycn/README.md b/external/vpx-rctycn/README.md\nindex 2f6afc70..0770d6f4 100644\n--- a/external/vpx-rctycn/README.md\n+++ b/external/vpx-rctycn/README.md\n@@ -28,9 +28,4 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n ## Instructions\n \n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-rctycn.elf\n-- Download the table and directb2s versions listed above, extract them (if necessary), and copy them to external/vpx-rctycn\n-- Make sure (.vpx), and (.directb2s) files are all named the same\n-- Rom files stays in zip folder, place zip file in vpx-rctycn/pinmame/roms\n - \"If you build it, they will come!\""}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-rctycn/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-rctycn/pinmame/cfg/.gitkeep b/external/vpx-rctycn/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-rctycn/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-rctycn/pinmame/ini/.gitkeep b/external/vpx-rctycn/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-rctycn/pinmame/ini/rctycn.ini", "diff": "diff --git a/external/vpx-rctycn/pinmame/ini/rctycn.ini b/external/vpx-rctycn/pinmame/ini/rctycn.ini\ndeleted file mode 100644\nindex d964f733..00000000\n--- a/external/vpx-rctycn/pinmame/ini/rctycn.ini\n+++ /dev/null\n@@ -1,7 +0,0 @@\n-[settings]\n-sound=1\n-rol=0\n-cheat=0\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-rctycn/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-rctycn/pinmame/nvram/.gitkeep b/external/vpx-rctycn/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-rctycn/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-rctycn/pinmame/roms/.gitkeep b/external/vpx-rctycn/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-rctycn/vpx-rctycn.xml", "diff": "diff --git a/external/vpx-rctycn/vpx-rctycn.xml b/external/vpx-rctycn/vpx-rctycn.xml\ndeleted file mode 100644\nindex 4162853e..00000000\n--- a/external/vpx-rctycn/vpx-rctycn.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Rollercoaster Tycoon (Stern 2002)</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-rctycn/vpx-rctycn.png->external/vpx-rctycn/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-rctycn/vpx-rctycn.png->external/vpx-rctycn/launcher.png"}
+        ]
+      },
+      {
+        "hash": "6ef00db91750fc105f455c1941afe841619df7ff",
+        "date": "2025-03-02 18:39:13 -0500",
+        "author": "shavendave",
+        "message": "Updating JP Rollercoaster Tycoon to 5.5\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-rctycn/README.md", "diff": "diff --git a/external/vpx-rctycn/README.md b/external/vpx-rctycn/README.md\nindex 5954a657..2f6afc70 100644\n--- a/external/vpx-rctycn/README.md\n+++ b/external/vpx-rctycn/README.md\n@@ -3,7 +3,7 @@\n ![Table Preview](../../images/preview-rollercoaster-tycoon-preview.jpg)\n \n Author(s): [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 4.3.0  \n+Version: 5.5.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13920)\n \n DirectB2S\n"}
+        ]
+      },
+      {
+        "hash": "29e1b2773f43c63292f1d654d413f9ba1e429842",
+        "date": "2025-01-25 17:41:05 -0600",
+        "author": "bhhobb",
+        "message": "Update README.md preview image",
+        "files": [
+          {"status": "M", "path": "external/vpx-rctycn/README.md", "diff": "diff --git a/external/vpx-rctycn/README.md b/external/vpx-rctycn/README.md\nindex 8e5099e7..5954a657 100644\n--- a/external/vpx-rctycn/README.md\n+++ b/external/vpx-rctycn/README.md\n@@ -1,6 +1,6 @@\n # Rollercoaster Tycoon (Stern 2002)\n \n-![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=113867&id=13920&full=1)\n+![Table Preview](../../images/preview-rollercoaster-tycoon-preview.jpg)\n \n Author(s): [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n Version: 4.3.0  \n"}
+        ]
+      },
+      {
+        "hash": "6bf03d3bef8fcbb54689569892d12d9c07b0c6b8",
+        "date": "2024-12-01 17:43:43 -0500",
+        "author": "lilalien",
+        "message": "Update vpx-rctycn.xml",
+        "files": [
+          {"status": "M", "path": "external/vpx-rctycn/vpx-rctycn.xml", "diff": "diff --git a/external/vpx-rctycn/vpx-rctycn.xml b/external/vpx-rctycn/vpx-rctycn.xml\nindex 3428e611..4162853e 100644\n--- a/external/vpx-rctycn/vpx-rctycn.xml\n+++ b/external/vpx-rctycn/vpx-rctycn.xml\n@@ -1,3 +1,3 @@\n <root>\n-        <name>Rollercoaster Tycoon</name>\n+        <name>Rollercoaster Tycoon (Stern 2002)</name>\n </root>\n"}
+        ]
+      },
+      {
+        "hash": "d700a693b1d1f00ebe77687f40f61a8d0cbedd5d",
+        "date": "2024-12-01 17:43:04 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-rctycn",
+        "files": [
+          {"status": "M", "path": "external/vpx-rctycn/README.md", "diff": "diff --git a/external/vpx-rctycn/README.md b/external/vpx-rctycn/README.md\nindex ea6eafab..8e5099e7 100644\n--- a/external/vpx-rctycn/README.md\n+++ b/external/vpx-rctycn/README.md\n@@ -1,9 +1,9 @@\n-# Rollercoaster Tycoon (Stern 2008)\n+# Rollercoaster Tycoon (Stern 2002)\n \n ![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=113867&id=13920&full=1)\n \n Author(s): [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 4.3.0   \n+Version: 4.3.0  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13920)\n \n DirectB2S\n@@ -30,7 +30,7 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-rctycn.elf\n-- Download the table and directb2s versions listed above, extract them, and copy them into this folder\n+- Download the table and directb2s versions listed above, extract them (if necessary), and copy them to external/vpx-rctycn\n - Make sure (.vpx), and (.directb2s) files are all named the same\n - Rom files stays in zip folder, place zip file in vpx-rctycn/pinmame/roms\n - \"If you build it, they will come!\"\n"}
+        ]
+      },
+      {
+        "hash": "956eeee4af47a474336d3e04f51057afbf23fedc",
+        "date": "2024-09-03 19:55:53 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Updating instructions for vpx-rctycn",
+        "files": [
+          {"status": "M", "path": "external/vpx-rctycn/README.md", "diff": "diff --git a/external/vpx-rctycn/README.md b/external/vpx-rctycn/README.md\nindex 4aea301e..ea6eafab 100644\n--- a/external/vpx-rctycn/README.md\n+++ b/external/vpx-rctycn/README.md\n@@ -2,9 +2,9 @@\n \n ![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=113867&id=13920&full=1)\n \n-Author(s): jpsalas(https://www.vpforums.org/index.php?showuser=277)  \n-Version: 4.3.0 \n-Download: [VP Universe](https://www.vpforums.org/index.php?app=downloads&showfile=13920)\n+Author(s): [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n+Version: 4.3.0   \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13920)\n \n DirectB2S\n \n@@ -12,14 +12,16 @@ Authors: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n Version: 1.0.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/15971-rollercoaster-tycoon-stern-2002-b2s-with-full-dmd/)\n \n-ROM:\n-Version 7.2.0\n-Download (https://www.vpforums.org/index.php?app=downloads&showfile=1125)\n+ROM  \n+\n+Version 7.2.0  \n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1125)\n \n \n ## Status \n \n-Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+Minimum VPX Standalone build: 10.8.0-1983-b84441e  \n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n@@ -28,6 +30,7 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-rctycn.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n-- Rom file stays in zip folder, place zip file in vpx-rctycn/pinmame/roms\n-- \"If you build it, they will come!\"\n\\ No newline at end of file\n+- Download the table and directb2s versions listed above, extract them, and copy them into this folder\n+- Make sure (.vpx), and (.directb2s) files are all named the same\n+- Rom files stays in zip folder, place zip file in vpx-rctycn/pinmame/roms\n+- \"If you build it, they will come!\"\n"}
+        ]
+      },
+      {
+        "hash": "94dd11f95998bae99a3c7506560140275da4d801",
+        "date": "2024-07-28 16:27:59 -0400",
+        "author": "Kaoticbpr",
+        "message": "Update README.md\n\nupdated readme to include the link to the correct rom\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-rctycn/README.md", "diff": "diff --git a/external/vpx-rctycn/README.md b/external/vpx-rctycn/README.md\nindex 9c0f42db..4aea301e 100644\n--- a/external/vpx-rctycn/README.md\n+++ b/external/vpx-rctycn/README.md\n@@ -12,6 +12,10 @@ Authors: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n Version: 1.0.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/15971-rollercoaster-tycoon-stern-2002-b2s-with-full-dmd/)\n \n+ROM:\n+Version 7.2.0\n+Download (https://www.vpforums.org/index.php?app=downloads&showfile=1125)\n+\n \n ## Status \n \n@@ -25,4 +29,5 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-rctycn.elf\n - Download the table and directb2s versions listed above and copy them into this folder\n+- Rom file stays in zip folder, place zip file in vpx-rctycn/pinmame/roms\n - \"If you build it, they will come!\"\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "7617492afdbf12089392172fc870cc52c78ea9e9",
+        "date": "2024-07-27 00:30:12 -0400",
+        "author": "Kaoticbpr",
+        "message": "Delete rctycn.zip\n\ndeleted\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-rctycn/pinmame/roms/rctycn.zip"}
+        ]
+      },
+      {
+        "hash": "7122e47e7c5a244312b4ede82320d986a0a8ada5",
+        "date": "2024-07-27 00:29:28 -0400",
+        "author": "Kaoticbpr",
+        "message": "Delete rollercoastertycoontablepreview.jpg\n\ndeleted\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-rctycn/rollercoastertycoontablepreview.jpg"}
+        ]
+      },
+      {
+        "hash": "589545d7ce3bc3fea1853d3e3530dd2a3d5a52f9",
+        "date": "2024-07-26 01:41:21 -0400",
+        "author": "Kaoticbpr",
+        "message": "adding Rollercoaster Tycoon Pinball to repository\n\nadding rollercoaster tycoon pinball to main repository\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-rctycn/README.md", "diff": "diff --git a/external/vpx-rctycn/README.md b/external/vpx-rctycn/README.md\nnew file mode 100644\nindex 00000000..9c0f42db\n--- /dev/null\n+++ b/external/vpx-rctycn/README.md\n@@ -0,0 +1,28 @@\n+# Rollercoaster Tycoon (Stern 2008)\n+\n+![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=113867&id=13920&full=1)\n+\n+Author(s): jpsalas(https://www.vpforums.org/index.php?showuser=277)  \n+Version: 4.3.0 \n+Download: [VP Universe](https://www.vpforums.org/index.php?app=downloads&showfile=13920)\n+\n+DirectB2S\n+\n+Authors: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+Version: 1.0.0  \n+Download: [VP Universe](https://vpuniverse.com/files/file/15971-rollercoaster-tycoon-stern-2002-b2s-with-full-dmd/)\n+\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-rctycn.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- \"If you build it, they will come!\"\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-rctycn/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-rctycn/pinmame/cfg/.gitkeep b/external/vpx-rctycn/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-rctycn/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-rctycn/pinmame/ini/.gitkeep b/external/vpx-rctycn/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-rctycn/pinmame/ini/rctycn.ini", "diff": "diff --git a/external/vpx-rctycn/pinmame/ini/rctycn.ini b/external/vpx-rctycn/pinmame/ini/rctycn.ini\nnew file mode 100644\nindex 00000000..d964f733\n--- /dev/null\n+++ b/external/vpx-rctycn/pinmame/ini/rctycn.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+sound=1\n+rol=0\n+cheat=0\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-rctycn/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-rctycn/pinmame/nvram/.gitkeep b/external/vpx-rctycn/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-rctycn/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-rctycn/pinmame/roms/.gitkeep b/external/vpx-rctycn/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-rctycn/pinmame/roms/rctycn.zip"},
+          {"status": "A", "path": "external/vpx-rctycn/rollercoastertycoontablepreview.jpg"},
+          {"status": "A", "path": "external/vpx-rctycn/vpx-rctycn.png"},
+          {"status": "A", "path": "external/vpx-rctycn/vpx-rctycn.xml", "diff": "diff --git a/external/vpx-rctycn/vpx-rctycn.xml b/external/vpx-rctycn/vpx-rctycn.xml\nnew file mode 100644\nindex 00000000..3428e611\n--- /dev/null\n+++ b/external/vpx-rctycn/vpx-rctycn.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Rollercoaster Tycoon</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

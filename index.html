@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Table Manager — Beta Wrap</title>
+<meta name="description" content="Table Manager exits beta. Two years, 250 members, 315 wizard-ready tables — every number pulled straight from the repo history.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <div class="logo-mark" aria-hidden="true"></div>
+    <span class="wordmark">Table Manager</span>
+    <span class="badge-beta mono">BETA WRAP</span>
+  </div>
+  <nav class="header-nav" id="mainNav">
+    <a href="#overview" data-page="overview">Overview</a>
+    <a href="#catalog" data-page="catalog">Catalog History</a>
+    <a href="#timeline" data-page="timeline">Timeline</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ================= OVERVIEW ================= -->
+  <section class="page" id="page-overview">
+    <div class="hero container">
+      <canvas class="fireworks" aria-hidden="true"></canvas>
+      <div class="hero-col">
+        <div class="eyebrow">OUT OF BETA · SEPTEMBER 2026</div>
+        <h1>Two years, 250 beta members, one very full USB drive. <span class="thanks">Thank you ♥</span></h1>
+        <p class="hero-body">Table Manager leaves beta this week. Everything below comes straight out of the repo history — every commit, every table, every late night that went into getting VPX Standalone running on the Legends Pinball 4K and HDP.</p>
+        <div class="btn-row">
+          <button class="btn-hero-primary" data-nav="catalog">Catalog history</button>
+          <button class="btn-hero-primary" data-nav="timeline">See the timeline</button>
+        </div>
+      </div>
+      <div class="hero-col">
+        <div class="shot-label mono">BETA WRAP · DASHBOARD</div>
+        <div class="shot-frame"><img src="assets/dashboard-preview.png" alt="Table Manager dashboard"></div>
+      </div>
+    </div>
+
+    <div class="kpi-strip container" id="kpiOverview"></div>
+
+    <div class="section container">
+      <div class="eyebrow">THE SHAPE OF THE BETA</div>
+      <h2>7,819 commits, month by month</h2>
+      <p class="body-copy">The first summer built the foundation. Spring 2025 was the table rush. This year has been polish, launcher art, and getting the catalog ready to ship.</p>
+      <div class="bar-chart" id="monthlyChart" style="height:230px"></div>
+      <div class="axis-row" id="monthlyAxis"></div>
+    </div>
+
+    <div class="two-col container">
+      <div>
+        <h2>Who showed up.</h2>
+        <div class="sub">Top 12 by commits authored, merge commits excluded.</div>
+        <div class="lb-rows" id="contributorRows"></div>
+        <div class="footnote mono">1,926 PULL REQUESTS MERGED ACROSS THE BETA</div>
+      </div>
+      <div>
+        <h2>Pull requests reviewed.</h2>
+        <div class="sub">The other half of the work. lilalien reviewed 1,131 pull requests over the beta — more than one for every day of it.</div>
+        <div class="lb-rows" id="reviewerRows"></div>
+      </div>
+    </div>
+
+    <div class="section container">
+      <div class="eyebrow">THE ROOM AROUND THE REPO</div>
+      <h2>250 people in the beta</h2>
+      <p class="body-copy" style="max-width:660px">Sixty-three names show up in the commit log. Another 187 were in the Discord testing builds, reporting bugs, arguing about plunger calibration and telling everyone which tables to try next. The first six joined in May 2023, more than a year before the initial commit.</p>
+      <div class="bar-chart" id="discordChart" style="height:170px"></div>
+      <div class="axis-row" id="discordAxis"></div>
+      <div class="loading-note mono" style="padding:14px 0 0">CUMULATIVE MEMBERS · MONTHS WITH 13+ JOINS LABELLED · BUSIEST DAY 14 JUL 2024 (8 JOINED)</div>
+
+      <div class="discord-cols">
+        <div>
+          <h3>157,207 messages</h3>
+          <div id="discordChannels"></div>
+          <p class="body-copy" style="font-size:14px;margin-top:20px;margin-bottom:0">Counted to 10 September 2026. The beta channel alone carried nearly half of it.</p>
+        </div>
+        <div>
+          <h3>Who did the talking.</h3>
+          <div class="lb-rows" id="discordPosters"></div>
+          <p class="body-copy" style="font-size:14px;margin-top:20px;margin-bottom:0">Messages across all channels. Six people account for roughly 142,000 of them.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section container">
+      <div class="eyebrow">EVERY NAME IN THE HISTORY</div>
+      <h2>All 63 contributors</h2>
+      <p class="body-copy" style="margin:0 0 34px">Total commits including merges, so these run higher than the authored counts above.</p>
+      <div class="chip-wall" id="contributorWall"></div>
+    </div>
+
+    <div class="section container" style="border-bottom:none">
+      <h2>When the work happened</h2>
+      <p class="body-copy" style="max-width:660px">Commits by hour of day, then by weekday. This is a nights-and-weekends project, and it shows: 5am is the quietest hour of the whole beta, 4pm the busiest.</p>
+      <div class="bar-chart" id="hourChart" style="height:180px"></div>
+      <div class="axis-row with-rule" id="hourAxis"></div>
+      <div class="weekday-grid" id="weekdayGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= CATALOG ================= -->
+  <section class="page" id="page-catalog">
+    <div class="catalog-header container">
+      <div class="eyebrow">CATALOG HISTORY</div>
+      <h1>315 tables, and the full history of every one</h1>
+      <p>Each table carries its own record: the launcher art as it evolved, the config as it was tuned, and every commit that touched it. Open a table to see its history.</p>
+    </div>
+
+    <div class="catalog-controls container">
+      <label class="visually-hidden" for="catalogSearch">Search tables</label>
+      <input class="search-input" id="catalogSearch" type="text" placeholder="Search tables…" autocomplete="off">
+      <div class="letter-filter" id="letterFilter"></div>
+      <div class="result-count" id="resultCount"></div>
+    </div>
+
+    <div class="table-list container" id="tableList"></div>
+  </section>
+
+  <!-- ================= TIMELINE ================= -->
+  <section class="page" id="page-timeline">
+    <div class="timeline-header container">
+      <div class="eyebrow">TIMELINE · JUL 2024 — SEP 2026</div>
+      <h1>788 days from the initial commit to the Public Release</h1>
+      <p>Somebody pushed something on 487 of those days. Here are the moments the history actually turns on.</p>
+    </div>
+
+    <div class="kpi-strip kpi-4 container" id="kpiTimeline"></div>
+
+    <div class="event-spine container" id="eventSpine"></div>
+
+    <div class="section container">
+      <h2 style="font-size:30px">48 wizard releases</h2>
+      <p class="body-copy" style="max-width:660px;margin-bottom:14px">Every release from the first tag to the last, carrying 270 table additions and 392 table updates between them. v1.0.0 arrives with 61 tables; v2.0.0 revises 74 in a single pass.</p>
+      <div class="chart-legend">
+        <span class="legend-item"><span class="legend-swatch" style="background:#4de3ff"></span>Tables added</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:#2c5f6b"></span>Tables updated</span>
+      </div>
+      <div class="bar-chart" id="releaseChart" style="height:170px"></div>
+      <div class="axis-row" id="releaseAxis"></div>
+    </div>
+
+    <div class="section container">
+      <h2 style="font-size:30px">When people joined</h2>
+      <p class="body-copy" style="max-width:640px">First-ever commit, by month. Thirteen people were there in month one; January 2025 brought the largest intake of the whole beta at sixteen.</p>
+      <div class="bar-chart" id="joinsChart" style="height:150px"></div>
+      <div class="axis-row" id="joinsAxis"></div>
+    </div>
+
+    <div class="section container" style="border-bottom:none">
+      <h2 style="font-size:30px">Busiest days of the beta</h2>
+      <p class="body-copy" style="margin-bottom:34px">Commits landed in a single day.</p>
+      <div class="busiest-days" id="busiestDays"></div>
+    </div>
+  </section>
+
+</main>
+
+<div class="cta-block">
+  <h2>Beta's over. Go play something.</h2>
+  <p>315 wizard-ready tables, configs tuned for the 4K and HDP, and an installer that takes about a minute.</p>
+  <a class="btn-primary" href="https://vpxtablemanager.com/install-4kp/">Visit the install page</a>
+</div>
+<footer class="footer-row">
+  <div>Table Manager by Legends Unchained · for the AtGames Legends Pinball 4K and HDP</div>
+  <div class="footer-links">
+    <a href="https://vpxtablemanager.com/install-4kp/">Install</a>
+    <a href="https://vpxtablemanager.com/catalog/">Wizard Catalog</a>
+    <a href="https://vpxstats.legendsunchained.com">Play Stats</a>
+  </div>
+</footer>
+
+<script src="data/site-data.js"></script>
+<script src="data/releases.js"></script>
+<script src="data/table_index.js"></script>
+<script src="data/table_meta.js"></script>
+<script src="js/fireworks.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{
+    "commit_count": 6,
+    "commits": [
+      {
+        "hash": "2c6cdf7fba6e37e0cda9335e89398622c331622e",
+        "date": "2026-09-09 22:10:48 -0400",
+        "author": "evilwraith",
+        "message": "Coffee Joe Launcher updates\n\nPlayboy 2002\nSexy Girl\nSexy Girl Music Mod\nTerminator 2\nBaywatch\nCity Slicker\nFlash Gordon\nFuturama\nJaws 50th\nJohn Wick\nDeadpool\nBig Bang Bar\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sexygirlnude/launcher.png"}
+        ]
+      },
+      {
+        "hash": "19e17c2abb6fccfb94e282d9c3bfc06a5e1d2a6f",
+        "date": "2026-07-18 16:27:28 -0400",
+        "author": "n-i-x",
+        "message": "update tableNameOverride for Sexy Girl\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sexygirlnude/table.yml", "diff": "diff --git a/external/vpx-sexygirlnude/table.yml b/external/vpx-sexygirlnude/table.yml\nindex 35fcb17e..223ef6d6 100644\n--- a/external/vpx-sexygirlnude/table.yml\n+++ b/external/vpx-sexygirlnude/table.yml\n@@ -5,7 +5,7 @@ fps: 60\n nsfw: true\n romChecksum: \"F8BDCFBDDFD6F6FA0E58897452B723A2\"\n romVPSId: \"dRFhBKvf\"\n-tableNameOverride: \"Sexy Girl Nude Mod (Arkon 1980)\"\n+tableNameOverride: \"Sexy Girl Nude Mod\"\n tableNotes: \"https://drive.google.com/file/d/13ghm2LKPU2WdHy75hwGBJQt-_yCxIanl/view\"\n tableVPSId: \"UVJGVYQc\"\n tagline: \"'Boobs'\"\n"}
+        ]
+      },
+      {
+        "hash": "d7945bc5fee5c018867be84f094799d2b5a5d14b",
+        "date": "2026-07-18 15:03:52 -0400",
+        "author": "n-i-x",
+        "message": "Add NSFW flags to wizard tables\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sexygirlnude/table.yml", "diff": "diff --git a/external/vpx-sexygirlnude/table.yml b/external/vpx-sexygirlnude/table.yml\nindex 8d7636dd..35fcb17e 100644\n--- a/external/vpx-sexygirlnude/table.yml\n+++ b/external/vpx-sexygirlnude/table.yml\n@@ -2,6 +2,7 @@\n backglassChecksum: \"B9FFB0E678C3CF95CC9BD79F0EB4F66B\"\n backglassVPSId: \"UTTfsW_5\"\n fps: 60\n+nsfw: true\n romChecksum: \"F8BDCFBDDFD6F6FA0E58897452B723A2\"\n romVPSId: \"dRFhBKvf\"\n tableNameOverride: \"Sexy Girl Nude Mod (Arkon 1980)\"\n@@ -11,4 +12,4 @@ tagline: \"'Boobs'\"\n testers:\n   - \"Wraith\"\n vpxChecksum: \"DAAB47BB80C288621A926B327505522B\"\n-vpxVPSId: \"pNjJ2n4R33\"\n+vpxVPSId: \"pNjJ2n4R33\"\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sexygirlnude/table.yml", "diff": "diff --git a/external/vpx-sexygirlnude/table.yml b/external/vpx-sexygirlnude/table.yml\nindex 0bd56b76..8d7636dd 100644\n--- a/external/vpx-sexygirlnude/table.yml\n+++ b/external/vpx-sexygirlnude/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"B9FFB0E678C3CF95CC9BD79F0EB4F66B\"\n-  - \"DBF5E99E6AAFD64FE226196D2ECDE1F1\"\n+backglassChecksum: \"B9FFB0E678C3CF95CC9BD79F0EB4F66B\"\n backglassVPSId: \"UTTfsW_5\"\n fps: 60\n romChecksum: \"F8BDCFBDDFD6F6FA0E58897452B723A2\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-sexygirlnude/table.yml", "diff": "diff --git a/external/vpx-sexygirlnude/table.yml b/external/vpx-sexygirlnude/table.yml\nindex 8d7636dd..0bd56b76 100644\n--- a/external/vpx-sexygirlnude/table.yml\n+++ b/external/vpx-sexygirlnude/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"B9FFB0E678C3CF95CC9BD79F0EB4F66B\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"B9FFB0E678C3CF95CC9BD79F0EB4F66B\"\n+  - \"DBF5E99E6AAFD64FE226196D2ECDE1F1\"\n backglassVPSId: \"UTTfsW_5\"\n fps: 60\n romChecksum: \"F8BDCFBDDFD6F6FA0E58897452B723A2\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-sexygirlnude/README.md", "diff": "diff --git a/external/vpx-sexygirlnude/README.md b/external/vpx-sexygirlnude/README.md\nnew file mode 100644\nindex 00000000..1a7418b3\n--- /dev/null\n+++ b/external/vpx-sexygirlnude/README.md\n@@ -0,0 +1,60 @@\n+# Sexy Girl Nude Mod (Arkon 1980) (Arkon 1980)\n+\n+![Table Preview](../../images/pNjJ2n4R33-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Wraith\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Sexy Girl Nude Mod (Arkon 1980) (Arkon 1980)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"'Boobs'\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "A", "path": "external/vpx-sexygirlnude/dmd.png"},
+          {"status": "A", "path": "external/vpx-sexygirlnude/launcher.png"},
+          {"status": "A", "path": "external/vpx-sexygirlnude/table.ini", "diff": "diff --git a/external/vpx-sexygirlnude/table.ini b/external/vpx-sexygirlnude/table.ini\nnew file mode 100644\nindex 00000000..4a33af7b\n--- /dev/null\n+++ b/external/vpx-sexygirlnude/table.ini\n@@ -0,0 +1,23 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+OverrideTableEmissionScale = 0\n+ScreenPlayerY = 29.957560\n+ScreenPlayerZ = 100.033417\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+DynamicDayNight = 0\n+EmissionScale = 0.302865\n+\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.219897\n+ViewCabScaleY = 1.070263\n+ViewCabScaleZ = 1.043933\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = -0.036200\n+ViewCabVOfs = -70.034836\n+ViewCabWindowTop = 157.817978\n+ViewCabWindowBot = 111.446228\n+ToneMapper = 0"},
+          {"status": "A", "path": "external/vpx-sexygirlnude/table.yml", "diff": "diff --git a/external/vpx-sexygirlnude/table.yml b/external/vpx-sexygirlnude/table.yml\nnew file mode 100644\nindex 00000000..8d7636dd\n--- /dev/null\n+++ b/external/vpx-sexygirlnude/table.yml\n@@ -0,0 +1,14 @@\n+---\n+backglassChecksum: \"B9FFB0E678C3CF95CC9BD79F0EB4F66B\"\n+backglassVPSId: \"UTTfsW_5\"\n+fps: 60\n+romChecksum: \"F8BDCFBDDFD6F6FA0E58897452B723A2\"\n+romVPSId: \"dRFhBKvf\"\n+tableNameOverride: \"Sexy Girl Nude Mod (Arkon 1980)\"\n+tableNotes: \"https://drive.google.com/file/d/13ghm2LKPU2WdHy75hwGBJQt-_yCxIanl/view\"\n+tableVPSId: \"UVJGVYQc\"\n+tagline: \"'Boobs'\"\n+testers:\n+  - \"Wraith\"\n+vpxChecksum: \"DAAB47BB80C288621A926B327505522B\"\n+vpxVPSId: \"pNjJ2n4R33\""}
+        ]
+      }
+    ]
+}

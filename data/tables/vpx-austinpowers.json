@@ -1,0 +1,232 @@
+{
+    "commit_count": 22,
+    "commits": [
+      {
+        "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
+        "date": "2026-07-17 22:08:52 -0400",
+        "author": "evilwraith",
+        "message": "revert checksum changes\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/table.yml", "diff": "diff --git a/external/vpx-austinpowers/table.yml b/external/vpx-austinpowers/table.yml\nindex 99a5721c..955a071b 100644\n--- a/external/vpx-austinpowers/table.yml\n+++ b/external/vpx-austinpowers/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"7F7BCF2CDE8D9E8EC0CCD73ACC6CFC9E\"\n-  - \"2DBFF3609ABB34ECFBBDBBF871ED2B44\"\n+backglassChecksum: \"7F7BCF2CDE8D9E8EC0CCD73ACC6CFC9E\"\n backglassNotes: \"Download v1.0.0\"\n backglassVPSId: \"gm4jJJzjHE\"\n coloredROMChecksum: \n@@ -21,8 +18,5 @@ tagline: \"Yeah baby yeah!\"\n testers:\n   - \"Bla1ze\"\n   - \"T3chZombie\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"65B351393D088BB227CDC775D7FA60D9\"\n-  - \"F68BD6F1BBC2646DEBD5F72393149C01\"\n+vpxChecksum: \"65B351393D088BB227CDC775D7FA60D9\"\n vpxVPSId: \"LMBHaBou\""}
+        ]
+      },
+      {
+        "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
+        "date": "2026-07-17 16:20:12 -0400",
+        "author": "evilwraith",
+        "message": "compressed file checksums\n\nadded compressed file checksums\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/table.yml", "diff": "diff --git a/external/vpx-austinpowers/table.yml b/external/vpx-austinpowers/table.yml\nindex 955a071b..99a5721c 100644\n--- a/external/vpx-austinpowers/table.yml\n+++ b/external/vpx-austinpowers/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"7F7BCF2CDE8D9E8EC0CCD73ACC6CFC9E\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"7F7BCF2CDE8D9E8EC0CCD73ACC6CFC9E\"\n+  - \"2DBFF3609ABB34ECFBBDBBF871ED2B44\"\n backglassNotes: \"Download v1.0.0\"\n backglassVPSId: \"gm4jJJzjHE\"\n coloredROMChecksum: \n@@ -18,5 +21,8 @@ tagline: \"Yeah baby yeah!\"\n testers:\n   - \"Bla1ze\"\n   - \"T3chZombie\"\n-vpxChecksum: \"65B351393D088BB227CDC775D7FA60D9\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"65B351393D088BB227CDC775D7FA60D9\"\n+  - \"F68BD6F1BBC2646DEBD5F72393149C01\"\n vpxVPSId: \"LMBHaBou\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/table.ini", "diff": "diff --git a/external/vpx-austinpowers/table.ini b/external/vpx-austinpowers/table.ini\nindex 3472bae1..0d6efbd4 100644\n--- a/external/vpx-austinpowers/table.ini\n+++ b/external/vpx-austinpowers/table.ini\n@@ -7,19 +7,15 @@ EmissionScale = 0.612335\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n-AAFactor = .95\n+ScreenPlayerY = 15.003008\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.222989\n-ViewCabScaleY = 1.100000\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.136850\n+ViewCabScaleY = 1.003044\n+ViewCabScaleZ = 0.896116\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -54.721062\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 103.953217\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n-WindowRenderMode = 0\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 209.654755\n+ViewCabWindowBot = 0.230177"},
+          {"status": "M", "path": "external/vpx-austinpowers/table.yml", "diff": "diff --git a/external/vpx-austinpowers/table.yml b/external/vpx-austinpowers/table.yml\nindex fe000206..955a071b 100644\n--- a/external/vpx-austinpowers/table.yml\n+++ b/external/vpx-austinpowers/table.yml\n@@ -1,9 +1,13 @@\n ---\n-applyFixes:\n-  - \"bass\"\n backglassChecksum: \"7F7BCF2CDE8D9E8EC0CCD73ACC6CFC9E\"\n backglassNotes: \"Download v1.0.0\"\n backglassVPSId: \"gm4jJJzjHE\"\n+coloredROMChecksum: \n+  - \"81805F074DF39B0FF2ACCDD56907A204\"\n+  - \"C58BCF439648B8CF41E13B6A8DA281C3\"\n+coloredROMPin2DMD: true\n+coloredROMNotes: \"Download 'Vpin.zip'\"\n+coloredROMVPSId: \"rV6a4F5tRd\"\n fps: 60\n romChecksum: \"6C9BD12BDF41799D6218D03320B94664\"\n romNotes: \"Download austin.zip\""}
+        ]
+      },
+      {
+        "hash": "e25bb24530f3a04f6abc5d0c1447a2e740b31894",
+        "date": "2025-10-17 10:04:11 +0100",
+        "author": "OminousOsie",
+        "message": "Moved window render mode to the right place\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/table.ini", "diff": "diff --git a/external/vpx-austinpowers/table.ini b/external/vpx-austinpowers/table.ini\nindex b172e8eb..3472bae1 100644\n--- a/external/vpx-austinpowers/table.ini\n+++ b/external/vpx-austinpowers/table.ini\n@@ -8,7 +8,6 @@ ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n AAFactor = .95\n-WindowRenderMode = 0\n \n [TableOverride]\n ViewCabMode = 2\n@@ -22,4 +21,5 @@ ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 103.953217\n \n [Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+BackBufferScale = 0.416666\n+WindowRenderMode = 0\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "5a88f897d9a6cbdf27a4016d875284eb306a9686",
+        "date": "2025-08-29 23:00:56 -0300",
+        "author": "Bla1ze",
+        "message": "Update launcher.png\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/launcher.png"}
+        ]
+      },
+      {
+        "hash": "d4589a2da238075c02890e618fdb0b410e7d139d",
+        "date": "2025-08-29 22:44:59 -0300",
+        "author": "Bla1ze",
+        "message": "Update nvram.nv\n\nFree Play\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/nvram.nv"}
+        ]
+      },
+      {
+        "hash": "a164481c0b262041ce1ecaf534ad572993388ae2",
+        "date": "2025-08-29 21:00:38 -0300",
+        "author": "Bla1ze",
+        "message": "Update table.ini\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/table.ini", "diff": "diff --git a/external/vpx-austinpowers/table.ini b/external/vpx-austinpowers/table.ini\nindex 9e652fb9..b172e8eb 100644\n--- a/external/vpx-austinpowers/table.ini\n+++ b/external/vpx-austinpowers/table.ini\n@@ -8,6 +8,7 @@ ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n AAFactor = .95\n+WindowRenderMode = 0\n \n [TableOverride]\n ViewCabMode = 2\n"}
+        ]
+      },
+      {
+        "hash": "13ff892af2a017f30e223a3b97aa53e97b4f8516",
+        "date": "2025-08-29 19:57:43 -0300",
+        "author": "Bla1ze",
+        "message": "Create table.yml\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-austinpowers/table.yml", "diff": "diff --git a/external/vpx-austinpowers/table.yml b/external/vpx-austinpowers/table.yml\nnew file mode 100644\nindex 00000000..fe000206\n--- /dev/null\n+++ b/external/vpx-austinpowers/table.yml\n@@ -0,0 +1,18 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassChecksum: \"7F7BCF2CDE8D9E8EC0CCD73ACC6CFC9E\"\n+backglassNotes: \"Download v1.0.0\"\n+backglassVPSId: \"gm4jJJzjHE\"\n+fps: 60\n+romChecksum: \"6C9BD12BDF41799D6218D03320B94664\"\n+romNotes: \"Download austin.zip\"\n+romVPSId: \"nAs31_qD\"\n+tableNotes: \"Download v4.0\"\n+tableVPSId: \"lg07-fz5\"\n+tagline: \"Yeah baby yeah!\"\n+testers:\n+  - \"Bla1ze\"\n+  - \"T3chZombie\"\n+vpxChecksum: \"65B351393D088BB227CDC775D7FA60D9\"\n+vpxVPSId: \"LMBHaBou\"\n"}
+        ]
+      },
+      {
+        "hash": "c044a4f56acfb59e0c9084bfd915075abeb46e65",
+        "date": "2025-08-29 19:45:55 -0300",
+        "author": "Bla1ze",
+        "message": "Initial Commit\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-austinpowers/pinmame.ini", "diff": "diff --git a/external/vpx-austinpowers/pinmame.ini b/external/vpx-austinpowers/pinmame.ini\nnew file mode 100644\nindex 00000000..f73d1544\n--- /dev/null\n+++ b/external/vpx-austinpowers/pinmame.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+cheat=0\n+sound=1\n+dmd_red=204\n+dmd_green=0\n+dmd_blue=204\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/README.md b/external/vpx-austinpowers/README.md\nindex 78ab0037..5f65b5d0 100644\n--- a/external/vpx-austinpowers/README.md\n+++ b/external/vpx-austinpowers/README.md\n@@ -1,35 +1,61 @@\n-﻿# Austin Powers (Stern 2001)\n+# Austin Powers (Stern 2001)\n \n-![Table Preview](../../images/vpx-austin-powers-preview.png)\n+![Table Preview](../../images/LMBHaBou-preview.webp)\n \n----\n+<br>\n \n-## Files\n-| File Type | Link | Version | Author |\n-|:---------:|:----:|:-------:|:------:|\n-| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15332) | 1.0.3 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n-| B2S | [VP Universe](https://vpuniverse.com/files/file/14003-austin-powers-stern-2001-b2s-with-full-dmd/) | 1.0.0 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n-| DMD | N/A | N/A | N/A |\n-| ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1115) | austin.zip | [destruk](https://www.vpforums.org/index.php?showuser=5) |\n+## *️⃣  Table Statistics\n \n-**Tested by:** [T3chZombie]\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n----\n+<br>\n \n-## Status \n-**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 37 |\n+**VPXS 4KP Testers:**\n+  - Bla1ze\n+  - T3chZombie\n+\n+<br>\n \n ---\n \n-## Instructions\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Austin Powers (Stern 2001)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Yeah baby yeah!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- \"Mr. Powers, I bid you adieu!\" --Dr. Evil\n-- \"Get in my belly!\" --Fat Bastard\n-- \"Oh Behave!\" \"Yeah baby yeah!\" --Austin Powers\n \n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-austinpowers/nvram.nv"},
+          {"status": "M", "path": "external/vpx-austinpowers/table.ini", "diff": "diff --git a/external/vpx-austinpowers/table.ini b/external/vpx-austinpowers/table.ini\nindex c20e7234..9e652fb9 100644\n--- a/external/vpx-austinpowers/table.ini\n+++ b/external/vpx-austinpowers/table.ini\n@@ -1,17 +1,24 @@\n [Player]\n BallTrailStrength = 0.490196\n-MusicVolume = 100\n-SoundVolume = 6\n+ScreenPlayerZ = 94.950912\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.612335\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+AAFactor = .95\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.753225\n-ViewCabScaleY = 0.914145\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 35.194008\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n+ViewCabMode = 2\n+ViewCabScaleX = 1.222989\n+ViewCabScaleY = 1.100000\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -54.721062\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 103.953217\n+\n+[Standalone]\n+BackBufferScale = 0.416666\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/README.md b/external/vpx-austinpowers/README.md\nindex 65098450..78ab0037 100644\n--- a/external/vpx-austinpowers/README.md\n+++ b/external/vpx-austinpowers/README.md\n@@ -1,4 +1,4 @@\n-# Austin Powers (Stern 2001)\n+﻿# Austin Powers (Stern 2001)\n \n ![Table Preview](../../images/vpx-austin-powers-preview.png)\n \n@@ -27,7 +27,7 @@\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Mr. Powers, I bid you adieu!\" --Dr. Evil\n - \"Get in my belly!\" --Fat Bastard"}
+        ]
+      },
+      {
+        "hash": "013f69af2b69e407d1b79d8aa0339da5a479d54d",
+        "date": "2025-06-14 18:59:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated launcher images with points work\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/launcher.png"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/README.md b/external/vpx-austinpowers/README.md\nindex 141be055..65098450 100644\n--- a/external/vpx-austinpowers/README.md\n+++ b/external/vpx-austinpowers/README.md\n@@ -26,8 +26,8 @@\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Mr. Powers, I bid you adieu!\" --Dr. Evil\n - \"Get in my belly!\" --Fat Bastard"}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/README.md b/external/vpx-austinpowers/README.md\nindex aa72ca60..141be055 100644\n--- a/external/vpx-austinpowers/README.md\n+++ b/external/vpx-austinpowers/README.md\n@@ -25,6 +25,11 @@\n ---\n \n ## Instructions\n+\n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"Mr. Powers, I bid you adieu!\" --Dr. Evil\n - \"Get in my belly!\" --Fat Bastard\n - \"Oh Behave!\" \"Yeah baby yeah!\" --Austin Powers\n+"}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/README.md b/external/vpx-austinpowers/README.md\nindex d2c95bd5..aa72ca60 100644\n--- a/external/vpx-austinpowers/README.md\n+++ b/external/vpx-austinpowers/README.md\n@@ -25,11 +25,6 @@\n ---\n \n ## Instructions\n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-austinpowers.elf\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-austinpowers\n-- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n-- Rom file stays in zip folder, place zip file in vpx-austinpowers/pinmame/roms\n - \"Mr. Powers, I bid you adieu!\" --Dr. Evil\n - \"Get in my belly!\" --Fat Bastard\n - \"Oh Behave!\" \"Yeah baby yeah!\" --Austin Powers"}
+        ]
+      },
+      {
+        "hash": "c39b72d777813f034464622e74569d472b437b43",
+        "date": "2025-03-20 00:43:11 -0500",
+        "author": "MoxAssault",
+        "message": "Additional README Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/README.md b/external/vpx-austinpowers/README.md\nindex fcd565cb..d2c95bd5 100644\n--- a/external/vpx-austinpowers/README.md\n+++ b/external/vpx-austinpowers/README.md\n@@ -2,30 +2,29 @@\n \n ![Table Preview](../../images/vpx-austin-powers-preview.png)\n \n-Author(s): [VPin Workshop](https://www.vpforums.org/index.php?showuser=153279)  \n-Version: 1.0.3  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15332)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15332) | 1.0.3 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| B2S | [VP Universe](https://vpuniverse.com/files/file/14003-austin-powers-stern-2001-b2s-with-full-dmd/) | 1.0.0 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1115) | austin.zip | [destruk](https://www.vpforums.org/index.php?showuser=5) |\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 1.0.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/14003-austin-powers-stern-2001-b2s-with-full-dmd/)\n+**Tested by:** [T3chZombie]\n \n-ROM:  \n-Version 3.02  \n-Download [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1115)\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1983-b84441e\n-\n+**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 37 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-austinpowers.elf\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-austinpowers\n"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-austinpowers/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-austinpowers/pinmame/cfg/.gitkeep b/external/vpx-austinpowers/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-austinpowers/pinmame/cfg/austin.cfg", "diff": "diff --git a/external/vpx-austinpowers/pinmame/cfg/austin.cfg b/external/vpx-austinpowers/pinmame/cfg/austin.cfg\ndeleted file mode 100644\nindex df348841..00000000\nBinary files a/external/vpx-austinpowers/pinmame/cfg/austin.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-austinpowers/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-austinpowers/pinmame/cfg/default.cfg b/external/vpx-austinpowers/pinmame/cfg/default.cfg\ndeleted file mode 100644\nindex de34d1c4..00000000\nBinary files a/external/vpx-austinpowers/pinmame/cfg/default.cfg and /dev/null differ"},
+          {"status": "D", "path": "external/vpx-austinpowers/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-austinpowers/pinmame/ini/.gitkeep b/external/vpx-austinpowers/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-austinpowers/pinmame/ini/austin.ini", "diff": "diff --git a/external/vpx-austinpowers/pinmame/ini/austin.ini b/external/vpx-austinpowers/pinmame/ini/austin.ini\ndeleted file mode 100644\nindex 9f9ff144..00000000\n--- a/external/vpx-austinpowers/pinmame/ini/austin.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-cheat=0\n-sound=5\n-dmd_red=255\n-dmd_green=88\n-dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "D", "path": "external/vpx-austinpowers/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-austinpowers/pinmame/nvram/.gitkeep b/external/vpx-austinpowers/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-austinpowers/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-austinpowers/pinmame/roms/.gitkeep b/external/vpx-austinpowers/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-austinpowers/vpx-austinpowers.xml", "diff": "diff --git a/external/vpx-austinpowers/vpx-austinpowers.xml b/external/vpx-austinpowers/vpx-austinpowers.xml\ndeleted file mode 100644\nindex 522e1ab5..00000000\n--- a/external/vpx-austinpowers/vpx-austinpowers.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Austin Powers</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-austinpowers/Austin Powers (Stern 2001)_VPWmod_1.0.3.ini->external/vpx-austinpowers/table.ini", "diff": "diff --git a/external/vpx-austinpowers/Austin Powers (Stern 2001)_VPWmod_1.0.3.ini b/external/vpx-austinpowers/table.ini\nsimilarity index 100%\nrename from external/vpx-austinpowers/Austin Powers (Stern 2001)_VPWmod_1.0.3.ini\nrename to external/vpx-austinpowers/table.ini"},
+          {"status": "R-from", "path": "external/vpx-austinpowers/pinmame/nvram/austin.nv->external/vpx-austinpowers/nvram.nv"},
+          {"status": "R-from", "path": "external/vpx-austinpowers/vpx-austinpowers.png->external/vpx-austinpowers/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-austinpowers/Austin Powers (Stern 2001)_VPWmod_1.0.3.ini->external/vpx-austinpowers/table.ini", "diff": "diff --git a/external/vpx-austinpowers/Austin Powers (Stern 2001)_VPWmod_1.0.3.ini b/external/vpx-austinpowers/table.ini\nsimilarity index 100%\nrename from external/vpx-austinpowers/Austin Powers (Stern 2001)_VPWmod_1.0.3.ini\nrename to external/vpx-austinpowers/table.ini"},
+          {"status": "R-to", "path": "external/vpx-austinpowers/pinmame/nvram/austin.nv->external/vpx-austinpowers/nvram.nv"},
+          {"status": "R-to", "path": "external/vpx-austinpowers/vpx-austinpowers.png->external/vpx-austinpowers/launcher.png"}
+        ]
+      },
+      {
+        "hash": "0b73490c5befd42ab0ef2c389830c0cab18e2ea1",
+        "date": "2025-01-26 14:45:23 -0600",
+        "author": "bhhobb",
+        "message": "Update README.md moved image",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/README.md b/external/vpx-austinpowers/README.md\nindex 63b7e72f..fcd565cb 100644\n--- a/external/vpx-austinpowers/README.md\n+++ b/external/vpx-austinpowers/README.md\n@@ -1,6 +1,6 @@\n # Austin Powers (Stern 2001)\n \n-![Table Preview](https://github.com/bhobman/vpx-previews/blob/1448c4d8c5e2f6d06d3acc94b4012999e2f920e7/vpx-austin-powers-preview.png)\n+![Table Preview](../../images/vpx-austin-powers-preview.png)\n \n Author(s): [VPin Workshop](https://www.vpforums.org/index.php?showuser=153279)  \n Version: 1.0.3  \n"}
+        ]
+      },
+      {
+        "hash": "e91b0423889976f9bd3bd04265b7a28cc9e893aa",
+        "date": "2025-01-17 23:12:18 -0500",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-austinpowers",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/README.md b/external/vpx-austinpowers/README.md\nindex 232c296e..63b7e72f 100644\n--- a/external/vpx-austinpowers/README.md\n+++ b/external/vpx-austinpowers/README.md\n@@ -28,7 +28,8 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-austinpowers.elf\n-- Download the table and directb2s versions listed above, extract and copy them into this folder\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-austinpowers\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n - Rom file stays in zip folder, place zip file in vpx-austinpowers/pinmame/roms\n - \"Mr. Powers, I bid you adieu!\" --Dr. Evil\n - \"Get in my belly!\" --Fat Bastard\n"}
+        ]
+      },
+      {
+        "hash": "2566d25aea8010f5e11b08b2876df4aceaa0f0f2",
+        "date": "2025-01-15 22:15:47 -0600",
+        "author": "bhhobb",
+        "message": "Update README.md Preview Image",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/README.md b/external/vpx-austinpowers/README.md\nindex aea13dad..232c296e 100644\n--- a/external/vpx-austinpowers/README.md\n+++ b/external/vpx-austinpowers/README.md\n@@ -1,6 +1,6 @@\n # Austin Powers (Stern 2001)\n \n-![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=81180&id=15332&full=1)\n+![Table Preview](https://github.com/bhobman/vpx-previews/blob/1448c4d8c5e2f6d06d3acc94b4012999e2f920e7/vpx-austin-powers-preview.png)\n \n Author(s): [VPin Workshop](https://www.vpforums.org/index.php?showuser=153279)  \n Version: 1.0.3  \n"}
+        ]
+      },
+      {
+        "hash": "13f57c0b7837c5686b380f5032725adee9ff9a0a",
+        "date": "2024-09-07 02:17:10 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Updating Instructions for vpx-austinpowers",
+        "files": [
+          {"status": "M", "path": "external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/README.md b/external/vpx-austinpowers/README.md\nindex ca1d17b2..aea13dad 100644\n--- a/external/vpx-austinpowers/README.md\n+++ b/external/vpx-austinpowers/README.md\n@@ -1,9 +1,9 @@\n-# Austin Powers (Stern 2001)_VPWmod\n+# Austin Powers (Stern 2001)\n \n ![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=81180&id=15332&full=1)\n \n Author(s): [VPin Workshop](https://www.vpforums.org/index.php?showuser=153279)  \n-Version: 1.0.3\n+Version: 1.0.3  \n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15332)\n \n DirectB2S\n@@ -12,14 +12,14 @@ Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n Version: 1.0.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/14003-austin-powers-stern-2001-b2s-with-full-dmd/)\n \n-ROM:\n-Version 3.02\n+ROM:  \n+Version 3.02  \n Download [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1115)\n \n-\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 37 |\n@@ -28,8 +28,8 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-austinpowers.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n+- Download the table and directb2s versions listed above, extract and copy them into this folder\n - Rom file stays in zip folder, place zip file in vpx-austinpowers/pinmame/roms\n - \"Mr. Powers, I bid you adieu!\" --Dr. Evil\n - \"Get in my belly!\" --Fat Bastard\n-- \"Oh Behave!\" \"Yeah baby yeah!\" --Austin Powers\n\\ No newline at end of file\n+- \"Oh Behave!\" \"Yeah baby yeah!\" --Austin Powers\n"}
+        ]
+      },
+      {
+        "hash": "74f3dba879908f4d039b7e6701a2076851152a87",
+        "date": "2024-08-05 11:18:14 -0500",
+        "author": "T3chZombie",
+        "message": "Adding vpx-creaturebw\n\nAlso fixed README.MD for Austin Powers\n",
+        "files": [
+          {"status": "R-from", "path": "external/vpx-austinpowers/Rom README.md->external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/Rom README.md b/external/vpx-austinpowers/README.md\nsimilarity index 83%\nrename from external/vpx-austinpowers/Rom README.md\nrename to external/vpx-austinpowers/README.md\nindex 618929c8..ca1d17b2 100644\n--- a/external/vpx-austinpowers/Rom README.md\t\n+++ b/external/vpx-austinpowers/README.md\n@@ -1,6 +1,6 @@\n # Austin Powers (Stern 2001)_VPWmod\n \n-![Table Preview](https://www.vpforums.org/index.php?s=d77dd11d3a10617da44805808363ef29&app=downloads&module=display&section=screenshot&record=114134&id=13043&full=1)\n+![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=81180&id=15332&full=1)\n \n Author(s): [VPin Workshop](https://www.vpforums.org/index.php?showuser=153279)  \n Version: 1.0.3\n@@ -14,7 +14,7 @@ Download: [VP Universe](https://vpuniverse.com/files/file/14003-austin-powers-st\n \n ROM:\n Version 3.02\n-Download (https://www.vpforums.org/index.php?app=downloads&showfile=1115)\n+Download [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1115)\n \n \n ## Status "},
+          {"status": "R-to", "path": "external/vpx-austinpowers/Rom README.md->external/vpx-austinpowers/README.md", "diff": "diff --git a/external/vpx-austinpowers/Rom README.md b/external/vpx-austinpowers/README.md\nsimilarity index 83%\nrename from external/vpx-austinpowers/Rom README.md\nrename to external/vpx-austinpowers/README.md\nindex 618929c8..ca1d17b2 100644\n--- a/external/vpx-austinpowers/Rom README.md\t\n+++ b/external/vpx-austinpowers/README.md\n@@ -1,6 +1,6 @@\n # Austin Powers (Stern 2001)_VPWmod\n \n-![Table Preview](https://www.vpforums.org/index.php?s=d77dd11d3a10617da44805808363ef29&app=downloads&module=display&section=screenshot&record=114134&id=13043&full=1)\n+![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=81180&id=15332&full=1)\n \n Author(s): [VPin Workshop](https://www.vpforums.org/index.php?showuser=153279)  \n Version: 1.0.3\n@@ -14,7 +14,7 @@ Download: [VP Universe](https://vpuniverse.com/files/file/14003-austin-powers-st\n \n ROM:\n Version 3.02\n-Download (https://www.vpforums.org/index.php?app=downloads&showfile=1115)\n+Download [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1115)\n \n \n ## Status "}
+        ]
+      },
+      {
+        "hash": "81fe5e15afd7c2b0c77dd351c88a7d69849333e8",
+        "date": "2024-08-05 02:56:18 -0500",
+        "author": "T3chZombie",
+        "message": "Adding vpx-austinpowers\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-austinpowers/Austin Powers (Stern 2001)_VPWmod_1.0.3.ini", "diff": "diff --git a/external/vpx-austinpowers/Austin Powers (Stern 2001)_VPWmod_1.0.3.ini b/external/vpx-austinpowers/Austin Powers (Stern 2001)_VPWmod_1.0.3.ini\nnew file mode 100644\nindex 00000000..c20e7234\n--- /dev/null\n+++ b/external/vpx-austinpowers/Austin Powers (Stern 2001)_VPWmod_1.0.3.ini\t\n@@ -0,0 +1,17 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+MusicVolume = 100\n+SoundVolume = 6\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.753225\n+ViewCabScaleY = 0.914145\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 35.194008\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000"},
+          {"status": "A", "path": "external/vpx-austinpowers/Rom README.md", "diff": "diff --git a/external/vpx-austinpowers/Rom README.md b/external/vpx-austinpowers/Rom README.md\nnew file mode 100644\nindex 00000000..618929c8\n--- /dev/null\n+++ b/external/vpx-austinpowers/Rom README.md\t\n@@ -0,0 +1,35 @@\n+# Austin Powers (Stern 2001)_VPWmod\n+\n+![Table Preview](https://www.vpforums.org/index.php?s=d77dd11d3a10617da44805808363ef29&app=downloads&module=display&section=screenshot&record=114134&id=13043&full=1)\n+\n+Author(s): [VPin Workshop](https://www.vpforums.org/index.php?showuser=153279)  \n+Version: 1.0.3\n+Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=15332)\n+\n+DirectB2S\n+\n+Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n+Version: 1.0.0  \n+Download: [VP Universe](https://vpuniverse.com/files/file/14003-austin-powers-stern-2001-b2s-with-full-dmd/)\n+\n+ROM:\n+Version 3.02\n+Download (https://www.vpforums.org/index.php?app=downloads&showfile=1115)\n+\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 37 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-austinpowers.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Rom file stays in zip folder, place zip file in vpx-austinpowers/pinmame/roms\n+- \"Mr. Powers, I bid you adieu!\" --Dr. Evil\n+- \"Get in my belly!\" --Fat Bastard\n+- \"Oh Behave!\" \"Yeah baby yeah!\" --Austin Powers\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-austinpowers/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-austinpowers/pinmame/cfg/.gitkeep b/external/vpx-austinpowers/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-austinpowers/pinmame/cfg/austin.cfg", "diff": "diff --git a/external/vpx-austinpowers/pinmame/cfg/austin.cfg b/external/vpx-austinpowers/pinmame/cfg/austin.cfg\nnew file mode 100644\nindex 00000000..df348841\nBinary files /dev/null and b/external/vpx-austinpowers/pinmame/cfg/austin.cfg differ"},
+          {"status": "A", "path": "external/vpx-austinpowers/pinmame/cfg/default.cfg", "diff": "diff --git a/external/vpx-austinpowers/pinmame/cfg/default.cfg b/external/vpx-austinpowers/pinmame/cfg/default.cfg\nnew file mode 100644\nindex 00000000..de34d1c4\nBinary files /dev/null and b/external/vpx-austinpowers/pinmame/cfg/default.cfg differ"},
+          {"status": "A", "path": "external/vpx-austinpowers/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-austinpowers/pinmame/ini/.gitkeep b/external/vpx-austinpowers/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-austinpowers/pinmame/ini/austin.ini", "diff": "diff --git a/external/vpx-austinpowers/pinmame/ini/austin.ini b/external/vpx-austinpowers/pinmame/ini/austin.ini\nnew file mode 100644\nindex 00000000..9f9ff144\n--- /dev/null\n+++ b/external/vpx-austinpowers/pinmame/ini/austin.ini\n@@ -0,0 +1,6 @@\n+[settings]\n+cheat=0\n+sound=5\n+dmd_red=255\n+dmd_green=88\n+dmd_blue=32\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-austinpowers/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-austinpowers/pinmame/nvram/.gitkeep b/external/vpx-austinpowers/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-austinpowers/pinmame/nvram/austin.nv"},
+          {"status": "A", "path": "external/vpx-austinpowers/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-austinpowers/pinmame/roms/.gitkeep b/external/vpx-austinpowers/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-austinpowers/vpx-austinpowers.png"},
+          {"status": "A", "path": "external/vpx-austinpowers/vpx-austinpowers.xml", "diff": "diff --git a/external/vpx-austinpowers/vpx-austinpowers.xml b/external/vpx-austinpowers/vpx-austinpowers.xml\nnew file mode 100644\nindex 00000000..522e1ab5\n--- /dev/null\n+++ b/external/vpx-austinpowers/vpx-austinpowers.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Austin Powers</name>\n+</root>\n"}
+        ]
+      }
+    ]
+}

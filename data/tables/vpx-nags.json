@@ -1,0 +1,45 @@
+{
+    "commit_count": 4,
+    "commits": [
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-nags/launcher.png"},
+          {"status": "M", "path": "external/vpx-nags/table.yml", "diff": "diff --git a/external/vpx-nags/table.yml b/external/vpx-nags/table.yml\nindex bd7423a7..43550ee8 100644\n--- a/external/vpx-nags/table.yml\n+++ b/external/vpx-nags/table.yml\n@@ -1,7 +1,4 @@\n ---\n-enabled: False\n-applyFixes:\n-  - \"bass\"\n backglassBundled: true\n backglassChecksum: \"ca1f82109f7fb287131073d55d3d61a4\"\n backglassNotes: \"Version 1.00 bundled with table\"\n@@ -12,5 +9,5 @@ tableVPSId: \"SWT0OKYOwK\"\n tagline: \"'And they're off!'\"\n testers:\n   - \"Curt\"\n-vpxChecksum: \"29c2a965515844c91b009c1ef68dd941\"\n+vpxChecksum: \"FE6DDEB24B0C91538613FAF008422BCF\"\n vpxVPSId: \"7Td-pzgz1D\""}
+        ]
+      },
+      {
+        "hash": "36da7665a0f4ecf52145df2a22cf70dc644d1957",
+        "date": "2026-06-18 12:03:09 -0500",
+        "author": "Old-Cyrus",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-nags/table.yml", "diff": "diff --git a/external/vpx-nags/table.yml b/external/vpx-nags/table.yml\nindex 50253f4f..bd7423a7 100644\n--- a/external/vpx-nags/table.yml\n+++ b/external/vpx-nags/table.yml\n@@ -4,9 +4,10 @@ applyFixes:\n   - \"bass\"\n backglassBundled: true\n backglassChecksum: \"ca1f82109f7fb287131073d55d3d61a4\"\n-backglassNotes: \"Bundled with table\"\n+backglassNotes: \"Version 1.00 bundled with table\"\n backglassVPSId: \"PcJHOPKJDO\"\n fps: 50\n+tableNotes: \"Download version 1.00\"\n tableVPSId: \"SWT0OKYOwK\"\n tagline: \"'And they're off!'\"\n testers:\n"}
+        ]
+      },
+      {
+        "hash": "247a8327c3274aefad6dbfa2690520c0b215f539",
+        "date": "2026-06-05 10:58:57 -0500",
+        "author": "Old-Cyrus",
+        "message": "Update table.ini\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-nags/table.ini", "diff": "diff --git a/external/vpx-nags/table.ini b/external/vpx-nags/table.ini\nindex 70b9c704..46ea1a02 100755\n--- a/external/vpx-nags/table.ini\n+++ b/external/vpx-nags/table.ini\n@@ -15,4 +15,4 @@ ViewCabFOV = 42.999908\n ViewCabLayback = 48.000000\n \n [Standalone]\n-BackBufferScale = 0.500000\n\\ No newline at end of file\n+BackBufferScale = 0.5\n\\ No newline at end of file\n"}
+        ]
+      },
+      {
+        "hash": "0052bde2a1f295607d7d5f47656309c6937f4a11",
+        "date": "2026-06-05 10:53:38 -0500",
+        "author": "Old-Cyrus",
+        "message": "Adding 'Nags'\n\nWeird early table\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-nags/README.md", "diff": "diff --git a/external/vpx-nags/README.md b/external/vpx-nags/README.md\nnew file mode 100644\nindex 00000000..4b60e613\n--- /dev/null\n+++ b/external/vpx-nags/README.md\n@@ -0,0 +1,32 @@\n+# Nags (Williams 1960)\n+\n+![Table Preview](../../images/7Td-pzgz1D-preview.webp)\n+\n+---\n+\n+## Files\n+| File Type | Link | Version | Author(s) | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [vpuniverse](https://vpuniverse.com/files/file/25126-nags-williams-1960/) | 1.00 | Scottacus, Bord, Roth |\n+| **B2S** | [vpuniverse](https://vpuniverse.com/files/file/25126-nags-williams-1960/) | 1.00 | Scottacus, Bord, Roth |\n+\n+\n+**Tested by:** Curt\n+\n+---\n+\n+## Status \n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ❌ | ❌ | ❌ | 50 |\n+\n+---\n+\n+## Instructions\n+\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more information can be found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+- After starting, continue to use the START button to dispense balls. Note that the flippers will not operate until a ball passes the first chute (this is how the physical table works).\n+- 'And they're off!'"},
+          {"status": "A", "path": "external/vpx-nags/launcher.png"},
+          {"status": "A", "path": "external/vpx-nags/table.ini", "diff": "diff --git a/external/vpx-nags/table.ini b/external/vpx-nags/table.ini\nnew file mode 100755\nindex 00000000..70b9c704\n--- /dev/null\n+++ b/external/vpx-nags/table.ini\n@@ -0,0 +1,18 @@\n+[Player]\n+MaxTexDimension = 3072\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.785405\n+ViewCabScaleY = 0.831047\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -48.500000\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n+\n+[Standalone]\n+BackBufferScale = 0.500000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-nags/table.yml", "diff": "diff --git a/external/vpx-nags/table.yml b/external/vpx-nags/table.yml\nnew file mode 100644\nindex 00000000..50253f4f\n--- /dev/null\n+++ b/external/vpx-nags/table.yml\n@@ -0,0 +1,15 @@\n+---\n+enabled: False\n+applyFixes:\n+  - \"bass\"\n+backglassBundled: true\n+backglassChecksum: \"ca1f82109f7fb287131073d55d3d61a4\"\n+backglassNotes: \"Bundled with table\"\n+backglassVPSId: \"PcJHOPKJDO\"\n+fps: 50\n+tableVPSId: \"SWT0OKYOwK\"\n+tagline: \"'And they're off!'\"\n+testers:\n+  - \"Curt\"\n+vpxChecksum: \"29c2a965515844c91b009c1ef68dd941\"\n+vpxVPSId: \"7Td-pzgz1D\"\n"}
+        ]
+      }
+    ]
+}

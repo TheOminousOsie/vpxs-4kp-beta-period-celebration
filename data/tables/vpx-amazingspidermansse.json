@@ -1,0 +1,168 @@
+{
+    "commit_count": 16,
+    "commits": [
+      {
+        "hash": "a9377519d9e21070c7986216d1167d2c109a6569",
+        "date": "2026-09-07 18:40:17 -0500",
+        "author": "dasme",
+        "message": "Update table.yml (#2192)\n\nCorrected name and b2s instructions",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/table.yml", "diff": "diff --git a/external/vpx-amazingspidermansse/table.yml b/external/vpx-amazingspidermansse/table.yml\nindex 69332cf3..7793d6a3 100644\n--- a/external/vpx-amazingspidermansse/table.yml\n+++ b/external/vpx-amazingspidermansse/table.yml\n@@ -1,13 +1,13 @@\n ---\n backglassBundled: true\n backglassChecksum: \"153FBB441E5CB774CA65BF909106C7E8\"\n-backglassNotes: \"Included in VPX .zip file.\"\n+backglassNotes: \"Also download 'Amazing Spiderman (Gottlieb 1980) Sinister Six Edition Backglass v1.0.zip'\"\n fps: 60\n romChecksum: \"FCCCF366660CCE975D600192AC508A3C\"\n romNotes: \"Download spidermn.zip\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/spidermn.2352/\"\n romVersionOverride: \"spidermn\"\n-tableNameOverride: \"Amazing Spider-Man Sinister Six Edition, The (Gottlieb 1980)\"\n+tableNameOverride: \"Amazing Spider-Man Sinister Six Edition, The\"\n tableVPSId: \"9Uv1Jljw\"\n tagline: \"There goes the Spider-Man\"\n testers:\n"}
+        ]
+      },
+      {
+        "hash": "4b09eb5e3aafa0af901a907c426cd90b9705ebf6",
+        "date": "2026-09-03 13:08:59 -0500",
+        "author": "dasme",
+        "message": "Adding The Amazing Spider-Man: Sinister Six Edition to Wizard + World Cup Soccer color rom & nvram fixes. (#2169)\n\n* Adding World Cup Soccer to Wizard\n\n* World Cup Soccer NVRAM fix + new POV\n\n* Added color ROM + fix low ROM volume\n\nAdded colored ROM support to the YML and updated the nvram file to have freeplay and better default audio.\n\n* Add The Amazing Spider-Man Sinister Six Edition to Wizard\n\n* Hook Backglass update\n\n* Add The Amazing Spider-Man Sinister Six Edition to Wizard\n\n* Update README.md\n\n* Adding new Art Team art to Spidey: Sinister Six\n\n* Small Spidey launcher.png update\n\n* Fixed link in .yml\n\n* Updated to Wraith's POV in table.ini\n\n---------\n\nCo-authored-by: evilwraith <evilwraith@gmail.com>",
+        "files": [
+          {"status": "A", "path": "external/vpx-amazingspidermansse/dmd.png"},
+          {"status": "A", "path": "external/vpx-amazingspidermansse/table.yml", "diff": "diff --git a/external/vpx-amazingspidermansse/table.yml b/external/vpx-amazingspidermansse/table.yml\nnew file mode 100644\nindex 00000000..69332cf3\n--- /dev/null\n+++ b/external/vpx-amazingspidermansse/table.yml\n@@ -0,0 +1,17 @@\n+---\n+backglassBundled: true\n+backglassChecksum: \"153FBB441E5CB774CA65BF909106C7E8\"\n+backglassNotes: \"Included in VPX .zip file.\"\n+fps: 60\n+romChecksum: \"FCCCF366660CCE975D600192AC508A3C\"\n+romNotes: \"Download spidermn.zip\"\n+romUrlOverride: \"https://pinballnirvana.com/forums/resources/spidermn.2352/\"\n+romVersionOverride: \"spidermn\"\n+tableNameOverride: \"Amazing Spider-Man Sinister Six Edition, The (Gottlieb 1980)\"\n+tableVPSId: \"9Uv1Jljw\"\n+tagline: \"There goes the Spider-Man\"\n+testers:\n+  - \"TechZombie\"\n+  - \"Dasme\"\n+vpxChecksum: \"6CA101C908E7E8039D3C895F73B33EE8\"\n+vpxVPSId: \"7q1Na5E1Rw\""},
+          {"status": "M", "path": "external/vpx-amazingspidermansse/README.md", "diff": "diff --git a/external/vpx-amazingspidermansse/README.md b/external/vpx-amazingspidermansse/README.md\nindex 8e4bd3e1..b5ee4ba5 100644\n--- a/external/vpx-amazingspidermansse/README.md\n+++ b/external/vpx-amazingspidermansse/README.md\n@@ -1,33 +1,61 @@\n-﻿# Amazing Spiderman (Gottlieb 1980) Sinister Six Edition\n+# Amazing Spider-Man Sinister Six Edition, The (Gottlieb 1980)\n \n-![Table Preview](../../images/vpx-amazingspidermansse.png)\n+![Table Preview](../../images/7q1Na5E1Rw-preview.webp)\n \n----\n+<br>\n \n-## Files\n-| File Type | Link | Version | Author |\n-|:---------:|:----:|:-------:|:------:|\n-| VPX | [Pinball Nirvana](https://pinballnirvana.com/forums/resources/amazing-spiderman-gottlieb-1980-sinister-six-edition.8400/) | v1.1 | [xenonph](https://www.vpforums.org/index.php?showuser=14100) |\n-| B2S | Included with VPX | v1.0 | N/A |\n-| DMD | N/A | N/A | N/A |\n-| ROM | [Pinball Nirvana](https://pinballnirvana.com/forums/resources/spidermn.2352/) | spidermn.zip | [Rock-ola](https://pinballnirvana.com/forums/members/rock-ola.1/) |\n+## *️⃣  Table Statistics\n \n-**Tested by:** [TechZombie]\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n----\n+<br>\n \n-## Status \n-**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n+**VPXS 4KP Testers:**\n+  - TechZombie\n+  - Dasme\n+\n+<br>\n \n ---\n \n-## Instructions\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Amazing Spider-Man Sinister Six Edition, The (Gottlieb 1980)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"There goes the Spider-Man\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- \"My Vpin Sense is tingling!\" --- Spider-Man\n \n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-amazingspidermansse/launcher.png"},
+          {"status": "M", "path": "external/vpx-amazingspidermansse/table.ini", "diff": "diff --git a/external/vpx-amazingspidermansse/table.ini b/external/vpx-amazingspidermansse/table.ini\nindex c903c23a..99c559b1 100644\n--- a/external/vpx-amazingspidermansse/table.ini\n+++ b/external/vpx-amazingspidermansse/table.ini\n@@ -1,15 +1,32 @@\n [Player]\n BallTrailStrength = 0.250980\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.350000\n+MusicVolume = 100\n+SoundVolume = 100\n+ForceAnisotropicFiltering = 1\n+AAFactor = 1.000000\n+ScreenPlayerY = 0.000000\n+RaytracedBallShadows = 0\n+Refraction = 0\n+ForceBloomOff = 1\n+\n+[Standalone]\n+POVLinkTableScaleXY = 0\n+4kpVLMGIKeepPercent = 100\n+4kpVLMBakeBrightness = 1.000000\n+BackBufferScale = 0.500000\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.867869\n-ViewCabScaleY = 1.037503\n-ViewCabScaleZ = 0.957594\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -41.577003\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.105000\n+ViewCabScaleY = 1.000000\n+ViewCabScaleZ = 0.859642\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 344.604004\n+ViewCabWindowBot = 137.100586\n+ToneMapper = 0\n+Difficulty = 0.500000"}
+        ]
+      },
+      {
+        "hash": "763ac8bd4eaab300eb81c30a91ea5a80715fbda5",
+        "date": "2025-07-22 09:54:10 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed typo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/README.md", "diff": "diff --git a/external/vpx-amazingspidermansse/README.md b/external/vpx-amazingspidermansse/README.md\nindex 47f89556..8e4bd3e1 100644\n--- a/external/vpx-amazingspidermansse/README.md\n+++ b/external/vpx-amazingspidermansse/README.md\n@@ -1,4 +1,4 @@\n-# Amazing Spiderman (Gottlieb 1980) Sinister Six Edition\n+﻿# Amazing Spiderman (Gottlieb 1980) Sinister Six Edition\n \n ![Table Preview](../../images/vpx-amazingspidermansse.png)\n \n@@ -27,7 +27,7 @@\n ## Instructions\n \n - Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"My Vpin Sense is tingling!\" --- Spider-Man\n "}
+        ]
+      },
+      {
+        "hash": "013f69af2b69e407d1b79d8aa0339da5a479d54d",
+        "date": "2025-06-14 18:59:55 +0100",
+        "author": "OminousOsie",
+        "message": "Updated launcher images with points work\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/launcher.png"}
+        ]
+      },
+      {
+        "hash": "13558de71064e97fd5537d874aa66df59b5aae6b",
+        "date": "2025-05-17 15:39:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated standard instructions text\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/README.md", "diff": "diff --git a/external/vpx-amazingspidermansse/README.md b/external/vpx-amazingspidermansse/README.md\nindex 39b1c975..47f89556 100644\n--- a/external/vpx-amazingspidermansse/README.md\n+++ b/external/vpx-amazingspidermansse/README.md\n@@ -26,8 +26,8 @@\n \n ## Instructions\n \n-- Make sure to use the Table Manager to install this table.\n-- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more infomation found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n - If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"My Vpin Sense is tingling!\" --- Spider-Man\n "}
+        ]
+      },
+      {
+        "hash": "cefb2dd399b4609d80000f81a6c7398c0b766a4b",
+        "date": "2025-05-17 11:19:27 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes with new instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/README.md", "diff": "diff --git a/external/vpx-amazingspidermansse/README.md b/external/vpx-amazingspidermansse/README.md\nindex 32cf4594..39b1c975 100644\n--- a/external/vpx-amazingspidermansse/README.md\n+++ b/external/vpx-amazingspidermansse/README.md\n@@ -25,5 +25,9 @@\n ---\n \n ## Instructions\n+\n+- Make sure to use the Table Manager to install this table.\n+- Instructions can be found on the wiki [Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n - \"My Vpin Sense is tingling!\" --- Spider-Man\n "}
+        ]
+      },
+      {
+        "hash": "bb5b96eb9186a1f0071c5f14286b0e3e2ed99525",
+        "date": "2025-05-16 21:04:10 +0100",
+        "author": "OminousOsie",
+        "message": "Updated readmes to remove old instructions\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/README.md", "diff": "diff --git a/external/vpx-amazingspidermansse/README.md b/external/vpx-amazingspidermansse/README.md\nindex 73aab488..32cf4594 100644\n--- a/external/vpx-amazingspidermansse/README.md\n+++ b/external/vpx-amazingspidermansse/README.md\n@@ -25,11 +25,5 @@\n ---\n \n ## Instructions\n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-amazingspidermansse.elf\n-- Download the table zip above, extract it and copy Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.vpx\n-- and Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.0.directb2s to vpx-amazingspidermansse.\n-- Place ROM file (spidermn.zip) into vpx-amazingspidermansse/pinmame/roms -- Do NOT unzip!\n-- Make sure (.vpx) (.direct2b2s) and (.ini) are all named the same. \n - \"My Vpin Sense is tingling!\" --- Spider-Man\n "}
+        ]
+      },
+      {
+        "hash": "8969f3cce6d9de7205da4af9bb3e4de6c73686a3",
+        "date": "2025-04-01 16:16:33 +0100",
+        "author": "OminousOsie",
+        "message": "Updated image links to ones in the repo\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/README.md", "diff": "diff --git a/external/vpx-amazingspidermansse/README.md b/external/vpx-amazingspidermansse/README.md\nindex dc5f8ad5..73aab488 100644\n--- a/external/vpx-amazingspidermansse/README.md\n+++ b/external/vpx-amazingspidermansse/README.md\n@@ -1,6 +1,6 @@\n # Amazing Spiderman (Gottlieb 1980) Sinister Six Edition\n \n-![Table Preview](https://pinballnirvana.com/forums/attachments/0screenshot-dt-png.43242/)\n+![Table Preview](../../images/vpx-amazingspidermansse.png)\n \n ---\n \n@@ -32,3 +32,4 @@\n - Place ROM file (spidermn.zip) into vpx-amazingspidermansse/pinmame/roms -- Do NOT unzip!\n - Make sure (.vpx) (.direct2b2s) and (.ini) are all named the same. \n - \"My Vpin Sense is tingling!\" --- Spider-Man\n+"}
+        ]
+      },
+      {
+        "hash": "c39b72d777813f034464622e74569d472b437b43",
+        "date": "2025-03-20 00:43:11 -0500",
+        "author": "MoxAssault",
+        "message": "Additional README Updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/README.md", "diff": "diff --git a/external/vpx-amazingspidermansse/README.md b/external/vpx-amazingspidermansse/README.md\nindex 5c2025b9..dc5f8ad5 100644\n--- a/external/vpx-amazingspidermansse/README.md\n+++ b/external/vpx-amazingspidermansse/README.md\n@@ -2,32 +2,29 @@\n \n ![Table Preview](https://pinballnirvana.com/forums/attachments/0screenshot-dt-png.43242/)\n \n-Author(s): [xenonph](https://www.vpforums.org/index.php?showuser=14100)  \n-Version:  Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.vpx\n-Download:  [Pinball Nirvana](https://pinballnirvana.com/forums/resources/amazing-spiderman-gottlieb-1980-sinister-six-edition.8400/)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [Pinball Nirvana](https://pinballnirvana.com/forums/resources/amazing-spiderman-gottlieb-1980-sinister-six-edition.8400/) | v1.1 | [xenonph](https://www.vpforums.org/index.php?showuser=14100) |\n+| B2S | Included with VPX | v1.0 | N/A |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [Pinball Nirvana](https://pinballnirvana.com/forums/resources/spidermn.2352/) | spidermn.zip | [Rock-ola](https://pinballnirvana.com/forums/members/rock-ola.1/) |\n \n-Version: Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.0.directb2s \n-File is included in the table zip.\n+**Tested by:** [TechZombie]\n \n-ROM: spidermn.zip\n-\n-Author(s): [Rock-ola](https://pinballnirvana.com/forums/members/rock-ola.1/)\n-Download:  [Pinball Nirvana](https://pinballnirvana.com/forums/resources/spidermn.2352/)\n-\n-Tested by:\n-[TechZombie]\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-amazingspidermansse.elf\n - Download the table zip above, extract it and copy Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.vpx"}
+        ]
+      },
+      {
+        "hash": "0bdb44308ec142a8002371f73279f65bb1acf2b5",
+        "date": "2025-03-10 13:17:38 +0000",
+        "author": "OminousOsie",
+        "message": "Moved all files to new file naming structure\n",
+        "files": [
+          {"status": "D", "path": "external/vpx-amazingspidermansse/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-amazingspidermansse/pinmame/cfg/.gitkeep b/external/vpx-amazingspidermansse/pinmame/cfg/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-amazingspidermansse/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-amazingspidermansse/pinmame/ini/.gitkeep b/external/vpx-amazingspidermansse/pinmame/ini/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-amazingspidermansse/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-amazingspidermansse/pinmame/nvram/.gitkeep b/external/vpx-amazingspidermansse/pinmame/nvram/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-amazingspidermansse/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-amazingspidermansse/pinmame/roms/.gitkeep b/external/vpx-amazingspidermansse/pinmame/roms/.gitkeep\ndeleted file mode 100644\nindex e69de29b..00000000"},
+          {"status": "D", "path": "external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml", "diff": "diff --git a/external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml b/external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml\ndeleted file mode 100644\nindex a02b1908..00000000\n--- a/external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml\n+++ /dev/null\n@@ -1,3 +0,0 @@\n-<root>\n-        <name>Amazing Spider-Man, The: Sinister Six Edition</name>\n-</root>"},
+          {"status": "R-from", "path": "external/vpx-amazingspidermansse/Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.ini->external/vpx-amazingspidermansse/table.ini", "diff": "diff --git a/external/vpx-amazingspidermansse/Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.ini b/external/vpx-amazingspidermansse/table.ini\nsimilarity index 100%\nrename from external/vpx-amazingspidermansse/Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.ini\nrename to external/vpx-amazingspidermansse/table.ini"},
+          {"status": "R-from", "path": "external/vpx-amazingspidermansse/vpx-amazingspidermansse.png->external/vpx-amazingspidermansse/launcher.png"},
+          {"status": "R-to", "path": "external/vpx-amazingspidermansse/Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.ini->external/vpx-amazingspidermansse/table.ini", "diff": "diff --git a/external/vpx-amazingspidermansse/Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.ini b/external/vpx-amazingspidermansse/table.ini\nsimilarity index 100%\nrename from external/vpx-amazingspidermansse/Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.ini\nrename to external/vpx-amazingspidermansse/table.ini"},
+          {"status": "R-to", "path": "external/vpx-amazingspidermansse/vpx-amazingspidermansse.png->external/vpx-amazingspidermansse/launcher.png"}
+        ]
+      },
+      {
+        "hash": "0d7884f9e506dfac744e5503c1efe866415f1461",
+        "date": "2025-01-20 11:30:52 -0500",
+        "author": "Brandon",
+        "message": "Update multiple xmls\n\nUpdates XML files to properly alphabetize table names.\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml", "diff": "diff --git a/external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml b/external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml\nindex ddd0635e..a02b1908 100644\n--- a/external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml\n+++ b/external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml\n@@ -1,3 +1,3 @@\n <root>\n-        <name>Amazing Spiderman Sinister Six Edition</name>\n+        <name>Amazing Spider-Man, The: Sinister Six Edition</name>\n </root>"}
+        ]
+      },
+      {
+        "hash": "13cf2003999c86119bfeb36069d537491de05a27",
+        "date": "2024-09-01 04:04:50 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Updating instructions for vpx-amazingspidermansse",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/README.md", "diff": "diff --git a/external/vpx-amazingspidermansse/README.md b/external/vpx-amazingspidermansse/README.md\nindex a62e9386..5c2025b9 100644\n--- a/external/vpx-amazingspidermansse/README.md\n+++ b/external/vpx-amazingspidermansse/README.md\n@@ -32,7 +32,6 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n - Add your personalized launcher.elf and rename it to vpx-amazingspidermansse.elf\n - Download the table zip above, extract it and copy Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.vpx\n - and Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.0.directb2s to vpx-amazingspidermansse.\n-- Rom file (spidermn.zip) stays in zip folder, place zip file in vpx-amazingspidermansse/pinmame/roms\n+- Place ROM file (spidermn.zip) into vpx-amazingspidermansse/pinmame/roms -- Do NOT unzip!\n - Make sure (.vpx) (.direct2b2s) and (.ini) are all named the same. \n-- Go fire up your Vpin and enjoy!\n - \"My Vpin Sense is tingling!\" --- Spider-Man\n"}
+        ]
+      },
+      {
+        "hash": "d7935aea0e24dd42df64b6975905d6a0ad23ccdb",
+        "date": "2024-08-30 17:04:48 -0400",
+        "author": "lilalien",
+        "message": "Update README.md - Added rom author link to vpx-amazingspidermansse",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/README.md", "diff": "diff --git a/external/vpx-amazingspidermansse/README.md b/external/vpx-amazingspidermansse/README.md\nindex c4b1f088..a62e9386 100644\n--- a/external/vpx-amazingspidermansse/README.md\n+++ b/external/vpx-amazingspidermansse/README.md\n@@ -13,7 +13,7 @@ File is included in the table zip.\n \n ROM: spidermn.zip\n \n-Author(s): [Rock-ola]\n+Author(s): [Rock-ola](https://pinballnirvana.com/forums/members/rock-ola.1/)\n Download:  [Pinball Nirvana](https://pinballnirvana.com/forums/resources/spidermn.2352/)\n \n Tested by:\n@@ -35,4 +35,4 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n - Rom file (spidermn.zip) stays in zip folder, place zip file in vpx-amazingspidermansse/pinmame/roms\n - Make sure (.vpx) (.direct2b2s) and (.ini) are all named the same. \n - Go fire up your Vpin and enjoy!\n-- \"My Vpin Sense is tingling!\" ---SpiderMan\n\\ No newline at end of file\n+- \"My Vpin Sense is tingling!\" --- Spider-Man\n"}
+        ]
+      },
+      {
+        "hash": "66433a0a54c93b7e66ffb41ca626bb244d4f6212",
+        "date": "2024-08-17 09:48:29 -0500",
+        "author": "T3chZombie",
+        "message": "Amazing Spiderman readme update (#161)\n\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/README.md", "diff": "diff --git a/external/vpx-amazingspidermansse/README.md b/external/vpx-amazingspidermansse/README.md\nindex 625826c2..c4b1f088 100644\n--- a/external/vpx-amazingspidermansse/README.md\n+++ b/external/vpx-amazingspidermansse/README.md\n@@ -32,7 +32,6 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n - Add your personalized launcher.elf and rename it to vpx-amazingspidermansse.elf\n - Download the table zip above, extract it and copy Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.vpx\n - and Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.0.directb2s to vpx-amazingspidermansse.\n-- Open V1.01 and copy LStarfighter folder into the music file on your USB drive.\n - Rom file (spidermn.zip) stays in zip folder, place zip file in vpx-amazingspidermansse/pinmame/roms\n - Make sure (.vpx) (.direct2b2s) and (.ini) are all named the same. \n - Go fire up your Vpin and enjoy!\n"}
+        ]
+      },
+      {
+        "hash": "fcf29743cfa7c2c3fad14f2ddecde795d074a3d4",
+        "date": "2024-08-16 21:01:14 -0500",
+        "author": "T3chZombie",
+        "message": "Amazing Spiderman readme update\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-amazingspidermansse/README.md"}
+        ]
+      },
+      {
+        "hash": "40d65bc681f5c6dcb0306ecb9eb80acca2b15074",
+        "date": "2024-08-15 12:06:32 -0500",
+        "author": "T3chZombie",
+        "message": "vpx table submission\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-amazingspidermansse/Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.ini", "diff": "diff --git a/external/vpx-amazingspidermansse/Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.ini b/external/vpx-amazingspidermansse/Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.ini\nnew file mode 100644\nindex 00000000..c903c23a\n--- /dev/null\n+++ b/external/vpx-amazingspidermansse/Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.ini\t\n@@ -0,0 +1,15 @@\n+[Player]\n+BallTrailStrength = 0.250980\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.867869\n+ViewCabScaleY = 1.037503\n+ViewCabScaleZ = 0.957594\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -41.577003\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-amazingspidermansse/README.md", "diff": "diff --git a/external/vpx-amazingspidermansse/README.md b/external/vpx-amazingspidermansse/README.md\nnew file mode 100644\nindex 00000000..625826c2\n--- /dev/null\n+++ b/external/vpx-amazingspidermansse/README.md\n@@ -0,0 +1,39 @@\n+# Amazing Spiderman (Gottlieb 1980) Sinister Six Edition\n+\n+![Table Preview](https://pinballnirvana.com/forums/attachments/0screenshot-dt-png.43242/)\n+\n+Author(s): [xenonph](https://www.vpforums.org/index.php?showuser=14100)  \n+Version:  Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.vpx\n+Download:  [Pinball Nirvana](https://pinballnirvana.com/forums/resources/amazing-spiderman-gottlieb-1980-sinister-six-edition.8400/)\n+\n+DirectB2S\n+\n+Version: Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.0.directb2s \n+File is included in the table zip.\n+\n+ROM: spidermn.zip\n+\n+Author(s): [Rock-ola]\n+Download:  [Pinball Nirvana](https://pinballnirvana.com/forums/resources/spidermn.2352/)\n+\n+Tested by:\n+[TechZombie]\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-amazingspidermansse.elf\n+- Download the table zip above, extract it and copy Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.1.vpx\n+- and Amazing Spiderman (Gottlieb 1980) Sinister Six Edition v1.0.directb2s to vpx-amazingspidermansse.\n+- Open V1.01 and copy LStarfighter folder into the music file on your USB drive.\n+- Rom file (spidermn.zip) stays in zip folder, place zip file in vpx-amazingspidermansse/pinmame/roms\n+- Make sure (.vpx) (.direct2b2s) and (.ini) are all named the same. \n+- Go fire up your Vpin and enjoy!\n+- \"My Vpin Sense is tingling!\" ---SpiderMan\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-amazingspidermansse/pinmame/cfg/.gitkeep", "diff": "diff --git a/external/vpx-amazingspidermansse/pinmame/cfg/.gitkeep b/external/vpx-amazingspidermansse/pinmame/cfg/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-amazingspidermansse/pinmame/ini/.gitkeep", "diff": "diff --git a/external/vpx-amazingspidermansse/pinmame/ini/.gitkeep b/external/vpx-amazingspidermansse/pinmame/ini/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-amazingspidermansse/pinmame/nvram/.gitkeep", "diff": "diff --git a/external/vpx-amazingspidermansse/pinmame/nvram/.gitkeep b/external/vpx-amazingspidermansse/pinmame/nvram/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-amazingspidermansse/pinmame/roms/.gitkeep", "diff": "diff --git a/external/vpx-amazingspidermansse/pinmame/roms/.gitkeep b/external/vpx-amazingspidermansse/pinmame/roms/.gitkeep\nnew file mode 100644\nindex 00000000..e69de29b"},
+          {"status": "A", "path": "external/vpx-amazingspidermansse/vpx-amazingspidermansse.png"},
+          {"status": "A", "path": "external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml", "diff": "diff --git a/external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml b/external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml\nnew file mode 100644\nindex 00000000..ddd0635e\n--- /dev/null\n+++ b/external/vpx-amazingspidermansse/vpx-amazingspidermansse.xml\n@@ -0,0 +1,3 @@\n+<root>\n+        <name>Amazing Spiderman Sinister Six Edition</name>\n+</root>"}
+        ]
+      }
+    ]
+}

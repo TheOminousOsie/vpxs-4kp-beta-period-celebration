@@ -1,0 +1,99 @@
+{
+    "commit_count": 10,
+    "commits": [
+      {
+        "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
+        "date": "2026-07-17 19:48:12 -0400",
+        "author": "evilwraith",
+        "message": "FPS updates\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-walkure/table.yml", "diff": "diff --git a/external/vpx-walkure/table.yml b/external/vpx-walkure/table.yml\nindex e0d03699..b5a42b29 100644\n--- a/external/vpx-walkure/table.yml\n+++ b/external/vpx-walkure/table.yml\n@@ -3,7 +3,7 @@ backglassBundled: true\n backglassChecksum: \"B9A9E82AF13C2B6DF293CC366F070F28\"\n backglassNotes: \"Included in VPX zip\"\n backglassVPSId: \"fvc5FJSEiH\"\n-fps: 55\n+fps: 60\n mainNotes: \"Table based on Walkyrie, music based on Macross Delta.\"\n romChecksum: \"3BBE56AF04DDE85B31491CFB4077EDE3\"\n romVPSId: \"z8vIEMDTRP\""}
+        ]
+      },
+      {
+        "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
+        "date": "2026-07-11 13:51:12 -0400",
+        "author": "evilwraith",
+        "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-walkure/table.ini", "diff": "diff --git a/external/vpx-walkure/table.ini b/external/vpx-walkure/table.ini\nindex 43a2c85a..3fb72aeb 100644\n--- a/external/vpx-walkure/table.ini\n+++ b/external/vpx-walkure/table.ini\n@@ -8,6 +8,9 @@ ViewCabScaleY = 1.050068\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -46.723194\n+ViewCabVOfs = 0\n ViewCabWindowTop = 159.471008\n-ViewCabWindowBot = 85.967270\n\\ No newline at end of file\n+ViewCabWindowBot = 85.967270\n+\n+[Standalone]\n+PinMAMEWindow = 0\n\\ No newline at end of file"},
+          {"status": "M", "path": "external/vpx-walkure/table.yml", "diff": "diff --git a/external/vpx-walkure/table.yml b/external/vpx-walkure/table.yml\nindex 7c4b1ff6..e0d03699 100644\n--- a/external/vpx-walkure/table.yml\n+++ b/external/vpx-walkure/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes:\n-  - \"bass\"\n backglassBundled: true\n backglassChecksum: \"B9A9E82AF13C2B6DF293CC366F070F28\"\n backglassNotes: \"Included in VPX zip\""}
+        ]
+      },
+      {
+        "hash": "1747f64e37c732cfdd658993b5d9d1b089da3503",
+        "date": "2025-07-16 11:12:33 +0100",
+        "author": "OminousOsie",
+        "message": "Readmes\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-walkure/README.md", "diff": "diff --git a/external/vpx-walkure/README.md b/external/vpx-walkure/README.md\nnew file mode 100644\nindex 00000000..c8c42e29\n--- /dev/null\n+++ b/external/vpx-walkure/README.md\n@@ -0,0 +1,61 @@\n+# Walkure (Original 2025)\n+\n+![Table Preview](../../images/36AJ0UrccW-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 55 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - evilwraith\n+  - CoffeeAtJoes\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Walkure (Original 2025)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"'If we get the transient facts, then we feel the Info High!'\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},
+          {"status": "M", "path": "external/vpx-walkure/table.yml", "diff": "diff --git a/external/vpx-walkure/table.yml b/external/vpx-walkure/table.yml\nindex 9c7b6e04..7c4b1ff6 100644\n--- a/external/vpx-walkure/table.yml\n+++ b/external/vpx-walkure/table.yml\n@@ -13,5 +13,6 @@ tableVPSId: \"AJWvsrsaip\"\n tagline: \"'If we get the transient facts, then we feel the Info High!'\"\n testers:\n   - \"evilwraith\"\n+  - \"CoffeeAtJoes\"\n vpxChecksum: \"9475BFBDF48BB41EC179463BE76761D0\"\n vpxVPSId: \"36AJ0UrccW\""}
+        ]
+      },
+      {
+        "hash": "7e95a8fb2b59655d0a8c76410ff4d36d7682b133",
+        "date": "2025-07-16 10:40:46 +0100",
+        "author": "OminousOsie",
+        "message": "Tweaks\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-walkure/table.yml", "diff": "diff --git a/external/vpx-walkure/table.yml b/external/vpx-walkure/table.yml\nindex bca5d8ea..9c7b6e04 100644\n--- a/external/vpx-walkure/table.yml\n+++ b/external/vpx-walkure/table.yml\n@@ -3,7 +3,7 @@ applyFixes:\n   - \"bass\"\n backglassBundled: true\n backglassChecksum: \"B9A9E82AF13C2B6DF293CC366F070F28\"\n-backglassNotes: \"Use the bundled backglass from the table zip\"\n+backglassNotes: \"Included in VPX zip\"\n backglassVPSId: \"fvc5FJSEiH\"\n fps: 55\n mainNotes: \"Table based on Walkyrie, music based on Macross Delta.\"\n"}
+        ]
+      },
+      {
+        "hash": "22b28b0312693056774fae0038f4c897e6a6f088",
+        "date": "2025-07-16 09:20:30 +0100",
+        "author": "OminousOsie",
+        "message": "Fixed rom checksum\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-walkure/table.yml", "diff": "diff --git a/external/vpx-walkure/table.yml b/external/vpx-walkure/table.yml\nindex 19a2e364..bca5d8ea 100644\n--- a/external/vpx-walkure/table.yml\n+++ b/external/vpx-walkure/table.yml\n@@ -7,7 +7,7 @@ backglassNotes: \"Use the bundled backglass from the table zip\"\n backglassVPSId: \"fvc5FJSEiH\"\n fps: 55\n mainNotes: \"Table based on Walkyrie, music based on Macross Delta.\"\n-romChecksum: \"E29ED46FE6F46E1D66ECFBBF713E6E13\"\n+romChecksum: \"3BBE56AF04DDE85B31491CFB4077EDE3\"\n romVPSId: \"z8vIEMDTRP\"\n tableVPSId: \"AJWvsrsaip\"\n tagline: \"'If we get the transient facts, then we feel the Info High!'\""}
+        ]
+      },
+      {
+        "hash": "94ff593c72e809c5160c7544e06c8a4efb525e0b",
+        "date": "2025-07-15 15:39:35 -0400",
+        "author": "evilwraith",
+        "message": "Update table.yml\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-walkure/table.yml", "diff": "diff --git a/external/vpx-walkure/table.yml b/external/vpx-walkure/table.yml\nindex 985c93ee..19a2e364 100644\n--- a/external/vpx-walkure/table.yml\n+++ b/external/vpx-walkure/table.yml\n@@ -3,6 +3,7 @@ applyFixes:\n   - \"bass\"\n backglassBundled: true\n backglassChecksum: \"B9A9E82AF13C2B6DF293CC366F070F28\"\n+backglassNotes: \"Use the bundled backglass from the table zip\"\n backglassVPSId: \"fvc5FJSEiH\"\n fps: 55\n mainNotes: \"Table based on Walkyrie, music based on Macross Delta.\"\n"}
+        ]
+      },
+      {
+        "hash": "81545654ac498c9b279830c67f4eb763aa385290",
+        "date": "2025-07-14 16:51:14 -0400",
+        "author": "evilwraith",
+        "message": "Updated launchers and dmds\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-walkure/dmd.png"},
+          {"status": "M", "path": "external/vpx-walkure/launcher.png"}
+        ]
+      },
+      {
+        "hash": "f62edd824f5e1838a3244dae2a13f9b1bcce67bc",
+        "date": "2025-07-09 11:12:49 -0400",
+        "author": "evilwraith",
+        "message": "Fixed launcher names\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-walkure/launcher.png"}
+        ]
+      },
+      {
+        "hash": "8f627a9546c37c9f99eb1415ac7299c210c55ef4",
+        "date": "2025-07-08 23:04:56 -0400",
+        "author": "evilwraith",
+        "message": "fixed the rom CRCs\n",
+        "files": [
+          {"status": "M", "path": "external/vpx-walkure/table.yml", "diff": "diff --git a/external/vpx-walkure/table.yml b/external/vpx-walkure/table.yml\nindex 3b37158b..985c93ee 100644\n--- a/external/vpx-walkure/table.yml\n+++ b/external/vpx-walkure/table.yml\n@@ -6,7 +6,7 @@ backglassChecksum: \"B9A9E82AF13C2B6DF293CC366F070F28\"\n backglassVPSId: \"fvc5FJSEiH\"\n fps: 55\n mainNotes: \"Table based on Walkyrie, music based on Macross Delta.\"\n-romChecksum: \"3BBE56AF04DDE85B31491CFB4077EDE3\"\n+romChecksum: \"E29ED46FE6F46E1D66ECFBBF713E6E13\"\n romVPSId: \"z8vIEMDTRP\"\n tableVPSId: \"AJWvsrsaip\"\n tagline: \"'If we get the transient facts, then we feel the Info High!'\""}
+        ]
+      },
+      {
+        "hash": "cfa493ef1ce16c1fdaa62e0cd5cd4d7012978200",
+        "date": "2025-07-08 13:53:38 -0400",
+        "author": "evilwraith",
+        "message": "Walkyries\n\nWalkyrie (Joetronic 1986)\nWalkure (Original 2025)\n",
+        "files": [
+          {"status": "A", "path": "external/vpx-walkure/table.ini", "diff": "diff --git a/external/vpx-walkure/table.ini b/external/vpx-walkure/table.ini\nnew file mode 100644\nindex 00000000..43a2c85a\n--- /dev/null\n+++ b/external/vpx-walkure/table.ini\n@@ -0,0 +1,13 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.169850\n+ViewCabScaleY = 1.050068\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -46.723194\n+ViewCabWindowTop = 159.471008\n+ViewCabWindowBot = 85.967270\n\\ No newline at end of file"},
+          {"status": "A", "path": "external/vpx-walkure/table.yml", "diff": "diff --git a/external/vpx-walkure/table.yml b/external/vpx-walkure/table.yml\nnew file mode 100644\nindex 00000000..3b37158b\n--- /dev/null\n+++ b/external/vpx-walkure/table.yml\n@@ -0,0 +1,16 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassBundled: true\n+backglassChecksum: \"B9A9E82AF13C2B6DF293CC366F070F28\"\n+backglassVPSId: \"fvc5FJSEiH\"\n+fps: 55\n+mainNotes: \"Table based on Walkyrie, music based on Macross Delta.\"\n+romChecksum: \"3BBE56AF04DDE85B31491CFB4077EDE3\"\n+romVPSId: \"z8vIEMDTRP\"\n+tableVPSId: \"AJWvsrsaip\"\n+tagline: \"'If we get the transient facts, then we feel the Info High!'\"\n+testers:\n+  - \"evilwraith\"\n+vpxChecksum: \"9475BFBDF48BB41EC179463BE76761D0\"\n+vpxVPSId: \"36AJ0UrccW\""}
+        ]
+      }
+    ]
+}
