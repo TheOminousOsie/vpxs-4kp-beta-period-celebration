@@ -20,7 +20,7 @@ window.SITE_DATA = {
     { value: "26 FEB 2025", label: "OminousOsie's first wiki commit" },
     { value: "1,220", label: "total wiki commits, all time" },
     { value: "973", label: "of those commits are OminousOsie's — about 80%" },
-    { value: "13 MAR 2025", label: "biggest day: 33 commits, ~3,860 lines changed across 19 markdown files, almost all additions, by OminousOsie in one 25-minute burst" },
+    { value: "13 MAR 2025", label: "biggest day: OminousOsie did 33 commits, ~3,860 lines changed across 19 markdown files. Almost all of those changes are additions, and done within one 25-minute burst!" },
     { value: "68,365", label: "words written across the wiki's lifetime — a 200+ page novel's worth" }
   ],
 
