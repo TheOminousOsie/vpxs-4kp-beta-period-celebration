@@ -77,7 +77,7 @@
       {
         "hash": "e5673ad99b45b626ee0ed3c73222b36dbc514a3b",
         "date": "2025-06-14 10:40:59 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update table.yml\n\nRemoved backglass fields as they are unneeded",
         "files": [
           {"status": "M", "path": "external/vpx-potc/table.yml", "diff": "diff --git a/external/vpx-potc/table.yml b/external/vpx-potc/table.yml\nindex a85c6058..75b70520 100644\n--- a/external/vpx-potc/table.yml\n+++ b/external/vpx-potc/table.yml\n@@ -1,7 +1,6 @@\n ---\n-backglassBundled: true\n-backglassNotes: \"Wizard will install backglass\"\n-backglassChecksum: \"68301E32D51C994075C2BA0BAC85D419\"\n+applyFixes:\n+  - \"bass\"\n fps: 55\n romVPSId: \"PRebrQRQ\"\n romNotes: \"Download potc_600as\"\n@@ -14,5 +13,4 @@ testers:\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"rOx6ED7h\"\n vpxChecksum: \"E5579122D8F31D188FFF65906BFBDF24\"\n-applyFixes:\n-  - \"bass\"\n+\n"}

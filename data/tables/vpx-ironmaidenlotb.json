@@ -64,7 +64,7 @@
       {
         "hash": "c32884e91ca3f64cb147519d5ec462af99680127",
         "date": "2024-09-13 16:24:09 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "added Iron Maiden LOTB (#500)\n\nAdded Iron Maiden Legacy of the Beast (Original 2022) table.\n\nTable occasionally crashes when attract video loops.",
         "files": [
           {"status": "A", "path": "external/vpx-ironmaidenlotb/Iron Maiden (Original 2022).ini", "diff": "diff --git a/external/vpx-ironmaidenlotb/Iron Maiden (Original 2022).ini b/external/vpx-ironmaidenlotb/Iron Maiden (Original 2022).ini\nnew file mode 100644\nindex 00000000..e69de29b"},

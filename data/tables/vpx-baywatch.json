@@ -13,7 +13,7 @@
       {
         "hash": "195953b22fa1250e2d1c3eab234fc79f0279372c",
         "date": "2026-08-17 16:00:23 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "baywatch upgrade (#2117)",
         "files": [
           {"status": "M", "path": "external/vpx-baywatch/table.ini", "diff": "diff --git a/external/vpx-baywatch/table.ini b/external/vpx-baywatch/table.ini\nindex 6182ed7e..93a6f56d 100644\n--- a/external/vpx-baywatch/table.ini\n+++ b/external/vpx-baywatch/table.ini\n@@ -1,7 +1,12 @@\n [Standalone]\n PUPCapture = 1\n PUPPlugin = 1\n-B2SPlugins = 1 \n+B2SPlugins = 1\n+PUPFullDMDOverlayOffsetX = 0\n+PUPFullDMDOverlayOffsetY = 0\n+PUPFullDMDOverlayScaleLinked = 0\n+PUPFullDMDOverlayScale = 1.200000\n+PUPFullDMDOverlayScaleY = 1.000000\n \n [Player]\n OverrideTableEmissionScale = 0\n"},

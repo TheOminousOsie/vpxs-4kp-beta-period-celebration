@@ -70,7 +70,7 @@
       {
         "hash": "f0e93e8ba959beb084fdd935190e21100bda6318",
         "date": "2025-06-14 10:37:32 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update table.yml\n\nRemoved backglass fields as they are unneeded",
         "files": [
           {"status": "M", "path": "external/vpx-freddy/table.yml", "diff": "diff --git a/external/vpx-freddy/table.yml b/external/vpx-freddy/table.yml\nindex e86658fe..d79a25b4 100644\n--- a/external/vpx-freddy/table.yml\n+++ b/external/vpx-freddy/table.yml\n@@ -1,7 +1,6 @@\n ---\n-backglassBundled: true\n-backglassChecksum: \"F56C306BB49563F028FDFA3F2F202444\"\n-backglassNotes: \"Wizard will install backglass\"\n+applyFixes:\n+  - \"bass\"\n fps: 57\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/freddy.1835/\"\n romVersionOverride: \"freddy\"\n@@ -15,5 +14,3 @@ testers:\n vpxVPSId: \"4diBoDyZ\"\n vpxChecksum: \"4C738DA5F67E549705B2CFC05C3D9411\"\n vpxNotes: \"Download version 1.0\"\n-applyFixes:\n-  - \"bass\"\n"}

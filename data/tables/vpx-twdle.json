@@ -4,7 +4,7 @@
       {
         "hash": "61b363921393bae14d27783005561fd3a0c48090",
         "date": "2026-08-23 16:58:56 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update TWD LE to 1.6 and Apollo 13 (#2125)\n\n* Update table.yml\n\n* add cabinet mod diff\n\n* updates\n\n* Update table.ini\n\n* A13 updates",
         "files": [
           {"status": "M", "path": "external/vpx-twdle/table.yml", "diff": "diff --git a/external/vpx-twdle/table.yml b/external/vpx-twdle/table.yml\nindex 4aef09d8..49e8c12a 100644\n--- a/external/vpx-twdle/table.yml\n+++ b/external/vpx-twdle/table.yml\n@@ -1,18 +1,24 @@\n ---\n-backglassChecksum: \"7b0e44fc0ff114d4d71cd6a6fecf25b5\"\n+backglassChecksum: \"7B0E44FC0FF114D4D71CD6A6FECF25B5\"\n backglassNotes: \"Use 'The Walking Dead (LE) (Stern 2015).zip'\"\n backglassVPSId: \"_NqgJZ1qKE\"\n coloredROMChecksum: \"0935D57154410DE432139C950E165EBA\"\n coloredROMNotes: \"twd_160h.pac\"\n coloredROMVPSId: \"v6DPvEoOex\"\n+diffAuthorsOverride:\n+  - \"LoadedWeapon\"\n+diffChecksum: \"336FF3DEAA1C0A41D6EEF70693971860\"\n+diffNotes: \"Download 'The Walking Dead (Stern 2014) LW.zip'\"\n+diffUrlOverride: \"https://vpuniverse.com/files/file/22124-the-walking-dead-cabinet-mod/\"\n+diffVersionOverride: \"1.0\"\n fps: 57\n romChecksum: \"BD052AD54E57BDFBA634F343470CAE2C\"\n romNotes: \"twd_160h.zip\"\n romVPSId: \"pdHhrTUek_\"\n-tableNotes: \"Download 'VP10-The Walking Dead 1.2.zip'\"\n+tableNotes: \"Download 'The Walking Dead 1.6.zip' on VPUniverse\"\n tableVPSId: \"wasB0RRz\"\n tagline: \"Brains.\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"4191A4DD5735D7F96C0C3171C9F2444D\"\n+vpxChecksum: \"6CD591202D75A4CD9CD6BA36D73EF8B5\"\n vpxVPSId: \"UjHFQ8iA\"\n"}

@@ -60,7 +60,7 @@
       {
         "hash": "e74cfeee13be10ec11a30b587b5552d10e07871d",
         "date": "2025-10-14 10:25:42 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Rename DMD.png to dmd.png",
         "files": [
           {"status": "A", "path": "external/vpx-christine/dmd.png"},

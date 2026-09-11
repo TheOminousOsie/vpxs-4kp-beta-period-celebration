@@ -31,7 +31,7 @@
       <canvas class="fireworks" aria-hidden="true"></canvas>
       <div class="hero-col">
         <div class="eyebrow">OUT OF BETA · SEPTEMBER 2026</div>
-        <h1>Two years, 250 beta members, one very full USB drive. <span class="thanks">Thank you ♥</span></h1>
+        <h1><span class="num-accent amber">Two years</span>, <span class="num-accent">250 beta members</span>, one very full USB drive! <span class="thanks">Thank you ♥</span></h1>
         <p class="hero-body">Table Manager leaves beta this week. Everything below comes straight out of the repo history — every commit, every table, every late night that went into getting VPX Standalone running on the Legends Pinball 4K and HDP.</p>
         <div class="btn-row">
           <button class="btn-hero-primary" data-nav="catalog">Catalog history</button>
@@ -48,7 +48,7 @@
 
     <div class="section container">
       <div class="eyebrow">THE SHAPE OF THE BETA</div>
-      <h2>7,819 commits, month by month</h2>
+      <h2><span class="num-accent">7,819</span> commits, month by month</h2>
       <p class="body-copy">The first summer built the foundation. Spring 2025 was the table rush. This year has been polish, launcher art, and getting the catalog ready to ship.</p>
       <div class="bar-chart" id="monthlyChart" style="height:230px"></div>
       <div class="axis-row" id="monthlyAxis"></div>
@@ -69,8 +69,39 @@
     </div>
 
     <div class="section container">
-      <div class="eyebrow">THE ROOM AROUND THE REPO</div>
-      <h2>250 people in the beta</h2>
+      <div class="eyebrow">THE TABLES THEMSELVES</div>
+      <h2><span class="num-accent">315</span> tables, every era, every brand</h2>
+      <p class="body-copy" style="max-width:660px">Original custom builds outnumber any single classic manufacturer in the catalog. The 1990s alone account for a third of it.</p>
+      <div class="two-col" style="margin-top:8px">
+        <div>
+          <h3>What's actually on the cart.</h3>
+          <div class="sub">By manufacturer, all 315 tables.</div>
+          <div class="lb-rows" id="manufacturerRows"></div>
+        </div>
+        <div>
+          <h3>Every era, seven decades deep.</h3>
+          <div class="sub">By release decade, oldest table from 1934.</div>
+          <div class="lb-rows" id="eraRows"></div>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top:40px">
+        <div>
+          <h2>The most-rewritten table.</h2>
+          <div class="sub">By commits touching that table's config, art or launcher.</div>
+          <div class="lb-rows" id="revisedTableRows"></div>
+          <div class="footnote mono">PINK FLOYD GOT REVISED MORE THAN ANY OTHER TABLE IN THE CATALOG</div>
+        </div>
+        <div>
+          <h2>Who built the originals.</h2>
+          <div class="sub">Real names credited as table authors, version tags scrubbed out.</div>
+          <div class="lb-rows" id="tableAuthorRows"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section container">
+      <div class="eyebrow eyebrow-pink">THE ROOM AROUND THE REPO</div>
+      <h2><span class="num-accent pink">250</span> people in the beta</h2>
       <p class="body-copy" style="max-width:660px">Sixty-three names show up in the commit log. Another 187 were in the Discord testing builds, reporting bugs, arguing about plunger calibration and telling everyone which tables to try next. The first six joined in May 2023, more than a year before the initial commit.</p>
       <div class="bar-chart" id="discordChart" style="height:170px"></div>
       <div class="axis-row" id="discordAxis"></div>
@@ -91,8 +122,8 @@
     </div>
 
     <div class="section container">
-      <div class="eyebrow">EVERY NAME IN THE HISTORY</div>
-      <h2>All 63 contributors</h2>
+      <div class="eyebrow eyebrow-amber">EVERY NAME IN THE HISTORY</div>
+      <h2>All <span class="num-accent amber">63</span> contributors</h2>
       <p class="body-copy" style="margin:0 0 34px">Total commits including merges, so these run higher than the authored counts above.</p>
       <div class="chip-wall" id="contributorWall"></div>
     </div>
@@ -109,8 +140,8 @@
   <!-- ================= CATALOG ================= -->
   <section class="page" id="page-catalog">
     <div class="catalog-header container">
-      <div class="eyebrow">CATALOG HISTORY</div>
-      <h1>315 tables, and the full history of every one</h1>
+      <div class="eyebrow eyebrow-pink">CATALOG HISTORY</div>
+      <h1><span class="num-accent pink">315</span> tables, and the full history of every one</h1>
       <p>Each table carries its own record: the launcher art as it evolved, the config as it was tuned, and every commit that touched it. Open a table to see its history.</p>
     </div>
 
@@ -128,7 +159,7 @@
   <section class="page" id="page-timeline">
     <div class="timeline-header container">
       <div class="eyebrow">TIMELINE · JUL 2024 — SEP 2026</div>
-      <h1>788 days from the initial commit to the Public Release</h1>
+      <h1><span class="num-accent">788</span> days from the initial commit to the Public Release</h1>
       <p>Somebody pushed something on 487 of those days. Here are the moments the history actually turns on.</p>
     </div>
 
@@ -137,7 +168,7 @@
     <div class="event-spine container" id="eventSpine"></div>
 
     <div class="section container">
-      <h2 style="font-size:30px">48 wizard releases</h2>
+      <h2 style="font-size:30px"><span class="num-accent">48</span> wizard releases</h2>
       <p class="body-copy" style="max-width:660px;margin-bottom:14px">Every release from the first tag to the last, carrying 270 table additions and 392 table updates between them. v1.0.0 arrives with 61 tables; v2.0.0 revises 74 in a single pass.</p>
       <div class="chart-legend">
         <span class="legend-item"><span class="legend-swatch" style="background:#4de3ff"></span>Tables added</span>
@@ -185,5 +216,6 @@
 <script src="js/charts.js"></script>
 <script src="js/catalog.js"></script>
 <script src="js/app.js"></script>
+<script src="js/motion.js"></script>
 </body>
 </html>

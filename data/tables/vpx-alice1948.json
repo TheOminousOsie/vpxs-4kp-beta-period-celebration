@@ -50,7 +50,7 @@
       {
         "hash": "2bc87f4920d0f728fe66a865164e334ab1373297",
         "date": "2025-10-08 16:08:45 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update tableNotes for Alice in Wonderland table",
         "files": [
           {"status": "M", "path": "external/vpx-alice1948/table.yml", "diff": "diff --git a/external/vpx-alice1948/table.yml b/external/vpx-alice1948/table.yml\nindex e3cb06dc..4a964ecd 100644\n--- a/external/vpx-alice1948/table.yml\n+++ b/external/vpx-alice1948/table.yml\n@@ -7,7 +7,7 @@ backglassChecksum: \"ECE0EE9060A11417B1A515E9603589FF\"\n backglassNotes: \"Download 'Alice in Wonderland (Gottlieb 1948).directb2s.zip'\"\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n-tableNotes: \"Download v55_VPX8.zip\"\n+tableNotes: \"Alice in Wonderland (Gottlieb 1948) v600.zip\"\n tableVPSId: \"9kjJEqftU6\"\n tagline: \"We're all mad here!\"\n testers:\n"}

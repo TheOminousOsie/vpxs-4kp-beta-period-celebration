@@ -60,7 +60,7 @@
       {
         "hash": "6c7f119bdc7061432f106ae2f707d7bb3d22c627",
         "date": "2025-06-14 10:38:45 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update table.yml\n\nRemoved backglass fields as they are unneeded",
         "files": [
           {"status": "M", "path": "external/vpx-funhouse/table.yml", "diff": "diff --git a/external/vpx-funhouse/table.yml b/external/vpx-funhouse/table.yml\nindex 674ab5c0..ce543734 100644\n--- a/external/vpx-funhouse/table.yml\n+++ b/external/vpx-funhouse/table.yml\n@@ -1,10 +1,9 @@\n ---\n-backglassBundled: true\n-backglassNotes: \"Wizard will install backglass\"\n-backglassChecksum: \"EAE07C0F00CB04E4971B78A9D8EA7000\"\n+applyFixes:\n+  - \"bass\"\n fps: 45\n-romVPSId: \"oKy7SY7JKC\"\n romChecksum: \"EE82A4A235451E36405E3AB90A54DA10\"\n+romVPSId: \"oKy7SY7JKC\"\n tableVPSId: \"O1-qbuxg\"\n tagline: \"Hey, Bucko, shoot again!\"\n testers:\n@@ -13,5 +12,3 @@ testers:\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"I7Vd9HVoHn\"\n vpxChecksum: \"332CBCE0754D1D203B88CAA26CAE7B5C\"\n-applyFixes:\n-  - \"bass\"\n"}

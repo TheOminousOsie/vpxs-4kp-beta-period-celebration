@@ -28,7 +28,7 @@
       {
         "hash": "6fa56a58b98fda448747e9442513731e0a3387ed",
         "date": "2026-09-03 01:03:18 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Add enabled flag to table configuration (#2171)\n\ndisabling until I can look at the pup triggers",
         "files": [
           {"status": "M", "path": "external/vpx-dollypup/table.yml", "diff": "diff --git a/external/vpx-dollypup/table.yml b/external/vpx-dollypup/table.yml\nindex f7bc0ba8..314d3ba0 100644\n--- a/external/vpx-dollypup/table.yml\n+++ b/external/vpx-dollypup/table.yml\n@@ -1,4 +1,5 @@\n ---\n+enabled: false\n backglassVPSId: \"jPdDfup10S\"\n backglassChecksum: \"D2092F6654357AA0216C622CEBABBBE9\"\n backglassNotes: \"Download 'Dolly Parton (Bally 1979) 7digit.zip\"\n@@ -20,4 +21,4 @@ pupChecksum: \"9E75467CBD0599C6531E422505CD0B67\"\n pupArchiveFormat: \"7z\"\n pupVersion: \"dollyptb\"\n pupArchiveRoot: \"Dolly V1/dollyptb/\"\n-tableNameOverride: \"Dolly Parton (Pup Pack)\"\n\\ No newline at end of file\n+tableNameOverride: \"Dolly Parton (Pup Pack)\"\n"}

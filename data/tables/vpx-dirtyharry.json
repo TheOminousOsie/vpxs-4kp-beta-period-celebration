@@ -13,7 +13,7 @@
       {
         "hash": "8fae115a0a44d410cad720c4e7a9e869a74c83b1",
         "date": "2026-09-03 00:57:55 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Dirty harry update (#2170)\n\n* Update table.yml\n\n* color rom is ass\n\n* Update table.yml\n\n* Update table.ini",
         "files": [
           {"status": "M", "path": "external/vpx-dirtyharry/table.ini", "diff": "diff --git a/external/vpx-dirtyharry/table.ini b/external/vpx-dirtyharry/table.ini\nindex abf6faf5..d6b5fff5 100644\n--- a/external/vpx-dirtyharry/table.ini\n+++ b/external/vpx-dirtyharry/table.ini\n@@ -1,14 +1,15 @@\n [Player]\n JoyAddCredit2Key = 1\n-ScreenPlayerY = 15.006700\n+ScreenPlayerY = 15.000000\n+ScreenPlayerZ = 90.000000\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.271548\n-ViewCabScaleY = 1.026047\n+ViewCabScaleX = 1.275000\n+ViewCabScaleY = 1.000000\n ViewCabScaleZ = 0.831721\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n ViewCabVOfs = 0.011699\n-ViewCabWindowTop = 390.821960\n-ViewCabWindowBot = 110.845306\n\\ No newline at end of file\n+ViewCabWindowTop = 353.867676\n+ViewCabWindowBot = 294.581055\n\\ No newline at end of file"},
@@ -23,7 +23,7 @@
       {
         "hash": "b26af65824ca9c0d5141b2ec15bc90c8f8652f7c",
         "date": "2026-08-14 12:58:34 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Dirty harry update (#2109)\n\n* Update table.yml\n\n* Update nvram.nv\n\n* color rom is ass",
         "files": [
           {"status": "M", "path": "external/vpx-dirtyharry/nvram.nv"},

@@ -98,7 +98,7 @@
       {
         "hash": "f3064fcbb13c672ec8fcdac0b9521e70bb86f987",
         "date": "2025-05-04 22:41:13 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update table.ini",
         "files": [
           {"status": "M", "path": "external/vpx-taf/table.ini", "diff": "diff --git a/external/vpx-taf/table.ini b/external/vpx-taf/table.ini\nindex 9c6316ba..66e60cea 100644\n--- a/external/vpx-taf/table.ini\n+++ b/external/vpx-taf/table.ini\n@@ -1,7 +1,7 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.128897\n-ViewCabScaleY = 1.093380\n+ViewCabScaleX = 1.210333\n+ViewCabScaleY = 1.094809\n ViewCabScaleZ = 1.016085\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.017300\n@@ -15,4 +15,4 @@ BackBufferScale = 0.416666\n \n [Player]\n ScreenPlayerX = -0.009200\n-ScreenPlayerZ = 99.974556\n\\ No newline at end of file\n+ScreenPlayerZ = 99.974556\n"}
@@ -107,7 +107,7 @@
       {
         "hash": "baf53e6d7ae03bb51b99d33d9ad4183cc72115d2",
         "date": "2025-05-04 19:38:11 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update table.yml",
         "files": [
           {"status": "M", "path": "external/vpx-taf/table.yml", "diff": "diff --git a/external/vpx-taf/table.yml b/external/vpx-taf/table.yml\nindex 99cd9b4a..b16d2acd 100644\n--- a/external/vpx-taf/table.yml\n+++ b/external/vpx-taf/table.yml\n@@ -1,7 +1,7 @@\n ---\n backglassVPSId: \"agRjCO8K\"\n backglassChecksum: \"6D79886639554981FD32185C67F49611\"\n-romVPSId: \"0zPMCWcA\"\n+romVPSId: \"viUI43p9\"\n romChecksum: \"C4FC145F32C622CBA37E2360DC226F9A\"\n romNotes: \"Download - taf_l7.zip\"\n fps: 48\n"}
@@ -116,7 +116,7 @@
       {
         "hash": "31e0d73fb0a3c9e27c8ca0f65941e344cc2480ce",
         "date": "2025-05-04 18:53:23 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update table.yml",
         "files": [
           {"status": "M", "path": "external/vpx-taf/table.yml", "diff": "diff --git a/external/vpx-taf/table.yml b/external/vpx-taf/table.yml\nindex 4aa5ab82..99cd9b4a 100644\n--- a/external/vpx-taf/table.yml\n+++ b/external/vpx-taf/table.yml\n@@ -2,7 +2,7 @@\n backglassVPSId: \"agRjCO8K\"\n backglassChecksum: \"6D79886639554981FD32185C67F49611\"\n romVPSId: \"0zPMCWcA\"\n-romChecksum: \"F4D3810B45EFBAE942176C8BA5E1002C\"\n+romChecksum: \"C4FC145F32C622CBA37E2360DC226F9A\"\n romNotes: \"Download - taf_l7.zip\"\n fps: 48\n tableVPSId: \"aT_GONvw\"\n"}
@@ -125,7 +125,7 @@
       {
         "hash": "640c43e8c762130c2e982651b6634b75efac4df9",
         "date": "2025-05-04 18:49:25 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update README.md",
         "files": [
           {"status": "M", "path": "external/vpx-taf/README.md", "diff": "diff --git a/external/vpx-taf/README.md b/external/vpx-taf/README.md\nindex 9e537aa7..1e7eff4f 100644\n--- a/external/vpx-taf/README.md\n+++ b/external/vpx-taf/README.md\n@@ -9,7 +9,7 @@ Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=\n DirectB2S\n \n Authors: [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n-Version: 1.0  \n+Version: 2.0  \n Download: [VP Universe](https://vpuniverse.com/files/file/2468-the-addams-family-bally-1992/)\n \n ROM\n"}
@@ -134,7 +134,7 @@
       {
         "hash": "4c17c0b174cbad4460d64155540c26aba07ebe0c",
         "date": "2025-05-04 18:47:58 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update table.yml",
         "files": [
           {"status": "M", "path": "external/vpx-taf/table.yml", "diff": "diff --git a/external/vpx-taf/table.yml b/external/vpx-taf/table.yml\nindex b66a47fc..4aa5ab82 100644\n--- a/external/vpx-taf/table.yml\n+++ b/external/vpx-taf/table.yml\n@@ -1,6 +1,6 @@\n ---\n backglassVPSId: \"agRjCO8K\"\n-backglassChecksum: \"63546A42C2876535DA86BB8F5440DA9E\"\n+backglassChecksum: \"6D79886639554981FD32185C67F49611\"\n romVPSId: \"0zPMCWcA\"\n romChecksum: \"F4D3810B45EFBAE942176C8BA5E1002C\"\n romNotes: \"Download - taf_l7.zip\"\n"}

@@ -50,7 +50,7 @@
       {
         "hash": "5debccd802d3988084eee053ce1659497c13fad0",
         "date": "2025-10-11 12:02:20 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update backglass VPS ID and checksum in table.yml\n\nTo fix broken backglass link, picked a different B2S.",
         "files": [
           {"status": "M", "path": "external/vpx-banzairun/table.yml", "diff": "diff --git a/external/vpx-banzairun/table.yml b/external/vpx-banzairun/table.yml\nindex b7296625..5c36a9b8 100644\n--- a/external/vpx-banzairun/table.yml\n+++ b/external/vpx-banzairun/table.yml\n@@ -1,6 +1,6 @@\n ---\n-backglassVPSId: \"6g1eEfMtd9\"\n-backglassChecksum: \"0a4da343e92eb0c69633d55146e80904\"\n+backglassVPSId: \"_Ienxw_6cb\"\n+backglassChecksum: \"C87953D426DF991990C8068FF787CB56\"\n fps: 55\n romVPSId: \"GSq8PW4s\"\n romChecksum: \"f2571fc419f9ec584b8e74ef6c6ff771\"\n"}

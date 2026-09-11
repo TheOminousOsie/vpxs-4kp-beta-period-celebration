@@ -127,5 +127,84 @@
     };
   }
 
+  function initClickBurst() {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const canvas = document.createElement("canvas");
+    canvas.style.cssText = "position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;";
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext("2d");
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let particles = [];
+    let w = 0, h = 0;
+
+    function resize() {
+      w = window.innerWidth;
+      h = window.innerHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    resize();
+    window.addEventListener("resize", resize);
+
+    function rand(a, b) { return a + Math.random() * (b - a); }
+    function pick(arr) { return arr[(Math.random() * arr.length) | 0]; }
+
+    function burst(x, y, color, size, scale) {
+      const s = scale || 1;
+      const count = size || (18 + Math.random() * 16) | 0;
+      const c = color || pick(PALETTE);
+      for (let i = 0; i < count; i++) {
+        const angle = (i / count) * Math.PI * 2 + Math.random() * 0.3;
+        const speed = (1.4 + Math.random() * 2.2) * s;
+        particles.push({
+          x, y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          life: 1,
+          decay: rand(0.014, 0.03),
+          radius: (1 + Math.random() * 1.5) * s,
+          color: Math.random() < 0.16 ? "#ffffff" : c
+        });
+      }
+    }
+
+    let raf = null;
+    function frame() {
+      raf = requestAnimationFrame(frame);
+      ctx.clearRect(0, 0, w, h);
+      ctx.globalCompositeOperation = "lighter";
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.vy += 0.05;
+        p.vx *= 0.98;
+        p.vy *= 0.98;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.life -= p.decay;
+        if (p.life <= 0) { particles.splice(i, 1); continue; }
+        let alpha = Math.min(1, p.life + 0.15);
+        if (p.life < 0.35) alpha = p.life * 2.4;
+        ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius * p.life, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+    raf = requestAnimationFrame(frame);
+
+    if (!reduced) {
+      document.addEventListener("click", (e) => {
+        if (particles.length > 600) return;
+        burst(e.clientX, e.clientY, null, (36 + Math.random() * 32) | 0, 2);
+      });
+    }
+
+    window.spawnBurst = burst;
+  }
+
   window.initFireworks = initFireworks;
+  window.initClickBurst = initClickBurst;
 })();

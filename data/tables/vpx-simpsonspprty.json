@@ -51,7 +51,7 @@
       {
         "hash": "548ac9dc1b025eed529acf0d870008adcae5f0f3",
         "date": "2025-06-14 10:39:52 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update table.yml\n\nRemoved backglass fields as they are unneeded",
         "files": [
           {"status": "M", "path": "external/vpx-simpsonspprty/table.yml", "diff": "diff --git a/external/vpx-simpsonspprty/table.yml b/external/vpx-simpsonspprty/table.yml\nindex 3b65bd1f..eb4d68ef 100644\n--- a/external/vpx-simpsonspprty/table.yml\n+++ b/external/vpx-simpsonspprty/table.yml\n@@ -1,7 +1,6 @@\n ---\n-backglassBundled: true\n-backglassNotes: \"Wizard will install backglass\"\n-backglassChecksum: \"76918113A0203A1B8FC1FA147F9B2B25\"\n+applyFixes:\n+  - \"bass\"\n fps: 50\n romVPSId: \"BJan0_7-\"\n romNotes: \"Download simpprty.zip\"\n@@ -15,6 +14,3 @@ testers:\n   - \"Mar3nBu\"\n vpxVPSId: \"3EE1X7uW\"\n vpxChecksum: \"90B033A6C012418A3B4091102EAEA825\"\n-applyFixes:\n-  - \"bass\"\n-\n"}

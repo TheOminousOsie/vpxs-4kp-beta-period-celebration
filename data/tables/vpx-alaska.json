@@ -77,7 +77,7 @@
       {
         "hash": "66daff905bf0a5bb93f413d955f58d1944dd3c84",
         "date": "2025-07-08 09:59:43 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Add Alaska POV",
         "files": [
           {"status": "M", "path": "external/vpx-alaska/table.ini", "diff": "diff --git a/external/vpx-alaska/table.ini b/external/vpx-alaska/table.ini\nindex 3e24e92c..2efb7c22 100644\n--- a/external/vpx-alaska/table.ini\n+++ b/external/vpx-alaska/table.ini\n@@ -3,14 +3,12 @@ BallTrailStrength = 0.392157\n OverrideTableEmissionScale = 0\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.818596\n-ViewCabScaleY = 0.999639\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -48.500000\n-ViewCabPlayerY = -0.098019\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.204560\n+ViewCabScaleY = 1.128956\n+ViewCabScaleZ = 1.034711\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -104.259689\n+ViewCabWindowTop = 252.670761\n+ViewCabWindowBot = 83.953270\n"}

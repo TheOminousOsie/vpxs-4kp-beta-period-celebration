@@ -191,7 +191,7 @@
       {
         "hash": "04cd1735100eca14f627d5a2a90498edca7b14f1",
         "date": "2024-09-13 16:27:22 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "add table Genie (#498)\n\nAdd Genie (Gottlieb 1979)",
         "files": [
           {"status": "A", "path": "external/vpx-genie/Genie (Gottlieb 1979).ini", "diff": "diff --git a/external/vpx-genie/Genie (Gottlieb 1979).ini b/external/vpx-genie/Genie (Gottlieb 1979).ini\nnew file mode 100644\nindex 00000000..21694054\n--- /dev/null\n+++ b/external/vpx-genie/Genie (Gottlieb 1979).ini\t\n@@ -0,0 +1,12 @@\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.815159\n+ViewCabScaleY = 0.866479\n+ViewCabScaleZ = 1.072098\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 23.819014\n+ViewCabPlayerY = 0.302989\n+ViewCabPlayerZ = -492.410004\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},

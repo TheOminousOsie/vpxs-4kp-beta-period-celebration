@@ -40,7 +40,7 @@
       {
         "hash": "85a802659d5d54d2956ee5c8dc737a634bbd1f29",
         "date": "2026-01-20 21:27:15 -0500",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Enabled for wizard\n\nReel issue fixed in latest bundle",
         "files": [
           {"status": "M", "path": "external/vpx-underwater/table.yml", "diff": "diff --git a/external/vpx-underwater/table.yml b/external/vpx-underwater/table.yml\nindex dfe8aa0d..7393e5b2 100644\n--- a/external/vpx-underwater/table.yml\n+++ b/external/vpx-underwater/table.yml\n@@ -10,8 +10,6 @@ backglassNotes: \"Underwater (Recel 1976) db2s.zip\"\n #romVersionOverride: \"\"\n #romNotes: \"\"\"\n #romChecksum: \"\"\n-mainNotes: \"Known issue: Scoring reels misaligned\"\n-enabled: false\n fps: 60\n tagline: \"Dive! Dive!\"\n testers:\n"}

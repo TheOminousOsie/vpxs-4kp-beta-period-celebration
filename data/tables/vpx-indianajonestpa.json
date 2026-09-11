@@ -40,7 +40,7 @@
       {
         "hash": "99dcc6181e560956e1bf0b46901dd394d4d8613e",
         "date": "2026-07-17 01:18:57 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Merge branch 'main' into wizardpr",
         "files": [
           {"status": "MM", "path": "external/vpx-indianajonestpa/table.yml", "diff": "diff --cc external/vpx-indianajonestpa/table.yml\nindex 9579d761,f6805ac4..985d7497\n--- a/external/vpx-indianajonestpa/table.yml\n+++ b/external/vpx-indianajonestpa/table.yml\n@@@ -1,16 -1,12 +1,15 @@@\n  ---\n  tableVPSId: \"lkSumsrF\"\n  vpxVPSId: \"bpo2bAdE\"\n- vpxChecksum: \"F7C1285F3FB1D1C4935C459EB64B5A04\"\n  tableNotes: \"Download Indiana Jones...Bigus(MOD)2.1.vpx.zip\"\n -backglassVPSId: \"puSi-3cozl\"\n -backglassChecksum: \"140b4894293202e921b8d796ba4871c9\"\n +backglassVPSId: \"ZLADkVUoHF\"\n +backglassChecksum: \"F3F242B17E290C990D357737363AF492\"\n  backglasNotes: >-\n    Download Indiana Jones The Pinball Adventure (Williams 1993).rar\n -fps: 56\n +coloredROMChecksum: \"E21FE6D4C667EE18C3E5B5BFF9B79B43\"\n +coloredROMNotes: \"Download Version 1.02\"\n +coloredROMVPSId: \"yofn_A4k\"\n +fps: 60\n  romVPSId: \"H6pEW4cE\"\n  romChecksum: \"6E5FD8533AF8E5B1A2C710B5CE5E7A87\"\n  romNotes: \"Download -  ij_l7.zip\"\n"}

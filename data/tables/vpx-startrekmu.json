@@ -4,7 +4,7 @@
       {
         "hash": "803c77ce96c4b46815dec2e409313c5b8b3a1408",
         "date": "2026-09-06 20:26:50 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Add 2 Trek Wizard tables (#2172)\n\n* initial\n\n* Add 2 Treks\n\nEnterprise LE\nThe Mirror Universe\n\n* Fresh nvram with Free play",
         "files": [
           {"status": "A", "path": "external/vpx-startrekmu/table.yml", "diff": "diff --git a/external/vpx-startrekmu/table.yml b/external/vpx-startrekmu/table.yml\nnew file mode 100644\nindex 00000000..690ae9e5\n--- /dev/null\n+++ b/external/vpx-startrekmu/table.yml\n@@ -0,0 +1,14 @@\n+---\n+additionalRoms:\n+  - vpsId: \"Q2i8zbfknl\"\n+    checksum: \"136DFD96F61D4EF00ABD7941B63DCD89\"\n+backglassChecksum: \"D67A559F3AE50C2EDB7B20E817FD89D1\"\n+backglassVPSId: \"-pPsy-McV-\"\n+fps: 60\n+romChecksum: \"D70C44B7E0725DBEFDB1F6E99603D957\"\n+romVPSId: \"Tz5iB2aCvJ\"\n+tableVPSId: \"a_C3Wh0aHE\"\n+testers:\n+  - \"Wraith\"\n+vpxChecksum: \"A1EB07470BDCC41D3E7230750FC392A4\"\n+vpxVPSId: \"2BtP-2bk3p\"\n"},

@@ -4,7 +4,7 @@
       {
         "hash": "b1cc9cd2979ebb9c25b95409bed20d2167d7b0de",
         "date": "2026-07-19 20:51:06 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Refine backglass and table notes in table.yml\n\nUpdated backglass notes for clarity and added table notes.",
         "files": [
           {"status": "M", "path": "external/vpx-megadeth/table.yml", "diff": "diff --git a/external/vpx-megadeth/table.yml b/external/vpx-megadeth/table.yml\nindex a1c1abf6..6f18744d 100644\n--- a/external/vpx-megadeth/table.yml\n+++ b/external/vpx-megadeth/table.yml\n@@ -1,16 +1,15 @@\n ---\n-backglassVPSId: \"t9WZcMFwyU\"\n+backglassBundled: true\n backglassChecksum: \"306D2FC70CF4EACCCAAC88E9D535984A\"\n backglassNotes: >-\n-  Download VPX folder, open 'Backglass' folder, get the\n-  'MEGADETH_Original_2023.directb2s' file\n-backglassBundled: true\n+  Download Megadeth Megapack archive, open 'Backglass' folder\n+  , get the 'MEGADETH_Original_2023.directb2s' file\n fps: 60\n+tableNotes: \"Download VPX 'Megadeth (original)v.1.4.vpx' file\"\n tableVPSId: \"RTjNzNHOeW\"\n tagline: \"Peace sells... but who's buying?\"\n testers:\n   - \"Boris\"\n   - \"Mox\"\n-vpxVPSId: \"t9WZcMFwyU\"\n vpxChecksum: \"B750B23F2FC4EFAC12BF25645F9BE072\"\n-tableNotes: \"Download VPX 'Megadeth (original)v.1.4.vpx' file\"\n+vpxVPSId: \"t9WZcMFwyU\"\n"}

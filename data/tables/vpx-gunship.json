@@ -114,7 +114,7 @@
       {
         "hash": "18698fdb3a3d810fdcdf6afe37b587fdc1600292",
         "date": "2025-06-09 20:33:08 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update table.ini\n\nChanged POV to use Camera Mode",
         "files": [
           {"status": "M", "path": "external/vpx-gunship/table.ini", "diff": "diff --git a/external/vpx-gunship/table.ini b/external/vpx-gunship/table.ini\nindex f0e2de1c..2e62553f 100644\n--- a/external/vpx-gunship/table.ini\n+++ b/external/vpx-gunship/table.ini\n@@ -6,14 +6,12 @@ FXAA = 1\n WindowRenderMode = 0\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.873382\n-ViewCabScaleY = 1.083348\n+ViewCabMode = 2\n+ViewCabRotation = 180.000000\n+ViewCabScaleX = 1.076441\n+ViewCabScaleY = 1.018031\n ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 21.134993\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 15.744918\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -2.921699\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 138.953217\n"}

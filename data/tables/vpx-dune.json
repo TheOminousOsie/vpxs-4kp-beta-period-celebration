@@ -50,7 +50,7 @@
       {
         "hash": "bb18087315b4293566dac25ea37b07d7d732e03a",
         "date": "2025-06-14 10:35:53 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update table.yml\n\nRemoved backglass fields as they are unneeded",
         "files": [
           {"status": "M", "path": "external/vpx-dune/table.yml", "diff": "diff --git a/external/vpx-dune/table.yml b/external/vpx-dune/table.yml\nindex c023afa7..96d3b995 100644\n--- a/external/vpx-dune/table.yml\n+++ b/external/vpx-dune/table.yml\n@@ -1,7 +1,4 @@\n ---\n-backglassBundled: true\n-backglassNotes: \"Wizard will install backglass\"\n-backglassChecksum: \"3CB46E0DEEE83B2BF3B9BB2CFDADE91C\"\n fps: 50\n tableVPSId: \"6t0bWHR24a\"\n tagline: \"You were not born to the spice as we were!\"\n"}

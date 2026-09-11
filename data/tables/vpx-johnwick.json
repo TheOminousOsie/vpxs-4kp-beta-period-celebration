@@ -194,7 +194,7 @@
       {
         "hash": "652fd51be4da66b872e6075a4f43717c983754a6",
         "date": "2025-05-11 17:27:28 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Update table.yml",
         "files": [
           {"status": "M", "path": "external/vpx-johnwick/table.yml", "diff": "diff --git a/external/vpx-johnwick/table.yml b/external/vpx-johnwick/table.yml\nindex 457763fd..263599f0 100644\n--- a/external/vpx-johnwick/table.yml\n+++ b/external/vpx-johnwick/table.yml\n@@ -17,4 +17,4 @@ testers:\n   - \"OminousOsie\"\n vpxchecksum: \"f89b694a79c893d93251279ddae39b1e\"\n vpxVPSId: \"VG0a5Acwiy\"\n-enabled: false # Osie: Cant handle .rar files yet\n\\ No newline at end of file\n+enabled: true # Osie: Cant handle .rar files yet\n"}

@@ -14,11 +14,15 @@
   }
 
   function renderKpiStrip(el, items) {
-    el.innerHTML = items.map(k => `
+    el.innerHTML = items.map(k => {
+      const digits = String(k.value).replace(/[^0-9]/g, "");
+      const canCount = digits.length > 0;
+      return `
       <div class="kpi-cell">
-        <div class="kpi-value mono">${esc(k.value)}</div>
+        <div class="kpi-value mono"${canCount ? ` data-count-target="${digits}" data-count-final="${esc(k.value)}"` : ""}>${canCount ? "0" : esc(k.value)}</div>
         <div class="kpi-label">${esc(k.label)}</div>
-      </div>`).join("");
+      </div>`;
+    }).join("");
   }
 
   function renderMonthlyChart() {
@@ -29,7 +33,7 @@
       const h = Math.max(3, Math.round(n / 1125 * 200));
       const color = n > 700 ? "var(--cyan)" : n > 300 ? "var(--cyan-mid)" : "var(--cyan-deep)";
       const label = n >= 600 ? `<div class="bar-col-label">${fmt(n)}</div>` : "";
-      return `<div class="bar-col">${label}<div class="bar" style="height:${h}px;background:${color}" title="${ym} · ${fmt(n)} commits"></div></div>`;
+      return `<div class="bar-col">${label}<div class="bar grow-v" style="height:${h}px;background:${color};transition-delay:${i * 12}ms" title="${ym} · ${fmt(n)} commits"></div></div>`;
     }).join("");
     axisEl.innerHTML = data.map(([ym], i) => `<div class="axis-label">${monthLabel(ym, i === 0)}</div>`).join("");
   }
@@ -41,7 +45,7 @@
       return `<div class="lb-row${hasRank ? "" : " no-rank"}">
         ${rank}
         <div class="lb-name" title="${esc(name)}">${esc(name)}</div>
-        <div class="lb-track"><div class="lb-fill" style="width:${pct}%;background:${colorFn(i)}"></div></div>
+        <div class="lb-track"><div class="lb-fill grow-h" style="width:${pct}%;background:${colorFn(i)};transition-delay:${i * 30}ms"></div></div>
         <div class="lb-count mono">${fmt(n)}</div>
       </div>`;
     }).join("");
@@ -55,7 +59,7 @@
       const barH = Math.max(2, Math.round(n / 592 * 150));
       const color = n > 450 ? "var(--cyan)" : n > 250 ? "var(--cyan-mid)" : "var(--cyan-deep)";
       const label = (n >= 520 || n <= 25) ? `<div class="bar-col-label">${fmt(n)}</div>` : "";
-      return `<div class="bar-col">${label}<div class="bar" style="height:${barH}px;background:${color}" title="${String(h).padStart(2,"0")}:00 · ${fmt(n)} commits"></div></div>`;
+      return `<div class="bar-col">${label}<div class="bar grow-v" style="height:${barH}px;background:${color};transition-delay:${h * 15}ms" title="${String(h).padStart(2,"0")}:00 · ${fmt(n)} commits"></div></div>`;
     }).join("");
     axisEl.innerHTML = data.map((_, h) => `<div class="axis-label">${h % 3 === 0 ? String(h).padStart(2, "0") : ""}</div>`).join("");
   }
@@ -68,7 +72,7 @@
       return `<div class="weekday-card">
         <div class="weekday-day mono">${day.toUpperCase()}</div>
         <div class="weekday-count">${fmt(n)}</div>
-        <div class="weekday-track"><div class="weekday-fill" style="width:${pct}%"></div></div>
+        <div class="weekday-track"><div class="weekday-fill grow-h" style="width:${pct}%"></div></div>
       </div>`;
     }).join("");
   }
@@ -84,11 +88,11 @@
     const chartEl = document.getElementById("discordChart");
     const axisEl = document.getElementById("discordAxis");
     const { data, labels } = D.discordJoins;
-    chartEl.innerHTML = data.map(([ym, cumulative, joined]) => {
+    chartEl.innerHTML = data.map(([ym, cumulative, joined], i) => {
       const h = Math.max(3, Math.round(cumulative / 250 * 150));
       const color = joined >= 13 ? "var(--cyan)" : joined >= 6 ? "var(--cyan-mid)" : "var(--cyan-deep)";
       const label = joined >= 13 ? `<div class="bar-col-label">+${joined}</div>` : "";
-      return `<div class="bar-col">${label}<div class="bar" style="height:${h}px;background:${color}" title="${ym} · ${fmt(cumulative)} members · +${joined} that month"></div></div>`;
+      return `<div class="bar-col">${label}<div class="bar grow-v" style="height:${h}px;background:${color};transition-delay:${i * 12}ms" title="${ym} · ${fmt(cumulative)} members · +${joined} that month"></div></div>`;
     }).join("");
     axisEl.innerHTML = data.map(([ym]) => `<div class="axis-label">${labels.includes(ym) ? ym : ""}</div>`).join("");
   }
@@ -105,7 +109,7 @@
     const axisEl = document.getElementById("releaseAxis");
     const zeroSet = new Set(["v0.1.5", "v0.1.6", "v0.1.7", "v1.0.2", "v2.0.2", "v2.0.4a"]);
     const releases = window.RELEASES || [];
-    chartEl.innerHTML = releases.map(r => {
+    chartEl.innerHTML = releases.map((r, i) => {
       const added = (r.tables_added || []).length;
       const updated = (r.tables_updated || []).length;
       const isZero = added === 0 && updated === 0;
@@ -114,8 +118,8 @@
       const updColor = isZero ? "var(--bar-zero)" : "var(--bar-updates)";
       const dateStr = (r.date || "").slice(0, 10);
       return `<div class="bar-col" title="${esc(r.release)} · ${dateStr} · +${added} added, ${updated} updated">
-        ${added ? `<div class="bar" style="height:${addH}px;background:var(--cyan);border-radius:2px 2px 0 0"></div>` : ""}
-        <div class="bar" style="height:${updH}px;background:${updColor};border-radius:${added ? "0" : "2px 2px 0 0"}"></div>
+        ${added ? `<div class="bar grow-v" style="height:${addH}px;background:var(--cyan);border-radius:2px 2px 0 0;transition-delay:${i * 8}ms"></div>` : ""}
+        <div class="bar grow-v" style="height:${updH}px;background:${updColor};border-radius:${added ? "0" : "2px 2px 0 0"};transition-delay:${i * 8}ms"></div>
       </div>`;
     }).join("");
     axisEl.innerHTML = releases.map(r => {
@@ -131,7 +135,7 @@
     chartEl.innerHTML = data.map(([ym, n], i) => {
       const h = Math.max(4, Math.round(n / 16 * 120));
       const color = n >= 10 ? "var(--amber)" : n >= 5 ? "var(--cyan-mid)" : "var(--cyan-deep)";
-      return `<div class="bar-col"><div class="bar-col-label">${n}</div><div class="bar" style="height:${h}px;background:${color}" title="${ym} · ${n} first commits"></div></div>`;
+      return `<div class="bar-col"><div class="bar-col-label">${n}</div><div class="bar grow-v" style="height:${h}px;background:${color};transition-delay:${i * 20}ms" title="${ym} · ${n} first commits"></div></div>`;
     }).join("");
     axisEl.innerHTML = data.map(([ym], i) => `<div class="axis-label">${monthLabel(ym, i === 0)}</div>`).join("");
   }
@@ -143,10 +147,15 @@
       const pct = Math.round(n / 97 * 100);
       return `<div class="busiest-row">
         <div class="busiest-date mono">${date}</div>
-        <div class="busiest-track"><div class="busiest-fill${i === 0 ? " top" : ""}" style="width:${pct}%"></div></div>
+        <div class="busiest-track"><div class="busiest-fill grow-h${i === 0 ? " top" : ""}" style="width:${pct}%;transition-delay:${i * 40}ms"></div></div>
         <div class="busiest-count mono">${n}</div>
       </div>`;
     }).join("");
+  }
+
+  function eventMeta(ev) {
+    if (!ev.link) return esc(ev.meta);
+    return `<a href="${esc(ev.link)}" target="_blank" rel="noopener">${esc(ev.meta)}</a>`;
   }
 
   function renderEventSpine() {
@@ -160,7 +169,7 @@
             <div class="event-eyebrow">★ MILESTONE</div>
             <div class="event-title">${esc(ev.title)}</div>
             <p class="event-body">${esc(ev.body)}</p>
-            <div class="event-meta mono">${esc(ev.meta)}</div>
+            <div class="event-meta mono">${eventMeta(ev)}</div>
           </div>
         </div>`;
       }
@@ -170,7 +179,7 @@
           <div class="event-dot" style="background:${ev.color}"></div>
           <div class="event-title">${esc(ev.title)}</div>
           <p class="event-body">${esc(ev.body)}</p>
-          <div class="event-meta mono">${esc(ev.meta)}</div>
+          <div class="event-meta mono">${eventMeta(ev)}</div>
         </div>
       </div>`;
     }).join("");
@@ -181,8 +190,16 @@
     renderKpiStrip(document.getElementById("kpiTimeline"), D.kpiTimeline);
     renderMonthlyChart();
     renderLeaderboard(document.getElementById("contributorRows"), D.contributors.data, D.contributors.max,
-      (i) => i < 2 ? "var(--cyan)" : i < 5 ? "var(--cyan-mid)" : "var(--cyan-deeper)", true);
+      (i) => i < 2 ? "var(--pink)" : i < 5 ? "var(--pink-mid)" : "var(--pink-deep)", true);
     renderLeaderboard(document.getElementById("reviewerRows"), D.reviewers.data, D.reviewers.max,
+      (i) => i === 0 ? "var(--amber)" : i < 3 ? "var(--amber-mid)" : "var(--amber-deep)", true);
+    renderLeaderboard(document.getElementById("manufacturerRows"), D.manufacturerMix.data, D.manufacturerMix.max,
+      (i) => i < 2 ? "var(--cyan)" : i < 5 ? "var(--cyan-mid)" : "var(--cyan-deeper)", false);
+    renderLeaderboard(document.getElementById("eraRows"), D.eraMix.data, D.eraMix.max,
+      (i) => i < 2 ? "var(--cyan)" : i < 5 ? "var(--cyan-mid)" : "var(--cyan-deeper)", false);
+    renderLeaderboard(document.getElementById("revisedTableRows"), D.mostRevisedTables.data, D.mostRevisedTables.max,
+      (i) => i === 0 ? "var(--amber)" : i < 3 ? "var(--amber-mid)" : "var(--amber-deep)", true);
+    renderLeaderboard(document.getElementById("tableAuthorRows"), D.tableAuthors.data, D.tableAuthors.max,
       (i) => i === 0 ? "var(--amber)" : i < 3 ? "var(--amber-mid)" : "var(--amber-deep)", true);
     renderHourChart();
     renderWeekdayGrid();

@@ -4,7 +4,7 @@
       {
         "hash": "1a9b9cef02d04517f20f0f76e815e469e0621549",
         "date": "2026-08-25 19:50:41 -0400",
-        "author": "Wes Smith",
+        "author": "evilwraith",
         "message": "Rename readme.md to README.md",
         "files": [
           {"status": "R-from", "path": "external/vpx-dexter/readme.md->external/vpx-dexter/README.md", "diff": "diff --git a/external/vpx-dexter/readme.md b/external/vpx-dexter/README.md\nsimilarity index 100%\nrename from external/vpx-dexter/readme.md\nrename to external/vpx-dexter/README.md\n"},
