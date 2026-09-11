@@ -3,7 +3,7 @@ window.SITE_DATA = {
     { value: "250", label: "members in the beta Discord" },
     { value: "7,819", label: "commits across the whole beta" },
     { value: "63", label: "of those 250 pushed commits" },
-    { value: "315", label: "wizard-ready tables at launch" },
+    { value: "324", label: "wizard-ready tables at launch" },
     { value: "1,926", label: "pull requests merged" },
     { value: "788", label: "days from first commit to public release" }
   ],
