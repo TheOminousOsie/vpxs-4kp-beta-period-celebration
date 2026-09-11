@@ -4,7 +4,7 @@
       {
         "hash": "2a1a81f9299f6de1f5728fb3635c41256946e244",
         "date": "2026-09-10 00:21:59 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "image resize and delete\n",
         "files": [
           {"status": "D", "path": "external/vpx-johnnymnemonic/backglass.png"}
@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-johnnymnemonic/table.yml", "diff": "diff --git a/external/vpx-johnnymnemonic/table.yml b/external/vpx-johnnymnemonic/table.yml\nindex d68e7d58..461f575c 100644\n--- a/external/vpx-johnnymnemonic/table.yml\n+++ b/external/vpx-johnnymnemonic/table.yml\n@@ -2,10 +2,7 @@\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/529c44b2c08c9de492d3ec05714aecca_b2s_1638093698646.webp\"\n backglassVPSId: \"l7qkHcGJFh\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"9080636EA4D6D2B691846F8A4CD83CE7\"\n-  - \"8D98230AFFD73D86843E04684A14E3EE\"\n+backglassChecksum: \"9080636EA4D6D2B691846F8A4CD83CE7\"\n coloredROMChecksum: \"1114A0849281B5013CAEBA7FEE14B2D5\"\n coloredROMNotes: \"Download 'Johnny ver1.2.zip' at the bottom of the page. Use 'jm june 30 2023.pac'\"\n coloredROMVPSId: \"qz22m48qaU\"\n@@ -22,7 +19,4 @@ testers:\n   - \"Reboot\"\n   - \"OminousOsie\"\n vpxVPSId: \"gwAsaJWx\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"E5CEC87B86DBF87499CE52FD8D8DA303\"\n-  - \"110896ED767AE3CE36179A45445BDB22\"\n+vpxChecksum: \"E5CEC87B86DBF87499CE52FD8D8DA303\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-johnnymnemonic/table.yml", "diff": "diff --git a/external/vpx-johnnymnemonic/table.yml b/external/vpx-johnnymnemonic/table.yml\nindex 461f575c..d68e7d58 100644\n--- a/external/vpx-johnnymnemonic/table.yml\n+++ b/external/vpx-johnnymnemonic/table.yml\n@@ -2,7 +2,10 @@\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/529c44b2c08c9de492d3ec05714aecca_b2s_1638093698646.webp\"\n backglassVPSId: \"l7qkHcGJFh\"\n-backglassChecksum: \"9080636EA4D6D2B691846F8A4CD83CE7\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"9080636EA4D6D2B691846F8A4CD83CE7\"\n+  - \"8D98230AFFD73D86843E04684A14E3EE\"\n coloredROMChecksum: \"1114A0849281B5013CAEBA7FEE14B2D5\"\n coloredROMNotes: \"Download 'Johnny ver1.2.zip' at the bottom of the page. Use 'jm june 30 2023.pac'\"\n coloredROMVPSId: \"qz22m48qaU\"\n@@ -19,4 +22,7 @@ testers:\n   - \"Reboot\"\n   - \"OminousOsie\"\n vpxVPSId: \"gwAsaJWx\"\n-vpxChecksum: \"E5CEC87B86DBF87499CE52FD8D8DA303\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"E5CEC87B86DBF87499CE52FD8D8DA303\"\n+  - \"110896ED767AE3CE36179A45445BDB22\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-johnnymnemonic/table.ini", "diff": "diff --git a/external/vpx-johnnymnemonic/table.ini b/external/vpx-johnnymnemonic/table.ini\nindex 92753948..5056b179 100644\n--- a/external/vpx-johnnymnemonic/table.ini\n+++ b/external/vpx-johnnymnemonic/table.ini\n@@ -1,6 +1,5 @@\n [Standalone]\n BackBufferScale = 0.416666\n-WindowRenderMode = 0\n \n [TableOverride]\n ViewCabMode = 2\n@@ -9,7 +8,7 @@ ViewCabScaleY = 1.014521\n ViewCabScaleZ = 0.945514\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = 7.458134\n+ViewCabVOfs = 0\n ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 83.953217\n "},
@@ -243,7 +243,7 @@
       {
         "hash": "61ddb955a1e2052e2ac4be1472de7710585ed99b",
         "date": "2025-03-07 12:30:50 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add launcher configs to multiple tables\n\nHumpty Dumpty > Right, Release ball\nAlice in Wonderland  > Right, Release ball\nThe Shadow > Right, Toggle ramps\nAttack From Mars > Up, Launcher\nT2 > Up, Launcher\nWWE Royal Rumble > Left, Right, Mag Saves (I think)\nJohnny Mnemonic >left and right change table colors. (Sorry don't know what the effect is called )\nWCS - Left is magnasave\nBlack Knight 2000 > Right, mag save\nBlack Knight: L/R nudge = L/R magna save\nBlack Knight 2000: L/R nudge = L/R magna save\nViper: L nudge = viper reverse, R nudge = viper strike\nMedusa: R nudge = shield post\n",
         "files": [
           {"status": "A", "path": "external/vpx-johnnymnemonic/launcher.cfg", "diff": "diff --git a/external/vpx-johnnymnemonic/launcher.cfg b/external/vpx-johnnymnemonic/launcher.cfg\nnew file mode 100644\nindex 00000000..c20a58fc\n--- /dev/null\n+++ b/external/vpx-johnnymnemonic/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+; dpadUp = \"Up\"\n+; dpadDown = \"Down\"\n+dpadLeft = \"Adjust Lighting\"\n+dpadRight = \"Adjust Lighting\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start\"\n+; menu = \"Menu\"\n\\ No newline at end of file"}

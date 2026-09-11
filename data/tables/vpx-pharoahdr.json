@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-pharoahdr/table.yml", "diff": "diff --git a/external/vpx-pharoahdr/table.yml b/external/vpx-pharoahdr/table.yml\nindex ac353f7e..47d59eec 100644\n--- a/external/vpx-pharoahdr/table.yml\n+++ b/external/vpx-pharoahdr/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"jfz6IkZR\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"48F3AE4351B056B33667C35B41D157D2\"\n-  - \"D6E857729501754D0E6CF419C9F6F33D\"\n+backglassChecksum: \"48F3AE4351B056B33667C35B41D157D2\"\n backglassNotes: \"Use 2 screen directb2s file\"\n fps: 60\n romVPSId: \"_HhiI3s0SJ\"\n@@ -14,7 +11,4 @@ testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"oXfqCduB\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"081E3E23D0B279E25C787151F07EE2F7\"\n-  - \"C120179E50876E244CADE88F5D60978A\"\n+vpxChecksum: \"081E3E23D0B279E25C787151F07EE2F7\""}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-pharoahdr/table.yml", "diff": "diff --git a/external/vpx-pharoahdr/table.yml b/external/vpx-pharoahdr/table.yml\nindex 5ca22275..ac353f7e 100644\n--- a/external/vpx-pharoahdr/table.yml\n+++ b/external/vpx-pharoahdr/table.yml\n@@ -5,7 +5,7 @@ backglassChecksum:\n   - \"48F3AE4351B056B33667C35B41D157D2\"\n   - \"D6E857729501754D0E6CF419C9F6F33D\"\n backglassNotes: \"Use 2 screen directb2s file\"\n-fps: 48\n+fps: 60\n romVPSId: \"_HhiI3s0SJ\"\n romChecksum: \"B6E2F05228618851F0C28F81B1E16080\"\n tableVPSId: \"zodqeE8R\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-pharoahdr/table.yml", "diff": "diff --git a/external/vpx-pharoahdr/table.yml b/external/vpx-pharoahdr/table.yml\nindex 7a804cdd..5ca22275 100644\n--- a/external/vpx-pharoahdr/table.yml\n+++ b/external/vpx-pharoahdr/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"jfz6IkZR\"\n-backglassChecksum: \"48F3AE4351B056B33667C35B41D157D2\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"48F3AE4351B056B33667C35B41D157D2\"\n+  - \"D6E857729501754D0E6CF419C9F6F33D\"\n backglassNotes: \"Use 2 screen directb2s file\"\n fps: 48\n romVPSId: \"_HhiI3s0SJ\"\n@@ -11,4 +14,7 @@ testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"oXfqCduB\"\n-vpxChecksum: \"081E3E23D0B279E25C787151F07EE2F7\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"081E3E23D0B279E25C787151F07EE2F7\"\n+  - \"C120179E50876E244CADE88F5D60978A\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-pharoahdr/table.ini", "diff": "diff --git a/external/vpx-pharoahdr/table.ini b/external/vpx-pharoahdr/table.ini\nindex 7fb7f103..512b2672 100644\n--- a/external/vpx-pharoahdr/table.ini\n+++ b/external/vpx-pharoahdr/table.ini\n@@ -1,21 +1,24 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+\n [Player]\n BallTrail = 0\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 1.000000\n-ScreenPlayerX = -0.010150\n+ScreenPlayerX = 0.043700\n+ScreenPlayerY = 14.966745\n+ScreenPlayerZ = 89.989449\n+AAFactor = 0.90\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.242298\n-ViewCabScaleY = 1.060370\n-ViewCabScaleZ = 0.904995\n+ViewCabScaleX = 1.149243\n+ViewCabScaleY = 0.996422\n+ViewCabScaleZ = 0.841047\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -32.545696\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 138.953217\n-\n-[Standalone]\n-BackBufferScale = 0.355729\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 287.342773\n+ViewCabWindowBot = 77.370140\n\\ No newline at end of file"},

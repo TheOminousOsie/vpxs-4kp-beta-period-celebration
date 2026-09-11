@@ -4,7 +4,7 @@
       {
         "hash": "803c77ce96c4b46815dec2e409313c5b8b3a1408",
         "date": "2026-09-06 20:26:50 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Add 2 Trek Wizard tables (#2172)\n\n* initial\n\n* Add 2 Treks\n\nEnterprise LE\nThe Mirror Universe\n\n* Fresh nvram with Free play",
         "files": [
           {"status": "A", "path": "external/vpx-startrekle/table.yml", "diff": "diff --git a/external/vpx-startrekle/table.yml b/external/vpx-startrekle/table.yml\nnew file mode 100644\nindex 00000000..65cd1b98\n--- /dev/null\n+++ b/external/vpx-startrekle/table.yml\n@@ -0,0 +1,22 @@\n+---\n+backglassChecksum: \"CF9D976591C87E7CEC437F6679D16C84\"\n+backglassVPSId: \"ZwWOf4NFZU\"\n+coloredROMChecksum: \"BCA5443EC393743084024307690C46A8\"\n+coloredROMNotes: \"Download 'pin2dmd.pal'\"\n+# yamllint disable-line rule:line-length\n+coloredROMUrlOverride: \"https://montetoncab.fr/leslipdejoane/Pincab/Medias/VPX/rom_color_pour_VPX_4_et_16_couleurs/DMD_Colorisee_patche/DMD_Colorise_16_color/St161%20hc/st_161hc/\"\n+coloredROMVersionOverride: \"st_161hc\"\n+diffChecksum: \"00F8D62034008F322C697AD67A6D076C\"\n+diffVPSId: \"HsQi0my24N\"\n+fps: 60\n+romChecksum: \"FE0212963850BE8E6CF10F9EEB2EDA08\"\n+romNotes: \"Download 'st_161hc.zip'\"\n+# yamllint disable-line rule:line-length\n+romUrlOverride: \"https://montetoncab.fr/leslipdejoane/Pincab/Medias/VPX/rom_color_pour_VPX_4_et_16_couleurs/DMD_Colorisee_patche/DMD_Colorise_16_color/St161%20hc/\"\n+romVersionOverride: \"st_161hc\"\n+tableVPSId: \"XYh-gw4S\"\n+testers:\n+  - \"Wraith\"\n+  - \"Bla1ze\"\n+vpxChecksum: \"E378CA67729E6312D2F540C416CE0FCA\"\n+vpxVPSId: \"C0Jt1amq\""},

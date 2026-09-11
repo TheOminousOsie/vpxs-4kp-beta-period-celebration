@@ -4,7 +4,7 @@
       {
         "hash": "4a02ebc321763607047eeb2ac122432348f2226b",
         "date": "2026-07-18 00:40:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "final updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-godzilla/table.yml", "diff": "diff --git a/external/vpx-godzilla/table.yml b/external/vpx-godzilla/table.yml\nindex ceaa821a..005ac52c 100644\n--- a/external/vpx-godzilla/table.yml\n+++ b/external/vpx-godzilla/table.yml\n@@ -1,16 +1,21 @@\n ---\n-backglassVPSId: \"7KE8QhZmDY\"\n backglassChecksum: \"395C48FD5341A62DE0FD20FB5B992669\"\n backglassNotes: \"Download version 2.5\"\n+backglassVPSId: \"7KE8QhZmDY\"\n+coloredROMChecksum:\n+  - \"c87c21a2d30282b9f16a06deb008c992\"\n+  - \"b68a3d59f3ea7baecb18e882ec89f532\"\n+coloredROMPin2DMD: true\n+coloredROMVPSId: \"i5k8kEB9\"\n fps: 55\n-romVPSId: \"Q-UunvKK\"\n romChecksum: \"bb53c6e3c70060579851c70ffc22846f\"\n-tableVPSId: \"fGz4ZrUb\"\n+romVPSId: \"Q-UunvKK\"\n tableNotes: \"Download version 3.1\"\n+tableVPSId: \"fGz4ZrUb\"\n tagline: \"Size DOES matter!\"\n testers:\n   - \"KaoticBPR\"\n   - \"OminousOsie\"\n   - \"kingargyle\"\n-vpxVPSId: \"agV0wfgx\"\n vpxChecksum: \"93BD59EB3DADC035AD89AD10C1622D87\"\n+vpxVPSId: \"agV0wfgx\""}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-godzilla/table.yml", "diff": "diff --git a/external/vpx-godzilla/table.yml b/external/vpx-godzilla/table.yml\nindex 255f6dcc..ceaa821a 100644\n--- a/external/vpx-godzilla/table.yml\n+++ b/external/vpx-godzilla/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"7KE8QhZmDY\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"395C48FD5341A62DE0FD20FB5B992669\"\n-  - \"8EB91ECEED2591316B4022F098419B3A\"\n+backglassChecksum: \"395C48FD5341A62DE0FD20FB5B992669\"\n backglassNotes: \"Download version 2.5\"\n fps: 55\n romVPSId: \"Q-UunvKK\"\n@@ -16,7 +13,4 @@ testers:\n   - \"OminousOsie\"\n   - \"kingargyle\"\n vpxVPSId: \"agV0wfgx\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"93BD59EB3DADC035AD89AD10C1622D87\"\n-  - \"7E35EBD7A987238FCADC45C8AF427064\"\n+vpxChecksum: \"93BD59EB3DADC035AD89AD10C1622D87\""}
@@ -22,7 +22,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-godzilla/table.yml", "diff": "diff --git a/external/vpx-godzilla/table.yml b/external/vpx-godzilla/table.yml\nindex 7dc924fc..255f6dcc 100644\n--- a/external/vpx-godzilla/table.yml\n+++ b/external/vpx-godzilla/table.yml\n@@ -5,7 +5,7 @@ backglassChecksum:\n   - \"395C48FD5341A62DE0FD20FB5B992669\"\n   - \"8EB91ECEED2591316B4022F098419B3A\"\n backglassNotes: \"Download version 2.5\"\n-fps: 60\n+fps: 55\n romVPSId: \"Q-UunvKK\"\n romChecksum: \"bb53c6e3c70060579851c70ffc22846f\"\n tableVPSId: \"fGz4ZrUb\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-godzilla/table.yml", "diff": "diff --git a/external/vpx-godzilla/table.yml b/external/vpx-godzilla/table.yml\nindex 975ad97d..7dc924fc 100644\n--- a/external/vpx-godzilla/table.yml\n+++ b/external/vpx-godzilla/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"7KE8QhZmDY\"\n-backglassChecksum: \"395C48FD5341A62DE0FD20FB5B992669\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"395C48FD5341A62DE0FD20FB5B992669\"\n+  - \"8EB91ECEED2591316B4022F098419B3A\"\n backglassNotes: \"Download version 2.5\"\n fps: 60\n romVPSId: \"Q-UunvKK\"\n@@ -13,4 +16,7 @@ testers:\n   - \"OminousOsie\"\n   - \"kingargyle\"\n vpxVPSId: \"agV0wfgx\"\n-vpxChecksum: \"93BD59EB3DADC035AD89AD10C1622D87\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"93BD59EB3DADC035AD89AD10C1622D87\"\n+  - \"7E35EBD7A987238FCADC45C8AF427064\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-godzilla/table.ini", "diff": "diff --git a/external/vpx-godzilla/table.ini b/external/vpx-godzilla/table.ini\nindex 8cc1bdc4..2850800e 100644\n--- a/external/vpx-godzilla/table.ini\n+++ b/external/vpx-godzilla/table.ini\n@@ -1,26 +1,19 @@\n-[Standalone]\n-BackBufferScale = 0.416666\n-WindowRenderMode = 0\n-\n [Player]\n-FXAA = 4\n-AAFactor = 0.98\n-MaxTexDimension = 4096\n OverrideTableEmissionScale = 1\n ScreenPlayerY = 20.049940\n ScreenPlayerZ = 99.951218\n DynamicDayNight = 0\n-EmissionScale = 0.458865\n+EmissionScale = 0.503455\n JoyAddCredit2Key = 1\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.361598\n-ViewCabScaleY = 1.104805\n-ViewCabScaleZ = 1.066495\n+ViewCabScaleX = 1.303558\n+ViewCabScaleY = 1.005078\n+ViewCabScaleZ = 0.817806\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 2.479998\n-ViewCabVOfs = -83.432007\n-ViewCabWindowTop = 325.243835\n-ViewCabWindowBot = 2.841198\n+ViewCabHOfs = 0.014798\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 126.933998\n+ViewCabWindowBot = 37.565159\n ToneMapper = 0\n\\ No newline at end of file"},
@@ -50,7 +50,7 @@
       {
         "hash": "374b9840f42a7677f3bcaa82dc946f0f56ad2079",
         "date": "2025-11-25 15:23:16 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Godzilla fix\n\nAdded WindowRenderMode = 0\n",
         "files": [
           {"status": "M", "path": "external/vpx-godzilla/table.ini", "diff": "diff --git a/external/vpx-godzilla/table.ini b/external/vpx-godzilla/table.ini\nindex a2691ae7..8cc1bdc4 100644\n--- a/external/vpx-godzilla/table.ini\n+++ b/external/vpx-godzilla/table.ini\n@@ -1,5 +1,6 @@\n [Standalone]\n BackBufferScale = 0.416666\n+WindowRenderMode = 0\n \n [Player]\n FXAA = 4\n"}

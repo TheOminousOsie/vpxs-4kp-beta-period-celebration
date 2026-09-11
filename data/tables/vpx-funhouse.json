@@ -4,7 +4,7 @@
       {
         "hash": "2a1a81f9299f6de1f5728fb3635c41256946e244",
         "date": "2026-09-10 00:21:59 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "image resize and delete\n",
         "files": [
           {"status": "D", "path": "external/vpx-funhouse/backglass.png"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-funhouse/table.yml", "diff": "diff --git a/external/vpx-funhouse/table.yml b/external/vpx-funhouse/table.yml\nindex 80b88c43..3a95a95b 100644\n--- a/external/vpx-funhouse/table.yml\n+++ b/external/vpx-funhouse/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"27C710E011EEC95729339C2C44AF1AE7\"\n-  - \"3C583B610B8BC5BD4F50856741B5C8FF\"\n+backglassChecksum: \"27C710E011EEC95729339C2C44AF1AE7\"\n backglassVPSId: \"AzBZfcxUUy\"\n diffChecksum: \"FEC3E9E4A7D2ADF1E010517CA9ACF3B8\"\n diffVPSId: \"GqdNrqlFF5\"\n@@ -17,8 +14,5 @@ testers:\n   - \"mcap\"\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"BBD3FF48CAF1AE7CDDD8E8DD2D518326\"\n-  - \"3D73125A45FA16260E94E81E58E89C81\"\n+vpxChecksum: \"BBD3FF48CAF1AE7CDDD8E8DD2D518326\"\n vpxVPSId: \"Jt3UevJk\""}
@@ -22,7 +22,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-funhouse/table.yml", "diff": "diff --git a/external/vpx-funhouse/table.yml b/external/vpx-funhouse/table.yml\nindex e701cf23..80b88c43 100644\n--- a/external/vpx-funhouse/table.yml\n+++ b/external/vpx-funhouse/table.yml\n@@ -6,7 +6,7 @@ backglassChecksum:\n backglassVPSId: \"AzBZfcxUUy\"\n diffChecksum: \"FEC3E9E4A7D2ADF1E010517CA9ACF3B8\"\n diffVPSId: \"GqdNrqlFF5\"\n-fps: 60\n+fps: 56\n romChecksum: \"EE82A4A235451E36405E3AB90A54DA10\"\n romVPSId: \"oKy7SY7JKC\"\n tableNotes: \"Download 'Funhouse (Williams 1990) 2.0b'\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-funhouse/table.yml", "diff": "diff --git a/external/vpx-funhouse/table.yml b/external/vpx-funhouse/table.yml\nindex ca89003a..e701cf23 100644\n--- a/external/vpx-funhouse/table.yml\n+++ b/external/vpx-funhouse/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"27C710E011EEC95729339C2C44AF1AE7\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"27C710E011EEC95729339C2C44AF1AE7\"\n+  - \"3C583B610B8BC5BD4F50856741B5C8FF\"\n backglassVPSId: \"AzBZfcxUUy\"\n diffChecksum: \"FEC3E9E4A7D2ADF1E010517CA9ACF3B8\"\n diffVPSId: \"GqdNrqlFF5\"\n@@ -14,5 +17,8 @@ testers:\n   - \"mcap\"\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n-vpxChecksum: \"BBD3FF48CAF1AE7CDDD8E8DD2D518326\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"BBD3FF48CAF1AE7CDDD8E8DD2D518326\"\n+  - \"3D73125A45FA16260E94E81E58E89C81\"\n vpxVPSId: \"Jt3UevJk\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-funhouse/table.ini", "diff": "diff --git a/external/vpx-funhouse/table.ini b/external/vpx-funhouse/table.ini\nindex 0e703a56..48c678c4 100644\n--- a/external/vpx-funhouse/table.ini\n+++ b/external/vpx-funhouse/table.ini\n@@ -1,19 +1,21 @@\n+[Standalone]\n+BackBufferScale = 0.416666\n+PinMAMEWindow = 0\n+\n [Player]\n OverrideTableEmissionScale = 1\n-EmissionScale = 0.25\n+EmissionScale = 0.500175\n ScreenPlayerZ = 96.287247\n ScreenPlayerY = 22.316099\n+DynamicDayNight = 0\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.227461\n-ViewCabScaleY = 1.085052\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.157885\n+ViewCabScaleY = 1.015476\n+ViewCabScaleZ = 0.930424\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -39.180706\n-ViewCabWindowTop = 376.914856\n-ViewCabWindowBot = 84.289238\n-\n-[Standalone]\n-BackBufferScale = 0.333333\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 256.436890\n+ViewCabWindowBot = 36.670235"},
@@ -60,7 +60,7 @@
       {
         "hash": "6c7f119bdc7061432f106ae2f707d7bb3d22c627",
         "date": "2025-06-14 10:38:45 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n\nRemoved backglass fields as they are unneeded",
         "files": [
           {"status": "M", "path": "external/vpx-funhouse/table.yml", "diff": "diff --git a/external/vpx-funhouse/table.yml b/external/vpx-funhouse/table.yml\nindex 674ab5c0..ce543734 100644\n--- a/external/vpx-funhouse/table.yml\n+++ b/external/vpx-funhouse/table.yml\n@@ -1,10 +1,9 @@\n ---\n-backglassBundled: true\n-backglassNotes: \"Wizard will install backglass\"\n-backglassChecksum: \"EAE07C0F00CB04E4971B78A9D8EA7000\"\n+applyFixes:\n+  - \"bass\"\n fps: 45\n-romVPSId: \"oKy7SY7JKC\"\n romChecksum: \"EE82A4A235451E36405E3AB90A54DA10\"\n+romVPSId: \"oKy7SY7JKC\"\n tableVPSId: \"O1-qbuxg\"\n tagline: \"Hey, Bucko, shoot again!\"\n testers:\n@@ -13,5 +12,3 @@ testers:\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"I7Vd9HVoHn\"\n vpxChecksum: \"332CBCE0754D1D203B88CAA26CAE7B5C\"\n-applyFixes:\n-  - \"bass\"\n"}
@@ -87,7 +87,7 @@
       {
         "hash": "84ec701c04a63f9f568279714fe476e9982abf9f",
         "date": "2025-06-13 12:44:10 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "removed quotes from booleans\n",
         "files": [
           {"status": "M", "path": "external/vpx-funhouse/table.yml", "diff": "diff --git a/external/vpx-funhouse/table.yml b/external/vpx-funhouse/table.yml\nindex 7881726f..674ab5c0 100644\n--- a/external/vpx-funhouse/table.yml\n+++ b/external/vpx-funhouse/table.yml\n@@ -1,5 +1,5 @@\n ---\n-backglassBundled: \"true\"\n+backglassBundled: true\n backglassNotes: \"Wizard will install backglass\"\n backglassChecksum: \"EAE07C0F00CB04E4971B78A9D8EA7000\"\n fps: 45"}

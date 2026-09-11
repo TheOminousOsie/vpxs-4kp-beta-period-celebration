@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-pistolpoker/table.yml", "diff": "diff --git a/external/vpx-pistolpoker/table.yml b/external/vpx-pistolpoker/table.yml\nindex efd36af5..01153fce 100644\n--- a/external/vpx-pistolpoker/table.yml\n+++ b/external/vpx-pistolpoker/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassBundled: true\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"92A14959DFD41DD13F90ABF8F9773E14\"\n-  - \"E67B6BE0C67302FD5BFDC6DAFE40CED6\"\n+backglassChecksum: \"92A14959DFD41DD13F90ABF8F9773E14\"\n backglassNotes: \"Included with table\"\n backglassVPSId: \"0nXQaHopjh\"\n fps: 60\n@@ -16,8 +13,5 @@ tagline: \"'Ace in the Hole' 'Hey, phrasing...'\"\n testers:\n   - \"evilwraith\"\n   - \"pointdablame\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"A639F982246980FCB0B2744C982BE9EC\"\n-  - \"E67B6BE0C67302FD5BFDC6DAFE40CED6\"\n+vpxChecksum: \"A639F982246980FCB0B2744C982BE9EC\"\n vpxVPSId: \"Qg6G4hlP9u\""}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-pistolpoker/table.yml", "diff": "diff --git a/external/vpx-pistolpoker/table.yml b/external/vpx-pistolpoker/table.yml\nindex 3797e54b..efd36af5 100644\n--- a/external/vpx-pistolpoker/table.yml\n+++ b/external/vpx-pistolpoker/table.yml\n@@ -6,7 +6,7 @@ backglassChecksum:\n   - \"E67B6BE0C67302FD5BFDC6DAFE40CED6\"\n backglassNotes: \"Included with table\"\n backglassVPSId: \"0nXQaHopjh\"\n-fps: 45\n+fps: 60\n romChecksum: \"5C16F03FCDFED54DB05E261689150B89\"\n romNotes: \"Download pstlpkr1.zip\"\n romVPSId: \"agWzKaeNAW\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-pistolpoker/table.yml", "diff": "diff --git a/external/vpx-pistolpoker/table.yml b/external/vpx-pistolpoker/table.yml\nindex bd50f2ff..3797e54b 100644\n--- a/external/vpx-pistolpoker/table.yml\n+++ b/external/vpx-pistolpoker/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassBundled: true\n-backglassChecksum: \"92A14959DFD41DD13F90ABF8F9773E14\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"92A14959DFD41DD13F90ABF8F9773E14\"\n+  - \"E67B6BE0C67302FD5BFDC6DAFE40CED6\"\n backglassNotes: \"Included with table\"\n backglassVPSId: \"0nXQaHopjh\"\n fps: 45\n@@ -13,5 +16,8 @@ tagline: \"'Ace in the Hole' 'Hey, phrasing...'\"\n testers:\n   - \"evilwraith\"\n   - \"pointdablame\"\n-vpxChecksum: \"A639F982246980FCB0B2744C982BE9EC\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"A639F982246980FCB0B2744C982BE9EC\"\n+  - \"E67B6BE0C67302FD5BFDC6DAFE40CED6\"\n vpxVPSId: \"Qg6G4hlP9u\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-pistolpoker/nvram.nv"},
@@ -51,7 +51,7 @@
       {
         "hash": "d6123cb48baae4d04340dc3303bcb5d23efd4ee2",
         "date": "2025-11-10 22:45:30 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-pistolpoker/table.yml", "diff": "diff --git a/external/vpx-pistolpoker/table.yml b/external/vpx-pistolpoker/table.yml\nindex be5b1cbf..a22d9ab1 100644\n--- a/external/vpx-pistolpoker/table.yml\n+++ b/external/vpx-pistolpoker/table.yml\n@@ -14,5 +14,6 @@ tableVPSId: \"45n8rfvr1S\"\n tagline: \"'Ace in the Hole' 'Hey, phrasing...'\"\n testers:\n   - \"evilwraith\"\n+  - \"pointdablame\"\n vpxChecksum: \"A639F982246980FCB0B2744C982BE9EC\"\n vpxVPSId: \"Qg6G4hlP9u\"\n"}
@@ -60,7 +60,7 @@
       {
         "hash": "fda7e39b99d0283f1081c85346341a3a0c3001ad",
         "date": "2025-11-09 22:04:50 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-pistolpoker/table.ini", "diff": "diff --git a/external/vpx-pistolpoker/table.ini b/external/vpx-pistolpoker/table.ini\nindex f8340ef2..d20db0a6 100644\n--- a/external/vpx-pistolpoker/table.ini\n+++ b/external/vpx-pistolpoker/table.ini\n@@ -5,8 +5,7 @@ WindowRenderMode = 0\n [Player]\n BallTrailStrength = 0.329412\n OverrideTableEmissionScale = 0\n-MaxTexDimension = 2048\n-AAFactor = .90\n+AAFactor = 0.95\n FXAA = 2\n \n [TableOverride]\n"}
@@ -69,7 +69,7 @@
       {
         "hash": "b01cf1a52312f1d68901f5c28f4b3bc2783996a7",
         "date": "2025-11-09 19:09:20 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "fixed rom link\n",
         "files": [
           {"status": "A", "path": "external/vpx-pistolpoker/nvram.nv"},
@@ -79,7 +79,7 @@
       {
         "hash": "c6dca39a2288b622ab9402632a50e54fa3e6f4c0",
         "date": "2025-08-10 00:09:30 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Pistol Poker\n",
         "files": [
           {"status": "A", "path": "external/vpx-pistolpoker/launcher.png"},

@@ -4,7 +4,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-mm/table.ini", "diff": "diff --git a/external/vpx-mm/table.ini b/external/vpx-mm/table.ini\nindex 491f8f24..dc58fcef 100644\n--- a/external/vpx-mm/table.ini\n+++ b/external/vpx-mm/table.ini\n@@ -1,26 +1,23 @@\n [Player]\n JoyAddCredit2Key = 1\n BallTrailStrength = 0.490196\n-ScreenPlayerZ = 100.251236\n+ScreenPlayerZ = 90.000954\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.350000\n-ScreenPlayerY = 3.549998\n-AAFactor = 0.95\n+ScreenPlayerY = 15.004737\n+AAFactor = 0.90\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.253487\n-ViewCabScaleY = 1.025009\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.223843\n+ViewCabScaleY = 0.993069\n+ViewCabScaleZ = 0.970357\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 3.439997\n-ViewCabVOfs = -5.679996\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 98.953217\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+ViewCabHOfs = 5.336496\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 353.946991\n+ViewCabWindowBot = 0.922204\n\\ No newline at end of file"},
@@ -14,7 +14,7 @@
       {
         "hash": "ff0a5dcde78b2f0e22205a5968d1e04d66f16364",
         "date": "2025-11-18 21:27:42 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-mm/table.yml", "diff": "diff --git a/external/vpx-mm/table.yml b/external/vpx-mm/table.yml\nindex 03752915..5668c8c0 100644\n--- a/external/vpx-mm/table.yml\n+++ b/external/vpx-mm/table.yml\n@@ -8,7 +8,7 @@ romNotes: \"Download mm_109c.zip\"\n coloredROMVPSId: \"i8vJolcLwI\"\n coloredROMChecksum: \"EDA821AA80192B186C66045B55B4F960\"\n coloredROMNotes: \"Download Version 1.1.0\"\n-fps: 40\n+fps: 48\n tableVPSId: \"-5yMpqSy\"\n tableNotes: \"Download Version (Real Final)\"\n tagline: \"Is that a sword in your pocket?\"\n"}
@@ -23,7 +23,7 @@
       {
         "hash": "bd3c40bc4d33a899f505e102a6eea06784708901",
         "date": "2025-11-18 20:59:50 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Updated\n\nUpdated yml to include notes and latest serum version.\n",
         "files": [
           {"status": "M", "path": "external/vpx-mm/table.ini", "diff": "diff --git a/external/vpx-mm/table.ini b/external/vpx-mm/table.ini\nindex f4dad9b5..491f8f24 100644\n--- a/external/vpx-mm/table.ini\n+++ b/external/vpx-mm/table.ini\n@@ -9,6 +9,7 @@ OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.350000\n ScreenPlayerY = 3.549998\n+AAFactor = 0.95\n \n [TableOverride]\n ViewCabMode = 2"},
@@ -215,7 +215,7 @@
       {
         "hash": "51f8f35656b13d52e8d0db96b73bac583c237d2b",
         "date": "2025-03-23 15:51:37 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "MM table.yml Correction\n",
         "files": [
           {"status": "A", "path": "external/vpx-mm/table.yml", "diff": "diff --git a/external/vpx-mm/table.yml b/external/vpx-mm/table.yml\nnew file mode 100644\nindex 00000000..0682721b\n--- /dev/null\n+++ b/external/vpx-mm/table.yml\n@@ -0,0 +1,13 @@\n+---\n+backglassVPSId: \"kaoLtHsb\"\n+backglassChecksum: \"CD9C60B159BFFC4696EBDCBBC33CD704\"\n+romVPSId: \"VMV5-Loj\"\n+romChecksum: \"2215E20B0C370B64D3DF34AE17A8BF45\"\n+fps: 40\n+tableVPSId: \"-5yMpqSy\"\n+tagline: \"Is that a sword in your pocket?\"\n+testers:\n+- \"mcap\"\n+- \"Mox\"\n+vpxVPSId: \"oa2VDRAKIc\"\n+vpxChecksum: \"FDF922977B32CBA3E382511B960F1B32\"\n\\ No newline at end of file\n"}
@@ -224,7 +224,7 @@
       {
         "hash": "71faa28ed42cb1987fbdcabb1e895fc90ac0dfd8",
         "date": "2025-03-23 15:43:41 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Updated MM table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-mm/table.yml", "diff": "diff --git a/external/vpx-mm/table.yml b/external/vpx-mm/table.yml\nindex 132d159c..6eed7b7d 100644\n--- a/external/vpx-mm/table.yml\n+++ b/external/vpx-mm/table.yml\n@@ -1,7 +1,6 @@\n ---\n backglassVPSId: \"kaoLtHsb\"\n backglassChecksum: \"CD9C60B159BFFC4696EBDCBBC33CD704\"\n-backglassNotes: \"\"\n romVPSId: \"2MKLjVp8\"\n romChecksum: \"2215E20B0C370B64D3DF34AE17A8BF45\"\n fps: 40\n@@ -11,6 +10,4 @@ testers:\n - \"mcap\"\n - \"Mox\"\n vpxVPSId: \"oa2VDRAKIc\"\n-vpxChecksum: \"FDF922977B32CBA3E382511B960F1B32\"\n-tableNotes: \n-mainNotes: \n\\ No newline at end of file\n+vpxChecksum: \"FDF922977B32CBA3E382511B960F1B32\"\n\\ No newline at end of file\n"}
@@ -233,7 +233,7 @@
       {
         "hash": "4b2fcf775b83895dda2db9c6e938b5e9e6c0ad6d",
         "date": "2025-03-23 14:49:19 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-mm/table.yml", "diff": "diff --git a/external/vpx-mm/table.yml b/external/vpx-mm/table.yml\nindex fd34d144..132d159c 100644\n--- a/external/vpx-mm/table.yml\n+++ b/external/vpx-mm/table.yml\n@@ -2,7 +2,7 @@\n backglassVPSId: \"kaoLtHsb\"\n backglassChecksum: \"CD9C60B159BFFC4696EBDCBBC33CD704\"\n backglassNotes: \"\"\n-romVPSId: \"-5yMpqSy\"\n+romVPSId: \"2MKLjVp8\"\n romChecksum: \"2215E20B0C370B64D3DF34AE17A8BF45\"\n fps: 40\n tableVPSId: \"-5yMpqSy\"\n"}
@@ -242,7 +242,7 @@
       {
         "hash": "bb000f67bd46bbcf36a5004b12a80c7a4adef76f",
         "date": "2025-03-23 14:21:58 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Squashed commit of the following:\n\ncommit 425fefbc490a829b55a27735946947763b335152\nAuthor: MoxAssault <jasonfancher@gmail.com>\nDate:   Sun Mar 23 14:09:14 2025 -0500\n\n    Launcher.png and .ini Updates\n\n    Masters of the Universe\n    Medieval Madness\n\ncommit 16fa7640892f17830e50f0af67949b17c4c8a0d6\nMerge: 9d3e45b0 1cd9ecb0\nAuthor: OminousOsie <osie.oconnor@outlook.com>\nDate:   Sun Mar 23 18:56:56 2025 +0000\n\n    Merge remote-tracking branch 'upstream/main'\n\ncommit 9d3e45b092750e40f817db1c69fad34a80f3eb81\nAuthor: MoxAssault <jasonfancher@gmail.com>\nDate:   Sat Mar 22 19:20:03 2025 -0500\n\n    Hardbody table.yml Correction\n",
         "files": [
           {"status": "M", "path": "external/vpx-mm/launcher.png"},
@@ -252,7 +252,7 @@
       {
         "hash": "e14c4a37ed94e4732a1348d5857d6b8dd7e23ae0",
         "date": "2025-03-23 14:09:53 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "table.yml Files\n\nMasters of the Universe\nMedieval Madness\n",
         "files": [
           {"status": "A", "path": "external/vpx-mm/table.yml", "diff": "diff --git a/external/vpx-mm/table.yml b/external/vpx-mm/table.yml\nnew file mode 100644\nindex 00000000..fd34d144\n--- /dev/null\n+++ b/external/vpx-mm/table.yml\n@@ -0,0 +1,16 @@\n+---\n+backglassVPSId: \"kaoLtHsb\"\n+backglassChecksum: \"CD9C60B159BFFC4696EBDCBBC33CD704\"\n+backglassNotes: \"\"\n+romVPSId: \"-5yMpqSy\"\n+romChecksum: \"2215E20B0C370B64D3DF34AE17A8BF45\"\n+fps: 40\n+tableVPSId: \"-5yMpqSy\"\n+tagline: \"Is that a sword in your pocket?\"\n+testers:\n+- \"mcap\"\n+- \"Mox\"\n+vpxVPSId: \"oa2VDRAKIc\"\n+vpxChecksum: \"FDF922977B32CBA3E382511B960F1B32\"\n+tableNotes: \n+mainNotes: \n\\ No newline at end of file\n"}
@@ -261,7 +261,7 @@
       {
         "hash": "425fefbc490a829b55a27735946947763b335152",
         "date": "2025-03-23 14:09:14 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Launcher.png and .ini Updates\n\nMasters of the Universe\nMedieval Madness\n",
         "files": [
           {"status": "M", "path": "external/vpx-mm/launcher.png"},
@@ -295,7 +295,7 @@
       {
         "hash": "af767ed2c1c4b937dce1cd23f3343d5cc33bd183",
         "date": "2025-02-12 11:41:23 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update Medieval Madness.vbs\n",
         "files": [
           {"status": "M", "path": "external/vpx-mm/Medieval Madness.vbs", "diff": "diff --git a/external/vpx-mm/Medieval Madness.vbs b/external/vpx-mm/Medieval Madness.vbs\nindex f6ee6554..bf32b891 100644\n--- a/external/vpx-mm/Medieval Madness.vbs\t\n+++ b/external/vpx-mm/Medieval Madness.vbs\t\n@@ -1,4 +1,4 @@\n-' Medieval Madness - IPDB No. 4032\n+' Medieval Madness - IPDB No. 4032 \n ' © Williams 1997\n ' Remaster by Skitso, rothbauerw and bord\n ' VPX Original by ninuzzu & Tom Tower\n"}
@@ -304,7 +304,7 @@
       {
         "hash": "f1199992e0a9535283b97a640da875a781d07435",
         "date": "2025-02-12 11:40:25 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update Medieval Madness.vbs\n",
         "files": [
           {"status": "M", "path": "external/vpx-mm/Medieval Madness.vbs", "diff": "diff --git a/external/vpx-mm/Medieval Madness.vbs b/external/vpx-mm/Medieval Madness.vbs\nindex bf32b891..f6ee6554 100644\n--- a/external/vpx-mm/Medieval Madness.vbs\t\n+++ b/external/vpx-mm/Medieval Madness.vbs\t\n@@ -1,4 +1,4 @@\n-' Medieval Madness - IPDB No. 4032 \n+' Medieval Madness - IPDB No. 4032\n ' © Williams 1997\n ' Remaster by Skitso, rothbauerw and bord\n ' VPX Original by ninuzzu & Tom Tower\n"}
@@ -313,7 +313,7 @@
       {
         "hash": "78c18b9408cbc36ae1926e8367a252b88ec4fa05",
         "date": "2025-02-12 11:39:11 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update to latest version of MM\n\nUpdate table, new preview image, change vbs for new version.\n",
         "files": [
           {"status": "M", "path": "external/vpx-mm/Medieval Madness.vbs", "diff": "diff --git a/external/vpx-mm/Medieval Madness.vbs b/external/vpx-mm/Medieval Madness.vbs\nindex f6ee6554..bf32b891 100644\n--- a/external/vpx-mm/Medieval Madness.vbs\t\n+++ b/external/vpx-mm/Medieval Madness.vbs\t\n@@ -1,4 +1,4 @@\n-' Medieval Madness - IPDB No. 4032\n+' Medieval Madness - IPDB No. 4032 \n ' © Williams 1997\n ' Remaster by Skitso, rothbauerw and bord\n ' VPX Original by ninuzzu & Tom Tower"},

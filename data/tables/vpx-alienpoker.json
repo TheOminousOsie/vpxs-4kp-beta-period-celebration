@@ -89,7 +89,7 @@
       {
         "hash": "4dfe31cb920b8be2ff7cf4d17f0dfc1daba29b4b",
         "date": "2025-03-19 23:44:02 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "README Updates\n\nCorrection on some missed tags and Testers\n",
         "files": [
           {"status": "M", "path": "external/vpx-alienpoker/README.md", "diff": "diff --git a/external/vpx-alienpoker/README.md b/external/vpx-alienpoker/README.md\nindex df027f82..8b991fe8 100644\n--- a/external/vpx-alienpoker/README.md\n+++ b/external/vpx-alienpoker/README.md\n@@ -12,7 +12,7 @@\n | DMD | N/A | N/A | N/A |\n | ROM | [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=790) | alpok_l6.zip | N/A |\n \n-**Tested by:** [n-i-x [NEEDS CORRECTION]]\n+**Tested by:** [kaoticBPR]\n \n ---\n "}
@@ -98,7 +98,7 @@
       {
         "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
         "date": "2025-03-19 14:01:02 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Large README Updates\n\n46 README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-alienpoker/README.md", "diff": "diff --git a/external/vpx-alienpoker/README.md b/external/vpx-alienpoker/README.md\nindex 27821986..df027f82 100644\n--- a/external/vpx-alienpoker/README.md\n+++ b/external/vpx-alienpoker/README.md\n@@ -2,31 +2,29 @@\n \n ![Table Preview](https://github.com/lilalien/vpx-images/blob/main/vpx-alienpoker.png)\n \n-Authors: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 4.0.0  \n-Download: [VPforums](https://www.vpforums.org/index.php?s=920da0de1e29988e389b98e25e90cfbe&app=downloads&showfile=13175)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VPforums](https://www.vpforums.org/index.php?s=920da0de1e29988e389b98e25e90cfbe&app=downloads&showfile=13175) | 4.0.0 | [jpsalas](https://www.vpforums.org/index.php?showuser=277) |\n+| B2S | [VP Universe](https://vpuniverse.com/files/file/13228-alien-poker-williams-1980-b2s/) | 1.0.0 | [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=790) | alpok_l6.zip | N/A |\n \n-Authors: [HauntFreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 1.0.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/13228-alien-poker-williams-1980-b2s/)\n+**Tested by:** [n-i-x [NEEDS CORRECTION]]\n \n-ROM\n-\n-Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=790)  \n-ROM Name and version: alpok_l6.zip\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 55 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-alienpoker.elf\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-alienpoker"}

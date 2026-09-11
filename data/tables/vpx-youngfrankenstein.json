@@ -4,7 +4,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/table.ini", "diff": "diff --git a/external/vpx-youngfrankenstein/table.ini b/external/vpx-youngfrankenstein/table.ini\nindex af67509d..4d745485 100644\n--- a/external/vpx-youngfrankenstein/table.ini\n+++ b/external/vpx-youngfrankenstein/table.ini\n@@ -1,42 +1,18 @@\n [Standalone]\n PinMAMEWindow = 0\n-;BackBuBackBufferScale = .416666\n-BackBufferScale = 0.355729\n-B2SHideGrill = 0\n-\n-[Player]\n-BallTrailStrength = 0.250980\n-OverrideTableEmissionScale = 0\n \n [TableOverride]\n-ViewDTLookAt = 37.000000\n-ViewDTFOV = 40.000000\n-ViewDTLayback = 0.000000\n-ViewDTRotation = 180.000000\n-ViewDTScaleX = 1.000000\n-ViewDTScaleY = 1.000000\n-ViewDTScaleZ = 1.000000\n-ViewDTPlayerX = 0.000000\n-ViewDTPlayerY = -177.800034\n-ViewDTPlayerZ = -680.000000\n-ViewCabLookAt = 8.000000\n-ViewCabFOV = 26.000000\n-ViewCabLayback = 60.000000\n-ViewCabRotation = 90.000000\n-ViewCabScaleX = 1.120000\n-ViewCabScaleY = 1.200000\n-ViewCabScaleZ = 1.000000\n-ViewCabPlayerX = 17.700981\n-ViewCabPlayerY = 0.000000\n-ViewCabPlayerZ = 91.350044\n-ViewFSSLookAt = 38.000000\n-ViewFSSFOV = 45.000000\n-ViewFSSLayback = 0.000000\n-ViewFSSRotation = 0.000000\n-ViewFSSScaleX = 1.000000\n-ViewFSSScaleY = 1.000000\n-ViewFSSScaleZ = 1.000000\n-ViewFSSPlayerX = 0.000000\n-ViewFSSPlayerY = -6.000000\n-ViewFSSPlayerZ = -235.000000\n-ViewCabMode = 0\n+ViewCabMode = 2\n+ViewCabScaleX = 1.041151\n+ViewCabScaleY = 1.024089\n+ViewCabScaleZ = 0.915924\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.010199\n+ViewCabWindowTop = 180.437927\n+ViewCabWindowBot = 0.558272\n+\n+[Player]\n+ScreenPlayerY = 14.955053\n+ScreenPlayerZ = 90.011406\n+AAFactor = 0.90\n\\ No newline at end of file"},
@@ -68,7 +68,7 @@
       {
         "hash": "86ad20eba369febb2d8f66376e742de99909c5bd",
         "date": "2025-04-06 11:40:17 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/table.yml", "diff": "diff --git a/external/vpx-youngfrankenstein/table.yml b/external/vpx-youngfrankenstein/table.yml\nindex 32e3dda7..e960c82b 100644\n--- a/external/vpx-youngfrankenstein/table.yml\n+++ b/external/vpx-youngfrankenstein/table.yml\n@@ -4,6 +4,7 @@ backglassChecksum: \"e9ca93e887b04c216080023b9faaf3d0\"\n backglassNotes: \"Download - Young Frankenstein (hauntfreaks 2021).directb2s\"\n fps: 43\n romUrlOverride: \"https://vpuniverse.com/files/file/1089-eclipsezip/?do=download\"\n+romVersionOverride: \"eclipse\"\n romChecksum: \"99827f772968ef334ede295fcf0f93a9\"\n romNotes: \"Download - eclipse.zip\"\n tableVPSId: \"CNp5duSH\"\n"}
@@ -77,7 +77,7 @@
       {
         "hash": "2cd82a5fe8d0ac63021864e73124f0e526663af3",
         "date": "2025-04-06 09:06:27 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Remove helpful auto indentations from ymls.\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/table.yml", "diff": "diff --git a/external/vpx-youngfrankenstein/table.yml b/external/vpx-youngfrankenstein/table.yml\nindex ed21f2d9..32e3dda7 100644\n--- a/external/vpx-youngfrankenstein/table.yml\n+++ b/external/vpx-youngfrankenstein/table.yml\n@@ -16,4 +16,3 @@ vpxVPSId: \"eGbPenYhBz\"\n vpxChecksum: \"bb812776973af0167e43ced91f714f64\"\n applyFixes:\n   - \"bass\"\n-  \n\\ No newline at end of file\n"}
@@ -86,7 +86,7 @@
       {
         "hash": "1416ca8a5154dc3a717a0bbef08bc63bfbc0d5f0",
         "date": "2025-04-06 08:59:35 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add end line to ymls\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/table.yml", "diff": "diff --git a/external/vpx-youngfrankenstein/table.yml b/external/vpx-youngfrankenstein/table.yml\nindex 4e326a64..ed21f2d9 100644\n--- a/external/vpx-youngfrankenstein/table.yml\n+++ b/external/vpx-youngfrankenstein/table.yml\n@@ -15,4 +15,5 @@ testers:\n vpxVPSId: \"eGbPenYhBz\"\n vpxChecksum: \"bb812776973af0167e43ced91f714f64\"\n applyFixes:\n-  - \"bass\"\n\\ No newline at end of file\n+  - \"bass\"\n+  \n\\ No newline at end of file\n"}
@@ -95,7 +95,7 @@
       {
         "hash": "334afa006d4e7903ddfca3b0e9a27d65f41ce0ea",
         "date": "2025-04-06 08:49:08 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update BBS to meet syntax requirement.\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/table.ini", "diff": "diff --git a/external/vpx-youngfrankenstein/table.ini b/external/vpx-youngfrankenstein/table.ini\nindex 5621ed55..af67509d 100755\n--- a/external/vpx-youngfrankenstein/table.ini\n+++ b/external/vpx-youngfrankenstein/table.ini\n@@ -1,7 +1,7 @@\n [Standalone]\n PinMAMEWindow = 0\n ;BackBuBackBufferScale = .416666\n-BackBufferScale = .355729\n+BackBufferScale = 0.355729\n B2SHideGrill = 0\n \n [Player]\n"}
@@ -104,7 +104,7 @@
       {
         "hash": "acc65acf21f6bbb6a2439fbe68600afce979bfaf",
         "date": "2025-04-05 22:24:44 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add Bla1ze as tester\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/table.yml", "diff": "diff --git a/external/vpx-youngfrankenstein/table.yml b/external/vpx-youngfrankenstein/table.yml\nindex 0c3a54cd..4e326a64 100644\n--- a/external/vpx-youngfrankenstein/table.yml\n+++ b/external/vpx-youngfrankenstein/table.yml\n@@ -9,6 +9,7 @@ romNotes: \"Download - eclipse.zip\"\n tableVPSId: \"CNp5duSH\"\n tagline: \"Put... The candle... Back.\"\n testers:\n+  - \"Bla1ze\"\n   - \"Boris\"\n   - \"Mox\"\n vpxVPSId: \"eGbPenYhBz\"\n"}
@@ -113,7 +113,7 @@
       {
         "hash": "ecf3750cd996735f9844529994543a7bf9af38d9",
         "date": "2025-04-05 20:50:28 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/table.yml", "diff": "diff --git a/external/vpx-youngfrankenstein/table.yml b/external/vpx-youngfrankenstein/table.yml\nindex 47b43d61..0c3a54cd 100644\n--- a/external/vpx-youngfrankenstein/table.yml\n+++ b/external/vpx-youngfrankenstein/table.yml\n@@ -3,7 +3,7 @@ backglassVPSId: \"1nK152JE\"\n backglassChecksum: \"e9ca93e887b04c216080023b9faaf3d0\"\n backglassNotes: \"Download - Young Frankenstein (hauntfreaks 2021).directb2s\"\n fps: 43\n-romUrlOveride: \"https://vpuniverse.com/files/file/1089-eclipsezip/?do=download\"\n+romUrlOverride: \"https://vpuniverse.com/files/file/1089-eclipsezip/?do=download\"\n romChecksum: \"99827f772968ef334ede295fcf0f93a9\"\n romNotes: \"Download - eclipse.zip\"\n tableVPSId: \"CNp5duSH\"\n"}
@@ -122,7 +122,7 @@
       {
         "hash": "22872cd71df39c833f3262332a42c63cb9653e6a",
         "date": "2025-04-05 18:45:25 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Create nvram.nv\n",
         "files": [
           {"status": "A", "path": "external/vpx-youngfrankenstein/nvram.nv"}
@@ -131,7 +131,7 @@
       {
         "hash": "2d167d9cdb9168b8a22915d695853c216329325d",
         "date": "2025-04-05 18:44:03 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update launcher.png\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/launcher.png"}
@@ -140,7 +140,7 @@
       {
         "hash": "8a5d2b31b4b8c85d8dd3c01c5048bc434b123d35",
         "date": "2025-04-05 18:40:23 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update Wave 2 tables, Add Who Dunnit\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/table.yml", "diff": "diff --git a/external/vpx-youngfrankenstein/table.yml b/external/vpx-youngfrankenstein/table.yml\nindex 5ef03e85..47b43d61 100644\n--- a/external/vpx-youngfrankenstein/table.yml\n+++ b/external/vpx-youngfrankenstein/table.yml\n@@ -3,7 +3,7 @@ backglassVPSId: \"1nK152JE\"\n backglassChecksum: \"e9ca93e887b04c216080023b9faaf3d0\"\n backglassNotes: \"Download - Young Frankenstein (hauntfreaks 2021).directb2s\"\n fps: 43\n-romUrlOvveride: \"https://vpuniverse.com/files/file/1089-eclipsezip/?do=download\"\n+romUrlOveride: \"https://vpuniverse.com/files/file/1089-eclipsezip/?do=download\"\n romChecksum: \"99827f772968ef334ede295fcf0f93a9\"\n romNotes: \"Download - eclipse.zip\"\n tableVPSId: \"CNp5duSH\"\n"}
@@ -149,7 +149,7 @@
       {
         "hash": "c0a2c02fe0d4879379225d8db791dfc65590b808",
         "date": "2025-04-03 20:58:01 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update BK2K, Young Frankenstein, Bride of Pin*Bot\n\nDMD images, settings, some table files, add ymls, update FPS in Readme\n",
         "files": [
           {"status": "A", "path": "external/vpx-youngfrankenstein/dmd.png"},
@@ -162,7 +162,7 @@
       {
         "hash": "c6a28de332f7c36981d76ac1113aba74ca5814a3",
         "date": "2025-04-01 12:02:16 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/table.yml", "diff": "diff --git a/external/vpx-youngfrankenstein/table.yml b/external/vpx-youngfrankenstein/table.yml\nindex 4328cc13..cc1abf59 100644\n--- a/external/vpx-youngfrankenstein/table.yml\n+++ b/external/vpx-youngfrankenstein/table.yml\n@@ -10,7 +10,7 @@ tableVPSId: \"CNp5duSH\"\n tagline: \"Put... The candle... Back.\"\n testers:\n   - \"Mox\"\n-vpxVPSId: \"wrBI7RTr\"\n-vpxChecksum: \"79457CF21FCF35F98FFC7AE580D19191\"\n+vpxVPSId: \"eGbPenYhBz\"\n+vpxChecksum: \"bb812776973af0167e43ced91f714f64\"\n applyFixes:\n   - \"bass\"\n\\ No newline at end of file\n"}
@@ -180,7 +180,7 @@
       {
         "hash": "8fcb08c426b722a16c77c55a577127a796495527",
         "date": "2025-04-01 10:34:57 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Merge remote-tracking branch 'upstream/main'\n",
         "files": [
           {"status": "MM", "path": "external/vpx-youngfrankenstein/README.md"}
@@ -189,7 +189,7 @@
       {
         "hash": "eda8377096a97276ebefc67d8bc7dced3f1564d5",
         "date": "2025-04-01 10:32:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Young Frankenstein UPDATE\n\nThanks to Boris' uncanny ability, this table has been optimized and runs much smoother than before, and at almost 45fps.\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/README.md", "diff": "diff --git a/external/vpx-youngfrankenstein/README.md b/external/vpx-youngfrankenstein/README.md\nindex 8a3c62d3..4f6b4582 100644\n--- a/external/vpx-youngfrankenstein/README.md\n+++ b/external/vpx-youngfrankenstein/README.md\n@@ -8,9 +8,9 @@\n | File Type | Link | Version | Author | \n |:---------:|:----:|:-------:|:------:|\n | VPX | [VP Universe](https://vpuniverse.com/files/file/7656-young-frankenstein-hauntfreaks-2021-107-only/) | 1.0.0 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n-| B2S | [VP Universe](https://vpuniverse.com/forums/files/file/7653-young-frankenstein-hauntfreaks-2021-2-and-3-screen-b2s/) | 1.0.1 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| B2S | [VP Universe](https://vpuniverse.com/forums/files/file/7653-young-frankenstein-hauntfreaks-2021-2-and-3-screen-b2s/) | Young Frankenstein (hauntfreaks 2021).directb2s | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n | DMD | N/A | N/A | N/A |\n-| ROM | [Pinball Nirvana](https://pinballnirvana.com/forums/resources/eclipse.1763/) | eclipse.zip | [Rock-ola](https://pinballnirvana.com/forums/members/rock-ola.1/) |\n+| ROM | [VP Universe](https://vpuniverse.com/files/file/1089-eclipsezip/?do=download) | eclipse.zip | [VPUStaff](https://vpuniverse.com/profile/50-vpustaff/) |\n \n **Tested by:** [Mox]\n \n@@ -20,7 +20,7 @@\n Minimum VPX Standalone build: 10.8.0-2006-6d603fb\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |:---------:|:--------:|:---------:|:---:|:------------:|:---:|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 35 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 43 |\n \n ---\n \n@@ -28,7 +28,7 @@ Minimum VPX Standalone build: 10.8.0-2006-6d603fb\n - Copy the **vpx-youngfrankenstein** folder to the `external` directory of your USB drive\n - Add your personalized launcher.elf and rename it to **vpx-youngfrankenstein.elf**\n - Download and extract the **VPX** file ONLY, and copy into the **vpx-youngfrankenstein** folder\n-- Download and extract any of the **DIRECTB2S** files based on your setup, and copy into the **vpx-youngfrankenstein** folder\n+- Download and extract `Young Frankenstein (hauntfreaks 2021).directb2s`, and copy into the **vpx-youngfrankenstein** folder\n - Make sure (`.vpx`), (`.directb2s`), (`.vbs`), and (`.ini`) files are all named the same\n - Download the **ROM** version listed above and copy it into `\\vpx-youngfrankenstein\\pinmame\\roms` (DO NOT UNZIP)\n - \"Put. The. Candle. Back.\"\n\\ No newline at end of file"},
@@ -201,7 +201,7 @@
       {
         "hash": "9776660bfae084246e0e90975216fe27518fdb95",
         "date": "2025-03-31 16:11:19 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "YML Corrections\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/table.yml", "diff": "diff --git a/external/vpx-youngfrankenstein/table.yml b/external/vpx-youngfrankenstein/table.yml\nindex af51aaa4..ba4e66aa 100644\n--- a/external/vpx-youngfrankenstein/table.yml\n+++ b/external/vpx-youngfrankenstein/table.yml\n@@ -3,7 +3,7 @@ backglassVPSId: \"1nK152JE\"\n backglassChecksum: \"0D3936B4CF8A1391DB54470FB0D4B822\"\n backglassNotes: \"Download - [...]3srn 4.1.directb2s\"\n fps: 36\n-romVPSId: \"wrBI7RTr\"\n+romBundled: true\n romChecksum: \"ADE43DFA9938324B30A4F11F2E8B9FB2\"\n romNotes: \"ROM (eclipse.zip) included in VPX Bundle\"\n tableVPSId: \"CNp5duSH\"\n"}
@@ -210,7 +210,7 @@
       {
         "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
         "date": "2025-03-30 19:40:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
         "files": [
           {"status": "A", "path": "external/vpx-youngfrankenstein/table.yml", "diff": "diff --git a/external/vpx-youngfrankenstein/table.yml b/external/vpx-youngfrankenstein/table.yml\nnew file mode 100644\nindex 00000000..af51aaa4\n--- /dev/null\n+++ b/external/vpx-youngfrankenstein/table.yml\n@@ -0,0 +1,16 @@\n+---\n+backglassVPSId: \"1nK152JE\"\n+backglassChecksum: \"0D3936B4CF8A1391DB54470FB0D4B822\"\n+backglassNotes: \"Download - [...]3srn 4.1.directb2s\"\n+fps: 36\n+romVPSId: \"wrBI7RTr\"\n+romChecksum: \"ADE43DFA9938324B30A4F11F2E8B9FB2\"\n+romNotes: \"ROM (eclipse.zip) included in VPX Bundle\"\n+tableVPSId: \"CNp5duSH\"\n+tagline: \"Put... The candle... Back.\"\n+testers:\n+  - \"Mox\"\n+vpxVPSId: \"wrBI7RTr\"\n+vpxChecksum: \"79457CF21FCF35F98FFC7AE580D19191\"\n+applyFixes:\n+  - \"bass\"\n\\ No newline at end of file\n"},
@@ -221,7 +221,7 @@
       {
         "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
         "date": "2025-03-19 14:01:02 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Large README Updates\n\n46 README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/README.md", "diff": "diff --git a/external/vpx-youngfrankenstein/README.md b/external/vpx-youngfrankenstein/README.md\nindex 0a136ce4..8a3c62d3 100644\n--- a/external/vpx-youngfrankenstein/README.md\n+++ b/external/vpx-youngfrankenstein/README.md\n@@ -2,14 +2,19 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2021_10/YF_DT_screenshot.jpg.e3a0919a4a6c99705a905d2412397326.jpg)\n \n-Tested by: Mox\n+---\n \n ## Information\n-| File Type | Link | Version | Author(s) | \n-|:---------:|:----:|:-------:|:---------:|\n+| File Type | Link | Version | Author | \n+|:---------:|:----:|:-------:|:------:|\n | VPX | [VP Universe](https://vpuniverse.com/files/file/7656-young-frankenstein-hauntfreaks-2021-107-only/) | 1.0.0 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n-| DirectB2S | [VP Universe](https://vpuniverse.com/forums/files/file/7653-young-frankenstein-hauntfreaks-2021-2-and-3-screen-b2s/) | 1.0.1 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n-| ROM | [Pinball Nirvana](https://pinballnirvana.com/forums/resources/eclipse.1763/) | eclipse | [Rock-ola](https://pinballnirvana.com/forums/members/rock-ola.1/) |\n+| B2S | [VP Universe](https://vpuniverse.com/forums/files/file/7653-young-frankenstein-hauntfreaks-2021-2-and-3-screen-b2s/) | 1.0.1 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [Pinball Nirvana](https://pinballnirvana.com/forums/resources/eclipse.1763/) | eclipse.zip | [Rock-ola](https://pinballnirvana.com/forums/members/rock-ola.1/) |\n+\n+**Tested by:** [Mox]\n+\n+---\n \n ## Status \n Minimum VPX Standalone build: 10.8.0-2006-6d603fb\n@@ -17,6 +22,8 @@ Minimum VPX Standalone build: 10.8.0-2006-6d603fb\n |:---------:|:--------:|:---------:|:---:|:------------:|:---:|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 35 |\n \n+---\n+\n ## Instructions\n - Copy the **vpx-youngfrankenstein** folder to the `external` directory of your USB drive\n - Add your personalized launcher.elf and rename it to **vpx-youngfrankenstein.elf**"}
@@ -276,7 +276,7 @@
       {
         "hash": "36376200e9f4fde30072c41a8907d62fed38a4b9",
         "date": "2025-01-20 12:35:53 -0600",
-        "author": "James Rainaldi",
+        "author": "James R.",
         "message": "chore: updated vpx-youngfrankenstein docs\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/README.md", "diff": "diff --git a/external/vpx-youngfrankenstein/README.md b/external/vpx-youngfrankenstein/README.md\nindex 6d577928..0a136ce4 100644\n--- a/external/vpx-youngfrankenstein/README.md\n+++ b/external/vpx-youngfrankenstein/README.md\n@@ -22,6 +22,6 @@ Minimum VPX Standalone build: 10.8.0-2006-6d603fb\n - Add your personalized launcher.elf and rename it to **vpx-youngfrankenstein.elf**\n - Download and extract the **VPX** file ONLY, and copy into the **vpx-youngfrankenstein** folder\n - Download and extract any of the **DIRECTB2S** files based on your setup, and copy into the **vpx-youngfrankenstein** folder\n-- Make sure (.vpx), (.directb2s), (.vbs), and (.ini) files are all named the same\n+- Make sure (`.vpx`), (`.directb2s`), (`.vbs`), and (`.ini`) files are all named the same\n - Download the **ROM** version listed above and copy it into `\\vpx-youngfrankenstein\\pinmame\\roms` (DO NOT UNZIP)\n - \"Put. The. Candle. Back.\"\n\\ No newline at end of file\n"}
@@ -285,7 +285,7 @@
       {
         "hash": "a6ed94fc606638a0031f31be5ef8b978050a8788",
         "date": "2024-09-08 23:19:24 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Six-Pack of Tables\n\nAgents 777 (Game Plan 1984)\nAirborne Avenger (Atari 1977)\nAlgar (Williams 1980)\nAmazon Hunt (Gottlieb 1983)\nArena 1.0c (Gottlieb 1987)\nAttila The Hun (Game Plan 1984)\nPlus, multiple README Updates for my past tables...\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/README.md", "diff": "diff --git a/external/vpx-youngfrankenstein/README.md b/external/vpx-youngfrankenstein/README.md\nindex e8adf0cd..6d577928 100644\n--- a/external/vpx-youngfrankenstein/README.md\n+++ b/external/vpx-youngfrankenstein/README.md\n@@ -2,6 +2,8 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2021_10/YF_DT_screenshot.jpg.e3a0919a4a6c99705a905d2412397326.jpg)\n \n+Tested by: Mox\n+\n ## Information\n | File Type | Link | Version | Author(s) | \n |:---------:|:----:|:-------:|:---------:|\n@@ -12,7 +14,7 @@\n ## Status \n Minimum VPX Standalone build: 10.8.0-2006-6d603fb\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n+|:---------:|:--------:|:---------:|:---:|:------------:|:---:|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 35 |\n \n ## Instructions\n@@ -20,6 +22,6 @@ Minimum VPX Standalone build: 10.8.0-2006-6d603fb\n - Add your personalized launcher.elf and rename it to **vpx-youngfrankenstein.elf**\n - Download and extract the **VPX** file ONLY, and copy into the **vpx-youngfrankenstein** folder\n - Download and extract any of the **DIRECTB2S** files based on your setup, and copy into the **vpx-youngfrankenstein** folder\n-- Rename `Young Frankenstein (hauntfreaks 2021).vbs`, `Young Frankenstein (hauntfreaks 2021).ini`, as well as the **VPX** and **DIRECTB2S** files to all match\n-- Download the **ROM** version listed above and copy it into `\\vpx-youngfrankenstein\\pinmame\\roms`\n+- Make sure (.vpx), (.directb2s), (.vbs), and (.ini) files are all named the same\n+- Download the **ROM** version listed above and copy it into `\\vpx-youngfrankenstein\\pinmame\\roms` (DO NOT UNZIP)\n - \"Put. The. Candle. Back.\"\n\\ No newline at end of file\n"}
@@ -294,7 +294,7 @@
       {
         "hash": "25d9addc4b24d0e72f1051fba24e735fefb06d83",
         "date": "2024-08-29 20:07:21 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "README updates\n\nFixed README files to update instructions and format.\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/README.md", "diff": "diff --git a/external/vpx-youngfrankenstein/README.md b/external/vpx-youngfrankenstein/README.md\nindex 0a339f4d..e8adf0cd 100644\n--- a/external/vpx-youngfrankenstein/README.md\n+++ b/external/vpx-youngfrankenstein/README.md\n@@ -2,34 +2,24 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2021_10/YF_DT_screenshot.jpg.e3a0919a4a6c99705a905d2412397326.jpg)\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-Version: 1.0.0\n-Download: [VP Universe](https://vpuniverse.com/files/file/7656-young-frankenstein-hauntfreaks-2021-107-only/)\n-\n-DirectB2S\n-\n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-Version: 1.0.1\n-Download: [VP Universe](https://vpuniverse.com/forums/files/file/7653-young-frankenstein-hauntfreaks-2021-2-and-3-screen-b2s/)\n-\n-ROM\n-\n-Download: [Archive](https://ia902301.us.archive.org/view_archive.php?archive=/30/items/vpinmame/roms/roms.zip)\n+## Information\n+| File Type | Link | Version | Author(s) | \n+|:---------:|:----:|:-------:|:---------:|\n+| VPX | [VP Universe](https://vpuniverse.com/files/file/7656-young-frankenstein-hauntfreaks-2021-107-only/) | 1.0.0 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| DirectB2S | [VP Universe](https://vpuniverse.com/forums/files/file/7653-young-frankenstein-hauntfreaks-2021-2-and-3-screen-b2s/) | 1.0.1 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| ROM | [Pinball Nirvana](https://pinballnirvana.com/forums/resources/eclipse.1763/) | eclipse | [Rock-ola](https://pinballnirvana.com/forums/members/rock-ola.1/) |\n \n ## Status \n-\n Minimum VPX Standalone build: 10.8.0-2006-6d603fb\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 35 |\n \n ## Instructions\n-\n-- Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-youngfrankenstein.elf\n-- Download and extract the table only from link above copy into this folder\n-- Download any of the directb2s files from link above based on your setup and copy into this folder\n-- ROM needed is Eclipse from the archive link above\n-- Rename \"Young Frankenstein (hauntfreaks 2021).ini\" to match the table and directb2s file name\n-- Rename \"Young Frankenstein (hauntfreaks 2021).vbs\" to match the table and directb2s file name\n-- Put. The. Candle. Back.\n\\ No newline at end of file\n+- Copy the **vpx-youngfrankenstein** folder to the `external` directory of your USB drive\n+- Add your personalized launcher.elf and rename it to **vpx-youngfrankenstein.elf**\n+- Download and extract the **VPX** file ONLY, and copy into the **vpx-youngfrankenstein** folder\n+- Download and extract any of the **DIRECTB2S** files based on your setup, and copy into the **vpx-youngfrankenstein** folder\n+- Rename `Young Frankenstein (hauntfreaks 2021).vbs`, `Young Frankenstein (hauntfreaks 2021).ini`, as well as the **VPX** and **DIRECTB2S** files to all match\n+- Download the **ROM** version listed above and copy it into `\\vpx-youngfrankenstein\\pinmame\\roms`\n+- \"Put. The. Candle. Back.\"\n\\ No newline at end of file\n"}
@@ -303,7 +303,7 @@
       {
         "hash": "cc546b12d8f84c9541a7dd218f7b9cf9c6b2f99f",
         "date": "2024-08-07 20:38:38 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Updated README\n\nUpdate to the Young Frankenstein README to include ROM name and more clear instructions.\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/README.md", "diff": "diff --git a/external/vpx-youngfrankenstein/README.md b/external/vpx-youngfrankenstein/README.md\nindex 2c2db2b5..0a339f4d 100644\n--- a/external/vpx-youngfrankenstein/README.md\n+++ b/external/vpx-youngfrankenstein/README.md\n@@ -27,7 +27,9 @@ Minimum VPX Standalone build: 10.8.0-2006-6d603fb\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-youngfrankenstein.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n+- Download and extract the table only from link above copy into this folder\n+- Download any of the directb2s files from link above based on your setup and copy into this folder\n+- ROM needed is Eclipse from the archive link above\n - Rename \"Young Frankenstein (hauntfreaks 2021).ini\" to match the table and directb2s file name\n - Rename \"Young Frankenstein (hauntfreaks 2021).vbs\" to match the table and directb2s file name\n - Put. The. Candle. Back.\n\\ No newline at end of file\n"}
@@ -321,7 +321,7 @@
       {
         "hash": "cfb8798bb7e0aa15b5792274507248a16a5924cc",
         "date": "2024-08-04 19:29:05 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Adding VPReg back to structure...\n\n... cause SOMEONE decided to delete them.\n",
         "files": [
           {"status": "A", "path": "external/vpx-youngfrankenstein/VPReg.ini", "diff": "diff --git a/external/vpx-youngfrankenstein/VPReg.ini b/external/vpx-youngfrankenstein/VPReg.ini\nnew file mode 100644\nindex 00000000..0bcbb09e\n--- /dev/null\n+++ b/external/vpx-youngfrankenstein/VPReg.ini\n@@ -0,0 +1,10 @@\n+[youngfrankenstein]\n+HighScore1=100000\n+HighScore1Name=JSM\n+HighScore2=100000\n+HighScore2Name=NIX\n+HighScore3=100000\n+HighScore3Name=CTH\n+HighScore4=100000\n+HighScore4Name=VPX\n+Credits=0\n\\ No newline at end of file\n"}
@@ -330,7 +330,7 @@
       {
         "hash": "d4fce647f3bf6a45554c403955ffa31d1a93fe18",
         "date": "2024-08-04 19:21:25 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Updated README\n",
         "files": [
           {"status": "M", "path": "external/vpx-youngfrankenstein/README.md", "diff": "diff --git a/external/vpx-youngfrankenstein/README.md b/external/vpx-youngfrankenstein/README.md\nindex b7c81888..2c2db2b5 100644\n--- a/external/vpx-youngfrankenstein/README.md\n+++ b/external/vpx-youngfrankenstein/README.md\n@@ -21,7 +21,7 @@ Download: [Archive](https://ia902301.us.archive.org/view_archive.php?archive=/30\n Minimum VPX Standalone build: 10.8.0-2006-6d603fb\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 35 |\n \n ## Instructions\n \n"}
@@ -339,7 +339,7 @@
       {
         "hash": "0fc27b0966717e21101a585a0cd71fdbb08e4340",
         "date": "2024-08-04 19:07:37 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Adding Tables\n\nAce Ventura\nBMX\nStargate\nTrick 'r Treat\nYoung Frankenstein\n",
         "files": [
           {"status": "A", "path": "external/vpx-youngfrankenstein/README.md", "diff": "diff --git a/external/vpx-youngfrankenstein/README.md b/external/vpx-youngfrankenstein/README.md\nnew file mode 100644\nindex 00000000..b7c81888\n--- /dev/null\n+++ b/external/vpx-youngfrankenstein/README.md\n@@ -0,0 +1,33 @@\n+# Young Frankenstein (hauntfreaks 2021)\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2021_10/YF_DT_screenshot.jpg.e3a0919a4a6c99705a905d2412397326.jpg)\n+\n+Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n+Version: 1.0.0\n+Download: [VP Universe](https://vpuniverse.com/files/file/7656-young-frankenstein-hauntfreaks-2021-107-only/)\n+\n+DirectB2S\n+\n+Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n+Version: 1.0.1\n+Download: [VP Universe](https://vpuniverse.com/forums/files/file/7653-young-frankenstein-hauntfreaks-2021-2-and-3-screen-b2s/)\n+\n+ROM\n+\n+Download: [Archive](https://ia902301.us.archive.org/view_archive.php?archive=/30/items/vpinmame/roms/roms.zip)\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-2006-6d603fb\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-youngfrankenstein.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Rename \"Young Frankenstein (hauntfreaks 2021).ini\" to match the table and directb2s file name\n+- Rename \"Young Frankenstein (hauntfreaks 2021).vbs\" to match the table and directb2s file name\n+- Put. The. Candle. Back.\n\\ No newline at end of file"},

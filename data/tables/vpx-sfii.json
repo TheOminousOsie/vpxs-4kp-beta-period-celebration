@@ -4,7 +4,7 @@
       {
         "hash": "c72c0eed053f578f910ffca5a9fc407398ca0cd0",
         "date": "2026-07-29 15:40:00 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "update hashes\n\nDiablo II\nSF2 cROMc\n",
         "files": [
           {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex 98109bb5..71f12c92 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -4,7 +4,7 @@ backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n backglassNotes: \"Download - Street Fighter II (Gottlieb 1993).zip\"\n fps: 60\n coloredROMVPSId: \"_R_pi1tqAi\"\n-coloredROMChecksum: \"F2D868EE2AE6E392017919518A1FE903\"\n+coloredROMChecksum: \"5D4547A11FFE022C392601F8893D466A\"\n coloredROMNotes: \"Download sfight2.cROMc\"\n romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex 8eba834f..98109bb5 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"7AthvIhxFj\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"6576310D897011B1BF5B45256EB68345\"\n-  - \"393FB0C8B3E69E1C58D8BD05334BB8E9\"\n+backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n backglassNotes: \"Download - Street Fighter II (Gottlieb 1993).zip\"\n fps: 60\n coloredROMVPSId: \"_R_pi1tqAi\"\n@@ -19,8 +16,5 @@ testers:\n   - \"mcap\"\n   - \"evilwraith\"\n vpxVPSId: \"ChQLTP9w\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"6AEA9505968CD41F128205C7C4638326\"\n-  - \"75004AD49D119B82725B857F35E2A87E\"\n+vpxChecksum: \"6AEA9505968CD41F128205C7C4638326\"\n tableNotes: \"Version 6.0.0\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex 98109bb5..8eba834f 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"7AthvIhxFj\"\n-backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"6576310D897011B1BF5B45256EB68345\"\n+  - \"393FB0C8B3E69E1C58D8BD05334BB8E9\"\n backglassNotes: \"Download - Street Fighter II (Gottlieb 1993).zip\"\n fps: 60\n coloredROMVPSId: \"_R_pi1tqAi\"\n@@ -16,5 +19,8 @@ testers:\n   - \"mcap\"\n   - \"evilwraith\"\n vpxVPSId: \"ChQLTP9w\"\n-vpxChecksum: \"6AEA9505968CD41F128205C7C4638326\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"6AEA9505968CD41F128205C7C4638326\"\n+  - \"75004AD49D119B82725B857F35E2A87E\"\n tableNotes: \"Version 6.0.0\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-sfii/table.ini", "diff": "diff --git a/external/vpx-sfii/table.ini b/external/vpx-sfii/table.ini\nindex 7a3b7ae8..2f897d39 100644\n--- a/external/vpx-sfii/table.ini\n+++ b/external/vpx-sfii/table.ini\n@@ -1,19 +1,19 @@\n [Player]\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 0\n+ScreenPlayerY = 16.015259\n+ScreenPlayerZ = 85.347626\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.875020\n-ViewCabScaleY = 1.176103\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -48.500000\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n-\n-[Standalone]\n-WindowRenderMode = 0\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.297491\n+ViewCabScaleY = 1.043367\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 1.436086\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 116.639198"},
@@ -41,7 +41,7 @@
       {
         "hash": "688ec61c6bd9a567e41b60eb2948b47c6652ad0f",
         "date": "2025-09-10 12:40:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "JPSalas v600 updates\n\nCurrent as of 9/10/25. More to come.\n",
         "files": [
           {"status": "M", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nindex a38a9858..df8ee366 100644\n--- a/external/vpx-sfii/table.yml\n+++ b/external/vpx-sfii/table.yml\n@@ -13,5 +13,5 @@ testers:\n   - \"mcap\"\n   - \"evilwraith\"\n vpxVPSId: \"ChQLTP9w\"\n-vpxChecksum: \"0AC85739532A19D00707B30FDB97061E\"\n-tableNotes: \"Version 5.5.0\"\n+vpxChecksum: \"6AEA9505968CD41F128205C7C4638326\"\n+tableNotes: \"Version 6.0.0\""}
@@ -159,7 +159,7 @@
       {
         "hash": "d14dd907a2aa6661a0033936d39abfacef43337e",
         "date": "2025-03-25 16:19:00 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "INI and YML Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-sfii/table.ini", "diff": "diff --git a/external/vpx-sfii/table.ini b/external/vpx-sfii/table.ini\nindex 96891340..3e5225eb 100644\n--- a/external/vpx-sfii/table.ini\n+++ b/external/vpx-sfii/table.ini\n@@ -4,8 +4,8 @@ OverrideTableEmissionScale = 0\n \n [TableOverride]\n ViewCabMode = 0\n-ViewCabScaleX = 0.845524\n-ViewCabScaleY = 1.143404\n+ViewCabScaleX = 0.875020\n+ViewCabScaleY = 1.176103\n ViewCabScaleZ = 0.904995\n ViewCabRotation = 90.000000\n ViewCabPlayerX = -48.500000"},
@@ -223,7 +223,7 @@
       {
         "hash": "c13f12795536d004c78e2331762558777a4695a9",
         "date": "2025-03-22 12:28:26 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 table updates\n\nSFII- fixed wheel image, table notes\nTFTC - fixed table brightness and table ini formatting\nTOTAN - added settings to ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-sfii/launcher.png"},
@@ -233,7 +233,7 @@
       {
         "hash": "ba2a2c075af30fc9a50fe27384dfae475bb4a45e",
         "date": "2025-03-20 20:51:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "sfII and T2\n",
         "files": [
           {"status": "A", "path": "external/vpx-sfii/table.yml", "diff": "diff --git a/external/vpx-sfii/table.yml b/external/vpx-sfii/table.yml\nnew file mode 100644\nindex 00000000..8060bff0\n--- /dev/null\n+++ b/external/vpx-sfii/table.yml\n@@ -0,0 +1,17 @@\n+---\n+backglassVPSId: \"7AthvIhxFj\"\n+backglassChecksum: \"6576310D897011B1BF5B45256EB68345\"\n+backglassNotes: \"Use Street Fighter II (Gottlieb 1993).zip in the download link\"\n+coloredROMVPSId: \n+coloredROMChecksum: \n+fps: \"60\"\n+romChecksum: \"A88B7D86F882206C1FABF2A87DAF2E4E\"\n+romUrlOverride: \"https://pinballnirvana.com/forums/resources/sfight2.2281/\"\n+tableVPSId: \"_8wsc4AY\"\n+tagline: \"You need to defeat Sheng Long to stand a chance...\"\n+testers: \n+- \n+vpxVPSId: \"ChQLTP9w\"\n+vpxChecksum: \"0AC85739532A19D00707B30FDB97061E\"\n+tableNotes: \n+mainNotes: \n\\ No newline at end of file"}

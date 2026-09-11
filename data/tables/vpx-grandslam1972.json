@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-grandslam1972/table.yml", "diff": "diff --git a/external/vpx-grandslam1972/table.yml b/external/vpx-grandslam1972/table.yml\nindex b27ff131..ed568491 100644\n--- a/external/vpx-grandslam1972/table.yml\n+++ b/external/vpx-grandslam1972/table.yml\n@@ -2,19 +2,13 @@\n backglassBundled: true\n backglassVPSId: \"oZhySmKn_A\"\n backglassNotes: \"Included with table download\"\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"8D3A7ACC6E81CDC08766A0F6AB319049\"\n-  - \"0162155ADC633ECCCE17DCC311A809A7\"\n+backglassChecksum: \"8D3A7ACC6E81CDC08766A0F6AB319049\"\n fps: 60\n tableVPSId: \"duaA4qYH\"\n tagline: \"PLAY BALL!\"\n testers:\n   - \"evilwraith\"\n vpxVPSId: \"oZhySmKn_A\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"030E9F2BFF90D21C40789C704B1521E0\"\n-  - \"0162155ADC633ECCCE17DCC311A809A7\"\n+vpxChecksum: \"030E9F2BFF90D21C40789C704B1521E0\"\n tableNotes: >-\n   Note: You might need to use WinRAR to unzip the file, rather then Windows\n\\ No newline at end of file"}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-grandslam1972/table.yml", "diff": "diff --git a/external/vpx-grandslam1972/table.yml b/external/vpx-grandslam1972/table.yml\nindex ed568491..b27ff131 100644\n--- a/external/vpx-grandslam1972/table.yml\n+++ b/external/vpx-grandslam1972/table.yml\n@@ -2,13 +2,19 @@\n backglassBundled: true\n backglassVPSId: \"oZhySmKn_A\"\n backglassNotes: \"Included with table download\"\n-backglassChecksum: \"8D3A7ACC6E81CDC08766A0F6AB319049\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"8D3A7ACC6E81CDC08766A0F6AB319049\"\n+  - \"0162155ADC633ECCCE17DCC311A809A7\"\n fps: 60\n tableVPSId: \"duaA4qYH\"\n tagline: \"PLAY BALL!\"\n testers:\n   - \"evilwraith\"\n vpxVPSId: \"oZhySmKn_A\"\n-vpxChecksum: \"030E9F2BFF90D21C40789C704B1521E0\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"030E9F2BFF90D21C40789C704B1521E0\"\n+  - \"0162155ADC633ECCCE17DCC311A809A7\"\n tableNotes: >-\n   Note: You might need to use WinRAR to unzip the file, rather then Windows\n\\ No newline at end of file"}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-grandslam1972/table.ini", "diff": "diff --git a/external/vpx-grandslam1972/table.ini b/external/vpx-grandslam1972/table.ini\nindex c22bba66..c8ca51b5 100644\n--- a/external/vpx-grandslam1972/table.ini\n+++ b/external/vpx-grandslam1972/table.ini\n@@ -1,16 +1,16 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.162580\n-ViewCabScaleY = 1.072689\n-ViewCabScaleZ = 1.043933\n+ViewCabScaleX = 1.102861\n+ViewCabScaleY = 0.974638\n+ViewCabScaleZ = 0.945882\n ViewCabRotation = 180.000000\n-ViewCabHOfs = -0.036200\n-ViewCabVOfs = -53.201305\n-ViewCabWindowTop = 164.851883\n-ViewCabWindowBot = 57.686153\n+ViewCabHOfs = 0.030000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 19.765856\n+ViewCabWindowBot = 20.163160\n ToneMapper = 2\n \n [Player]\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.200580\n\\ No newline at end of file\n+EmissionScale = 0.200580"},
@@ -95,7 +95,7 @@
       {
         "hash": "7fc3a6ceb35a58069305522d84af52a63d9e97fc",
         "date": "2025-05-11 12:08:26 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-grandslam1972/table.yml", "diff": "diff --git a/external/vpx-grandslam1972/table.yml b/external/vpx-grandslam1972/table.yml\nindex 57a9c293..60c4429a 100644\n--- a/external/vpx-grandslam1972/table.yml\n+++ b/external/vpx-grandslam1972/table.yml\n@@ -2,13 +2,13 @@\n backglassBundled: true\n backglassVPSId: \"oZhySmKn_A\"\n backglassNotes: \"Included with rom download\"\n-backglassChecksum: \"030E9F2BFF90D21C40789C704B1521E0\"\n+backglassChecksum: \"8D3A7ACC6E81CDC08766A0F6AB319049\"\n fps: 60\n tableVPSId: \"duaA4qYH\"\n tagline: \"PLAY BALL!\"\n testers:\n   - \"evilwraith\"\n vpxVPSId: \"oZhySmKn_A\"\n-vpxChecksum: \"8D3A7ACC6E81CDC08766A0F6AB319049\"\n+vpxChecksum: \"030E9F2BFF90D21C40789C704B1521E0\"\n applyFixes:\n   - \"bass\"\n"}
@@ -104,7 +104,7 @@
       {
         "hash": "7e66fc1746929dbd0448ca02c998b4b230818a35",
         "date": "2025-05-11 11:34:35 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-grandslam1972/table.yml", "diff": "diff --git a/external/vpx-grandslam1972/table.yml b/external/vpx-grandslam1972/table.yml\nindex 3c659696..57a9c293 100644\n--- a/external/vpx-grandslam1972/table.yml\n+++ b/external/vpx-grandslam1972/table.yml\n@@ -1,5 +1,6 @@\n ---\n backglassBundled: true\n+backglassVPSId: \"oZhySmKn_A\"\n backglassNotes: \"Included with rom download\"\n backglassChecksum: \"030E9F2BFF90D21C40789C704B1521E0\"\n fps: 60\n"}
@@ -113,7 +113,7 @@
       {
         "hash": "3cdc6b5cda9f5e356b4b39e185d2a237938b454c",
         "date": "2025-05-11 11:26:51 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update Grand Slam 1972 for wizard\n",
         "files": [
           {"status": "A", "path": "external/vpx-grandslam1972/dmd.png"},
@@ -161,7 +161,7 @@
       {
         "hash": "48a2c37bb2ba666d366f6c6e4e0b889c9a5654d6",
         "date": "2024-09-11 09:33:24 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update vpx-grandslam1972.png\n",
         "files": [
           {"status": "M", "path": "external/vpx-grandslam1972/vpx-grandslam1972.png"}
@@ -170,7 +170,7 @@
       {
         "hash": "d6b105a1a9221aac3d51619bf6ed3f94c90bb0fc",
         "date": "2024-09-10 22:27:02 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "table Grand Slam (Gottlieb 1972)\n\nAnother Gottlieb Baseball table\n",
         "files": [
           {"status": "A", "path": "external/vpx-grandslam1972/README.md", "diff": "diff --git a/external/vpx-grandslam1972/README.md b/external/vpx-grandslam1972/README.md\nnew file mode 100644\nindex 00000000..b8d4317a\n--- /dev/null\n+++ b/external/vpx-grandslam1972/README.md\n@@ -0,0 +1,41 @@\n+# Grand Slam (Gottlieb 1972)\n+\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2023_01/1930068530_VRRoomGrandSlam(Gottlieb1972)1.0.1.jpg.70ee58f670f50a910efa97b6a186012a.jpg)\n+\n+Authors: [RajoJoey](https://vpuniverse.com/profile/9989-rajojoey/) and [loserman76](https://vpuniverse.com/profile/2798-loserman76/)\n+\n+Tested by: evilwraith\n+\n+Version: 1.0.0\n+\n+Download: [VP Universe](https://vpuniverse.com/files/file/12622-grand-slam-gottlieb-1972vr-room/)\n+\n+DirectB2S\n+\n+Included\n+\n+ROM\n+\n+ROM Name: none\n+\n+Download: none\n+\n+SHA: \n+\n+MD5: \n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 45 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-grandslam1972.elf\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Make sure the vpx, direct2bs, and ini files are all named the \"exact\" same\n+- Any ROM zip file get copied to pinmame/roms (do not unzip)\n+- \"PLAY BALL\" 🌴\n\\ No newline at end of file"},

@@ -4,7 +4,7 @@
       {
         "hash": "2833e9c0f54dc3c3661bbd0ed31281d603535809",
         "date": "2026-09-09 22:52:36 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe launcher updates 2\n\nAmerican Graffiti\nJP's Attack From Mars LE\nJames Cameron's Avatar\nBlack Pyramid\nChrono Trigger\nCreature From The Black Lagoon\nCirqus Voltaire\nHardbody\nF-14 Tomcat\nJudge Dredd\nDiner\nDr. Dude\nHigh Roller Casino\nJP's LOTR\nRobocop\nSimpsons Pinball Party\nStranger Things\nTaxi\nTMNT\nTMNT Remix - also folder rename\nTorpedo Alley\nTransformers Pro\nTransformers G1\nWhoa Nellie\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpattackfrommarsle/launcher.png"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpattackfrommarsle/table.yml", "diff": "diff --git a/external/vpx-jpattackfrommarsle/table.yml b/external/vpx-jpattackfrommarsle/table.yml\nindex e75ffe9e..6739e920 100644\n--- a/external/vpx-jpattackfrommarsle/table.yml\n+++ b/external/vpx-jpattackfrommarsle/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"AkKF7ZKJbc\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"49727165253BD2293F6FF7DBD6415A16\"\n-  - \"D50D342D6A92300B3EE1478D36A91CB0\"\n+backglassChecksum: \"49727165253BD2293F6FF7DBD6415A16\"\n backglassNotes: \"Download version 1.0.0\"\n coloredROMVPSId: \"Z55ymmVdyU\"\n coloredROMChecksum: \"3DFEAE424498483ADB8F9DD203E15D39\"\n@@ -22,7 +19,4 @@ testers:\n   - \"BrianCK\"\n   - \"OminousOsie\"\n vpxVPSId: \"1bCrozNZ\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"C3D02F892BF01300FFCB9295F4999C34\"\n-  - \"52ACC0CAE6B59E0C3A390C8021108F02\"\n+vpxChecksum: \"C3D02F892BF01300FFCB9295F4999C34\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpattackfrommarsle/table.yml", "diff": "diff --git a/external/vpx-jpattackfrommarsle/table.yml b/external/vpx-jpattackfrommarsle/table.yml\nindex 6739e920..e75ffe9e 100644\n--- a/external/vpx-jpattackfrommarsle/table.yml\n+++ b/external/vpx-jpattackfrommarsle/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"AkKF7ZKJbc\"\n-backglassChecksum: \"49727165253BD2293F6FF7DBD6415A16\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"49727165253BD2293F6FF7DBD6415A16\"\n+  - \"D50D342D6A92300B3EE1478D36A91CB0\"\n backglassNotes: \"Download version 1.0.0\"\n coloredROMVPSId: \"Z55ymmVdyU\"\n coloredROMChecksum: \"3DFEAE424498483ADB8F9DD203E15D39\"\n@@ -19,4 +22,7 @@ testers:\n   - \"BrianCK\"\n   - \"OminousOsie\"\n vpxVPSId: \"1bCrozNZ\"\n-vpxChecksum: \"C3D02F892BF01300FFCB9295F4999C34\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"C3D02F892BF01300FFCB9295F4999C34\"\n+  - \"52ACC0CAE6B59E0C3A390C8021108F02\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpattackfrommarsle/table.ini", "diff": "diff --git a/external/vpx-jpattackfrommarsle/table.ini b/external/vpx-jpattackfrommarsle/table.ini\nindex 38137dda..1dd37b76 100644\n--- a/external/vpx-jpattackfrommarsle/table.ini\n+++ b/external/vpx-jpattackfrommarsle/table.ini\n@@ -1,6 +1,3 @@\n-[Standalone]\n-WindowRenderMode = 0\n-\n [Player]\n BallTrailStrength = 0.000000\n AlphaRampAccuracy = 5\n@@ -15,12 +12,18 @@ ScreenInclination = 0.000000\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.260606\n-ViewCabScaleY = 1.073445\n-ViewCabScaleZ = 1.013102\n+ViewCabScaleX = 1.218821\n+ViewCabScaleY = 0.991534\n+ViewCabScaleZ = 0.928960\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 5.273402\n-ViewCabVOfs = -45.522339\n-ViewCabWindowTop = 355.403900\n-ViewCabWindowBot = 82.953217\n-ToneMapper = 0\n\\ No newline at end of file\n+ViewCabHOfs = 0.043502\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 300.355865\n+ViewCabWindowBot = 35.168205\n+ToneMapper = 0\n+\n+[TableOption]\n+Select LUT = 0.000000\n+Desktop DMD = 0.000000\n+Cabinet Rails = 0.000000\n+Side Blades = 1.000000\n\\ No newline at end of file"},
@@ -59,7 +59,7 @@
       {
         "hash": "688ec61c6bd9a567e41b60eb2948b47c6652ad0f",
         "date": "2025-09-10 12:40:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "JPSalas v600 updates\n\nCurrent as of 9/10/25. More to come.\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpattackfrommarsle/table.yml", "diff": "diff --git a/external/vpx-jpattackfrommarsle/table.yml b/external/vpx-jpattackfrommarsle/table.yml\nindex cd912f0e..51763a4f 100644\n--- a/external/vpx-jpattackfrommarsle/table.yml\n+++ b/external/vpx-jpattackfrommarsle/table.yml\n@@ -11,7 +11,7 @@ romChecksum: \"7550943E9E7D9ADFE6BED395B4179ACD\"\n romNotes: \"Download version 1.13B\"\n tableNameOverride: \"Attack from Mars LE, JP's\"\n tableVPSId: \"9Paf7-CL\"\n-tableNotes: \"Download 'Attack from Mars LE v552_VPX8.zip'\"\n+tableNotes: \"Download 'Attack from Mars LE v600.zip'\"\n tagline: \"Blow the saucer out of the sky!!\"\n tableManufacturerOverride: \"Chicago Gaming Company\"\n tableYearOverride: 2017\n@@ -19,6 +19,6 @@ testers:\n   - \"BrianCK\"\n   - \"OminousOsie\"\n vpxVPSId: \"1bCrozNZ\"\n-vpxChecksum: \"96FF3118D98A1A56A3A9961EA66A0A24\"\n+vpxChecksum: \"C3D02F892BF01300FFCB9295F4999C34\"\n applyFixes:\n   - \"bass\""}

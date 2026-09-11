@@ -13,7 +13,7 @@
       {
         "hash": "bd3cb3156bf0354912dabb005bffa0e6be4ed6c3",
         "date": "2026-08-23 22:06:10 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update nvram.nv\n",
         "files": [
           {"status": "M", "path": "external/vpx-badcats/nvram.nv"}
@@ -22,7 +22,7 @@
       {
         "hash": "d6d90aeeddd647bc07957838a4238c0245715812",
         "date": "2026-08-23 16:45:02 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update Bad Cats\n\nUse The Cats' Meow romset\n",
         "files": [
           {"status": "M", "path": "external/vpx-badcats/table.vbs", "diff": "diff --git a/external/vpx-badcats/table.vbs b/external/vpx-badcats/table.vbs\nindex c9195cdf..b8ea48a2 100644\n--- a/external/vpx-badcats/table.vbs\n+++ b/external/vpx-badcats/table.vbs\n@@ -42,7 +42,7 @@ On Error Goto 0\n LoadVPM \"01550000\", \"S11.vbs\", 3.26\n \n Dim bsTrough, bsDog, bsTrash, dtBird, dtMilk\n-Const cGameName = \"bcats_l5\"\n+Const cGameName = \"bcats_tcm13\"\n \n Const UseSolenoids = 1\n Const UseLamps = 0"},
@@ -32,7 +32,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-badcats/table.yml", "diff": "diff --git a/external/vpx-badcats/table.yml b/external/vpx-badcats/table.yml\nindex 657aca15..144bd538 100644\n--- a/external/vpx-badcats/table.yml\n+++ b/external/vpx-badcats/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"DFB9025082E55722E5999BBE68A69717\"\n-  - \"2C24EABEF392B91AA796CAC01148DBB6\"\n+backglassChecksum: \"DFB9025082E55722E5999BBE68A69717\"\n backglassNotes: \"Download HauntFreaks FullDMD\"\n backglassVPSId: \"bSD9BBBs_C\"\n coloredROMChecksum: \"8966B58F31E3209448ECAD6669A46256\"\n@@ -18,8 +15,5 @@ tableVPSId: \"9Z7eDRTt\"\n tagline: \"'There's more than one way to skin a bad cat.'\"\n testers:\n   - \"evilwraith\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"07E81AE7A29404FF7DD64EEC04DA5382\"\n-  - \"7912F9946AFDE9DE559CCCCDBD9DE55E\"\n+vpxChecksum: \"07E81AE7A29404FF7DD64EEC04DA5382\"\n vpxVPSId: \"faS5VIwN\""}
@@ -41,7 +41,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-badcats/table.yml", "diff": "diff --git a/external/vpx-badcats/table.yml b/external/vpx-badcats/table.yml\nindex f3081dfa..657aca15 100644\n--- a/external/vpx-badcats/table.yml\n+++ b/external/vpx-badcats/table.yml\n@@ -9,7 +9,7 @@ coloredROMChecksum: \"8966B58F31E3209448ECAD6669A46256\"\n coloredROMNotes: \"Download 'bcats_tcm.cRZ'\"\n coloredROMVersionOverride: \"bcats_l5\"\n coloredROMVPSId: \"RLQ_mA-0Zo\"\n-fps: 55\n+fps: 60\n romChecksum: \"F7F67CFF495B59786CD0E48462DF3F1E\"\n romNotes: \"Download 'bcats_l5.zip'\"\n romVPSId: \"Ob9UD0Xo\""}
@@ -50,7 +50,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-badcats/table.yml", "diff": "diff --git a/external/vpx-badcats/table.yml b/external/vpx-badcats/table.yml\nindex 3904f24f..f3081dfa 100644\n--- a/external/vpx-badcats/table.yml\n+++ b/external/vpx-badcats/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"DFB9025082E55722E5999BBE68A69717\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"DFB9025082E55722E5999BBE68A69717\"\n+  - \"2C24EABEF392B91AA796CAC01148DBB6\"\n backglassNotes: \"Download HauntFreaks FullDMD\"\n backglassVPSId: \"bSD9BBBs_C\"\n coloredROMChecksum: \"8966B58F31E3209448ECAD6669A46256\"\n@@ -15,5 +18,8 @@ tableVPSId: \"9Z7eDRTt\"\n tagline: \"'There's more than one way to skin a bad cat.'\"\n testers:\n   - \"evilwraith\"\n-vpxChecksum: \"07E81AE7A29404FF7DD64EEC04DA5382\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"07E81AE7A29404FF7DD64EEC04DA5382\"\n+  - \"7912F9946AFDE9DE559CCCCDBD9DE55E\"\n vpxVPSId: \"faS5VIwN\""}
@@ -59,7 +59,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "A", "path": "external/vpx-badcats/dmd.png"},
@@ -117,7 +117,7 @@
       {
         "hash": "aca7eb2f00b643e2740d63c81f6495e8fabdba6b",
         "date": "2025-03-20 01:17:36 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "More README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-badcats/README.md", "diff": "diff --git a/external/vpx-badcats/README.md b/external/vpx-badcats/README.md\nindex 04213ad4..b81ba3c8 100644\n--- a/external/vpx-badcats/README.md\n+++ b/external/vpx-badcats/README.md\n@@ -5,20 +5,19 @@\n ---\n \n ## Files\n-| File Type | Link | Version | Author | \n-|-----------|--------|----------|--------------|\n-| **VPX** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12401) | 1.2.1a | [Unclewilly](https://www.vpforums.org/index.php?s=582515d2c70108c6e0b0ff449083190c&showuser=12) |\n-| **B2S & DMD** | [VP Universe](https://vpuniverse.com/files/file/17478-bad-cats-williams-1989-b2s-authentic/) | 2.0 | [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n-| **ROM** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=931) | bcats_l5.zip |  |\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12401) | 1.2.1a | [Unclewilly](https://www.vpforums.org/index.php?s=582515d2c70108c6e0b0ff449083190c&showuser=12) |\n+| B2S | [VP Universe](https://vpuniverse.com/files/file/17478-bad-cats-williams-1989-b2s-authentic/) | 2.0 | [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=931) | bcats_l5.zip | N/A |\n \n-**Tested by:** \n+**Tested by:** [Officially-Unofficial]\n \n ---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1983-b84441e\n-\n+**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: |:white_check_mark: | :white_check_mark: | 50 |\n@@ -26,11 +25,10 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n ---\n \n ## Instructions\n-\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to `vpx-badcats.elf`\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them to `external/vpx-badcats`\n - Make sure (`.vpx`), (`.directb2s`), and (`.vbs`) files are all named the same\n - Place ROM `bcats_l5.zip` file into `vpx-badcats/pinmame/roms` folder. DO NOT UNZIP!\n - NOTE: Backboard image (TOY image) renders upsidedown.  This is a table issue and not a VPX issue\n-> Meow, Meow, Meow\n+- Meow, Meow, Meow"}
@@ -157,7 +157,7 @@
       {
         "hash": "8ef0f18bde41a915f1d95e11c517cefb5069e332",
         "date": "2025-01-21 22:14:35 -0600",
-        "author": "James Rainaldi",
+        "author": "James R.",
         "message": "chore: updated vpx-badcats README\n",
         "files": [
           {"status": "M", "path": "external/vpx-badcats/README.md", "diff": "diff --git a/external/vpx-badcats/README.md b/external/vpx-badcats/README.md\nindex b7c63d0e..9aa44acd 100644\n--- a/external/vpx-badcats/README.md\n+++ b/external/vpx-badcats/README.md\n@@ -2,19 +2,18 @@\n \n ![Table Preview](https://github.com/bhobman/vpx-previews/blob/1448c4d8c5e2f6d06d3acc94b4012999e2f920e7/vpx-badcats-preview.png)\n \n-Author: [Unclewilly](https://www.vpforums.org/index.php?s=582515d2c70108c6e0b0ff449083190c&showuser=12)  \n-Version: 1.2.1a  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12401)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=12401) | 1.2.1a | [Unclewilly](https://www.vpforums.org/index.php?s=582515d2c70108c6e0b0ff449083190c&showuser=12) |\n+| **B2S & DMD** | [VP Universe](https://vpuniverse.com/files/file/17478-bad-cats-williams-1989-b2s-authentic/) | 2.0 | [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| **ROM** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=931) | bcats_l5.zip |  |\n \n-Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: 2.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/17478-bad-cats-williams-1989-b2s-authentic/)\n+**Tested by:** \n \n-ROM\n-\n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=931)\n+---\n \n ## Status \n \n@@ -24,13 +23,14 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: |:white_check_mark: | :white_check_mark: | 50 |\n \n+---\n \n ## Instructions\n \n - Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-badcats.elf\n-- Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-badcats\n-- Make sure (.vpx), (.directb2s), and (.vbs) files are all named the same\n-- Place ROM zip file into vpx-badcats/pinmame/roms folder. DO NOT UNZIP!\n+- Add your personalized launcher.elf and rename it to `vpx-badcats.elf`\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them to `external/vpx-badcats`\n+- Make sure (`.vpx`), (`.directb2s`), and (`.vbs`) files are all named the same\n+- Place ROM `bcats_l5.zip` file into `vpx-badcats/pinmame/roms` folder. DO NOT UNZIP!\n - NOTE: Backboard image (TOY image) renders upsidedown.  This is a table issue and not a VPX issue\n-- Meow, Meow, Meow\n+> Meow, Meow, Meow\n"}

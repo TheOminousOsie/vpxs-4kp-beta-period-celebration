@@ -4,7 +4,7 @@
       {
         "hash": "2833e9c0f54dc3c3661bbd0ed31281d603535809",
         "date": "2026-09-09 22:52:36 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe launcher updates 2\n\nAmerican Graffiti\nJP's Attack From Mars LE\nJames Cameron's Avatar\nBlack Pyramid\nChrono Trigger\nCreature From The Black Lagoon\nCirqus Voltaire\nHardbody\nF-14 Tomcat\nJudge Dredd\nDiner\nDr. Dude\nHigh Roller Casino\nJP's LOTR\nRobocop\nSimpsons Pinball Party\nStranger Things\nTaxi\nTMNT\nTMNT Remix - also folder rename\nTorpedo Alley\nTransformers Pro\nTransformers G1\nWhoa Nellie\n",
         "files": [
           {"status": "M", "path": "external/vpx-whoanellie/launcher.png"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-whoanellie/table.yml", "diff": "diff --git a/external/vpx-whoanellie/table.yml b/external/vpx-whoanellie/table.yml\nindex 02af0000..607d7420 100644\n--- a/external/vpx-whoanellie/table.yml\n+++ b/external/vpx-whoanellie/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"xgKVaHD7\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"7012400064acadc74b5114e8a6ccc160\"\n-  - \"25ABA2296801B1E2A46DA6FB98BC2798\"\n+backglassChecksum: \"7012400064acadc74b5114e8a6ccc160\"\n backglassBundled: true\n backglassNotes: \"Included in VPX zip\"\n fps: 60\n@@ -14,7 +11,4 @@ testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"xgKVaHD7\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"ba1a9533b418fdfd4d98bf0cf259ae7c\"\n-  - \"25ABA2296801B1E2A46DA6FB98BC2798\"\n+vpxChecksum: \"ba1a9533b418fdfd4d98bf0cf259ae7c\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-whoanellie/table.yml", "diff": "diff --git a/external/vpx-whoanellie/table.yml b/external/vpx-whoanellie/table.yml\nindex 607d7420..02af0000 100644\n--- a/external/vpx-whoanellie/table.yml\n+++ b/external/vpx-whoanellie/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"xgKVaHD7\"\n-backglassChecksum: \"7012400064acadc74b5114e8a6ccc160\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"7012400064acadc74b5114e8a6ccc160\"\n+  - \"25ABA2296801B1E2A46DA6FB98BC2798\"\n backglassBundled: true\n backglassNotes: \"Included in VPX zip\"\n fps: 60\n@@ -11,4 +14,7 @@ testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"xgKVaHD7\"\n-vpxChecksum: \"ba1a9533b418fdfd4d98bf0cf259ae7c\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"ba1a9533b418fdfd4d98bf0cf259ae7c\"\n+  - \"25ABA2296801B1E2A46DA6FB98BC2798\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-whoanellie/table.ini", "diff": "diff --git a/external/vpx-whoanellie/table.ini b/external/vpx-whoanellie/table.ini\nindex c1aed247..697f7da3 100644\n--- a/external/vpx-whoanellie/table.ini\n+++ b/external/vpx-whoanellie/table.ini\n@@ -1,19 +1,16 @@\n [Player]\n-MaxFramerate = 0\n-SyncMode = 1\n BallTrailStrength = 0.392157\n AlphaRampAccuracy = 10\n OverrideTableEmissionScale = 0\n+ScreenPlayerZ = 99.988091\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.800246\n-ViewCabScaleY = 0.900097\n-ViewCabScaleZ = 1.000108\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 20.173014\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = -0.038500\n-ViewCabFOV = 40.046406\n-ViewCabLayback = 69.974854\n+ViewCabMode = 2\n+ViewCabScaleX = 1.027617\n+ViewCabScaleY = 0.987937\n+ViewCabScaleZ = 0.857766\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 91.189049\n+ViewCabWindowBot = 0.886278\n\\ No newline at end of file"},
@@ -214,7 +214,7 @@
       {
         "hash": "d14dd907a2aa6661a0033936d39abfacef43337e",
         "date": "2025-03-25 16:19:00 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "INI and YML Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-whoanellie/table.yml", "diff": "diff --git a/external/vpx-whoanellie/table.yml b/external/vpx-whoanellie/table.yml\nindex 571b5f98..22f30c55 100644\n--- a/external/vpx-whoanellie/table.yml\n+++ b/external/vpx-whoanellie/table.yml\n@@ -1,7 +1,7 @@\n ---\n backglassVPSId: \"jxmanCjboW\"\n backglassChecksum: \"0F2D0B0205AF76BB8BF0628A699B7A9A\"\n-backglassNotes: \"Download JP's Whoa Nellie! v41.directb2s.zip\"\n+backglassNotes: \"Download - JPs Whoa Nellie! v41.directb2s.zip\"\n fps: 60\n tableVPSId: \"jZ9BEzitrV\"\n tagline: \"See the mountain of melons!\"\n@@ -10,3 +10,4 @@ testers:\n   - \"Bla1ze\"\n vpxVPSId: \"HIykvJBUPh\"\n vpxChecksum: \"7C4D16398DA19590DFC1A4A8655C4FA3\"\n+tableNotes:  \"Download - JPs Whoa Nellie! v55_VPX8.zip\""}
@@ -281,7 +281,7 @@
       {
         "hash": "1f02914d05b9785f64382a82076c6960ebfed237",
         "date": "2025-02-21 15:26:53 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add preview images to repo and update readmes\n\nTables affected:\nvpx-\nabracadabra\ncapersville\ncountdownjp\npirategold\nwhoanellie\n",
         "files": [
           {"status": "M", "path": "external/vpx-whoanellie/README.md", "diff": "diff --git a/external/vpx-whoanellie/README.md b/external/vpx-whoanellie/README.md\nindex d6e6a3f5..08ee480d 100644\n--- a/external/vpx-whoanellie/README.md\n+++ b/external/vpx-whoanellie/README.md\n@@ -1,6 +1,6 @@\n # Whoa Nellie! (Original 2022)\n \n-![Table Preview](https://github.com/lilalien/vpx-images/blob/main/vpx-whoanellie.png)\n+![Table Preview](../../vpx-whoanellie.png)\n \n Authors: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n Version: 5.5.0  \n"}
@@ -299,7 +299,7 @@
       {
         "hash": "1f36e95988ebc87809741c5e6afac69f83a65b10",
         "date": "2025-01-31 19:39:13 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update JP's Whoa Nellie to 5.5.0\n\nNo changes needed except updating version number in readme. Skipping JP's T2 for add'l troubleshooting.\n",
         "files": [
           {"status": "M", "path": "external/vpx-whoanellie/README.md", "diff": "diff --git a/external/vpx-whoanellie/README.md b/external/vpx-whoanellie/README.md\nindex a3baec93..809f2514 100644\n--- a/external/vpx-whoanellie/README.md\n+++ b/external/vpx-whoanellie/README.md\n@@ -3,7 +3,7 @@\n ![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=113527&id=16889&full=1)\n \n Authors: [jpsalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 4.1.0  \n+Version: 5.5.0\n Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=16889)\n \n DirectB2S\n"}

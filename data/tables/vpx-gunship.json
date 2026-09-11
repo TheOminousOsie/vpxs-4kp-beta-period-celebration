@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-gunship/table.yml", "diff": "diff --git a/external/vpx-gunship/table.yml b/external/vpx-gunship/table.yml\nindex a346dbf1..6b51db2a 100644\n--- a/external/vpx-gunship/table.yml\n+++ b/external/vpx-gunship/table.yml\n@@ -1,7 +1,7 @@\n ---\n backglassAuthorsOverride:\n   - \"\"\n-fps: 50\n+fps: 55\n pupBundled: true\n pupArchiveRoot: \"Gunship\"\n pupChecksum: \"D9476309192011F5F720E142984BBBB3\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-gunship/table.ini", "diff": "diff --git a/external/vpx-gunship/table.ini b/external/vpx-gunship/table.ini\nindex cfc7d59c..f1fc6abc 100644\n--- a/external/vpx-gunship/table.ini\n+++ b/external/vpx-gunship/table.ini\n@@ -1,10 +1,7 @@\n-[Player]\n-MaxTexDimension = 4096\n-FXAA = 1\n-\n [Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.416666\n+PUPPlugin = 1\n+PUPCapture = 1\n+PinMAMEWindow=1\n \n [TableOverride]\n ViewCabMode = 2"},
@@ -50,7 +50,7 @@
       {
         "hash": "70903c37c0481339acabea7829905b4ee3aefd0a",
         "date": "2025-06-27 13:40:17 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "PUPdates\n\nAdded archiveroot to Gunship and 5th Element\n",
         "files": [
           {"status": "M", "path": "external/vpx-gunship/table.yml", "diff": "diff --git a/external/vpx-gunship/table.yml b/external/vpx-gunship/table.yml\nindex 8f308937..e9af0243 100644\n--- a/external/vpx-gunship/table.yml\n+++ b/external/vpx-gunship/table.yml\n@@ -4,6 +4,7 @@ applyFixes:\n backglassAuthorsOverride:\n   - \"\"\n fps: 50\n+pupArchiveRoot: \"Gunship\"\n pupChecksum: \"D9476309192011F5F720E142984BBBB3\"\n pupFileUrl: >-\n   https://vpuniverse.com/files/file/15778-gunship-pinball-music-table-with-pup-pack/\n"}
@@ -114,7 +114,7 @@
       {
         "hash": "18698fdb3a3d810fdcdf6afe37b587fdc1600292",
         "date": "2025-06-09 20:33:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.ini\n\nChanged POV to use Camera Mode",
         "files": [
           {"status": "M", "path": "external/vpx-gunship/table.ini", "diff": "diff --git a/external/vpx-gunship/table.ini b/external/vpx-gunship/table.ini\nindex f0e2de1c..2e62553f 100644\n--- a/external/vpx-gunship/table.ini\n+++ b/external/vpx-gunship/table.ini\n@@ -6,14 +6,12 @@ FXAA = 1\n WindowRenderMode = 0\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.873382\n-ViewCabScaleY = 1.083348\n+ViewCabMode = 2\n+ViewCabRotation = 180.000000\n+ViewCabScaleX = 1.076441\n+ViewCabScaleY = 1.018031\n ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 21.134993\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 15.744918\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -2.921699\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 138.953217\n"}

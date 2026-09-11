@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.yml", "diff": "diff --git a/external/vpx-bop/table.yml b/external/vpx-bop/table.yml\nindex 1534316f..d9f77301 100644\n--- a/external/vpx-bop/table.yml\n+++ b/external/vpx-bop/table.yml\n@@ -14,7 +14,4 @@ testers:\n   - \"Bla1ze\"\n   - \"Boris\"\n vpxVPSId: \"V1dcVAchIZ\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"8f04921f5df40aa49463b46a61285c73\"\n-  - \"115439E4A38ACF6B7BA7A7E01E4E4BEB\"\n+vpxChecksum: \"8f04921f5df40aa49463b46a61285c73\""}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.yml", "diff": "diff --git a/external/vpx-bop/table.yml b/external/vpx-bop/table.yml\nindex 1abba5b7..1534316f 100644\n--- a/external/vpx-bop/table.yml\n+++ b/external/vpx-bop/table.yml\n@@ -2,7 +2,7 @@\n backglassVPSId: \"vZxKzU5OTA\"\n backglassChecksum: \"EE28BC140A699860DAA63D26E62653F4\"\n backglassNotes: \"Download 'The Machine Bride Of Pinbot (Williams 1991) fulldmd.directb2s'\"\n-fps: 55\n+fps: 58\n romVPSId: \"vwDH6y_g\"\n romChecksum: \"356c7f7c943a5d72ace371c9398ea722\"\n romNotes: \"Download - bop_l8.zip\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.yml", "diff": "diff --git a/external/vpx-bop/table.yml b/external/vpx-bop/table.yml\nindex df142d05..1abba5b7 100644\n--- a/external/vpx-bop/table.yml\n+++ b/external/vpx-bop/table.yml\n@@ -14,4 +14,7 @@ testers:\n   - \"Bla1ze\"\n   - \"Boris\"\n vpxVPSId: \"V1dcVAchIZ\"\n-vpxChecksum: \"8f04921f5df40aa49463b46a61285c73\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"8f04921f5df40aa49463b46a61285c73\"\n+  - \"115439E4A38ACF6B7BA7A7E01E4E4BEB\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.ini", "diff": "diff --git a/external/vpx-bop/table.ini b/external/vpx-bop/table.ini\nindex cee54bed..acd5f03b 100755\n--- a/external/vpx-bop/table.ini\n+++ b/external/vpx-bop/table.ini\n@@ -1,28 +1,23 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+\n [Player]\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 1\n-ScreenPlayerZ = 100.151230\n+ScreenPlayerZ = 89.988907\n DynamicDayNight = 0\n EmissionScale = 0.200000\n JoyAddCredit2Key = 1\n-AAFactor = 0.95\n+ScreenPlayerY = 14.959496\n+AAFactor = 0.90\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.227484\n-ViewCabScaleY = 1.122491\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.136131\n+ViewCabScaleY = 1.016276\n+ViewCabScaleZ = 0.885224\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.000000\n-ViewCabVOfs = -75.839287\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 85.953217\n-\n-[Standalone]\n-BackBufferScale            = 0.416666\n-B2SHideGrill = 0\n-; Remove to stretch backglass\n-B2SBackglassX              = 5200\n-B2SBackglassWidth          = 1600\n-B2SBackglassHeight         = 1080\n-\n+ViewCabHOfs = 8.533903\n+ViewCabVOfs = 0.011505\n+ViewCabWindowTop = 165.619751\n+ViewCabWindowBot = 0.482218\n\\ No newline at end of file"},
@@ -41,7 +41,7 @@
       {
         "hash": "34b56b5347e8e3d8500cd7c859a928c7e410f883",
         "date": "2025-11-24 23:23:14 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.ini", "diff": "diff --git a/external/vpx-bop/table.ini b/external/vpx-bop/table.ini\nindex 3c8e8be6..cee54bed 100755\n--- a/external/vpx-bop/table.ini\n+++ b/external/vpx-bop/table.ini\n@@ -19,7 +19,7 @@ ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 85.953217\n \n [Standalone]\n-BackBufferScale            = .416666\n+BackBufferScale            = 0.416666\n B2SHideGrill = 0\n ; Remove to stretch backglass\n B2SBackglassX              = 5200\n"}
@@ -50,7 +50,7 @@
       {
         "hash": "fba5b20e616222f78838993b97ee69ba1c85bbe6",
         "date": "2025-11-24 23:19:22 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.ini", "diff": "diff --git a/external/vpx-bop/table.ini b/external/vpx-bop/table.ini\nindex a16714c9..3c8e8be6 100755\n--- a/external/vpx-bop/table.ini\n+++ b/external/vpx-bop/table.ini\n@@ -5,7 +5,7 @@ ScreenPlayerZ = 100.151230\n DynamicDayNight = 0\n EmissionScale = 0.200000\n JoyAddCredit2Key = 1\n-AAFactor - 0.95\n+AAFactor = 0.95\n \n [TableOverride]\n ViewCabMode = 2\n"}
@@ -59,7 +59,7 @@
       {
         "hash": "71d2940e566c4eea353b73fe10e47491f8584183",
         "date": "2025-11-24 23:05:21 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "2 more\n\nBride of PinBot: Updated ini and vbs for performance\nIndiana Jones: TPA: Added WindowRenderMode=0\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.ini", "diff": "diff --git a/external/vpx-bop/table.ini b/external/vpx-bop/table.ini\nindex 0699d995..a16714c9 100755\n--- a/external/vpx-bop/table.ini\n+++ b/external/vpx-bop/table.ini\n@@ -5,6 +5,7 @@ ScreenPlayerZ = 100.151230\n DynamicDayNight = 0\n EmissionScale = 0.200000\n JoyAddCredit2Key = 1\n+AAFactor - 0.95\n \n [TableOverride]\n ViewCabMode = 2\n@@ -18,8 +19,7 @@ ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 85.953217\n \n [Standalone]\n-;×BackBufferScale            = .416666\n-BackBufferScale = 0.355729\n+BackBufferScale            = .416666\n B2SHideGrill = 0\n ; Remove to stretch backglass\n B2SBackglassX              = 5200"},
@@ -69,7 +69,7 @@
       {
         "hash": "01ec22f03c799d7cdbb0672e5f1cc34eb12d7f03",
         "date": "2025-11-24 22:30:45 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.vbs\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.vbs", "diff": "diff --git a/external/vpx-bop/table.vbs b/external/vpx-bop/table.vbs\nindex 1b393a08..d6dc5f99 100755\n--- a/external/vpx-bop/table.vbs\n+++ b/external/vpx-bop/table.vbs\n@@ -317,28 +317,28 @@ Sub Table_KeyDown(ByVal keycode)\n      'If Keycode = LeftFlipperKey then SolLFlipper 1\n      If keycode = LeftTiltKey Then LeftNudge 80, 1, 20\n      If keycode = RightTiltKey Then RightNudge 280, 1, 20\n-     If keycode = CenterTiltKey Then CenterNudge 0, 1, 25\n-\n-    '************************   Start Ball Control 1/3\n-        if keycode = 46 then                ' C Key\n-            If contball = 1 Then\n-                contball = 0\n-            Else\n-                contball = 1\n-            End If\n-        End If\n-        if keycode = 48 then                'B Key\n-            If bcboost = 1 Then\n-                bcboost = bcboostmulti\n-            Else\n-                bcboost = 1\n-            End If\n-        End If\n-        if keycode = 203 then bcleft = 1        ' Left Arrow\n-        if keycode = 200 then bcup = 1          ' Up Arrow\n-        if keycode = 208 then bcdown = 1        ' Down Arrow\n-        if keycode = 205 then bcright = 1       ' Right Arrow\n-'    '************************   End Ball Control 1/3\n+     If keycode = CenterTiltKey Then CenterNudge 0, 1, 25    \n+\n+\t\t\t\t\t\t\t\t\t\t\t\t\t  \n+\t\t\t\t\t\t\t\t\t\t\t\t   \n+\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t\t\n+\t\t\t\t\n+\t\t\t\t\t\t\t\n+\t\t\t\t  \n+\t\t\t  \n+\t\t\t\t\t\t\t\t\t\t\t\t  \n+\t\t\t\t\t\t\t   \n+\t\t\t\t\t\t\t\t\t  \n+\t\t\t\t\n+\t\t\t\t\t\t   \n+\t\t\t\t  \n+\t\t\t  \n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t  \n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \n+\t\t\t\t\t\t\t\t\t\t\t\t\t \n     If vpmKeyDown(keycode) Then Exit Sub\n End Sub\n \n@@ -347,57 +347,57 @@ Sub Table_KeyUp(ByVal keycode)\n \n      If keycode = plungerkey then plunger.Fire:PlaySoundAt \"Plunger2\", plunger\n      'If Keycode = RightFlipperKey then SolRFlipper 0\n-     'If Keycode = LeftFlipperKey then SolLFlipper 0\n-\n-    '************************   Start Ball Control 2/3\n-    if keycode = 203 then bcleft = 0        ' Left Arrow\n-    if keycode = 200 then bcup = 0          ' Up Arrow\n-    if keycode = 208 then bcdown = 0        ' Down Arrow\n-    if keycode = 205 then bcright = 0       ' Right Arrow\n-    '************************   End Ball Control 2/3\n+     'If Keycode = LeftFlipperKey then SolLFlipper 0    \n+\n+\t\t\t\t\t\t\t\t\t\t\t\t\t  \n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t\t\t\t\t\t\t\t  \n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t \n+\t\t\t\t\t\t\t\t\t\t\t\t\t\n      If vpmKeyUp(keycode) Then Exit Sub\n End sub\n \n \n \n-'************************   Start Ball Control 3/3\n-Sub StartControl_Hit()\n-    Set ControlBall = ActiveBall\n-    contballinplay = true\n-End Sub\n-\n-Sub StopControl_Hit()\n-    contballinplay = false\n-End Sub\n-\n-Dim bcup, bcdown, bcleft, bcright, contball, contballinplay, ControlBall, bcboost\n-Dim bcvel, bcyveloffset, bcboostmulti\n-\n-bcboost = 1     'Do Not Change - default setting\n-bcvel = 4       'Controls the speed of the ball movement\n-bcyveloffset = -0.01    'Offsets the force of gravity to keep the ball from drifting vertically on the table, should be negative\n-bcboostmulti = 3    'Boost multiplier to ball veloctiy (toggled with the B key)\n-\n-Sub BallControl_Timer()\n-    If Contball and ContBallInPlay then\n-        If bcright = 1 Then\n-            ControlBall.velx = bcvel*bcboost\n-        ElseIf bcleft = 1 Then\n-            ControlBall.velx = - bcvel*bcboost\n-        Else\n-            ControlBall.velx=0\n-        End If\n-\n-        If bcup = 1 Then\n-            ControlBall.vely = -bcvel*bcboost\n-        ElseIf bcdown = 1 Then\n-            ControlBall.vely = bcvel*bcboost\n-        Else\n-            ControlBall.vely= bcyveloffset\n-        End If\n-    End If\n-End Sub\n-'************************   End Ball Control 3/3\n+\t\t\t\t\t\t\t\t\t\t\t\t  \n+\t\t\t\t\t  \n+\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t \n+\t   \n+\n+\t\t\t\t\t \n+\t\t\t\t\t\t  \n+\t   \n+\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \n+\t\t\t\t\t\t\t\t\t \n+\n+\t\t\t\t\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t   \n+\n+\t\t\t\t\t   \n+\t\t\t\t\t\t\t\t\t   \n+\t\t\t\t\t\t   \n+\t\t\t\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t\t  \n+\t\t\t\t\t\t\t\t\t\t\t  \n+\t\t\t\n+\t\t\t\t\t\t\t  \n+\t\t\t  \n+\n+\t\t\t\t\t\t\n+\t\t\t\t\t\t\t\t\t\t\t \n+\t\t\t\t\t\t\t  \n+\t\t\t\t\t\t\t\t\t\t\t\n+\t\t\t\n+\t\t\t\t\t\t\t\t\t\t  \n+\t\t\t  \n+\t\t  \n+\t   \n+\t\t\t\t\t\t\t\t\t\t\t\t\n \n  '***Solenoids***\n         SolCallback(1) = \"kisort\"\n@@ -1699,8 +1699,8 @@ Sub InitLampsNF()\n \t\tLampz.FadeSpeedDown(x) = 1/120\n \tNext\n \tfor x = 5 to 28\n-\t\tModLampz.FadeSpeedUp(x) = 1/64\n-\t\tModLampz.FadeSpeedDown(x) = 1/64\n+\t\tModLampz.FadeSpeedUp(x) = 1/128\n+\t\tModLampz.FadeSpeedDown(x) = 1/128\n \tNext\n \n \n@@ -1828,7 +1828,7 @@ Sub InitLampsNF()\n \tLampz.Callback(47) = \"FadeMaterialEyesFiliment pFiliment47, MaterialEyesArray, \"\n \n \tLampz.MassAssign(48)= l48\n-\tLampz.MassAssign(48)= l48a\n+\t\t\t\t\t\t   \n \tLampz.Callback(48) =         \"FadeMaterialMouthBulb pBulb48, MaterialRedArray, \"\n \tLampz.Callback(48) = \"FadeMaterialMouthFiliment pFiliment48, MaterialRedArray, \"\n \n"}
@@ -78,7 +78,7 @@
       {
         "hash": "d88fa814ca4d7d6c4056be2ab98fdb2534b1bfcf",
         "date": "2025-11-24 22:15:27 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.yml", "diff": "diff --git a/external/vpx-bop/table.yml b/external/vpx-bop/table.yml\nindex 748c56db..c42b1c52 100644\n--- a/external/vpx-bop/table.yml\n+++ b/external/vpx-bop/table.yml\n@@ -7,11 +7,13 @@ romVPSId: \"vwDH6y_g\"\n romChecksum: \"356c7f7c943a5d72ace371c9398ea722\"\n romNotes: \"Download - bop_l8.zip\"\n tableVPSId: \"MKZNH4Rl\"\n+tableNotes: >-\n+  \"Download 'The Machine - Bride Of Pinbot (Williams 1991)_Bigus(MOD)3.0.vpx.zip'\"\n tagline: \"My god, she's alive!\"\n testers:\n   - \"Bla1ze\"\n   - \"Boris\"\n vpxVPSId: \"V1dcVAchIZ\"\n-vpxChecksum: \"120efce1239a49a32f14bf628224bc37\"\n+vpxChecksum: \"8f04921f5df40aa49463b46a61285c73\"\n applyFixes:\n   - \"bass\"\n"}
@@ -168,7 +168,7 @@
       {
         "hash": "2cd82a5fe8d0ac63021864e73124f0e526663af3",
         "date": "2025-04-06 09:06:27 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Remove helpful auto indentations from ymls.\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.yml", "diff": "diff --git a/external/vpx-bop/table.yml b/external/vpx-bop/table.yml\nindex 5c517f49..748c56db 100644\n--- a/external/vpx-bop/table.yml\n+++ b/external/vpx-bop/table.yml\n@@ -15,4 +15,3 @@ vpxVPSId: \"V1dcVAchIZ\"\n vpxChecksum: \"120efce1239a49a32f14bf628224bc37\"\n applyFixes:\n   - \"bass\"\n-  \n\\ No newline at end of file"}
@@ -177,7 +177,7 @@
       {
         "hash": "1416ca8a5154dc3a717a0bbef08bc63bfbc0d5f0",
         "date": "2025-04-06 08:59:35 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add end line to ymls\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.yml", "diff": "diff --git a/external/vpx-bop/table.yml b/external/vpx-bop/table.yml\nindex 91d030f3..5c517f49 100644\n--- a/external/vpx-bop/table.yml\n+++ b/external/vpx-bop/table.yml\n@@ -14,4 +14,5 @@ testers:\n vpxVPSId: \"V1dcVAchIZ\"\n vpxChecksum: \"120efce1239a49a32f14bf628224bc37\"\n applyFixes:\n-  - \"bass\" \n\\ No newline at end of file\n+  - \"bass\"\n+  \n\\ No newline at end of file"}
@@ -186,7 +186,7 @@
       {
         "hash": "334afa006d4e7903ddfca3b0e9a27d65f41ce0ea",
         "date": "2025-04-06 08:49:08 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update BBS to meet syntax requirement.\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.ini", "diff": "diff --git a/external/vpx-bop/table.ini b/external/vpx-bop/table.ini\nindex e6130483..0699d995 100755\n--- a/external/vpx-bop/table.ini\n+++ b/external/vpx-bop/table.ini\n@@ -19,7 +19,7 @@ ViewCabWindowBot = 85.953217\n \n [Standalone]\n ;×BackBufferScale            = .416666\n-BackBufferScale = .355729\n+BackBufferScale = 0.355729\n B2SHideGrill = 0\n ; Remove to stretch backglass\n B2SBackglassX              = 5200"}
@@ -195,7 +195,7 @@
       {
         "hash": "acc65acf21f6bbb6a2439fbe68600afce979bfaf",
         "date": "2025-04-05 22:24:44 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add Bla1ze as tester\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.yml", "diff": "diff --git a/external/vpx-bop/table.yml b/external/vpx-bop/table.yml\nindex 22f68e41..91d030f3 100644\n--- a/external/vpx-bop/table.yml\n+++ b/external/vpx-bop/table.yml\n@@ -9,6 +9,7 @@ romNotes: \"Download - bop_l8.zip\"\n tableVPSId: \"MKZNH4Rl\"\n tagline: \"My god, she's alive!\"\n testers:\n+  - \"Bla1ze\"\n   - \"Boris\"\n vpxVPSId: \"V1dcVAchIZ\"\n vpxChecksum: \"120efce1239a49a32f14bf628224bc37\""}
@@ -204,7 +204,7 @@
       {
         "hash": "8a5d2b31b4b8c85d8dd3c01c5048bc434b123d35",
         "date": "2025-04-05 18:40:23 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update Wave 2 tables, Add Who Dunnit\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/launcher.png"},
@@ -214,7 +214,7 @@
       {
         "hash": "9190f02428d956f9d47046b947711551614978d1",
         "date": "2025-04-04 13:43:54 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update ymls for BOP and BK2K\n",
         "files": [
           {"status": "M", "path": "external/vpx-bop/table.yml", "diff": "diff --git a/external/vpx-bop/table.yml b/external/vpx-bop/table.yml\nindex 145b137b..22f68e41 100644\n--- a/external/vpx-bop/table.yml\n+++ b/external/vpx-bop/table.yml\n@@ -6,7 +6,7 @@ fps: 43\n romVPSId: \"vwDH6y_g\"\n romChecksum: \"356c7f7c943a5d72ace371c9398ea722\"\n romNotes: \"Download - bop_l8.zip\"\n-tableVPSId: \"8ND2ag4u\"\n+tableVPSId: \"MKZNH4Rl\"\n tagline: \"My god, she's alive!\"\n testers:\n   - \"Boris\"\n"}
@@ -223,7 +223,7 @@
       {
         "hash": "c0a2c02fe0d4879379225d8db791dfc65590b808",
         "date": "2025-04-03 20:58:01 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update BK2K, Young Frankenstein, Bride of Pin*Bot\n\nDMD images, settings, some table files, add ymls, update FPS in Readme\n",
         "files": [
           {"status": "A", "path": "external/vpx-bop/dmd.png"},

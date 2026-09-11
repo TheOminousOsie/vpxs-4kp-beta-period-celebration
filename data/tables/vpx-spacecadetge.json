@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-spacecadetge/table.yml", "diff": "diff --git a/external/vpx-spacecadetge/table.yml b/external/vpx-spacecadetge/table.yml\nindex 2837e801..c4fa4160 100644\n--- a/external/vpx-spacecadetge/table.yml\n+++ b/external/vpx-spacecadetge/table.yml\n@@ -14,8 +14,5 @@ tableNameOverride: \"Space Cadet, JP's - Galaxy Edition\"\n testers:\n   - \"mrandromeda\"\n   - \"n-i-x\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"1399D6064EF38CA23EBB44E22DDF52D4\"\n-  - \"59559A3BFA0BCFD0CE1450B140325826\"\n+vpxChecksum: \"1399D6064EF38CA23EBB44E22DDF52D4\"\n vpxVPSId: \"aHb-SNzjDs\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-spacecadetge/table.yml", "diff": "diff --git a/external/vpx-spacecadetge/table.yml b/external/vpx-spacecadetge/table.yml\nindex c4fa4160..2837e801 100644\n--- a/external/vpx-spacecadetge/table.yml\n+++ b/external/vpx-spacecadetge/table.yml\n@@ -14,5 +14,8 @@ tableNameOverride: \"Space Cadet, JP's - Galaxy Edition\"\n testers:\n   - \"mrandromeda\"\n   - \"n-i-x\"\n-vpxChecksum: \"1399D6064EF38CA23EBB44E22DDF52D4\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"1399D6064EF38CA23EBB44E22DDF52D4\"\n+  - \"59559A3BFA0BCFD0CE1450B140325826\"\n vpxVPSId: \"aHb-SNzjDs\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-spacecadetge/table.ini", "diff": "diff --git a/external/vpx-spacecadetge/table.ini b/external/vpx-spacecadetge/table.ini\nindex 2aeeaffd..98295f4c 100644\n--- a/external/vpx-spacecadetge/table.ini\n+++ b/external/vpx-spacecadetge/table.ini\n@@ -1,6 +1,4 @@\n [Player]\n-MaxTexDimension = 3072\n-FXAA = 1\n ScreenPlayerY = 17.328304\n ScreenPlayerZ = 120.348488\n ScreenWidth = 0.000000\n@@ -11,14 +9,10 @@ ScreenPlayerX = -0.015400\n [TableOverride]\n ViewCabMode = 2\n ViewCabScaleX = 1.095096\n-ViewCabScaleY = 1.056010\n+ViewCabScaleY = 1.022710\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -36.270699\n+ViewCabVOfs = -7.055704\n ViewCabWindowTop = 277.386902\n ViewCabWindowBot = 78.090202\n-\n-[Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.416666"},
@@ -32,7 +32,7 @@
       {
         "hash": "43ba8269da714aa620d596cb40774e414a8a9473",
         "date": "2025-07-19 14:42:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Capitalization\n\nTo satisfy the YML checker\n",
         "files": [
           {"status": "M", "path": "external/vpx-spacecadetge/table.yml", "diff": "diff --git a/external/vpx-spacecadetge/table.yml b/external/vpx-spacecadetge/table.yml\nindex 0c3ab460..0cea96c7 100644\n--- a/external/vpx-spacecadetge/table.yml\n+++ b/external/vpx-spacecadetge/table.yml\n@@ -14,7 +14,7 @@ tableNameOverride: \"Space Cadet, JP's - Galaxy Edition\"\n testers:\n   - \"mrandromeda\"\n   - \"n-i-x\"\n-vpxchecksum: \"1399D6064EF38CA23EBB44E22DDF52D4\"\n+vpxChecksum: \"1399D6064EF38CA23EBB44E22DDF52D4\"\n vpxVPSId: \"aHb-SNzjDs\"\n applyFixes:\n   - \"bass\""}
@@ -41,7 +41,7 @@
       {
         "hash": "94ea0e6ee51f6bd66af711098199bc85ef6c7114",
         "date": "2025-07-19 14:06:39 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "2 more pups\n\nSpace Cadet GE and JP's Terminator 2.\n",
         "files": [
           {"status": "M", "path": "external/vpx-spacecadetge/table.yml", "diff": "diff --git a/external/vpx-spacecadetge/table.yml b/external/vpx-spacecadetge/table.yml\nindex b474bfda..0c3ab460 100644\n--- a/external/vpx-spacecadetge/table.yml\n+++ b/external/vpx-spacecadetge/table.yml\n@@ -1,7 +1,6 @@\n ---\n-backglassAuthorsOverride:\n-  - \"\"\n fps: 52\n+pupArchiveRoot: \"jpspacecadetGE\"\n pupChecksum: \"40CB8B2D1770692F94016E4332E3C829\"\n pupFileUrl: >-\n   https://mega.nz/file/yZAEAawT#XlXXV5F_vwgCNGuQNfGKgbWjPha5C8CJP48QpfVcMiY"}

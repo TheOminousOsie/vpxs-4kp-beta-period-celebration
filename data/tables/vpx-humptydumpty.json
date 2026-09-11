@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-humptydumpty/table.yml", "diff": "diff --git a/external/vpx-humptydumpty/table.yml b/external/vpx-humptydumpty/table.yml\nindex 9aeeaa86..500d5d8f 100644\n--- a/external/vpx-humptydumpty/table.yml\n+++ b/external/vpx-humptydumpty/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassBundled: true\n backglassVPSId: \"fbr-tI8gHs\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"98064D12FF87A26610C8A81F85819BF7\"\n-  - \"EC770BAF11531A15ADB90E4CD21FFE5E\"\n+backglassChecksum: \"98064D12FF87A26610C8A81F85819BF7\"\n backglassNotes: \"Included in VPX zip\"\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n@@ -18,7 +15,4 @@ testers:\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"s393znjkK1\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"3289CFA2F8717A8451371ABD72AE816C\"\n-  - \"EC770BAF11531A15ADB90E4CD21FFE5E\"\n+vpxChecksum: \"3289CFA2F8717A8451371ABD72AE816C\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-humptydumpty/table.yml", "diff": "diff --git a/external/vpx-humptydumpty/table.yml b/external/vpx-humptydumpty/table.yml\nindex 500d5d8f..9aeeaa86 100644\n--- a/external/vpx-humptydumpty/table.yml\n+++ b/external/vpx-humptydumpty/table.yml\n@@ -1,7 +1,10 @@\n ---\n backglassBundled: true\n backglassVPSId: \"fbr-tI8gHs\"\n-backglassChecksum: \"98064D12FF87A26610C8A81F85819BF7\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"98064D12FF87A26610C8A81F85819BF7\"\n+  - \"EC770BAF11531A15ADB90E4CD21FFE5E\"\n backglassNotes: \"Included in VPX zip\"\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n@@ -15,4 +18,7 @@ testers:\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"s393znjkK1\"\n-vpxChecksum: \"3289CFA2F8717A8451371ABD72AE816C\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"3289CFA2F8717A8451371ABD72AE816C\"\n+  - \"EC770BAF11531A15ADB90E4CD21FFE5E\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-humptydumpty/table.ini", "diff": "diff --git a/external/vpx-humptydumpty/table.ini b/external/vpx-humptydumpty/table.ini\nindex 24f5664f..db626d63 100644\n--- a/external/vpx-humptydumpty/table.ini\n+++ b/external/vpx-humptydumpty/table.ini\n@@ -14,5 +14,4 @@ ViewCabLayback = 46.349403\n \n [Player]\n RMagnaSave = 8\n-LMagnaSave = 9\n-FXAA = 1\n\\ No newline at end of file\n+LMagnaSave = 9\n\\ No newline at end of file"},
@@ -144,7 +144,7 @@
       {
         "hash": "61ddb955a1e2052e2ac4be1472de7710585ed99b",
         "date": "2025-03-07 12:30:50 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add launcher configs to multiple tables\n\nHumpty Dumpty > Right, Release ball\nAlice in Wonderland  > Right, Release ball\nThe Shadow > Right, Toggle ramps\nAttack From Mars > Up, Launcher\nT2 > Up, Launcher\nWWE Royal Rumble > Left, Right, Mag Saves (I think)\nJohnny Mnemonic >left and right change table colors. (Sorry don't know what the effect is called )\nWCS - Left is magnasave\nBlack Knight 2000 > Right, mag save\nBlack Knight: L/R nudge = L/R magna save\nBlack Knight 2000: L/R nudge = L/R magna save\nViper: L nudge = viper reverse, R nudge = viper strike\nMedusa: R nudge = shield post\n",
         "files": [
           {"status": "A", "path": "external/vpx-humptydumpty/launcher.cfg", "diff": "diff --git a/external/vpx-humptydumpty/launcher.cfg b/external/vpx-humptydumpty/launcher.cfg\nnew file mode 100644\nindex 00000000..56642694\n--- /dev/null\n+++ b/external/vpx-humptydumpty/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+; dpadUp = \"Up\"\n+; dpadDown = \"Down\"\n+; dpadLeft = \"Left\"\n+dpadRight = \"Release Ball\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start\"\n+; menu = \"Menu\"\n\\ No newline at end of file"}

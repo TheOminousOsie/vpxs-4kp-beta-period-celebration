@@ -4,7 +4,7 @@
       {
         "hash": "a1e17ee8e056bffd00825b4fa55113a100459dee",
         "date": "2026-07-18 12:22:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "fixed disabled tables\n",
         "files": [
           {"status": "M", "path": "external/vpx-gnr/table.yml", "diff": "diff --git a/external/vpx-gnr/table.yml b/external/vpx-gnr/table.yml\nindex 78a85eb9..26d44146 100644\n--- a/external/vpx-gnr/table.yml\n+++ b/external/vpx-gnr/table.yml\n@@ -8,7 +8,7 @@ backglassNotes: \"Download 'Guns N Roses (Data East 1994) full dmd.zip'\"\n backglassVPSId: \"UzwDgqRass\"\n coloredROMChecksum: \"7110D86D3A4CFE28EDDCFF258CB57A10\"\n coloredROMVPSId: \"pDaRRBxOOn\"\n-fps: 55\n+fps: 60\n romChecksum: \"C6F4660FD9AF560637BDE2DF7668B5C4\"\n romVPSId: \"OvPWlsbB\"\n tableVPSId: \"M7FYR1GJ\""}
@@ -13,7 +13,7 @@
       {
         "hash": "4a02ebc321763607047eeb2ac122432348f2226b",
         "date": "2026-07-18 00:40:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "final updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-gnr/table.yml", "diff": "diff --git a/external/vpx-gnr/table.yml b/external/vpx-gnr/table.yml\nindex 51d28cc4..78a85eb9 100644\n--- a/external/vpx-gnr/table.yml\n+++ b/external/vpx-gnr/table.yml\n@@ -1,16 +1,20 @@\n ---\n-backglassVPSId: \"UzwDgqRass\"\n+altSoundArchiveFormat: \"zip\"\n+altSoundChecksum: \"f92fb5c09fc4a15298c626ecce700767\"\n+altSoundNotes: \"Download 'G-Sound - Guns N' Roses (DE 94) VPW Special Edition 1.1.zip'\"\n+altSoundVPSId: \"slB5ACtyzh\"\n backglassChecksum: \"C487D420EB097907452087D1FAD1E485\"\n backglassNotes: \"Download 'Guns N Roses (Data East 1994) full dmd.zip'\"\n-coloredROMVPSId: \"pDaRRBxOOn\"\n+backglassVPSId: \"UzwDgqRass\"\n coloredROMChecksum: \"7110D86D3A4CFE28EDDCFF258CB57A10\"\n-romVPSId: \"OvPWlsbB\"\n-romChecksum: \"C6F4660FD9AF560637BDE2DF7668B5C4\"\n+coloredROMVPSId: \"pDaRRBxOOn\"\n fps: 55\n+romChecksum: \"C6F4660FD9AF560637BDE2DF7668B5C4\"\n+romVPSId: \"OvPWlsbB\"\n tableVPSId: \"M7FYR1GJ\"\n tagline: \"Of all the bands in the world.... this is definitely one of them!\"\n testers:\n   - \"Bla1ze\"\n   - \"Mox\"\n-vpxVPSId: \"SV-Ul3CNuE\"\n vpxChecksum: \"2182846FB63A0484A1AF72DC9103160A\"\n+vpxVPSId: \"SV-Ul3CNuE\""}
@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-gnr/table.yml", "diff": "diff --git a/external/vpx-gnr/table.yml b/external/vpx-gnr/table.yml\nindex 4a066737..51d28cc4 100644\n--- a/external/vpx-gnr/table.yml\n+++ b/external/vpx-gnr/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"UzwDgqRass\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"C487D420EB097907452087D1FAD1E485\"\n-  - \"55C0B5B6E0577B809412710FC616CFFE\"\n+backglassChecksum: \"C487D420EB097907452087D1FAD1E485\"\n backglassNotes: \"Download 'Guns N Roses (Data East 1994) full dmd.zip'\"\n coloredROMVPSId: \"pDaRRBxOOn\"\n coloredROMChecksum: \"7110D86D3A4CFE28EDDCFF258CB57A10\""}
@@ -31,7 +31,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-gnr/table.yml", "diff": "diff --git a/external/vpx-gnr/table.yml b/external/vpx-gnr/table.yml\nindex d18739d4..4a066737 100644\n--- a/external/vpx-gnr/table.yml\n+++ b/external/vpx-gnr/table.yml\n@@ -9,7 +9,7 @@ coloredROMVPSId: \"pDaRRBxOOn\"\n coloredROMChecksum: \"7110D86D3A4CFE28EDDCFF258CB57A10\"\n romVPSId: \"OvPWlsbB\"\n romChecksum: \"C6F4660FD9AF560637BDE2DF7668B5C4\"\n-fps: 40\n+fps: 55\n tableVPSId: \"M7FYR1GJ\"\n tagline: \"Of all the bands in the world.... this is definitely one of them!\"\n testers:"}
@@ -40,7 +40,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-gnr/table.yml", "diff": "diff --git a/external/vpx-gnr/table.yml b/external/vpx-gnr/table.yml\nindex cc6c51dd..d18739d4 100644\n--- a/external/vpx-gnr/table.yml\n+++ b/external/vpx-gnr/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"UzwDgqRass\"\n-backglassChecksum: \"C487D420EB097907452087D1FAD1E485\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"C487D420EB097907452087D1FAD1E485\"\n+  - \"55C0B5B6E0577B809412710FC616CFFE\"\n backglassNotes: \"Download 'Guns N Roses (Data East 1994) full dmd.zip'\"\n coloredROMVPSId: \"pDaRRBxOOn\"\n coloredROMChecksum: \"7110D86D3A4CFE28EDDCFF258CB57A10\""}
@@ -49,7 +49,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-gnr/table.ini", "diff": "diff --git a/external/vpx-gnr/table.ini b/external/vpx-gnr/table.ini\nindex c716bfbe..7ce2caa3 100644\n--- a/external/vpx-gnr/table.ini\n+++ b/external/vpx-gnr/table.ini\n@@ -1,20 +1,21 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.100242\n-ViewCabScaleY = 1.043121\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.052300\n+ViewCabScaleY = 0.995179\n+ViewCabScaleZ = 0.952058\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -18.620401\n-ViewCabWindowTop = 395.541931\n-ViewCabWindowBot = 116.836197\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 303.544891\n+ViewCabWindowBot = 99.380196\n \n [Player]\n-ScreenPlayerZ = 86.287628\n+ScreenPlayerZ = 88.042336\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n JoyAddCredit2Key = 1\n+ScreenPlayerY = 19.958849\n \n [Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+BackBufferScale = 0.416666"},
@@ -185,7 +185,7 @@
       {
         "hash": "edf427f9815b9da7378e3228d2173b9b3447dc21",
         "date": "2025-03-22 18:37:25 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Launcher Fixes and INI Correction\n",
         "files": [
           {"status": "M", "path": "external/vpx-gnr/launcher.png"},
@@ -195,7 +195,7 @@
       {
         "hash": "502aed9f9a19bcb8438805126dff636bb5f0cac2",
         "date": "2025-03-22 17:44:39 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Created table.yml Files\n",
         "files": [
           {"status": "A", "path": "external/vpx-gnr/table.yml", "diff": "diff --git a/external/vpx-gnr/table.yml b/external/vpx-gnr/table.yml\nnew file mode 100644\nindex 00000000..9f6d4bfa\n--- /dev/null\n+++ b/external/vpx-gnr/table.yml\n@@ -0,0 +1,18 @@\n+---\n+backglassVPSId: \"UzwDgqRass\"\n+backglassChecksum: \"C487D420EB097907452087D1FAD1E485\"\n+backglassNotes: \"Download 'Guns N Roses (Data East 1994) full dmd.zip'\"\n+coloredROMVPSId: \"pDaRRBxOOn\"\n+coloredROMChecksum: \"9E1CF553A657115763021283215CA94C\"\n+romVPSId: \"OvPWlsbB\"\n+romChecksum: \"C6F4660FD9AF560637BDE2DF7668B5C4\"\n+fps: 40\n+tableVPSId: \"M7FYR1GJ\"\n+tagline: \"Of all the bands in the world.... this is definitely one of them!\"\n+testers:\n+- \"Bla1ze\"\n+- \"Mox\"\n+vpxVPSId: \"SV-Ul3CNuE\"\n+vpxChecksum: \"2182846FB63A0484A1AF72DC9103160A\"\n+tableNotes: \n+mainNotes: \n\\ No newline at end of file"}
@@ -235,7 +235,7 @@
       {
         "hash": "4484eb8c8c6ac3db3b820059dd30414ffa61f556",
         "date": "2025-01-27 23:33:37 -0600",
-        "author": "Chad Severson",
+        "author": "Chad S.",
         "message": "Update vpx-gnr.png\n\nChanged the wheel art for the GNR Table I hope I did it right this time\n",
         "files": [
           {"status": "M", "path": "external/vpx-gnr/vpx-gnr.png"}

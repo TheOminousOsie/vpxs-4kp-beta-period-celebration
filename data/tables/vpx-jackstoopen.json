@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-jackstoopen/table.yml", "diff": "diff --git a/external/vpx-jackstoopen/table.yml b/external/vpx-jackstoopen/table.yml\nindex 2af9b0f7..c3ff2ae1 100644\n--- a/external/vpx-jackstoopen/table.yml\n+++ b/external/vpx-jackstoopen/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"B8FD2FCAA00C9E7DC5CF403B5BDDE46B\"\n-  - \"5A0625FCDEDF001C0608F812984D321F\"\n+backglassChecksum: \"B8FD2FCAA00C9E7DC5CF403B5BDDE46B\"\n backglassNotes: \"Download Version 2.0\"\n backglassVPSId: \"l-kOn09CQf\"\n fps: 58\n@@ -15,8 +12,5 @@ tableNotes: \"Download 'Jacks to Open (Mylstar 1984) v600.vpx.zip'\"\n testers:\n   - \"evilwraith\"\n   - \"pointdablame\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"A6207E377AFD60BA004FE9FD0FF95FE9\"\n-  - \"D46036428C61C4C0694F2BC35F2A036D\"\n+vpxChecksum: \"A6207E377AFD60BA004FE9FD0FF95FE9\"\n vpxVPSId: \"ZGOtLBs6vS\""}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-jackstoopen/table.yml", "diff": "diff --git a/external/vpx-jackstoopen/table.yml b/external/vpx-jackstoopen/table.yml\nindex 7abd1df2..2af9b0f7 100644\n--- a/external/vpx-jackstoopen/table.yml\n+++ b/external/vpx-jackstoopen/table.yml\n@@ -5,7 +5,7 @@ backglassChecksum:\n   - \"5A0625FCDEDF001C0608F812984D321F\"\n backglassNotes: \"Download Version 2.0\"\n backglassVPSId: \"l-kOn09CQf\"\n-fps: 60\n+fps: 58\n romChecksum: \"96F2911EE5139A63459AF3E6686C5B9E\"\n romNotes: \"Download jack2opn.zip\"\n romVersionOverride: \"jack2opn\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-jackstoopen/table.yml", "diff": "diff --git a/external/vpx-jackstoopen/table.yml b/external/vpx-jackstoopen/table.yml\nindex 6e26903d..7abd1df2 100644\n--- a/external/vpx-jackstoopen/table.yml\n+++ b/external/vpx-jackstoopen/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"B8FD2FCAA00C9E7DC5CF403B5BDDE46B\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"B8FD2FCAA00C9E7DC5CF403B5BDDE46B\"\n+  - \"5A0625FCDEDF001C0608F812984D321F\"\n backglassNotes: \"Download Version 2.0\"\n backglassVPSId: \"l-kOn09CQf\"\n fps: 60\n@@ -12,5 +15,8 @@ tableNotes: \"Download 'Jacks to Open (Mylstar 1984) v600.vpx.zip'\"\n testers:\n   - \"evilwraith\"\n   - \"pointdablame\"\n-vpxChecksum: \"A6207E377AFD60BA004FE9FD0FF95FE9\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"A6207E377AFD60BA004FE9FD0FF95FE9\"\n+  - \"D46036428C61C4C0694F2BC35F2A036D\"\n vpxVPSId: \"ZGOtLBs6vS\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-jackstoopen/table.ini", "diff": "diff --git a/external/vpx-jackstoopen/table.ini b/external/vpx-jackstoopen/table.ini\nindex ef2ef6b8..788816f4 100644\n--- a/external/vpx-jackstoopen/table.ini\n+++ b/external/vpx-jackstoopen/table.ini\n@@ -1,13 +1,13 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.102020\n-ViewCabScaleY = 0.952699\n-ViewCabScaleZ = 0.920613\n+ViewCabScaleX = 1.051620\n+ViewCabScaleY = 0.993113\n+ViewCabScaleZ = 0.870213\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = 44.214584\n-ViewCabWindowTop = 0.564944\n-ViewCabWindowBot = 0.378253\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 49.058937\n+ViewCabWindowBot = 48.917255\n \n [Player]\n ScreenPlayerX = 0.035450"}
@@ -50,7 +50,7 @@
       {
         "hash": "ca1af2102cff16bdba7231ab01215c14afac0845",
         "date": "2025-11-12 23:08:17 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "art adjustments\n",
         "files": [
           {"status": "M", "path": "external/vpx-jackstoopen/dmd.png"}
@@ -59,7 +59,7 @@
       {
         "hash": "21144bdea307fd23669a7971c3de3f4928bd9bb7",
         "date": "2025-11-09 21:32:00 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-jackstoopen/table.yml", "diff": "diff --git a/external/vpx-jackstoopen/table.yml b/external/vpx-jackstoopen/table.yml\nindex b2688386..cff4d439 100644\n--- a/external/vpx-jackstoopen/table.yml\n+++ b/external/vpx-jackstoopen/table.yml\n@@ -5,6 +5,7 @@ backglassVPSId: \"l-kOn09CQf\"\n fps: 60\n romChecksum: \"96F2911EE5139A63459AF3E6686C5B9E\"\n romNotes: \"Download jack2opn.zip\"\n+romVersionOverride: \"jack2opn\"\n romUrlOverride: \"https://vpuniverse.com/files/file/1097-jack2opnzip/\"\n tableVPSId: \"IlZh5lUD\"\n tableNotes: \"Download 'Jacks to Open (Mylstar 1984) v600.vpx.zip'\"\n"}
@@ -68,7 +68,7 @@
       {
         "hash": "63c16b225fb697750552a76a7695ce1c698b78d1",
         "date": "2025-11-09 18:51:21 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "fixes\n",
         "files": [
           {"status": "A", "path": "external/vpx-jackstoopen/dmd.png"},
@@ -79,7 +79,7 @@
       {
         "hash": "de0f723cda962b98370d6feb64d8abe60246156b",
         "date": "2025-09-09 16:59:16 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Jacks\n",
         "files": [
           {"status": "A", "path": "external/vpx-jackstoopen/launcher.png"},

@@ -4,7 +4,7 @@
       {
         "hash": "2833e9c0f54dc3c3661bbd0ed31281d603535809",
         "date": "2026-09-09 22:52:36 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe launcher updates 2\n\nAmerican Graffiti\nJP's Attack From Mars LE\nJames Cameron's Avatar\nBlack Pyramid\nChrono Trigger\nCreature From The Black Lagoon\nCirqus Voltaire\nHardbody\nF-14 Tomcat\nJudge Dredd\nDiner\nDr. Dude\nHigh Roller Casino\nJP's LOTR\nRobocop\nSimpsons Pinball Party\nStranger Things\nTaxi\nTMNT\nTMNT Remix - also folder rename\nTorpedo Alley\nTransformers Pro\nTransformers G1\nWhoa Nellie\n",
         "files": [
           {"status": "M", "path": "external/vpx-cirqusvoltaire/launcher.png"}
@@ -13,7 +13,7 @@
       {
         "hash": "79af7d2c8030c63db61aefdd88da3b587a08d233",
         "date": "2026-07-18 20:05:51 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Cirqus Voltaire revert\n",
         "files": [
           {"status": "M", "path": "external/vpx-cirqusvoltaire/table.ini", "diff": "diff --git a/external/vpx-cirqusvoltaire/table.ini b/external/vpx-cirqusvoltaire/table.ini\nindex a7063dcc..e1cbefcc 100644\n--- a/external/vpx-cirqusvoltaire/table.ini\n+++ b/external/vpx-cirqusvoltaire/table.ini\n@@ -1,25 +1,25 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.069299\n-ViewCabScaleY = 0.963929\n+ViewCabScaleX = 1.140000\n+ViewCabScaleY = 0.970000\n ViewCabScaleZ = 0.874874\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.015700\n ViewCabVOfs = 0.000000\n-ViewCabWindowTop = 214.325974\n-ViewCabWindowBot = -115.291786\n+ViewCabWindowTop = 227.883301\n+ViewCabWindowBot = 0.000000\n \n [Player]\n BallTrail = 0\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 1\n-ScreenPlayerZ = 98.323730\n+ScreenPlayerZ = 98.300018\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n DynamicDayNight = 0\n EmissionScale = 1.000000\n-ScreenPlayerY = 16.278109\n+ScreenPlayerY = 16.300003\n \n [TableOption]\n Outlane Difficulty = 1.000000\n@@ -30,4 +30,7 @@ Ramp Roll Volume = 0.600000\n Table DMD ON/OFF = 0.000000\n Flipper Style = 1.000000\n Menagerie Ball Color = 1.000000\n-LUT Selection = 0.000000\n\\ No newline at end of file\n+LUT Selection = 0.000000\n+\n+[Standalone]\n+POVLinkTableScaleXY = 0\n\\ No newline at end of file"},
@@ -24,7 +24,7 @@
       {
         "hash": "a1e17ee8e056bffd00825b4fa55113a100459dee",
         "date": "2026-07-18 12:22:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "fixed disabled tables\n",
         "files": [
           {"status": "M", "path": "external/vpx-cirqusvoltaire/table.yml", "diff": "diff --git a/external/vpx-cirqusvoltaire/table.yml b/external/vpx-cirqusvoltaire/table.yml\nindex 9a677ed3..86c93122 100644\n--- a/external/vpx-cirqusvoltaire/table.yml\n+++ b/external/vpx-cirqusvoltaire/table.yml\n@@ -12,7 +12,6 @@ coloredROMChecksum:\n coloredROMNotes: \"Download 'pin2dmd.pal and pin2dmd.vni'\"\n coloredROMPin2DMD: true\n coloredROMVPSId: \"gO0aW9_jQy\"\n-enabled: false\n fps: 60\n romChecksum: \"916cb17525ce6445e1d8da019fc8c951\"\n romVPSId: \"toON4K5L\""}
@@ -33,7 +33,7 @@
       {
         "hash": "a9c16d030baa945d4febdad9cd992e5f2996a5b0",
         "date": "2026-07-17 23:26:00 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Baby Pac fix\n\nDisable Fallout\n",
         "files": [
           {"status": "M", "path": "external/vpx-cirqusvoltaire/table.vbs", "diff": "diff --git a/external/vpx-cirqusvoltaire/table.vbs b/external/vpx-cirqusvoltaire/table.vbs\nindex cdbc346f..6e865221 100644\n--- a/external/vpx-cirqusvoltaire/table.vbs\n+++ b/external/vpx-cirqusvoltaire/table.vbs\n@@ -42,7 +42,7 @@ Const cGameName = \"cv_20hc\" 'arcade rom with credits\n 'the 4 color option properly.\n '\n \n-Const IntegratedDMDType = 0 '0 = Off / 1 Normal / 2 Color.\n+Const IntegratedDMDType = 2 '0 = Off / 1 Normal / 2 Color.\n \n '-------------------------------------------------\n \n@@ -50,7 +50,7 @@ Const DMD_Plastic = 0 'Render a plastic cover over the DMD display.\n \n '-------------------------------------------------\n \n-Const BackGlassDMD = 1 ' Place a static image on the playfield DMD if you use a 3 screen cab and don't want to use either \n+Const BackGlassDMD = 0 ' Place a static image on the playfield DMD if you use a 3 screen cab and don't want to use either \n                        ' the integrated DMD or the normal DMD positioned on the playfield.\n '-------------------------------------------------\n "}
@@ -42,7 +42,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-cirqusvoltaire/table.yml", "diff": "diff --git a/external/vpx-cirqusvoltaire/table.yml b/external/vpx-cirqusvoltaire/table.yml\nindex 4802df53..9a677ed3 100644\n--- a/external/vpx-cirqusvoltaire/table.yml\n+++ b/external/vpx-cirqusvoltaire/table.yml\n@@ -1,22 +1,25 @@\n ---\n-backglassChecksum: \"734333da21e723b28c46041761030821\"\n-backglassNotes: \"Download Version 1\"\n-backglassVPSId: \"YwbkKMT9T-\"\n-coloredROMChecksum: \n+altSoundArchiveFormat: \"rar\"\n+altSoundArchiveRoot: \"cv_20h\"\n+altSoundChecksum: \"c1dca3065fe69a8f58e1b9c99c7ec5d0\"\n+altSoundVPSId: \"nucyBXyQDt\"\n+backglassChecksum: \"ceb3c547e8733fd23310e65bd0dfa160\"\n+backglassNotes: \"Download 'Cirqus Voltaire (Bally 1997)_with_dmd viewport.directb2s'\"\n+backglassVPSId: \"oyIBEDyLu-\"\n+coloredROMChecksum:\n   - \"EADA34570A656E6CF0CA5AB9BB6ED563\"\n   - \"46D8015EBEA429F6EAAC8688B7AA08BF\"\n-coloredROMPin2DMD: true\n coloredROMNotes: \"Download 'pin2dmd.pal and pin2dmd.vni'\"\n+coloredROMPin2DMD: true\n coloredROMVPSId: \"gO0aW9_jQy\"\n+enabled: false\n fps: 60\n-romChecksum: \"612613e00db9e7815a74767682ad9b2e\"\n-romNotes: \"Download ROM - cv_20hc.zip\"\n-romUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=5834\"\n-romVersionOverride: \"cv_20hc\"\n-tableNotes: \"Cirqus Voltaire (Bally 1997)_Bigus(MOD) 3.0\"\n+romChecksum: \"916cb17525ce6445e1d8da019fc8c951\"\n+romVPSId: \"toON4K5L\"\n+tableNotes: \"Download 'Cirqus_Voltaire_Hanibal-Mod_3.7.vpx'\"\n tableVPSId: \"amqQVZGq\"\n tagline: \"Electrifying Excitement!\"\n testers:\n   - \"SIlentkat\"\n-vpxChecksum: \"a26297edb5daac4b46f1f68acdf06e03\"\n-vpxVPSId: \"guQp-qpZgQ\"\n+vpxChecksum: \"04c02cec4a45d65ae64cf98472d650b5\"\n+vpxVPSId: \"k0DU19nq\""}
@@ -51,7 +51,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-cirqusvoltaire/table.ini", "diff": "diff --git a/external/vpx-cirqusvoltaire/table.ini b/external/vpx-cirqusvoltaire/table.ini\nindex c4e16569..a7063dcc 100644\n--- a/external/vpx-cirqusvoltaire/table.ini\n+++ b/external/vpx-cirqusvoltaire/table.ini\n@@ -1,23 +1,15 @@\n-[Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.416666\n-\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.194425\n-ViewCabScaleY = 1.083356\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.069299\n+ViewCabScaleY = 0.963929\n+ViewCabScaleZ = 0.874874\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.620000\n-ViewCabVOfs = -67.060577\n-ViewCabWindowTop = 426.826019\n-ViewCabWindowBot = 92.452217\n+ViewCabHOfs = 0.015700\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 214.325974\n+ViewCabWindowBot = -115.291786\n \n [Player]\n-MaxTexDimension = 2048\n-FXAA = 1\n-AAFactor = .95\n-WindowRenderMode = 0\n BallTrail = 0\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 1\n@@ -38,6 +30,4 @@ Ramp Roll Volume = 0.600000\n Table DMD ON/OFF = 0.000000\n Flipper Style = 1.000000\n Menagerie Ball Color = 1.000000\n-LUT Selection = 0.000000\n-\n-\n+LUT Selection = 0.000000\n\\ No newline at end of file"},

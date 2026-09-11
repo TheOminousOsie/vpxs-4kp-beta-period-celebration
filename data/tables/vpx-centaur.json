@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-centaur/table.yml", "diff": "diff --git a/external/vpx-centaur/table.yml b/external/vpx-centaur/table.yml\nindex 318beae8..daa3a7d1 100644\n--- a/external/vpx-centaur/table.yml\n+++ b/external/vpx-centaur/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"3l0Zvt8R__\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"5977d1f16967aa539e5dd3bc5c18ead0\"\n-  - \"2FF82E99745AE99BDE91014D433BD3BA\"\n+backglassChecksum: \"5977d1f16967aa539e5dd3bc5c18ead0\"\n backglassNotes: \"Download - Centaur (Bally 1981).zip\"\n fps: 60\n romVPSId: \"ayWJ44_J\"\n@@ -17,7 +14,4 @@ testers:\n   - \"Boris\"\n   - \"OminousOsie\"\n vpxVPSId: \"jafdLbK1\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"8ea5708c07736287d23766f39a51ade6\"\n-  - \"17635DA84A9B3336CCF8D3563D94AFDA\"\n+vpxChecksum: \"8ea5708c07736287d23766f39a51ade6\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-centaur/table.yml", "diff": "diff --git a/external/vpx-centaur/table.yml b/external/vpx-centaur/table.yml\nindex daa3a7d1..318beae8 100644\n--- a/external/vpx-centaur/table.yml\n+++ b/external/vpx-centaur/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"3l0Zvt8R__\"\n-backglassChecksum: \"5977d1f16967aa539e5dd3bc5c18ead0\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"5977d1f16967aa539e5dd3bc5c18ead0\"\n+  - \"2FF82E99745AE99BDE91014D433BD3BA\"\n backglassNotes: \"Download - Centaur (Bally 1981).zip\"\n fps: 60\n romVPSId: \"ayWJ44_J\"\n@@ -14,4 +17,7 @@ testers:\n   - \"Boris\"\n   - \"OminousOsie\"\n vpxVPSId: \"jafdLbK1\"\n-vpxChecksum: \"8ea5708c07736287d23766f39a51ade6\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"8ea5708c07736287d23766f39a51ade6\"\n+  - \"17635DA84A9B3336CCF8D3563D94AFDA\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-centaur/table.ini", "diff": "diff --git a/external/vpx-centaur/table.ini b/external/vpx-centaur/table.ini\nindex 4ebdeeb2..73f08656 100644\n--- a/external/vpx-centaur/table.ini\n+++ b/external/vpx-centaur/table.ini\n@@ -1,26 +1,25 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.160602\n-ViewCabScaleY = 1.146719\n-ViewCabScaleZ = 1.077317\n+ViewCabScaleX = 1.140319\n+ViewCabScaleY = 0.999852\n+ViewCabScaleZ = 0.921642\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -103.234161\n-ViewCabWindowTop = 279.612244\n-ViewCabWindowBot = 34.920170\n-ToneMapper = 0\n+ViewCabVOfs = 0.016508\n+ViewCabWindowTop = 59.209194\n+ViewCabWindowBot = 58.849182\n+ToneMapper = 1\n \n [Player]\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.206100\n+EmissionScale = 0.390740\n ScreenPlayerY = 18.310352\n ScreenPlayerZ = 95.328888\n ScreenPlayerX = 0.027300\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n-PinMAMEWindow = 0\n\\ No newline at end of file"},
@@ -41,7 +41,7 @@
       {
         "hash": "0c309e1553e58cee31720f574dcfe32e45692fc1",
         "date": "2025-11-24 15:07:52 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 more wizard fixes\n\nBatman '66 minor POV adjustment\nBram Stoker's Dracula added WindowRenderMode = 0\nCentaur added BASS fixes\n",
         "files": [
           {"status": "M", "path": "external/vpx-centaur/table.yml", "diff": "diff --git a/external/vpx-centaur/table.yml b/external/vpx-centaur/table.yml\nindex 1ba04054..69583343 100644\n--- a/external/vpx-centaur/table.yml\n+++ b/external/vpx-centaur/table.yml\n@@ -15,3 +15,5 @@ testers:\n   - \"OminousOsie\"\n vpxVPSId: \"jafdLbK1\"\n vpxChecksum: \"8ea5708c07736287d23766f39a51ade6\"\n+applyFixes:\n+  - \"bass\"\n\\ No newline at end of file\n"}
@@ -153,7 +153,7 @@
       {
         "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
         "date": "2025-03-30 19:40:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
         "files": [
           {"status": "A", "path": "external/vpx-centaur/table.yml", "diff": "diff --git a/external/vpx-centaur/table.yml b/external/vpx-centaur/table.yml\nnew file mode 100644\nindex 00000000..97b1ab47\n--- /dev/null\n+++ b/external/vpx-centaur/table.yml\n@@ -0,0 +1,15 @@\n+---\n+backglassVPSId: \"5cYbFowKzU\"\n+backglassChecksum: \"37247EB89CDC5FF3F9EB6C6A1E829308\"\n+backglassNotes: \"Download - Centaur (Bally 1981) 3 screen.directb2s\"\n+fps: 38\n+romVPSId: \"ayWJ44_J\"\n+romChecksum: \"A4DC0C753D1C1E5F6D573478A7D17CF2\"\n+romNotes: \"Download - centaur.zip\"\n+tableVPSId: \"qoSWmS2e\"\n+tagline: \"Destroy Centaur!\"\n+testers:\n+  - \"Bla1ze\"\n+  - \"Mox\"\n+vpxVPSId: \"ovlkdWgM\"\n+vpxChecksum: \"24DBFC12F09F975DBF737DF5E2447B93\"\n\\ No newline at end of file"}

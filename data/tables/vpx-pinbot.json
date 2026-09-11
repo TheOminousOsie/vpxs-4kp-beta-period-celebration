@@ -13,7 +13,7 @@
       {
         "hash": "25924861c5a917d4f8efde60e74049c8fcf8bcaf",
         "date": "2026-07-19 20:30:50 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fixes\n\nPin-Bot table hash\nTron Legacy PUP required\nDemolition Man color rom link\nSouth Park color rom link\nPirates of the Caribbean color rom link\nWipeout removed color rom vpsid\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinbot/table.yml", "diff": "diff --git a/external/vpx-pinbot/table.yml b/external/vpx-pinbot/table.yml\nindex 48bed78d..dd5fd17e 100644\n--- a/external/vpx-pinbot/table.yml\n+++ b/external/vpx-pinbot/table.yml\n@@ -1,20 +1,20 @@\n ---\n-tableVPSId: \"u3bADyBV\"\n-vpxVPSId: \"232sR2Et\"\n-vpxChecksum: \"BCBD1FE4718441E1D5E6C373F7A93392\"\n-tableNotes: \"Download - 211309852_Pinbot(Williams1986)2.1.1VR.zip\"\n+backglassAuthorsOverride:\n+  - \"bord\"\n backglassBundled: true\n backglassChecksum: \"5D5DDAAAFBBD2DC529AFA880702060DA\"\n backglassNotes: \"Bundled with VPX\"\n-backglassAuthorsOverride:\n-  - \"bord\"\n fps: 60\n-romVPSId: \"aSGrFJgL\"\n romChecksum: \"A0ACE6E5EEDC8D2EDCCB36E3FF26B1D3\"\n romNotes: \"Download - pb_l5.zip\"\n+romVPSId: \"aSGrFJgL\"\n+tableNotes: \"Download - 211309852_Pinbot(Williams1986)2.1.1VR.zip\"\n+tableVPSId: \"u3bADyBV\"\n tagline: \"I am in your control.\"\n testers:\n   - \"Boris\"\n   - \"Mox\"\n   - \"Silentkat\"\n   - \"CoffeeAtJoes\"\n+vpxChecksum: \"36674A6DC01E67E90CB125EE6432D69F\"\n+vpxVPSId: \"232sR2Et\""}
@@ -22,7 +22,7 @@
       {
         "hash": "c472d47f37846a39486724312d06b53c6cabcfc6",
         "date": "2026-07-19 20:30:50 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fixes\n\nPin-Bot table hash\nTron Legacy PUP required\nDemolition Man color rom link\nSouth Park color rom link\nPirates of the Caribbean color rom link\nWipeout removed color rom vpsid\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinbot/table.yml", "diff": "diff --git a/external/vpx-pinbot/table.yml b/external/vpx-pinbot/table.yml\nindex 48bed78d..dd5fd17e 100644\n--- a/external/vpx-pinbot/table.yml\n+++ b/external/vpx-pinbot/table.yml\n@@ -1,20 +1,20 @@\n ---\n-tableVPSId: \"u3bADyBV\"\n-vpxVPSId: \"232sR2Et\"\n-vpxChecksum: \"BCBD1FE4718441E1D5E6C373F7A93392\"\n-tableNotes: \"Download - 211309852_Pinbot(Williams1986)2.1.1VR.zip\"\n+backglassAuthorsOverride:\n+  - \"bord\"\n backglassBundled: true\n backglassChecksum: \"5D5DDAAAFBBD2DC529AFA880702060DA\"\n backglassNotes: \"Bundled with VPX\"\n-backglassAuthorsOverride:\n-  - \"bord\"\n fps: 60\n-romVPSId: \"aSGrFJgL\"\n romChecksum: \"A0ACE6E5EEDC8D2EDCCB36E3FF26B1D3\"\n romNotes: \"Download - pb_l5.zip\"\n+romVPSId: \"aSGrFJgL\"\n+tableNotes: \"Download - 211309852_Pinbot(Williams1986)2.1.1VR.zip\"\n+tableVPSId: \"u3bADyBV\"\n tagline: \"I am in your control.\"\n testers:\n   - \"Boris\"\n   - \"Mox\"\n   - \"Silentkat\"\n   - \"CoffeeAtJoes\"\n+vpxChecksum: \"36674A6DC01E67E90CB125EE6432D69F\"\n+vpxVPSId: \"232sR2Et\""}
@@ -31,7 +31,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinbot/table.yml", "diff": "diff --git a/external/vpx-pinbot/table.yml b/external/vpx-pinbot/table.yml\nindex d8258232..48bed78d 100644\n--- a/external/vpx-pinbot/table.yml\n+++ b/external/vpx-pinbot/table.yml\n@@ -1,16 +1,10 @@\n ---\n tableVPSId: \"u3bADyBV\"\n vpxVPSId: \"232sR2Et\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"BCBD1FE4718441E1D5E6C373F7A93392\"\n-  - \"2D02FF2ACC5D311B33907F47060DBBEE\"\n+vpxChecksum: \"BCBD1FE4718441E1D5E6C373F7A93392\"\n tableNotes: \"Download - 211309852_Pinbot(Williams1986)2.1.1VR.zip\"\n backglassBundled: true\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"5D5DDAAAFBBD2DC529AFA880702060DA\"\n-  - \"2D02FF2ACC5D311B33907F47060DBBEE\"\n+backglassChecksum: \"5D5DDAAAFBBD2DC529AFA880702060DA\"\n backglassNotes: \"Bundled with VPX\"\n backglassAuthorsOverride:\n   - \"bord\""}
@@ -40,7 +40,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinbot/table.yml", "diff": "diff --git a/external/vpx-pinbot/table.yml b/external/vpx-pinbot/table.yml\nindex 4ba60b0a..d8258232 100644\n--- a/external/vpx-pinbot/table.yml\n+++ b/external/vpx-pinbot/table.yml\n@@ -14,7 +14,7 @@ backglassChecksum:\n backglassNotes: \"Bundled with VPX\"\n backglassAuthorsOverride:\n   - \"bord\"\n-fps: 58\n+fps: 60\n romVPSId: \"aSGrFJgL\"\n romChecksum: \"A0ACE6E5EEDC8D2EDCCB36E3FF26B1D3\"\n romNotes: \"Download - pb_l5.zip\""}
@@ -49,7 +49,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinbot/table.yml", "diff": "diff --git a/external/vpx-pinbot/table.yml b/external/vpx-pinbot/table.yml\nindex 68d47c0f..4ba60b0a 100644\n--- a/external/vpx-pinbot/table.yml\n+++ b/external/vpx-pinbot/table.yml\n@@ -1,10 +1,16 @@\n ---\n tableVPSId: \"u3bADyBV\"\n vpxVPSId: \"232sR2Et\"\n-vpxChecksum: \"BCBD1FE4718441E1D5E6C373F7A93392\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"BCBD1FE4718441E1D5E6C373F7A93392\"\n+  - \"2D02FF2ACC5D311B33907F47060DBBEE\"\n tableNotes: \"Download - 211309852_Pinbot(Williams1986)2.1.1VR.zip\"\n backglassBundled: true\n-backglassChecksum: \"5D5DDAAAFBBD2DC529AFA880702060DA\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"5D5DDAAAFBBD2DC529AFA880702060DA\"\n+  - \"2D02FF2ACC5D311B33907F47060DBBEE\"\n backglassNotes: \"Bundled with VPX\"\n backglassAuthorsOverride:\n   - \"bord\""}
@@ -58,7 +58,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinbot/table.ini", "diff": "diff --git a/external/vpx-pinbot/table.ini b/external/vpx-pinbot/table.ini\nindex f4d2e059..5d663c41 100755\n--- a/external/vpx-pinbot/table.ini\n+++ b/external/vpx-pinbot/table.ini\n@@ -4,22 +4,19 @@ OverrideTableEmissionScale = 1\n ScreenPlayerZ = 100.151230\n DynamicDayNight = 0\n EmissionScale = 0.200000\n-FXAA = 4\n-AAFactor = 0.80\n+ScreenPlayerY = 15.000641\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.227484\n-ViewCabScaleY = 1.122491\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.140501\n+ViewCabScaleY = 0.999685\n+ViewCabScaleZ = 0.877194\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -75.839287\n-ViewCabWindowTop = 370.541931\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 139.434845\n ViewCabWindowBot = 85.953217\n \n [Standalone]\n PinMAMEWindow = 0\n-;BackBufferScale = 0.355729\n-BackBufferScale = 0.416666\n-;B2SHideGrill = 0\n\\ No newline at end of file\n+BackBufferScale = 0.416666\n\\ No newline at end of file"},
@@ -142,7 +142,7 @@
       {
         "hash": "02b43f7847083019a89802e579af13e75f83d16c",
         "date": "2025-04-14 21:21:32 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add silentkat and mrandomeda as testers\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinbot/table.yml", "diff": "diff --git a/external/vpx-pinbot/table.yml b/external/vpx-pinbot/table.yml\nindex 3b3991ad..89f327e9 100644\n--- a/external/vpx-pinbot/table.yml\n+++ b/external/vpx-pinbot/table.yml\n@@ -14,5 +14,6 @@ tagline: \"I am in your control.\"\n testers:\n   - \"Boris\"\n   - \"Mox\"\n+  - \"Silentkat\"\n applyFixes:\n   - \"bass\""}
@@ -151,7 +151,7 @@
       {
         "hash": "a534edb36b1ab3d17c2097ba7c3691758cf5748b",
         "date": "2025-04-13 20:53:25 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update launchers for pinbot and BttF\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinbot/launcher.png"}
@@ -160,7 +160,7 @@
       {
         "hash": "5206d35135a06e86a7759aa70a48358abd885500",
         "date": "2025-04-13 13:21:00 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update nvram.nv\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinbot/nvram.nv"}
@@ -169,7 +169,7 @@
       {
         "hash": "841279552355eff7c304d2dba327bb3f200637a2",
         "date": "2025-04-12 17:34:56 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update bttf, add pinbot\n",
         "files": [
           {"status": "A", "path": "external/vpx-pinbot/nvram.nv"},
@@ -210,7 +210,7 @@
       {
         "hash": "9776660bfae084246e0e90975216fe27518fdb95",
         "date": "2025-03-31 16:11:19 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "YML Corrections\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinbot/table.yml", "diff": "diff --git a/external/vpx-pinbot/table.yml b/external/vpx-pinbot/table.yml\nindex 419b8808..3a68e6bd 100644\n--- a/external/vpx-pinbot/table.yml\n+++ b/external/vpx-pinbot/table.yml\n@@ -1,5 +1,5 @@\n ---\n-backglassVPSId: \"zMe-a1Py\"\n+backglassBundled: true\n backglassChecksum: \"5D5DDAAAFBBD2DC529AFA880702060DA\"\n backglassNotes: \"Bundled with VPX\"\n fps: 35"}
@@ -219,7 +219,7 @@
       {
         "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
         "date": "2025-03-30 19:40:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
         "files": [
           {"status": "A", "path": "external/vpx-pinbot/launcher.cfg", "diff": "diff --git a/external/vpx-pinbot/launcher.cfg b/external/vpx-pinbot/launcher.cfg\nnew file mode 100644\nindex 00000000..6dd3c75e\n--- /dev/null\n+++ b/external/vpx-pinbot/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+; dpadUp = \"Launch\"\n+; dpadDown = \"Down\"\n+dpadLeft = \"LUT Cycle\"\n+dpadRight = \"LUT Cycle\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start\"\n+; menu = \"Menu\"\n\\ No newline at end of file"},
@@ -288,7 +288,7 @@
       {
         "hash": "20f45aaba52e000537babbeaf94d20c5b24294e3",
         "date": "2024-08-03 14:29:47 -0400",
-        "author": "Paul Bobrowski",
+        "author": "Paul B.",
         "message": "Fixed Pin-Bot Table Preview\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinbot/README.md", "diff": "diff --git a/external/vpx-pinbot/README.md b/external/vpx-pinbot/README.md\nindex a7754705..88b28958 100644\n--- a/external/vpx-pinbot/README.md\n+++ b/external/vpx-pinbot/README.md\n@@ -1,6 +1,6 @@\n # Pin-Bot (Williams 1986)\n \n-![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=119620&id=18670&full=1)\n+![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_09/Capture2.thumb.PNG.13656e4f67d469e80e7276a00beb29d3.PNG)\n                  \n \n Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n"}
@@ -297,7 +297,7 @@
       {
         "hash": "711ed66f6fd4fa7cf799bbc5cfd94a82e34e9b2f",
         "date": "2024-08-03 14:27:00 -0400",
-        "author": "Paul Bobrowski",
+        "author": "Paul B.",
         "message": "hauntfreaks's Pin-Bot\n",
         "files": [
           {"status": "A", "path": "external/vpx-pinbot/PinBot (Williams 1986).ini", "diff": "diff --git a/external/vpx-pinbot/PinBot (Williams 1986).ini b/external/vpx-pinbot/PinBot (Williams 1986).ini\nnew file mode 100644\nindex 00000000..94dbc058\n--- /dev/null\n+++ b/external/vpx-pinbot/PinBot (Williams 1986).ini\t\n@@ -0,0 +1,16 @@\n+[Player]\n+BallTrail = 0\n+BallTrailStrength = 0.000000\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.879872\n+ViewCabScaleY = 1.037503\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 34.860031\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -340.000000\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},

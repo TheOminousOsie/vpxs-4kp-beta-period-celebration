@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-punchout/table.yml", "diff": "diff --git a/external/vpx-punchout/table.yml b/external/vpx-punchout/table.yml\nindex 6f32fc3b..61779d19 100644\n--- a/external/vpx-punchout/table.yml\n+++ b/external/vpx-punchout/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassBundled: true\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"EEB4E086541A2191E72F697F230F0625\"\n-  - \"E3B658527383221FD210CF66577A9B55\"\n+backglassChecksum: \"EEB4E086541A2191E72F697F230F0625\"\n backglassNotes: \"Included with table download\"\n backglassVPSId: \"sbt2phHYwJ\"\n fps: 60\n@@ -13,8 +10,5 @@ tagline: \"'Join the Nintendo Fun Club Today!, Mac.' -Doc\"\n testers:\n   - \"Wraith\"\n   - \"pointdablame\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"1C9336A49DF334F7CDCA841F73AB36A9\"\n-  - \"E3B658527383221FD210CF66577A9B55\"\n+vpxChecksum: \"1C9336A49DF334F7CDCA841F73AB36A9\"\n vpxVPSId: \"bpBAQLoWhQ\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-punchout/table.yml", "diff": "diff --git a/external/vpx-punchout/table.yml b/external/vpx-punchout/table.yml\nindex 61779d19..6f32fc3b 100644\n--- a/external/vpx-punchout/table.yml\n+++ b/external/vpx-punchout/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassBundled: true\n-backglassChecksum: \"EEB4E086541A2191E72F697F230F0625\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"EEB4E086541A2191E72F697F230F0625\"\n+  - \"E3B658527383221FD210CF66577A9B55\"\n backglassNotes: \"Included with table download\"\n backglassVPSId: \"sbt2phHYwJ\"\n fps: 60\n@@ -10,5 +13,8 @@ tagline: \"'Join the Nintendo Fun Club Today!, Mac.' -Doc\"\n testers:\n   - \"Wraith\"\n   - \"pointdablame\"\n-vpxChecksum: \"1C9336A49DF334F7CDCA841F73AB36A9\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"1C9336A49DF334F7CDCA841F73AB36A9\"\n+  - \"E3B658527383221FD210CF66577A9B55\"\n vpxVPSId: \"bpBAQLoWhQ\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-punchout/table.ini", "diff": "diff --git a/external/vpx-punchout/table.ini b/external/vpx-punchout/table.ini\nindex f55a270b..61ca3790 100644\n--- a/external/vpx-punchout/table.ini\n+++ b/external/vpx-punchout/table.ini\n@@ -8,7 +8,6 @@ ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n DynamicDayNight = 0\n EmissionScale = 0.404790\n-AAFactor = 2.000000\n \n [TableOverride]\n ViewCabMode = 2\n@@ -17,13 +16,10 @@ ViewCabScaleY = 1.109794\n ViewCabScaleZ = 1.043146\n ViewCabRotation = 180.000000\n ViewCabHOfs = -0.036200\n-ViewCabVOfs = -56.979324\n+ViewCabVOfs = 0\n ViewCabWindowTop = 333.050934\n ViewCabWindowBot = 213.090179\n ToneMapper = 0\n \n-[Standalone]\n-BackBufferScale = 0.416666\n-\n [TableOption]\n-VR Room = 0.000000\n\\ No newline at end of file\n+VR Room = 0.000000"},
@@ -41,7 +41,7 @@
       {
         "hash": "a839c0356362388a4b02e301f78252ec60b4e21c",
         "date": "2025-11-10 23:11:16 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Punch-Out wiz\n\nAdded Punch-Out (Original)\n",
         "files": [
           {"status": "M", "path": "external/vpx-punchout/table.yml", "diff": "diff --git a/external/vpx-punchout/table.yml b/external/vpx-punchout/table.yml\nindex c0934262..195cfced 100644\n--- a/external/vpx-punchout/table.yml\n+++ b/external/vpx-punchout/table.yml\n@@ -10,6 +10,7 @@ tableNotes: \"Download 'Punchout.zip'\"\n tableVPSId: \"bXI2RmDLDX\"\n tagline: \"'Join the Nintendo Fun Club Today!, Mac.' -Doc\"\n testers:\n-  - \"evilwraith\"\n+  - \"Wraith\"\n+  - \"pointdablame\"\n vpxChecksum: \"1C9336A49DF334F7CDCA841F73AB36A9\"\n vpxVPSId: \"bpBAQLoWhQ\"\n"}
@@ -50,7 +50,7 @@
       {
         "hash": "f553535b0269cffbb97bba6b47b86d9e159da61c",
         "date": "2025-11-09 19:31:41 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-punchout/table.yml", "diff": "diff --git a/external/vpx-punchout/table.yml b/external/vpx-punchout/table.yml\nindex 330ec3a6..c0934262 100644\n--- a/external/vpx-punchout/table.yml\n+++ b/external/vpx-punchout/table.yml\n@@ -6,7 +6,7 @@ backglassChecksum: \"EEB4E086541A2191E72F697F230F0625\"\n backglassNotes: \"Included with table download\"\n backglassVPSId: \"sbt2phHYwJ\"\n fps: 60\n-tableNotes: \"Download version 1.0.0\"\n+tableNotes: \"Download 'Punchout.zip'\"\n tableVPSId: \"bXI2RmDLDX\"\n tagline: \"'Join the Nintendo Fun Club Today!, Mac.' -Doc\"\n testers:\n"}
@@ -59,7 +59,7 @@
       {
         "hash": "cc96b6a67e3fea3e651c9d19c85382aaeafde7f8",
         "date": "2025-09-12 17:04:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-punchout/table.ini", "diff": "diff --git a/external/vpx-punchout/table.ini b/external/vpx-punchout/table.ini\nindex 43cb784f..f55a270b 100644\n--- a/external/vpx-punchout/table.ini\n+++ b/external/vpx-punchout/table.ini\n@@ -23,7 +23,7 @@ ViewCabWindowBot = 213.090179\n ToneMapper = 0\n \n [Standalone]\n-BackBufferScale = .416666\n+BackBufferScale = 0.416666\n \n [TableOption]\n VR Room = 0.000000\n\\ No newline at end of file\n"}
@@ -68,7 +68,7 @@
       {
         "hash": "57455ad203d41f578880c788468b87f839fca808",
         "date": "2025-08-14 22:44:13 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-punchout/table.yml", "diff": "diff --git a/external/vpx-punchout/table.yml b/external/vpx-punchout/table.yml\nindex 0c3215cb..330ec3a6 100644\n--- a/external/vpx-punchout/table.yml\n+++ b/external/vpx-punchout/table.yml\n@@ -1,16 +1,15 @@\n ---\n applyFixes:\n   - \"bass\"\n-backglassChecksum: \"27AEADB4F24CA77C9BF95A675AA36339\"\n-backglassNotes: \"Download the 7-digit version\"\n-backglassVPSId: \"O843tUTa5R\"\n-fps: 40\n-romChecksum: \"AFEB7DC9BE8D567F246CDC821ACEF15B\"\n-romNotes: \"Download hh7.zip\"\n-romUrlOverride: \"https://pinballnirvana.com/forums/resources/hh7.1934/\"\n-tableVPSId: \"q0RmE-GZ\"\n-tagline: \"'G-g-g-g-GHOSTS?!' - Scooby Doo and Shaggy\"\n+backglassBundled: true\n+backglassChecksum: \"EEB4E086541A2191E72F697F230F0625\"\n+backglassNotes: \"Included with table download\"\n+backglassVPSId: \"sbt2phHYwJ\"\n+fps: 60\n+tableNotes: \"Download version 1.0.0\"\n+tableVPSId: \"bXI2RmDLDX\"\n+tagline: \"'Join the Nintendo Fun Club Today!, Mac.' -Doc\"\n testers:\n   - \"evilwraith\"\n-vpxChecksum: \"6687FEFB8DF69CEFD80585A7C5454C79\"\n-vpxVPSId: \"TscqlNWDQz\"\n+vpxChecksum: \"1C9336A49DF334F7CDCA841F73AB36A9\"\n+vpxVPSId: \"bpBAQLoWhQ\"\n"}
@@ -77,7 +77,7 @@
       {
         "hash": "1106a3b02cd23273e7795228daed878fed024846",
         "date": "2025-08-14 22:30:54 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Art and ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-punchout/launcher.png"},
@@ -87,7 +87,7 @@
       {
         "hash": "f297ba4b4b56ab9830e53404d30947cd8a926bba",
         "date": "2025-08-13 17:10:53 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Create table.yml\n",
         "files": [
           {"status": "A", "path": "external/vpx-punchout/table.yml", "diff": "diff --git a/external/vpx-punchout/table.yml b/external/vpx-punchout/table.yml\nnew file mode 100644\nindex 00000000..0c3215cb\n--- /dev/null\n+++ b/external/vpx-punchout/table.yml\n@@ -0,0 +1,16 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassChecksum: \"27AEADB4F24CA77C9BF95A675AA36339\"\n+backglassNotes: \"Download the 7-digit version\"\n+backglassVPSId: \"O843tUTa5R\"\n+fps: 40\n+romChecksum: \"AFEB7DC9BE8D567F246CDC821ACEF15B\"\n+romNotes: \"Download hh7.zip\"\n+romUrlOverride: \"https://pinballnirvana.com/forums/resources/hh7.1934/\"\n+tableVPSId: \"q0RmE-GZ\"\n+tagline: \"'G-g-g-g-GHOSTS?!' - Scooby Doo and Shaggy\"\n+testers:\n+  - \"evilwraith\"\n+vpxChecksum: \"6687FEFB8DF69CEFD80585A7C5454C79\"\n+vpxVPSId: \"TscqlNWDQz\"\n"}

@@ -4,7 +4,7 @@
       {
         "hash": "adc7e99d6dda2f92dfe2b4b67f06aa6360857258",
         "date": "2026-09-07 15:23:09 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update launcher.png\n",
         "files": [
           {"status": "M", "path": "external/vpx-lostinspacecomic/launcher.png"}
@@ -13,7 +13,7 @@
       {
         "hash": "d4cfc0a530433929e8a8f5c2f528105ea327a4fb",
         "date": "2026-08-28 01:50:58 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Lost In Space Comic Ed\n",
         "files": [
           {"status": "A", "path": "external/vpx-lostinspacecomic/README.md", "diff": "diff --git a/external/vpx-lostinspacecomic/README.md b/external/vpx-lostinspacecomic/README.md\nnew file mode 100644\nindex 00000000..fa06366f\n--- /dev/null\n+++ b/external/vpx-lostinspacecomic/README.md\n@@ -0,0 +1,62 @@\n+# Lost In Space Comic Book Edition (Sega 1998)\n+\n+![Table Preview](../../images/40Ne76_8Jn-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Wraith\n+  - Bla1ze\n+  - Missile Toad\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Lost In Space Comic Book Edition (Sega 1998)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},

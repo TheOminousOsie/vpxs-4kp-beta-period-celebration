@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-blackknight2000/table.yml", "diff": "diff --git a/external/vpx-blackknight2000/table.yml b/external/vpx-blackknight2000/table.yml\nindex 4a5abc6d..debce91d 100644\n--- a/external/vpx-blackknight2000/table.yml\n+++ b/external/vpx-blackknight2000/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"Z5IzqK_u18\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"E70BB80C3897A1A5A952B6CB427C973C\"\n-  - \"9086E59144D70D78DCAAC47BFE9BC5F7\"\n+backglassChecksum: \"E70BB80C3897A1A5A952B6CB427C973C\"\n backglassNotes: \"Download Version 1.0.0\"\n fps: 60\n romVPSId: \"0QsN8wFY\"\n@@ -16,7 +13,4 @@ testers:\n   - \"Boris\"\n   - \"Mox\"\n vpxVPSId: \"RcPhgFiL1b\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"F483CFE702AD17FC42CFFC589037E82E\"\n-  - \"8AA56CDB3E4E48F96C60F6E92532253B\"\n+vpxChecksum: \"F483CFE702AD17FC42CFFC589037E82E\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-blackknight2000/table.yml", "diff": "diff --git a/external/vpx-blackknight2000/table.yml b/external/vpx-blackknight2000/table.yml\nindex debce91d..4a5abc6d 100644\n--- a/external/vpx-blackknight2000/table.yml\n+++ b/external/vpx-blackknight2000/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"Z5IzqK_u18\"\n-backglassChecksum: \"E70BB80C3897A1A5A952B6CB427C973C\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"E70BB80C3897A1A5A952B6CB427C973C\"\n+  - \"9086E59144D70D78DCAAC47BFE9BC5F7\"\n backglassNotes: \"Download Version 1.0.0\"\n fps: 60\n romVPSId: \"0QsN8wFY\"\n@@ -13,4 +16,7 @@ testers:\n   - \"Boris\"\n   - \"Mox\"\n vpxVPSId: \"RcPhgFiL1b\"\n-vpxChecksum: \"F483CFE702AD17FC42CFFC589037E82E\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"F483CFE702AD17FC42CFFC589037E82E\"\n+  - \"8AA56CDB3E4E48F96C60F6E92532253B\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-blackknight2000/table.ini", "diff": "diff --git a/external/vpx-blackknight2000/table.ini b/external/vpx-blackknight2000/table.ini\nindex 3664b9d2..4e71c699 100755\n--- a/external/vpx-blackknight2000/table.ini\n+++ b/external/vpx-blackknight2000/table.ini\n@@ -1,32 +1,20 @@\n-[Player]\n-BallTrailStrength = 0.388235\n-AlphaRampAccuracy = 10\n-OverrideTableEmissionScale = 1\n-ScreenPlayerY = 16.461496\n-ScreenPlayerZ = 110.351852\n-DynamicDayNight = 0\n-EmissionScale = 0.305220\n-ScreenWidth = 0.000000\n-ScreenHeight = 0.000000\n-ScreenInclination = 0.000000\n-\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.087881\n-ViewCabScaleY = 1.064506\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.208857\n+ViewCabScaleY = 1.000471\n+ViewCabScaleZ = 0.935964\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 1.516600\n-ViewCabVOfs = -24.594873\n-ViewCabWindowTop = 370.541931\n+ViewCabHOfs = 0.014300\n+ViewCabVOfs = 0.009526\n+ViewCabWindowTop = 263.778900\n ViewCabWindowBot = 90.953217\n \n [Standalone]\n PinMAMEWindow = 0\n-BackBufferScale = 0.416666\n-B2SHideGrill = 0\n-; Remove to stretch backglass\n-B2SBackglassX              = 5200\n-B2SBackglassWidth          = 1600\n-B2SBackglassHeight         = 1080\n+B2SHideGrill = 1\n \n+[Player]\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.502925\n+ScreenPlayerY = 20.046047\n\\ No newline at end of file"},
@@ -86,7 +86,7 @@
       {
         "hash": "2f9b357a84cf3a1bfb816516545f8a185c6006c1",
         "date": "2025-04-12 20:29:24 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-blackknight2000/table.ini", "diff": "diff --git a/external/vpx-blackknight2000/table.ini b/external/vpx-blackknight2000/table.ini\nindex 0aa374ce..3664b9d2 100755\n--- a/external/vpx-blackknight2000/table.ini\n+++ b/external/vpx-blackknight2000/table.ini\n@@ -9,9 +9,6 @@ EmissionScale = 0.305220\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n-JoyLMagnaSave = 14\n-JoyRMagnaSave = 15\n-MaxTexDimension = 2048\n \n [TableOverride]\n ViewCabMode = 2\n"}
@@ -113,7 +113,7 @@
       {
         "hash": "13ac5a172b2ad463ad684078d5e81029119f61e4",
         "date": "2025-04-06 09:03:01 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-blackknight2000/table.yml", "diff": "diff --git a/external/vpx-blackknight2000/table.yml b/external/vpx-blackknight2000/table.yml\nindex 0019ef0b..bf9526d9 100644\n--- a/external/vpx-blackknight2000/table.yml\n+++ b/external/vpx-blackknight2000/table.yml\n@@ -16,4 +16,3 @@ vpxVPSId: \"RcPhgFiL1b\"\n vpxChecksum: \"F483CFE702AD17FC42CFFC589037E82E\"\n applyFixes:\n   - \"bass\"\n-  \n\\ No newline at end of file\n"}
@@ -122,7 +122,7 @@
       {
         "hash": "1416ca8a5154dc3a717a0bbef08bc63bfbc0d5f0",
         "date": "2025-04-06 08:59:35 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add end line to ymls\n",
         "files": [
           {"status": "M", "path": "external/vpx-blackknight2000/table.yml", "diff": "diff --git a/external/vpx-blackknight2000/table.yml b/external/vpx-blackknight2000/table.yml\nindex f85d908a..0019ef0b 100644\n--- a/external/vpx-blackknight2000/table.yml\n+++ b/external/vpx-blackknight2000/table.yml\n@@ -15,4 +15,5 @@ testers:\n vpxVPSId: \"RcPhgFiL1b\"\n vpxChecksum: \"F483CFE702AD17FC42CFFC589037E82E\"\n applyFixes:\n-  - \"bass\"\n\\ No newline at end of file\n+  - \"bass\"\n+  \n\\ No newline at end of file"}
@@ -131,7 +131,7 @@
       {
         "hash": "334afa006d4e7903ddfca3b0e9a27d65f41ce0ea",
         "date": "2025-04-06 08:49:08 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update BBS to meet syntax requirement.\n",
         "files": [
           {"status": "M", "path": "external/vpx-blackknight2000/table.ini", "diff": "diff --git a/external/vpx-blackknight2000/table.ini b/external/vpx-blackknight2000/table.ini\nindex 822cd8fe..0aa374ce 100755\n--- a/external/vpx-blackknight2000/table.ini\n+++ b/external/vpx-blackknight2000/table.ini\n@@ -26,7 +26,7 @@ ViewCabWindowBot = 90.953217\n \n [Standalone]\n PinMAMEWindow = 0\n-BackBufferScale = .416666\n+BackBufferScale = 0.416666\n B2SHideGrill = 0\n ; Remove to stretch backglass\n B2SBackglassX              = 5200"}
@@ -140,7 +140,7 @@
       {
         "hash": "acc65acf21f6bbb6a2439fbe68600afce979bfaf",
         "date": "2025-04-05 22:24:44 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add Bla1ze as tester\n",
         "files": [
           {"status": "M", "path": "external/vpx-blackknight2000/table.yml", "diff": "diff --git a/external/vpx-blackknight2000/table.yml b/external/vpx-blackknight2000/table.yml\nindex 6b4734dc..f85d908a 100644\n--- a/external/vpx-blackknight2000/table.yml\n+++ b/external/vpx-blackknight2000/table.yml\n@@ -9,6 +9,7 @@ romNotes: \"Download - bk2k_l4.zip\"\n tableVPSId: \"8ND2ag4u\"\n tagline: \"Get your revenge on the black knight that mocks you.\"\n testers:\n+  - \"Bla1ze\"\n   - \"Boris\"\n   - \"Mox\"\n vpxVPSId: \"RcPhgFiL1b\""}
@@ -149,7 +149,7 @@
       {
         "hash": "8a5d2b31b4b8c85d8dd3c01c5048bc434b123d35",
         "date": "2025-04-05 18:40:23 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update Wave 2 tables, Add Who Dunnit\n",
         "files": [
           {"status": "M", "path": "external/vpx-blackknight2000/launcher.png"}
@@ -158,7 +158,7 @@
       {
         "hash": "9190f02428d956f9d47046b947711551614978d1",
         "date": "2025-04-04 13:43:54 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update ymls for BOP and BK2K\n",
         "files": [
           {"status": "M", "path": "external/vpx-blackknight2000/table.yml", "diff": "diff --git a/external/vpx-blackknight2000/table.yml b/external/vpx-blackknight2000/table.yml\nindex 05c75935..6b4734dc 100644\n--- a/external/vpx-blackknight2000/table.yml\n+++ b/external/vpx-blackknight2000/table.yml\n@@ -1,6 +1,6 @@\n ---\n backglassVPSId: \"T94CG3gI\"\n-backglassChecksum: \"49641FAFAFB0E914B34F1D21D14C93A1\"\n+backglassChecksum: \"1824744a5e698aaead6fe4245526c6e8\"\n backglassNotes: \"Download - Black Knight 2000 (Williams 1989)2scr.rar\"\n fps: 48\n romVPSId: \"0QsN8wFY\""}
@@ -167,7 +167,7 @@
       {
         "hash": "c0a2c02fe0d4879379225d8db791dfc65590b808",
         "date": "2025-04-03 20:58:01 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update BK2K, Young Frankenstein, Bride of Pin*Bot\n\nDMD images, settings, some table files, add ymls, update FPS in Readme\n",
         "files": [
           {"status": "A", "path": "external/vpx-blackknight2000/dmd.png"},
@@ -189,7 +189,7 @@
       {
         "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
         "date": "2025-03-30 19:40:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
         "files": [
           {"status": "A", "path": "external/vpx-blackknight2000/table.yml", "diff": "diff --git a/external/vpx-blackknight2000/table.yml b/external/vpx-blackknight2000/table.yml\nnew file mode 100644\nindex 00000000..047e5351\n--- /dev/null\n+++ b/external/vpx-blackknight2000/table.yml\n@@ -0,0 +1,16 @@\n+---\n+backglassVPSId: \"T94CG3gI\"\n+backglassChecksum: \"49641FAFAFB0E914B34F1D21D14C93A1\"\n+backglassNotes: \"Download - Black Knight 2000 (Williams 1989)3scr.rar\"\n+fps: 45\n+romVPSId: \"0QsN8wFY\"\n+romChecksum: \"7F3FD5B860266AE4CE594A5F6C08ACB3\"\n+romNotes: \"Download - bk2k_l4.zip\"\n+tableVPSId: \"8ND2ag4u\"\n+tagline: \"Get your revenge on the black knight that mocks you.\"\n+testers:\n+  - \"Mox\"\n+vpxVPSId: \"RcPhgFiL1b\"\n+vpxChecksum: \"F483CFE702AD17FC42CFFC589037E82E\"\n+applyFixes:\n+  - \"bass\"\n\\ No newline at end of file"},
@@ -223,7 +223,7 @@
       {
         "hash": "61ddb955a1e2052e2ac4be1472de7710585ed99b",
         "date": "2025-03-07 12:30:50 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add launcher configs to multiple tables\n\nHumpty Dumpty > Right, Release ball\nAlice in Wonderland  > Right, Release ball\nThe Shadow > Right, Toggle ramps\nAttack From Mars > Up, Launcher\nT2 > Up, Launcher\nWWE Royal Rumble > Left, Right, Mag Saves (I think)\nJohnny Mnemonic >left and right change table colors. (Sorry don't know what the effect is called )\nWCS - Left is magnasave\nBlack Knight 2000 > Right, mag save\nBlack Knight: L/R nudge = L/R magna save\nBlack Knight 2000: L/R nudge = L/R magna save\nViper: L nudge = viper reverse, R nudge = viper strike\nMedusa: R nudge = shield post\n",
         "files": [
           {"status": "A", "path": "external/vpx-blackknight2000/launcher.cfg", "diff": "diff --git a/external/vpx-blackknight2000/launcher.cfg b/external/vpx-blackknight2000/launcher.cfg\nnew file mode 100644\nindex 00000000..2c72e0d1\n--- /dev/null\n+++ b/external/vpx-blackknight2000/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+; dpadUp = \"Launch\"\n+; dpadDown = \"Down\"\n+dpadLeft = \"Magnasave\"\n+dpadRight = \"Magnasave\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start\"\n+; menu = \"Menu\"\n\\ No newline at end of file"}
@@ -241,7 +241,7 @@
       {
         "hash": "5c44016a64e3af8b5fe4e4b46467554e062063c1",
         "date": "2025-01-20 21:46:32 -0600",
-        "author": "James Rainaldi",
+        "author": "James R.",
         "message": "chore: updated vpx-blackknight2000 docs\n",
         "files": [
           {"status": "M", "path": "external/vpx-blackknight2000/README.md", "diff": "diff --git a/external/vpx-blackknight2000/README.md b/external/vpx-blackknight2000/README.md\nindex 0fdf9b1d..a1eb6797 100644\n--- a/external/vpx-blackknight2000/README.md\n+++ b/external/vpx-blackknight2000/README.md\n@@ -2,20 +2,18 @@\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2022_02/959094238_CabinetScreenCaptureBK2000.png.2bb02444049927491edbb9a40191927b.png)\n \n-Authors: [UnclePaulie](https://vpuniverse.com/profile/16685-unclepaulie/)\n-Version: 2.0.2\n-Download: [VPUniverse](https://vpuniverse.com/files/file/9054-black-knight-2000-williams-1989-w-vr-room/)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [VPUniverse](https://vpuniverse.com/files/file/9054-black-knight-2000-williams-1989-w-vr-room/) | 2.0.2 | [UnclePaulie](https://vpuniverse.com/profile/16685-unclepaulie/) |\n+| **B2S & DMD** | [VPUniverse](https://vpuniverse.com/files/file/8497-black-knight-2000-williams-1989/) | {version} | [Wildman](https://vpuniverse.com/profile/5-wildman/) |\n+| **ROM** | [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=925) | bk2k_l4.zip | |\n \n-Authors: [Wildman](https://vpuniverse.com/profile/5-wildman/)\n-Version: 2.0\n-Download: [VPUniverse](https://vpuniverse.com/files/file/8497-black-knight-2000-williams-1989/)\n+**Tested by:** \n \n-ROM\n-\n-Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=925)\n-ROM Name and version: bk2k_l4.zip\n+---\n \n ## Status \n \n@@ -24,12 +22,14 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 46 |\n \n+---\n+\n ## Instructions\n \n - Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-blackknight2000.elf\n+- Add your personalized launcher.elf and rename it to `vpx-blackknight2000.elf`\n - Download the table and directb2s versions listed above and copy them into this folder\n-- Make sure the vpx, direct2b, and ini files are all named the \"exact\" same\n-- Place bk2k_l4.zip in the external/vpx-blackknight2000/pinmame/roms folder *Do Not unzip*\n-- \"Get your revenge on the black knight that mocks you\"\n+- Make sure the `vpx`, `direct2b`, and `ini` files are all named the \"exact\" same\n+- Place `bk2k_l4.zip` in the `external/vpx-blackknight2000/pinmame/roms` folder *Do Not unzip*\n \n+> \"Get your revenge on the black knight that mocks you\"\n"}

@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-powerrangers/table.yml", "diff": "diff --git a/external/vpx-powerrangers/table.yml b/external/vpx-powerrangers/table.yml\nindex db1eb558..326c80b8 100644\n--- a/external/vpx-powerrangers/table.yml\n+++ b/external/vpx-powerrangers/table.yml\n@@ -2,10 +2,7 @@\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/65Ezy3Lk9m_1725356016568.webp\"\n backglassBundled: true\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"A64F71B8D34EFD8325C6D6087C83FAE4\"\n-  - \"E08009534CE1DE725CA3E741F7100833\"\n+backglassChecksum: \"A64F71B8D34EFD8325C6D6087C83FAE4\"\n backglassNotes: \"Included with table download\"\n fps: 60\n tableNotes: \"Download Version 1.2\"\n@@ -13,8 +10,5 @@ tableVPSId: \"9L3tkzCYrc\"\n tagline: \"It's Morphin Time!\"\n testers:\n   - \"Silentkat\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"87F768B071708050236A51955C32189A\"\n-  - \"E08009534CE1DE725CA3E741F7100833\"\n+vpxChecksum: \"87F768B071708050236A51955C32189A\"\n vpxVPSId: \"mgUCsU9tAl\""}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-powerrangers/table.yml", "diff": "diff --git a/external/vpx-powerrangers/table.yml b/external/vpx-powerrangers/table.yml\nindex ac71f5ec..db1eb558 100644\n--- a/external/vpx-powerrangers/table.yml\n+++ b/external/vpx-powerrangers/table.yml\n@@ -7,7 +7,7 @@ backglassChecksum:\n   - \"A64F71B8D34EFD8325C6D6087C83FAE4\"\n   - \"E08009534CE1DE725CA3E741F7100833\"\n backglassNotes: \"Included with table download\"\n-fps: 45\n+fps: 60\n tableNotes: \"Download Version 1.2\"\n tableVPSId: \"9L3tkzCYrc\"\n tagline: \"It's Morphin Time!\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-powerrangers/table.yml", "diff": "diff --git a/external/vpx-powerrangers/table.yml b/external/vpx-powerrangers/table.yml\nindex 5f8a4377..ac71f5ec 100644\n--- a/external/vpx-powerrangers/table.yml\n+++ b/external/vpx-powerrangers/table.yml\n@@ -2,7 +2,10 @@\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/65Ezy3Lk9m_1725356016568.webp\"\n backglassBundled: true\n-backglassChecksum: \"A64F71B8D34EFD8325C6D6087C83FAE4\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"A64F71B8D34EFD8325C6D6087C83FAE4\"\n+  - \"E08009534CE1DE725CA3E741F7100833\"\n backglassNotes: \"Included with table download\"\n fps: 45\n tableNotes: \"Download Version 1.2\"\n@@ -10,5 +13,8 @@ tableVPSId: \"9L3tkzCYrc\"\n tagline: \"It's Morphin Time!\"\n testers:\n   - \"Silentkat\"\n-vpxChecksum: \"87F768B071708050236A51955C32189A\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"87F768B071708050236A51955C32189A\"\n+  - \"E08009534CE1DE725CA3E741F7100833\"\n vpxVPSId: \"mgUCsU9tAl\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-powerrangers/table.ini", "diff": "diff --git a/external/vpx-powerrangers/table.ini b/external/vpx-powerrangers/table.ini\nindex 40388a94..616de63f 100644\n--- a/external/vpx-powerrangers/table.ini\n+++ b/external/vpx-powerrangers/table.ini\n@@ -2,19 +2,19 @@\n BallTrailStrength = 0.392157\n AlphaRampAccuracy = 10\n OverrideTableEmissionScale = 1\n-ScreenPlayerZ = 90.750557\n+ScreenPlayerZ = 99.951866\n DynamicDayNight = 0\n EmissionScale = 0.398815\n ScreenPlayerX = 0.007150\n-ScreenPlayerY = 26.195948\n+ScreenPlayerY = 20.028307\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.239788\n-ViewCabScaleY = 0.922977\n-ViewCabScaleZ = 0.564672\n+ViewCabScaleX = 1.225887\n+ViewCabScaleY = 0.999629\n+ViewCabScaleZ = 0.564619\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = 67.631577\n-ViewCabWindowTop = 231.512085\n-ViewCabWindowBot = 0.655217\n\\ No newline at end of file\n+ViewCabVOfs = 0.012371\n+ViewCabWindowTop = 411.227173\n+ViewCabWindowBot = 113.451363\n\\ No newline at end of file"},

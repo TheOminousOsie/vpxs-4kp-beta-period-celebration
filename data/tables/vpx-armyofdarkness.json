@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-armyofdarkness/table.yml", "diff": "diff --git a/external/vpx-armyofdarkness/table.yml b/external/vpx-armyofdarkness/table.yml\nindex 411ebd76..e7770a4d 100644\n--- a/external/vpx-armyofdarkness/table.yml\n+++ b/external/vpx-armyofdarkness/table.yml\n@@ -12,7 +12,4 @@ testers:\n   - \"Mox\"\n   - \"OminousOsie\"\n vpxVPSId: \"Cul9IFTa\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"BB1764E5F275085331CAA8FB9E01647D\"\n-  - \"E5E6BA3C06DE2D5CF6ACBAF9866CBA40\"\n+vpxChecksum: \"BB1764E5F275085331CAA8FB9E01647D\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-armyofdarkness/table.yml", "diff": "diff --git a/external/vpx-armyofdarkness/table.yml b/external/vpx-armyofdarkness/table.yml\nindex e7770a4d..411ebd76 100644\n--- a/external/vpx-armyofdarkness/table.yml\n+++ b/external/vpx-armyofdarkness/table.yml\n@@ -12,4 +12,7 @@ testers:\n   - \"Mox\"\n   - \"OminousOsie\"\n vpxVPSId: \"Cul9IFTa\"\n-vpxChecksum: \"BB1764E5F275085331CAA8FB9E01647D\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"BB1764E5F275085331CAA8FB9E01647D\"\n+  - \"E5E6BA3C06DE2D5CF6ACBAF9866CBA40\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-armyofdarkness/table.ini", "diff": "diff --git a/external/vpx-armyofdarkness/table.ini b/external/vpx-armyofdarkness/table.ini\nindex d71475ad..48d756f8 100644\n--- a/external/vpx-armyofdarkness/table.ini\n+++ b/external/vpx-armyofdarkness/table.ini\n@@ -1,16 +1,19 @@\n [Player]\n BallTrailStrength = 0.490196\n-OverrideTableEmissionScale = 0\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.199720\n+ScreenPlayerX = 0.043350\n+ScreenPlayerY = 15.018049\n+ScreenPlayerZ = 90.008926\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.874860\n-ViewCabScaleY = 1.074644\n-ViewCabScaleZ = 0.905442\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -64.147003\n-ViewCabPlayerY = -3.339000\n-ViewCabPlayerZ = -500.740082\n-ViewCabLookAt = 9.013901\n-ViewCabFOV = 9.973420\n-ViewCabLayback = 58.549416\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.161713\n+ViewCabScaleY = 0.995696\n+ViewCabScaleZ = 0.663628\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.041922\n+ViewCabWindowTop = 264.639923\n+ViewCabWindowBot = 42.445274\n\\ No newline at end of file"},
@@ -32,7 +32,7 @@
       {
         "hash": "acd2eaaa87089abf66db030e3cab06a43f15971d",
         "date": "2025-11-26 23:17:21 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n\nupdated vpsid for backglass\n",
         "files": [
           {"status": "M", "path": "external/vpx-armyofdarkness/table.yml", "diff": "diff --git a/external/vpx-armyofdarkness/table.yml b/external/vpx-armyofdarkness/table.yml\nindex f2e6eb61..f0e5ebb0 100644\n--- a/external/vpx-armyofdarkness/table.yml\n+++ b/external/vpx-armyofdarkness/table.yml\n@@ -1,9 +1,7 @@\n ---\n-backglassVPSId: \"Cul9IFTa\"\n+backglassVPSId: \"ElxKcuOiQO\"\n backglassChecksum: \"5F19C8BBA5C228D1B413DA64E2D5BDDD\"\n backglassNotes: \"Download 'evil dead 3-2S.directb2s'\"\n-backglassUrlOverride: >-\n-  \"https://vpuniverse.com/files/file/16658-evil-dead-3-original-2020-animated-b2s-for-full-dmd-2-screens\"\n fps: 56\n tableVPSId: \"L2nBui8x\"\n tagline: >-\n"}
@@ -41,7 +41,7 @@
       {
         "hash": "8d4207ecc1b77460d52c2c7be77d0e9f10312f0b",
         "date": "2025-11-24 18:26:09 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "2 more\n\nArmy of Darkness: Updated backglass to working version\nDoctor Who: updated Serum version\n",
         "files": [
           {"status": "M", "path": "external/vpx-armyofdarkness/table.yml", "diff": "diff --git a/external/vpx-armyofdarkness/table.yml b/external/vpx-armyofdarkness/table.yml\nindex a8cb1d35..f2e6eb61 100644\n--- a/external/vpx-armyofdarkness/table.yml\n+++ b/external/vpx-armyofdarkness/table.yml\n@@ -1,6 +1,6 @@\n ---\n backglassVPSId: \"Cul9IFTa\"\n-backglassChecksum: \"5CD828805675257AE5F63683215D6622\"\n+backglassChecksum: \"5F19C8BBA5C228D1B413DA64E2D5BDDD\"\n backglassNotes: \"Download 'evil dead 3-2S.directb2s'\"\n backglassUrlOverride: >-\n   \"https://vpuniverse.com/files/file/16658-evil-dead-3-original-2020-animated-b2s-for-full-dmd-2-screens\""}
@@ -50,7 +50,7 @@
       {
         "hash": "b12b8d82ebb464ca21e9ee845049afec5e2b0671",
         "date": "2025-11-24 17:36:53 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Army of Darkness b2s fix\n\nBundled backglass is broken\n",
         "files": [
           {"status": "M", "path": "external/vpx-armyofdarkness/table.yml", "diff": "diff --git a/external/vpx-armyofdarkness/table.yml b/external/vpx-armyofdarkness/table.yml\nindex acbe37cd..a8cb1d35 100644\n--- a/external/vpx-armyofdarkness/table.yml\n+++ b/external/vpx-armyofdarkness/table.yml\n@@ -1,9 +1,10 @@\n ---\n backglassVPSId: \"Cul9IFTa\"\n backglassChecksum: \"5CD828805675257AE5F63683215D6622\"\n-backglassNotes: \"Bundled with VPX\"\n-backglassBundled: true\n-fps: 50\n+backglassNotes: \"Download 'evil dead 3-2S.directb2s'\"\n+backglassUrlOverride: >-\n+  \"https://vpuniverse.com/files/file/16658-evil-dead-3-original-2020-animated-b2s-for-full-dmd-2-screens\"\n+fps: 56\n tableVPSId: \"L2nBui8x\"\n tagline: >-\n   \"Look, maybe I didn't say every single little tiny\n"}
@@ -124,7 +124,7 @@
       {
         "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
         "date": "2025-03-30 19:40:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
         "files": [
           {"status": "A", "path": "external/vpx-armyofdarkness/dmd.png"},
@@ -136,7 +136,7 @@
       {
         "hash": "c39b72d777813f034464622e74569d472b437b43",
         "date": "2025-03-20 00:43:11 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Additional README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-armyofdarkness/README.md", "diff": "diff --git a/external/vpx-armyofdarkness/README.md b/external/vpx-armyofdarkness/README.md\nindex cabad450..6dca9866 100644\n--- a/external/vpx-armyofdarkness/README.md\n+++ b/external/vpx-armyofdarkness/README.md\n@@ -2,35 +2,37 @@\n \n ![Table Preview](../../images/vpx-evil-dead-3-army-of-darkness-preview.png)\n \n-Author: [ivantba](https://www.vpforums.org/index.php?showuser=123858)  \n-Filename:  Evil Dead 3 Army of Darkness (TBA 2020).rar \n-VPX Version: (Version 1.0) Evil Dead 3 Army of Darkness (TBA 2020).vpx  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=14777)\n+---\n \n-DirectB2S is included with Table Zip  \n-Version: Evil Dead 3 Army of Darkness (TBA 2020).directb2s\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=14777) | 1.0 | [ivantba](https://www.vpforums.org/index.php?showuser=123858) |\n+| B2S | Included with VPX | N/A | N/A |\n+| DMD | N/A | N/A | N/A |\n+| ROM | N/A | N/A | N/A |\n \n-No ROM Needed For Table\n-  \n-Music: Evil Dead 3 Army of Darkness (TBA 2020).mp3\n-Included in download in Media pack (for PinballX) --> Visual Pinball\n+**Tested by:** [T3chZombie]\n \n-Tested and Fixed by:\n-[TechZombie]\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1983-b84441e\n-\n+**Minimum VPX Standalone build:** 10.8.0-1983-b84441e\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 52 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-armyofdarkness.elf\n - Download the table and directb2s zips above, extract and copy into /external/vpx-armyofdarkness\n-- Open Media pack (for PinballX) --> Visual Pinball, place (Evil Dead 3 Army of Darkness (TBA 2020).mp3) file in vpx-armyofdarkness/music\n - Make sure (.vpx), (.directb2s), (.vbs) and (.ini) files are all named the same\n - Ash - \"Hail to the King Baby!\"\n+\n+## Notes\n+- Music: Included with VPX\n+- Open `Media pack (for PinballX)` --> `Visual Pinball` --> `Table Audio`\n+- Create `Music` folder in `\\vpx-armyofdarkness` \n+- Place `Evil Dead 3 Army of Darkness (TBA 2020).mp3` in `vpx-armyofdarkness\\Music\\`\n\\ No newline at end of file"}

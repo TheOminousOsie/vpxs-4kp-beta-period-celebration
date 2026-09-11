@@ -13,7 +13,7 @@
       {
         "hash": "4a02ebc321763607047eeb2ac122432348f2226b",
         "date": "2026-07-18 00:40:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "final updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-theshadow/table.yml", "diff": "diff --git a/external/vpx-theshadow/table.yml b/external/vpx-theshadow/table.yml\nindex 86dd552a..0b9677bf 100644\n--- a/external/vpx-theshadow/table.yml\n+++ b/external/vpx-theshadow/table.yml\n@@ -1,15 +1,19 @@\n ---\n-backglassVPSId: \"im4smVVWf8\"\n backglassChecksum: \"E13892B26A5369004C2170B50704A02D\"\n backglassNotes: \"Download 'The Shadow (Bally 1994).zip'\"\n+backglassVPSId: \"im4smVVWf8\"\n+coloredROMChecksum:\n+  - \"8c44e8ec3bef740be87cc676ae5b94ba\"\n+  - \"69da1ad8bd999b0fc1fc806cd43f4c6b\"\n+coloredROMPin2DMD: true\n+coloredROMVPSId: \"_QCM1Pjq\"\n fps: 60\n-romVPSId: \"M2gmnny1\"\n romChecksum: \"61E34D56CB2D16E9A686081F582462BB\"\n+romVPSId: \"M2gmnny1\"\n+tableNotes: \"Download version 1.0\"\n tableVPSId: \"bzDWLumS\"\n-tagline: >-\n-  \"I'll be there... around every corner... in every empty room... as inevitable as your guilty conscience.\"\n+tagline: \"'I'll be there... around every corner... in every empty room... as inevitable as your guilty conscience.'\"\n testers:\n   - \"OminousOsie\"\n-vpxVPSId: \"6QyE3RLTxv\"\n vpxChecksum: \"BBF4A160080F479C2FBAA9E9D9301AF4\"\n-tableNotes: \"Download version 1.0\"\n+vpxVPSId: \"6QyE3RLTxv\""}
@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-theshadow/table.yml", "diff": "diff --git a/external/vpx-theshadow/table.yml b/external/vpx-theshadow/table.yml\nindex 0648bbba..86dd552a 100644\n--- a/external/vpx-theshadow/table.yml\n+++ b/external/vpx-theshadow/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"im4smVVWf8\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"E13892B26A5369004C2170B50704A02D\"\n-  - \"A31EFC53DC89947C2978824CC809A296\"\n+backglassChecksum: \"E13892B26A5369004C2170B50704A02D\"\n backglassNotes: \"Download 'The Shadow (Bally 1994).zip'\"\n fps: 60\n romVPSId: \"M2gmnny1\"\n@@ -14,8 +11,5 @@ tagline: >-\n testers:\n   - \"OminousOsie\"\n vpxVPSId: \"6QyE3RLTxv\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"BBF4A160080F479C2FBAA9E9D9301AF4\"\n-  - \"7892B1569D2499D1CEC7EB7B092BC388\"\n+vpxChecksum: \"BBF4A160080F479C2FBAA9E9D9301AF4\"\n tableNotes: \"Download version 1.0\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-theshadow/table.yml", "diff": "diff --git a/external/vpx-theshadow/table.yml b/external/vpx-theshadow/table.yml\nindex 86dd552a..0648bbba 100644\n--- a/external/vpx-theshadow/table.yml\n+++ b/external/vpx-theshadow/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"im4smVVWf8\"\n-backglassChecksum: \"E13892B26A5369004C2170B50704A02D\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"E13892B26A5369004C2170B50704A02D\"\n+  - \"A31EFC53DC89947C2978824CC809A296\"\n backglassNotes: \"Download 'The Shadow (Bally 1994).zip'\"\n fps: 60\n romVPSId: \"M2gmnny1\"\n@@ -11,5 +14,8 @@ tagline: >-\n testers:\n   - \"OminousOsie\"\n vpxVPSId: \"6QyE3RLTxv\"\n-vpxChecksum: \"BBF4A160080F479C2FBAA9E9D9301AF4\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"BBF4A160080F479C2FBAA9E9D9301AF4\"\n+  - \"7892B1569D2499D1CEC7EB7B092BC388\"\n tableNotes: \"Download version 1.0\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-theshadow/table.ini", "diff": "diff --git a/external/vpx-theshadow/table.ini b/external/vpx-theshadow/table.ini\nindex 4b96019a..fc1bdb6a 100644\n--- a/external/vpx-theshadow/table.ini\n+++ b/external/vpx-theshadow/table.ini\n@@ -4,7 +4,6 @@ PinMAMEWindowY = 0\n PinMAMEWindowWidth = 1200\n PinMAMEWindowHeight = 380\n PinMAMEWindowRotation = 1\n-WindowRenderMode = 0\n \n \n [TableOverride]\n@@ -14,7 +13,7 @@ ViewCabScaleY = 1.083097\n ViewCabScaleZ = 1.013696\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -62.545113\n+ViewCabVOfs = 0\n ViewCabWindowTop = 385.658081\n ViewCabWindowBot = 121.391235\n ToneMapper = 0\n@@ -32,4 +31,4 @@ ScreenInclination = 0.000000\n JoyLTiltKey = 8\n JoyRTiltKey = 9\n JoyLMagnaSave = 14\n-JoyRMagnaSave = 15\n\\ No newline at end of file\n+JoyRMagnaSave = 15"},
@@ -140,7 +140,7 @@
       {
         "hash": "61ddb955a1e2052e2ac4be1472de7710585ed99b",
         "date": "2025-03-07 12:30:50 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add launcher configs to multiple tables\n\nHumpty Dumpty > Right, Release ball\nAlice in Wonderland  > Right, Release ball\nThe Shadow > Right, Toggle ramps\nAttack From Mars > Up, Launcher\nT2 > Up, Launcher\nWWE Royal Rumble > Left, Right, Mag Saves (I think)\nJohnny Mnemonic >left and right change table colors. (Sorry don't know what the effect is called )\nWCS - Left is magnasave\nBlack Knight 2000 > Right, mag save\nBlack Knight: L/R nudge = L/R magna save\nBlack Knight 2000: L/R nudge = L/R magna save\nViper: L nudge = viper reverse, R nudge = viper strike\nMedusa: R nudge = shield post\n",
         "files": [
           {"status": "A", "path": "external/vpx-theshadow/launcher.cfg", "diff": "diff --git a/external/vpx-theshadow/launcher.cfg b/external/vpx-theshadow/launcher.cfg\nnew file mode 100644\nindex 00000000..46edf463\n--- /dev/null\n+++ b/external/vpx-theshadow/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+; dpadUp = \"Up\"\n+; dpadDown = \"Down\"\n+; dpadLeft = \"Left\"\n+dpadRight = \"Toggle Ramps\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start\"\n+; menu = \"Menu\"\n\\ No newline at end of file"}
@@ -149,7 +149,7 @@
       {
         "hash": "0d7884f9e506dfac744e5503c1efe866415f1461",
         "date": "2025-01-20 11:30:52 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update multiple xmls\n\nUpdates XML files to properly alphabetize table names.\n",
         "files": [
           {"status": "M", "path": "external/vpx-theshadow/vpx-theshadow.xml", "diff": "diff --git a/external/vpx-theshadow/vpx-theshadow.xml b/external/vpx-theshadow/vpx-theshadow.xml\nindex 0818bb27..f9e45de3 100644\n--- a/external/vpx-theshadow/vpx-theshadow.xml\n+++ b/external/vpx-theshadow/vpx-theshadow.xml\n@@ -1,3 +1,3 @@\n <root>\n-        <name>The Shadow</name>\n+        <name>Shadow, The (Bally 1994)</name>\n </root>"}
@@ -167,7 +167,7 @@
       {
         "hash": "2000e2282bdddf0706cd55c9dad2f457b4d09d5c",
         "date": "2025-01-19 14:23:54 -0600",
-        "author": "James Rainaldi",
+        "author": "James R.",
         "message": "chore: update vpx-theshadow docs\n",
         "files": [
           {"status": "M", "path": "external/vpx-theshadow/README.md", "diff": "diff --git a/external/vpx-theshadow/README.md b/external/vpx-theshadow/README.md\nindex 82107e51..1018920d 100644\n--- a/external/vpx-theshadow/README.md\n+++ b/external/vpx-theshadow/README.md\n@@ -2,16 +2,19 @@\n \n ![Table Preview](vpx-theshadow-table.jpeg?raw=true)\n \n+---\n+\n ## Files\n-| File Type | Author | Download | Notes | \n+| File Type | Link | Version | Author |  \n |-----------|--------|----------|--------------|\n-| **VPX** | [bigus1](https://www.vpforums.org/index.php?showuser=107629) | [ VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17050) | **Version:** <br />The Shadow (Bally 1994)_Bigus(MOD)1.0.vpx.zip  |\n-| **B2S & DMD** | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) | [VPUniverse](https://vpuniverse.com/files/file/12214-the-shadow-bally-1994-b2s-with-full-dmd/) | The Shadow (Bally 1994) full dmd.zip |\n-| **ROM** | [destruk](https://www.vpforums.org/index.php?showuser=5) | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=212) | ts_lx5.zip |\n+| **VPX**  | [ VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=17050) | The Shadow (Bally 1994)_Bigus(MOD)1.0.vpx.zip | [bigus1](https://www.vpforums.org/index.php?showuser=107629) |\n+| **B2S & DMD** | [VPUniverse](https://vpuniverse.com/files/file/12214-the-shadow-bally-1994-b2s-with-full-dmd/) | The Shadow (Bally 1994) full dmd.zip | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| **ROM** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=212) | ts_lx5.zip | [destruk](https://www.vpforums.org/index.php?showuser=5) |\n+\n+**Tested by:** [TechZombie]\n \n+---\n \n-**Tested by:**\n-[TechZombie]\n \n ## Status \n \n@@ -20,13 +23,15 @@ Minimum VPX Standalone build: 10.8.0-1983-b84441e\n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 52 |\n \n+---\n+\n ## Instructions\n \n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to `vpx-theshadow.elf`\n - Download the table and directb2s versions listed above and copy them into `vpx-theshadow`\n-- Rom file (ts_lx5.zip) stays in zip folder, place zip file in `vpx-theshadow/pinmame/roms`\n - Make sure `(.vpx)` `(.direct2b2s)` `(.vbs)` and `(.ini)` are all named the same. \n+- Rom file (`ts_lx5.zip`) stays in zip folder, place zip file in `vpx-theshadow/pinmame/roms`\n - **Go fire up your Vpin and enjoy!**\n > \"I'll be there... around every corner... in every empty room... as inevitable as your guilty conscience.\"*\n > \n"}
@@ -185,7 +185,7 @@
       {
         "hash": "21eea2993d56e498097194ca6038067a5cf09d52",
         "date": "2025-01-18 15:07:01 -0600",
-        "author": "James Rainaldi",
+        "author": "James R.",
         "message": "fix: updated to relative path\n",
         "files": [
           {"status": "M", "path": "external/vpx-theshadow/README.md", "diff": "diff --git a/external/vpx-theshadow/README.md b/external/vpx-theshadow/README.md\nindex 93f8cf9b..00d6230d 100644\n--- a/external/vpx-theshadow/README.md\n+++ b/external/vpx-theshadow/README.md\n@@ -1,7 +1,7 @@\n # The Shadow (Bally 1994)\n \n-![External Image](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/external/vpx-theshadow/vpx-theshadow.png?raw=true)\n-![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/external/vpx-theshadow/vpx-theshadow-table.jpeg?raw=true)\n+![External Image](vpx-theshadow.png?raw=true)\n+![Table Preview](vpx-theshadow-table.jpeg?raw=true)\n \n \n ## Files\n"}
@@ -194,7 +194,7 @@
       {
         "hash": "dae051b851b29f3217fb440b44bf1f073f11c6e1",
         "date": "2025-01-18 14:38:26 -0600",
-        "author": "James Rainaldi",
+        "author": "James R.",
         "message": "chore: documentation cleanup and added table preview image\n",
         "files": [
           {"status": "A", "path": "external/vpx-theshadow/vpx-theshadow-table.jpeg"},

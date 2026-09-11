@@ -4,7 +4,7 @@
       {
         "hash": "61b363921393bae14d27783005561fd3a0c48090",
         "date": "2026-08-23 16:58:56 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update TWD LE to 1.6 and Apollo 13 (#2125)\n\n* Update table.yml\n\n* add cabinet mod diff\n\n* updates\n\n* Update table.ini\n\n* A13 updates",
         "files": [
           {"status": "M", "path": "external/vpx-twdle/table.yml", "diff": "diff --git a/external/vpx-twdle/table.yml b/external/vpx-twdle/table.yml\nindex 4aef09d8..49e8c12a 100644\n--- a/external/vpx-twdle/table.yml\n+++ b/external/vpx-twdle/table.yml\n@@ -1,18 +1,24 @@\n ---\n-backglassChecksum: \"7b0e44fc0ff114d4d71cd6a6fecf25b5\"\n+backglassChecksum: \"7B0E44FC0FF114D4D71CD6A6FECF25B5\"\n backglassNotes: \"Use 'The Walking Dead (LE) (Stern 2015).zip'\"\n backglassVPSId: \"_NqgJZ1qKE\"\n coloredROMChecksum: \"0935D57154410DE432139C950E165EBA\"\n coloredROMNotes: \"twd_160h.pac\"\n coloredROMVPSId: \"v6DPvEoOex\"\n+diffAuthorsOverride:\n+  - \"LoadedWeapon\"\n+diffChecksum: \"336FF3DEAA1C0A41D6EEF70693971860\"\n+diffNotes: \"Download 'The Walking Dead (Stern 2014) LW.zip'\"\n+diffUrlOverride: \"https://vpuniverse.com/files/file/22124-the-walking-dead-cabinet-mod/\"\n+diffVersionOverride: \"1.0\"\n fps: 57\n romChecksum: \"BD052AD54E57BDFBA634F343470CAE2C\"\n romNotes: \"twd_160h.zip\"\n romVPSId: \"pdHhrTUek_\"\n-tableNotes: \"Download 'VP10-The Walking Dead 1.2.zip'\"\n+tableNotes: \"Download 'The Walking Dead 1.6.zip' on VPUniverse\"\n tableVPSId: \"wasB0RRz\"\n tagline: \"Brains.\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"4191A4DD5735D7F96C0C3171C9F2444D\"\n+vpxChecksum: \"6CD591202D75A4CD9CD6BA36D73EF8B5\"\n vpxVPSId: \"UjHFQ8iA\"\n"}
@@ -13,7 +13,7 @@
       {
         "hash": "d76a9afe550f503b935c9e539123c6e7f387558d",
         "date": "2026-07-18 22:36:02 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "TWD update\n",
         "files": [
           {"status": "M", "path": "external/vpx-twdle/launcher.png"},
@@ -24,7 +24,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-twdle/table.yml", "diff": "diff --git a/external/vpx-twdle/table.yml b/external/vpx-twdle/table.yml\nindex 97b5ea76..eec6dd14 100644\n--- a/external/vpx-twdle/table.yml\n+++ b/external/vpx-twdle/table.yml\n@@ -17,8 +17,5 @@ tableVPSId: \"wasB0RRz\"\n tagline: \"Brains.\"\n testers:\n   - \"Wraith\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"4191A4DD5735D7F96C0C3171C9F2444D\"\n-  - \"B2B340B7EA96B782CB8237D40A8FD030\"\n+vpxChecksum: \"4191A4DD5735D7F96C0C3171C9F2444D\"\n vpxVPSId: \"UjHFQ8iA\""}
@@ -33,7 +33,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-twdle/table.yml", "diff": "diff --git a/external/vpx-twdle/table.yml b/external/vpx-twdle/table.yml\nindex 9bd5a23b..97b5ea76 100644\n--- a/external/vpx-twdle/table.yml\n+++ b/external/vpx-twdle/table.yml\n@@ -8,7 +8,7 @@ coloredROMVPSId: \"v6DPvEoOex\"\n diffChecksum: \"92B14B263AB4C6C34FEB3B75D1985ABF\"\n diffNotes: \"Download 'The Walking Dead (Stern 2025).zip'\"\n diffVPSID: \"urZKVVQeD5\"\n-fps: 60\n+fps: 57\n romChecksum: \"BD052AD54E57BDFBA634F343470CAE2C\"\n romNotes: \"twd_160h.zip\"\n romVPSId: \"pdHhrTUek_\""}
@@ -42,7 +42,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-twdle/table.yml", "diff": "diff --git a/external/vpx-twdle/table.yml b/external/vpx-twdle/table.yml\nindex 14edb4c0..9bd5a23b 100644\n--- a/external/vpx-twdle/table.yml\n+++ b/external/vpx-twdle/table.yml\n@@ -17,5 +17,8 @@ tableVPSId: \"wasB0RRz\"\n tagline: \"Brains.\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"4191A4DD5735D7F96C0C3171C9F2444D\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"4191A4DD5735D7F96C0C3171C9F2444D\"\n+  - \"B2B340B7EA96B782CB8237D40A8FD030\"\n vpxVPSId: \"UjHFQ8iA\""}
@@ -51,7 +51,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "A", "path": "external/vpx-twdle/README.md", "diff": "diff --git a/external/vpx-twdle/README.md b/external/vpx-twdle/README.md\nnew file mode 100644\nindex 00000000..b14cbde7\n--- /dev/null\n+++ b/external/vpx-twdle/README.md\n@@ -0,0 +1,60 @@\n+# Walking Dead (Limited Edition), The (Stern 2014)\n+\n+![Table Preview](../../images/UjHFQ8iA-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Wraith\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Walking Dead (Limited Edition), The (Stern 2014)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Brains.\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},

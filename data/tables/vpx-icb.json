@@ -4,7 +4,7 @@
       {
         "hash": "17eea9aaa4047f251541716e713b9501feba5714",
         "date": "2026-09-09 14:17:04 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Ice Cold Beer readme fix\n",
         "files": [
           {"status": "A", "path": "external/vpx-icb/README.md", "diff": "diff --git a/external/vpx-icb/README.md b/external/vpx-icb/README.md\nnew file mode 100644\nindex 00000000..7758744a\n--- /dev/null\n+++ b/external/vpx-icb/README.md\n@@ -0,0 +1,62 @@\n+# Ice Cold Beer (Taito 1983)\n+\n+![Table Preview](../../images/tX4EQjdU6v-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ❌ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Bla1ze\n+  - MissleToad\n+  - pinballwizard2023\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Ice Cold Beer (Taito 1983)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Cheers!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>\n\\ No newline at end of file\n"}
@@ -13,7 +13,7 @@
       {
         "hash": "8cd3a2b2e6b96687852c8e8dd55800816abc1ebd",
         "date": "2026-09-09 14:16:22 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Deleting to readd with uppercase\n",
         "files": [
           {"status": "D", "path": "external/vpx-icb/README.md", "diff": "diff --git a/external/vpx-icb/README.md b/external/vpx-icb/README.md\ndeleted file mode 100644\nindex 933bf80d..00000000\n--- a/external/vpx-icb/README.md\n+++ /dev/null\n@@ -1,62 +0,0 @@\n-# Ice Cold Beer (Taito 1983)\n-\n-![Table Preview](../../images/tX4EQjdU6v-preview.webp)\n-\n-<br>\n-\n-## *️⃣  Table Statistics\n-\n-| Backglass | DMD | ROM Required | Has Puppack | FPS |\n-|-----------|-----|-----|-----|-----|\n-| ✅ | ✅ | ❌ | ❌ | 60 |\n-\n-<br>\n-\n-**VPXS 4KP Testers:**\n-  - Bla1ze\n-  - MissleToad\n-  - pinballwizard2023\n-\n-<br>\n-\n----\n-\n-<br>\n-\n-## ❇️ Available in the Wizard! 🪄✨\n-\n-<br>\n-\n-This table is available through the Table Manager Wizard, which makes installation quick and easy!\n-\n-### How to install:\n-\n-1.  Open the **Table Manager**\n-2.  Click the **Add Table** button\n-3.  Select the **Wizard** tab\n-4.  Find and select this table from the dropdown menu: **`Ice Cold Beer (Taito 1983)`**\n-5.  Follow the on-screen instructions to download and upload the required files\n-6. *\"Cheers!\"*\n-\n-<br>\n-\n-Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n-\n-<br>\n-\n-__*We hope you enjoy!!*__\n-\n-*The VPXS 4KP Wizard team:*\n-<pre>\n-- n-i-x            - Mox              - Lloydbraun\n-- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n-- Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - pointdablame\n-</pre>\n-\n-\n-<br>\n-<br>\n-<br>\n-<br>\n-<br>\n"}
@@ -22,7 +22,7 @@
       {
         "hash": "9f2105a36bb0a8a4d8e35d58687b28dd714976e6",
         "date": "2026-09-09 14:10:26 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Delete external/vpx-icb/readme.md\n\nDeleting extra readme",
         "files": [
           {"status": "D", "path": "external/vpx-icb/readme.md", "diff": "diff --git a/external/vpx-icb/readme.md b/external/vpx-icb/readme.md\ndeleted file mode 100644\nindex 933bf80d..00000000\n--- a/external/vpx-icb/readme.md\n+++ /dev/null\n@@ -1,62 +0,0 @@\n-# Ice Cold Beer (Taito 1983)\n-\n-![Table Preview](../../images/tX4EQjdU6v-preview.webp)\n-\n-<br>\n-\n-## *️⃣  Table Statistics\n-\n-| Backglass | DMD | ROM Required | Has Puppack | FPS |\n-|-----------|-----|-----|-----|-----|\n-| ✅ | ✅ | ❌ | ❌ | 60 |\n-\n-<br>\n-\n-**VPXS 4KP Testers:**\n-  - Bla1ze\n-  - MissleToad\n-  - pinballwizard2023\n-\n-<br>\n-\n----\n-\n-<br>\n-\n-## ❇️ Available in the Wizard! 🪄✨\n-\n-<br>\n-\n-This table is available through the Table Manager Wizard, which makes installation quick and easy!\n-\n-### How to install:\n-\n-1.  Open the **Table Manager**\n-2.  Click the **Add Table** button\n-3.  Select the **Wizard** tab\n-4.  Find and select this table from the dropdown menu: **`Ice Cold Beer (Taito 1983)`**\n-5.  Follow the on-screen instructions to download and upload the required files\n-6. *\"Cheers!\"*\n-\n-<br>\n-\n-Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n-\n-<br>\n-\n-__*We hope you enjoy!!*__\n-\n-*The VPXS 4KP Wizard team:*\n-<pre>\n-- n-i-x            - Mox              - Lloydbraun\n-- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n-- Bla1ze           - evilwraith       - Silentkat        \n-- mrandromeda      - SScorpio         - pointdablame\n-</pre>\n-\n-\n-<br>\n-<br>\n-<br>\n-<br>\n-<br>\n"}
@@ -40,7 +40,7 @@
       {
         "hash": "8cc6907838280fd40cc1305582d4d7b3929261c8",
         "date": "2026-08-23 19:11:28 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Rename readme.md to README.md",
         "files": [
           {"status": "R-from", "path": "external/vpx-icb/readme.md->external/vpx-icb/README.md", "diff": "diff --git a/external/vpx-icb/readme.md b/external/vpx-icb/README.md\nsimilarity index 100%\nrename from external/vpx-icb/readme.md\nrename to external/vpx-icb/README.md\n"},

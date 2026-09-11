@@ -4,7 +4,7 @@
       {
         "hash": "380bfd85babef2f6fe36f0fe3076962c11def5fd",
         "date": "2026-08-05 14:41:44 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update SMB\n",
         "files": [
           {"status": "M", "path": "external/vpx-supermario/table.ini", "diff": "diff --git a/external/vpx-supermario/table.ini b/external/vpx-supermario/table.ini\nindex 229bcb50..2a49521f 100644\n--- a/external/vpx-supermario/table.ini\n+++ b/external/vpx-supermario/table.ini\n@@ -8,7 +8,7 @@ ScreenInclination = 0.000000\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.400000\n-AAFactor = 0.85\n+AAFactor = 0.90\n MusicVolume = 100\n SoundVolume = 100\n "},

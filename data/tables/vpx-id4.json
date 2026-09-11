@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-id4/table.yml", "diff": "diff --git a/external/vpx-id4/table.yml b/external/vpx-id4/table.yml\nindex a8f1c9f8..8847dac6 100644\n--- a/external/vpx-id4/table.yml\n+++ b/external/vpx-id4/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"RHVC73TxKs\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"2A0C710705DE657A1061CE1E7B442536\"\n-  - \"DA7916F4F5134BCD18FCB1BFA7438EEE\"\n+backglassChecksum: \"2A0C710705DE657A1061CE1E7B442536\"\n coloredROMChecksum: \"392E993457DEE0829DCA308C6756A18F\"\n coloredROMNotes: \"Download 'ID4_2.0.pac'\"\n coloredROMVPSId: \"ZDZIb8Rp\"\n@@ -17,7 +14,4 @@ testers:\n   - \"OminousOsie\"\n   - \"Mox\"\n vpxVPSId: \"BrZ-RApc\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"16A2F1ED9CF7606D2B94D66D79D9D50B\"\n-  - \"E761D9E2CAD675383F4A8E056AAAFD00\"\n+vpxChecksum: \"16A2F1ED9CF7606D2B94D66D79D9D50B\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-id4/table.yml", "diff": "diff --git a/external/vpx-id4/table.yml b/external/vpx-id4/table.yml\nindex 8847dac6..a8f1c9f8 100644\n--- a/external/vpx-id4/table.yml\n+++ b/external/vpx-id4/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"RHVC73TxKs\"\n-backglassChecksum: \"2A0C710705DE657A1061CE1E7B442536\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"2A0C710705DE657A1061CE1E7B442536\"\n+  - \"DA7916F4F5134BCD18FCB1BFA7438EEE\"\n coloredROMChecksum: \"392E993457DEE0829DCA308C6756A18F\"\n coloredROMNotes: \"Download 'ID4_2.0.pac'\"\n coloredROMVPSId: \"ZDZIb8Rp\"\n@@ -14,4 +17,7 @@ testers:\n   - \"OminousOsie\"\n   - \"Mox\"\n vpxVPSId: \"BrZ-RApc\"\n-vpxChecksum: \"16A2F1ED9CF7606D2B94D66D79D9D50B\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"16A2F1ED9CF7606D2B94D66D79D9D50B\"\n+  - \"E761D9E2CAD675383F4A8E056AAAFD00\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-id4/table.ini", "diff": "diff --git a/external/vpx-id4/table.ini b/external/vpx-id4/table.ini\nindex a5bc140f..4f86bf4b 100644\n--- a/external/vpx-id4/table.ini\n+++ b/external/vpx-id4/table.ini\n@@ -1,18 +1,18 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.346878\n-ViewCabScaleY = 1.096984\n-ViewCabScaleZ = 1.007117\n+ViewCabScaleX = 1.256031\n+ViewCabScaleY = 0.991574\n+ViewCabScaleZ = 0.901707\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -47.749802\n-ViewCabWindowTop = 343.056946\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 276.345947\n ViewCabWindowBot = 93.466171\n ToneMapper = 0\n \n [Player]\n BallTrailStrength = 0.490196\n-ScreenPlayerY = 3.030892\n+ScreenPlayerY = 9.993891\n ScreenPlayerZ = 99.340073\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n@@ -20,7 +20,4 @@ ScreenInclination = 0.000000\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.304205\n-ScreenPlayerX = 0.023450\n-\n-[Standalone]\n-WindowRenderMode = 0\n\\ No newline at end of file\n+ScreenPlayerX = 0.023450\n\\ No newline at end of file"},
@@ -32,7 +32,7 @@
       {
         "hash": "fd6678c9b6cc6c18e385497a2a2b440391f82fa5",
         "date": "2025-11-24 18:33:24 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "missing quote\n",
         "files": [
           {"status": "M", "path": "external/vpx-id4/table.ini", "diff": "diff --git a/external/vpx-id4/table.ini b/external/vpx-id4/table.ini\nindex 3630a17c..a5bc140f 100644\n--- a/external/vpx-id4/table.ini\n+++ b/external/vpx-id4/table.ini\n@@ -20,4 +20,7 @@ ScreenInclination = 0.000000\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.304205\n-ScreenPlayerX = 0.023450\n\\ No newline at end of file\n+ScreenPlayerX = 0.023450\n+\n+[Standalone]\n+WindowRenderMode = 0\n\\ No newline at end of file\n"}
@@ -133,7 +133,7 @@
       {
         "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
         "date": "2025-03-30 19:40:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
         "files": [
           {"status": "A", "path": "external/vpx-id4/table.yml", "diff": "diff --git a/external/vpx-id4/table.yml b/external/vpx-id4/table.yml\nnew file mode 100644\nindex 00000000..d4e17e51\n--- /dev/null\n+++ b/external/vpx-id4/table.yml\n@@ -0,0 +1,16 @@\n+---\n+backglassVPSId: \"RHVC73TxKs\"\n+backglassChecksum: \"2A0C710705DE657A1061CE1E7B442536\"\n+fps: 52\n+romVPSId: \"-07X1WLT\"\n+romChecksum: \"1585E6C7650343E51D3CCCBC29E19D48\"\n+romNotes: \"Download - id4.zip\"\n+tableVPSId: \"G4BlaSXN\"\n+tagline: \"Welcome to Earth!!\"\n+testers:\n+  - \"OminousOsie\"\n+  - \"Mox\"\n+vpxVPSId: \"BrZ-RApc\"\n+vpxChecksum: \"16A2F1ED9CF7606D2B94D66D79D9D50B\"\n+applyFixes:\n+  - \"bass\"\n\\ No newline at end of file"},

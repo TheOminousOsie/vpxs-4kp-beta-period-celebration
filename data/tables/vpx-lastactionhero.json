@@ -13,7 +13,7 @@
       {
         "hash": "4a02ebc321763607047eeb2ac122432348f2226b",
         "date": "2026-07-18 00:40:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "final updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-lastactionhero/table.yml", "diff": "diff --git a/external/vpx-lastactionhero/table.yml b/external/vpx-lastactionhero/table.yml\nindex 25ca35a9..339baa4c 100644\n--- a/external/vpx-lastactionhero/table.yml\n+++ b/external/vpx-lastactionhero/table.yml\n@@ -1,18 +1,21 @@\n ---\n-backglassVPSId: \"15Jwb8cez_\"\n backglassChecksum: \"2F71C5DE2F72B680DAF8B5623E48F0B0\"\n backglassNotes: \"Download Last Action Hero (Data East 1993) full dmd.zip\"\n+backglassVPSId: \"15Jwb8cez_\"\n+coloredROMChecksum:\n+  - \"b5ae8ac9adb9664f736c7fb4cc44f0b0\"\n+  - \"568d324b21c61c5674123d0ea248eacf\"\n+coloredROMPin2DMD: true\n+coloredROMVPSId: \"agtzTH6R\"\n fps: 60\n-romVPSId: \"pqzz0v2O\"\n romChecksum: \"7DA0660206EDF4D5BAB2320FD30D143A\"\n+romVPSId: \"pqzz0v2O\"\n tableVPSId: \"OHcji-5r\"\n-tagline: >-\n-  \"Sir, are you a henchman?\"   \"No, I only go\n-  as far as lackey. Anything else?\"\n+tagline: \"'Sir, are you a henchman?'   'No, I only go as far as lackey. Anything else?'\"\n testers:\n   - \"TechZombie\"\n   - \"SilentKat\"\n   - \"CoffeeAtJoes\"\n   - \"OminousOsie\"\n-vpxVPSId: \"jaSjAX0vTu\"\n vpxChecksum: \"DFAFEBBDF54DFF044E5C0BAC1FDACFA1\"\n+vpxVPSId: \"jaSjAX0vTu\""}
@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-lastactionhero/table.yml", "diff": "diff --git a/external/vpx-lastactionhero/table.yml b/external/vpx-lastactionhero/table.yml\nindex c72dee33..25ca35a9 100644\n--- a/external/vpx-lastactionhero/table.yml\n+++ b/external/vpx-lastactionhero/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"15Jwb8cez_\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"2F71C5DE2F72B680DAF8B5623E48F0B0\"\n-  - \"F42F0786C7F1EC67E78136CC8CF5B641\"\n+backglassChecksum: \"2F71C5DE2F72B680DAF8B5623E48F0B0\"\n backglassNotes: \"Download Last Action Hero (Data East 1993) full dmd.zip\"\n fps: 60\n romVPSId: \"pqzz0v2O\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-lastactionhero/table.yml", "diff": "diff --git a/external/vpx-lastactionhero/table.yml b/external/vpx-lastactionhero/table.yml\nindex 25ca35a9..c72dee33 100644\n--- a/external/vpx-lastactionhero/table.yml\n+++ b/external/vpx-lastactionhero/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"15Jwb8cez_\"\n-backglassChecksum: \"2F71C5DE2F72B680DAF8B5623E48F0B0\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"2F71C5DE2F72B680DAF8B5623E48F0B0\"\n+  - \"F42F0786C7F1EC67E78136CC8CF5B641\"\n backglassNotes: \"Download Last Action Hero (Data East 1993) full dmd.zip\"\n fps: 60\n romVPSId: \"pqzz0v2O\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-lastactionhero/table.ini", "diff": "diff --git a/external/vpx-lastactionhero/table.ini b/external/vpx-lastactionhero/table.ini\nindex 42105fad..1d86a86f 100644\n--- a/external/vpx-lastactionhero/table.ini\n+++ b/external/vpx-lastactionhero/table.ini\n@@ -5,19 +5,19 @@ OverrideTableEmissionScale = 1\n JoyAddCredit2Key = 1\n DynamicDayNight = 0\n EmissionScale = 0.399665\n+ScreenPlayerZ = 93.260506\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+ScreenPlayerY = 21.319296\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.744684\n-ViewCabScaleY = 0.899871\n-ViewCabScaleZ = 1.000297\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -64.003029\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -412.089996\n-ViewCabLookAt = 1.389599\n-ViewCabFOV = 40.023323\n-ViewCabLayback = 69.980217\n-\n-[Standalone]\n-WindowRenderMode = 0\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.266687\n+ViewCabScaleY = 0.993997\n+ViewCabScaleZ = 0.932046\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.006999\n+ViewCabVOfs = 0.045776\n+ViewCabWindowTop = 284.466980\n+ViewCabWindowBot = 130.506195"},

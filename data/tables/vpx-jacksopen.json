@@ -4,7 +4,7 @@
       {
         "hash": "0a7d5fcbc97526fb24ec1eb1c7bf2792a243a0fd",
         "date": "2026-07-29 21:34:39 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Jacks Open update\n",
         "files": [
           {"status": "M", "path": "external/vpx-jacksopen/table.yml", "diff": "diff --git a/external/vpx-jacksopen/table.yml b/external/vpx-jacksopen/table.yml\nindex d10dc415..5935df11 100644\n--- a/external/vpx-jacksopen/table.yml\n+++ b/external/vpx-jacksopen/table.yml\n@@ -3,10 +3,10 @@ backglassChecksum: \"288848C6092E9E9ADCD8D9C88DC50F63\"\n backglassNotes: \"Download Version 1.0.0\"\n backglassVPSId: \"s6UwEef4\"\n fps: 60\n+tableNotes: \"Download 'Jacks Open (Gottlieb 1977)_Bigus(MOD)2.0.vpx.zip'\"\n tableVPSId: \"aNhj6R4L\"\n testers:\n   - \"evilwraith\"\n   - \"pointdablame\"\n-vpxChecksum: \"A472420FAEFE858E1B9528A553356B0E\"\n+vpxChecksum: \"2D5062DB3557D5BDDC57AD4A4CF0E59A\"\n vpxVPSId: \"B6zfjYU4Iv\"\n-tableNotes: \"Download 'Jacks Open (Gottlieb 1977)_Bigus(MOD) 1.0'\"\n"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-jacksopen/table.yml", "diff": "diff --git a/external/vpx-jacksopen/table.yml b/external/vpx-jacksopen/table.yml\nindex 8f20804b..d10dc415 100644\n--- a/external/vpx-jacksopen/table.yml\n+++ b/external/vpx-jacksopen/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"288848C6092E9E9ADCD8D9C88DC50F63\"\n-  - \"1ADCCE7C7F7291E5F26DC6F548CDF4D3\"\n+backglassChecksum: \"288848C6092E9E9ADCD8D9C88DC50F63\"\n backglassNotes: \"Download Version 1.0.0\"\n backglassVPSId: \"s6UwEef4\"\n fps: 60\n@@ -10,9 +7,6 @@ tableVPSId: \"aNhj6R4L\"\n testers:\n   - \"evilwraith\"\n   - \"pointdablame\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"A472420FAEFE858E1B9528A553356B0E\"\n-  - \"BE5BBA6448F2172C3140184B4090BC6E\"\n+vpxChecksum: \"A472420FAEFE858E1B9528A553356B0E\"\n vpxVPSId: \"B6zfjYU4Iv\"\n tableNotes: \"Download 'Jacks Open (Gottlieb 1977)_Bigus(MOD) 1.0'\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-jacksopen/table.yml", "diff": "diff --git a/external/vpx-jacksopen/table.yml b/external/vpx-jacksopen/table.yml\nindex d10dc415..8f20804b 100644\n--- a/external/vpx-jacksopen/table.yml\n+++ b/external/vpx-jacksopen/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"288848C6092E9E9ADCD8D9C88DC50F63\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"288848C6092E9E9ADCD8D9C88DC50F63\"\n+  - \"1ADCCE7C7F7291E5F26DC6F548CDF4D3\"\n backglassNotes: \"Download Version 1.0.0\"\n backglassVPSId: \"s6UwEef4\"\n fps: 60\n@@ -7,6 +10,9 @@ tableVPSId: \"aNhj6R4L\"\n testers:\n   - \"evilwraith\"\n   - \"pointdablame\"\n-vpxChecksum: \"A472420FAEFE858E1B9528A553356B0E\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"A472420FAEFE858E1B9528A553356B0E\"\n+  - \"BE5BBA6448F2172C3140184B4090BC6E\"\n vpxVPSId: \"B6zfjYU4Iv\"\n tableNotes: \"Download 'Jacks Open (Gottlieb 1977)_Bigus(MOD) 1.0'\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-jacksopen/table.ini", "diff": "diff --git a/external/vpx-jacksopen/table.ini b/external/vpx-jacksopen/table.ini\nindex dfac16a2..f1781d01 100644\n--- a/external/vpx-jacksopen/table.ini\n+++ b/external/vpx-jacksopen/table.ini\n@@ -4,14 +4,14 @@ OverrideTableEmissionScale = 0\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.162979\n-ViewCabScaleY = 1.021683\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.103451\n+ViewCabScaleY = 0.994101\n+ViewCabScaleZ = 0.999426\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -14.382606\n-ViewCabWindowTop = 83.777870\n-ViewCabWindowBot = 83.953270\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 36.303871\n+ViewCabWindowBot = 36.406277\n \n [Standalone]\n-PinMAMEWindow = 0\n\\ No newline at end of file\n+PinMAMEWindow = 0"}
@@ -50,7 +50,7 @@
       {
         "hash": "ca1af2102cff16bdba7231ab01215c14afac0845",
         "date": "2025-11-12 23:08:17 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "art adjustments\n",
         "files": [
           {"status": "M", "path": "external/vpx-jacksopen/dmd.png"}
@@ -59,7 +59,7 @@
       {
         "hash": "63c16b225fb697750552a76a7695ce1c698b78d1",
         "date": "2025-11-09 18:51:21 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "fixes\n",
         "files": [
           {"status": "M", "path": "external/vpx-jacksopen/table.yml", "diff": "diff --git a/external/vpx-jacksopen/table.yml b/external/vpx-jacksopen/table.yml\nindex d1998213..6e24e3af 100644\n--- a/external/vpx-jacksopen/table.yml\n+++ b/external/vpx-jacksopen/table.yml\n@@ -1,9 +1,11 @@\n ---\n backglassChecksum: \"288848C6092E9E9ADCD8D9C88DC50F63\"\n+backglassNotes: \"Download Version 1.0.0\"\n backglassVPSId: \"s6UwEef4\"\n fps: 60\n tableVPSId: \"aNhj6R4L\"\n testers:\n   - \"evilwraith\"\n-vpxChecksum: \"288848C6092E9E9ADCD8D9C88DC50F63\"\n-vpxVPSId: \"nRl6alws\"\n+vpxChecksum: \"A472420FAEFE858E1B9528A553356B0E\"\n+vpxVPSId: \"B6zfjYU4Iv\"\n+tableNotes: \"Download 'Jacks Open (Gottlieb 1977)_Bigus(MOD) 1.0'\""}
@@ -68,7 +68,7 @@
       {
         "hash": "de0f723cda962b98370d6feb64d8abe60246156b",
         "date": "2025-09-09 16:59:16 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Jacks\n",
         "files": [
           {"status": "A", "path": "external/vpx-jacksopen/dmd.png"},

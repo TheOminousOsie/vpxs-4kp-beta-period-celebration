@@ -4,7 +4,7 @@
       {
         "hash": "34266eca947bbcbd4557476c480c7da1b080beab",
         "date": "2026-07-21 12:12:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Revert to JPSala sversion\n",
         "files": [
           {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex c53db063..a78b8ca8 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -1,21 +1,17 @@\n ---\n-backglassVPSId: \"z3tmoQbcUo\"\n backglassChecksum: \"10546D619D78B39DFAD8A3A0B681B840\"\n backglassNotes: \"Download 'Ripley's Believe It Or Not (Stern 2004).zip'\"\n+backglassVPSId: \"z3tmoQbcUo\"\n coloredROMChecksum: \"5A59A2305722E9862D4A2E113F459EB2\"\n-coloredROMNotes: \"\"\n coloredROMVPSId: \"jwXC_1pvvj\"\n fps: 60\n-romVPSId: \"H55zvdt4\"\n romChecksum: \"555BD09C06F23116DAB1ABF943C17A39\"\n romNotes: \"Download version 3.20\"\n+romVPSId: \"H55zvdt4\"\n tableVPSId: \"MBiAY_Tg\"\n-tableNotes: \"Download v600.zip\"\n-tagline: >-\n-  I have traveled to the world's farthest\n-  corners and seen the most incredible things.\n+tagline: \"I have traveled to the world's farthest corners and seen the most incredible things.\"\n testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n-vpxVPSId: \"K9My93lAbN\"\n-vpxChecksum: \"A68613375E5A7F5366FF641A5960F103\"\n+vpxChecksum: \"146E0C62CF6C86ABDC66EA1738F2DF8D\"\n+vpxVPSId: \"_N9Usy6Q\"\n"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex 022b1b7a..c53db063 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"z3tmoQbcUo\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"10546D619D78B39DFAD8A3A0B681B840\"\n-  - \"8A714E85ABB402828CEF4C407BEA0B07\"\n+backglassChecksum: \"10546D619D78B39DFAD8A3A0B681B840\"\n backglassNotes: \"Download 'Ripley's Believe It Or Not (Stern 2004).zip'\"\n coloredROMChecksum: \"5A59A2305722E9862D4A2E113F459EB2\"\n coloredROMNotes: \"\"\n@@ -21,7 +18,4 @@ testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n vpxVPSId: \"K9My93lAbN\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"A68613375E5A7F5366FF641A5960F103\"\n-  - \"E5EEB90343A2E3BEED73F0C10B28E860\"\n+vpxChecksum: \"A68613375E5A7F5366FF641A5960F103\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex c53db063..022b1b7a 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"z3tmoQbcUo\"\n-backglassChecksum: \"10546D619D78B39DFAD8A3A0B681B840\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"10546D619D78B39DFAD8A3A0B681B840\"\n+  - \"8A714E85ABB402828CEF4C407BEA0B07\"\n backglassNotes: \"Download 'Ripley's Believe It Or Not (Stern 2004).zip'\"\n coloredROMChecksum: \"5A59A2305722E9862D4A2E113F459EB2\"\n coloredROMNotes: \"\"\n@@ -18,4 +21,7 @@ testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n vpxVPSId: \"K9My93lAbN\"\n-vpxChecksum: \"A68613375E5A7F5366FF641A5960F103\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"A68613375E5A7F5366FF641A5960F103\"\n+  - \"E5EEB90343A2E3BEED73F0C10B28E860\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-ripleys/table.ini", "diff": "diff --git a/external/vpx-ripleys/table.ini b/external/vpx-ripleys/table.ini\nindex 2a39de14..984c5702 100644\n--- a/external/vpx-ripleys/table.ini\n+++ b/external/vpx-ripleys/table.ini\n@@ -10,16 +10,18 @@ ScreenInclination = 0.000000\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.200516\n-ViewCabScaleY = 1.027843\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.201062\n+ViewCabScaleY = 0.988155\n+ViewCabScaleZ = 0.960312\n ViewCabRotation = 180.000000\n-ViewCabHOfs = -0.328200\n+ViewCabHOfs = 0.015700\n ViewCabVOfs = 0.000000\n-ViewCabWindowTop = 372.965942\n+ViewCabWindowTop = 325.570892\n ViewCabWindowBot = 116.865250\n ToneMapper = 0\n \n-[Standalone]\n-BackBufferScale = 0.416666\n-WindowRenderMode = 0\n\\ No newline at end of file\n+[TableOption]\n+Select LUT = 0.000000\n+Desktop DMD = 0.000000\n+Cabinet Rails = 0.000000\n+Side Blades = 1.000000\n\\ No newline at end of file"},
@@ -41,7 +41,7 @@
       {
         "hash": "688ec61c6bd9a567e41b60eb2948b47c6652ad0f",
         "date": "2025-09-10 12:40:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "JPSalas v600 updates\n\nCurrent as of 9/10/25. More to come.\n",
         "files": [
           {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex a212114e..da5abddf 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -7,7 +7,7 @@ romVPSId: \"H55zvdt4\"\n romChecksum: \"555BD09C06F23116DAB1ABF943C17A39\"\n romNotes: \"Download version 3.20\"\n tableVPSId: \"MBiAY_Tg\"\n-tableNotes: \"Download v551_VPX8.zip\"\n+tableNotes: \"Download v600.zip\"\n tagline: >-\n   I have traveled to the world's farthest\n   corners and seen the most incredible things.\n@@ -15,6 +15,6 @@ testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n vpxVPSId: \"_N9Usy6Q\"\n-vpxChecksum: \"C0D1D2CBE0CF76C2562867DF1D6760DB\"\n+vpxChecksum: \"146E0C62CF6C86ABDC66EA1738F2DF8D\"\n applyFixes:\n   - \"bass\""}
@@ -50,7 +50,7 @@
       {
         "hash": "e746650ae1685c1c20c8b005ae5edd0d328115f2",
         "date": "2025-07-21 14:26:11 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 table updates\n\nRipley's Believe It Or Not!\nThe Lost World: Jurassic Park\nX-Men Wolverine LE\n",
         "files": [
           {"status": "M", "path": "external/vpx-ripleys/table.yml", "diff": "diff --git a/external/vpx-ripleys/table.yml b/external/vpx-ripleys/table.yml\nindex 9950f4e9..a212114e 100644\n--- a/external/vpx-ripleys/table.yml\n+++ b/external/vpx-ripleys/table.yml\n@@ -7,7 +7,7 @@ romVPSId: \"H55zvdt4\"\n romChecksum: \"555BD09C06F23116DAB1ABF943C17A39\"\n romNotes: \"Download version 3.20\"\n tableVPSId: \"MBiAY_Tg\"\n-tableNotes: \"Download v55_VPX8.zip\"\n+tableNotes: \"Download v551_VPX8.zip\"\n tagline: >-\n   I have traveled to the world's farthest\n   corners and seen the most incredible things.\n@@ -15,6 +15,6 @@ testers:\n   - \"Kaoticbpr\"\n   - \"OminousOsie\"\n vpxVPSId: \"_N9Usy6Q\"\n-vpxChecksum: \"FAC4E8171AD1A55680FF41AE7FD34A28\"\n+vpxChecksum: \"C0D1D2CBE0CF76C2562867DF1D6760DB\"\n applyFixes:\n   - \"bass\""}
@@ -59,7 +59,7 @@
       {
         "hash": "4cdbc41451db769ef3cbe98c158ed3f1bb36cf1d",
         "date": "2025-06-15 15:03:19 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Create nvram.nv\n",
         "files": [
           {"status": "A", "path": "external/vpx-ripleys/nvram.nv"}
@@ -77,7 +77,7 @@
       {
         "hash": "b55418a31c607de551fb1d0343fb76282aa87002",
         "date": "2025-06-13 15:54:31 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Ripley's nvram fix\n\nRipley's Believe It or Not\nChanged default high score initials to our defaults.\nAdded our standard message.\n",
         "files": [
           {"status": "D", "path": "external/vpx-ripleys/nvram.nv"}

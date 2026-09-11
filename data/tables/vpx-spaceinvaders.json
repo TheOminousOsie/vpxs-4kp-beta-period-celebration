@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-spaceinvaders/table.yml", "diff": "diff --git a/external/vpx-spaceinvaders/table.yml b/external/vpx-spaceinvaders/table.yml\nindex 1a9c0f2c..18ea94e7 100644\n--- a/external/vpx-spaceinvaders/table.yml\n+++ b/external/vpx-spaceinvaders/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"uL7VTmOSFQ\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"BBEF6F8F1C297B0B535E44DB8947A3F1\"\n-  - \"F7A682DFA72FC1CAE7378F8254B76D78\"\n+backglassChecksum: \"BBEF6F8F1C297B0B535E44DB8947A3F1\"\n backglassNotes: \"Download version 1.0.0\"\n fps: 60\n romVPSId: \"Pk5H-8Qj\"\n@@ -21,7 +18,4 @@ testers:\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"uvNi1DbR\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"6DFDD15952079F5E8388559C5E429214\"\n-  - \"3EBDF345234B195BD47B32A7E3E84A6E\"\n+vpxChecksum: \"6DFDD15952079F5E8388559C5E429214\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-spaceinvaders/table.yml", "diff": "diff --git a/external/vpx-spaceinvaders/table.yml b/external/vpx-spaceinvaders/table.yml\nindex 18ea94e7..1a9c0f2c 100644\n--- a/external/vpx-spaceinvaders/table.yml\n+++ b/external/vpx-spaceinvaders/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"uL7VTmOSFQ\"\n-backglassChecksum: \"BBEF6F8F1C297B0B535E44DB8947A3F1\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"BBEF6F8F1C297B0B535E44DB8947A3F1\"\n+  - \"F7A682DFA72FC1CAE7378F8254B76D78\"\n backglassNotes: \"Download version 1.0.0\"\n fps: 60\n romVPSId: \"Pk5H-8Qj\"\n@@ -18,4 +21,7 @@ testers:\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"uvNi1DbR\"\n-vpxChecksum: \"6DFDD15952079F5E8388559C5E429214\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"6DFDD15952079F5E8388559C5E429214\"\n+  - \"3EBDF345234B195BD47B32A7E3E84A6E\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-spaceinvaders/table.ini", "diff": "diff --git a/external/vpx-spaceinvaders/table.ini b/external/vpx-spaceinvaders/table.ini\nindex 554238d1..aa73f4f1 100644\n--- a/external/vpx-spaceinvaders/table.ini\n+++ b/external/vpx-spaceinvaders/table.ini\n@@ -1,20 +1,25 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+B2SHideB2SDMD = 1\n+\n [TableOverride]\n ToneMapper = 0\n ViewCabMode = 2\n-ViewCabScaleX = 0.838289\n-ViewCabScaleY = 0.976374\n+ViewCabScaleX = 0.866995\n+ViewCabScaleY = 0.997799\n ViewCabScaleZ = 0.618422\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = 26.862181\n-ViewCabWindowTop = 0.552915\n-ViewCabWindowBot = 0.099267\n+ViewCabVOfs = 0.006107\n+ViewCabWindowTop = 51.744907\n+ViewCabWindowBot = 51.693256\n \n [Player]\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.256200\n-AAFactor = 0.95\n+ScreenPlayerY = 14.971548\n+ScreenPlayerZ = 89.954857\n \n [TableOption]\n Select LUT = 0.000000"},
@@ -32,7 +32,7 @@
       {
         "hash": "b9c9cac998679ee1cbf5d6f2c565a33a69e5c568",
         "date": "2025-11-17 17:38:44 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-spaceinvaders/table.yml", "diff": "diff --git a/external/vpx-spaceinvaders/table.yml b/external/vpx-spaceinvaders/table.yml\nindex d181e52b..3d738a6c 100644\n--- a/external/vpx-spaceinvaders/table.yml\n+++ b/external/vpx-spaceinvaders/table.yml\n@@ -7,7 +7,7 @@ romVPSId: \"Pk5H-8Qj\"\n romChecksum: \"21BF5D6129C271193F25900DD3E9F7EC\"\n romNotes: \"Download 'spaceinb.zip'\"\n tableVPSId: \"0JuaX_LC\"\n-tableNotes: \"Download 'Space Invaders (Bally 1980) v600.vpx'\"\n+tableNotes: \"Download 'Space Invaders (Bally 1980) v600.zip'\"\n tagline: >- \n   Bally was sued over the game's artwork\n   resemblance to designs by H. R. Giger.\n"}
@@ -41,7 +41,7 @@
       {
         "hash": "5e57fe680532ab35b59bd1e6530308dcdfa4988d",
         "date": "2025-11-17 17:35:45 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.ini\n\nAdded Window POV\n",
         "files": [
           {"status": "M", "path": "external/vpx-spaceinvaders/table.ini", "diff": "diff --git a/external/vpx-spaceinvaders/table.ini b/external/vpx-spaceinvaders/table.ini\nindex 8b010d08..554238d1 100644\n--- a/external/vpx-spaceinvaders/table.ini\n+++ b/external/vpx-spaceinvaders/table.ini\n@@ -1,18 +1,21 @@\n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 1.251979\n-ViewCabScaleY = 1.127861\n-ViewCabScaleZ = 1.004838\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 0.047998\n-ViewCabPlayerY = 3.780127\n-ViewCabPlayerZ = 9.276424\n-ViewCabLookAt = 0.002502\n-ViewCabFOV = 40.443737\n-ViewCabLayback = 48.950390\n ToneMapper = 0\n+ViewCabMode = 2\n+ViewCabScaleX = 0.838289\n+ViewCabScaleY = 0.976374\n+ViewCabScaleZ = 0.618422\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 26.862181\n+ViewCabWindowTop = 0.552915\n+ViewCabWindowBot = 0.099267\n \n [Player]\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.256200\n\\ No newline at end of file\n+EmissionScale = 0.256200\n+AAFactor = 0.95\n+\n+[TableOption]\n+Select LUT = 0.000000\n+Cabinet Rails = 0.000000\n\\ No newline at end of file\n"}
@@ -50,7 +50,7 @@
       {
         "hash": "85359c3f8559a88f46414874c362efcdb7ab46fd",
         "date": "2025-11-17 17:10:15 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "2 JPs tables to 600\n\nJP's IT Pinball Madness - updated README to 600, changed folder name to vpx-jpitpinballmadness\n\nSpace Invaders - updated yml with checksum for 600 table, changed foldername to vpx-spaceinvaders because it is not a JP's named table.\n",
         "files": [
           {"status": "R-to", "path": "external/vpx-jpspaceinvaders/README.md->external/vpx-spaceinvaders/README.md", "diff": "diff --git a/external/vpx-jpspaceinvaders/README.md b/external/vpx-spaceinvaders/README.md\nold mode 100755\nnew mode 100644\nsimilarity index 100%\nrename from external/vpx-jpspaceinvaders/README.md\nrename to external/vpx-spaceinvaders/README.md"},
@@ -90,7 +90,7 @@
       {
         "hash": "b935c89cc75211400f42fa3d174738cd3932d54d",
         "date": "2024-10-30 21:39:35 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "added Space Invaders (Bally 1979)\n\nadded Space Invaders (Bally 1979)\n",
         "files": [
           {"status": "A", "path": "external/vpx-spaceinvaders/README.md", "diff": "diff --git a/external/vpx-spaceinvaders/README.md b/external/vpx-spaceinvaders/README.md\nnew file mode 100644\nindex 00000000..5bb37118\n--- /dev/null\n+++ b/external/vpx-spaceinvaders/README.md\n@@ -0,0 +1,36 @@\n+# Space Invaders (Bally 1979)\n+\n+![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-spaceinvaders.jpg)\n+\n+Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)\n+Version: 4.0.1\n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=14363)\n+\n+DirectB2S\n+\n+Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n+Download: [VPUniverse](https://vpuniverse.com/files/file/13287-space-invaders-bally-1979/)\n+\n+ROM\n+\n+ROM Name: spaceinb.zip\n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=687)\n+SHA1: 960EA9A66375505DD5EAF9BF22AA4A4BFE92356A\n+MD5:  21BF5D6129C271193F25900DD3E9F7EC \n+\n+Tested by: Bruno15477 and evilwraith\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n+\n+## Instructions\n+\n+- Copy the contents of this repo folder to your USB drive\n+- Add your personalized launcher.elf and rename it to vpx-spaceinvaders.elf\n+- Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-spaceinvaders\n+- Make sure (.vpx), (.directb2s), and (.ini) files are all named the same\n+- The ROM zip file gets copied to vpx-spaceinvaders/pinmame/roms (Do not unzip)\n\\ No newline at end of file"},

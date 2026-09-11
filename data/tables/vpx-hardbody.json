@@ -4,7 +4,7 @@
       {
         "hash": "2833e9c0f54dc3c3661bbd0ed31281d603535809",
         "date": "2026-09-09 22:52:36 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe launcher updates 2\n\nAmerican Graffiti\nJP's Attack From Mars LE\nJames Cameron's Avatar\nBlack Pyramid\nChrono Trigger\nCreature From The Black Lagoon\nCirqus Voltaire\nHardbody\nF-14 Tomcat\nJudge Dredd\nDiner\nDr. Dude\nHigh Roller Casino\nJP's LOTR\nRobocop\nSimpsons Pinball Party\nStranger Things\nTaxi\nTMNT\nTMNT Remix - also folder rename\nTorpedo Alley\nTransformers Pro\nTransformers G1\nWhoa Nellie\n",
         "files": [
           {"status": "M", "path": "external/vpx-hardbody/launcher.png"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-hardbody/table.yml", "diff": "diff --git a/external/vpx-hardbody/table.yml b/external/vpx-hardbody/table.yml\nindex 584a9b80..6b111e54 100644\n--- a/external/vpx-hardbody/table.yml\n+++ b/external/vpx-hardbody/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"XNZeF14kkH\"\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"77e68ba860b8ecd7a5f38ce28fee5039\"\n-  - \"A1D2C9BBADDCB40A0A6BB1AFE3A1AC91\"\n+backglassChecksum: \"77e68ba860b8ecd7a5f38ce28fee5039\"\n backglassNotes: \"Download 'Hardbody (Bally 1987)mirror.rar'\"\n romVPSId: \"XpnfFmFR\"\n romChecksum: \"DA72FA8413CE7A7025FA12A5B6BA2742\"\n@@ -14,7 +11,4 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"Mox\"\n vpxVPSId: \"E2HKc9Tl\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"F75A9E626587D61A60CC305F1841B57B\"\n-  - \"DE9FEA0FCBD9EDB2EB489ECAD6A90C40\"\n+vpxChecksum: \"F75A9E626587D61A60CC305F1841B57B\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-hardbody/table.yml", "diff": "diff --git a/external/vpx-hardbody/table.yml b/external/vpx-hardbody/table.yml\nindex 6b111e54..584a9b80 100644\n--- a/external/vpx-hardbody/table.yml\n+++ b/external/vpx-hardbody/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"XNZeF14kkH\"\n-backglassChecksum: \"77e68ba860b8ecd7a5f38ce28fee5039\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"77e68ba860b8ecd7a5f38ce28fee5039\"\n+  - \"A1D2C9BBADDCB40A0A6BB1AFE3A1AC91\"\n backglassNotes: \"Download 'Hardbody (Bally 1987)mirror.rar'\"\n romVPSId: \"XpnfFmFR\"\n romChecksum: \"DA72FA8413CE7A7025FA12A5B6BA2742\"\n@@ -11,4 +14,7 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"Mox\"\n vpxVPSId: \"E2HKc9Tl\"\n-vpxChecksum: \"F75A9E626587D61A60CC305F1841B57B\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"F75A9E626587D61A60CC305F1841B57B\"\n+  - \"DE9FEA0FCBD9EDB2EB489ECAD6A90C40\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-hardbody/table.ini", "diff": "diff --git a/external/vpx-hardbody/table.ini b/external/vpx-hardbody/table.ini\nindex c4898a4b..c1b1306e 100644\n--- a/external/vpx-hardbody/table.ini\n+++ b/external/vpx-hardbody/table.ini\n@@ -1,22 +1,10 @@\n-[Player]\n-JoyLTiltKey                     = 0\n-JoyRTiltKey                     = 0\n-JoyLMagnaSave                   = 14\n-JoyRMagnaSave                   = 15\n-BallTrailStrength = 0.490196\n-OverrideTableEmissionScale = 1\n-DynamicDayNight = 0\n-EmissionScale = 0.399560\n-\n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.678423\n-ViewCabScaleY = 0.814556\n-ViewCabScaleZ = 1.000489\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 44.079006\n-ViewCabPlayerY = -55.814030\n-ViewCabPlayerZ = -1084.459473\n-ViewCabLookAt = 4.966999\n-ViewCabFOV = 29.954321\n-ViewCabLayback = 69.996803\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.165668\n+ViewCabScaleY = 0.991696\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 77.844742\n+ViewCabWindowBot = -61.706802\n\\ No newline at end of file"},
@@ -169,7 +169,7 @@
       {
         "hash": "bb000f67bd46bbcf36a5004b12a80c7a4adef76f",
         "date": "2025-03-23 14:21:58 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Squashed commit of the following:\n\ncommit 425fefbc490a829b55a27735946947763b335152\nAuthor: MoxAssault <jasonfancher@gmail.com>\nDate:   Sun Mar 23 14:09:14 2025 -0500\n\n    Launcher.png and .ini Updates\n\n    Masters of the Universe\n    Medieval Madness\n\ncommit 16fa7640892f17830e50f0af67949b17c4c8a0d6\nMerge: 9d3e45b0 1cd9ecb0\nAuthor: OminousOsie <osie.oconnor@outlook.com>\nDate:   Sun Mar 23 18:56:56 2025 +0000\n\n    Merge remote-tracking branch 'upstream/main'\n\ncommit 9d3e45b092750e40f817db1c69fad34a80f3eb81\nAuthor: MoxAssault <jasonfancher@gmail.com>\nDate:   Sat Mar 22 19:20:03 2025 -0500\n\n    Hardbody table.yml Correction\n",
         "files": [
           {"status": "M", "path": "external/vpx-hardbody/table.yml", "diff": "diff --git a/external/vpx-hardbody/table.yml b/external/vpx-hardbody/table.yml\nindex 390b77b2..f6e45862 100644\n--- a/external/vpx-hardbody/table.yml\n+++ b/external/vpx-hardbody/table.yml\n@@ -1,16 +1,16 @@\n ---\n-backglassVPSId: \"XNZeF14kkH\"\n-backglassChecksum: \"178DF61EBF411094557EA13B948E5413\"\n+backglassVPSId: 'XNZeF14kkH'\n+backglassChecksum: '178DF61EBF411094557EA13B948E5413'\n backglassNotes: \"Download 'Hardbody (Bally 1987).rar'\"\n-romVPSId: \"XpnfFmFR\"\n-romChecksum: \"DA72FA8413CE7A7025FA12A5B6BA2742\"\n+romVPSId: 'XpnfFmFR'\n+romChecksum: 'DA72FA8413CE7A7025FA12A5B6BA2742'\n fps: 48\n-tableVPSId: \"X_2dmmTr\"\n+tableVPSId: 'X_2dmmTr'\n tagline: \"We're here to *PUMP* you up!\"\n testers:\n-- \"CoffeeAtJoes\"\n-- \"Mox\"\n-vpxVPSId: \"E2HKc9Tl\"\n-vpxChecksum: \"F75A9E626587D61A60CC305F1841B57B\" \n-tableNotes: \n-mainNotes: \n\\ No newline at end of file\n+  - 'CoffeeAtJoes'\n+  - 'Mox'\n+vpxVPSId: 'E2HKc9Tl'\n+vpxChecksum: 'F75A9E626587D61A60CC305F1841B57B'\n+tableNotes:\n+mainNotes:"}
@@ -187,7 +187,7 @@
       {
         "hash": "9d3e45b092750e40f817db1c69fad34a80f3eb81",
         "date": "2025-03-22 19:20:03 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Hardbody table.yml Correction\n",
         "files": [
           {"status": "M", "path": "external/vpx-hardbody/table.yml", "diff": "diff --git a/external/vpx-hardbody/table.yml b/external/vpx-hardbody/table.yml\nindex 501af2e8..956710bb 100644\n--- a/external/vpx-hardbody/table.yml\n+++ b/external/vpx-hardbody/table.yml\n@@ -3,7 +3,7 @@ backglassVPSId: \"XNZeF14kkH\"\n backglassChecksum: \"178DF61EBF411094557EA13B948E5413\"\n backglassNotes: \"Download 'Hardbody (Bally 1987).rar'\"\n romVPSId: \"XpnfFmFR\"\n-romChecksum: \"F75A9E626587D61A60CC305F1841B57B\"\n+romChecksum: \"DA72FA8413CE7A7025FA12A5B6BA2742\"\n fps: 48\n tableVPSId: \"X_2dmmTr\"\n tagline: \"We're here to *PUMP* you up!\"\n@@ -11,6 +11,6 @@ testers:\n - \"CoffeeAtJoes\"\n - \"Mox\"\n vpxVPSId: \"E2HKc9Tl\"\n-vpxChecksum: \"DA72FA8413CE7A7025FA12A5B6BA2742\"\n+vpxChecksum: \"F75A9E626587D61A60CC305F1841B57B\"\n tableNotes: \n mainNotes: \n\\ No newline at end of file\n"}
@@ -196,7 +196,7 @@
       {
         "hash": "edf427f9815b9da7378e3228d2173b9b3447dc21",
         "date": "2025-03-22 18:37:25 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Launcher Fixes and INI Correction\n",
         "files": [
           {"status": "M", "path": "external/vpx-hardbody/launcher.png"}
@@ -205,7 +205,7 @@
       {
         "hash": "502aed9f9a19bcb8438805126dff636bb5f0cac2",
         "date": "2025-03-22 17:44:39 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Created table.yml Files\n",
         "files": [
           {"status": "A", "path": "external/vpx-hardbody/table.yml", "diff": "diff --git a/external/vpx-hardbody/table.yml b/external/vpx-hardbody/table.yml\nnew file mode 100644\nindex 00000000..501af2e8\n--- /dev/null\n+++ b/external/vpx-hardbody/table.yml\n@@ -0,0 +1,16 @@\n+---\n+backglassVPSId: \"XNZeF14kkH\"\n+backglassChecksum: \"178DF61EBF411094557EA13B948E5413\"\n+backglassNotes: \"Download 'Hardbody (Bally 1987).rar'\"\n+romVPSId: \"XpnfFmFR\"\n+romChecksum: \"F75A9E626587D61A60CC305F1841B57B\"\n+fps: 48\n+tableVPSId: \"X_2dmmTr\"\n+tagline: \"We're here to *PUMP* you up!\"\n+testers:\n+- \"CoffeeAtJoes\"\n+- \"Mox\"\n+vpxVPSId: \"E2HKc9Tl\"\n+vpxChecksum: \"DA72FA8413CE7A7025FA12A5B6BA2742\"\n+tableNotes: \n+mainNotes: \n\\ No newline at end of file\n"}

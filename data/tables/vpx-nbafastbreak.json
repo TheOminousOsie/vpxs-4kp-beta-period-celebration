@@ -4,7 +4,7 @@
       {
         "hash": "7bdca49d6269ebffbac763b8c3624b5f86251da1",
         "date": "2026-07-22 00:19:59 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "NBA Fastbreak workaround\n",
         "files": [
           {"status": "M", "path": "external/vpx-nbafastbreak/table.ini", "diff": "diff --git a/external/vpx-nbafastbreak/table.ini b/external/vpx-nbafastbreak/table.ini\nindex 082dfc88..5ab188c7 100644\n--- a/external/vpx-nbafastbreak/table.ini\n+++ b/external/vpx-nbafastbreak/table.ini\n@@ -9,6 +9,7 @@ ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n ScreenPlayerY = 14.993608\n+CacheMode = 0\n \n [TableOverride]\n ViewCabMode = 2\n"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-nbafastbreak/table.yml", "diff": "diff --git a/external/vpx-nbafastbreak/table.yml b/external/vpx-nbafastbreak/table.yml\nindex 09ea2c9e..506766ed 100644\n--- a/external/vpx-nbafastbreak/table.yml\n+++ b/external/vpx-nbafastbreak/table.yml\n@@ -14,7 +14,4 @@ tagline: \"They Shoot, You Score!\"\n testers:\n   - \"Bla1ze\"\n vpxVPSId: \"y5saowFC\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"03F38584778625C6A4F59D88CED364F7\"\n-  - \"9E4C9825FED837F67F0E7326D46893D1\"\n+vpxChecksum: \"03F38584778625C6A4F59D88CED364F7\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-nbafastbreak/table.yml", "diff": "diff --git a/external/vpx-nbafastbreak/table.yml b/external/vpx-nbafastbreak/table.yml\nindex 506766ed..09ea2c9e 100644\n--- a/external/vpx-nbafastbreak/table.yml\n+++ b/external/vpx-nbafastbreak/table.yml\n@@ -14,4 +14,7 @@ tagline: \"They Shoot, You Score!\"\n testers:\n   - \"Bla1ze\"\n vpxVPSId: \"y5saowFC\"\n-vpxChecksum: \"03F38584778625C6A4F59D88CED364F7\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"03F38584778625C6A4F59D88CED364F7\"\n+  - \"9E4C9825FED837F67F0E7326D46893D1\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "D", "path": "external/vpx-nbafastbreak/pinmame.ini", "diff": "diff --git a/external/vpx-nbafastbreak/pinmame.ini b/external/vpx-nbafastbreak/pinmame.ini\ndeleted file mode 100644\nindex c53eebae..00000000\n--- a/external/vpx-nbafastbreak/pinmame.ini\n+++ /dev/null\n@@ -1,6 +0,0 @@\n-[settings]\n-cheat=0\n-sound=1\n-dmd_red=255\n-dmd_green=255\n-dmd_blue=255\n\\ No newline at end of file"},

@@ -4,7 +4,7 @@
       {
         "hash": "2833e9c0f54dc3c3661bbd0ed31281d603535809",
         "date": "2026-09-09 22:52:36 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe launcher updates 2\n\nAmerican Graffiti\nJP's Attack From Mars LE\nJames Cameron's Avatar\nBlack Pyramid\nChrono Trigger\nCreature From The Black Lagoon\nCirqus Voltaire\nHardbody\nF-14 Tomcat\nJudge Dredd\nDiner\nDr. Dude\nHigh Roller Casino\nJP's LOTR\nRobocop\nSimpsons Pinball Party\nStranger Things\nTaxi\nTMNT\nTMNT Remix - also folder rename\nTorpedo Alley\nTransformers Pro\nTransformers G1\nWhoa Nellie\n",
         "files": [
           {"status": "M", "path": "external/vpx-diner/launcher.png"}
@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-diner/table.yml", "diff": "diff --git a/external/vpx-diner/table.yml b/external/vpx-diner/table.yml\nindex 11634d69..e6fa740f 100644\n--- a/external/vpx-diner/table.yml\n+++ b/external/vpx-diner/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"w7_rYKRX\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"17a8e4b8980db6302ae83901c9f77c17\"\n-  - \"850824AF21E5E80A192E21AFEC90B865\"\n+backglassChecksum: \"17a8e4b8980db6302ae83901c9f77c17\"\n backglassNotes: \"Download 'Diner_B2S_2_scr.zip'\"\n fps: 60\n romVPSId: \"4vpPLYhK\"\n@@ -16,7 +13,4 @@ testers:\n   - \"mcap\"\n   - \"OminousOsie\"\n vpxVPSId: \"9-YJeZ-RkH\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"9e35cec2781eb05b5da3b43e54a8b80a\"\n-  - \"3BAA1CE5D831CFF35E039C0E1EF07E8C\"\n+vpxChecksum: \"9e35cec2781eb05b5da3b43e54a8b80a\""}
@@ -31,7 +31,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-diner/table.yml", "diff": "diff --git a/external/vpx-diner/table.yml b/external/vpx-diner/table.yml\nindex 2dd0ad34..11634d69 100644\n--- a/external/vpx-diner/table.yml\n+++ b/external/vpx-diner/table.yml\n@@ -5,7 +5,7 @@ backglassChecksum:\n   - \"17a8e4b8980db6302ae83901c9f77c17\"\n   - \"850824AF21E5E80A192E21AFEC90B865\"\n backglassNotes: \"Download 'Diner_B2S_2_scr.zip'\"\n-fps: 40\n+fps: 60\n romVPSId: \"4vpPLYhK\"\n romChecksum: \"077941b50f11cd7ea28552333f815f0d\"\n coloredROMVPSId: \"2mjYVpHHp6\""}
@@ -40,7 +40,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-diner/table.yml", "diff": "diff --git a/external/vpx-diner/table.yml b/external/vpx-diner/table.yml\nindex f8632176..2dd0ad34 100644\n--- a/external/vpx-diner/table.yml\n+++ b/external/vpx-diner/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"w7_rYKRX\"\n-backglassChecksum: \"17a8e4b8980db6302ae83901c9f77c17\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"17a8e4b8980db6302ae83901c9f77c17\"\n+  - \"850824AF21E5E80A192E21AFEC90B865\"\n backglassNotes: \"Download 'Diner_B2S_2_scr.zip'\"\n fps: 40\n romVPSId: \"4vpPLYhK\"\n@@ -13,4 +16,7 @@ testers:\n   - \"mcap\"\n   - \"OminousOsie\"\n vpxVPSId: \"9-YJeZ-RkH\"\n-vpxChecksum: \"9e35cec2781eb05b5da3b43e54a8b80a\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"9e35cec2781eb05b5da3b43e54a8b80a\"\n+  - \"3BAA1CE5D831CFF35E039C0E1EF07E8C\""}
@@ -49,7 +49,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-diner/table.ini", "diff": "diff --git a/external/vpx-diner/table.ini b/external/vpx-diner/table.ini\nindex 6e270159..e98f6a8d 100644\n--- a/external/vpx-diner/table.ini\n+++ b/external/vpx-diner/table.ini\n@@ -1,24 +1,17 @@\n [Player]\n-BallTrailStrength = 0.388235\n-AlphaRampAccuracy = 10\n OverrideTableEmissionScale = 1\n EmissionScale = 0.807645\n JoyAddCredit2Key = 1\n-DynamicDayNight = 0\n+ScreenPlayerY = 14.999967\n+ScreenPlayerZ = 89.978729\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 1.037274\n-ViewCabScaleY = 1.310467\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 224.397064\n-ViewCabPlayerY = 0.360000\n-ViewCabPlayerZ = -344.390015\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n-ToneMapper = 0\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.134937\n+ViewCabScaleY = 0.955002\n+ViewCabHOfs = 0.018750\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 217.428879\n+ViewCabWindowBot = 138.953217\n+ViewCabRotation = 180.000000\n+ViewCabScaleZ = 0.822032\n\\ No newline at end of file"},

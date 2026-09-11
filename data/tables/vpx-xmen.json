@@ -22,7 +22,7 @@
       {
         "hash": "a1e17ee8e056bffd00825b4fa55113a100459dee",
         "date": "2026-07-18 12:22:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "fixed disabled tables\n",
         "files": [
           {"status": "M", "path": "external/vpx-xmen/table.yml", "diff": "diff --git a/external/vpx-xmen/table.yml b/external/vpx-xmen/table.yml\nindex 51e8ac06..8eced943 100644\n--- a/external/vpx-xmen/table.yml\n+++ b/external/vpx-xmen/table.yml\n@@ -6,7 +6,6 @@ coloredROMChecksum:\n   - \"7305071808bbb3ab817b0274ff2c043f\"\n coloredROMPin2DMD: true\n coloredROMVPSId: \"UySa9Zil\"\n-enabled: true\n fps: 60\n romChecksum: \"9980975C37A1F1ED1D2F3CD2BB6E9826\"\n romVPSId: \"ZyQybMpZ\"\n"}
@@ -31,7 +31,7 @@
       {
         "hash": "4a02ebc321763607047eeb2ac122432348f2226b",
         "date": "2026-07-18 00:40:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "final updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-xmen/table.yml", "diff": "diff --git a/external/vpx-xmen/table.yml b/external/vpx-xmen/table.yml\nindex 99c14fe0..51e8ac06 100644\n--- a/external/vpx-xmen/table.yml\n+++ b/external/vpx-xmen/table.yml\n@@ -1,15 +1,20 @@\n ---\n-backglassVPSId: \"6p2tjIwLte\"\n backglassChecksum: \"3BB0FBA943861D6D5DCA4224E53EF2EE\"\n+backglassVPSId: \"6p2tjIwLte\"\n+coloredROMChecksum:\n+  - \"9c190be91d8fba222e7cb4a624799ff2\"\n+  - \"7305071808bbb3ab817b0274ff2c043f\"\n+coloredROMPin2DMD: true\n+coloredROMVPSId: \"UySa9Zil\"\n+enabled: true\n fps: 60\n-romUrlOverride: \"https://vpuniverse.com/files/file/12824-x-men-pro-xmn_151h/\"\n-romNotes: \"Download version xmn_151h\"\n-romVersionOverride: \"xmn_151h\"\n romChecksum: \"9980975C37A1F1ED1D2F3CD2BB6E9826\"\n+romVPSId: \"ZyQybMpZ\"\n tableNotes: \"Download version 1.3\"\n-tableVPSId: \"JjZGAssNXT\"\n+tableVPSId: \"FTxECos3\"\n tagline: \"Go try that again Bub!\"\n testers:\n   - \"Bla1ze\"\n-vpxVPSId: \"I8tgJEQRO-\"\n+  - \"Wraith\"\n vpxChecksum: \"108CFD1D709D3A248FB7ACFC1559C5DE\"\n+vpxVPSId: \"I8tgJEQRO-\"\n"}
@@ -40,7 +40,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-xmen/table.yml", "diff": "diff --git a/external/vpx-xmen/table.yml b/external/vpx-xmen/table.yml\nindex 6f45803d..99c14fe0 100644\n--- a/external/vpx-xmen/table.yml\n+++ b/external/vpx-xmen/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"6p2tjIwLte\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"3BB0FBA943861D6D5DCA4224E53EF2EE\"\n-  - \"2B9856D9256CA9767D7C4A4481650F94\"\n+backglassChecksum: \"3BB0FBA943861D6D5DCA4224E53EF2EE\"\n fps: 60\n romUrlOverride: \"https://vpuniverse.com/files/file/12824-x-men-pro-xmn_151h/\"\n romNotes: \"Download version xmn_151h\"\n@@ -15,7 +12,4 @@ tagline: \"Go try that again Bub!\"\n testers:\n   - \"Bla1ze\"\n vpxVPSId: \"I8tgJEQRO-\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"108CFD1D709D3A248FB7ACFC1559C5DE\"\n-  - \"718E744A6217EF327D9F41A2B1E1EF19\"\n+vpxChecksum: \"108CFD1D709D3A248FB7ACFC1559C5DE\""}
@@ -49,7 +49,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-xmen/table.yml", "diff": "diff --git a/external/vpx-xmen/table.yml b/external/vpx-xmen/table.yml\nindex 99c14fe0..6f45803d 100644\n--- a/external/vpx-xmen/table.yml\n+++ b/external/vpx-xmen/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"6p2tjIwLte\"\n-backglassChecksum: \"3BB0FBA943861D6D5DCA4224E53EF2EE\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"3BB0FBA943861D6D5DCA4224E53EF2EE\"\n+  - \"2B9856D9256CA9767D7C4A4481650F94\"\n fps: 60\n romUrlOverride: \"https://vpuniverse.com/files/file/12824-x-men-pro-xmn_151h/\"\n romNotes: \"Download version xmn_151h\"\n@@ -12,4 +15,7 @@ tagline: \"Go try that again Bub!\"\n testers:\n   - \"Bla1ze\"\n vpxVPSId: \"I8tgJEQRO-\"\n-vpxChecksum: \"108CFD1D709D3A248FB7ACFC1559C5DE\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"108CFD1D709D3A248FB7ACFC1559C5DE\"\n+  - \"718E744A6217EF327D9F41A2B1E1EF19\""}
@@ -58,7 +58,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-xmen/table.ini", "diff": "diff --git a/external/vpx-xmen/table.ini b/external/vpx-xmen/table.ini\nindex 7be1a173..0a2b09db 100644\n--- a/external/vpx-xmen/table.ini\n+++ b/external/vpx-xmen/table.ini\n@@ -1,19 +1,16 @@\n [Player]\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 0\n-ScreenPlayerZ = 99.951218\n+ScreenPlayerZ = 90.004417\n+ScreenPlayerY = 14.994200\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.234488\n-ViewCabScaleY = 1.040997\n+ViewCabScaleX = 1.220802\n+ViewCabScaleY = 0.999691\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -29.280479\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 82.953217\n-\n-[Standalone]\n-BackBufferScale = 0.355729\n-WindowRenderMode = 0\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 305.544037\n+ViewCabWindowBot = 0.463226\n\\ No newline at end of file"},
@@ -68,7 +68,7 @@
       {
         "hash": "e746650ae1685c1c20c8b005ae5edd0d328115f2",
         "date": "2025-07-21 14:26:11 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 table updates\n\nRipley's Believe It Or Not!\nThe Lost World: Jurassic Park\nX-Men Wolverine LE\n",
         "files": [
           {"status": "M", "path": "external/vpx-xmen/table.yml", "diff": "diff --git a/external/vpx-xmen/table.yml b/external/vpx-xmen/table.yml\nindex e559df06..304427db 100644\n--- a/external/vpx-xmen/table.yml\n+++ b/external/vpx-xmen/table.yml\n@@ -6,11 +6,12 @@ romUrlOverride: \"https://vpuniverse.com/files/file/12824-x-men-pro-xmn_151h/\"\n romNotes: \"Download version xmn_151h\"\n romVersionOverride: \"xmn_151h\"\n romChecksum: \"9980975C37A1F1ED1D2F3CD2BB6E9826\"\n+tableNotes: \"Download version 1.3\"\n tableVPSId: \"JjZGAssNXT\"\n tagline: \"Go try that again Bub!\"\n testers:\n   - \"Bla1ze\"\n vpxVPSId: \"I8tgJEQRO-\"\n-vpxChecksum: \"65506D6F90FEF53C1CB298E4E2C9C4B0\"\n+vpxChecksum: \"108CFD1D709D3A248FB7ACFC1559C5DE\"\n applyFixes:\n   - \"bass\"\n"}
@@ -188,7 +188,7 @@
       {
         "hash": "457043b4033ba4f226aa31ca13de9489f84125fd",
         "date": "2025-04-02 09:56:31 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update X-Men LE wheel image\n",
         "files": [
           {"status": "M", "path": "external/vpx-xmen/launcher.png"}
@@ -215,7 +215,7 @@
       {
         "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
         "date": "2025-03-19 14:01:02 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Large README Updates\n\n46 README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-xmen/README.md", "diff": "diff --git a/external/vpx-xmen/README.md b/external/vpx-xmen/README.md\nindex 9a2ad4e3..5d5a9ce0 100755\n--- a/external/vpx-xmen/README.md\n+++ b/external/vpx-xmen/README.md\n@@ -1,39 +1,30 @@\n # X-Men LE (Stern 2012) MOD color rush 1.5\n \n-![Table Preview](https://i.imgur.com/iJ6rXVJ.jpeg))\n+![Table Preview](https://i.imgur.com/iJ6rXVJ.jpeg)\n \n-Author: [masonm](https://www.vpforums.org/index.php?showuser=147793)\n+---\n \n-Tested by: Bla1ze  \n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=16898) | 1.5 | [masonm](https://www.vpforums.org/index.php?showuser=147793) |\n+| B2S | [VP Universe](https://vpuniverse.com/files/file/2435-x-men-pro-stern-2012/) | 3.0 | [Wildman](https://vpuniverse.com/profile/5-wildman/) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [VP Universe](https://vpuniverse.com/files/file/12824-x-men-pro-xmn_151h/) | N/A | N/A |\n \n-Version: 1.5  \n-\n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=16898)\n-\n-DirectB2S\n-\n-Author: [Wildman](https://vpuniverse.com/profile/5-wildman/)  \n-Version: 3.0 \n-Download: [VP Universe](https://vpuniverse.com/files/file/2435-x-men-pro-stern-2012/)\n-\n-ROM\n-\n-Download: [VP Universe](https://vpuniverse.com/files/file/12824-x-men-pro-xmn_151h/)\n-\n-SHA: 40c497205f3470397727513eb698845cfe14acc4 \n-\n-MD5:3f68b1a271c4d3b48f899ecf2f7f3bac\n+**Tested by:** [Bla1ze]\n \n+---\n \n ## Status \n-\n Minimum VPX Standalone build: 10.8.0-1983-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-xmen.elf\n - Download the table and directb2s versions listed above and copy them into this folder. The ROM zip gets copied to pinmame/roms (do not unzip)."}

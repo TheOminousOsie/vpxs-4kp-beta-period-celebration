@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-starship/table.yml", "diff": "diff --git a/external/vpx-starship/table.yml b/external/vpx-starship/table.yml\nindex 57780556..00c2c576 100644\n--- a/external/vpx-starship/table.yml\n+++ b/external/vpx-starship/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"fx1kFVe7Be\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"8417e975fab9300a2217c635ff1fd3f4\"\n-  - \"69A713B86BB244E3D1F674D51BD2C47D\"\n+backglassChecksum: \"8417e975fab9300a2217c635ff1fd3f4\"\n backglassNotes: \"Download version 1.0.1\"\n coloredROMChecksum: \"3353C567E4C99191C352D75ED8C9464F\"\n coloredROMNotes: \"Download 'Starship_Troopers_JPAJMO.pac'\""}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-starship/table.yml", "diff": "diff --git a/external/vpx-starship/table.yml b/external/vpx-starship/table.yml\nindex cde2713f..57780556 100644\n--- a/external/vpx-starship/table.yml\n+++ b/external/vpx-starship/table.yml\n@@ -8,7 +8,7 @@ backglassNotes: \"Download version 1.0.1\"\n coloredROMChecksum: \"3353C567E4C99191C352D75ED8C9464F\"\n coloredROMNotes: \"Download 'Starship_Troopers_JPAJMO.pac'\"\n coloredROMVPSId: \"S1xQNGdYbk\"\n-fps: 60\n+fps: 55\n romVPSId: \"CwAwf-gs\"\n romChecksum: \"ac756e2ab3643c1743b53ef6e51dfafe\"\n tableVPSId: \"JU4EAhCe\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-starship/table.yml", "diff": "diff --git a/external/vpx-starship/table.yml b/external/vpx-starship/table.yml\nindex b7d7a521..cde2713f 100644\n--- a/external/vpx-starship/table.yml\n+++ b/external/vpx-starship/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"fx1kFVe7Be\"\n-backglassChecksum: \"8417e975fab9300a2217c635ff1fd3f4\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"8417e975fab9300a2217c635ff1fd3f4\"\n+  - \"69A713B86BB244E3D1F674D51BD2C47D\"\n backglassNotes: \"Download version 1.0.1\"\n coloredROMChecksum: \"3353C567E4C99191C352D75ED8C9464F\"\n coloredROMNotes: \"Download 'Starship_Troopers_JPAJMO.pac'\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-starship/table.ini", "diff": "diff --git a/external/vpx-starship/table.ini b/external/vpx-starship/table.ini\nindex 264aa119..cd4f1b5c 100644\n--- a/external/vpx-starship/table.ini\n+++ b/external/vpx-starship/table.ini\n@@ -1,24 +1,21 @@\n [Player]\n BallTrailStrength = 0.490196\n-ScreenPlayerZ = 95.300934\n+ScreenPlayerZ = 90.002052\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.400001\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n-AAFactor = 0.95\n+ScreenPlayerY = 15.002403\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.203485\n-ViewCabScaleY = 1.067502\n+ViewCabScaleX = 1.267413\n+ViewCabScaleY = 0.992135\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -5.499996\n-ViewCabWindowTop = 370.541931\n+ViewCabVOfs = 0.033482\n+ViewCabWindowTop = 358.109039\n ViewCabWindowBot = 97.953217\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file"},
@@ -41,7 +41,7 @@
       {
         "hash": "b156a7dd2a3ec663d2ba1382ab3b801b28d512fe",
         "date": "2025-11-24 23:56:22 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Starship Troopers\n\nFixed POV\nBumped up resolution with AAFactor\n",
         "files": [
           {"status": "M", "path": "external/vpx-starship/table.ini", "diff": "diff --git a/external/vpx-starship/table.ini b/external/vpx-starship/table.ini\nindex 5dc36357..264aa119 100644\n--- a/external/vpx-starship/table.ini\n+++ b/external/vpx-starship/table.ini\n@@ -3,10 +3,11 @@ BallTrailStrength = 0.490196\n ScreenPlayerZ = 95.300934\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.100831\n+EmissionScale = 0.400001\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n+AAFactor = 0.95\n \n [TableOverride]\n ViewCabMode = 2\n@@ -18,8 +19,6 @@ ViewCabHOfs = 0.000000\n ViewCabVOfs = -5.499996\n ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 97.953217\n-ToneMapper = 0\n-Difficulty = 1.000000\n \n [Standalone]\n-BackBufferScale = 0.355729\n\\ No newline at end of file\n+BackBufferScale = 0.416666\n\\ No newline at end of file"},

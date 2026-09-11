@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-dragoni/table.yml", "diff": "diff --git a/external/vpx-dragoni/table.yml b/external/vpx-dragoni/table.yml\nindex 52e95f93..b4ae9509 100644\n--- a/external/vpx-dragoni/table.yml\n+++ b/external/vpx-dragoni/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"1C7004420A199F01322A747800FE6A36\"\n-  - \"FF174F524B5142BC5BDEFA684BE4165A\"\n+backglassChecksum: \"1C7004420A199F01322A747800FE6A36\"\n backglassVPSId: \"KY8M7mAFhv\"\n fps: 60\n tagline: \"BECOME A KILLER DRAGON!\"\n@@ -11,8 +8,5 @@ testers:\n   - \"evilwraith\"\n   - \"Curt\"\n   - \"CoffeeAtJoes\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"EDCD9293C8D20DA49B620CA8884488D3\"\n-  - \"CF5BEAE9FF92F58AAE659BE16EA0BCD6\"\n+vpxChecksum: \"EDCD9293C8D20DA49B620CA8884488D3\"\n vpxVPSId: \"yT3PG1xzFm\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-dragoni/table.yml", "diff": "diff --git a/external/vpx-dragoni/table.yml b/external/vpx-dragoni/table.yml\nindex b4ae9509..52e95f93 100644\n--- a/external/vpx-dragoni/table.yml\n+++ b/external/vpx-dragoni/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"1C7004420A199F01322A747800FE6A36\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"1C7004420A199F01322A747800FE6A36\"\n+  - \"FF174F524B5142BC5BDEFA684BE4165A\"\n backglassVPSId: \"KY8M7mAFhv\"\n fps: 60\n tagline: \"BECOME A KILLER DRAGON!\"\n@@ -8,5 +11,8 @@ testers:\n   - \"evilwraith\"\n   - \"Curt\"\n   - \"CoffeeAtJoes\"\n-vpxChecksum: \"EDCD9293C8D20DA49B620CA8884488D3\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"EDCD9293C8D20DA49B620CA8884488D3\"\n+  - \"CF5BEAE9FF92F58AAE659BE16EA0BCD6\"\n vpxVPSId: \"yT3PG1xzFm\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-dragoni/table.ini", "diff": "diff --git a/external/vpx-dragoni/table.ini b/external/vpx-dragoni/table.ini\nindex fd587d61..8ea456c7 100644\n--- a/external/vpx-dragoni/table.ini\n+++ b/external/vpx-dragoni/table.ini\n@@ -6,11 +6,11 @@ OverrideTableEmissionScale = 0\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.052345\n-ViewCabScaleY = 1.108894\n-ViewCabScaleZ = 0.935798\n+ViewCabScaleX = 1.067207\n+ViewCabScaleY = 0.984545\n+ViewCabScaleZ = 0.818159\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -83.310768\n-ViewCabWindowTop = 325.541931\n-ViewCabWindowBot = 83.953270\n\\ No newline at end of file\n+ViewCabVOfs = 14.119199\n+ViewCabWindowTop = 0.276900\n+ViewCabWindowBot = 0.650272"},
@@ -52,7 +52,7 @@
       {
         "hash": "04b62f8c976f93617f4700c6bdd17d65aaf430c1",
         "date": "2025-10-14 10:36:14 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "image mambo deux\n",
         "files": [
           {"status": "A", "path": "external/vpx-dragoni/dmd.png"}
@@ -61,7 +61,7 @@
       {
         "hash": "c9e6550db80b3d689d65fbbacb83ea695ac61695",
         "date": "2025-10-14 10:35:24 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "image mambo\n",
         "files": [
           {"status": "D", "path": "external/vpx-dragoni/DMD.png"}
@@ -70,7 +70,7 @@
       {
         "hash": "3baadcf2bacb37c50d12f55de017d12fb914296e",
         "date": "2025-09-01 20:11:30 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Art\n",
         "files": [
           {"status": "A", "path": "external/vpx-dragoni/DMD.png"},
@@ -80,7 +80,7 @@
       {
         "hash": "dbc3fbdda72036fa978c0b03db9e335386363ae7",
         "date": "2025-08-31 19:15:54 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 tables\n\nDragon (Gottlieb)\nDragon (Interflip)\nChristine (based on Dragon (Gottlieb)\n",
         "files": [
           {"status": "A", "path": "external/vpx-dragoni/launcher.png"},

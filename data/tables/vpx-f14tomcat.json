@@ -4,7 +4,7 @@
       {
         "hash": "2833e9c0f54dc3c3661bbd0ed31281d603535809",
         "date": "2026-09-09 22:52:36 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe launcher updates 2\n\nAmerican Graffiti\nJP's Attack From Mars LE\nJames Cameron's Avatar\nBlack Pyramid\nChrono Trigger\nCreature From The Black Lagoon\nCirqus Voltaire\nHardbody\nF-14 Tomcat\nJudge Dredd\nDiner\nDr. Dude\nHigh Roller Casino\nJP's LOTR\nRobocop\nSimpsons Pinball Party\nStranger Things\nTaxi\nTMNT\nTMNT Remix - also folder rename\nTorpedo Alley\nTransformers Pro\nTransformers G1\nWhoa Nellie\n",
         "files": [
           {"status": "M", "path": "external/vpx-f14tomcat/launcher.png"}
@@ -22,7 +22,7 @@
       {
         "hash": "d42490bc5e4da87bf6a5f58227236c89f957978c",
         "date": "2026-07-23 20:48:33 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "updated readmes\n",
         "files": [
           {"status": "M", "path": "external/vpx-f14tomcat/README.md", "diff": "diff --git a/external/vpx-f14tomcat/README.md b/external/vpx-f14tomcat/README.md\nindex 35ea328d..0824dfe7 100755\n--- a/external/vpx-f14tomcat/README.md\n+++ b/external/vpx-f14tomcat/README.md\n@@ -8,13 +8,13 @@\n \n | Backglass | DMD | ROM Required | Has Puppack | FPS |\n |-----------|-----|-----|-----|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n <br>\n \n **VPXS 4KP Testers:**\n   - Bla1ze\n-  - OminousOsie 🌸\n+  - Ominous Osie 🌸\n \n <br>\n \n@@ -33,7 +33,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 1.  Open the **Table Manager**\n 2.  Click the **Add Table** button\n 3.  Select the **Wizard** tab\n-4.  Find and select this table from the dropdown menu: **`F-14 Tomcat`**\n+4.  Find and select this table from the dropdown menu: **`F-14 Tomcat (Williams 1987)`**\n 5.  Follow the on-screen instructions to download and upload the required files\n 6. *\"Hiiiiighwaaaay tooooooo theeee DANGER ZONNEEE!\"*\n \n@@ -53,27 +53,6 @@ __*We hope you enjoy!!*__\n - mrandromeda      - SScorpio         - pointdablame\n </pre>\n \n-<br>\n-\n----\n-\n-<br>\n-\n-## ➕ Optional Extras\n-\n-> All optional extras can be added to the table after the Wizard installation via: \n-> -  Clicking `\"Go to table\"` directly after wizard installation\n-> -  Navigate to the table folder using the `USB Root` tab.\n-\n-<br>\n-\n-### ⏯️ Music Files:\n-\n-1.  Download table folder from [VP Universe](https://vpuniverse.com/files/file/18690-f-14-tomcat-williams-1987-hanibals-4k-mod/) (by [Hanibal2001](https://vpuniverse.com/profile/872-hanibal2001/))\n-2.  Extract the folder `Music` from the zip, and put it in the `external/vpx-f14tomcat` folder in the Table Manager\n-3.  You should then have `external/vpx-f14tomcat/Music/F14` > `1.mp3` / `2.mp3` / `3.mp3`  etc\n-4.  Enjoy!\n-\n \n <br>\n <br>"}
@@ -31,7 +31,7 @@
       {
         "hash": "8597809a27bf4c5c816795a05fcf3bd115e367f7",
         "date": "2026-07-23 20:40:05 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "readme updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-f14tomcat/README.md", "diff": "diff --git a/external/vpx-f14tomcat/README.md b/external/vpx-f14tomcat/README.md\nindex 8162e0ef..35ea328d 100755\n--- a/external/vpx-f14tomcat/README.md\n+++ b/external/vpx-f14tomcat/README.md\n@@ -6,9 +6,9 @@\n \n ## *️⃣  Table Statistics\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n \n <br>\n "}
@@ -40,7 +40,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-f14tomcat/table.yml", "diff": "diff --git a/external/vpx-f14tomcat/table.yml b/external/vpx-f14tomcat/table.yml\nindex 8250144b..38a521d6 100644\n--- a/external/vpx-f14tomcat/table.yml\n+++ b/external/vpx-f14tomcat/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"WnCuy2PPsE\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"2f36a56535883ed3cc2b07a1ac725ef9\"\n-  - \"FA6C3B8A498026DF6746E1EF34FAB502\"\n+backglassChecksum: \"2f36a56535883ed3cc2b07a1ac725ef9\"\n coloredROMVPSId: \"v0KM2Iq138\"\n coloredROMChecksum: \"85023f65f17f4fdf9c98de32776e0ef2\"\n fps: 60\n@@ -15,8 +12,5 @@ testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n vpxVPSId: \"0Qepbg-3mI\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"e05426c7337852471dee18fa4897aae0\"\n-  - \"1593E4FD006C69A8918BC15B800C8AAC\"\n+vpxChecksum: \"e05426c7337852471dee18fa4897aae0\"\n mainNotes: \"Color ROM Serum file available on VPUniverse!\""}
@@ -49,7 +49,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-f14tomcat/table.yml", "diff": "diff --git a/external/vpx-f14tomcat/table.yml b/external/vpx-f14tomcat/table.yml\nindex 1484957c..8250144b 100644\n--- a/external/vpx-f14tomcat/table.yml\n+++ b/external/vpx-f14tomcat/table.yml\n@@ -6,7 +6,7 @@ backglassChecksum:\n   - \"FA6C3B8A498026DF6746E1EF34FAB502\"\n coloredROMVPSId: \"v0KM2Iq138\"\n coloredROMChecksum: \"85023f65f17f4fdf9c98de32776e0ef2\"\n-fps: 40\n+fps: 60\n romVPSId: \"V91gVf-r\"\n romChecksum: \"21ba673a8588cfdb6b2ce7c5b9fdb664\"\n tableVPSId: \"ckemo8oL\""}
@@ -58,7 +58,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-f14tomcat/table.yml", "diff": "diff --git a/external/vpx-f14tomcat/table.yml b/external/vpx-f14tomcat/table.yml\nindex 9d390420..1484957c 100644\n--- a/external/vpx-f14tomcat/table.yml\n+++ b/external/vpx-f14tomcat/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"WnCuy2PPsE\"\n-backglassChecksum: \"2f36a56535883ed3cc2b07a1ac725ef9\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"2f36a56535883ed3cc2b07a1ac725ef9\"\n+  - \"FA6C3B8A498026DF6746E1EF34FAB502\"\n coloredROMVPSId: \"v0KM2Iq138\"\n coloredROMChecksum: \"85023f65f17f4fdf9c98de32776e0ef2\"\n fps: 40\n@@ -12,5 +15,8 @@ testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n vpxVPSId: \"0Qepbg-3mI\"\n-vpxChecksum: \"e05426c7337852471dee18fa4897aae0\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"e05426c7337852471dee18fa4897aae0\"\n+  - \"1593E4FD006C69A8918BC15B800C8AAC\"\n mainNotes: \"Color ROM Serum file available on VPUniverse!\""}
@@ -67,7 +67,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-f14tomcat/table.ini", "diff": "diff --git a/external/vpx-f14tomcat/table.ini b/external/vpx-f14tomcat/table.ini\nindex 6ad03b54..925cd331 100644\n--- a/external/vpx-f14tomcat/table.ini\n+++ b/external/vpx-f14tomcat/table.ini\n@@ -1,19 +1,21 @@\n+[Standalone]\n+B2SHideB2SDMD = 1\n+\n [Player]\n BallTrailStrength = 0.490196\n AlphaRampAccuracy = 10\n OverrideTableEmissionScale = 1\n EmissionScale = 0.27\n JoyAddCredit2Key = 1\n+ScreenPlayerY = 12.023753\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.747956\n-ViewCabScaleY = 1.037503\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 6.079984\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.260118\n+ViewCabScaleY = 0.999792\n+ViewCabScaleZ = 0.856946\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.015632\n+ViewCabWindowTop = 250.581970\n+ViewCabWindowBot = 11.565258\n\\ No newline at end of file"},

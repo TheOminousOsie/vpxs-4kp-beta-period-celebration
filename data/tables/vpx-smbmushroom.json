@@ -4,7 +4,7 @@
       {
         "hash": "9c964b3bc08604bd9b5b1333f23439f9ed234aea",
         "date": "2026-08-12 22:38:15 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update SMBMW\n\nLauncher with new logo\nnvram in pinball mode with 2 balls\nadjusted ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-smbmushroom/launcher.png"},

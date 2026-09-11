@@ -4,7 +4,7 @@
       {
         "hash": "beae2cad40fd0252e769870e3239f7136b475810",
         "date": "2026-09-06 20:26:21 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Barb Wire wizard and art updates (#2188)\n\n* art updates\n\n* art updates\n\n* Create dmdframe.png\n\n* changes + art\n\n* SFW Backglass\n\n* ini updates",
         "files": [
           {"status": "A", "path": "external/vpx-spidermanve/dmdframe.png"},
@@ -15,7 +15,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 3a143da3..4d81e5f4 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"06fe139b4f6fa05eca9706a5b95526e9\"\n-  - \"5F8CC8795FAE7CE4B3A9403E7720B32E\"\n+backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n # yamllint disable-line rule:line-length\n backglassUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=15011\"\n@@ -16,8 +13,5 @@ testers:\n   - \"Bla1ze\"\n   - \"Sscorpio\"\n vpxVPSId: \"A_CodyKoS7\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"47ebcf7c39ddcbedccaa33198ee0a121\"\n-  - \"1A0F62EF49D948B3510F7B4DBECD0479\"\n+vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n tableNotes: \"Version 2.1\""}
@@ -24,7 +24,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 4d81e5f4..3a143da3 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"06fe139b4f6fa05eca9706a5b95526e9\"\n+  - \"5F8CC8795FAE7CE4B3A9403E7720B32E\"\n backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n # yamllint disable-line rule:line-length\n backglassUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=15011\"\n@@ -13,5 +16,8 @@ testers:\n   - \"Bla1ze\"\n   - \"Sscorpio\"\n vpxVPSId: \"A_CodyKoS7\"\n-vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"47ebcf7c39ddcbedccaa33198ee0a121\"\n+  - \"1A0F62EF49D948B3510F7B4DBECD0479\"\n tableNotes: \"Version 2.1\""}
@@ -33,7 +33,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/table.ini b/external/vpx-spidermanve/table.ini\nindex 30f780db..95a069ad 100644\n--- a/external/vpx-spidermanve/table.ini\n+++ b/external/vpx-spidermanve/table.ini\n@@ -1,26 +1,25 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.300211\n-ViewCabScaleY = 1.020362\n+ViewCabScaleX = 1.176447\n+ViewCabScaleY = 1.000122\n ViewCabScaleZ = 0.996211\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 3.959099\n-ViewCabVOfs = 2.200094\n-ViewCabWindowTop = 333.260742\n-ViewCabWindowBot = 138.340256\n+ViewCabHOfs = 0.038400\n+ViewCabVOfs = 0.020296\n+ViewCabWindowTop = 335.455841\n+ViewCabWindowBot = 54.520267\n \n [Player]\n JoyAddCredit2Key = 1\n-ScreenPlayerZ = 100.012512\n+ScreenPlayerZ = 90.010628\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 1.000000\n-MaxTexDimension = 3072\n-FXAA = 1\n-ScreenPlayerX = -0.030400\n+ScreenPlayerX = 0.026700\n+ScreenPlayerY = 14.957751\n \n [TableOption]\n Cabinet Mode = 1.000000\n@@ -28,7 +27,3 @@ Mech Volume = 1.000000\n Ramp Volume = 1.000000\n Ball Roll Volume = 1.000000\n Staged Flippers = 0.000000\n-\n-[Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.416666"},
@@ -43,7 +43,7 @@
       {
         "hash": "af511f8b962ddac07d8147614d02c04cb9d213fc",
         "date": "2025-11-04 09:38:41 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --git a/external/vpx-spidermanve/table.yml b/external/vpx-spidermanve/table.yml\nindex 587a2da6..89158319 100644\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@ -1,7 +1,8 @@\n ---\n-backglassVPSId: \"JZN1nlsWkY\"\n backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n+# yamllint disable-line rule:line-length\n+backglassUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=15011\"\n fps: 40\n romVPSId: \"AWiQu3VK\"\n romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n"}
@@ -160,7 +160,7 @@
       {
         "hash": "9fa29557e25aa47707a2ee0291e0dfabd01b030a",
         "date": "2025-03-30 20:09:39 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Merge remote-tracking branch 'upstream/main'\n",
         "files": [
           {"status": "MM", "path": "external/vpx-spidermanve/table.yml", "diff": "diff --cc external/vpx-spidermanve/table.yml\nindex 76b662eb,587a2da6..6d53058e\n--- a/external/vpx-spidermanve/table.yml\n+++ b/external/vpx-spidermanve/table.yml\n@@@ -1,15 -1,18 +1,18 @@@\n  ---\n- backglassVPSId: \"5zno3zre\"\n- backglassChecksum: \"ef65f0397200a125b3a57db35227d35e\"\n- backglassNotes: \"Download - Spider-Man (Stern 2007) alt full dmd.zip\"\n -backglassVPSId: \"JZN1nlsWkY\"\n -backglassChecksum: \"06fe139b4f6fa05eca9706a5b95526e9\"\n++backglassVPSId: 'JZN1nlsWkY'\n++backglassChecksum: '06fe139b4f6fa05eca9706a5b95526e9'\n+ backglassNotes: \"Use '3-SCR.directB2S' from the download\"\n  fps: 40\n--romVPSId: \"AWiQu3VK\"\n--romChecksum: \"676b70c9a67ceca4a607e9a076358e80\"\n--romNotes: \"Download - smanve_101.zip\"\n--tableVPSId: \"9cAcDFA8\"\n++romVPSId: 'AWiQu3VK'\n++romChecksum: '676b70c9a67ceca4a607e9a076358e80'\n++romNotes: 'Download - smanve_101.zip'\n++tableVPSId: '9cAcDFA8'\n  tagline: \"I'll never look at a sandcastle the same way again!\"\n  testers:\n--  - \"Bla1ze\"\n -  - \"Sscorpio\"\n--vpxVPSId: \"A_CodyKoS7\"\n--vpxChecksum: \"47ebcf7c39ddcbedccaa33198ee0a121\"\n--tableNotes: \"Version 2.1\"\n++  - 'Bla1ze'\n++  - 'Sscorpio'\n++vpxVPSId: 'A_CodyKoS7'\n++vpxChecksum: '47ebcf7c39ddcbedccaa33198ee0a121'\n++tableNotes: 'Version 2.1'\n+ applyFixes:\n -  - \"bass\"\n++  - 'bass'"}
@@ -225,7 +225,7 @@
       {
         "hash": "d14dd907a2aa6661a0033936d39abfacef43337e",
         "date": "2025-03-25 16:19:00 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "INI and YML Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-spidermanve/table.ini", "diff": "diff --git a/external/vpx-spidermanve/table.ini b/external/vpx-spidermanve/table.ini\nindex 4caea1d2..f876f472 100644\n--- a/external/vpx-spidermanve/table.ini\n+++ b/external/vpx-spidermanve/table.ini\n@@ -1,17 +1,17 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.220417\n-ViewCabScaleY = 1.029570\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.300211\n+ViewCabScaleY = 1.020362\n+ViewCabScaleZ = 0.996211\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.212200\n-ViewCabVOfs = -9.836502\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 91.873215\n+ViewCabHOfs = 3.959099\n+ViewCabVOfs = 2.200094\n+ViewCabWindowTop = 333.260742\n+ViewCabWindowBot = 138.340256\n \n [Player]\n JoyAddCredit2Key = 1\n-ScreenPlayerZ = 103.346054\n+ScreenPlayerZ = 100.012512\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n@@ -20,6 +20,7 @@ DynamicDayNight = 0\n EmissionScale = 1.000000\n MaxTexDimension = 3072\n FXAA = 1\n+ScreenPlayerX = -0.030400\n \n [TableOption]\n Cabinet Mode = 1.000000"},

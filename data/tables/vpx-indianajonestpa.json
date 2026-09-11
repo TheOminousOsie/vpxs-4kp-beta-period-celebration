@@ -4,7 +4,7 @@
       {
         "hash": "670cb6aa8509b2ffc1864314c530ff1311debfd7",
         "date": "2026-08-30 22:08:11 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update IJTPA backglass notes\n",
         "files": [
           {"status": "M", "path": "external/vpx-indianajonestpa/table.yml", "diff": "diff --git a/external/vpx-indianajonestpa/table.yml b/external/vpx-indianajonestpa/table.yml\nindex e6ac27f4..7ae18a3d 100644\n--- a/external/vpx-indianajonestpa/table.yml\n+++ b/external/vpx-indianajonestpa/table.yml\n@@ -4,7 +4,7 @@ tableNotes: \"Download Indiana Jones...Bigus(MOD)2.1.vpx.zip\"\n backglassVPSId: \"ZLADkVUoHF\"\n backglassChecksum: \"F3F242B17E290C990D357737363AF492\"\n backglasNotes: >-\n-  Download Indiana Jones The Pinball Adventure (Williams 1993).rar\n+  Download \"Indiana Jones The Pinball Adventure (Williams 1993).rar\" (50.71 MB)\n coloredROMChecksum: \"E21FE6D4C667EE18C3E5B5BFF9B79B43\"\n coloredROMNotes: \"Download Version 1.02\"\n coloredROMVPSId: \"yofn_A4k\"\n"}
@@ -13,7 +13,7 @@
       {
         "hash": "5470b30b3f8285a91338b51123a469f025a0bd08",
         "date": "2026-08-27 12:52:43 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fix duplicate vpsid\n",
         "files": [
           {"status": "M", "path": "external/vpx-indianajonestpa/table.yml", "diff": "diff --git a/external/vpx-indianajonestpa/table.yml b/external/vpx-indianajonestpa/table.yml\nindex 985d7497..e6ac27f4 100644\n--- a/external/vpx-indianajonestpa/table.yml\n+++ b/external/vpx-indianajonestpa/table.yml\n@@ -1,6 +1,5 @@\n ---\n tableVPSId: \"lkSumsrF\"\n-vpxVPSId: \"bpo2bAdE\"\n tableNotes: \"Download Indiana Jones...Bigus(MOD)2.1.vpx.zip\"\n backglassVPSId: \"ZLADkVUoHF\"\n backglassChecksum: \"F3F242B17E290C990D357737363AF492\"\n"}
@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-indianajonestpa/table.yml", "diff": "diff --git a/external/vpx-indianajonestpa/table.yml b/external/vpx-indianajonestpa/table.yml\nindex 4e0dd75a..985d7497 100644\n--- a/external/vpx-indianajonestpa/table.yml\n+++ b/external/vpx-indianajonestpa/table.yml\n@@ -19,7 +19,4 @@ testers:\n   - \"Mox\"\n   - \"TechZombie\"\n vpxVPSId: \"bpo2bAdE\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"F7C1285F3FB1D1C4935C459EB64B5A04\"\n-  - \"EB933A4B3BA3125AC4C0B6AEF1A388D3\"\n+vpxChecksum: \"F7C1285F3FB1D1C4935C459EB64B5A04\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-indianajonestpa/table.yml", "diff": "diff --git a/external/vpx-indianajonestpa/table.yml b/external/vpx-indianajonestpa/table.yml\nindex 985d7497..4e0dd75a 100644\n--- a/external/vpx-indianajonestpa/table.yml\n+++ b/external/vpx-indianajonestpa/table.yml\n@@ -19,4 +19,7 @@ testers:\n   - \"Mox\"\n   - \"TechZombie\"\n vpxVPSId: \"bpo2bAdE\"\n-vpxChecksum: \"F7C1285F3FB1D1C4935C459EB64B5A04\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"F7C1285F3FB1D1C4935C459EB64B5A04\"\n+  - \"EB933A4B3BA3125AC4C0B6AEF1A388D3\""}
@@ -40,7 +40,7 @@
       {
         "hash": "99dcc6181e560956e1bf0b46901dd394d4d8613e",
         "date": "2026-07-17 01:18:57 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Merge branch 'main' into wizardpr",
         "files": [
           {"status": "MM", "path": "external/vpx-indianajonestpa/table.yml", "diff": "diff --cc external/vpx-indianajonestpa/table.yml\nindex 9579d761,f6805ac4..985d7497\n--- a/external/vpx-indianajonestpa/table.yml\n+++ b/external/vpx-indianajonestpa/table.yml\n@@@ -1,16 -1,12 +1,15 @@@\n  ---\n  tableVPSId: \"lkSumsrF\"\n  vpxVPSId: \"bpo2bAdE\"\n- vpxChecksum: \"F7C1285F3FB1D1C4935C459EB64B5A04\"\n  tableNotes: \"Download Indiana Jones...Bigus(MOD)2.1.vpx.zip\"\n -backglassVPSId: \"puSi-3cozl\"\n -backglassChecksum: \"140b4894293202e921b8d796ba4871c9\"\n +backglassVPSId: \"ZLADkVUoHF\"\n +backglassChecksum: \"F3F242B17E290C990D357737363AF492\"\n  backglasNotes: >-\n    Download Indiana Jones The Pinball Adventure (Williams 1993).rar\n -fps: 56\n +coloredROMChecksum: \"E21FE6D4C667EE18C3E5B5BFF9B79B43\"\n +coloredROMNotes: \"Download Version 1.02\"\n +coloredROMVPSId: \"yofn_A4k\"\n +fps: 60\n  romVPSId: \"H6pEW4cE\"\n  romChecksum: \"6E5FD8533AF8E5B1A2C710B5CE5E7A87\"\n  romNotes: \"Download -  ij_l7.zip\"\n"}
@@ -49,7 +49,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-indianajonestpa/table.ini", "diff": "diff --git a/external/vpx-indianajonestpa/table.ini b/external/vpx-indianajonestpa/table.ini\nindex 7be80529..34a82e98 100755\n--- a/external/vpx-indianajonestpa/table.ini\n+++ b/external/vpx-indianajonestpa/table.ini\n@@ -12,15 +12,11 @@ EmissionScale = 0.180000\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.062862\n-ViewCabScaleY = 1.057039\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.081062\n+ViewCabScaleY = 0.997776\n+ViewCabScaleZ = 0.940737\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 1.361400\n-ViewCabVOfs = -24.680374\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 98.162224\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n-WindowRenderMode = 0\n\\ No newline at end of file\n+ViewCabHOfs = 0.047700\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 274.267883\n+ViewCabWindowBot = 80.809227"},
@@ -68,7 +68,7 @@
       {
         "hash": "71d2940e566c4eea353b73fe10e47491f8584183",
         "date": "2025-11-24 23:05:21 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "2 more\n\nBride of PinBot: Updated ini and vbs for performance\nIndiana Jones: TPA: Added WindowRenderMode=0\n",
         "files": [
           {"status": "M", "path": "external/vpx-indianajonestpa/table.ini", "diff": "diff --git a/external/vpx-indianajonestpa/table.ini b/external/vpx-indianajonestpa/table.ini\nindex 8404d050..7be80529 100755\n--- a/external/vpx-indianajonestpa/table.ini\n+++ b/external/vpx-indianajonestpa/table.ini\n@@ -22,4 +22,5 @@ ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 98.162224\n \n [Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+BackBufferScale = 0.416666\n+WindowRenderMode = 0\n\\ No newline at end of file\n"}
@@ -122,7 +122,7 @@
       {
         "hash": "ddb1cf40eaef466ddeb6270a94d14ad8d955cd55",
         "date": "2025-04-19 16:07:49 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Tweak Indy yml\n\nAdd Megadeth launcher image\n",
         "files": [
           {"status": "M", "path": "external/vpx-indianajonestpa/table.yml"}
@@ -158,7 +158,7 @@
       {
         "hash": "9628cc2c0ba9ee534c948f492708b8d6c76d4266",
         "date": "2025-04-18 11:07:27 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update Indiana Jones TPA\n",
         "files": [
           {"status": "A", "path": "external/vpx-indianajonestpa/pinmame.ini", "diff": "diff --git a/external/vpx-indianajonestpa/pinmame.ini b/external/vpx-indianajonestpa/pinmame.ini\nnew file mode 100644\nindex 00000000..ce936ec4\n--- /dev/null\n+++ b/external/vpx-indianajonestpa/pinmame.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+rol=0\n+cheat=0\n+sound=1\n+dmd_red=206\n+dmd_green=126\n+dmd_blue=0\n\\ No newline at end of file"},
@@ -226,7 +226,7 @@
       {
         "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
         "date": "2025-03-30 19:40:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
         "files": [
           {"status": "A", "path": "external/vpx-indianajonestpa/table.yml", "diff": "diff --git a/external/vpx-indianajonestpa/table.yml b/external/vpx-indianajonestpa/table.yml\nnew file mode 100644\nindex 00000000..4a712611\n--- /dev/null\n+++ b/external/vpx-indianajonestpa/table.yml\n@@ -0,0 +1,16 @@\n+---\n+backglassVPSId: \"eMpRNW-Yuk\"\n+backglassChecksum: \"FF64F5707F8E446B2A295FC57D3C55B4\"\n+fps: 47\n+romVPSId: \"H6pEW4cE\"\n+romChecksum: \"6E5FD8533AF8E5B1A2C710B5CE5E7A87\"\n+romNotes: \"Download -  ij_l7.zip\"\n+tableVPSId: \"lkSumsrF\"\n+tagline: \"Snakes. Why'd it have to be snakes?\"\n+testers:\n+  - \"TechZombie\"\n+  - \"Mox\"\n+vpxVPSId: \"bpo2bAdE\"\n+vpxChecksum: \"F7C1285F3FB1D1C4935C459EB64B5A04\"\n+applyFixes:\n+  - \"bass\"\n\\ No newline at end of file"},

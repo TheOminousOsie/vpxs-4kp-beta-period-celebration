@@ -4,7 +4,7 @@
       {
         "hash": "546749ff3a3c6a74942c28d68a2305c7d18883f7",
         "date": "2026-09-03 14:47:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Updates\n\nAdd PBW23 to BTILC testers\nAdd changed art for Mousin' Around\nChange Tee'd Off to not use .pal and just use built-in light change, change brightness.\n",
         "files": [
           {"status": "M", "path": "external/vpx-btilc/table.yml", "diff": "diff --git a/external/vpx-btilc/table.yml b/external/vpx-btilc/table.yml\nindex ca468585..625d40b6 100644\n--- a/external/vpx-btilc/table.yml\n+++ b/external/vpx-btilc/table.yml\n@@ -13,5 +13,6 @@ tableVPSId: \"njaR7FTf1J\"\n tagline: \"Some people pick the darnedest places to start a fight!\"\n testers:\n   - \"Filth\"\n+  - \"PBW23\"\n vpxChecksum: \"4A861CACFCA3F05A07064AC5C2864353\"\n vpxVPSId: \"qI3NAhCmY4\""}

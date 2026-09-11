@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nindex b277469a..3a34d4c4 100644\n--- a/external/vpx-incrediblehulk/table.yml\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -12,8 +12,5 @@ tagline: \"'Don't make me angry. You won't like me when I'm angry.'\"\n testers:\n   - \"Wraith\"\n   - \"pointdablame\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"3C554326479202F39C30760AE3A846D5\"\n-  - \"5474FBB21E18B9BC85850659730F6DE8\"\n+vpxChecksum: \"3C554326479202F39C30760AE3A846D5\"\n vpxVPSId: \"bBFpBE0jtM\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nindex 3a34d4c4..b277469a 100644\n--- a/external/vpx-incrediblehulk/table.yml\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -12,5 +12,8 @@ tagline: \"'Don't make me angry. You won't like me when I'm angry.'\"\n testers:\n   - \"Wraith\"\n   - \"pointdablame\"\n-vpxChecksum: \"3C554326479202F39C30760AE3A846D5\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"3C554326479202F39C30760AE3A846D5\"\n+  - \"5474FBB21E18B9BC85850659730F6DE8\"\n vpxVPSId: \"bBFpBE0jtM\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-incrediblehulk/table.ini", "diff": "diff --git a/external/vpx-incrediblehulk/table.ini b/external/vpx-incrediblehulk/table.ini\nindex ba284558..aa17cbb8 100644\n--- a/external/vpx-incrediblehulk/table.ini\n+++ b/external/vpx-incrediblehulk/table.ini\n@@ -1,15 +1,19 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+\n [Player]\n BallTrailStrength = 0.392157\n OverrideTableEmissionScale = 0\n+ScreenPlayerY = 8.022799\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.169850\n-ViewCabScaleY = 1.130170\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.166323\n+ViewCabScaleY = 1.000172\n+ViewCabScaleZ = 0.870002\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -110.000000\n-ViewCabWindowTop = 325.541931\n-ViewCabWindowBot = 83.953270\n-Difficulty = 0.200310\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 88.676826\n+ViewCabWindowBot = 88.482269\n+Difficulty = 0.200310"},
@@ -51,7 +51,7 @@
       {
         "hash": "aad4a04cce2f37882b9da55db7adf91b137c10c2",
         "date": "2025-11-10 23:16:54 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nindex 69204815..ec78d6d7 100644\n--- a/external/vpx-incrediblehulk/table.yml\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -12,6 +12,7 @@ tableNotes: \"Download version 1.34\"\n tableVPSId: \"VrMnwhl6\"\n tagline: \"'Don't make me angry. You won't like me when I'm angry.'\"\n testers:\n-  - \"evilwraith\"\n+  - \"Wraith\"\n+  - \"pointdablame\"\n vpxChecksum: \"3C554326479202F39C30760AE3A846D5\"\n vpxVPSId: \"bBFpBE0jtM\"\n"}
@@ -60,7 +60,7 @@
       {
         "hash": "9428b5857420708143c66f4f5365529a3538591e",
         "date": "2025-11-09 18:57:49 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nindex 55a2a744..69204815 100644\n--- a/external/vpx-incrediblehulk/table.yml\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -7,6 +7,7 @@ fps: 60\n romChecksum: \"46E6F39472FE5310F07C459064CCE4F0\"\n romNotes: \"Use the zip link\"\n romUrlOverride: \"https://archive.org/details/hulk_20240824\"\n+romVersionOverride: \"hulk\"\n tableNotes: \"Download version 1.34\"\n tableVPSId: \"VrMnwhl6\"\n tagline: \"'Don't make me angry. You won't like me when I'm angry.'\"\n"}
@@ -69,7 +69,7 @@
       {
         "hash": "944f8d9bf5b945b513fc3daf846f7ffdd63e1ba8",
         "date": "2025-09-06 15:41:57 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nindex 70f50bb0..55a2a744 100644\n--- a/external/vpx-incrediblehulk/table.yml\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -4,7 +4,6 @@ applyFixes:\n backglassChecksum: \"5AE9E1DE1DD473B14B132D8121654F20\"\n backglassVPSId: \"A2zMJ7PnRB\"\n fps: 60\n-romBundled: true\n romChecksum: \"46E6F39472FE5310F07C459064CCE4F0\"\n romNotes: \"Use the zip link\"\n romUrlOverride: \"https://archive.org/details/hulk_20240824\"\n"}
@@ -78,7 +78,7 @@
       {
         "hash": "6f615f19e96615c2f751844f569112165fb8ce38",
         "date": "2025-08-29 21:19:30 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Art!\n",
         "files": [
           {"status": "A", "path": "external/vpx-incrediblehulk/DMD.png"},
@@ -88,7 +88,7 @@
       {
         "hash": "527547bddc5ac6233c22f03d431619d6427c25cb",
         "date": "2025-08-29 12:15:17 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "yml and ini\n",
         "files": [
           {"status": "A", "path": "external/vpx-incrediblehulk/table.yml", "diff": "diff --git a/external/vpx-incrediblehulk/table.yml b/external/vpx-incrediblehulk/table.yml\nnew file mode 100644\nindex 00000000..70f50bb0\n--- /dev/null\n+++ b/external/vpx-incrediblehulk/table.yml\n@@ -0,0 +1,17 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassChecksum: \"5AE9E1DE1DD473B14B132D8121654F20\"\n+backglassVPSId: \"A2zMJ7PnRB\"\n+fps: 60\n+romBundled: true\n+romChecksum: \"46E6F39472FE5310F07C459064CCE4F0\"\n+romNotes: \"Use the zip link\"\n+romUrlOverride: \"https://archive.org/details/hulk_20240824\"\n+tableNotes: \"Download version 1.34\"\n+tableVPSId: \"VrMnwhl6\"\n+tagline: \"'Don't make me angry. You won't like me when I'm angry.'\"\n+testers:\n+  - \"evilwraith\"\n+vpxChecksum: \"3C554326479202F39C30760AE3A846D5\"\n+vpxVPSId: \"bBFpBE0jtM\"\n"},
@@ -165,7 +165,7 @@
       {
         "hash": "1846b4098cdffb47bd1e6343b06cf90716bc7a47",
         "date": "2024-10-30 14:58:00 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update Incredible Hulk, The (Gottlieb 1979).ini\n\nCorrect Incredible Hulk POV to make table better fit screen. It was previously cropped off left, bottom of cab was not aligned with bottom of screen, pov keystoned, etc.\n",
         "files": [
           {"status": "M", "path": "external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini", "diff": "diff --git a/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini b/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini\nindex 35c90963..6a434288 100644\n--- a/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini\t\n+++ b/external/vpx-incrediblehulk/Incredible Hulk, The (Gottlieb 1979).ini\t\n@@ -4,13 +4,13 @@ OverrideTableEmissionScale = 0\n \n [TableOverride]\n ViewCabMode = 0\n-ViewCabScaleX = 0.744451\n-ViewCabScaleY = 0.866298\n-ViewCabScaleZ = 0.904995\n+ViewCabScaleX = 0.800835\n+ViewCabScaleY = 0.922683\n+ViewCabScaleZ = 0.961380\n ViewCabRotation = 90.000000\n-ViewCabPlayerX = 45.716999\n-ViewCabPlayerY = 8.272999\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n+ViewCabPlayerX = 7.806003\n+ViewCabPlayerY = 0.786999\n+ViewCabPlayerZ = -366.949982\n+ViewCabLookAt = -0.033200\n ViewCabFOV = 42.999908\n ViewCabLayback = 48.000000\n\\ No newline at end of file\n"}

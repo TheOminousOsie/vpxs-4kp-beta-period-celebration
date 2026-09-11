@@ -4,7 +4,7 @@
       {
         "hash": "2833e9c0f54dc3c3661bbd0ed31281d603535809",
         "date": "2026-09-09 22:52:36 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe launcher updates 2\n\nAmerican Graffiti\nJP's Attack From Mars LE\nJames Cameron's Avatar\nBlack Pyramid\nChrono Trigger\nCreature From The Black Lagoon\nCirqus Voltaire\nHardbody\nF-14 Tomcat\nJudge Dredd\nDiner\nDr. Dude\nHigh Roller Casino\nJP's LOTR\nRobocop\nSimpsons Pinball Party\nStranger Things\nTaxi\nTMNT\nTMNT Remix - also folder rename\nTorpedo Alley\nTransformers Pro\nTransformers G1\nWhoa Nellie\n",
         "files": [
           {"status": "D", "path": "external/vpx-simpsonspprty/backglass.png"},
@@ -14,7 +14,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-simpsonspprty/table.yml", "diff": "diff --git a/external/vpx-simpsonspprty/table.yml b/external/vpx-simpsonspprty/table.yml\nindex a3e9323a..3d39e386 100644\n--- a/external/vpx-simpsonspprty/table.yml\n+++ b/external/vpx-simpsonspprty/table.yml\n@@ -14,7 +14,4 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"Mar3nBu\"\n vpxVPSId: \"3EE1X7uW\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"90B033A6C012418A3B4091102EAEA825\"\n-  - \"49D1C3D7BA38C8F0D2E00B1F4A0AFA6F\"\n+vpxChecksum: \"90B033A6C012418A3B4091102EAEA825\""}
@@ -23,7 +23,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-simpsonspprty/table.yml", "diff": "diff --git a/external/vpx-simpsonspprty/table.yml b/external/vpx-simpsonspprty/table.yml\nindex 3d39e386..a3e9323a 100644\n--- a/external/vpx-simpsonspprty/table.yml\n+++ b/external/vpx-simpsonspprty/table.yml\n@@ -14,4 +14,7 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"Mar3nBu\"\n vpxVPSId: \"3EE1X7uW\"\n-vpxChecksum: \"90B033A6C012418A3B4091102EAEA825\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"90B033A6C012418A3B4091102EAEA825\"\n+  - \"49D1C3D7BA38C8F0D2E00B1F4A0AFA6F\""}
@@ -32,7 +32,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-simpsonspprty/table.ini", "diff": "diff --git a/external/vpx-simpsonspprty/table.ini b/external/vpx-simpsonspprty/table.ini\nindex 3330d3ef..6c3ecde7 100644\n--- a/external/vpx-simpsonspprty/table.ini\n+++ b/external/vpx-simpsonspprty/table.ini\n@@ -1,20 +1,19 @@\n [Player]\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 1\n-ScreenPlayerZ = 110.101837\n+ScreenPlayerZ = 90.028343\n DynamicDayNight = 0\n EmissionScale = 0.503921\n+AAFactor = 0.90\n+ScreenPlayerY = 14.966501\n \n [TableOverride]\n ViewCabMode = 2\n ViewCabScaleX = 1.239977\n-ViewCabScaleY = 1.003417\n+ViewCabScaleY = 0.995984\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -6.156126\n-ViewCabWindowTop = 367.920929\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 353.217072\n ViewCabWindowBot = 0.119212\n-\n-[Standalone]\n-BackBufferScale = 0.355729\n\\ No newline at end of file"},
@@ -51,7 +51,7 @@
       {
         "hash": "548ac9dc1b025eed529acf0d870008adcae5f0f3",
         "date": "2025-06-14 10:39:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n\nRemoved backglass fields as they are unneeded",
         "files": [
           {"status": "M", "path": "external/vpx-simpsonspprty/table.yml", "diff": "diff --git a/external/vpx-simpsonspprty/table.yml b/external/vpx-simpsonspprty/table.yml\nindex 3b65bd1f..eb4d68ef 100644\n--- a/external/vpx-simpsonspprty/table.yml\n+++ b/external/vpx-simpsonspprty/table.yml\n@@ -1,7 +1,6 @@\n ---\n-backglassBundled: true\n-backglassNotes: \"Wizard will install backglass\"\n-backglassChecksum: \"76918113A0203A1B8FC1FA147F9B2B25\"\n+applyFixes:\n+  - \"bass\"\n fps: 50\n romVPSId: \"BJan0_7-\"\n romNotes: \"Download simpprty.zip\"\n@@ -15,6 +14,3 @@ testers:\n   - \"Mar3nBu\"\n vpxVPSId: \"3EE1X7uW\"\n vpxChecksum: \"90B033A6C012418A3B4091102EAEA825\"\n-applyFixes:\n-  - \"bass\"\n-\n"}
@@ -78,7 +78,7 @@
       {
         "hash": "84ec701c04a63f9f568279714fe476e9982abf9f",
         "date": "2025-06-13 12:44:10 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "removed quotes from booleans\n",
         "files": [
           {"status": "M", "path": "external/vpx-simpsonspprty/table.yml", "diff": "diff --git a/external/vpx-simpsonspprty/table.yml b/external/vpx-simpsonspprty/table.yml\nindex 4850f31b..3b65bd1f 100644\n--- a/external/vpx-simpsonspprty/table.yml\n+++ b/external/vpx-simpsonspprty/table.yml\n@@ -1,5 +1,5 @@\n ---\n-backglassBundled: \"true\"\n+backglassBundled: true\n backglassNotes: \"Wizard will install backglass\"\n backglassChecksum: \"76918113A0203A1B8FC1FA147F9B2B25\"\n fps: 50\n"}

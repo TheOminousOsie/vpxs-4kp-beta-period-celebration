@@ -4,7 +4,7 @@
       {
         "hash": "2833e9c0f54dc3c3661bbd0ed31281d603535809",
         "date": "2026-09-09 22:52:36 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe launcher updates 2\n\nAmerican Graffiti\nJP's Attack From Mars LE\nJames Cameron's Avatar\nBlack Pyramid\nChrono Trigger\nCreature From The Black Lagoon\nCirqus Voltaire\nHardbody\nF-14 Tomcat\nJudge Dredd\nDiner\nDr. Dude\nHigh Roller Casino\nJP's LOTR\nRobocop\nSimpsons Pinball Party\nStranger Things\nTaxi\nTMNT\nTMNT Remix - also folder rename\nTorpedo Alley\nTransformers Pro\nTransformers G1\nWhoa Nellie\n",
         "files": [
           {"status": "M", "path": "external/vpx-torpedoalley/launcher.png"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-torpedoalley/table.yml", "diff": "diff --git a/external/vpx-torpedoalley/table.yml b/external/vpx-torpedoalley/table.yml\nindex efb4c6f5..a9d93894 100644\n--- a/external/vpx-torpedoalley/table.yml\n+++ b/external/vpx-torpedoalley/table.yml\n@@ -1,7 +1,4 @@\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"1C15273B11AC9D9D6F05AA9F31251B2E\"\n-  - \"179A498714E66A6692D7A6C1A0E1D443\"\n+backglassChecksum: \"1C15273B11AC9D9D6F05AA9F31251B2E\"\n backglassNotes: \"Download version v3.0\"\n backglassVPSId: \"ftuKlhtBM_\"\n fps: 60\n@@ -15,8 +12,5 @@ testers:\n   - \"Bla1ze\"\n   - \"kaoticBPR\"\n   - \"CoffeeAtJoes\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"8C1EE4768000B632C2ACCF087E08C15D\"\n-  - \"90CEB972154B4408F03C5364A244D427\"\n+vpxChecksum: \"8C1EE4768000B632C2ACCF087E08C15D\"\n vpxVPSId: \"GgJ00Ad0\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-torpedoalley/table.yml", "diff": "diff --git a/external/vpx-torpedoalley/table.yml b/external/vpx-torpedoalley/table.yml\nindex a9d93894..efb4c6f5 100644\n--- a/external/vpx-torpedoalley/table.yml\n+++ b/external/vpx-torpedoalley/table.yml\n@@ -1,4 +1,7 @@\n-backglassChecksum: \"1C15273B11AC9D9D6F05AA9F31251B2E\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"1C15273B11AC9D9D6F05AA9F31251B2E\"\n+  - \"179A498714E66A6692D7A6C1A0E1D443\"\n backglassNotes: \"Download version v3.0\"\n backglassVPSId: \"ftuKlhtBM_\"\n fps: 60\n@@ -12,5 +15,8 @@ testers:\n   - \"Bla1ze\"\n   - \"kaoticBPR\"\n   - \"CoffeeAtJoes\"\n-vpxChecksum: \"8C1EE4768000B632C2ACCF087E08C15D\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"8C1EE4768000B632C2ACCF087E08C15D\"\n+  - \"90CEB972154B4408F03C5364A244D427\"\n vpxVPSId: \"GgJ00Ad0\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-torpedoalley/table.ini", "diff": "diff --git a/external/vpx-torpedoalley/table.ini b/external/vpx-torpedoalley/table.ini\nindex 452f867d..123fcd98 100644\n--- a/external/vpx-torpedoalley/table.ini\n+++ b/external/vpx-torpedoalley/table.ini\n@@ -9,15 +9,15 @@ EmissionScale = 0.704515\n [TableOverride]\n ViewCabMode = 2\n ViewCabScaleX = 1.056407\n-ViewCabScaleY = 0.987484\n+ViewCabScaleY = 0.978886\n ViewCabScaleZ = 0.850747\n ViewCabRotation = 180.000000\n ViewCabHOfs = 2.270000\n-ViewCabVOfs = -0.153613\n+ViewCabVOfs = 7.300699\n ViewCabWindowTop = 175.871033\n ViewCabWindowBot = 17.305265\n ToneMapper = 1\n Difficulty = 0.602950\n \n [Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+PinMAMEWindow = 0"},

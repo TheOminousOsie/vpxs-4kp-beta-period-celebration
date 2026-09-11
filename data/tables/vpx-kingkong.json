@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-kingkong/table.yml", "diff": "diff --git a/external/vpx-kingkong/table.yml b/external/vpx-kingkong/table.yml\nindex 4dad9af9..dc44bd5d 100644\n--- a/external/vpx-kingkong/table.yml\n+++ b/external/vpx-kingkong/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassVPSId: \"nes_AsX8\"\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"B5659CCECF6BFD34F44ACB671A72A2E1\"\n-  - \"E3BBAFC0331AD1F894B3FE5DFE6D45E4\"\n-fps: 52\n+backglassChecksum: \"B5659CCECF6BFD34F44ACB671A72A2E1\"\n+fps: 60\n romVPSId: \"Ozg_9L9I\"\n romChecksum: \"34AB43D91EFE0B18E89A7544826BBCA6\"\n tableVPSId: \"Z3YtSbZm\"\n@@ -13,7 +10,4 @@ testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"tOx1WUlj\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"66A638ADF66097A1C6D7E36E6365A527\"\n-  - \"084AA2978C0B2823F38580FA1A01C28D\"\n+vpxChecksum: \"66A638ADF66097A1C6D7E36E6365A527\""}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-kingkong/table.yml", "diff": "diff --git a/external/vpx-kingkong/table.yml b/external/vpx-kingkong/table.yml\nindex 010ddfd7..4dad9af9 100644\n--- a/external/vpx-kingkong/table.yml\n+++ b/external/vpx-kingkong/table.yml\n@@ -4,7 +4,7 @@ backglassArchiveFormat: \"rar\"\n backglassChecksum:\n   - \"B5659CCECF6BFD34F44ACB671A72A2E1\"\n   - \"E3BBAFC0331AD1F894B3FE5DFE6D45E4\"\n-fps: 60\n+fps: 52\n romVPSId: \"Ozg_9L9I\"\n romChecksum: \"34AB43D91EFE0B18E89A7544826BBCA6\"\n tableVPSId: \"Z3YtSbZm\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-kingkong/table.yml", "diff": "diff --git a/external/vpx-kingkong/table.yml b/external/vpx-kingkong/table.yml\nindex dc44bd5d..010ddfd7 100644\n--- a/external/vpx-kingkong/table.yml\n+++ b/external/vpx-kingkong/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"nes_AsX8\"\n-backglassChecksum: \"B5659CCECF6BFD34F44ACB671A72A2E1\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"B5659CCECF6BFD34F44ACB671A72A2E1\"\n+  - \"E3BBAFC0331AD1F894B3FE5DFE6D45E4\"\n fps: 60\n romVPSId: \"Ozg_9L9I\"\n romChecksum: \"34AB43D91EFE0B18E89A7544826BBCA6\"\n@@ -10,4 +13,7 @@ testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"tOx1WUlj\"\n-vpxChecksum: \"66A638ADF66097A1C6D7E36E6365A527\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"66A638ADF66097A1C6D7E36E6365A527\"\n+  - \"084AA2978C0B2823F38580FA1A01C28D\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-kingkong/table.ini", "diff": "diff --git a/external/vpx-kingkong/table.ini b/external/vpx-kingkong/table.ini\nindex 72bc87cc..131b6300 100644\n--- a/external/vpx-kingkong/table.ini\n+++ b/external/vpx-kingkong/table.ini\n@@ -1,25 +1,26 @@\n+[Standalone]\n+B2SDMDAutoPlacePinMAME = 0\n+\n [Player]\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 1\n-ScreenPlayerZ = 94.021172\n+ScreenPlayerZ = 90.047951\n DynamicDayNight = 0\n EmissionScale = 0.704045\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n ScreenPlayerX = 0.020047\n-ScreenPlayerY = -0.026000\n+ScreenPlayerY = 15.004002\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.313013\n-ViewCabScaleY = 1.121580\n-ViewCabScaleZ = 1.001754\n+ViewCabScaleX = 1.262894\n+ViewCabScaleY = 1.020791\n+ViewCabScaleZ = 0.900965\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -60.704891\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 94.096260\n-\n-BackBufferScale = 0.416666\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 236.974976\n+ViewCabWindowBot = 0.304262\n ToneMapper = 2\n\\ No newline at end of file"},

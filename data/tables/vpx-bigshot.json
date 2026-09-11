@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-bigshot/table.yml", "diff": "diff --git a/external/vpx-bigshot/table.yml b/external/vpx-bigshot/table.yml\nindex 86d2a197..5812fda1 100644\n--- a/external/vpx-bigshot/table.yml\n+++ b/external/vpx-bigshot/table.yml\n@@ -1,16 +1,10 @@\n ---\n tableVPSId: \"ZmKYwF-9\"\n vpxVPSId: \"akqRhW76\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"6ed7f84cdc3c8aff397990b1c41aaf40\"\n-  - \"93127E5425E53F066EFE8E07A94711D1\"\n+vpxChecksum: \"6ed7f84cdc3c8aff397990b1c41aaf40\"\n vpxNotes: \"460673803_BigShot(Gottlieb1974)1.3.1VR.zip\"\n backglassVPSId: \"qzpCpyKZll\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"f43ec77e306fc2c5ebc3c7c85561237b\"\n-  - \"93127E5425E53F066EFE8E07A94711D1\"\n+backglassChecksum: \"f43ec77e306fc2c5ebc3c7c85561237b\"\n backglassNotes: \"Included in VPX download\"\n backglassBundled: true\n # romVPSID:"}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-bigshot/table.yml", "diff": "diff --git a/external/vpx-bigshot/table.yml b/external/vpx-bigshot/table.yml\nindex 5812fda1..86d2a197 100644\n--- a/external/vpx-bigshot/table.yml\n+++ b/external/vpx-bigshot/table.yml\n@@ -1,10 +1,16 @@\n ---\n tableVPSId: \"ZmKYwF-9\"\n vpxVPSId: \"akqRhW76\"\n-vpxChecksum: \"6ed7f84cdc3c8aff397990b1c41aaf40\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"6ed7f84cdc3c8aff397990b1c41aaf40\"\n+  - \"93127E5425E53F066EFE8E07A94711D1\"\n vpxNotes: \"460673803_BigShot(Gottlieb1974)1.3.1VR.zip\"\n backglassVPSId: \"qzpCpyKZll\"\n-backglassChecksum: \"f43ec77e306fc2c5ebc3c7c85561237b\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"f43ec77e306fc2c5ebc3c7c85561237b\"\n+  - \"93127E5425E53F066EFE8E07A94711D1\"\n backglassNotes: \"Included in VPX download\"\n backglassBundled: true\n # romVPSID:"}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-bigshot/table.ini", "diff": "diff --git a/external/vpx-bigshot/table.ini b/external/vpx-bigshot/table.ini\nindex f660b3c3..0faf31ca 100755\n--- a/external/vpx-bigshot/table.ini\n+++ b/external/vpx-bigshot/table.ini\n@@ -1,7 +1,7 @@\n [Player]\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 1\n-ScreenPlayerY = 21.286602\n+ScreenPlayerY = 8.001756\n ScreenPlayerZ = 100.262527\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n@@ -11,15 +11,12 @@ EmissionScale = 0.302865\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.162580\n-ViewCabScaleY = 1.072689\n-ViewCabScaleZ = 1.043933\n+ViewCabScaleX = 1.117372\n+ViewCabScaleY = 1.006353\n+ViewCabScaleZ = 0.997140\n ViewCabRotation = 180.000000\n-ViewCabHOfs = -0.036200\n-ViewCabVOfs = -3.956916\n-ViewCabWindowTop = 211.880936\n-ViewCabWindowBot = 102.718140\n-ToneMapper = 0\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+ViewCabHOfs = 0.035500\n+ViewCabVOfs = 0.020583\n+ViewCabWindowTop = 64.865921\n+ViewCabWindowBot = 34.955143\n+ToneMapper = 0\n\\ No newline at end of file"},
@@ -86,7 +86,7 @@
       {
         "hash": "277b7e8a4d56e15ae70eeaf9b159a5b6088d70ee",
         "date": "2025-05-10 12:02:42 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-bigshot/table.ini", "diff": "diff --git a/external/vpx-bigshot/table.ini b/external/vpx-bigshot/table.ini\nindex 8eb00a7d..a4a44b4d 100755\n--- a/external/vpx-bigshot/table.ini\n+++ b/external/vpx-bigshot/table.ini\n@@ -21,5 +21,5 @@ ViewCabWindowTop = 211.880936\n ViewCabWindowBot = 102.718140\n ToneMapper = 0\n \n-[TableOption]\n+[BackBufferScale]\n BackBufferScale = 0.416666\n\\ No newline at end of file\n"}
@@ -95,7 +95,7 @@
       {
         "hash": "567a2247f0168330e50eb7c1926e76a4fcb16abb",
         "date": "2025-05-06 19:25:58 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-bigshot/table.yml", "diff": "diff --git a/external/vpx-bigshot/table.yml b/external/vpx-bigshot/table.yml\nindex 1a24288d..4d40f50e 100644\n--- a/external/vpx-bigshot/table.yml\n+++ b/external/vpx-bigshot/table.yml\n@@ -1,6 +1,6 @@\n ---\n-tableVPSId: \"akqRhW76\"\n-vpxVPSId: \"ZmKYwF-9\"\n+tableVPSId: \"ZmKYwF-9\"\n+vpxVPSId: \"akqRhW76\"\n vpxChecksum: \"6ed7f84cdc3c8aff397990b1c41aaf40\"\n vpxNotes: \"460673803_BigShot(Gottlieb1974)1.3.1VR.zip\"\n # backglassVPSId: \"\"\n"}
@@ -104,7 +104,7 @@
       {
         "hash": "d2653e4c9c9eb13e2c28d9657626b934d4ea327f",
         "date": "2025-05-06 18:57:46 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-bigshot/table.yml", "diff": "diff --git a/external/vpx-bigshot/table.yml b/external/vpx-bigshot/table.yml\nindex 582e3a22..1a24288d 100644\n--- a/external/vpx-bigshot/table.yml\n+++ b/external/vpx-bigshot/table.yml\n@@ -17,4 +17,4 @@ testers:\n tagline: \"Just don’t miss.\"\n applyFixes:\n   - \"bass\"\n-  \n\\ No newline at end of file\n+ \n\\ No newline at end of file\n"}
@@ -113,7 +113,7 @@
       {
         "hash": "654d9f089f109bf1df30ddc68896e7367f6f6904",
         "date": "2025-05-06 17:56:23 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "update dmd.png and yml for bass fix\n",
         "files": [
           {"status": "M", "path": "external/vpx-bigshot/dmd.png"},
@@ -123,7 +123,7 @@
       {
         "hash": "ccecc2747bf88c886ca9c225fdfc167f190ecb49",
         "date": "2025-05-06 08:40:58 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add Big Shot vpx-bigshot\n",
         "files": [
           {"status": "A", "path": "external/vpx-bigshot/dmd.png"},

@@ -4,7 +4,7 @@
       {
         "hash": "25924861c5a917d4f8efde60e74049c8fcf8bcaf",
         "date": "2026-07-19 20:30:50 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fixes\n\nPin-Bot table hash\nTron Legacy PUP required\nDemolition Man color rom link\nSouth Park color rom link\nPirates of the Caribbean color rom link\nWipeout removed color rom vpsid\n",
         "files": [
           {"status": "D", "path": "external/vpx-demoman/backglass.png"},
@@ -14,7 +14,7 @@
       {
         "hash": "c472d47f37846a39486724312d06b53c6cabcfc6",
         "date": "2026-07-19 20:30:50 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fixes\n\nPin-Bot table hash\nTron Legacy PUP required\nDemolition Man color rom link\nSouth Park color rom link\nPirates of the Caribbean color rom link\nWipeout removed color rom vpsid\n",
         "files": [
           {"status": "D", "path": "external/vpx-demoman/backglass.png"},
@@ -24,7 +24,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-demoman/table.yml", "diff": "diff --git a/external/vpx-demoman/table.yml b/external/vpx-demoman/table.yml\nindex ecf82cfd..9b32a7a8 100644\n--- a/external/vpx-demoman/table.yml\n+++ b/external/vpx-demoman/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"1r1BCxkR3R\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"D5DB12D08659E313E05776EBBBE9EFBF\"\n-  - \"A7F57DD15DC81DDEBDB0C9674A0A41C5\"\n+backglassChecksum: \"D5DB12D08659E313E05776EBBBE9EFBF\"\n backglassNotes: \"Download 'Demolition Man FullDMD (Williams 1994) v1.1.zip'\"\n coloredROMChecksum: \"F3A4824F667831A4017201459475E22D\"\n coloredROMNotes: \"\"\n@@ -21,7 +18,4 @@ testers:\n   - \"evilwraith\"\n   - \"Mox\"\n vpxVPSId: \"l8B0QJLS\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"96704EE99E805E299D754C4C7FB16BB4\"\n-  - \"A141EE408715CF18FABDEC29284239D2\"\n+vpxChecksum: \"96704EE99E805E299D754C4C7FB16BB4\""}
@@ -33,7 +33,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-demoman/table.yml", "diff": "diff --git a/external/vpx-demoman/table.yml b/external/vpx-demoman/table.yml\nindex 1671a71d..ecf82cfd 100644\n--- a/external/vpx-demoman/table.yml\n+++ b/external/vpx-demoman/table.yml\n@@ -8,7 +8,7 @@ backglassNotes: \"Download 'Demolition Man FullDMD (Williams 1994) v1.1.zip'\"\n coloredROMChecksum: \"F3A4824F667831A4017201459475E22D\"\n coloredROMNotes: \"\"\n coloredROMVPSId: \"AweelJjV\"\n-fps: 50\n+fps: 60\n romChecksum: \"c5ac656613515587aad3c2aaf47eecb9\"\n romUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=5537\"\n romVersionOverride: \"dm_h6b\""}
@@ -42,7 +42,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-demoman/table.yml", "diff": "diff --git a/external/vpx-demoman/table.yml b/external/vpx-demoman/table.yml\nindex 4ec331d2..1671a71d 100644\n--- a/external/vpx-demoman/table.yml\n+++ b/external/vpx-demoman/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"1r1BCxkR3R\"\n-backglassChecksum: \"D5DB12D08659E313E05776EBBBE9EFBF\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"D5DB12D08659E313E05776EBBBE9EFBF\"\n+  - \"A7F57DD15DC81DDEBDB0C9674A0A41C5\"\n backglassNotes: \"Download 'Demolition Man FullDMD (Williams 1994) v1.1.zip'\"\n coloredROMChecksum: \"F3A4824F667831A4017201459475E22D\"\n coloredROMNotes: \"\"\n@@ -18,4 +21,7 @@ testers:\n   - \"evilwraith\"\n   - \"Mox\"\n vpxVPSId: \"l8B0QJLS\"\n-vpxChecksum: \"96704EE99E805E299D754C4C7FB16BB4\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"96704EE99E805E299D754C4C7FB16BB4\"\n+  - \"A141EE408715CF18FABDEC29284239D2\""}
@@ -51,7 +51,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-demoman/table.ini", "diff": "diff --git a/external/vpx-demoman/table.ini b/external/vpx-demoman/table.ini\nindex a699ee7a..35ff2857 100644\n--- a/external/vpx-demoman/table.ini\n+++ b/external/vpx-demoman/table.ini\n@@ -1,14 +1,14 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.143470\n-ViewCabScaleY = 1.081775\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.098329\n+ViewCabScaleY = 1.036634\n+ViewCabScaleZ = 0.954858\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 2.753300\n-ViewCabVOfs = -20.039207\n-ViewCabWindowTop = 371.715942\n+ViewCabHOfs = 0.027400\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 314.966034\n ViewCabWindowBot = 120.660225\n-ToneMapper = 0\n+ToneMapper = 1\n \n [Player]\n ScreenPlayerZ = 91.825783\n@@ -18,8 +18,4 @@ ScreenInclination = 0.000000\n ScreenPlayerY = 18.294546\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.251925\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n-WindowRenderMode = 0\n\\ No newline at end of file\n+EmissionScale = 0.302765"},
@@ -61,7 +61,7 @@
       {
         "hash": "e175ad86bdd9ecd2b5fb1e4b9da85ec88ff27fb5",
         "date": "2025-11-24 19:00:50 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 more\n\nDemolition Man: WindowRenderMode = 0\nDoctor Who: WindowRenderMode = 0\n Gladiators: WindowRenderMode = 0\n",
         "files": [
           {"status": "M", "path": "external/vpx-demoman/table.ini", "diff": "diff --git a/external/vpx-demoman/table.ini b/external/vpx-demoman/table.ini\nindex 3a890204..a699ee7a 100644\n--- a/external/vpx-demoman/table.ini\n+++ b/external/vpx-demoman/table.ini\n@@ -21,4 +21,5 @@ DynamicDayNight = 0\n EmissionScale = 0.251925\n \n [Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+BackBufferScale = 0.416666\n+WindowRenderMode = 0\n\\ No newline at end of file"}
@@ -219,7 +219,7 @@
       {
         "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
         "date": "2025-03-30 19:40:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
         "files": [
           {"status": "A", "path": "external/vpx-demoman/table.yml", "diff": "diff --git a/external/vpx-demoman/table.yml b/external/vpx-demoman/table.yml\nnew file mode 100644\nindex 00000000..54704830\n--- /dev/null\n+++ b/external/vpx-demoman/table.yml\n@@ -0,0 +1,16 @@\n+---\n+backglassVPSId: \"JEo0dI18se\"\n+backglassChecksum: \"9CB81C2312415D2C1778DFF9E6F55A4E\"\n+fps: 45\n+romVPSId: \"px2FY10w\"\n+romChecksum: \"104F6D8613008824972DCAAE3975E85B\"\n+romNotes: \"Download - dm_lx4.zip\"\n+tableVPSId: \"vT78ph4O\"\n+tagline: \"We're police officers! We're not trained to handle this kind of violence!\"\n+testers:\n+  - \"evilwraith\"\n+  - \"Mox\"\n+vpxVPSId: \"l8B0QJLS\"\n+vpxChecksum: \"96704EE99E805E299D754C4C7FB16BB4\"\n+applyFixes:\n+  - \"bass\"\n\\ No newline at end of file"},
@@ -270,7 +270,7 @@
       {
         "hash": "8f315706192bf46ad861bf71bd4d4f7fea259d81",
         "date": "2024-10-18 14:37:32 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "added Demolition Man (Williams 1994)\n\nDemolition Man (Williams 1994)\n",
         "files": [
           {"status": "A", "path": "external/vpx-demoman/Demolition Man (Williams 1994).ini", "diff": "diff --git a/external/vpx-demoman/Demolition Man (Williams 1994).ini b/external/vpx-demoman/Demolition Man (Williams 1994).ini\nnew file mode 100644\nindex 00000000..6e9cb92d\n--- /dev/null\n+++ b/external/vpx-demoman/Demolition Man (Williams 1994).ini\t\n@@ -0,0 +1,16 @@\n+[Standalone]\n+B2SPlugins = 1\n+\n+[TableOverride]\n+ViewCabMode = 1\n+ViewCabScaleX = 0.866450\n+ViewCabScaleY = 0.674402\n+ViewCabScaleZ = 1.143073\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = 0.000000\n+ViewCabPlayerY = -151.114868\n+ViewCabPlayerZ = 1404.774048\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 44.111809\n+ViewCabHOfs = 0.221300\n+ViewCabVOfs = 93.888268\n\\ No newline at end of file"},

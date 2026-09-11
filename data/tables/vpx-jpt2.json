@@ -4,7 +4,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpt2/table.ini", "diff": "diff --git a/external/vpx-jpt2/table.ini b/external/vpx-jpt2/table.ini\nindex 61bca07e..38462b1b 100644\n--- a/external/vpx-jpt2/table.ini\n+++ b/external/vpx-jpt2/table.ini\n@@ -3,9 +3,9 @@ BallTrailStrength = 0.490196\n AlphaRampAccuracy = 10\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.160000\n-ScreenPlayerY = 8.349998\n-ScreenPlayerZ = 99.951218\n+EmissionScale = 0.200790\n+ScreenPlayerY = 14.969448\n+ScreenPlayerZ = 90.009148\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n@@ -13,17 +13,16 @@ ScreenInclination = 0.000000\n [TableOverride]\n ToneMapper = 0\n ViewCabMode = 2\n-ViewCabScaleX = 1.169850\n-ViewCabScaleY = 1.071259\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.191350\n+ViewCabScaleY = 0.999697\n+ViewCabScaleZ = 0.952547\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 1.819999\n-ViewCabVOfs = -40.840744\n-ViewCabWindowTop = 325.541931\n-ViewCabWindowBot = 83.953217\n+ViewCabHOfs = 0.013699\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 322.404846\n+ViewCabWindowBot = 0.071217\n \n [Standalone]\n-WindowRenderMode = 0\n B2SPlugins = 1\n PUPCapture = 1\n PUPPlugin = 1\n@@ -31,4 +30,4 @@ PUPPlugin = 1\n [TableOption]\n Select LUT = 0.000000\n Desktop DMD = 0.000000\n-Cabinet Rails = 1.000000\n\\ No newline at end of file\n+Cabinet Rails = 1.000000"},
@@ -14,7 +14,7 @@
       {
         "hash": "b2d08bd6014c7c656877c225a3070c71b0f72b71",
         "date": "2025-10-28 20:55:17 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fixes\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpt2/table.ini", "diff": "diff --git a/external/vpx-jpt2/table.ini b/external/vpx-jpt2/table.ini\nindex a5dcfa3a..61bca07e 100644\n--- a/external/vpx-jpt2/table.ini\n+++ b/external/vpx-jpt2/table.ini\n@@ -27,3 +27,8 @@ WindowRenderMode = 0\n B2SPlugins = 1\n PUPCapture = 1\n PUPPlugin = 1\n+\n+[TableOption]\n+Select LUT = 0.000000\n+Desktop DMD = 0.000000\n+Cabinet Rails = 1.000000\n\\ No newline at end of file\n"}
@@ -23,7 +23,7 @@
       {
         "hash": "cbc873ee6cd039bf9731b23ec41864eb34b41b6a",
         "date": "2025-10-27 22:55:04 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpt2/table.yml", "diff": "diff --git a/external/vpx-jpt2/table.yml b/external/vpx-jpt2/table.yml\nindex 12320c45..44c9f349 100644\n--- a/external/vpx-jpt2/table.yml\n+++ b/external/vpx-jpt2/table.yml\n@@ -4,6 +4,7 @@ backglassImageOverride: >-\n   https://virtualpinballspreadsheet.github.io/vps-db/img/gyhULWKc_b2s_1689850161155.webp\n pupArchiveRoot: \"t2_l8\"\n pupChecksum: \"b939687ca882d009da709bfcd0ae383a\"\n+pupNotes: \"Download 't2_l8.zip'\"\n pupFileUrl: >-\n   https://vpuniverse.com/files/file/22604-terminator-2-pup-pack-and-full-dmd/\n pupRequired: true\n"}
@@ -32,7 +32,7 @@
       {
         "hash": "23181b4deea3448055c21d596a8717a50094e3cd",
         "date": "2025-10-27 22:51:32 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpt2/table.yml", "diff": "diff --git a/external/vpx-jpt2/table.yml b/external/vpx-jpt2/table.yml\nindex f4600ad3..12320c45 100644\n--- a/external/vpx-jpt2/table.yml\n+++ b/external/vpx-jpt2/table.yml\n@@ -1,7 +1,7 @@\n ---\n fps: 60\n backglassImageOverride: >-\n-  https://vpuniverse.com/screenshots/monthly_2023_02/Capture2.PNG.3b40b00980fdd5c742f56d751f23a100.PNG\n+  https://virtualpinballspreadsheet.github.io/vps-db/img/gyhULWKc_b2s_1689850161155.webp\n pupArchiveRoot: \"t2_l8\"\n pupChecksum: \"b939687ca882d009da709bfcd0ae383a\"\n pupFileUrl: >-\n"}
@@ -41,7 +41,7 @@
       {
         "hash": "79c08df5ce05fcf825a1eb15da82677fec77738e",
         "date": "2025-10-27 22:11:47 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fixes\n\nFixed Avengers Backglass\nFixed JP's Terminator 2 backglass link in the wizard page.\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpt2/table.yml", "diff": "diff --git a/external/vpx-jpt2/table.yml b/external/vpx-jpt2/table.yml\nindex fafcd383..f4600ad3 100644\n--- a/external/vpx-jpt2/table.yml\n+++ b/external/vpx-jpt2/table.yml\n@@ -1,5 +1,7 @@\n ---\n fps: 60\n+backglassImageOverride: >-\n+  https://vpuniverse.com/screenshots/monthly_2023_02/Capture2.PNG.3b40b00980fdd5c742f56d751f23a100.PNG\n pupArchiveRoot: \"t2_l8\"\n pupChecksum: \"b939687ca882d009da709bfcd0ae383a\"\n pupFileUrl: >-\n"}
@@ -50,7 +50,7 @@
       {
         "hash": "52992572392988a85dd58d359ed3c38dc6d5b25a",
         "date": "2025-10-25 19:19:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Wizard omnibus update\n\nRenamed several of JPSalas' tables specifically named JP's <tablename> to reduce confusion and unify naming.\n\nvpx-avengersclassic to vpx-jpavengersclassic\nvpx-ironman2jp to vpx-jpironman2\nvpx-slimerjp to vpx-jpslimer\nvpx-startreklejp to vpx-jpstartrekle\nvpx-t2jp to vpx-jpt2\n\nUpdated BigBang Bar SERUM to v2\nUpdated JP's Avengers Classic to 6.0.0\nUpdated Bram Stoker's Dracula to 3.0\n",
         "files": [
           {"status": "R-to", "path": "external/vpx-t2jp/README.md->external/vpx-jpt2/README.md", "diff": "diff --git a/external/vpx-t2jp/README.md b/external/vpx-jpt2/README.md\nsimilarity index 100%\nrename from external/vpx-t2jp/README.md\nrename to external/vpx-jpt2/README.md"},

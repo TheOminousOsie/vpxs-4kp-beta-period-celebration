@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-cityhunterpup/table.yml", "diff": "diff --git a/external/vpx-cityhunterpup/table.yml b/external/vpx-cityhunterpup/table.yml\nindex 5a66f260..35b7a60e 100644\n--- a/external/vpx-cityhunterpup/table.yml\n+++ b/external/vpx-cityhunterpup/table.yml\n@@ -12,8 +12,5 @@ tableVPSId: \"_B0oL91xUo\"\n tagline: \"Don't Trust Anyone, Don't Love Anyone\"\n testers:\n   - \"Silentkat\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"848d31fd6efe022ca4e179b1a5689cbe\"\n-  - \"AE7CB64B7A62C2EE321DB23D0FE671DC\"\n+vpxChecksum: \"848d31fd6efe022ca4e179b1a5689cbe\"\n vpxVPSId: \"WUQkJu9X5Q\"\n\\ No newline at end of file"}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-cityhunterpup/table.yml", "diff": "diff --git a/external/vpx-cityhunterpup/table.yml b/external/vpx-cityhunterpup/table.yml\nindex 6d69e3f1..5a66f260 100644\n--- a/external/vpx-cityhunterpup/table.yml\n+++ b/external/vpx-cityhunterpup/table.yml\n@@ -1,5 +1,5 @@\n ---\n-fps: 45\n+fps: 60\n pupArchiveFormat: \"zip\"\n pupArchiveRoot: 'Pup & Media/City_Hunter'\n pupChecksum: \"DEDC6826DCCCA51A5C2AB46B2DFAB4B4\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-cityhunterpup/table.yml", "diff": "diff --git a/external/vpx-cityhunterpup/table.yml b/external/vpx-cityhunterpup/table.yml\nindex cf5a9424..6d69e3f1 100644\n--- a/external/vpx-cityhunterpup/table.yml\n+++ b/external/vpx-cityhunterpup/table.yml\n@@ -12,5 +12,8 @@ tableVPSId: \"_B0oL91xUo\"\n tagline: \"Don't Trust Anyone, Don't Love Anyone\"\n testers:\n   - \"Silentkat\"\n-vpxChecksum: \"848d31fd6efe022ca4e179b1a5689cbe\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"848d31fd6efe022ca4e179b1a5689cbe\"\n+  - \"AE7CB64B7A62C2EE321DB23D0FE671DC\"\n vpxVPSId: \"WUQkJu9X5Q\"\n\\ No newline at end of file"}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-cityhunterpup/table.ini", "diff": "diff --git a/external/vpx-cityhunterpup/table.ini b/external/vpx-cityhunterpup/table.ini\nindex 73a0ca59..4c75d047 100644\n--- a/external/vpx-cityhunterpup/table.ini\n+++ b/external/vpx-cityhunterpup/table.ini\n@@ -1,23 +1,25 @@\n [Player]\n BallTrailStrength = 0.392157\n OverrideTableEmissionScale = 0\n-AAFactor = 0.90\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.235499\n-ViewCabScaleY = 1.089915\n+ViewCabScaleX = 1.259103\n+ViewCabScaleY = 1.039243\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 3.285599\n-ViewCabVOfs = -36.834167\n-ViewCabWindowTop = 376.741028\n+ViewCabHOfs = 0.005899\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 291.826050\n ViewCabWindowBot = 73.066154\n \n [Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.355729\n B2SPlugins = 1\n PUPCapture = 1\n PUPPlugin = 1\n \n+[TableOption]\n+ChangeColorBall = 0.000000\n+Mode Easy = 0.000000\n+VR Room = 2.000000\n+Rails Visible = 1.000000\n\\ No newline at end of file"},

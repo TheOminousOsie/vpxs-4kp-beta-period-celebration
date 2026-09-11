@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-asterix/table.yml", "diff": "diff --git a/external/vpx-asterix/table.yml b/external/vpx-asterix/table.yml\nindex eca406ff..75fc2541 100644\n--- a/external/vpx-asterix/table.yml\n+++ b/external/vpx-asterix/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassBundled: true\n backglassVPSId: \"QcrLSEu8cS\"\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"AF84A01FA6D090F1391F6D0D377BB12F\"\n-  - \"9536747F7F5E993A5E68636B21414C1F\"\n+backglassChecksum: \"AF84A01FA6D090F1391F6D0D377BB12F\"\n backglassNotes: \"Found in the same .rar as the VPX file\"\n fps: 60\n tableNotes: \"Download v4.0.0\"\n@@ -17,7 +14,4 @@ testers:\n   - \"evilwraith\"\n   - \"OminousOsie\"\n vpxVPSId: \"QcrLSEu8cS\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"36B83ACD229DB68B6331B1F88D92309D\"\n-  - \"9536747F7F5E993A5E68636B21414C1F\"\n+vpxChecksum: \"36B83ACD229DB68B6331B1F88D92309D\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-asterix/table.yml", "diff": "diff --git a/external/vpx-asterix/table.yml b/external/vpx-asterix/table.yml\nindex 75fc2541..eca406ff 100644\n--- a/external/vpx-asterix/table.yml\n+++ b/external/vpx-asterix/table.yml\n@@ -1,7 +1,10 @@\n ---\n backglassBundled: true\n backglassVPSId: \"QcrLSEu8cS\"\n-backglassChecksum: \"AF84A01FA6D090F1391F6D0D377BB12F\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"AF84A01FA6D090F1391F6D0D377BB12F\"\n+  - \"9536747F7F5E993A5E68636B21414C1F\"\n backglassNotes: \"Found in the same .rar as the VPX file\"\n fps: 60\n tableNotes: \"Download v4.0.0\"\n@@ -14,4 +17,7 @@ testers:\n   - \"evilwraith\"\n   - \"OminousOsie\"\n vpxVPSId: \"QcrLSEu8cS\"\n-vpxChecksum: \"36B83ACD229DB68B6331B1F88D92309D\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"36B83ACD229DB68B6331B1F88D92309D\"\n+  - \"9536747F7F5E993A5E68636B21414C1F\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-asterix/table.ini", "diff": "diff --git a/external/vpx-asterix/table.ini b/external/vpx-asterix/table.ini\nindex 0e313ff6..e22eb444 100644\n--- a/external/vpx-asterix/table.ini\n+++ b/external/vpx-asterix/table.ini\n@@ -1,12 +1,12 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.305104\n-ViewCabScaleY = 1.028528\n-ViewCabScaleZ = 1.000001\n+ViewCabScaleX = 1.301275\n+ViewCabScaleY = 0.986618\n+ViewCabScaleZ = 0.958090\n ViewCabRotation = 180.000000\n-ViewCabHOfs = -1.985699\n-ViewCabVOfs = -30.661285\n-ViewCabWindowTop = 376.855988\n+ViewCabHOfs = 0.032201\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 288.390961\n ViewCabWindowBot = 98.367218\n \n [Player]\n@@ -14,7 +14,4 @@ ScreenPlayerY = 16.264351\n ScreenPlayerZ = 100.312576\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n-ScreenInclination = 0.000000\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+ScreenInclination = 0.000000\n\\ No newline at end of file"},
@@ -150,7 +150,7 @@
       {
         "hash": "c39b72d777813f034464622e74569d472b437b43",
         "date": "2025-03-20 00:43:11 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Additional README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-asterix/README.md", "diff": "diff --git a/external/vpx-asterix/README.md b/external/vpx-asterix/README.md\nindex 3da33c1d..618bc0ce 100644\n--- a/external/vpx-asterix/README.md\n+++ b/external/vpx-asterix/README.md\n@@ -2,30 +2,29 @@\n \n ![Table Preview](https://github.com/evilwraith/vpx-images/blob/main/vpx-asterix.png)\n \n-Authors: [Balanica](https://www.vpforums.org/index.php?showuser=154639)  \n-Version: 4.0  \n-Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=16674)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=16674) | 4.0 | [Balanica](https://www.vpforums.org/index.php?showuser=154639) |\n+| B2S | Included with VPX | N/A | N/A |\n+| DMD | N/A | N/A | N/A |\n+| ROM | N/A | N/A | N/A |\n \n-Included in table zip\n+**Tested by:** [evilwraith]\n \n-ROM\n-\n-None\n-\n-Tested by: evilwraith\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | 60 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-asterix.elf\n - Download the table and directb2s listed above, extract (if necessary) and copy to external/vpx-asterix"}
@@ -177,7 +177,7 @@
       {
         "hash": "ec5dff76d2c7ebe17626a5675f31ab7ff786f30b",
         "date": "2025-03-04 15:48:12 -0600",
-        "author": "Chad Severson",
+        "author": "Chad S.",
         "message": "Update README.md\n\nThe readme said that no rom was required so fixed the readme to indicate no rom was needed\n",
         "files": [
           {"status": "M", "path": "external/vpx-asterix/README.md", "diff": "diff --git a/external/vpx-asterix/README.md b/external/vpx-asterix/README.md\nindex d16ffafe..3da33c1d 100644\n--- a/external/vpx-asterix/README.md\n+++ b/external/vpx-asterix/README.md\n@@ -22,7 +22,7 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n \n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 60 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | 60 |\n \n ## Instructions\n \n"}
@@ -195,7 +195,7 @@
       {
         "hash": "56c44e35347b512d0421d1678268a9516382f286",
         "date": "2024-11-14 15:48:16 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "added Asterix The Twelve Tasks (Original 2022)\n\nAsterix The Twelve Tasks (Original 2022)\n",
         "files": [
           {"status": "A", "path": "external/vpx-asterix/Asterix The Twelve Tasks (Original 2022).ini", "diff": "diff --git a/external/vpx-asterix/Asterix The Twelve Tasks (Original 2022).ini b/external/vpx-asterix/Asterix The Twelve Tasks (Original 2022).ini\nnew file mode 100644\nindex 00000000..4af756fb\n--- /dev/null\n+++ b/external/vpx-asterix/Asterix The Twelve Tasks (Original 2022).ini\t\n@@ -0,0 +1,17 @@\n+[TableOverride]\n+ViewCabMode = 2\n+ViewCabScaleX = 1.305104\n+ViewCabScaleY = 1.028528\n+ViewCabScaleZ = 1.000001\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = -1.985699\n+ViewCabVOfs = -30.661285\n+ViewCabWindowTop = 376.855988\n+ViewCabWindowBot = 98.367218\n+\n+[Player]\n+ScreenPlayerY = 16.264351\n+ScreenPlayerZ = 100.312576\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n\\ No newline at end of file"},

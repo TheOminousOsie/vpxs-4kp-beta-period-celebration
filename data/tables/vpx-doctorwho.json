@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-doctorwho/table.yml", "diff": "diff --git a/external/vpx-doctorwho/table.yml b/external/vpx-doctorwho/table.yml\nindex f428a29b..6207b8b2 100644\n--- a/external/vpx-doctorwho/table.yml\n+++ b/external/vpx-doctorwho/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassVPSId: \"MchOoPrbiP\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"a3e1af9f5ba44177357379583ea31397\"\n-  - \"20BD5EF4D37F0F6045631EA82C231216\"\n-fps: 58\n+backglassChecksum: \"a3e1af9f5ba44177357379583ea31397\"\n+fps: 60\n coloredROMVPSId: \"RPIsO7UnUu\"\n coloredROMChecksum: \"3492023CDD051898E24F89330CAD73D3\"\n coloredROMNotes: \"Download Version 2.1.0\"\n@@ -19,7 +16,4 @@ testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n vpxVPSId: \"1ym9HpnI\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"ca013aa443cdedcf6639bd9d3bd3b67a\"\n-  - \"2A750526FA9EE8F8F49B7C4843520D9D\"\n+vpxChecksum: \"ca013aa443cdedcf6639bd9d3bd3b67a\""}
@@ -22,7 +22,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-doctorwho/table.yml", "diff": "diff --git a/external/vpx-doctorwho/table.yml b/external/vpx-doctorwho/table.yml\nindex a2b0ecf8..f428a29b 100644\n--- a/external/vpx-doctorwho/table.yml\n+++ b/external/vpx-doctorwho/table.yml\n@@ -4,7 +4,7 @@ backglassArchiveFormat: \"zip\"\n backglassChecksum:\n   - \"a3e1af9f5ba44177357379583ea31397\"\n   - \"20BD5EF4D37F0F6045631EA82C231216\"\n-fps: 60\n+fps: 58\n coloredROMVPSId: \"RPIsO7UnUu\"\n coloredROMChecksum: \"3492023CDD051898E24F89330CAD73D3\"\n coloredROMNotes: \"Download Version 2.1.0\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-doctorwho/table.yml", "diff": "diff --git a/external/vpx-doctorwho/table.yml b/external/vpx-doctorwho/table.yml\nindex 6207b8b2..a2b0ecf8 100644\n--- a/external/vpx-doctorwho/table.yml\n+++ b/external/vpx-doctorwho/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"MchOoPrbiP\"\n-backglassChecksum: \"a3e1af9f5ba44177357379583ea31397\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"a3e1af9f5ba44177357379583ea31397\"\n+  - \"20BD5EF4D37F0F6045631EA82C231216\"\n fps: 60\n coloredROMVPSId: \"RPIsO7UnUu\"\n coloredROMChecksum: \"3492023CDD051898E24F89330CAD73D3\"\n@@ -16,4 +19,7 @@ testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n vpxVPSId: \"1ym9HpnI\"\n-vpxChecksum: \"ca013aa443cdedcf6639bd9d3bd3b67a\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"ca013aa443cdedcf6639bd9d3bd3b67a\"\n+  - \"2A750526FA9EE8F8F49B7C4843520D9D\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-doctorwho/table.ini", "diff": "diff --git a/external/vpx-doctorwho/table.ini b/external/vpx-doctorwho/table.ini\nindex b0733777..e6d320cb 100644\n--- a/external/vpx-doctorwho/table.ini\n+++ b/external/vpx-doctorwho/table.ini\n@@ -1,19 +1,15 @@\n-[Standalone]\n-WindowRenderMode = 0\n-\n [Player]\n JoyAddCredit2Key = 1\n+ScreenPlayerY = 15.007805\n+ScreenPlayerZ = 89.993027\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.824864\n-ViewCabScaleY = 1.050324\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -40.809986\n-ViewCabPlayerY = -3.191000\n-ViewCabPlayerZ = -274.500031\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n-ToneMapper = 2\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.274547\n+ViewCabScaleY = 0.993483\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 171.403778\n+ViewCabWindowBot = 138.953217\n\\ No newline at end of file"},
@@ -50,7 +50,7 @@
       {
         "hash": "e175ad86bdd9ecd2b5fb1e4b9da85ec88ff27fb5",
         "date": "2025-11-24 19:00:50 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 more\n\nDemolition Man: WindowRenderMode = 0\nDoctor Who: WindowRenderMode = 0\n Gladiators: WindowRenderMode = 0\n",
         "files": [
           {"status": "M", "path": "external/vpx-doctorwho/table.ini", "diff": "diff --git a/external/vpx-doctorwho/table.ini b/external/vpx-doctorwho/table.ini\nindex 28aa3a9c..b0733777 100644\n--- a/external/vpx-doctorwho/table.ini\n+++ b/external/vpx-doctorwho/table.ini\n@@ -1,12 +1,7 @@\n [Standalone]\n-PinMAMEWindowX = 3840\n-PinMAMEWindowY = 0\n-PinMAMEWindowWidth = 1200\n-PinMAMEWindowHeight = 380\n-PinMAMEWindowRotation = 1\n+WindowRenderMode = 0\n \n [Player]\n-BallAntiStretch = 1\n JoyAddCredit2Key = 1\n \n [TableOverride]"}
@@ -59,7 +59,7 @@
       {
         "hash": "fd6678c9b6cc6c18e385497a2a2b440391f82fa5",
         "date": "2025-11-24 18:33:24 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "missing quote\n",
         "files": [
           {"status": "M", "path": "external/vpx-doctorwho/table.yml", "diff": "diff --git a/external/vpx-doctorwho/table.yml b/external/vpx-doctorwho/table.yml\nindex bbdac7e9..3fb86e84 100644\n--- a/external/vpx-doctorwho/table.yml\n+++ b/external/vpx-doctorwho/table.yml\n@@ -11,7 +11,7 @@ tableVPSId: \"0wPuijKc\"\n tagline: >-\n   \"There's no point in being grown up if you\n   can't be childish sometimes\" - Fourth (and best) Doctor!\n-tableNotes: \"Download ' Doctor Who (Bally 1992)_Bigus(MOD)3.0.vpx.zip'\n+tableNotes: \"Download ' Doctor Who (Bally 1992)_Bigus(MOD)3.0.vpx.zip'\"\n testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\""}
@@ -68,7 +68,7 @@
       {
         "hash": "8d4207ecc1b77460d52c2c7be77d0e9f10312f0b",
         "date": "2025-11-24 18:26:09 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "2 more\n\nArmy of Darkness: Updated backglass to working version\nDoctor Who: updated Serum version\n",
         "files": [
           {"status": "M", "path": "external/vpx-doctorwho/table.yml", "diff": "diff --git a/external/vpx-doctorwho/table.yml b/external/vpx-doctorwho/table.yml\nindex f92fa77a..bbdac7e9 100644\n--- a/external/vpx-doctorwho/table.yml\n+++ b/external/vpx-doctorwho/table.yml\n@@ -3,13 +3,15 @@ backglassVPSId: \"MchOoPrbiP\"\n backglassChecksum: \"a3e1af9f5ba44177357379583ea31397\"\n fps: 51\n coloredROMVPSId: \"RPIsO7UnUu\"\n-coloredROMChecksum: \"e5ba3f57c60e899fc9afe35b28b44ad1\"\n+coloredROMChecksum: \"713AAAE879CA16A2D3B2C36E0BAD0917\"\n+coloredROMNotes: \"Download Version 2.1.0\"\n romVPSId: \"p9hGBlm6ef\"\n romChecksum: \"bee33e29f6714795116a1bda67f62c55\"\n tableVPSId: \"0wPuijKc\"\n tagline: >-\n   \"There's no point in being grown up if you\n   can't be childish sometimes\" - Fourth (and best) Doctor!\n+tableNotes: \"Download ' Doctor Who (Bally 1992)_Bigus(MOD)3.0.vpx.zip'\n testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n"}
@@ -301,7 +301,7 @@
       {
         "hash": "8e884434a9f5136a518cf8eb97a698f58e58ba30",
         "date": "2025-02-05 18:12:36 -0600",
-        "author": "Chad Severson",
+        "author": "Chad S.",
         "message": "Update vpx-doctorwho wheelart\n\nAdded wheel art for vpx-doctorwho\n",
         "files": [
           {"status": "M", "path": "external/vpx-doctorwho/vpx-doctorwho.png"}

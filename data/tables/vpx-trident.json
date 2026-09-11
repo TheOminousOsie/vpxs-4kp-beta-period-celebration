@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-trident/table.yml", "diff": "diff --git a/external/vpx-trident/table.yml b/external/vpx-trident/table.yml\nindex 247e1d26..a9199a42 100644\n--- a/external/vpx-trident/table.yml\n+++ b/external/vpx-trident/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"2434FD36898727D09B6383DE4416B197\"\n-  - \"92767FA2243695985C10B4D3256D3C79\"\n+backglassChecksum: \"2434FD36898727D09B6383DE4416B197\"\n backglassNotes: \"Download 'Trident (Stern 1979).zip'\"\n backglassVPSId: \"5nAyw5ura7\"\n fps: 60\n@@ -14,8 +11,5 @@ tableVPSId: \"r5DTwPZy\"\n tagline: \"'OUTRAGEOUS!' - Aquaman\"\n testers:\n   - \"Wraith\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"EDBDAB0AE0201D3AEB0256047D9D61D5\"\n-  - \"5C11639C208E33B1EC37D8590234C7B1\"\n+vpxChecksum: \"EDBDAB0AE0201D3AEB0256047D9D61D5\"\n vpxVPSId: \"nuYxSulXdo\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-trident/table.yml", "diff": "diff --git a/external/vpx-trident/table.yml b/external/vpx-trident/table.yml\nindex a9199a42..247e1d26 100644\n--- a/external/vpx-trident/table.yml\n+++ b/external/vpx-trident/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"2434FD36898727D09B6383DE4416B197\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"2434FD36898727D09B6383DE4416B197\"\n+  - \"92767FA2243695985C10B4D3256D3C79\"\n backglassNotes: \"Download 'Trident (Stern 1979).zip'\"\n backglassVPSId: \"5nAyw5ura7\"\n fps: 60\n@@ -11,5 +14,8 @@ tableVPSId: \"r5DTwPZy\"\n tagline: \"'OUTRAGEOUS!' - Aquaman\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"EDBDAB0AE0201D3AEB0256047D9D61D5\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"EDBDAB0AE0201D3AEB0256047D9D61D5\"\n+  - \"5C11639C208E33B1EC37D8590234C7B1\"\n vpxVPSId: \"nuYxSulXdo\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-trident/table.ini", "diff": "diff --git a/external/vpx-trident/table.ini b/external/vpx-trident/table.ini\nindex cc84b0b5..739f6430 100644\n--- a/external/vpx-trident/table.ini\n+++ b/external/vpx-trident/table.ini\n@@ -1,3 +1,7 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+B2SHideB2SDMD = 1\n+\n [TableOverride]\n ViewCabMode = 2\n ViewCabScaleX = 1.148420\n@@ -5,9 +9,6 @@ ViewCabScaleY = 1.005408\n ViewCabScaleZ = 0.901310\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = 0.307683\n+ViewCabVOfs = 0\n ViewCabWindowTop = 68.831841\n-ViewCabWindowBot = 0.364256\n-\n-[Player]\n-AAFactor = 0.95\n\\ No newline at end of file\n+ViewCabWindowBot = 0.364256\n\\ No newline at end of file"},
@@ -32,7 +32,7 @@
       {
         "hash": "f1759cd441fcd4a03f0b74807267dc7a5d5f8223",
         "date": "2025-11-21 10:15:45 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-trident/table.yml", "diff": "diff --git a/external/vpx-trident/table.yml b/external/vpx-trident/table.yml\nindex 1b91808b..992c7e6d 100644\n--- a/external/vpx-trident/table.yml\n+++ b/external/vpx-trident/table.yml\n@@ -8,10 +8,10 @@ fps: 60\n romChecksum: \"4C65685EFF6ED5F186E58D198C0FCF27\"\n romNotes: \"Download 'trident.zip'\"\n romVPSId: \"f27-Ewgg9i\"\n-tableNotes: \"Download 'Trident (Stern 1979) v2.0.zip'\"\n+tableNotes: \"Download 'Trident (Stern 1979) v2.1.zip'\"\n tableVPSId: \"r5DTwPZy\"\n tagline: \"'OUTRAGEOUS!' - Aquaman\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"9359003CE5FAEE63A26FDFD7EF33FCFE\"\n+vpxChecksum: \"EDBDAB0AE0201D3AEB0256047D9D61D5\"\n vpxVPSId: \"nuYxSulXdo\"\n"}
@@ -41,7 +41,7 @@
       {
         "hash": "6f9678b4cc535488d6528dcfd9165100a0f4e45c",
         "date": "2025-11-11 01:10:19 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update launcher.png\n",
         "files": [
           {"status": "M", "path": "external/vpx-trident/launcher.png"}
@@ -50,7 +50,7 @@
       {
         "hash": "6c5ab2af9abec09a67ef6153a702aab498fd8586",
         "date": "2025-11-11 01:01:33 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Trident\n",
         "files": [
           {"status": "A", "path": "external/vpx-trident/README.md", "diff": "diff --git a/external/vpx-trident/README.md b/external/vpx-trident/README.md\nnew file mode 100644\nindex 00000000..8a32ea61\n--- /dev/null\n+++ b/external/vpx-trident/README.md\n@@ -0,0 +1,60 @@\n+# Trident (Stern 1979)\n+\n+![Table Preview](../../images/nuYxSulXdo-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Wraith\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Trident (Stern 1979)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"'OUTRAGEOUS!' - Aquaman\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},

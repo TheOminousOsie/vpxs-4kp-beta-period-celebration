@@ -17,7 +17,7 @@
       {
         "hash": "93563a4dbe2b3d4550d48edf22f20b4a579f93d6",
         "date": "2025-02-09 19:41:34 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Remove 5 tables\n\nRemove 5 tables to a root folder called problem-tables and move their entires in the main readme into an md in their folder.\n",
         "files": [
           {"status": "R-from", "path": "external/vpx-got/Game of Thrones LE (Stern 2015) VPW.ini->problem-tables/vpx-got/Game of Thrones LE (Stern 2015) VPW.ini", "diff": "diff --git a/external/vpx-got/Game of Thrones LE (Stern 2015) VPW.ini b/external/vpx-got/Game of Thrones LE (Stern 2015) VPW.ini\ndeleted file mode 100644\nindex 3cfdd53f..00000000\n--- a/external/vpx-got/Game of Thrones LE (Stern 2015) VPW.ini\t\n+++ /dev/null\n@@ -1,16 +0,0 @@\n-[Player]\n-BallTrailStrength = 0.196078\n-OverrideTableEmissionScale = 0\n-\n-[TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.736681\n-ViewCabScaleY = 1.052733\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -24.139000\n-ViewCabPlayerY = 3.681000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file"},

@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinkfloyd/table.yml", "diff": "diff --git a/external/vpx-pinkfloyd/table.yml b/external/vpx-pinkfloyd/table.yml\nindex 8761f79c..0eadfb0d 100644\n--- a/external/vpx-pinkfloyd/table.yml\n+++ b/external/vpx-pinkfloyd/table.yml\n@@ -24,7 +24,4 @@ mainNotes: >-\n   gets stuck on the right ramp. There isn't really anything that\n   can be done about it. But it doesn't happen too often.\n vpxVPSId: \"qV3Z3oQ8md\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"e6df3800f7c9286fa195e84034da683a\"\n-  - \"FD61E264495CDCAD1BD296A2D840E464\"\n+vpxChecksum: \"e6df3800f7c9286fa195e84034da683a\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinkfloyd/table.yml", "diff": "diff --git a/external/vpx-pinkfloyd/table.yml b/external/vpx-pinkfloyd/table.yml\nindex 0eadfb0d..8761f79c 100644\n--- a/external/vpx-pinkfloyd/table.yml\n+++ b/external/vpx-pinkfloyd/table.yml\n@@ -24,4 +24,7 @@ mainNotes: >-\n   gets stuck on the right ramp. There isn't really anything that\n   can be done about it. But it doesn't happen too often.\n vpxVPSId: \"qV3Z3oQ8md\"\n-vpxChecksum: \"e6df3800f7c9286fa195e84034da683a\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"e6df3800f7c9286fa195e84034da683a\"\n+  - \"FD61E264495CDCAD1BD296A2D840E464\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinkfloyd/table.ini", "diff": "diff --git a/external/vpx-pinkfloyd/table.ini b/external/vpx-pinkfloyd/table.ini\nindex 8ad99301..86d6c3ba 100644\n--- a/external/vpx-pinkfloyd/table.ini\n+++ b/external/vpx-pinkfloyd/table.ini\n@@ -1,20 +1,19 @@\n [Standalone]\n B2SHideGrill = 1\n-BackBufferScale = 0.416666\n-\n-[Player]\n-BallTrailStrength = 0.490196\n-OverrideTableEmissionScale = 0\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.821040\n-ViewCabScaleY = 1.088109\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 12.548971\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 25.737509\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.253225\n+ViewCabScaleY = 1.000077\n+ViewCabScaleZ = 0.869907\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.013211\n+ViewCabWindowTop = 243.462936\n+ViewCabWindowBot = 83.953270\n+\n+[Player]\n+ScreenPlayerY = 14.981256\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.299855\n\\ No newline at end of file"},
@@ -59,7 +59,7 @@
       {
         "hash": "246e9c00fc2396a9caa257a82dc1100e839281bf",
         "date": "2025-05-26 19:25:21 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Disable Pink Floyd in wizard\n\nTemporarily disable in wizard as it cannot be installed due to bug with bundled roms.\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinkfloyd/table.yml", "diff": "diff --git a/external/vpx-pinkfloyd/table.yml b/external/vpx-pinkfloyd/table.yml\nindex cf81f856..0d235da6 100644\n--- a/external/vpx-pinkfloyd/table.yml\n+++ b/external/vpx-pinkfloyd/table.yml\n@@ -24,5 +24,6 @@ mainNotes: >-\n   can be done about it. But it doesn't happen too often.\n vpxVPSId: \"qV3Z3oQ8md\"\n vpxChecksum: \"e6df3800f7c9286fa195e84034da683a\"\n+enabled: false\n applyFixes:\n   - \"bass\"\n"}
@@ -158,7 +158,7 @@
       {
         "hash": "4792eacf32b2301c92c4fbaa091f4de0c5b767c8",
         "date": "2025-04-06 09:10:27 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update Pink Floyd BBS\n\nAdjust BBS in ini and update FPS in yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinkfloyd/table.ini"},
@@ -168,7 +168,7 @@
       {
         "hash": "4bf5c2c69b785c547124b78e7aba3c30588fa6fc",
         "date": "2025-04-06 09:08:40 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinkfloyd/table.yml", "diff": "diff --git a/external/vpx-pinkfloyd/table.yml b/external/vpx-pinkfloyd/table.yml\nindex 9d766b72..835803b6 100644\n--- a/external/vpx-pinkfloyd/table.yml\n+++ b/external/vpx-pinkfloyd/table.yml\n@@ -5,7 +5,7 @@ backglassUrlOverride: >-\n backglassAuthorsOverride:\n   - \"CoffeeAtJoes\"\n backglassNotes: \"Download version 1.0\"\n-fps: 42\n+fps: 50\n romChecksum: \"e4c898afcdcf6fd2a884c77c7fd6c3a9\"\n romNotes: \"'esha_l4c.zip' in the VPX download zip\"\n romBundled: true\n"}
@@ -177,7 +177,7 @@
       {
         "hash": "6aafdeafc05a738fa66f9e34977bd66ae56665c2",
         "date": "2025-04-06 09:08:20 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.ini\n\nAdd BBS downstep to bring framerate to 50\n",
         "files": [
           {"status": "M", "path": "external/vpx-pinkfloyd/table.ini", "diff": "diff --git a/external/vpx-pinkfloyd/table.ini b/external/vpx-pinkfloyd/table.ini\nindex 638058dd..8ad99301 100644\n--- a/external/vpx-pinkfloyd/table.ini\n+++ b/external/vpx-pinkfloyd/table.ini\n@@ -1,5 +1,6 @@\n [Standalone]\n B2SHideGrill = 1\n+BackBufferScale = 0.416666\n \n [Player]\n BallTrailStrength = 0.490196\n"}

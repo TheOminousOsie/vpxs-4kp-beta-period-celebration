@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-250cc/table.yml", "diff": "diff --git a/external/vpx-250cc/table.yml b/external/vpx-250cc/table.yml\nindex 8821241e..4b28d3f3 100644\n--- a/external/vpx-250cc/table.yml\n+++ b/external/vpx-250cc/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"Wa_52tLV\"\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"1780AFBF576A59ECC035104B1C4ECE35\"\n-  - \"DBD0A0E13BA1634E4DD67A50D4EC0D23\"\n+backglassChecksum: \"1780AFBF576A59ECC035104B1C4ECE35\"\n backglassNotes: \"Download version 1.0\"\n fps: 60\n romVPSId: \"AYg8Ljzs\"\n@@ -19,7 +16,4 @@ testers:\n   - \"OminousOsie\"\n   - \"pointdablame\"\n vpxVPSId: \"Gw5kOfmC\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"83C1D8B781FAD7A4EAFE70CFC3EC5F3C\"\n-  - \"12487A8ED874BFEE8738B87F1BE8818E\"\n+vpxChecksum: \"83C1D8B781FAD7A4EAFE70CFC3EC5F3C\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-250cc/table.yml", "diff": "diff --git a/external/vpx-250cc/table.yml b/external/vpx-250cc/table.yml\nindex 4b28d3f3..8821241e 100644\n--- a/external/vpx-250cc/table.yml\n+++ b/external/vpx-250cc/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"Wa_52tLV\"\n-backglassChecksum: \"1780AFBF576A59ECC035104B1C4ECE35\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"1780AFBF576A59ECC035104B1C4ECE35\"\n+  - \"DBD0A0E13BA1634E4DD67A50D4EC0D23\"\n backglassNotes: \"Download version 1.0\"\n fps: 60\n romVPSId: \"AYg8Ljzs\"\n@@ -16,4 +19,7 @@ testers:\n   - \"OminousOsie\"\n   - \"pointdablame\"\n vpxVPSId: \"Gw5kOfmC\"\n-vpxChecksum: \"83C1D8B781FAD7A4EAFE70CFC3EC5F3C\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"83C1D8B781FAD7A4EAFE70CFC3EC5F3C\"\n+  - \"12487A8ED874BFEE8738B87F1BE8818E\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-250cc/table.ini", "diff": "diff --git a/external/vpx-250cc/table.ini b/external/vpx-250cc/table.ini\nindex b9a60108..bc0bd4fa 100644\n--- a/external/vpx-250cc/table.ini\n+++ b/external/vpx-250cc/table.ini\n@@ -1,17 +1,25 @@\n+[Standalone]\n+BackBufferScale = 0.666666\n+\n [Player]\n-ScreenPlayerY = 0.045756\n+ScreenPlayerY = 7.992106\n ScreenPlayerX = 0.000054\n-ScreenPlayerZ = 100.034180\n+ScreenPlayerZ = 99.995407\n JoyAddCreditKey = \n JoyAddCredit2Key = 1\n+AAFactor = 0.90\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.104951\n-ViewCabScaleY = 0.960206\n-ViewCabScaleZ = 1.076895\n+ViewCabScaleX = 1.053869\n+ViewCabScaleY = 0.931786\n+ViewCabScaleZ = 0.984310\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 1.695116\n-ViewCabVOfs = 58.533791\n-ViewCabWindowTop = 37.273087\n-ViewCabWindowBot = 0.318153\n+ViewCabHOfs = 0.001616\n+ViewCabVOfs = 74.473213\n+ViewCabWindowTop = 0.865078\n+ViewCabWindowBot = 0.098114\n+\n+[TableOption]\n+Select LUT = 0.000000\n+Cabinet Rails = 0.000000\n\\ No newline at end of file"},
@@ -41,7 +41,7 @@
       {
         "hash": "cd1f4ca8140a618c79468fa23e1aac399f31a517",
         "date": "2025-09-11 11:58:14 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "250cc\n",
         "files": [
           {"status": "M", "path": "external/vpx-250cc/table.yml", "diff": "diff --git a/external/vpx-250cc/table.yml b/external/vpx-250cc/table.yml\nindex ea69570e..a23b6f10 100644\n--- a/external/vpx-250cc/table.yml\n+++ b/external/vpx-250cc/table.yml\n@@ -8,7 +8,7 @@ fps: 60\n romVPSId: \"AYg8Ljzs\"\n romChecksum: \"7C4CFC17CCCD4F983C82714B71BF1C7E\"\n romNotes: \"Download ind250cc.zip\"\n-tableNotes: \"Download v55_VPX8.zip\"\n+tableNotes: \"Download v600.zip\"\n tableVPSId: \"bafGvcae\"\n tagline: >-\n   \"250 cc\" is a motorcycle racing-themed pinball\n@@ -18,4 +18,4 @@ testers:\n   - \"OminousOsie\"\n   - \"pointdablame\"\n vpxVPSId: \"Gw5kOfmC\"\n-vpxChecksum: \"F8F71FE56C0348F4AC92925EA41E7CFA\"\n+vpxChecksum: \"83C1D8B781FAD7A4EAFE70CFC3EC5F3C\"\n"}
@@ -169,7 +169,7 @@
       {
         "hash": "4dfe31cb920b8be2ff7cf4d17f0dfc1daba29b4b",
         "date": "2025-03-19 23:44:02 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "README Updates\n\nCorrection on some missed tags and Testers\n",
         "files": [
           {"status": "M", "path": "external/vpx-250cc/README.md", "diff": "diff --git a/external/vpx-250cc/README.md b/external/vpx-250cc/README.md\nindex cb6f5e6a..50dfee29 100644\n--- a/external/vpx-250cc/README.md\n+++ b/external/vpx-250cc/README.md\n@@ -12,7 +12,7 @@\n | DMD | N/A | N/A | N/A |\n | ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=431) | N/A | N/A |\n \n-**Tested by:** [n-i-x [NEEDS CORRECTION]]\n+**Tested by:** [Boris]\n \n ---\n "}
@@ -178,7 +178,7 @@
       {
         "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
         "date": "2025-03-19 14:01:02 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Large README Updates\n\n46 README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-250cc/README.md", "diff": "diff --git a/external/vpx-250cc/README.md b/external/vpx-250cc/README.md\nindex f6f252d0..cb6f5e6a 100644\n--- a/external/vpx-250cc/README.md\n+++ b/external/vpx-250cc/README.md\n@@ -2,30 +2,29 @@\n \n ![Table Preview](../../images/vpx-250cc.jpg)\n \n-Authors: [jpsalas](https://www.vpforums.org/index.php?s=543a5ca562cc33a89debe8ace8834f1e&showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=14252)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=14252) | 5.5.0 | [jpsalas](https://www.vpforums.org/index.php?s=543a5ca562cc33a89debe8ace8834f1e&showuser=277) |\n+| B2S | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=7697) | 1.0 | [Piggei](https://www.vpforums.org/index.php?app=downloads&showfile=7697) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=431) | N/A | N/A |\n \n-Authors: [Piggei](https://www.vpforums.org/index.php?app=downloads&showfile=7697)  \n-Version: 1.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=7697)\n+**Tested by:** [n-i-x [NEEDS CORRECTION]]\n \n-ROM\n-\n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=431)\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-250cc.elf\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-250cc"}
@@ -187,7 +187,7 @@
       {
         "hash": "9b265820d525ec55a065605fa150abef85f26427",
         "date": "2025-03-19 10:02:25 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Delete external/vpx-250cc/table.yml",
         "files": [
           {"status": "D", "path": "external/vpx-250cc/table.yml", "diff": "diff --git a/external/vpx-250cc/table.yml b/external/vpx-250cc/table.yml\ndeleted file mode 100644\nindex e0205a15..00000000\n--- a/external/vpx-250cc/table.yml\n+++ /dev/null\n@@ -1,5 +0,0 @@\n----\n-tableVPSId: jJ-U4acSur\n-vpxVPSId: YiXk8bsCV2\n-backglassVPSId: TRamQ_uwg_\n-romVPSId: S_e4jzsVvQ\n"}
@@ -196,7 +196,7 @@
       {
         "hash": "201ec296ab1fe38b6147551fd0cbc5c75de3b24a",
         "date": "2025-03-19 09:51:41 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml",
         "files": [
           {"status": "M", "path": "external/vpx-250cc/table.yml", "diff": "diff --git a/external/vpx-250cc/table.yml b/external/vpx-250cc/table.yml\nindex cdaa01cb..e0205a15 100644\n--- a/external/vpx-250cc/table.yml\n+++ b/external/vpx-250cc/table.yml\n@@ -3,4 +3,3 @@ tableVPSId: jJ-U4acSur\n vpxVPSId: YiXk8bsCV2\n backglassVPSId: TRamQ_uwg_\n romVPSId: S_e4jzsVvQ\n-coloredROMVPSId:\n\\ No newline at end of file\n"}
@@ -231,7 +231,7 @@
       {
         "hash": "a20c28c275f2751f2109b5f182efb45e918c8d8b",
         "date": "2025-02-26 14:31:51 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add yml for smattering of tables\n\nBig Horse\nBig Indian\nBig Trouble\nBig Star\n250cc\n301 Bullseye\n4 Aces\nAce High\nAlice In Wonderland\nAli JP\n",
         "files": [
           {"status": "A", "path": "external/vpx-250cc/table.yml", "diff": "diff --git a/external/vpx-250cc/table.yml b/external/vpx-250cc/table.yml\nnew file mode 100644\nindex 00000000..cdaa01cb\n--- /dev/null\n+++ b/external/vpx-250cc/table.yml\n@@ -0,0 +1,6 @@\n+---\n+tableVPSId: jJ-U4acSur\n+vpxVPSId: YiXk8bsCV2\n+backglassVPSId: TRamQ_uwg_\n+romVPSId: S_e4jzsVvQ\n+coloredROMVPSId:\n\\ No newline at end of file"}
@@ -240,7 +240,7 @@
       {
         "hash": "78da9daf69e3c8dc890588d8fd525db76123e29c",
         "date": "2025-02-23 08:31:07 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update README.md",
         "files": [
           {"status": "M", "path": "external/vpx-250cc/README.md", "diff": "diff --git a/external/vpx-250cc/README.md b/external/vpx-250cc/README.md\nindex 629b7367..f6f252d0 100644\n--- a/external/vpx-250cc/README.md\n+++ b/external/vpx-250cc/README.md\n@@ -1,6 +1,6 @@\n # 250cc (Inder, 1992)\n \n-![Table Preview](../../images/vpx-250cc)\n+![Table Preview](../../images/vpx-250cc.jpg)\n \n Authors: [jpsalas](https://www.vpforums.org/index.php?s=543a5ca562cc33a89debe8ace8834f1e&showuser=277)  \n Version: 5.5.0  \n"}
@@ -249,7 +249,7 @@
       {
         "hash": "9c40ab4c168cd763b72fd8b8b0e01e295fb563b6",
         "date": "2025-02-23 08:30:37 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update README.md\n",
         "files": [
           {"status": "M", "path": "external/vpx-250cc/README.md", "diff": "diff --git a/external/vpx-250cc/README.md b/external/vpx-250cc/README.md\nindex 629b7367..f6f252d0 100644\n--- a/external/vpx-250cc/README.md\n+++ b/external/vpx-250cc/README.md\n@@ -1,6 +1,6 @@\n # 250cc (Inder, 1992)\n \n-![Table Preview](../../images/vpx-250cc)\n+![Table Preview](../../images/vpx-250cc.jpg)\n \n Authors: [jpsalas](https://www.vpforums.org/index.php?s=543a5ca562cc33a89debe8ace8834f1e&showuser=277)  \n Version: 5.5.0  \n"}
@@ -267,7 +267,7 @@
       {
         "hash": "51e7ca4930b328cb7a2790d1c79a0de34b0462f9",
         "date": "2025-02-05 13:16:23 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "add vpx-250cc\n\nAdd table, update root readme, add preview image\n",
         "files": [
           {"status": "A", "path": "external/vpx-250cc/250cc (Inder - 1992) v55_VPX8.ini", "diff": "diff --git a/external/vpx-250cc/250cc (Inder - 1992) v55_VPX8.ini b/external/vpx-250cc/250cc (Inder - 1992) v55_VPX8.ini\nnew file mode 100755\nindex 00000000..fb1451b4\n--- /dev/null\n+++ b/external/vpx-250cc/250cc (Inder - 1992) v55_VPX8.ini\t\n@@ -0,0 +1,32 @@\n+[TableOverride]\n+ViewDTLookAt = 45.000000\n+ViewDTFOV = 45.000000\n+ViewDTLayback = 0.000000\n+ViewDTRotation = 0.000000\n+ViewDTScaleX = 1.000000\n+ViewDTScaleY = 1.000000\n+ViewDTScaleZ = 1.000000\n+ViewDTPlayerX = 0.000000\n+ViewDTPlayerY = 10.000000\n+ViewDTPlayerZ = -200.000000\n+ViewCabLookAt = 8.000000\n+ViewCabFOV = 27.000000\n+ViewCabLayback = 76.000000\n+ViewCabRotation = 90.000000\n+ViewCabScaleX = 1.000000\n+ViewCabScaleY = 1.150000\n+ViewCabScaleZ = 1.000000\n+ViewCabPlayerX = -25.000000\n+ViewCabPlayerY = 0.000000\n+ViewCabPlayerZ = -230.000000\n+ViewFSSLookAt = 54.000000\n+ViewFSSFOV = 32.000000\n+ViewFSSLayback = 0.000000\n+ViewFSSRotation = 0.000000\n+ViewFSSScaleX = 1.000000\n+ViewFSSScaleY = 1.000000\n+ViewFSSScaleZ = 1.000000\n+ViewFSSPlayerX = 0.000000\n+ViewFSSPlayerY = 0.000000\n+ViewFSSPlayerZ = -250.000000\n+ViewCabMode = 0\n\\ No newline at end of file"},

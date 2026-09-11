@@ -4,7 +4,7 @@
       {
         "hash": "4a02ebc321763607047eeb2ac122432348f2226b",
         "date": "2026-07-18 00:40:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "final updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-big_trouble/table.vbs", "diff": "diff --git a/external/vpx-big_trouble/table.vbs b/external/vpx-big_trouble/table.vbs\nindex b82b94dd..155f490a 100644\n--- a/external/vpx-big_trouble/table.vbs\n+++ b/external/vpx-big_trouble/table.vbs\n@@ -11,7 +11,7 @@ Randomize\n \n \n \n-Const PupScreen = 1\t'Aprons  0=Off - 1= On - 2= On High Quality Slow PC 0 or 1\n+Const PupScreen = 0\t'Aprons  0=Off - 1= On - 2= On High Quality Slow PC 0 or 1\n \n \n '************************************************CHOOSE FPS***********************************************************************"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-big_trouble/table.yml", "diff": "diff --git a/external/vpx-big_trouble/table.yml b/external/vpx-big_trouble/table.yml\nindex 84cc7830..eeeac6bf 100644\n--- a/external/vpx-big_trouble/table.yml\n+++ b/external/vpx-big_trouble/table.yml\n@@ -13,8 +13,5 @@ testers:\n   - \"OminousOsie\"\n   - \"kingargyle\"\n vpxVPSId: \"xxxNFKri-k\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"AD4BAE49CE29B9321B048606A0DF1AE5\"\n-  - \"81D6B30EE17DCC10A43D1ECB1C6FFB11\"\n+vpxChecksum: \"AD4BAE49CE29B9321B048606A0DF1AE5\"\n tableNotes: \"Download 'Big Trouble 1.8 DOF for puppack.rar'\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-big_trouble/table.yml", "diff": "diff --git a/external/vpx-big_trouble/table.yml b/external/vpx-big_trouble/table.yml\nindex eeeac6bf..84cc7830 100644\n--- a/external/vpx-big_trouble/table.yml\n+++ b/external/vpx-big_trouble/table.yml\n@@ -13,5 +13,8 @@ testers:\n   - \"OminousOsie\"\n   - \"kingargyle\"\n vpxVPSId: \"xxxNFKri-k\"\n-vpxChecksum: \"AD4BAE49CE29B9321B048606A0DF1AE5\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"AD4BAE49CE29B9321B048606A0DF1AE5\"\n+  - \"81D6B30EE17DCC10A43D1ECB1C6FFB11\"\n tableNotes: \"Download 'Big Trouble 1.8 DOF for puppack.rar'\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-big_trouble/table.ini", "diff": "diff --git a/external/vpx-big_trouble/table.ini b/external/vpx-big_trouble/table.ini\nindex d1ba842f..327052dd 100644\n--- a/external/vpx-big_trouble/table.ini\n+++ b/external/vpx-big_trouble/table.ini\n@@ -1,6 +1,6 @@\n-; POV based on LoadedWeapon's POV https://vpuniverse.com/files/file/22213-big-trouble-in-little-china-cabinet-pov/\n [Standalone]\n-BackBufferScale = 0.666666\n+PUPPlugin = 1\n+B2SPlugins = 1\n \n [Player]\n BallTrailStrength = 0.392157\n@@ -10,16 +10,14 @@ ScreenPlayerZ = 103.336784\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n-AAFactor = 0.90\n-FXAA = 1\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.219269\n-ViewCabScaleY = 1.021921\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.214681\n+ViewCabScaleY = 0.985171\n+ViewCabScaleZ = 0.963250\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -11.148900\n-ViewCabWindowTop = 361.388947\n-ViewCabWindowBot = 134.747238\n+ViewCabVOfs = 0.027702\n+ViewCabWindowTop = 367.208893\n+ViewCabWindowBot = 149.040283\n\\ No newline at end of file"},
@@ -309,7 +309,7 @@
       {
         "hash": "d246fef7fa94888de2daf0cc85853f9c0509b52b",
         "date": "2025-03-19 10:03:11 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Delete external/vpx-big_trouble/table.yml",
         "files": [
           {"status": "D", "path": "external/vpx-big_trouble/table.yml", "diff": "diff --git a/external/vpx-big_trouble/table.yml b/external/vpx-big_trouble/table.yml\ndeleted file mode 100644\nindex fe14fa53..00000000\n--- a/external/vpx-big_trouble/table.yml\n+++ /dev/null\n@@ -1,4 +0,0 @@\n----\n-tableVPSId: 2HTZbOMS\n-vpxVPSId: SWmqz_QM\n-backglassVPSId: \n"}
@@ -318,7 +318,7 @@
       {
         "hash": "a46d42480ec7c6ad773c93f6ac0988cbfe597361",
         "date": "2025-03-19 09:54:12 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml",
         "files": [
           {"status": "M", "path": "external/vpx-big_trouble/table.yml", "diff": "diff --git a/external/vpx-big_trouble/table.yml b/external/vpx-big_trouble/table.yml\nindex c6f909f5..fe14fa53 100644\n--- a/external/vpx-big_trouble/table.yml\n+++ b/external/vpx-big_trouble/table.yml\n@@ -2,5 +2,3 @@\n tableVPSId: 2HTZbOMS\n vpxVPSId: SWmqz_QM\n backglassVPSId: \n-romVPSId: \n-coloredROMVPSId:\n\\ No newline at end of file\n"}
@@ -344,7 +344,7 @@
       {
         "hash": "a20c28c275f2751f2109b5f182efb45e918c8d8b",
         "date": "2025-02-26 14:31:51 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add yml for smattering of tables\n\nBig Horse\nBig Indian\nBig Trouble\nBig Star\n250cc\n301 Bullseye\n4 Aces\nAce High\nAlice In Wonderland\nAli JP\n",
         "files": [
           {"status": "A", "path": "external/vpx-big_trouble/table.yml", "diff": "diff --git a/external/vpx-big_trouble/table.yml b/external/vpx-big_trouble/table.yml\nnew file mode 100644\nindex 00000000..c6f909f5\n--- /dev/null\n+++ b/external/vpx-big_trouble/table.yml\n@@ -0,0 +1,6 @@\n+---\n+tableVPSId: 2HTZbOMS\n+vpxVPSId: SWmqz_QM\n+backglassVPSId: \n+romVPSId: \n+coloredROMVPSId:\n\\ No newline at end of file"}

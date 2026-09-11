@@ -4,7 +4,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-hellraiser/table.yml", "diff": "diff --git a/external/vpx-hellraiser/table.yml b/external/vpx-hellraiser/table.yml\nindex 81cab293..1941d19b 100644\n--- a/external/vpx-hellraiser/table.yml\n+++ b/external/vpx-hellraiser/table.yml\n@@ -1,7 +1,7 @@\n ---\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/undefined_b2s_1665578424738.webp\"\n-fps: 55\n+fps: 60\n pupArchiveRoot: \"Hellraiser1.0.1/HellRaiser\"\n pupChecksum: \"6DE77436C19D088D9E701E26CB57D138\"\n pupFileUrl: >-"}
@@ -13,7 +13,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-hellraiser/table.ini", "diff": "diff --git a/external/vpx-hellraiser/table.ini b/external/vpx-hellraiser/table.ini\nindex 17c50a36..4482a217 100644\n--- a/external/vpx-hellraiser/table.ini\n+++ b/external/vpx-hellraiser/table.ini\n@@ -1,15 +1,10 @@\n-[Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.416666\n-\n-\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.216129\n-ViewCabScaleY = 0.970000\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.178137\n+ViewCabScaleY = 0.929846\n+ViewCabScaleZ = 0.962009\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = 38.230415\n-ViewCabWindowTop = 306.306915\n+ViewCabVOfs = 70.907303\n+ViewCabWindowTop = 231.661835\n ViewCabWindowBot = 30.359272\n\\ No newline at end of file"}
@@ -50,7 +50,7 @@
       {
         "hash": "83a1665e397e9c683a95145bb6c0949975458120",
         "date": "2025-07-21 14:48:10 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Added HellRaiser\n\nEnabled Hellraiser\nFixed POV\n",
         "files": [
           {"status": "M", "path": "external/vpx-hellraiser/table.ini", "diff": "diff --git a/external/vpx-hellraiser/table.ini b/external/vpx-hellraiser/table.ini\nindex 6c0b5edf..17c50a36 100644\n--- a/external/vpx-hellraiser/table.ini\n+++ b/external/vpx-hellraiser/table.ini\n@@ -2,15 +2,14 @@\n WindowRenderMode = 0\n BackBufferScale = 0.416666\n \n+\n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.818596\n-ViewCabScaleY = 1.037503\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -117.957939\n-ViewCabPlayerY = 0.900000\n-ViewCabPlayerZ = -417.749939\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.216129\n+ViewCabScaleY = 0.970000\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 38.230415\n+ViewCabWindowTop = 306.306915\n+ViewCabWindowBot = 30.359272\n\\ No newline at end of file"},
@@ -60,7 +60,7 @@
       {
         "hash": "e6cdb1136a58c25f90a9f6999810721c10eccbb8",
         "date": "2025-07-19 16:02:14 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Disabled Hellraiser\n\nFuture pup release\n",
         "files": [
           {"status": "M", "path": "external/vpx-hellraiser/table.yml", "diff": "diff --git a/external/vpx-hellraiser/table.yml b/external/vpx-hellraiser/table.yml\nindex 58f86ce9..5c5fa000 100644\n--- a/external/vpx-hellraiser/table.yml\n+++ b/external/vpx-hellraiser/table.yml\n@@ -1,4 +1,5 @@\n ---\n+enabled: false\n fps: 50\n pupArchiveRoot: \"Hellraiser1.0.1/HellRaiser\"\n pupChecksum: \"6DE77436C19D088D9E701E26CB57D138\"\n"}
@@ -69,7 +69,7 @@
       {
         "hash": "43ba8269da714aa620d596cb40774e414a8a9473",
         "date": "2025-07-19 14:42:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Capitalization\n\nTo satisfy the YML checker\n",
         "files": [
           {"status": "M", "path": "external/vpx-hellraiser/table.yml", "diff": "diff --git a/external/vpx-hellraiser/table.yml b/external/vpx-hellraiser/table.yml\nindex 0fe72df5..58f86ce9 100644\n--- a/external/vpx-hellraiser/table.yml\n+++ b/external/vpx-hellraiser/table.yml\n@@ -14,5 +14,5 @@ tagline: >-\n testers:\n   - \"mrandromeda\"\n   - \"OminousOsie\"\n-vpxchecksum: \"E078164E637B8C6BF66FEBB71D2A020C\"\n+vpxChecksum: \"E078164E637B8C6BF66FEBB71D2A020C\"\n vpxVPSId: \"1Dbo7GYl4P\"\n\\ No newline at end of file"}
@@ -78,7 +78,7 @@
       {
         "hash": "59cc544cec6f77d26056c53e7e936622d9e5fe1d",
         "date": "2025-07-19 14:32:11 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 more pup fixes\n\nHellRaiser\nJohn Wick\nJurassic Park LE\n",
         "files": [
           {"status": "M", "path": "external/vpx-hellraiser/table.yml", "diff": "diff --git a/external/vpx-hellraiser/table.yml b/external/vpx-hellraiser/table.yml\nindex 24b82799..0fe72df5 100644\n--- a/external/vpx-hellraiser/table.yml\n+++ b/external/vpx-hellraiser/table.yml\n@@ -1,7 +1,6 @@\n ---\n-backglassAuthorsOverride:\n-  - \"\"\n fps: 50\n+pupArchiveRoot: \"Hellraiser1.0.1/HellRaiser\"\n pupChecksum: \"6DE77436C19D088D9E701E26CB57D138\"\n pupFileUrl: >-\n   https://vpuniverse.com/files/file/11763-hellraiser/\n@@ -16,5 +15,4 @@ testers:\n   - \"mrandromeda\"\n   - \"OminousOsie\"\n vpxchecksum: \"E078164E637B8C6BF66FEBB71D2A020C\"\n-enabled: false # Osie: Disabled needs pupArchiveRoot adding as pup is 'Hellraiser1.0.1.rar\\Hellraiser1.0.1\\HellRaiser'\n vpxVPSId: \"1Dbo7GYl4P\"\n\\ No newline at end of file"}

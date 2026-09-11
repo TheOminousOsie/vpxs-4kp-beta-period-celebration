@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-dune/table.yml", "diff": "diff --git a/external/vpx-dune/table.yml b/external/vpx-dune/table.yml\nindex c8ac1221..433b3b9f 100644\n--- a/external/vpx-dune/table.yml\n+++ b/external/vpx-dune/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassBundled: True\n backglassNotes: \"Use 'DUNE_wFULLDMD.directb2s' from 'MEDIA PACK.zip'\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"2191235285C1975D74D605BC41D0924C\"\n-  - \"11B90D26AFFD896B488FAF1D43F78206\"\n+backglassChecksum: \"2191235285C1975D74D605BC41D0924C\" \n fps: 60\n tableVPSId: \"6t0bWHR24a\"\n tagline: \"You were not born to the spice as we were!\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-dune/table.yml", "diff": "diff --git a/external/vpx-dune/table.yml b/external/vpx-dune/table.yml\nindex 433b3b9f..c8ac1221 100644\n--- a/external/vpx-dune/table.yml\n+++ b/external/vpx-dune/table.yml\n@@ -1,7 +1,10 @@\n ---\n backglassBundled: True\n backglassNotes: \"Use 'DUNE_wFULLDMD.directb2s' from 'MEDIA PACK.zip'\"\n-backglassChecksum: \"2191235285C1975D74D605BC41D0924C\" \n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"2191235285C1975D74D605BC41D0924C\"\n+  - \"11B90D26AFFD896B488FAF1D43F78206\"\n fps: 60\n tableVPSId: \"6t0bWHR24a\"\n tagline: \"You were not born to the spice as we were!\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-dune/table.ini", "diff": "diff --git a/external/vpx-dune/table.ini b/external/vpx-dune/table.ini\nindex b9c84910..30e949cf 100644\n--- a/external/vpx-dune/table.ini\n+++ b/external/vpx-dune/table.ini\n@@ -5,7 +5,7 @@ ViewCabScaleY = 1.004598\n ViewCabScaleZ = 0.906151\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = 0.000000\n+ViewCabVOfs = 0\n ViewCabWindowTop = 326.413940\n ViewCabWindowBot = 99.969208\n Difficulty = 0.405205\n@@ -15,5 +15,3 @@ OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.501350\n \n-[Standalone]\n-BackBufferScale = 0.333333\n\\ No newline at end of file"},
@@ -50,7 +50,7 @@
       {
         "hash": "bb18087315b4293566dac25ea37b07d7d732e03a",
         "date": "2025-06-14 10:35:53 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n\nRemoved backglass fields as they are unneeded",
         "files": [
           {"status": "M", "path": "external/vpx-dune/table.yml", "diff": "diff --git a/external/vpx-dune/table.yml b/external/vpx-dune/table.yml\nindex c023afa7..96d3b995 100644\n--- a/external/vpx-dune/table.yml\n+++ b/external/vpx-dune/table.yml\n@@ -1,7 +1,4 @@\n ---\n-backglassBundled: true\n-backglassNotes: \"Wizard will install backglass\"\n-backglassChecksum: \"3CB46E0DEEE83B2BF3B9BB2CFDADE91C\"\n fps: 50\n tableVPSId: \"6t0bWHR24a\"\n tagline: \"You were not born to the spice as we were!\"\n"}
@@ -77,7 +77,7 @@
       {
         "hash": "84ec701c04a63f9f568279714fe476e9982abf9f",
         "date": "2025-06-13 12:44:10 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "removed quotes from booleans\n",
         "files": [
           {"status": "M", "path": "external/vpx-dune/table.yml", "diff": "diff --git a/external/vpx-dune/table.yml b/external/vpx-dune/table.yml\nindex 9624b451..c023afa7 100644\n--- a/external/vpx-dune/table.yml\n+++ b/external/vpx-dune/table.yml\n@@ -1,5 +1,5 @@\n ---\n-backglassBundled: \"true\"\n+backglassBundled: true\n backglassNotes: \"Wizard will install backglass\"\n backglassChecksum: \"3CB46E0DEEE83B2BF3B9BB2CFDADE91C\"\n fps: 50"}

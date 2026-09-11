@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-sopranos/table.yml", "diff": "diff --git a/external/vpx-sopranos/table.yml b/external/vpx-sopranos/table.yml\nindex 251ab7f9..5f78b567 100644\n--- a/external/vpx-sopranos/table.yml\n+++ b/external/vpx-sopranos/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"rY8wUQoIY_\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"8D29B7B3EA600B3471DB4130F51EBC48\"\n-  - \"56B3E2D6C1C319CC2B07E048D89CD97E\"\n+backglassChecksum: \"8D29B7B3EA600B3471DB4130F51EBC48\"\n coloredROMChecksum: \"FD10BB79ED4CCBC648C83E30D1ED86E4\"\n coloredROMNotes: 'Download \"sopranos.cROMc\"'\n coloredROMVPSId: \"uvIIO1SjvD\"\n@@ -16,7 +13,4 @@ testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n vpxVPSId: \"Waeu5yEAHY\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"4EE397F6B739AAEA9D9051ED205E6749\"\n-  - \"AD7E02F91B0B3223AE52A212DA7C8AC2\"\n+vpxChecksum: \"4EE397F6B739AAEA9D9051ED205E6749\""}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-sopranos/table.yml", "diff": "diff --git a/external/vpx-sopranos/table.yml b/external/vpx-sopranos/table.yml\nindex fe0cb6f7..251ab7f9 100644\n--- a/external/vpx-sopranos/table.yml\n+++ b/external/vpx-sopranos/table.yml\n@@ -7,7 +7,7 @@ backglassChecksum:\n coloredROMChecksum: \"FD10BB79ED4CCBC648C83E30D1ED86E4\"\n coloredROMNotes: 'Download \"sopranos.cROMc\"'\n coloredROMVPSId: \"uvIIO1SjvD\"\n-fps: 60\n+fps: 56\n romVPSId: \"tD819oJaBW\"\n romChecksum: \"15ECF8C5A7CEE365CAD0BE16EBBED414\"\n tableVPSId: \"0j2uPCod\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-sopranos/table.yml", "diff": "diff --git a/external/vpx-sopranos/table.yml b/external/vpx-sopranos/table.yml\nindex 79ae4994..fe0cb6f7 100644\n--- a/external/vpx-sopranos/table.yml\n+++ b/external/vpx-sopranos/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"rY8wUQoIY_\"\n-backglassChecksum: \"8D29B7B3EA600B3471DB4130F51EBC48\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"8D29B7B3EA600B3471DB4130F51EBC48\"\n+  - \"56B3E2D6C1C319CC2B07E048D89CD97E\"\n coloredROMChecksum: \"FD10BB79ED4CCBC648C83E30D1ED86E4\"\n coloredROMNotes: 'Download \"sopranos.cROMc\"'\n coloredROMVPSId: \"uvIIO1SjvD\"\n@@ -13,4 +16,7 @@ testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n vpxVPSId: \"Waeu5yEAHY\"\n-vpxChecksum: \"4EE397F6B739AAEA9D9051ED205E6749\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"4EE397F6B739AAEA9D9051ED205E6749\"\n+  - \"AD7E02F91B0B3223AE52A212DA7C8AC2\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-sopranos/table.ini", "diff": "diff --git a/external/vpx-sopranos/table.ini b/external/vpx-sopranos/table.ini\nindex 10198476..3865fd4d 100644\n--- a/external/vpx-sopranos/table.ini\n+++ b/external/vpx-sopranos/table.ini\n@@ -5,7 +5,7 @@ ViewCabScaleY = 1.038858\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -18.440231\n+ViewCabVOfs = -10.114792\n ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 88.953217\n \n@@ -16,5 +16,3 @@ DynamicDayNight = 0\n EmissionScale = 0.299950\n JoyAddCredit2Key = 1\n \n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file"},
@@ -115,7 +115,7 @@
       {
         "hash": "184dbf1f58b55dc6cf0fbc5f9f15d6230e1eaf3c",
         "date": "2025-04-07 19:28:34 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "update 3 tables\n\ndevilriders\nstar wars\nsopranos\n",
         "files": [
           {"status": "M", "path": "external/vpx-sopranos/nvram.nv"}
@@ -124,7 +124,7 @@
       {
         "hash": "9a9671a6f3aa1da5c3f86f0efdf6dada1e1d22e9",
         "date": "2025-04-07 19:20:45 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Create nvram.nv\n",
         "files": [
           {"status": "A", "path": "external/vpx-sopranos/nvram.nv"}
@@ -133,7 +133,7 @@
       {
         "hash": "f1972c5f2ea6976257651822a56538afad23ecb5",
         "date": "2025-04-07 19:19:58 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Delete nvram.nv\n",
         "files": [
           {"status": "D", "path": "external/vpx-sopranos/nvram.nv"}

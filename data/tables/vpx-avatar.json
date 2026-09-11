@@ -4,7 +4,7 @@
       {
         "hash": "2833e9c0f54dc3c3661bbd0ed31281d603535809",
         "date": "2026-09-09 22:52:36 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe launcher updates 2\n\nAmerican Graffiti\nJP's Attack From Mars LE\nJames Cameron's Avatar\nBlack Pyramid\nChrono Trigger\nCreature From The Black Lagoon\nCirqus Voltaire\nHardbody\nF-14 Tomcat\nJudge Dredd\nDiner\nDr. Dude\nHigh Roller Casino\nJP's LOTR\nRobocop\nSimpsons Pinball Party\nStranger Things\nTaxi\nTMNT\nTMNT Remix - also folder rename\nTorpedo Alley\nTransformers Pro\nTransformers G1\nWhoa Nellie\n",
         "files": [
           {"status": "M", "path": "external/vpx-avatar/launcher.png"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-avatar/table.yml", "diff": "diff --git a/external/vpx-avatar/table.yml b/external/vpx-avatar/table.yml\nindex 4ff8d76a..4281589c 100644\n--- a/external/vpx-avatar/table.yml\n+++ b/external/vpx-avatar/table.yml\n@@ -22,7 +22,4 @@ testers:\n   - \"mrandromeda\"\n   - \"OminousOsie\"\n vpxVPSId: \"_KkJPEqB\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"C0A68A9BC49A2A77239FF89CE81C7FC6\"\n-  - \"A2837F377C9420C33BA94F7C3CB80B99\"\n+vpxChecksum: \"C0A68A9BC49A2A77239FF89CE81C7FC6\""}
@@ -22,7 +22,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-avatar/table.yml", "diff": "diff --git a/external/vpx-avatar/table.yml b/external/vpx-avatar/table.yml\nindex e14710bc..4ff8d76a 100644\n--- a/external/vpx-avatar/table.yml\n+++ b/external/vpx-avatar/table.yml\n@@ -1,7 +1,7 @@\n ---\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/94082334064a08967b786dfde48f5c22_b2s_1638093208799.webp\"\n-fps: 52\n+fps: 58\n pupArchiveRoot: \"avr_200\"\n pupChecksum: \"d22f46b5ca0c978dd8abc7948200f4d8\"\n pupFileUrl: >-"}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-avatar/table.yml", "diff": "diff --git a/external/vpx-avatar/table.yml b/external/vpx-avatar/table.yml\nindex 024f0307..e14710bc 100644\n--- a/external/vpx-avatar/table.yml\n+++ b/external/vpx-avatar/table.yml\n@@ -22,4 +22,7 @@ testers:\n   - \"mrandromeda\"\n   - \"OminousOsie\"\n vpxVPSId: \"_KkJPEqB\"\n-vpxChecksum: \"C0A68A9BC49A2A77239FF89CE81C7FC6\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"C0A68A9BC49A2A77239FF89CE81C7FC6\"\n+  - \"A2837F377C9420C33BA94F7C3CB80B99\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-avatar/table.ini", "diff": "diff --git a/external/vpx-avatar/table.ini b/external/vpx-avatar/table.ini\nindex 724ab6a6..f6c61da0 100644\n--- a/external/vpx-avatar/table.ini\n+++ b/external/vpx-avatar/table.ini\n@@ -1,29 +1,27 @@\n [Player]\n BallTrailStrength = 0.200000\n OverrideTableEmissionScale = 1\n-ScreenPlayerZ = 94.021172\n+ScreenPlayerZ = 90.007790\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n ScreenPlayerX = 0.020047\n-ScreenPlayerY = -0.026000\n+ScreenPlayerY = 15.016253\n DynamicDayNight = 0\n-EmissionScale = 0.35\n+EmissionScale = 0.400315\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.243754\n-ViewCabScaleY = 1.049623\n-ViewCabScaleZ = 1.001754\n+ViewCabScaleX = 1.220059\n+ViewCabScaleY = 0.999816\n+ViewCabScaleZ = 0.947989\n ViewCabRotation = 180.000000\n-ViewCabHOfs = -7.416091\n-ViewCabVOfs = -33.809963\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 94.096260\n+ViewCabHOfs = 0.011911\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 312.166016\n+ViewCabWindowBot = 0.565247\n \n [Standalone]\n-WindowRenderMode = 0\n B2SPlugins = 1\n PUPCapture = 1\n-PUPPlugin = 1\n-BackBufferScale = 0.333333\n\\ No newline at end of file\n+PUPPlugin = 1\n\\ No newline at end of file"},
@@ -50,7 +50,7 @@
       {
         "hash": "a02a568e4132c7d2c248841cf7f0164b77e09499",
         "date": "2025-11-25 11:29:15 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-avatar/table.yml", "diff": "diff --git a/external/vpx-avatar/table.yml b/external/vpx-avatar/table.yml\nindex 50b46676..60b45580 100644\n--- a/external/vpx-avatar/table.yml\n+++ b/external/vpx-avatar/table.yml\n@@ -11,7 +11,7 @@ pupVersion: \"avr_200\"\n romVPSId: \"IaYZ89Ev\"\n romChecksum: \"2f295027a8e90b45fc58eea2ec51d66f\"\n coloredROMVPSId: \"B82eMKSnmb\"\n-coloredROMChecksum: \"3cf33f0e04b14e27be85ffb812cb1cb2\"\n+coloredROMChecksum: \"9E5D0EEBF2B9A9808F637FFB2764534A\"\n coloredROMNotes: \"Download version 1.0.0\"\n tableVPSId: \"W_p2sxKM\"\n tableNotes: \"Download version 3.2\"\n"}
@@ -68,7 +68,7 @@
       {
         "hash": "3186fadb3ee455eff745cee74025a2f627e92cf4",
         "date": "2025-07-21 15:32:01 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-avatar/table.yml", "diff": "diff --git a/external/vpx-avatar/table.yml b/external/vpx-avatar/table.yml\nindex 024a9386..8491ff2e 100644\n--- a/external/vpx-avatar/table.yml\n+++ b/external/vpx-avatar/table.yml\n@@ -12,7 +12,7 @@ coloredROMVPSId: \"B82eMKSnmb\"\n coloredROMChecksum: \"3cf33f0e04b14e27be85ffb812cb1cb2\"\n coloredROMNotes: \"Download version 1.0.0\"\n tableVPSId: \"W_p2sxKM\"\n-tableNotes: \"Download version 3.1\"\n+tableNotes: \"Download version 3.2\"\n tagline: >-\n   \"The War For Pandora Begins Now!\"\n testers:\n@@ -20,6 +20,6 @@ testers:\n   - \"mrandromeda\"\n   - \"OminousOsie\"\n vpxVPSId: \"_KkJPEqB\"\n-vpxChecksum: \"bc2f2a15440cc9e0759d3969f04b4fb4\"\n+vpxChecksum: \"C0A68A9BC49A2A77239FF89CE81C7FC6\"\n applyFixes:\n   - \"bass\"\n"}
@@ -77,7 +77,7 @@
       {
         "hash": "8d68e02cb4f2ff6059d41d7f4f474396080c556c",
         "date": "2025-07-20 19:25:16 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-avatar/table.yml", "diff": "diff --git a/external/vpx-avatar/table.yml b/external/vpx-avatar/table.yml\nindex e0c11969..024a9386 100644\n--- a/external/vpx-avatar/table.yml\n+++ b/external/vpx-avatar/table.yml\n@@ -1,5 +1,6 @@\n ---\n fps: 52\n+pupArchiveRoot: \"avr_200\"\n pupChecksum: \"d22f46b5ca0c978dd8abc7948200f4d8\"\n pupFileUrl: >-\n   https://mega.nz/file/iNlEQJjI#nxoXhGk1r8N9oGOqDu8Znbx6E8UEpCkyihWivGBVmJY\n"}
@@ -86,7 +86,7 @@
       {
         "hash": "43ba8269da714aa620d596cb40774e414a8a9473",
         "date": "2025-07-19 14:42:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Capitalization\n\nTo satisfy the YML checker\n",
         "files": [
           {"status": "M", "path": "external/vpx-avatar/table.yml", "diff": "diff --git a/external/vpx-avatar/table.yml b/external/vpx-avatar/table.yml\nindex 57ea76bc..e0c11969 100644\n--- a/external/vpx-avatar/table.yml\n+++ b/external/vpx-avatar/table.yml\n@@ -1,6 +1,4 @@\n ---\n-backglassAuthorsOverride:\n-  - \"\"\n fps: 52\n pupChecksum: \"d22f46b5ca0c978dd8abc7948200f4d8\"\n pupFileUrl: >-\n@@ -21,6 +19,6 @@ testers:\n   - \"mrandromeda\"\n   - \"OminousOsie\"\n vpxVPSId: \"_KkJPEqB\"\n-vpxchecksum: \"bc2f2a15440cc9e0759d3969f04b4fb4\"\n+vpxChecksum: \"bc2f2a15440cc9e0759d3969f04b4fb4\"\n applyFixes:\n   - \"bass\""}
@@ -226,7 +226,7 @@
       {
         "hash": "aca7eb2f00b643e2740d63c81f6495e8fabdba6b",
         "date": "2025-03-20 01:17:36 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "More README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-avatar/README.md", "diff": "diff --git a/external/vpx-avatar/README.md b/external/vpx-avatar/README.md\nindex 06bdf093..5e7a6aab 100644\n--- a/external/vpx-avatar/README.md\n+++ b/external/vpx-avatar/README.md\n@@ -1,33 +1,30 @@\n # Avatar (Stern 2012)\n-Tested by: kaoticBPR\n \n ![Table Preview](https://vpuniverse.com/screenshots/monthly_2023_11/Avatar_DT1_11.webp.6ae6121e293be5b73c0145a52c276ec4.webp)\n \n-Authors: [tartzani](https://vpuniverse.com/profile/36680-tartzani/)  \n-Version: 1.1.2  \n-Download: [VPUniverse](https://vpuniverse.com/files/file/6408-avatar-stern-2012oqqsanmod/)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VPUniverse](https://vpuniverse.com/files/file/6408-avatar-stern-2012oqqsanmod/) | 1.1.2 | [tartzani](https://vpuniverse.com/profile/36680-tartzani/) |\n+| B2S | [VPUniverse](https://vpuniverse.com/files/file/12738-james-cameron%E2%80%99s-avatar-stern-2010-full-dmd/) | 1.01 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [VPUniverse](http://vpuniverse.com/forums/files/file/3441-avr_200zip/) | avr_200.zip | [VPUStaff](https://vpuniverse.com/profile/50-vpustaff/) |\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-Version: v1.01  \n-Download: [VPUniverse](https://vpuniverse.com/files/file/12738-james-cameron%E2%80%99s-avatar-stern-2010-full-dmd/)\n+**Tested by:** [kaoticBPR]\n \n-ROM\n-\n-Download: [VPUniverse](http://vpuniverse.com/forums/files/file/3441-avr_200zip/)  \n-ROM Name and version: avr_200\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 42 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-avatar.elf\n - Download the table and directb2s versions listed above, extract and copy them to external/vpx-avatar"}

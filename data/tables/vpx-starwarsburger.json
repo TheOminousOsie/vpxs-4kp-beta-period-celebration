@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-starwarsburger/table.yml", "diff": "diff --git a/external/vpx-starwarsburger/table.yml b/external/vpx-starwarsburger/table.yml\nindex fc945d88..952fdd28 100644\n--- a/external/vpx-starwarsburger/table.yml\n+++ b/external/vpx-starwarsburger/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"ebe548166ce78715844a8fcac38f2489\"\n-  - \"65BC44999ECF51C0C8823B062595FCAD\"\n+backglassChecksum: \"ebe548166ce78715844a8fcac38f2489\"\n backglassNotes: \"Download Version 1.0.2\"\n backglassVPSId: \"e61i_rvGva\"\n fps: 60\n@@ -13,8 +10,5 @@ testers:\n   - \"Silentkat\"\n   - \"Wraith\"\n vpxVPSId: \"fqUNoSi3hg\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"FD933442ADF30895080D188425C54F8D\"\n-  - \"93642ADFAC29E2093766D3F9EF9A4AA8\"\n+vpxChecksum: \"FD933442ADF30895080D188425C54F8D\"\n "}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-starwarsburger/table.yml", "diff": "diff --git a/external/vpx-starwarsburger/table.yml b/external/vpx-starwarsburger/table.yml\nindex bc3d4247..fc945d88 100644\n--- a/external/vpx-starwarsburger/table.yml\n+++ b/external/vpx-starwarsburger/table.yml\n@@ -5,7 +5,7 @@ backglassChecksum:\n   - \"65BC44999ECF51C0C8823B062595FCAD\"\n backglassNotes: \"Download Version 1.0.2\"\n backglassVPSId: \"e61i_rvGva\"\n-fps: 40\n+fps: 60\n tableNotes: \"Download Version 1.0.3\"\n tableVPSId: \"8FLutyq5py\"\n tagline: \"The Force is strong with this one.\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-starwarsburger/table.yml", "diff": "diff --git a/external/vpx-starwarsburger/table.yml b/external/vpx-starwarsburger/table.yml\nindex 3200a423..bc3d4247 100644\n--- a/external/vpx-starwarsburger/table.yml\n+++ b/external/vpx-starwarsburger/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"ebe548166ce78715844a8fcac38f2489\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"ebe548166ce78715844a8fcac38f2489\"\n+  - \"65BC44999ECF51C0C8823B062595FCAD\"\n backglassNotes: \"Download Version 1.0.2\"\n backglassVPSId: \"e61i_rvGva\"\n fps: 40\n@@ -10,5 +13,8 @@ testers:\n   - \"Silentkat\"\n   - \"Wraith\"\n vpxVPSId: \"fqUNoSi3hg\"\n-vpxChecksum: \"FD933442ADF30895080D188425C54F8D\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"FD933442ADF30895080D188425C54F8D\"\n+  - \"93642ADFAC29E2093766D3F9EF9A4AA8\"\n "}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-starwarsburger/table.ini", "diff": "diff --git a/external/vpx-starwarsburger/table.ini b/external/vpx-starwarsburger/table.ini\nindex 0613b974..e455ef97 100644\n--- a/external/vpx-starwarsburger/table.ini\n+++ b/external/vpx-starwarsburger/table.ini\n@@ -1,7 +1,3 @@\n-[Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.416666\n-\n [TableOverride]\n ViewCabMode = 2\n ViewCabScaleX = 1.247802\n@@ -9,7 +5,7 @@ ViewCabScaleY = 1.001733\n ViewCabScaleZ = 0.990043\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = 18.769224\n+ViewCabVOfs = 16.624483\n ViewCabWindowTop = 384.576904\n ViewCabWindowBot = 90.194214\n \n@@ -19,6 +15,6 @@ OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.501165\n ScreenPlayerZ = 93.264618\n-\n+AAFactor = 0.9\n \n "},

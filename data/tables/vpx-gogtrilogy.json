@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-gogtrilogy/table.yml", "diff": "diff --git a/external/vpx-gogtrilogy/table.yml b/external/vpx-gogtrilogy/table.yml\nindex b6df9987..71d5dc15 100644\n--- a/external/vpx-gogtrilogy/table.yml\n+++ b/external/vpx-gogtrilogy/table.yml\n@@ -9,7 +9,4 @@ testers:\n   - \"kaoticBPR\"\n   - \"Mox\"\n vpxVPSId: \"_3ZHbzlbuv\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"61C6712A91D03CB8555CD43E48D01CE9\"\n-  - \"C653964D5B72F68E778CFDC6198A0E71\"\n+vpxChecksum: \"61C6712A91D03CB8555CD43E48D01CE9\""}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-gogtrilogy/table.yml", "diff": "diff --git a/external/vpx-gogtrilogy/table.yml b/external/vpx-gogtrilogy/table.yml\nindex 1edabbdd..b6df9987 100644\n--- a/external/vpx-gogtrilogy/table.yml\n+++ b/external/vpx-gogtrilogy/table.yml\n@@ -2,7 +2,7 @@\n backglassVPSId: \"UCOpOyF-IU\"\n backglassChecksum: \"9307830CBC0FFD6C29D64F9E8AB7B4BB\"\n backglassNotes: \"DO NOT use B2S that is included within the VPX download\"\n-fps: 58\n+fps: 55\n tableVPSId: \"671IjPCYuN\"\n tagline: \"We are Groot!\"\n testers:"}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-gogtrilogy/table.yml", "diff": "diff --git a/external/vpx-gogtrilogy/table.yml b/external/vpx-gogtrilogy/table.yml\nindex cf43fc81..1edabbdd 100644\n--- a/external/vpx-gogtrilogy/table.yml\n+++ b/external/vpx-gogtrilogy/table.yml\n@@ -9,4 +9,7 @@ testers:\n   - \"kaoticBPR\"\n   - \"Mox\"\n vpxVPSId: \"_3ZHbzlbuv\"\n-vpxChecksum: \"61C6712A91D03CB8555CD43E48D01CE9\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"61C6712A91D03CB8555CD43E48D01CE9\"\n+  - \"C653964D5B72F68E778CFDC6198A0E71\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-gogtrilogy/table.ini", "diff": "diff --git a/external/vpx-gogtrilogy/table.ini b/external/vpx-gogtrilogy/table.ini\nindex b3796f9c..4c13d60a 100644\n--- a/external/vpx-gogtrilogy/table.ini\n+++ b/external/vpx-gogtrilogy/table.ini\n@@ -1,16 +1,13 @@\n-[Player]\n-BallTrailStrength = 0.490196\n-OverrideTableEmissionScale = 0\n+[Standalone]\n+BackBufferScale = 0.666666\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.818596\n-ViewCabScaleY = 1.086800\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -70.959000\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.214321\n+ViewCabScaleY = 0.992599\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 348.044769\n+ViewCabWindowBot = 82.157204\n\\ No newline at end of file"},
@@ -167,7 +167,7 @@
       {
         "hash": "edf427f9815b9da7378e3228d2173b9b3447dc21",
         "date": "2025-03-22 18:37:25 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Launcher Fixes and INI Correction\n",
         "files": [
           {"status": "M", "path": "external/vpx-gogtrilogy/launcher.png"}
@@ -176,7 +176,7 @@
       {
         "hash": "502aed9f9a19bcb8438805126dff636bb5f0cac2",
         "date": "2025-03-22 17:44:39 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Created table.yml Files\n",
         "files": [
           {"status": "A", "path": "external/vpx-gogtrilogy/table.yml", "diff": "diff --git a/external/vpx-gogtrilogy/table.yml b/external/vpx-gogtrilogy/table.yml\nnew file mode 100644\nindex 00000000..acbaa93e\n--- /dev/null\n+++ b/external/vpx-gogtrilogy/table.yml\n@@ -0,0 +1,14 @@\n+---\n+backglassVPSId: \"UCOpOyF-IU\"\n+backglassChecksum: \"9307830CBC0FFD6C29D64F9E8AB7B4BB\"\n+backglassNotes: \"DO NOT use B2S that is included within the VPX download\"\n+fps: 60\n+tableVPSId: \"671IjPCYuN\"\n+tagline: \"We are Groot!\"\n+testers:\n+- \"kaoticBPR\"\n+- \"Mox\"\n+vpxVPSId: \"_3ZHbzlbuv\"\n+vpxChecksum: \"61C6712A91D03CB8555CD43E48D01CE9\"\n+tableNotes: \n+mainNotes: \n\\ No newline at end of file"}

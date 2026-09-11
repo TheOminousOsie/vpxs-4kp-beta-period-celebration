@@ -4,7 +4,7 @@
       {
         "hash": "a1e17ee8e056bffd00825b4fa55113a100459dee",
         "date": "2026-07-18 12:22:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "fixed disabled tables\n",
         "files": [
           {"status": "M", "path": "external/vpx-gnrle/table.yml", "diff": "diff --git a/external/vpx-gnrle/table.yml b/external/vpx-gnrle/table.yml\nindex 3a2a6d2f..fb2aad6a 100644\n--- a/external/vpx-gnrle/table.yml\n+++ b/external/vpx-gnrle/table.yml\n@@ -8,7 +8,7 @@ backglassNotes: \"Download 'Guns N Roses (Data East 1994) ALT full dmd v2.0.zip'\"\n backglassVPSId: \"eYgVzo0fT7\"\n coloredROMChecksum: \"7110D86D3A4CFE28EDDCFF258CB57A10\"\n coloredROMVPSId: \"pDaRRBxOOn\"\n-fps: 55\n+fps: 60\n romChecksum: \"C6F4660FD9AF560637BDE2DF7668B5C4\"\n romVPSId: \"OvPWlsbB\"\n tableNameOverride: \"Guns N' Roses Limited Edition\""}
@@ -13,7 +13,7 @@
       {
         "hash": "42de077c2d4279f841240a5b09356863df8d0460",
         "date": "2026-07-18 02:13:51 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "pov updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-gnrle/table.ini", "diff": "diff --git a/external/vpx-gnrle/table.ini b/external/vpx-gnrle/table.ini\nindex 7ce2caa3..a3d51d90 100644\n--- a/external/vpx-gnrle/table.ini\n+++ b/external/vpx-gnrle/table.ini\n@@ -1,21 +1,16 @@\n+[Player]\n+BallTrailStrength = 0.200000\n+OverrideTableEmissionScale = 0\n+ScreenPlayerY = 15.000000\n+ScreenPlayerZ = 90.000000\n+\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.052300\n-ViewCabScaleY = 0.995179\n-ViewCabScaleZ = 0.952058\n+ViewCabScaleX = 1.095000\n+ViewCabScaleY = 0.985000\n+ViewCabScaleZ = 0.859642\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n ViewCabVOfs = 0.000000\n-ViewCabWindowTop = 303.544891\n-ViewCabWindowBot = 99.380196\n-\n-[Player]\n-ScreenPlayerZ = 88.042336\n-ScreenWidth = 0.000000\n-ScreenHeight = 0.000000\n-ScreenInclination = 0.000000\n-JoyAddCredit2Key = 1\n-ScreenPlayerY = 19.958849\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n+ViewCabWindowTop = 389.069092\n+ViewCabWindowBot = 135.247803\n\\ No newline at end of file"}
@@ -22,7 +22,7 @@
       {
         "hash": "4a02ebc321763607047eeb2ac122432348f2226b",
         "date": "2026-07-18 00:40:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "final updates\n",
         "files": [
           {"status": "A", "path": "external/vpx-gnrle/README.md", "diff": "diff --git a/external/vpx-gnrle/README.md b/external/vpx-gnrle/README.md\nnew file mode 100644\nindex 00000000..d8adb706\n--- /dev/null\n+++ b/external/vpx-gnrle/README.md\n@@ -0,0 +1,61 @@\n+# Guns N' Roses Limited Edition (Data East 1994)\n+\n+![Table Preview](../../images/F-fNFHdX-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 55 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Bla1ze\n+  - Mox\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Guns N' Roses Limited Edition (Data East 1994)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Of all the bands in the world.... this is definitely one of them!\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},

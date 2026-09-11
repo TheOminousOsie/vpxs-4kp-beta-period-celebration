@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-eldorado84/table.yml", "diff": "diff --git a/external/vpx-eldorado84/table.yml b/external/vpx-eldorado84/table.yml\nindex bac4c9ff..8a0b6493 100644\n--- a/external/vpx-eldorado84/table.yml\n+++ b/external/vpx-eldorado84/table.yml\n@@ -1,16 +1,10 @@\n ---\n tableVPSId: \"hCFbHPQd\"\n vpxVPSId: \"87kGZfZY\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"a8a4e2e5dfed8452b1909b3fa889076d\"\n-  - \"A0EE294651D1132D52D80AD1EDE6EBD3\"\n+vpxChecksum: \"a8a4e2e5dfed8452b1909b3fa889076d\"\n tableNotes: \"El Dorado City of Gold (Gottlieb 1984).zip\"\n backglassVPSId: \"gbheO0bS\"\n-backglassArchiveFormat: \"rar\"\n-backglassChecksum:\n-  - \"097fd8823b16c3d3bf5932d78ab3dbc4\"\n-  - \"3F9F03B121D18BC52111EE7CF12D8DC4\"\n+backglassChecksum: \"097fd8823b16c3d3bf5932d78ab3dbc4\"\n backglassNotes: \"El Dorado City of Gold (Premier 1984).rar\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/eldorado.1766/\"\n romVersionOverride: \"eldorado\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-eldorado84/table.yml", "diff": "diff --git a/external/vpx-eldorado84/table.yml b/external/vpx-eldorado84/table.yml\nindex 8a0b6493..bac4c9ff 100644\n--- a/external/vpx-eldorado84/table.yml\n+++ b/external/vpx-eldorado84/table.yml\n@@ -1,10 +1,16 @@\n ---\n tableVPSId: \"hCFbHPQd\"\n vpxVPSId: \"87kGZfZY\"\n-vpxChecksum: \"a8a4e2e5dfed8452b1909b3fa889076d\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"a8a4e2e5dfed8452b1909b3fa889076d\"\n+  - \"A0EE294651D1132D52D80AD1EDE6EBD3\"\n tableNotes: \"El Dorado City of Gold (Gottlieb 1984).zip\"\n backglassVPSId: \"gbheO0bS\"\n-backglassChecksum: \"097fd8823b16c3d3bf5932d78ab3dbc4\"\n+backglassArchiveFormat: \"rar\"\n+backglassChecksum:\n+  - \"097fd8823b16c3d3bf5932d78ab3dbc4\"\n+  - \"3F9F03B121D18BC52111EE7CF12D8DC4\"\n backglassNotes: \"El Dorado City of Gold (Premier 1984).rar\"\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/eldorado.1766/\"\n romVersionOverride: \"eldorado\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-eldorado84/table.ini", "diff": "diff --git a/external/vpx-eldorado84/table.ini b/external/vpx-eldorado84/table.ini\nindex cb9472b8..7bdfebbc 100755\n--- a/external/vpx-eldorado84/table.ini\n+++ b/external/vpx-eldorado84/table.ini\n@@ -1,42 +1,19 @@\n [Standalone]\n+B2SHideB2SDMD = 1\n+B2SDMDAutoPlacePinMAME = 0\n PinMAMEWindow = 0\n \n-\n [TableOverride]\n-ViewDTLookAt = 46.000000\n-ViewDTFOV = 40.000000\n-ViewDTLayback = 6.000000\n-ViewDTRotation = 0.000000\n-ViewDTScaleX = 1.200000\n-ViewDTScaleY = 1.100000\n-ViewDTScaleZ = 1.000000\n-ViewDTPlayerX = 0.000000\n-ViewDTPlayerY = 5.000000\n-ViewDTPlayerZ = -10.000000\n-ViewCabRotation = 180.000000\n-ViewCabScaleX = 1.055999\n-ViewCabScaleY = 1.128001\n-ViewCabScaleZ = 1.000000\n-ViewFSSLookAt = 52.000000\n-ViewFSSFOV = 45.000000\n-ViewFSSLayback = 0.000000\n-ViewFSSRotation = 0.000000\n-ViewFSSScaleX = 1.200000\n-ViewFSSScaleY = 1.100000\n-ViewFSSScaleZ = 1.000000\n-ViewFSSPlayerX = 0.000000\n-ViewFSSPlayerY = 30.000000\n-ViewFSSPlayerZ = -50.000000\n-Difficulty = 0.560000\n ViewCabMode = 2\n+ViewCabScaleX = 1.153829\n+ViewCabScaleY = 1.066895\n+ViewCabScaleZ = 0.858792\n+ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -29.313793\n-ViewCabWindowTop = 141.163239\n-ViewCabWindowBot = -0.239826\n+ViewCabVOfs = 0.041922\n+ViewCabWindowTop = 115.681000\n+ViewCabWindowBot = 80.989281\n \n [Player]\n-BallTrailStrength = 0.490196\n-OverrideTableEmissionScale = 1\n-EmissionScale = 0.240000\n-SoundVolume = 100\n-MusicVolume = 100\n\\ No newline at end of file\n+ScreenPlayerY = 15.009603\n+ScreenPlayerZ = 90.010857\n\\ No newline at end of file"},
@@ -32,7 +32,7 @@
       {
         "hash": "1a751b1f0ab8a8a9c6b8b6402919b814148ef80e",
         "date": "2025-11-25 01:22:53 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.vbs\n\nEl Dorado 84 vbs fix\n",
         "files": [
           {"status": "M", "path": "external/vpx-eldorado84/table.vbs", "diff": "diff --git a/external/vpx-eldorado84/table.vbs b/external/vpx-eldorado84/table.vbs\nindex 73405a89..7cb119df 100644\n--- a/external/vpx-eldorado84/table.vbs\n+++ b/external/vpx-eldorado84/table.vbs\n@@ -31,11 +31,16 @@ Const VolCol = 10      ' Ball collition divider ( voldiv/volcol )\n 'Solenoid Call backs\n '**********************************************************************************************************\n \n- SolCallback(5) = \"dtRBank.SolDropUp\"\n- SolCallback(6) = \"dtTbank.SolDropUp\"\n+ SolCallback(5) = \"SolBothDrops\"\n+ SolCallback(6) = \"\"\n  solcallback(8) =  \"vpmSolSound SoundFX(\"\"Knocker\"\",DOFKnocker),\"\n  solcallback(9) = \"bsTrough.SolOut\"\n \n+Sub SolBothDrops(Enabled)\n+    dtTBank.SolDropUp Enabled\n+    dtRBank.SolDropUp Enabled\n+End Sub\n+\n SolCallback(sLRFlipper) = \"SolRFlipper\"\n SolCallback(sLLFlipper) = \"SolLFlipper\"\n \n@@ -200,7 +205,7 @@ Sub Bumper2_Hit : vpmTimer.PulseSw(55) : PlaySound SoundFX(\"fx_bumper1\", DOFCont\n  \n \n  ' Droptargets\n- Sub sw0_Dropped :dtTBank.hit 1:End Sub\n+ Sub sw0_Dropped:dtTBank.hit 1:End Sub\n  Sub sw10_Dropped:dtTBank.hit 2:End Sub\n  Sub sw20_Dropped:dtTBank.hit 3:End Sub\n  Sub sw30_Dropped:dtTBank.hit 4:End Sub\n@@ -477,7 +482,7 @@ End Function\n \n Function DVolMulti(ball,Multiplier) ' Calculates the Volume of the sound based on the ball speed\n   DVolMulti = Csng(BallVel(ball) ^2 / 150 ) * Multiplier\n-  'debug.print DVolMulti\n+  debug.print DVolMulti\n End Function\n \n Function BallRollVol(ball) ' Calculates the Volume of the sound based on the ball speed\n@@ -688,35 +693,35 @@ Sub Table1_exit()\n End Sub\n \n '*********** BALL SHADOW *********************************t\n-'Dim BallShadow\n-'BallShadow = Array (BallShadow1)\n-\n-'Sub BallShadowUpdate_timer()\n-    'Dim BOT, b\n-    'BOT = GetBalls\n-    '' hide shadow of deleted balls\n-    'If UBound(BOT)<(tnob-1) Then\n-        'For b = (UBound(BOT) + 1) to (tnob-1)\n-''            BallShadow(b).visible = 0\n-        'Next\n-    'End If\n+Dim BallShadow\n+BallShadow = Array (BallShadow1)\n+\n+Sub BallShadowUpdate_timer()\n+    Dim BOT, b\n+    BOT = GetBalls\n+    ' hide shadow of deleted balls\n+    If UBound(BOT)<(tnob-1) Then\n+        For b = (UBound(BOT) + 1) to (tnob-1)\n+'            BallShadow(b).visible = 0\n+        Next\n+    End If\n     ' exit the Sub if no balls on the table\n-    'If UBound(BOT) = -1 Then Exit Sub\n-    '' render the shadow for each ball\n-    'For b = 0 to UBound(BOT)\n-        'If BOT(b).X < Table1.Width/2 Then\n-            'BallShadow(b).X = ((BOT(b).X) - (Ballsize/6) + ((BOT(b).X - (Table1.Width/2))/7)) + 10\n-        'Else\n-            'BallShadow(b).X = ((BOT(b).X) + (Ballsize/6) + ((BOT(b).X - (Table1.Width/2))/7)) - 10\n-        'End If\n-        'ballShadow(b).Y = BOT(b).Y + 20\n-        'If BOT(b).Z > 20 Then\n-            'BallShadow(b).visible = 1\n-        'Else\n-            'BallShadow(b).visible = 0\n-        'End If\n-    'Next\n-'End Sub\n+    If UBound(BOT) = -1 Then Exit Sub\n+    ' render the shadow for each ball\n+    For b = 0 to UBound(BOT)\n+        If BOT(b).X < Table1.Width/2 Then\n+            BallShadow(b).X = ((BOT(b).X) - (Ballsize/6) + ((BOT(b).X - (Table1.Width/2))/7)) + 10\n+        Else\n+            BallShadow(b).X = ((BOT(b).X) + (Ballsize/6) + ((BOT(b).X - (Table1.Width/2))/7)) - 10\n+        End If\n+        ballShadow(b).Y = BOT(b).Y + 20\n+        If BOT(b).Z > 20 Then\n+            BallShadow(b).visible = 1\n+        Else\n+            BallShadow(b).visible = 0\n+        End If\n+    Next\n+End Sub\n '***********************************************************\n '******************************************************\n '\t\tFLIPPER CORRECTION SUPPORTING FUNCTIONS\n@@ -1101,7 +1106,4 @@ SOSRampup = 8.5\n LiveCatch = 8\n \n LFEndAngle = Leftflipper.endangle\n-RFEndAngle = RightFlipper.endangle\n-\n-\n-\n+RFEndAngle = RightFlipper.endangle\n\\ No newline at end of file\n"}
@@ -68,7 +68,7 @@
       {
         "hash": "a3fecfd6ba4a5545b022b301b521190ad8482672",
         "date": "2025-05-19 16:24:17 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add arts for El Dorado 84\n",
         "files": [
           {"status": "A", "path": "external/vpx-eldorado84/dmd.png"},
@@ -78,7 +78,7 @@
       {
         "hash": "c1d76ce9930b8d9d810f7364840437774a999377",
         "date": "2025-05-19 12:14:42 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Create launcher.png\n",
         "files": [
           {"status": "A", "path": "external/vpx-eldorado84/launcher.png"}
@@ -87,7 +87,7 @@
       {
         "hash": "b37ff7a0809b63d60701199697bc3d038e449c92",
         "date": "2025-05-19 11:58:36 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Renamed table folder\n",
         "files": [
           {"status": "R-from", "path": "external/eldorado84/table.ini->external/vpx-eldorado84/table.ini", "diff": "diff --git a/external/eldorado84/table.ini b/external/vpx-eldorado84/table.ini\nsimilarity index 100%\nrename from external/eldorado84/table.ini\nrename to external/vpx-eldorado84/table.ini"},
@@ -101,7 +101,7 @@
       {
         "hash": "248ddccda363decf13fc2f27f626818b27c86f94",
         "date": "2025-05-19 11:57:41 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/eldorado84/table.yml", "diff": "diff --git a/external/eldorado84/table.yml b/external/eldorado84/table.yml\nindex a7a87e57..6bcfb2b1 100644\n--- a/external/eldorado84/table.yml\n+++ b/external/eldorado84/table.yml\n@@ -15,4 +15,4 @@ tagline: \"El Dorado! The city of gold!\"\n testers:\n   - \"Boris\"\n applyFixes: \n-    - \"bass\"\n+  - \"bass\"\n"}
@@ -110,7 +110,7 @@
       {
         "hash": "6bac3036b486344978e087648290132fee3c1fe1",
         "date": "2025-05-19 11:40:10 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add El Dorado for WIZ\n",
         "files": [
           {"status": "A", "path": "external/eldorado84/table.ini", "diff": "diff --git a/external/eldorado84/table.ini b/external/eldorado84/table.ini\nnew file mode 100755\nindex 00000000..cb9472b8\n--- /dev/null\n+++ b/external/eldorado84/table.ini\n@@ -0,0 +1,42 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+\n+\n+[TableOverride]\n+ViewDTLookAt = 46.000000\n+ViewDTFOV = 40.000000\n+ViewDTLayback = 6.000000\n+ViewDTRotation = 0.000000\n+ViewDTScaleX = 1.200000\n+ViewDTScaleY = 1.100000\n+ViewDTScaleZ = 1.000000\n+ViewDTPlayerX = 0.000000\n+ViewDTPlayerY = 5.000000\n+ViewDTPlayerZ = -10.000000\n+ViewCabRotation = 180.000000\n+ViewCabScaleX = 1.055999\n+ViewCabScaleY = 1.128001\n+ViewCabScaleZ = 1.000000\n+ViewFSSLookAt = 52.000000\n+ViewFSSFOV = 45.000000\n+ViewFSSLayback = 0.000000\n+ViewFSSRotation = 0.000000\n+ViewFSSScaleX = 1.200000\n+ViewFSSScaleY = 1.100000\n+ViewFSSScaleZ = 1.000000\n+ViewFSSPlayerX = 0.000000\n+ViewFSSPlayerY = 30.000000\n+ViewFSSPlayerZ = -50.000000\n+Difficulty = 0.560000\n+ViewCabMode = 2\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -29.313793\n+ViewCabWindowTop = 141.163239\n+ViewCabWindowBot = -0.239826\n+\n+[Player]\n+BallTrailStrength = 0.490196\n+OverrideTableEmissionScale = 1\n+EmissionScale = 0.240000\n+SoundVolume = 100\n+MusicVolume = 100\n\\ No newline at end of file"},

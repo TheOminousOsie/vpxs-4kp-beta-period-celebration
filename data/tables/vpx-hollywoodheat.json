@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-hollywoodheat/table.yml", "diff": "diff --git a/external/vpx-hollywoodheat/table.yml b/external/vpx-hollywoodheat/table.yml\nindex 245faf14..885e6a57 100644\n--- a/external/vpx-hollywoodheat/table.yml\n+++ b/external/vpx-hollywoodheat/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"6823B9673B986DD3473EC2902D4C1CAA\"\n-  - \"B1593F1B00F3295BF39C93204B795BEA\"\n+backglassChecksum: \"6823B9673B986DD3473EC2902D4C1CAA\"\n backglassNotes: \"Download 'Hollywood Heat (Premier 1986) full dmd.zip'\"\n backglassVPSId: \"TDwdmr5z4j\"\n fps: 50"}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-hollywoodheat/table.yml", "diff": "diff --git a/external/vpx-hollywoodheat/table.yml b/external/vpx-hollywoodheat/table.yml\nindex f8f88d1c..245faf14 100644\n--- a/external/vpx-hollywoodheat/table.yml\n+++ b/external/vpx-hollywoodheat/table.yml\n@@ -5,7 +5,7 @@ backglassChecksum:\n   - \"B1593F1B00F3295BF39C93204B795BEA\"\n backglassNotes: \"Download 'Hollywood Heat (Premier 1986) full dmd.zip'\"\n backglassVPSId: \"TDwdmr5z4j\"\n-fps: 42\n+fps: 50\n romChecksum: \"0CFC469FDD84759EDC29EB6B63F5188C\"\n romNotes: \"Download 'hlywoodh.zip'\"\n romUrlOverride: \"https://vpuniverse.com/files/file/1331-hlywoodhzip/\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-hollywoodheat/table.yml", "diff": "diff --git a/external/vpx-hollywoodheat/table.yml b/external/vpx-hollywoodheat/table.yml\nindex f191448e..f8f88d1c 100644\n--- a/external/vpx-hollywoodheat/table.yml\n+++ b/external/vpx-hollywoodheat/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"6823B9673B986DD3473EC2902D4C1CAA\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"6823B9673B986DD3473EC2902D4C1CAA\"\n+  - \"B1593F1B00F3295BF39C93204B795BEA\"\n backglassNotes: \"Download 'Hollywood Heat (Premier 1986) full dmd.zip'\"\n backglassVPSId: \"TDwdmr5z4j\"\n fps: 42"}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-hollywoodheat/table.ini", "diff": "diff --git a/external/vpx-hollywoodheat/table.ini b/external/vpx-hollywoodheat/table.ini\nindex e1666db1..35e1cd51 100644\n--- a/external/vpx-hollywoodheat/table.ini\n+++ b/external/vpx-hollywoodheat/table.ini\n@@ -1,3 +1,6 @@\n+[Standalone]\n+PinMAMEWindow=0\n+\n [Player]\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n@@ -7,8 +10,7 @@ ScreenPlayerZ = 100.315666\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n-AAFactor = 0.95\n-MaxTexDimension = 2048\n+AAFactor = 0.90\n \n [TableOption]\n GI Lights = 1.000000\n@@ -27,8 +29,4 @@ ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n ViewCabVOfs = -38.336498\n ViewCabWindowTop = 269.468719\n-ViewCabWindowBot = 71.721199\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n-WindowRenderMode = 0\n\\ No newline at end of file\n+ViewCabWindowBot = 71.721199\n\\ No newline at end of file"},
@@ -41,7 +41,7 @@
       {
         "hash": "902088b750a207d12d8bf9c8484216160af6fe07",
         "date": "2025-11-11 01:03:43 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "docs\n",
         "files": [
           {"status": "M", "path": "external/vpx-hollywoodheat/README.md", "diff": "diff --git a/external/vpx-hollywoodheat/README.md b/external/vpx-hollywoodheat/README.md\nindex 9e5035fd..e2a1a75d 100644\n--- a/external/vpx-hollywoodheat/README.md\n+++ b/external/vpx-hollywoodheat/README.md\n@@ -1,38 +1,60 @@\n-﻿# Hollywood Heat (Gottlieb 1986)\n+# Hollywood Heat (Gottlieb 1986)\n \n-![Table Preview](../../images/vpx-hollywoodheat.jpg)\n+![Table Preview](../../images/D1hAJ8aRwV-preview.webp)\n \n-Author(s): [BorgDog](https://vpuniverse.com/profile/5088-borgdog/)  \n-Version:  2115183029_HollywoodHeat(Gottlieb1986) 1.0  \n-Download:  [VP Universe](https://vpuniverse.com/files/file/6299-hollywood-heat-gottlieb-1986/)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [Walterwhite](https://vpuniverse.com/profile/17464-walterwhite/)  \n-Version: Hollywood Heat 3 Screen Full DMD 1.0.0  \n-Download: [VP Universe](https://vpuniverse.com/files/file/11052-hollywood-heat-3-screen-full-dmd/)\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n \n-ROM: hlywoodh\n+<br>\n \n-Authors: [Rock-ola](https://pinballnirvana.com/forums/members/rock-ola.1/)  \n-Version: hlywoodh.zip  \n-Download: [Pinball Nirvana](https://pinballnirvana.com/forums/resources/hlywoodh.1942/)\n+**VPXS 4KP Testers:**\n+  - Wraith\n \n-Tested by:  \n-[CoffeeAtJoes]\n+<br>\n \n-## Status \n+---\n \n-Minimum VPX Standalone build: 10.8.0-1983-b84441e\n+<br>\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 45 |\n+## ❇️ Available in the Wizard! 🪄✨\n \n-## Instructions\n+<br>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- \"The Heat is on!\"\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n \n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Hollywood Heat (Gottlieb 1986)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"'The heat is on'\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>\n"}
@@ -50,7 +50,7 @@
       {
         "hash": "d40e88d9f7b9ede811b680fe552e1486b11334f5",
         "date": "2025-11-11 00:53:43 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "ini and yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-hollywoodheat/table.ini", "diff": "diff --git a/external/vpx-hollywoodheat/table.ini b/external/vpx-hollywoodheat/table.ini\nindex f0dbe32c..e1666db1 100644\n--- a/external/vpx-hollywoodheat/table.ini\n+++ b/external/vpx-hollywoodheat/table.ini\n@@ -1,17 +1,19 @@\n [Player]\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n-EmissionScale = 0.332710\n+EmissionScale = 0.401755\n ScreenPlayerY = 18.347946\n ScreenPlayerZ = 100.315666\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n+AAFactor = 0.95\n+MaxTexDimension = 2048\n \n [TableOption]\n GI Lights = 1.000000\n Color Saturation = 1.000000\n-Playfield Reflections = 1.000000\n+Playfield Reflections = 0.000000\n Mech Volume = 0.800000\n Ball Roll Volume = 0.520000\n Ramp Roll Volume = 0.600000\n@@ -25,4 +27,8 @@ ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n ViewCabVOfs = -38.336498\n ViewCabWindowTop = 269.468719\n-ViewCabWindowBot = 71.721199\n\\ No newline at end of file\n+ViewCabWindowBot = 71.721199\n+\n+[Standalone]\n+BackBufferScale = 0.416666\n+WindowRenderMode = 0\n\\ No newline at end of file"},
@@ -60,7 +60,7 @@
       {
         "hash": "75252afa383213cb4006b554279cb87ea9649704",
         "date": "2025-11-11 00:27:37 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update launcher.png\n",
         "files": [
           {"status": "M", "path": "external/vpx-hollywoodheat/launcher.png"}
@@ -69,7 +69,7 @@
       {
         "hash": "8b89417694945da685dc2d291af3185ef288ccac",
         "date": "2025-11-11 00:24:38 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-hollywoodheat/table.yml", "diff": "diff --git a/external/vpx-hollywoodheat/table.yml b/external/vpx-hollywoodheat/table.yml\nindex 17cc085c..95b6efe9 100644\n--- a/external/vpx-hollywoodheat/table.yml\n+++ b/external/vpx-hollywoodheat/table.yml\n@@ -9,7 +9,6 @@ romChecksum: \"0CFC469FDD84759EDC29EB6B63F5188C\"\n romNotes: \"Download 'hlywoodh.zip'\"\n romUrlOverride: \"https://vpuniverse.com/files/file/1331-hlywoodhzip/\"\n romVersionOverride: \"hlywoodh\"\n-romVPSId: \"RdGADa90\"\n tableNotes: \"Download 'Hollywood Heat (Gottlieb 1986) v1.4.vpx'\"\n tableVPSId: \"8aVmENVL\"\n tagline: \"'The heat is on'\"\n"}
@@ -78,7 +78,7 @@
       {
         "hash": "877b349412310794c6cf3d4d995b1c35df80a928",
         "date": "2025-11-10 23:55:45 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Hollywood Heat wiz\n",
         "files": [
           {"status": "A", "path": "external/vpx-hollywoodheat/table.yml", "diff": "diff --git a/external/vpx-hollywoodheat/table.yml b/external/vpx-hollywoodheat/table.yml\nnew file mode 100644\nindex 00000000..17cc085c\n--- /dev/null\n+++ b/external/vpx-hollywoodheat/table.yml\n@@ -0,0 +1,19 @@\n+---\n+applyFixes:\n+  - \"bass\"\n+backglassChecksum: \"21BFB14E9A33DC985C1E7B815CEB3A4E\"\n+backglassNotes: \"Download 'Hollywood Heat (Premier 1986).zip'\"\n+backglassVPSId: \"npSCd09PtF\"\n+fps: 60\n+romChecksum: \"0CFC469FDD84759EDC29EB6B63F5188C\"\n+romNotes: \"Download 'hlywoodh.zip'\"\n+romUrlOverride: \"https://vpuniverse.com/files/file/1331-hlywoodhzip/\"\n+romVersionOverride: \"hlywoodh\"\n+romVPSId: \"RdGADa90\"\n+tableNotes: \"Download 'Hollywood Heat (Gottlieb 1986) v1.4.vpx'\"\n+tableVPSId: \"8aVmENVL\"\n+tagline: \"'The heat is on'\"\n+testers:\n+  - \"Wraith\"\n+vpxChecksum: \"E2BA21BDCBF2B46B29427C742DBEA445\"\n+vpxVPSId: \"D1hAJ8aRwV\"\n"},

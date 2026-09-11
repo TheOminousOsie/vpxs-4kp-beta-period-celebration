@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-xfileshanibal/table.yml", "diff": "diff --git a/external/vpx-xfileshanibal/table.yml b/external/vpx-xfileshanibal/table.yml\nindex 4e7e8804..8d8a2203 100644\n--- a/external/vpx-xfileshanibal/table.yml\n+++ b/external/vpx-xfileshanibal/table.yml\n@@ -7,10 +7,7 @@ tableVPSId: \"ImqfuWt4\"\n vpxVPSId: \"sj6R53Tf\"\n vpxChecksum: \"98024cbcd05756e86c2b0da3be8d052b\"\n backglassVPSId: \"eCv7EkGM96\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"853D9B7A36F7AC25750C287AE312CC0D\"\n-  - \"6D25FD983463188024A4C6FE8C3CE9C7\"\n+backglassChecksum: \"853D9B7A36F7AC25750C287AE312CC0D\"\n fps: 60\n romVPSId: \"dnA2C0ua\"\n romChecksum: \"5AD341CC9C983CFDE8DDBCA479530B6C\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-xfileshanibal/table.yml", "diff": "diff --git a/external/vpx-xfileshanibal/table.yml b/external/vpx-xfileshanibal/table.yml\nindex 8d8a2203..4e7e8804 100644\n--- a/external/vpx-xfileshanibal/table.yml\n+++ b/external/vpx-xfileshanibal/table.yml\n@@ -7,7 +7,10 @@ tableVPSId: \"ImqfuWt4\"\n vpxVPSId: \"sj6R53Tf\"\n vpxChecksum: \"98024cbcd05756e86c2b0da3be8d052b\"\n backglassVPSId: \"eCv7EkGM96\"\n-backglassChecksum: \"853D9B7A36F7AC25750C287AE312CC0D\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"853D9B7A36F7AC25750C287AE312CC0D\"\n+  - \"6D25FD983463188024A4C6FE8C3CE9C7\"\n fps: 60\n romVPSId: \"dnA2C0ua\"\n romChecksum: \"5AD341CC9C983CFDE8DDBCA479530B6C\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "D", "path": "external/vpx-xfileshanibal/pinmame.ini", "diff": "diff --git a/external/vpx-xfileshanibal/pinmame.ini b/external/vpx-xfileshanibal/pinmame.ini\ndeleted file mode 100644\nindex 2855b67d..00000000\n--- a/external/vpx-xfileshanibal/pinmame.ini\n+++ /dev/null\n@@ -1,7 +0,0 @@\n-[settings]\n-rol=0\n-cheat=0\n-sound=1\n-dmd_red=50\n-dmd_green=0\n-dmd_blue=255\n\\ No newline at end of file"},
@@ -98,7 +98,7 @@
       {
         "hash": "629fc14385f6d3c83e82a70e68d32e9246edd503",
         "date": "2025-04-12 15:51:29 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-xfileshanibal/table.yml", "diff": "diff --git a/external/vpx-xfileshanibal/table.yml b/external/vpx-xfileshanibal/table.yml\nindex 21d006a6..07c0b1fb 100644\n--- a/external/vpx-xfileshanibal/table.yml\n+++ b/external/vpx-xfileshanibal/table.yml\n@@ -1,7 +1,7 @@\n ---\n tableVPSId: \"ImqfuWt4\"\n vpxVPSId: \"sj6R53Tf\"\n-vpxChecksum: \"152048985DA23568440F713D0184C4FF\"\n+vpxChecksum: \"98024cbcd05756e86c2b0da3be8d052b\"\n backglassVPSId: \"eCv7EkGM96\"\n backglassChecksum: \"853D9B7A36F7AC25750C287AE312CC0D\"\n fps: 55\n"}
@@ -107,7 +107,7 @@
       {
         "hash": "ccbca59b126c8f310203a50371d4b16bed421cfb",
         "date": "2025-04-12 09:36:39 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-xfileshanibal/table.yml", "diff": "diff --git a/external/vpx-xfileshanibal/table.yml b/external/vpx-xfileshanibal/table.yml\nindex cd2760b6..21d006a6 100644\n--- a/external/vpx-xfileshanibal/table.yml\n+++ b/external/vpx-xfileshanibal/table.yml\n@@ -13,4 +13,3 @@ testers:\n   - \"Boris\"\n applyFixes:\n   - \"bass\"\n-enabled: false\n"}
@@ -116,7 +116,7 @@
       {
         "hash": "9b3f645ed03fe7da16a2ab11f9e181b13a641242",
         "date": "2025-04-12 08:49:51 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Re-work entire X-Files Hannibal table\n\nAdd free play nvram\nConfig yml, bass fixes, update FPS, update VPX\nAdd BBS .4\nAdd new POV\nUpdate VPX\nNew pinmame.ini\n",
         "files": [
           {"status": "A", "path": "external/vpx-xfileshanibal/pinmame.ini", "diff": "diff --git a/external/vpx-xfileshanibal/pinmame.ini b/external/vpx-xfileshanibal/pinmame.ini\nnew file mode 100644\nindex 00000000..2855b67d\n--- /dev/null\n+++ b/external/vpx-xfileshanibal/pinmame.ini\n@@ -0,0 +1,7 @@\n+[settings]\n+rol=0\n+cheat=0\n+sound=1\n+dmd_red=50\n+dmd_green=0\n+dmd_blue=255\n\\ No newline at end of file"},
@@ -139,7 +139,7 @@
       {
         "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
         "date": "2025-03-19 14:01:02 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Large README Updates\n\n46 README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-xfileshanibal/README.md", "diff": "diff --git a/external/vpx-xfileshanibal/README.md b/external/vpx-xfileshanibal/README.md\nindex 4d39d37e..0b860e8d 100755\n--- a/external/vpx-xfileshanibal/README.md\n+++ b/external/vpx-xfileshanibal/README.md\n@@ -2,39 +2,29 @@\n \n ![Table Preview](https://github.com/Bla1ze/vpx-images/blob/main/vpx-xfileshanibal.png)\n \n-Author: [hanibal2001](https://vpuniverse.com/profile/872-hanibal2001/) \n+---\n \n-Tested by: Bla1ze \n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Universe](https://vpuniverse.com/files/file/4595-x-files-hanibal-4k-led-edition/) | 1.9 | [hanibal2001](https://vpuniverse.com/profile/872-hanibal2001/) |\n+| B2S | [VP Universe](https://vpuniverse.com/files/file/14927-x-files-sega-1997-b2s-with-full-dmd/) | 1.0.0 | [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1077) | N/A | N/A |\n \n-Version: 1.9 \n+**Tested by:** [Bla1ze]\n \n-Download: [VP Universe](https://vpuniverse.com/files/file/4595-x-files-hanibal-4k-led-edition/)\n-\n-DirectB2S\n-\n-Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-\n-Version: 1.0.0\n-\n-Download: [VP Universe](https://vpuniverse.com/files/file/14927-x-files-sega-1997-b2s-with-full-dmd/)\n-\n-ROM\n-\n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1077)\n-\n-SHA: ff04213446b2adeadfad0a3034f105b2e742b85c\n-\n-MD5: 5ad341cc9c983cfde8ddbca479530b6c\n+---\n \n ## Status \n-\n+Minimum VPX Standalone build: 10.8.0-1983-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 50 |\n \n+---\n \n ## Instructions\n-\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-xfileshanibal.elf\n - Download the table, ROM and directb2s versions listed above and copy them into this folder"}

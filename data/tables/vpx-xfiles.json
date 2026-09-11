@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-xfiles/table.yml", "diff": "diff --git a/external/vpx-xfiles/table.yml b/external/vpx-xfiles/table.yml\nindex 26317510..0c614fca 100644\n--- a/external/vpx-xfiles/table.yml\n+++ b/external/vpx-xfiles/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"eCv7EkGM96\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"853D9B7A36F7AC25750C287AE312CC0D\"\n-  - \"6D25FD983463188024A4C6FE8C3CE9C7\"\n+backglassChecksum: \"853D9B7A36F7AC25750C287AE312CC0D\"\n coloredROMChecksum: \"10F5840B4F387F130FD932BCD03D505B\"\n coloredROMNotes: \"Download 'xfiles.cROMc'\"\n coloredROMVPSId: \"7LUZid35oQ\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-xfiles/table.yml", "diff": "diff --git a/external/vpx-xfiles/table.yml b/external/vpx-xfiles/table.yml\nindex 0c614fca..26317510 100644\n--- a/external/vpx-xfiles/table.yml\n+++ b/external/vpx-xfiles/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"eCv7EkGM96\"\n-backglassChecksum: \"853D9B7A36F7AC25750C287AE312CC0D\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"853D9B7A36F7AC25750C287AE312CC0D\"\n+  - \"6D25FD983463188024A4C6FE8C3CE9C7\"\n coloredROMChecksum: \"10F5840B4F387F130FD932BCD03D505B\"\n coloredROMNotes: \"Download 'xfiles.cROMc'\"\n coloredROMVPSId: \"7LUZid35oQ\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-xfiles/table.ini", "diff": "diff --git a/external/vpx-xfiles/table.ini b/external/vpx-xfiles/table.ini\nindex 859adf94..f576248a 100644\n--- a/external/vpx-xfiles/table.ini\n+++ b/external/vpx-xfiles/table.ini\n@@ -1,23 +1,14 @@\n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.762587\n-ViewCabScaleY = 0.984832\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 8.809979\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n-\n-[Standalone]\n-PinMAMEWindowX = 3840\n-PinMAMEWindowY = 0\n-PinMAMEWindowWidth = 1200\n-PinMAMEWindowHeight = 380\n-PinMAMEWindowRotation = 1\n+ViewCabMode = 2\n+ViewCabScaleX = 1.228072\n+ViewCabScaleY = 1.029842\n+ViewCabScaleZ = 0.859642\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.041922\n+ViewCabWindowTop = 318.297821\n+ViewCabWindowBot = 0.345274\n \n [Player]\n-BallAntiStretch = 1\n-JoyAddCredit2Key = 1\n+ScreenPlayerY = 15.035646\n+ScreenPlayerZ = 89.965584\n\\ No newline at end of file"},
@@ -86,7 +86,7 @@
       {
         "hash": "02b43f7847083019a89802e579af13e75f83d16c",
         "date": "2025-04-14 21:21:32 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add silentkat and mrandomeda as testers\n",
         "files": [
           {"status": "M", "path": "external/vpx-xfiles/table.yml", "diff": "diff --git a/external/vpx-xfiles/table.yml b/external/vpx-xfiles/table.yml\nindex 76579796..e6e3a0d9 100644\n--- a/external/vpx-xfiles/table.yml\n+++ b/external/vpx-xfiles/table.yml\n@@ -10,8 +10,9 @@ tagline: \"Trust No One!\"\n testers:\n   - \"Bla1ze\"\n   - \"Mox\"\n+  - \"mrandromeda\"\n+  - \"Silentkat\"\n vpxVPSId: \"ZA6P_nOSzT\"\n vpxChecksum: \"152048985DA23568440F713D0184C4FF\"\n-enabled: false\n applyFixes:\n   - \"bass\"\n"}
@@ -95,7 +95,7 @@
       {
         "hash": "894947329a8beedbfbf99c2b45415f741c21cbde",
         "date": "2025-04-14 20:54:04 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add Al's Garage Band for Wizard\n",
         "files": [
           {"status": "M", "path": "external/vpx-xfiles/table.yml", "diff": "diff --git a/external/vpx-xfiles/table.yml b/external/vpx-xfiles/table.yml\nindex 3e7d27e3..76579796 100644\n--- a/external/vpx-xfiles/table.yml\n+++ b/external/vpx-xfiles/table.yml\n@@ -1,7 +1,7 @@\n ---\n backglassVPSId: \"eCv7EkGM96\"\n backglassChecksum: \"853D9B7A36F7AC25750C287AE312CC0D\"\n-fps: 38\n+fps: 55\n romVPSId: \"dnA2C0ua\"\n romChecksum: \"5AD341CC9C983CFDE8DDBCA479530B6C\"\n romNotes: \"Download - xfiles.zip\"\n"}
@@ -131,7 +131,7 @@
       {
         "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
         "date": "2025-03-30 19:40:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
         "files": [
           {"status": "A", "path": "external/vpx-xfiles/table.yml", "diff": "diff --git a/external/vpx-xfiles/table.yml b/external/vpx-xfiles/table.yml\nnew file mode 100644\nindex 00000000..b06404e7\n--- /dev/null\n+++ b/external/vpx-xfiles/table.yml\n@@ -0,0 +1,16 @@\n+---\n+backglassVPSId: \"eCv7EkGM96\"\n+backglassChecksum: \"853D9B7A36F7AC25750C287AE312CC0D\"\n+fps: 38\n+romVPSId: \"dnA2C0ua\"\n+romChecksum: \"5AD341CC9C983CFDE8DDBCA479530B6C\"\n+romNotes: \"Download - xfiles.zip\"\n+tableVPSId: \"ImqfuWt4\"\n+tagline: \"Trust No One!\"\n+testers:\n+  - \"Bla1ze\"\n+  - \"Mox\"\n+vpxVPSId: \"ZA6P_nOSzT\"\n+vpxChecksum: \"152048985DA23568440F713D0184C4FF\"\n+applyFixes:\n+  - \"bass\"\n\\ No newline at end of file"},
@@ -142,7 +142,7 @@
       {
         "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
         "date": "2025-03-19 14:01:02 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Large README Updates\n\n46 README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-xfiles/README.md", "diff": "diff --git a/external/vpx-xfiles/README.md b/external/vpx-xfiles/README.md\nindex 49a4a881..97a738c5 100644\n--- a/external/vpx-xfiles/README.md\n+++ b/external/vpx-xfiles/README.md\n@@ -5,18 +5,19 @@\n ---\n \n ## Files\n-| File Type | Link | Version | Author | \n-|-----------|--------|----------|--------------|\n-| **VPX** | [VP Universe](https://vpuniverse.com/files/file/14912-the-x-files-sega-1997/) | 1.2.9 | [TastyWasps](https://vpuniverse.com/profile/44724-tastywasps/) |\n-| **B2S & DMD** | [VP Universe](https://vpuniverse.com/files/file/14927-x-files-sega-1997-b2s-with-full-dmd/) | 1.0.0 | [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n-| **ROM** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1077) | **SHA:** ff04213446b2adeadfad0a3034f105b2e742b85c <br /> **MD5:** 5ad341cc9c983cfde8ddbca479530b6c |  |\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Universe](https://vpuniverse.com/files/file/14912-the-x-files-sega-1997/) | 1.2.9 | [TastyWasps](https://vpuniverse.com/profile/44724-tastywasps/) |\n+| B2S | [VP Universe](https://vpuniverse.com/files/file/14927-x-files-sega-1997-b2s-with-full-dmd/) | 1.0.0 | [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| DMD | Included with B2S | N/A | N/A |\n+| ROM | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1077) | xfiles.zip | N/A |\n \n-**Tested by:** Bla1ze\n+**Tested by:** [Bla1ze]\n \n ---\n \n-## Status \n-\n+## Status\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n@@ -24,10 +25,9 @@\n ---\n \n ## Instructions\n-\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to `vpx-xfiles.elf`\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-xfiles`\n - Rom file (`xfiles.zip`) stays in zip folder, place zip file in `vpx-xfiles/pinmame/roms`\n - Make sure `(.vpx)` `(.direct2b2s)` `(.vbs)` and `(.ini)` are all named the same.\n-> Trust no-one!\n+- \"Trust no-one!\""}
@@ -176,7 +176,7 @@
       {
         "hash": "74ed664dc0645d11818fc2ff46c195ee217ebe6e",
         "date": "2025-01-20 12:48:05 -0600",
-        "author": "James Rainaldi",
+        "author": "James R.",
         "message": "chore: updated vpx-xfiles docs and wheel image\n",
         "files": [
           {"status": "A", "path": "external/vpx-xfiles/vpx-xfiles-table.png"},

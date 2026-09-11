@@ -4,7 +4,7 @@
       {
         "hash": "2c6cdf7fba6e37e0cda9335e89398622c331622e",
         "date": "2026-09-09 22:10:48 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe Launcher updates\n\nPlayboy 2002\nSexy Girl\nSexy Girl Music Mod\nTerminator 2\nBaywatch\nCity Slicker\nFlash Gordon\nFuturama\nJaws 50th\nJohn Wick\nDeadpool\nBig Bang Bar\n",
         "files": [
           {"status": "M", "path": "external/vpx-johnwick/launcher.png"}
@@ -13,7 +13,7 @@
       {
         "hash": "42de077c2d4279f841240a5b09356863df8d0460",
         "date": "2026-07-18 02:13:51 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "pov updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-johnwick/table.ini", "diff": "diff --git a/external/vpx-johnwick/table.ini b/external/vpx-johnwick/table.ini\nindex d81856ce..b55ea71a 100644\n--- a/external/vpx-johnwick/table.ini\n+++ b/external/vpx-johnwick/table.ini\n@@ -1,17 +1,17 @@\n-[Standalone]\n-\n [Player]\n-FXAA = 1\n+ScreenPlayerY = 15.000000\n+ScreenPlayerZ = 90.000000\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.795228\n-ViewCabScaleY = 1.029012\n-ViewCabScaleZ = 0.896505\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 12.727020\n-ViewCabPlayerY = 4.161000\n-ViewCabPlayerZ = -416.880096\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n+ViewCabMode = 2\n+ViewCabScaleX = 1.195000\n+ViewCabScaleY = 0.991259\n+ViewCabScaleZ = 0.859642\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 303.844482\n+ViewCabWindowBot = 33.348877\n+\n+[Standalone]\n+POVLinkTableScaleXY = 0\n\\ No newline at end of file\n"}
@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-johnwick/table.yml", "diff": "diff --git a/external/vpx-johnwick/table.yml b/external/vpx-johnwick/table.yml\nindex 0184f36e..3b4872cb 100644\n--- a/external/vpx-johnwick/table.yml\n+++ b/external/vpx-johnwick/table.yml\n@@ -8,6 +8,7 @@ pupVPSId: \"Kxy-gnG6p6\"\n pupRequired: true\n pupVersion: \"johnwick\"\n pupArchiveFormat: \"rar\"\n+pupNotes: \"Download 'JWPUP.rar'\"\n tableVPSId: \"7bjYHY-8wv\"\n tableNotes: \"Download 'JohnWick 1.3(BABAYAGA Pinball edition) VPX 10.8.rar'\"\n tagline: >-"}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-johnwick/table.ini", "diff": "diff --git a/external/vpx-johnwick/table.ini b/external/vpx-johnwick/table.ini\nindex 2766d637..d81856ce 100644\n--- a/external/vpx-johnwick/table.ini\n+++ b/external/vpx-johnwick/table.ini\n@@ -1,5 +1,4 @@\n [Standalone]\n-WindowRenderMode = 0\n \n [Player]\n FXAA = 1\n@@ -15,4 +14,4 @@ ViewCabPlayerY = 4.161000\n ViewCabPlayerZ = -416.880096\n ViewCabLookAt = 5.000000\n ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+ViewCabLayback = 48.000000"},
@@ -50,7 +50,7 @@
       {
         "hash": "59cc544cec6f77d26056c53e7e936622d9e5fe1d",
         "date": "2025-07-19 14:32:11 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 more pup fixes\n\nHellRaiser\nJohn Wick\nJurassic Park LE\n",
         "files": [
           {"status": "M", "path": "external/vpx-johnwick/table.yml", "diff": "diff --git a/external/vpx-johnwick/table.yml b/external/vpx-johnwick/table.yml\nindex 0c3e36b5..358a1757 100644\n--- a/external/vpx-johnwick/table.yml\n+++ b/external/vpx-johnwick/table.yml\n@@ -1,8 +1,9 @@\n ---\n-backglassAuthorsOverride:\n-  - \"\"\n fps: 60\n+pupArchiveRoot: \"johnwick\"\n pupChecksum: \"ded551244d29b3f43a53535b9884b34a\"\n+pupFileUrl: >-\n+  https://vpuniverse.com/files/file/16523-john-wick-babayaga-pinball-edition/\n pupVPSId: \"Kxy-gnG6p6\"\n pupRequired: true\n pupVersion: \"johnwick\""}
@@ -176,7 +176,7 @@
       {
         "hash": "d4a2b30ac1cb1e87cf8f19ff6639258e4f7d10bb",
         "date": "2025-05-11 18:32:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-johnwick/table.yml", "diff": "diff --git a/external/vpx-johnwick/table.yml b/external/vpx-johnwick/table.yml\nindex 4ca59bc5..457763fd 100644\n--- a/external/vpx-johnwick/table.yml\n+++ b/external/vpx-johnwick/table.yml\n@@ -17,8 +17,4 @@ testers:\n   - \"OminousOsie\"\n vpxchecksum: \"f89b694a79c893d93251279ddae39b1e\"\n vpxVPSId: \"VG0a5Acwiy\"\n-<<<<<<< HEAD\n-enabled: false # Osie: Cant handle .rar files yet\n-=======\n-enabled: false # Osie: Cant handle .rar files yet\n->>>>>>> parent of 652fd51b (Update table.yml)\n+enabled: false # Osie: Cant handle .rar files yet\n\\ No newline at end of file\n"}
@@ -185,7 +185,7 @@
       {
         "hash": "2e2b4916e3aaf0fa7fdd5292a40b877f9502d0d7",
         "date": "2025-05-11 18:14:59 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-johnwick/table.yml", "diff": "diff --git a/external/vpx-johnwick/table.yml b/external/vpx-johnwick/table.yml\nindex d81d2871..4ca59bc5 100644\n--- a/external/vpx-johnwick/table.yml\n+++ b/external/vpx-johnwick/table.yml\n@@ -17,4 +17,8 @@ testers:\n   - \"OminousOsie\"\n vpxchecksum: \"f89b694a79c893d93251279ddae39b1e\"\n vpxVPSId: \"VG0a5Acwiy\"\n+<<<<<<< HEAD\n enabled: false # Osie: Cant handle .rar files yet\n+=======\n+enabled: false # Osie: Cant handle .rar files yet\n+>>>>>>> parent of 652fd51b (Update table.yml)\n"}
@@ -194,7 +194,7 @@
       {
         "hash": "652fd51be4da66b872e6075a4f43717c983754a6",
         "date": "2025-05-11 17:27:28 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml",
         "files": [
           {"status": "M", "path": "external/vpx-johnwick/table.yml", "diff": "diff --git a/external/vpx-johnwick/table.yml b/external/vpx-johnwick/table.yml\nindex 457763fd..263599f0 100644\n--- a/external/vpx-johnwick/table.yml\n+++ b/external/vpx-johnwick/table.yml\n@@ -17,4 +17,4 @@ testers:\n   - \"OminousOsie\"\n vpxchecksum: \"f89b694a79c893d93251279ddae39b1e\"\n vpxVPSId: \"VG0a5Acwiy\"\n-enabled: false # Osie: Cant handle .rar files yet\n\\ No newline at end of file\n+enabled: true # Osie: Cant handle .rar files yet\n"}
@@ -203,7 +203,7 @@
       {
         "hash": "ef3e3bed227a6451f00452fc35b19d48f7ff05c2",
         "date": "2025-05-11 16:28:53 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-johnwick/table.yml", "diff": "diff --git a/external/vpx-johnwick/table.yml b/external/vpx-johnwick/table.yml\nindex 263599f0..d81d2871 100644\n--- a/external/vpx-johnwick/table.yml\n+++ b/external/vpx-johnwick/table.yml\n@@ -17,4 +17,4 @@ testers:\n   - \"OminousOsie\"\n vpxchecksum: \"f89b694a79c893d93251279ddae39b1e\"\n vpxVPSId: \"VG0a5Acwiy\"\n-enabled: true # Osie: Cant handle .rar files yet\n+enabled: false # Osie: Cant handle .rar files yet\n"}

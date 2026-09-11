@@ -4,7 +4,7 @@
       {
         "hash": "2c6cdf7fba6e37e0cda9335e89398622c331622e",
         "date": "2026-09-09 22:10:48 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe Launcher updates\n\nPlayboy 2002\nSexy Girl\nSexy Girl Music Mod\nTerminator 2\nBaywatch\nCity Slicker\nFlash Gordon\nFuturama\nJaws 50th\nJohn Wick\nDeadpool\nBig Bang Bar\n",
         "files": [
           {"status": "M", "path": "external/vpx-baywatch/launcher.png"}
@@ -13,7 +13,7 @@
       {
         "hash": "195953b22fa1250e2d1c3eab234fc79f0279372c",
         "date": "2026-08-17 16:00:23 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "baywatch upgrade (#2117)",
         "files": [
           {"status": "M", "path": "external/vpx-baywatch/table.ini", "diff": "diff --git a/external/vpx-baywatch/table.ini b/external/vpx-baywatch/table.ini\nindex 6182ed7e..93a6f56d 100644\n--- a/external/vpx-baywatch/table.ini\n+++ b/external/vpx-baywatch/table.ini\n@@ -1,7 +1,12 @@\n [Standalone]\n PUPCapture = 1\n PUPPlugin = 1\n-B2SPlugins = 1 \n+B2SPlugins = 1\n+PUPFullDMDOverlayOffsetX = 0\n+PUPFullDMDOverlayOffsetY = 0\n+PUPFullDMDOverlayScaleLinked = 0\n+PUPFullDMDOverlayScale = 1.200000\n+PUPFullDMDOverlayScaleY = 1.000000\n \n [Player]\n OverrideTableEmissionScale = 0\n"},
@@ -23,7 +23,7 @@
       {
         "hash": "cfa6d4e43427332489907e5760c8d18a4e14ae9c",
         "date": "2026-07-29 15:34:57 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Baywatch backglass image\n",
         "files": [
           {"status": "A", "path": "external/vpx-baywatch/backglass.png"}
@@ -41,7 +41,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-baywatch/table.yml", "diff": "diff --git a/external/vpx-baywatch/table.yml b/external/vpx-baywatch/table.yml\nindex 5cec7635..ce6aafd7 100644\n--- a/external/vpx-baywatch/table.yml\n+++ b/external/vpx-baywatch/table.yml\n@@ -1,30 +1,23 @@\n ---\n-altSoundArchiveFormat: \"rar\"\n-altSoundArchiveRoot: \"baywatch\"\n-altSoundChecksum: \"0b766ac947a9dc8a820b53632a120253\"\n-altSoundVPSId: \"n4BzriNb\"\n coloredROMChecksum:\n   - \"AEE18DE9735CEA4FCA19C50C395A2384\"\n   - \"3C5A105F586ED2814F0FBFF8D0EE97D2\"\n-coloredROMNotes: \"Download 'pin2dmd_v.vni' and 'pin2dmd_v.pal'\"\n coloredROMPin2DMD: true\n+coloredROMNotes: \"Download 'pin2dmd_v.vni' and 'pin2dmd_v.pal'\"\n coloredROMVPSId: \"wuw5xsFr\"\n fps: 60\n pupArchiveFormat: \"zip\"\n pupArchiveRoot: \"baywatch\"\n pupChecksum: \"8E8CA8C78C59E099109502F588B74C31\"\n-pupRequired: true\n pupVPSId: \"vib9lFzS\"\n-romChecksum: \"5fdc78f013d65c6e540ff3cd716fb7d0\"\n+pupRequired: True\n romVPSId: \"Mc8ApoS-\"\n+romChecksum: \"5fdc78f013d65c6e540ff3cd716fb7d0\"\n tableNotes: \"Download 'Baywatch (Sega 1995) Cabinet.zip'\"\n tableVPSId: \"xxxuKVp7\"\n tagline: \"Baywatch will be right back!\"\n testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"2CCB7D9E2583F2671417AD8F1AD1527A\"\n-  - \"1A786E6E39A71A74FB33E20C72C8BFEA\"\n vpxVPSId: \"CT4Kk8pF1z\"\n+vpxChecksum: \"2CCB7D9E2583F2671417AD8F1AD1527A\""}
@@ -50,7 +50,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-baywatch/table.yml", "diff": "diff --git a/external/vpx-baywatch/table.yml b/external/vpx-baywatch/table.yml\nindex ce6aafd7..5cec7635 100644\n--- a/external/vpx-baywatch/table.yml\n+++ b/external/vpx-baywatch/table.yml\n@@ -1,23 +1,30 @@\n ---\n+altSoundArchiveFormat: \"rar\"\n+altSoundArchiveRoot: \"baywatch\"\n+altSoundChecksum: \"0b766ac947a9dc8a820b53632a120253\"\n+altSoundVPSId: \"n4BzriNb\"\n coloredROMChecksum:\n   - \"AEE18DE9735CEA4FCA19C50C395A2384\"\n   - \"3C5A105F586ED2814F0FBFF8D0EE97D2\"\n-coloredROMPin2DMD: true\n coloredROMNotes: \"Download 'pin2dmd_v.vni' and 'pin2dmd_v.pal'\"\n+coloredROMPin2DMD: true\n coloredROMVPSId: \"wuw5xsFr\"\n fps: 60\n pupArchiveFormat: \"zip\"\n pupArchiveRoot: \"baywatch\"\n pupChecksum: \"8E8CA8C78C59E099109502F588B74C31\"\n+pupRequired: true\n pupVPSId: \"vib9lFzS\"\n-pupRequired: True\n-romVPSId: \"Mc8ApoS-\"\n romChecksum: \"5fdc78f013d65c6e540ff3cd716fb7d0\"\n+romVPSId: \"Mc8ApoS-\"\n tableNotes: \"Download 'Baywatch (Sega 1995) Cabinet.zip'\"\n tableVPSId: \"xxxuKVp7\"\n tagline: \"Baywatch will be right back!\"\n testers:\n   - \"Bla1ze\"\n   - \"OminousOsie\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"2CCB7D9E2583F2671417AD8F1AD1527A\"\n+  - \"1A786E6E39A71A74FB33E20C72C8BFEA\"\n vpxVPSId: \"CT4Kk8pF1z\"\n-vpxChecksum: \"2CCB7D9E2583F2671417AD8F1AD1527A\""}
@@ -59,7 +59,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "A", "path": "external/vpx-baywatch/use_these_pup_files.zip"},

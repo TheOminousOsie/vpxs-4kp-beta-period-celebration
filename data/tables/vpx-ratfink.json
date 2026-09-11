@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-ratfink/table.yml", "diff": "diff --git a/external/vpx-ratfink/table.yml b/external/vpx-ratfink/table.yml\nindex 4c40e231..4e21f171 100644\n--- a/external/vpx-ratfink/table.yml\n+++ b/external/vpx-ratfink/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"E51E8A98D267D97797A7F6EB1D118C49\"\n-  - \"2D53BB0DA156DD2BA81E8CC89ED75B8A\"\n+backglassChecksum: \"E51E8A98D267D97797A7F6EB1D118C49\"\n backglassVPSId: \"bDfLEkPWsu\"\n backglassBundled: true\n backglassNotes: \"Download 'Rat Fink (Original 2025).directb2s.zip'\"\n@@ -17,8 +14,5 @@ testers:\n   - \"evilwraith\"\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"028CEED2666C4C159A1F8AFC18FC4190\"\n-  - \"8724EA5CAD048257F9C276D18EACD840\"\n+vpxChecksum: \"028CEED2666C4C159A1F8AFC18FC4190\"\n vpxVPSId: \"nya-dnobhA\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-ratfink/table.yml", "diff": "diff --git a/external/vpx-ratfink/table.yml b/external/vpx-ratfink/table.yml\nindex 4e21f171..4c40e231 100644\n--- a/external/vpx-ratfink/table.yml\n+++ b/external/vpx-ratfink/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"E51E8A98D267D97797A7F6EB1D118C49\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"E51E8A98D267D97797A7F6EB1D118C49\"\n+  - \"2D53BB0DA156DD2BA81E8CC89ED75B8A\"\n backglassVPSId: \"bDfLEkPWsu\"\n backglassBundled: true\n backglassNotes: \"Download 'Rat Fink (Original 2025).directb2s.zip'\"\n@@ -14,5 +17,8 @@ testers:\n   - \"evilwraith\"\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n-vpxChecksum: \"028CEED2666C4C159A1F8AFC18FC4190\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"028CEED2666C4C159A1F8AFC18FC4190\"\n+  - \"8724EA5CAD048257F9C276D18EACD840\"\n vpxVPSId: \"nya-dnobhA\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-ratfink/table.ini", "diff": "diff --git a/external/vpx-ratfink/table.ini b/external/vpx-ratfink/table.ini\nindex 3ef78488..9132ac2b 100644\n--- a/external/vpx-ratfink/table.ini\n+++ b/external/vpx-ratfink/table.ini\n@@ -1,10 +1,17 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+B2SHideB2SDMD = 1\n+\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.013715\n-ViewCabScaleY = 0.921135\n-ViewCabScaleZ = 0.790965\n+ViewCabScaleX = 1.043754\n+ViewCabScaleY = 0.910881\n+ViewCabScaleZ = 0.780080\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.000000\n-ViewCabVOfs = 70.404892\n-ViewCabWindowTop = 0.244847\n-ViewCabWindowBot = 0.234100\n\\ No newline at end of file\n+ViewCabHOfs = 0.041100\n+ViewCabVOfs = 88.918015\n+ViewCabWindowTop = -131.414139\n+ViewCabWindowBot = -142.284912\n+\n+[Player]\n+ScreenPlayerY = 14.983701\n\\ No newline at end of file"},
@@ -50,7 +50,7 @@
       {
         "hash": "b1b6f987bda3cae6e0139560ec515297a603f130",
         "date": "2025-10-21 09:50:23 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update launcher.png\n",
         "files": [
           {"status": "M", "path": "external/vpx-ratfink/launcher.png"}
@@ -59,7 +59,7 @@
       {
         "hash": "084c54a1f3f8305460e720e798cd54c96cdcaf43",
         "date": "2025-09-22 20:35:06 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-ratfink/table.yml", "diff": "diff --git a/external/vpx-ratfink/table.yml b/external/vpx-ratfink/table.yml\nindex 5a432d37..78bc2dff 100644\n--- a/external/vpx-ratfink/table.yml\n+++ b/external/vpx-ratfink/table.yml\n@@ -11,5 +11,5 @@ tableVPSId: \"gZwuBmOi5F\"\n tagline: \"'Table go VROOM!'\"\n testers:\n   - \"evilwraith\"\n-vpxChecksum: \"E663EB1F3D98FC823031939D6AD26EC5\"\n+vpxChecksum: \"028CEED2666C4C159A1F8AFC18FC4190\"\n vpxVPSId: \"nya-dnobhA\"\n"}
@@ -68,7 +68,7 @@
       {
         "hash": "028c587af97eefa285df7d530c6703fd3a5bffe6",
         "date": "2025-09-22 20:28:15 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update dmd.png\n",
         "files": [
           {"status": "M", "path": "external/vpx-ratfink/dmd.png"}
@@ -77,7 +77,7 @@
       {
         "hash": "bf36b014c1d1fe627a0f0153405e8c33bef077c4",
         "date": "2025-09-22 17:56:11 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-ratfink/table.yml", "diff": "diff --git a/external/vpx-ratfink/table.yml b/external/vpx-ratfink/table.yml\nindex 25b2d87e..5a432d37 100644\n--- a/external/vpx-ratfink/table.yml\n+++ b/external/vpx-ratfink/table.yml\n@@ -6,7 +6,7 @@ backglassVPSId: \"bDfLEkPWsu\"\n fps: 60\n romChecksum: \"34BD55E0DC97C309C56BEABAFC606A19\"\n romNotes: \"Download stest.zip\"\n-romUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=575\"\n+romVPSId: \"3jKy9JCJ\"\n tableVPSId: \"gZwuBmOi5F\"\n tagline: \"'Table go VROOM!'\"\n testers:\n"}
@@ -86,7 +86,7 @@
       {
         "hash": "976287de47343b66aa033e863308357beafe32ff",
         "date": "2025-09-22 13:08:56 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Create dmd.png\n",
         "files": [
           {"status": "A", "path": "external/vpx-ratfink/dmd.png"}
@@ -95,7 +95,7 @@
       {
         "hash": "ed183df2dc4d9f8957fe22e58048398bac62b41f",
         "date": "2025-09-22 11:37:15 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Rat Fink\n",
         "files": [
           {"status": "A", "path": "external/vpx-ratfink/launcher.png"},

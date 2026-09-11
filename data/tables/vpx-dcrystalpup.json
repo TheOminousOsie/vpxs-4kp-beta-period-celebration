@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-dcrystalpup/table.yml", "diff": "diff --git a/external/vpx-dcrystalpup/table.yml b/external/vpx-dcrystalpup/table.yml\nindex 53a905cb..b5f6ded9 100644\n--- a/external/vpx-dcrystalpup/table.yml\n+++ b/external/vpx-dcrystalpup/table.yml\n@@ -16,8 +16,5 @@ testers:\n   - \"Silentkat\"\n   - \"evilwraith\"\n   - \"Mox\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"0fec162ea73c233c1a1f746ffe06cb89\"\n-  - \"5FF2D75B16D0E4234CCE72D53C5B9CE8\"\n+vpxChecksum: \"0fec162ea73c233c1a1f746ffe06cb89\"\n vpxVPSId: \"BE5Ntvix1W\"\n\\ No newline at end of file"}
@@ -13,7 +13,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-dcrystalpup/table.yml", "diff": "diff --git a/external/vpx-dcrystalpup/table.yml b/external/vpx-dcrystalpup/table.yml\nindex d7efd8e9..53a905cb 100644\n--- a/external/vpx-dcrystalpup/table.yml\n+++ b/external/vpx-dcrystalpup/table.yml\n@@ -1,7 +1,7 @@\n ---\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/tG1SQbct_b2s_1662131084845.webp\"\n-fps: 45\n+fps: 60\n pupArchiveFormat: \"rar\"\n pupArchiveRoot: \"Dark Crystal Pup 2.0/DarkCrystal\"\n pupChecksum: \"5ff2d75b16d0e4234cce72d53c5b9ce8\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-dcrystalpup/table.yml", "diff": "diff --git a/external/vpx-dcrystalpup/table.yml b/external/vpx-dcrystalpup/table.yml\nindex 4ee11a62..d7efd8e9 100644\n--- a/external/vpx-dcrystalpup/table.yml\n+++ b/external/vpx-dcrystalpup/table.yml\n@@ -16,5 +16,8 @@ testers:\n   - \"Silentkat\"\n   - \"evilwraith\"\n   - \"Mox\"\n-vpxChecksum: \"0fec162ea73c233c1a1f746ffe06cb89\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"0fec162ea73c233c1a1f746ffe06cb89\"\n+  - \"5FF2D75B16D0E4234CCE72D53C5B9CE8\"\n vpxVPSId: \"BE5Ntvix1W\"\n\\ No newline at end of file"}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-dcrystalpup/table.ini", "diff": "diff --git a/external/vpx-dcrystalpup/table.ini b/external/vpx-dcrystalpup/table.ini\nindex 25791406..770b7b71 100644\n--- a/external/vpx-dcrystalpup/table.ini\n+++ b/external/vpx-dcrystalpup/table.ini\n@@ -4,18 +4,17 @@ OverrideTableEmissionScale = 0\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.250118\n-ViewCabScaleY = 0.982379\n-ViewCabScaleZ = 1.009280\n+ViewCabScaleX = 1.234805\n+ViewCabScaleY = 1.000584\n+ViewCabScaleZ = 0.887479\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 4.357799\n-ViewCabVOfs = 36.125767\n-ViewCabWindowTop = 197.924942\n+ViewCabHOfs = 0.045899\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 336.444824\n ViewCabWindowBot = 102.856255\n \n [Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.355729\n B2SPlugins = 1\n PUPCapture = 1\n PUPPlugin = 1\n+BackBufferScale = 0.416666\n\\ No newline at end of file"},

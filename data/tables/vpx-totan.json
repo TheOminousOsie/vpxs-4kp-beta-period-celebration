@@ -4,7 +4,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-totan/table.ini", "diff": "diff --git a/external/vpx-totan/table.ini b/external/vpx-totan/table.ini\nindex b0642cc6..6e591336 100644\n--- a/external/vpx-totan/table.ini\n+++ b/external/vpx-totan/table.ini\n@@ -2,24 +2,28 @@\n BallTrail = 0\n BallTrailStrength = 0.000000\n OverrideTableEmissionScale = 1\n-ScreenPlayerZ = 105.285141\n+ScreenPlayerZ = 89.985390\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n DynamicDayNight = 0\n EmissionScale = 0.532900\n-ScreenPlayerY = 65.308937\n+ScreenPlayerY = 14.978894\n ScreenPlayerX = 0.027400\n-FXAA = 4\n-AAFactor = 0.95\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.227667\n-ViewCabScaleY = 1.071882\n+ViewCabScaleX = 1.238425\n+ViewCabScaleY = 1.011784\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -36.246326\n-ViewCabWindowTop = 457.199127\n-ViewCabWindowBot = 21.792217\n+ViewCabVOfs = 0.017798\n+ViewCabWindowTop = 359.479095\n+ViewCabWindowBot = 43.212212\n+\n+[TableOption]\n+Select LUT = 0.000000\n+Desktop DMD = 0.000000\n+Cabinet Rails = 0.000000\n+Side Blades = 1.000000\n\\ No newline at end of file"},
@@ -23,7 +23,7 @@
       {
         "hash": "688ec61c6bd9a567e41b60eb2948b47c6652ad0f",
         "date": "2025-09-10 12:40:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "JPSalas v600 updates\n\nCurrent as of 9/10/25. More to come.\n",
         "files": [
           {"status": "M", "path": "external/vpx-totan/table.yml", "diff": "diff --git a/external/vpx-totan/table.yml b/external/vpx-totan/table.yml\nindex aecd7296..e6e1d23e 100644\n--- a/external/vpx-totan/table.yml\n+++ b/external/vpx-totan/table.yml\n@@ -16,5 +16,5 @@ testers:\n   - \"OminousOsie\"\n   - \"Boris\"\n vpxVPSId: \"7m7IM8bI\"\n-vpxChecksum: \"ccb6f28f015d5b83838e7559e9e329d7\"\n-tableNotes: \"Download - v55_VPX8.zip\"\n+vpxChecksum: \"45BDBD5668B951440F6EAD4B45091A15\"\n+tableNotes: \"Download - v600.zip\""}
@@ -51,7 +51,7 @@
       {
         "hash": "cc6a3d476288ab40b5ba573feb1fd707d15415be",
         "date": "2025-05-01 19:06:52 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-totan/table.yml", "diff": "diff --git a/external/vpx-totan/table.yml b/external/vpx-totan/table.yml\nindex a080aaad..aecd7296 100644\n--- a/external/vpx-totan/table.yml\n+++ b/external/vpx-totan/table.yml\n@@ -2,7 +2,7 @@\n backglassVPSId: \"ddtvrKOtMj\"\n backglassChecksum: \"F0A68360701C8668939AEFE2C96E755F\"\n backglassNotes: \"Download - Tales of the Arabian Nights (Williams 1996) 3k.zip\"\n-fps: 48\n+fps: 51\n romVPSId: \"sNdevnd0\"\n romChecksum: \"FC8373E3925D671EDE800B3BD9B47D88\"\n romNotes: \"Download - totan_14.zip\"\n@@ -14,6 +14,7 @@ testers:\n   - \"Bla1ze\"\n   - \"evilwraith\"\n   - \"OminousOsie\"\n+  - \"Boris\"\n vpxVPSId: \"7m7IM8bI\"\n vpxChecksum: \"ccb6f28f015d5b83838e7559e9e329d7\"\n tableNotes: \"Download - v55_VPX8.zip\"\n"}
@@ -60,7 +60,7 @@
       {
         "hash": "24d7f84d025176cd96a00853427a7cede0131a72",
         "date": "2025-05-01 19:02:05 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.ini\n\nUpdate POV to Cam 2\n",
         "files": [
           {"status": "M", "path": "external/vpx-totan/table.ini", "diff": "diff --git a/external/vpx-totan/table.ini b/external/vpx-totan/table.ini\nindex 469f446b..ab35d400 100644\n--- a/external/vpx-totan/table.ini\n+++ b/external/vpx-totan/table.ini\n@@ -1,17 +1,23 @@\n [Player]\n-BallTrailStrength = 0.490196\n-OverrideTableEmissionScale = 0\n-JoyAddCredit2Key = 1\n+BallTrail = 0\n+BallTrailStrength = 0.000000\n+OverrideTableEmissionScale = 1\n+ScreenPlayerZ = 105.285141\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n+DynamicDayNight = 0\n+EmissionScale = 0.532900\n+ScreenPlayerY = 65.308937\n+ScreenPlayerX = 0.027400\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.689608\n-ViewCabScaleY = 0.873413\n-ViewCabScaleZ = 1.000018\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 39.292011\n-ViewCabPlayerY = -0.599000\n-ViewCabPlayerZ = -1161.130005\n-ViewCabLookAt = 7.280297\n-ViewCabFOV = 29.976408\n-ViewCabLayback = 59.956009\n+ViewCabMode = 2\n+ViewCabScaleX = 1.227667\n+ViewCabScaleY = 1.071882\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -36.246326\n+ViewCabWindowTop = 457.199127\n+ViewCabWindowBot = 21.792217\n\\ No newline at end of file\n"}
@@ -69,7 +69,7 @@
       {
         "hash": "293f025c5b5b282892ec984d7d38dc4b30626f85",
         "date": "2025-05-01 18:47:46 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table to fix Make A Wish hole problem.\n\nUpdate table to fix Make A Wish hole problem. Minor ini tweaks to remove redundant setting\n",
         "files": [
           {"status": "M", "path": "external/vpx-totan/table.ini", "diff": "diff --git a/external/vpx-totan/table.ini b/external/vpx-totan/table.ini\nindex 48628c15..469f446b 100644\n--- a/external/vpx-totan/table.ini\n+++ b/external/vpx-totan/table.ini\n@@ -2,7 +2,6 @@\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 0\n JoyAddCredit2Key = 1\n-FXAA = 1\n \n [TableOverride]\n ViewCabMode = 0"},
@@ -160,7 +160,7 @@
       {
         "hash": "9fa29557e25aa47707a2ee0291e0dfabd01b030a",
         "date": "2025-03-30 20:09:39 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Merge remote-tracking branch 'upstream/main'\n",
         "files": [
           {"status": "MM", "path": "external/vpx-totan/table.ini", "diff": "diff --cc external/vpx-totan/table.ini\nindex b8c364f7,df3aaac5..48628c15\n--- a/external/vpx-totan/table.ini\n+++ b/external/vpx-totan/table.ini\n@@@ -6,13 -6,13 +6,13 @@@ FXAA = \n  \n  [TableOverride]\n  ViewCabMode = 0\n- ViewCabScaleX = 0.830262\n- ViewCabScaleY = 1.124914\n- ViewCabScaleZ = 0.904995\n+ ViewCabScaleX = 0.689608\n+ ViewCabScaleY = 0.873413\n+ ViewCabScaleZ = 1.000018\n  ViewCabRotation = 90.000000\n- ViewCabPlayerX = -20.394995\n- ViewCabPlayerY = 0.558000\n- ViewCabPlayerZ = -340.000000\n- ViewCabLookAt = 5.000000\n- ViewCabFOV = 42.999908\n- ViewCabLayback = 48.000000\n+ ViewCabPlayerX = 39.292011\n+ ViewCabPlayerY = -0.599000\n+ ViewCabPlayerZ = -1161.130005\n+ ViewCabLookAt = 7.280297\n+ ViewCabFOV = 29.976408\n -ViewCabLayback = 59.956009\n++ViewCabLayback = 59.956009\n"}
@@ -215,7 +215,7 @@
       {
         "hash": "d14dd907a2aa6661a0033936d39abfacef43337e",
         "date": "2025-03-25 16:19:00 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "INI and YML Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-totan/table.ini", "diff": "diff --git a/external/vpx-totan/table.ini b/external/vpx-totan/table.ini\nindex ee8eab85..b8c364f7 100644\n--- a/external/vpx-totan/table.ini\n+++ b/external/vpx-totan/table.ini\n@@ -6,13 +6,13 @@ FXAA = 1\n \n [TableOverride]\n ViewCabMode = 0\n-ViewCabScaleX = 0.818596\n-ViewCabScaleY = 1.099913\n+ViewCabScaleX = 0.830262\n+ViewCabScaleY = 1.124914\n ViewCabScaleZ = 0.904995\n ViewCabRotation = 90.000000\n-ViewCabPlayerX = -29.790998\n+ViewCabPlayerX = -20.394995\n ViewCabPlayerY = 0.558000\n ViewCabPlayerZ = -340.000000\n ViewCabLookAt = 5.000000\n ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},
@@ -299,7 +299,7 @@
       {
         "hash": "fa1c36e494f59be57dc835572add2e26f056a5e4",
         "date": "2025-03-22 12:45:28 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "yml cleanups\n",
         "files": [
           {"status": "M", "path": "external/vpx-totan/table.yml", "diff": "diff --git a/external/vpx-totan/table.yml b/external/vpx-totan/table.yml\nindex 5f5b7253..cdb8e290 100644\n--- a/external/vpx-totan/table.yml\n+++ b/external/vpx-totan/table.yml\n@@ -1,17 +1,12 @@\n ---\n backglassVPSId: \"ddtvrKOtMj\"\n backglassChecksum: \"F0A68360701C8668939AEFE2C96E755F\"\n-backglassNotes: \n-coloredROMVPSId: \n-coloredROMChecksum: \n fps: \"48\"\n romVPSId: \"sNdevnd0\"\n romChecksum: \"FC8373E3925D671EDE800B3BD9B47D88\"\n tableVPSId: \"3CvHz8Fa\"\n-tagline: \n testers: \n - \"Bla1ze\"\n vpxVPSId: \"7m7IM8bI\"\n vpxChecksum: \"A881856F4AE32A30791F434F55171E93\"\n-tableNotes: \"Download 'Tales of the Arabian Nights (Williams 1996) v55_VPX8.zip'\"\n-mainNotes: \n\\ No newline at end of file\n+tableNotes: \"Download 'Tales of the Arabian Nights (Williams 1996) v55_VPX8.zip'\"\n\\ No newline at end of file"}
@@ -308,7 +308,7 @@
       {
         "hash": "c13f12795536d004c78e2331762558777a4695a9",
         "date": "2025-03-22 12:28:26 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 table updates\n\nSFII- fixed wheel image, table notes\nTFTC - fixed table brightness and table ini formatting\nTOTAN - added settings to ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-totan/table.ini", "diff": "diff --git a/external/vpx-totan/table.ini b/external/vpx-totan/table.ini\nindex a20fcd24..ee8eab85 100644\n--- a/external/vpx-totan/table.ini\n+++ b/external/vpx-totan/table.ini\n@@ -1,6 +1,8 @@\n [Player]\n BallTrailStrength = 0.490196\n OverrideTableEmissionScale = 0\n+JoyAddCredit2Key = 1\n+FXAA = 1\n \n [TableOverride]\n ViewCabMode = 0\n"}
@@ -317,7 +317,7 @@
       {
         "hash": "7a617d876200bfe8c67c9266dc5460fddce1a1ab",
         "date": "2025-03-21 15:39:48 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-totan/table.yml", "diff": "diff --git a/external/vpx-totan/table.yml b/external/vpx-totan/table.yml\nindex ff428598..5f5b7253 100644\n--- a/external/vpx-totan/table.yml\n+++ b/external/vpx-totan/table.yml\n@@ -2,8 +2,8 @@\n backglassVPSId: \"ddtvrKOtMj\"\n backglassChecksum: \"F0A68360701C8668939AEFE2C96E755F\"\n backglassNotes: \n-coloredROMVPSId: \"RE7nGa3J\"\n-coloredROMChecksum: \"AB31898E19928057AC55F0208CC5549F\"\n+coloredROMVPSId: \n+coloredROMChecksum: \n fps: \"48\"\n romVPSId: \"sNdevnd0\"\n romChecksum: \"FC8373E3925D671EDE800B3BD9B47D88\"\n"}
@@ -326,7 +326,7 @@
       {
         "hash": "b01e8b6e143fdd3b438bbde8bb56b1a62eb0321c",
         "date": "2025-03-21 15:24:36 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-totan/table.yml", "diff": "diff --git a/external/vpx-totan/table.yml b/external/vpx-totan/table.yml\nindex 4149ac6f..ff428598 100644\n--- a/external/vpx-totan/table.yml\n+++ b/external/vpx-totan/table.yml\n@@ -9,8 +9,8 @@ romVPSId: \"sNdevnd0\"\n romChecksum: \"FC8373E3925D671EDE800B3BD9B47D88\"\n tableVPSId: \"3CvHz8Fa\"\n tagline: \n-testers: \"Bla1ze\"\n-- \n+testers: \n+- \"Bla1ze\"\n vpxVPSId: \"7m7IM8bI\"\n vpxChecksum: \"A881856F4AE32A30791F434F55171E93\"\n tableNotes: \"Download 'Tales of the Arabian Nights (Williams 1996) v55_VPX8.zip'\"\n"}
@@ -335,7 +335,7 @@
       {
         "hash": "4fdcf2b51a066090d71027c6a6960441eaf61bad",
         "date": "2025-03-21 13:45:25 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Add TOTAN yml\n",
         "files": [
           {"status": "A", "path": "external/vpx-totan/table.yml", "diff": "diff --git a/external/vpx-totan/table.yml b/external/vpx-totan/table.yml\nnew file mode 100644\nindex 00000000..4149ac6f\n--- /dev/null\n+++ b/external/vpx-totan/table.yml\n@@ -0,0 +1,17 @@\n+---\n+backglassVPSId: \"ddtvrKOtMj\"\n+backglassChecksum: \"F0A68360701C8668939AEFE2C96E755F\"\n+backglassNotes: \n+coloredROMVPSId: \"RE7nGa3J\"\n+coloredROMChecksum: \"AB31898E19928057AC55F0208CC5549F\"\n+fps: \"48\"\n+romVPSId: \"sNdevnd0\"\n+romChecksum: \"FC8373E3925D671EDE800B3BD9B47D88\"\n+tableVPSId: \"3CvHz8Fa\"\n+tagline: \n+testers: \"Bla1ze\"\n+- \n+vpxVPSId: \"7m7IM8bI\"\n+vpxChecksum: \"A881856F4AE32A30791F434F55171E93\"\n+tableNotes: \"Download 'Tales of the Arabian Nights (Williams 1996) v55_VPX8.zip'\"\n+mainNotes: \n\\ No newline at end of file\n"}
@@ -409,7 +409,7 @@
       {
         "hash": "d167b1f618e412fda02ae2d9947a4ee18e5ff3f9",
         "date": "2025-01-21 22:31:49 -0600",
-        "author": "James Rainaldi",
+        "author": "James R.",
         "message": "chore: updated vpx-totan README\n",
         "files": [
           {"status": "M", "path": "external/vpx-totan/README.md", "diff": "diff --git a/external/vpx-totan/README.md b/external/vpx-totan/README.md\nindex cd060ec9..ce6be3cb 100644\n--- a/external/vpx-totan/README.md\n+++ b/external/vpx-totan/README.md\n@@ -2,19 +2,18 @@\n \n ![Table Preview](https://www.vpforums.org/index.php?app=downloads&module=display&section=screenshot&record=114158&id=11611&full=1)\n \n-Authors: [jpsalas](https://www.vpforums.org/index.php?s=543a5ca562cc33a89debe8ace8834f1e&showuser=277)  \n-Version: 5.0.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=11611)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=11611) | 5.0.0 | [jpsalas](https://www.vpforums.org/index.php?s=543a5ca562cc33a89debe8ace8834f1e&showuser=277)   |\n+| **B2S & DMD** | [VP Universe](https://vpuniverse.com/files/file/12134-tales-of-the-arabian-nights-williams-1996-b2s-full-dmd/) | 2.0 | [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| **ROM** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1273) |  |  |\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-Version: 2.0\n-Download: [VP Universe](https://vpuniverse.com/files/file/12134-tales-of-the-arabian-nights-williams-1996-b2s-full-dmd/)\n+**Tested by:** \n \n-ROM\n-\n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=1273)\n+---\n \n ## Status \n \n@@ -23,8 +22,12 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 48 |\n \n+---\n+\n ## Instructions\n \n - Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-totan.elf\n-- Download the table and directb2s versions listed above and copy them into this folder\n\\ No newline at end of file\n+- Add your personalized launcher.elf and rename it to `vpx-totan.elf`\n+- Download the table and directb2s versions listed above and copy them into this folder\n+- Make sure (`.vpx`), (`.directb2s`), (`.ini`) and (`.vbs`) files are all named the same\n+- Place ROM zip file into `vpx-totan/pinmame/roms` folder. Do not unzip!\n"}

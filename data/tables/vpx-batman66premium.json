@@ -4,7 +4,7 @@
       {
         "hash": "e6e4abf77e0bc86fd5246288f0989a5ef93cbacb",
         "date": "2026-09-06 20:28:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "JP's Metallica and Batman '66 Premium (#2186)\n\n* initial\n\n* Add enabled field to table.yml\n\nart not ready yet",
         "files": [
           {"status": "A", "path": "external/vpx-batman66premium/dmd.png"},

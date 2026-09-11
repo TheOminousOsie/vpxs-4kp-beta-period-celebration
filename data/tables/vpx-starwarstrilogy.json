@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-starwarstrilogy/table.yml", "diff": "diff --git a/external/vpx-starwarstrilogy/table.yml b/external/vpx-starwarstrilogy/table.yml\nindex b3db5223..39a38399 100644\n--- a/external/vpx-starwarstrilogy/table.yml\n+++ b/external/vpx-starwarstrilogy/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"hripfXW8AB\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"D893635A634EF2D0A0F1196A714513E5\"\n-  - \"C4B8A1CD44C5D609490FF9FCE3502D09\"\n+backglassChecksum: \"D893635A634EF2D0A0F1196A714513E5\"\n coloredROMChecksum: \"39A414E4F6335AE56EB33DE77C4BC1F2\"\n coloredROMVPSId: \"RAXAfH14xP\"\n fps: 60\n@@ -16,7 +13,4 @@ testers:\n   - \"Mox\"\n   - \"OminousOsie\"\n vpxVPSId: \"FXFg6iyecu\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"DBD5E0737301BD1856D6669D3740FC88\"\n-  - \"62F9924622BC8F924A43DF9254D26812\"\n+vpxChecksum: \"DBD5E0737301BD1856D6669D3740FC88\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-starwarstrilogy/table.yml", "diff": "diff --git a/external/vpx-starwarstrilogy/table.yml b/external/vpx-starwarstrilogy/table.yml\nindex 39a38399..b3db5223 100644\n--- a/external/vpx-starwarstrilogy/table.yml\n+++ b/external/vpx-starwarstrilogy/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"hripfXW8AB\"\n-backglassChecksum: \"D893635A634EF2D0A0F1196A714513E5\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"D893635A634EF2D0A0F1196A714513E5\"\n+  - \"C4B8A1CD44C5D609490FF9FCE3502D09\"\n coloredROMChecksum: \"39A414E4F6335AE56EB33DE77C4BC1F2\"\n coloredROMVPSId: \"RAXAfH14xP\"\n fps: 60\n@@ -13,4 +16,7 @@ testers:\n   - \"Mox\"\n   - \"OminousOsie\"\n vpxVPSId: \"FXFg6iyecu\"\n-vpxChecksum: \"DBD5E0737301BD1856D6669D3740FC88\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"DBD5E0737301BD1856D6669D3740FC88\"\n+  - \"62F9924622BC8F924A43DF9254D26812\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-starwarstrilogy/table.ini", "diff": "diff --git a/external/vpx-starwarstrilogy/table.ini b/external/vpx-starwarstrilogy/table.ini\nindex 41b9dfd9..8269f952 100644\n--- a/external/vpx-starwarstrilogy/table.ini\n+++ b/external/vpx-starwarstrilogy/table.ini\n@@ -12,14 +12,11 @@ ScreenInclination = 0.000000\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.309106\n-ViewCabScaleY = 1.091064\n+ViewCabScaleX = 1.230624\n+ViewCabScaleY = 1.000240\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n-ViewCabHOfs = -3.103100\n-ViewCabVOfs = -58.532764\n-ViewCabWindowTop = 375.607941\n-ViewCabWindowBot = 135.015198\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+ViewCabHOfs = 0.016700\n+ViewCabVOfs = 0.015998\n+ViewCabWindowTop = 297.724976\n+ViewCabWindowBot = 0.069211\n\\ No newline at end of file"},
@@ -151,7 +151,7 @@
       {
         "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
         "date": "2025-03-30 19:40:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
         "files": [
           {"status": "A", "path": "external/vpx-starwarstrilogy/table.ini", "diff": "diff --git a/external/vpx-starwarstrilogy/table.ini b/external/vpx-starwarstrilogy/table.ini\nnew file mode 100644\nindex 00000000..e174bd0c\n--- /dev/null\n+++ b/external/vpx-starwarstrilogy/table.ini\n@@ -0,0 +1,17 @@\n+[Player]\n+JoyAddCredit2Key = 1\n+BallTrailStrength = 0.490196\n+OverrideTableEmissionScale = 0\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.805046\n+ViewCabScaleY = 1.059799\n+ViewCabScaleZ = 0.849778\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -8.640005\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -332.819977\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000\n\\ No newline at end of file"},

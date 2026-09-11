@@ -4,7 +4,7 @@
       {
         "hash": "1a9b9cef02d04517f20f0f76e815e469e0621549",
         "date": "2026-08-25 19:50:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Rename readme.md to README.md",
         "files": [
           {"status": "R-from", "path": "external/vpx-dexter/readme.md->external/vpx-dexter/README.md", "diff": "diff --git a/external/vpx-dexter/readme.md b/external/vpx-dexter/README.md\nsimilarity index 100%\nrename from external/vpx-dexter/readme.md\nrename to external/vpx-dexter/README.md\n"},
@@ -14,7 +14,7 @@
       {
         "hash": "2ab62c360d52ada0545e2cac6801810c79f84235",
         "date": "2026-08-17 16:31:38 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-dexter/readme.md", "diff": "diff --git a/external/vpx-dexter/readme.md b/external/vpx-dexter/readme.md\nindex 26b3508e..ea848908 100644\n--- a/external/vpx-dexter/readme.md\n+++ b/external/vpx-dexter/readme.md\n@@ -1,6 +1,6 @@\n # Dexter (Original 2022)\n \n-![Table Preview](../../images/vpx-dexter.png)\n+![Table Preview](../../images/X9el-XgPFm-preview.webp)\n \n <br>\n "},
@@ -24,7 +24,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-dexter/table.yml", "diff": "diff --git a/external/vpx-dexter/table.yml b/external/vpx-dexter/table.yml\nindex f75c5a62..8c266273 100644\n--- a/external/vpx-dexter/table.yml\n+++ b/external/vpx-dexter/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassBundled: true\n backglassVPSId: \"t0ENUlSOzX\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"647D36CF569FC74C0C900024A7E66CAB\"\n-  - \"70BB24DAEEC105144A26D52CCE71B0C2\"\n+backglassChecksum: \"647D36CF569FC74C0C900024A7E66CAB\"\n backglassNotes: \"Included in VPX Download\"\n fps: 60\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/dvlsdre.1744/\"\n@@ -21,7 +18,4 @@ testers:\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"X9el-XgPFm\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"7C1B9F129A6DFA12D540E8F591541FF3\"\n-  - \"70BB24DAEEC105144A26D52CCE71B0C2\"\n+vpxChecksum: \"7C1B9F129A6DFA12D540E8F591541FF3\""}
@@ -33,7 +33,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-dexter/table.yml", "diff": "diff --git a/external/vpx-dexter/table.yml b/external/vpx-dexter/table.yml\nindex 8c266273..f75c5a62 100644\n--- a/external/vpx-dexter/table.yml\n+++ b/external/vpx-dexter/table.yml\n@@ -1,7 +1,10 @@\n ---\n backglassBundled: true\n backglassVPSId: \"t0ENUlSOzX\"\n-backglassChecksum: \"647D36CF569FC74C0C900024A7E66CAB\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"647D36CF569FC74C0C900024A7E66CAB\"\n+  - \"70BB24DAEEC105144A26D52CCE71B0C2\"\n backglassNotes: \"Included in VPX Download\"\n fps: 60\n romUrlOverride: \"https://pinballnirvana.com/forums/resources/dvlsdre.1744/\"\n@@ -18,4 +21,7 @@ testers:\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"X9el-XgPFm\"\n-vpxChecksum: \"7C1B9F129A6DFA12D540E8F591541FF3\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"7C1B9F129A6DFA12D540E8F591541FF3\"\n+  - \"70BB24DAEEC105144A26D52CCE71B0C2\""}
@@ -42,7 +42,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-dexter/table.ini", "diff": "diff --git a/external/vpx-dexter/table.ini b/external/vpx-dexter/table.ini\nindex 530d4f9b..1ab6cae4 100644\n--- a/external/vpx-dexter/table.ini\n+++ b/external/vpx-dexter/table.ini\n@@ -2,7 +2,7 @@\n BallTrailStrength = 0.490196\n AlphaRampAccuracy = 10\n OverrideTableEmissionScale = 1\n-ScreenPlayerY = -4.750002\n+ScreenPlayerY = 15.026346\n ScreenPlayerZ = 100.251236\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n@@ -14,13 +14,12 @@ SoundVolume = 15\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.178536\n-ViewCabScaleY = 1.097283\n-ViewCabScaleZ = 1.007788\n+ViewCabScaleX = 1.052392\n+ViewCabScaleY = 1.000209\n+ViewCabScaleZ = 0.903208\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -74.862152\n-ViewCabWindowTop = 261.541931\n-ViewCabWindowBot = 92.953217\n-ToneMapper = 0\n-Difficulty = 0.206615\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 25.218929\n+ViewCabWindowBot = 0.603219\n+ToneMapper = 0\n\\ No newline at end of file"},

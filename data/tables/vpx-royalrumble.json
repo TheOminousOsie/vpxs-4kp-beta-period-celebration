@@ -13,7 +13,7 @@
       {
         "hash": "4a02ebc321763607047eeb2ac122432348f2226b",
         "date": "2026-07-18 00:40:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "final updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-royalrumble/table.yml", "diff": "diff --git a/external/vpx-royalrumble/table.yml b/external/vpx-royalrumble/table.yml\nindex af18c9d1..10450f6f 100644\n--- a/external/vpx-royalrumble/table.yml\n+++ b/external/vpx-royalrumble/table.yml\n@@ -2,10 +2,13 @@\n backglassChecksum: \"8BFAA01CA0D025113AEFC9A546DD15B9\"\n backglassNotes: \"Download version v2.0\"\n backglassVPSId: \"9ofZ5nrPpK\"\n+coloredROMChecksum:\n+  - \"04737d712fcfbadbf58153f003d1f308\"\n+  - \"1fd8b1e3114e9a758f9e2b0eccc5117f\"\n+coloredROMPin2DMD: true\n+coloredROMVPSId: \"kFGJdd6l\"\n fps: 60\n-mainNotes: >-\n-  Note: There is a ROM/switch issue that means that the ROM incorrectly believes\n-  the coin door is open. Just ignore it and hit start!\n+mainNotes: \"Note:  Just ignore the coin door message and hit start!\"\n romChecksum: \"363CE8166104EB8B21897AFE67D627AD\"\n romNotes: \"Download wwfr_106.zip\"\n romVPSId: \"3juj-Z36\"\n@@ -14,5 +17,4 @@ tagline: \"GET BACK INTO THE RING.. IT'S TIME FOR THE WWF ROYAL RUMBLE!\"\n testers:\n   - \"Bla1ze\"\n vpxChecksum: \"4249030FEDD8424EA8CB1E481C362549\"\n-vpxNotes: \"Download version 5.0\"\n vpxVPSId: \"MbInzTSL\""}
@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-royalrumble/table.yml", "diff": "diff --git a/external/vpx-royalrumble/table.yml b/external/vpx-royalrumble/table.yml\nindex 4e480d65..af18c9d1 100644\n--- a/external/vpx-royalrumble/table.yml\n+++ b/external/vpx-royalrumble/table.yml\n@@ -13,9 +13,6 @@ tableVPSId: \"oswLU1El\"\n tagline: \"GET BACK INTO THE RING.. IT'S TIME FOR THE WWF ROYAL RUMBLE!\"\n testers:\n   - \"Bla1ze\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"4249030FEDD8424EA8CB1E481C362549\"\n-  - \"2A9D7360DD6102FC2EEB26DCB606F1F4\"\n+vpxChecksum: \"4249030FEDD8424EA8CB1E481C362549\"\n vpxNotes: \"Download version 5.0\"\n vpxVPSId: \"MbInzTSL\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-royalrumble/table.yml", "diff": "diff --git a/external/vpx-royalrumble/table.yml b/external/vpx-royalrumble/table.yml\nindex af18c9d1..4e480d65 100644\n--- a/external/vpx-royalrumble/table.yml\n+++ b/external/vpx-royalrumble/table.yml\n@@ -13,6 +13,9 @@ tableVPSId: \"oswLU1El\"\n tagline: \"GET BACK INTO THE RING.. IT'S TIME FOR THE WWF ROYAL RUMBLE!\"\n testers:\n   - \"Bla1ze\"\n-vpxChecksum: \"4249030FEDD8424EA8CB1E481C362549\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"4249030FEDD8424EA8CB1E481C362549\"\n+  - \"2A9D7360DD6102FC2EEB26DCB606F1F4\"\n vpxNotes: \"Download version 5.0\"\n vpxVPSId: \"MbInzTSL\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-royalrumble/table.ini", "diff": "diff --git a/external/vpx-royalrumble/table.ini b/external/vpx-royalrumble/table.ini\nindex cfd9dc10..4a3021f7 100644\n--- a/external/vpx-royalrumble/table.ini\n+++ b/external/vpx-royalrumble/table.ini\n@@ -9,14 +9,11 @@ ScreenInclination = 0.000000\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.149971\n-ViewCabScaleY = 1.066432\n+ViewCabScaleX = 1.082805\n+ViewCabScaleY = 1.083406\n ViewCabScaleZ = 0.894495\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n ViewCabVOfs = -50.480217\n-ViewCabWindowTop = 352.423889\n-ViewCabWindowBot = 129.621216\n-\n-[Standalone]\n-BackBufferScale = 0.355729\n\\ No newline at end of file\n+ViewCabWindowTop = 377.541931\n+ViewCabWindowBot = 110.953217\n\\ No newline at end of file"},
@@ -217,7 +217,7 @@
       {
         "hash": "61ddb955a1e2052e2ac4be1472de7710585ed99b",
         "date": "2025-03-07 12:30:50 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add launcher configs to multiple tables\n\nHumpty Dumpty > Right, Release ball\nAlice in Wonderland  > Right, Release ball\nThe Shadow > Right, Toggle ramps\nAttack From Mars > Up, Launcher\nT2 > Up, Launcher\nWWE Royal Rumble > Left, Right, Mag Saves (I think)\nJohnny Mnemonic >left and right change table colors. (Sorry don't know what the effect is called )\nWCS - Left is magnasave\nBlack Knight 2000 > Right, mag save\nBlack Knight: L/R nudge = L/R magna save\nBlack Knight 2000: L/R nudge = L/R magna save\nViper: L nudge = viper reverse, R nudge = viper strike\nMedusa: R nudge = shield post\n",
         "files": [
           {"status": "A", "path": "external/vpx-royalrumble/launcher.cfg", "diff": "diff --git a/external/vpx-royalrumble/launcher.cfg b/external/vpx-royalrumble/launcher.cfg\nnew file mode 100644\nindex 00000000..2c72e0d1\n--- /dev/null\n+++ b/external/vpx-royalrumble/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+; dpadUp = \"Launch\"\n+; dpadDown = \"Down\"\n+dpadLeft = \"Magnasave\"\n+dpadRight = \"Magnasave\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start\"\n+; menu = \"Menu\"\n\\ No newline at end of file"}

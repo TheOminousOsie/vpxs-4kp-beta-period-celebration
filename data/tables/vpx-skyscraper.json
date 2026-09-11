@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-skyscraper/table.yml", "diff": "diff --git a/external/vpx-skyscraper/table.yml b/external/vpx-skyscraper/table.yml\nindex dd9d2e83..3fecd6bd 100644\n--- a/external/vpx-skyscraper/table.yml\n+++ b/external/vpx-skyscraper/table.yml\n@@ -2,10 +2,7 @@\n backglassBundled: True\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/pnx-rMf7uR_1749636467160.webp\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"0CACCAE9FB4D3A0C2D5C3586DB578321\"\n-  - \"E1989624C0C2A2CD3A4E03B955826CE1\"\n+backglassChecksum: \"0CACCAE9FB4D3A0C2D5C3586DB578321\"\n backglassNotes: \"Included with table download. Use 'Skyscraper (Bally 1934).directb2s'.\"\n fps: 60\n tableVPSId: \"GQVgQ-sou9\"\n@@ -14,8 +11,5 @@ tagline: >-\n testers:\n   - \"evilwraith\"\n   - \"CoffeeAtJoes\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"3A4CB0AD3BCB686F649893756567DB9A\"\n-  - \"E1989624C0C2A2CD3A4E03B955826CE1\"\n+vpxChecksum: \"3A4CB0AD3BCB686F649893756567DB9A\"\n vpxVPSId: \"fzOMz7rlhz\""}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-skyscraper/table.yml", "diff": "diff --git a/external/vpx-skyscraper/table.yml b/external/vpx-skyscraper/table.yml\nindex 3fecd6bd..dd9d2e83 100644\n--- a/external/vpx-skyscraper/table.yml\n+++ b/external/vpx-skyscraper/table.yml\n@@ -2,7 +2,10 @@\n backglassBundled: True\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/pnx-rMf7uR_1749636467160.webp\"\n-backglassChecksum: \"0CACCAE9FB4D3A0C2D5C3586DB578321\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"0CACCAE9FB4D3A0C2D5C3586DB578321\"\n+  - \"E1989624C0C2A2CD3A4E03B955826CE1\"\n backglassNotes: \"Included with table download. Use 'Skyscraper (Bally 1934).directb2s'.\"\n fps: 60\n tableVPSId: \"GQVgQ-sou9\"\n@@ -11,5 +14,8 @@ tagline: >-\n testers:\n   - \"evilwraith\"\n   - \"CoffeeAtJoes\"\n-vpxChecksum: \"3A4CB0AD3BCB686F649893756567DB9A\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"3A4CB0AD3BCB686F649893756567DB9A\"\n+  - \"E1989624C0C2A2CD3A4E03B955826CE1\"\n vpxVPSId: \"fzOMz7rlhz\""}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-skyscraper/table.ini", "diff": "diff --git a/external/vpx-skyscraper/table.ini b/external/vpx-skyscraper/table.ini\nindex f27196ef..1354840f 100644\n--- a/external/vpx-skyscraper/table.ini\n+++ b/external/vpx-skyscraper/table.ini\n@@ -1,17 +1,16 @@\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.262994\n-ViewCabScaleY = 1.130170\n+ViewCabScaleX = 1.305948\n+ViewCabScaleY = 1.036588\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -116.204414\n-ViewCabWindowTop = 325.541931\n-ViewCabWindowBot = 83.953270\n+ViewCabVOfs = -47.593182\n+ViewCabWindowTop = 149.298965\n+ViewCabWindowBot = 146.554382\n ToneMapper = 2\n \n [Standalone]\n-BackBufferScale  = 0.5\n B2SHideB2SDMD = 0\n B2SHideDMD = 0\n \n@@ -31,4 +30,4 @@ Cheat Walls Visible = 0.000000\n Elevator Sound = 1.000000\n Wheel Drag = 0.500000\n Left Flipper Wheel Stop = 0.000000\n-Wheel Bonus = 0.000000\n\\ No newline at end of file\n+Wheel Bonus = 0.000000"},
@@ -41,7 +41,7 @@
       {
         "hash": "1a65af8d5c3b8eaf6aec6aa87fb836d8f371781f",
         "date": "2025-07-15 15:13:01 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n\nFix vpx checksum\n",
         "files": [
           {"status": "M", "path": "external/vpx-skyscraper/table.yml", "diff": "diff --git a/external/vpx-skyscraper/table.yml b/external/vpx-skyscraper/table.yml\nindex 936f10f4..c26f2dd2 100644\n--- a/external/vpx-skyscraper/table.yml\n+++ b/external/vpx-skyscraper/table.yml\n@@ -13,5 +13,5 @@ tagline: >-\n testers:\n   - \"evilwraith\"\n   - \"CoffeeAtJoes\"\n-vpxChecksum: \"1A642C3A0A77E73098FE93A4E3A5C60A\"\n+vpxChecksum: \"3A4CB0AD3BCB686F649893756567DB9A\"\n vpxVPSId: \"fzOMz7rlhz\"\n"}
@@ -50,7 +50,7 @@
       {
         "hash": "7e4e17c20927ba9878a5b6ce1ae42dd677cd335e",
         "date": "2025-07-15 09:50:25 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Skyscraper and Fleet updates\n\nSkyscraper:\n- Updated vbs for 1.1\n- Added Backglass card\n- Updated yml\n\nFleet:\n- Added backglass card.\n",
         "files": [
           {"status": "A", "path": "external/vpx-skyscraper/backglass.png"},
@@ -126,7 +126,7 @@
       {
         "hash": "b8be15ce2573022bbd80305a0607a1387fcbcae2",
         "date": "2025-07-09 11:50:53 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Create launcher.cfg\n",
         "files": [
           {"status": "A", "path": "external/vpx-skyscraper/launcher.cfg", "diff": "diff --git a/external/vpx-skyscraper/launcher.cfg b/external/vpx-skyscraper/launcher.cfg\nnew file mode 100644\nindex 00000000..a6e5de83\n--- /dev/null\n+++ b/external/vpx-skyscraper/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+dpadUp = \"Menu Select / Plunger\"\n+; dpadDown = \"Down\"\n+; dpadLeft = \"Left\"\n+;dpadRight = \"BOOM! Button\"\n+; leftFlipper = \"\"\n+ rightFlipper = \"Load Ball\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+start = \"Start / Menu Select\"\n+; menu = \"Menu\"\n\\ No newline at end of file\n"}
@@ -162,7 +162,7 @@
       {
         "hash": "43291b57cf3f0db2825f2f2224afb36805816d3c",
         "date": "2025-07-01 10:53:46 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 adds and a change\n\nAdded Skyscraper (Bally 1934)\nAdded Fleet Jr (Bally 1934)\nAdded Futurama (Original 2024)\n\nModified Cleopatra (Gottlieb 1977) for spelling and POV.\n",
         "files": [
           {"status": "A", "path": "external/vpx-skyscraper/DMD.png"},

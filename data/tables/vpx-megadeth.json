@@ -4,7 +4,7 @@
       {
         "hash": "b1cc9cd2979ebb9c25b95409bed20d2167d7b0de",
         "date": "2026-07-19 20:51:06 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Refine backglass and table notes in table.yml\n\nUpdated backglass notes for clarity and added table notes.",
         "files": [
           {"status": "M", "path": "external/vpx-megadeth/table.yml", "diff": "diff --git a/external/vpx-megadeth/table.yml b/external/vpx-megadeth/table.yml\nindex a1c1abf6..6f18744d 100644\n--- a/external/vpx-megadeth/table.yml\n+++ b/external/vpx-megadeth/table.yml\n@@ -1,16 +1,15 @@\n ---\n-backglassVPSId: \"t9WZcMFwyU\"\n+backglassBundled: true\n backglassChecksum: \"306D2FC70CF4EACCCAAC88E9D535984A\"\n backglassNotes: >-\n-  Download VPX folder, open 'Backglass' folder, get the\n-  'MEGADETH_Original_2023.directb2s' file\n-backglassBundled: true\n+  Download Megadeth Megapack archive, open 'Backglass' folder\n+  , get the 'MEGADETH_Original_2023.directb2s' file\n fps: 60\n+tableNotes: \"Download VPX 'Megadeth (original)v.1.4.vpx' file\"\n tableVPSId: \"RTjNzNHOeW\"\n tagline: \"Peace sells... but who's buying?\"\n testers:\n   - \"Boris\"\n   - \"Mox\"\n-vpxVPSId: \"t9WZcMFwyU\"\n vpxChecksum: \"B750B23F2FC4EFAC12BF25645F9BE072\"\n-tableNotes: \"Download VPX 'Megadeth (original)v.1.4.vpx' file\"\n+vpxVPSId: \"t9WZcMFwyU\"\n"}
@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-megadeth/table.yml", "diff": "diff --git a/external/vpx-megadeth/table.yml b/external/vpx-megadeth/table.yml\nindex 0503921c..a1c1abf6 100644\n--- a/external/vpx-megadeth/table.yml\n+++ b/external/vpx-megadeth/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"t9WZcMFwyU\"\n-backglassArchiveFormat: \"7z\"\n-backglassChecksum:\n-  - \"306D2FC70CF4EACCCAAC88E9D535984A\"\n-  - \"76956E0FA3D0247B49D98D5423C7DDBC\"\n+backglassChecksum: \"306D2FC70CF4EACCCAAC88E9D535984A\"\n backglassNotes: >-\n   Download VPX folder, open 'Backglass' folder, get the\n   'MEGADETH_Original_2023.directb2s' file"}
@@ -22,7 +22,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-megadeth/table.yml", "diff": "diff --git a/external/vpx-megadeth/table.yml b/external/vpx-megadeth/table.yml\nindex a1c1abf6..0503921c 100644\n--- a/external/vpx-megadeth/table.yml\n+++ b/external/vpx-megadeth/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"t9WZcMFwyU\"\n-backglassChecksum: \"306D2FC70CF4EACCCAAC88E9D535984A\"\n+backglassArchiveFormat: \"7z\"\n+backglassChecksum:\n+  - \"306D2FC70CF4EACCCAAC88E9D535984A\"\n+  - \"76956E0FA3D0247B49D98D5423C7DDBC\"\n backglassNotes: >-\n   Download VPX folder, open 'Backglass' folder, get the\n   'MEGADETH_Original_2023.directb2s' file"}
@@ -31,7 +31,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-megadeth/table.ini", "diff": "diff --git a/external/vpx-megadeth/table.ini b/external/vpx-megadeth/table.ini\nindex 6d4b680d..5842f5e6 100755\n--- a/external/vpx-megadeth/table.ini\n+++ b/external/vpx-megadeth/table.ini\n@@ -1,16 +1,15 @@\n [Player]\n BallTrailStrength = 0.490196\n+ScreenPlayerY = 15.008053\n+ScreenPlayerZ = 89.976715\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.291360\n-ViewCabScaleY = 1.094893\n-ViewCabScaleZ = 1.041374\n+ViewCabScaleX = 1.311314\n+ViewCabScaleY = 1.001450\n+ViewCabScaleZ = 0.947931\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -36.776909\n-ViewCabWindowTop = 482.807922\n-ViewCabWindowBot = 85.578186\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 400.878784\n+ViewCabWindowBot = 85.578186\n\\ No newline at end of file"},
@@ -96,7 +96,7 @@
       {
         "hash": "8ce73d1c1c803a8da799f2bcdff9d098f638ce96",
         "date": "2025-04-19 19:51:56 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update Megadeth for wiz\n",
         "files": [
           {"status": "M", "path": "external/vpx-megadeth/table.ini", "diff": "diff --git a/external/vpx-megadeth/table.ini b/external/vpx-megadeth/table.ini\nold mode 100644\nnew mode 100755\nindex 74b68fd7..6d4b680d\n--- a/external/vpx-megadeth/table.ini\n+++ b/external/vpx-megadeth/table.ini\n@@ -1,17 +1,16 @@\n [Player]\n BallTrailStrength = 0.490196\n-MaxTexDimension = 3072\n-FXAA = 1\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.818596\n-ViewCabScaleY = 1.037503\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -35.321995\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -324.649994\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n+ViewCabMode = 2\n+ViewCabScaleX = 1.291360\n+ViewCabScaleY = 1.094893\n+ViewCabScaleZ = 1.041374\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -36.776909\n+ViewCabWindowTop = 482.807922\n+ViewCabWindowBot = 85.578186\n+\n+[Standalone]\n+BackBufferScale = 0.416666\n\\ No newline at end of file"},
@@ -106,7 +106,7 @@
       {
         "hash": "ddb1cf40eaef466ddeb6270a94d14ad8d955cd55",
         "date": "2025-04-19 16:07:49 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Tweak Indy yml\n\nAdd Megadeth launcher image\n",
         "files": [
           {"status": "M", "path": "external/vpx-megadeth/launcher.png"}
@@ -169,7 +169,7 @@
       {
         "hash": "af3d2c181b4c0c80991a1a80432a29c7424075c0",
         "date": "2025-03-30 19:40:27 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Wish List Batch-2\n\nFixed and Added needed files for batch 2.\n",
         "files": [
           {"status": "A", "path": "external/vpx-megadeth/table.yml", "diff": "diff --git a/external/vpx-megadeth/table.yml b/external/vpx-megadeth/table.yml\nnew file mode 100644\nindex 00000000..b261bc0c\n--- /dev/null\n+++ b/external/vpx-megadeth/table.yml\n@@ -0,0 +1,15 @@\n+---\n+backglassVPSId: \"t9WZcMFwyU\"\n+backglassChecksum: \"306D2FC70CF4EACCCAAC88E9D535984A\"\n+backglassNotes: \"Upon VPX bundle download, open 'Backglass' folder for DIRECTB2S\"\n+fps: 47\n+tableVPSId: \"RTjNzNHOeW\"\n+tagline: \"Peace sells... but who's buying?\"\n+testers:\n+  - \"Boris\"\n+  - \"Mox\"\n+vpxVPSId: \"t9WZcMFwyU\"\n+vpxChecksum: \"542BF12BECA54ABD70439EAD84681898\"\n+tableNotes: \"Upon download, open 'Table' folder for VPX\"\n+applyFixes:\n+  - \"bass\"\n\\ No newline at end of file"},
@@ -198,7 +198,7 @@
       {
         "hash": "d50c7e1a4475a07fbe181501e785ba27f8655832",
         "date": "2025-02-21 12:29:45 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update vpx-megadeth.png\n",
         "files": [
           {"status": "M", "path": "external/vpx-megadeth/vpx-megadeth.png"}
@@ -216,7 +216,7 @@
       {
         "hash": "becd52337ca45fdd39096913d63c624ab8c86948",
         "date": "2025-02-20 21:28:42 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update Megadeth (original)v.1.1.vbs\n",
         "files": [
           {"status": "M", "path": "external/vpx-megadeth/Megadeth (original)v.1.1.vbs", "diff": "diff --git a/external/vpx-megadeth/Megadeth (original)v.1.1.vbs b/external/vpx-megadeth/Megadeth (original)v.1.1.vbs\nindex ed6bfba2..039dc78d 100755\n--- a/external/vpx-megadeth/Megadeth (original)v.1.1.vbs\t\n+++ b/external/vpx-megadeth/Megadeth (original)v.1.1.vbs\t\n@@ -71,7 +71,7 @@ Const FlexDMDHighQuality = True\t\t' If using RealDMD set to False\n Dim VRRoomChoice: VRRoomChoice = 1   '1 = Prison Room  2 = Minimal Room  3 = Ultra Minimal Room.\n '***************MINI GAME ***************************** AOR\n \n-'Const bIsMiniGameActive = 1  'is Minigame Active   Don't Launch MiniGame = 0,  Launch Minigame = 1, using Const Videos variable, line 69 :) \n+'Const bIsMiniGameActive = 0  'is Minigame Active   Don't Launch MiniGame = 0,  Launch Minigame = 1, using Const Videos variable, line 69 :) \n Const PupScreenMiniGame = 2  '5 = FullDMD, Backglass = 2\n '*****************************************END OF USER OPTIONS**********************************\n 'Minigame variable AOR\n"}
@@ -225,7 +225,7 @@
       {
         "hash": "b18c658307bdb428e2f0c70e4ccfbe4355d26019",
         "date": "2025-02-20 20:44:50 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update README.md\n",
         "files": [
           {"status": "M", "path": "external/vpx-megadeth/README.md", "diff": "diff --git a/external/vpx-megadeth/README.md b/external/vpx-megadeth/README.md\nindex 041a79bb..beb1f513 100644\n--- a/external/vpx-megadeth/README.md\n+++ b/external/vpx-megadeth/README.md\n@@ -4,7 +4,7 @@\n Table\n \n Authors: [JoePicasso](https://vpuniverse.com/profile/15285-joepicasso/)\n-Version: 4.3.0\n+Version: 1.1\n Download: [VP Universe](https://vpuniverse.com/files/file/17512-megadeth-original)\n \n DirectB2S\n"}
@@ -243,7 +243,7 @@
       {
         "hash": "40b272c92ed4d78fcc1bebf681dab0066d074ed7",
         "date": "2025-02-20 16:16:00 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update README.md\n",
         "files": [
           {"status": "M", "path": "external/vpx-megadeth/README.md", "diff": "diff --git a/external/vpx-megadeth/README.md b/external/vpx-megadeth/README.md\nindex b2b3716a..041a79bb 100644\n--- a/external/vpx-megadeth/README.md\n+++ b/external/vpx-megadeth/README.md\n@@ -15,6 +15,8 @@ ROM\n \n NO ROM REQUIRED\n \n+Tested by Boris\n+\n ## Status \n \n Minimum VPX Standalone build: 10.8.0-1989-a764013\n"}
@@ -252,7 +252,7 @@
       {
         "hash": "358a36ee2406b599de8a6968b1d7bd962c5679c4",
         "date": "2025-02-20 15:59:33 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Upload vpx-megadeth\n\nTable, root readme, and preview image\n",
         "files": [
           {"status": "A", "path": "external/vpx-megadeth/Megadeth (original)v.1.1.ini", "diff": "diff --git a/external/vpx-megadeth/Megadeth (original)v.1.1.ini b/external/vpx-megadeth/Megadeth (original)v.1.1.ini\nnew file mode 100755\nindex 00000000..74b68fd7\n--- /dev/null\n+++ b/external/vpx-megadeth/Megadeth (original)v.1.1.ini\t\n@@ -0,0 +1,17 @@\n+[Player]\n+BallTrailStrength = 0.490196\n+MaxTexDimension = 3072\n+FXAA = 1\n+\n+[TableOverride]\n+ViewCabMode = 0\n+ViewCabScaleX = 0.818596\n+ViewCabScaleY = 1.037503\n+ViewCabScaleZ = 0.904995\n+ViewCabRotation = 90.000000\n+ViewCabPlayerX = -35.321995\n+ViewCabPlayerY = -0.000000\n+ViewCabPlayerZ = -324.649994\n+ViewCabLookAt = 5.000000\n+ViewCabFOV = 42.999908\n+ViewCabLayback = 48.000000"},

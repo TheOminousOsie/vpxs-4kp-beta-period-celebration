@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-goinnuts/table.yml", "diff": "diff --git a/external/vpx-goinnuts/table.yml b/external/vpx-goinnuts/table.yml\nindex 5526838d..4af750fb 100644\n--- a/external/vpx-goinnuts/table.yml\n+++ b/external/vpx-goinnuts/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"60A44115C8D99325F1063129F66C6574\"\n-  - \"31658F5DAE8E1C528BB60B9E50E9E8B8\"\n+backglassChecksum: \"60A44115C8D99325F1063129F66C6574\"\n backglassNotes: \"Download version 3.1.0\"\n backglassVPSId: \"A2Z4hwTR\"\n fps: 60\n@@ -14,8 +11,5 @@ tableNotes: \"Download version 2.0.0\"\n tableVPSId: \"F898-Sq-\"\n testers:\n   - \"evilwraith\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"0D4346338474854C1910BC203201AF69\"\n-  - \"B7C063C9C987F4C91B5D213AEDBFD208\"\n+vpxChecksum: \"0D4346338474854C1910BC203201AF69\"\n vpxVPSId: \"HpvVv4ON\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-goinnuts/table.yml", "diff": "diff --git a/external/vpx-goinnuts/table.yml b/external/vpx-goinnuts/table.yml\nindex 4af750fb..5526838d 100644\n--- a/external/vpx-goinnuts/table.yml\n+++ b/external/vpx-goinnuts/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"60A44115C8D99325F1063129F66C6574\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"60A44115C8D99325F1063129F66C6574\"\n+  - \"31658F5DAE8E1C528BB60B9E50E9E8B8\"\n backglassNotes: \"Download version 3.1.0\"\n backglassVPSId: \"A2Z4hwTR\"\n fps: 60\n@@ -11,5 +14,8 @@ tableNotes: \"Download version 2.0.0\"\n tableVPSId: \"F898-Sq-\"\n testers:\n   - \"evilwraith\"\n-vpxChecksum: \"0D4346338474854C1910BC203201AF69\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"0D4346338474854C1910BC203201AF69\"\n+  - \"B7C063C9C987F4C91B5D213AEDBFD208\"\n vpxVPSId: \"HpvVv4ON\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-goinnuts/table.ini", "diff": "diff --git a/external/vpx-goinnuts/table.ini b/external/vpx-goinnuts/table.ini\nindex 90e95ea4..e5271376 100644\n--- a/external/vpx-goinnuts/table.ini\n+++ b/external/vpx-goinnuts/table.ini\n@@ -2,18 +2,15 @@\n BallTrail = 0\n BallTrailStrength = 0.019608\n OverrideTableEmissionScale = 0\n-AAFactor = 0.95\n+ScreenPlayerY = 14.988502\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.130383\n-ViewCabScaleY = 1.117854\n-ViewCabScaleZ = 0.960532\n+ViewCabScaleX = 1.037599\n+ViewCabScaleY = 0.993732\n+ViewCabScaleZ = 0.830273\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -125.769821\n-ViewCabWindowTop = 325.541931\n-ViewCabWindowBot = 83.953270\n-\n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 26.879940\n+ViewCabWindowBot = 26.986263\n\\ No newline at end of file"},
@@ -32,7 +32,7 @@
       {
         "hash": "b13d3fd0b18de36e32cf1c24882c45f351c5b0cf",
         "date": "2025-11-17 13:47:04 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "art!\n",
         "files": [
           {"status": "M", "path": "external/vpx-goinnuts/dmd.png"},
@@ -42,7 +42,7 @@
       {
         "hash": "7e06d686b2c36e13c5ce4663031ddf98a829c380",
         "date": "2025-11-17 10:18:22 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "wizard\n\nneeds art\n",
         "files": [
           {"status": "A", "path": "external/vpx-goinnuts/dmd.png"},

@@ -4,7 +4,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-christine/table.yml", "diff": "diff --git a/external/vpx-christine/table.yml b/external/vpx-christine/table.yml\nindex d514a0ed..b4149746 100644\n--- a/external/vpx-christine/table.yml\n+++ b/external/vpx-christine/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassBundled: true\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"095A0E6333E62C470D2115F81872D875\"\n-  - \"59BC5F0D0CAE2B33EED13DC15D4DEC15\"\n+backglassChecksum: \"095A0E6333E62C470D2115F81872D875\"\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/49e6aaa31c6fe1b38a56537833d23713_table_1638093698263.webp\"\n backglassNotes: \"Included with table download\"\n@@ -18,8 +15,5 @@ testers:\n   - \"evilwraith\"\n   - \"Curt\"\n   - \"CoffeeAtJoes\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"718FCC42B734560B683EB3847D944054\"\n-  - \"59BC5F0D0CAE2B33EED13DC15D4DEC15\"\n+vpxChecksum: \"718FCC42B734560B683EB3847D944054\"\n vpxVPSId: \"9ciUIvCG\""}
@@ -13,7 +13,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-christine/table.yml", "diff": "diff --git a/external/vpx-christine/table.yml b/external/vpx-christine/table.yml\nindex b4149746..d514a0ed 100644\n--- a/external/vpx-christine/table.yml\n+++ b/external/vpx-christine/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassBundled: true\n-backglassChecksum: \"095A0E6333E62C470D2115F81872D875\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"095A0E6333E62C470D2115F81872D875\"\n+  - \"59BC5F0D0CAE2B33EED13DC15D4DEC15\"\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/49e6aaa31c6fe1b38a56537833d23713_table_1638093698263.webp\"\n backglassNotes: \"Included with table download\"\n@@ -15,5 +18,8 @@ testers:\n   - \"evilwraith\"\n   - \"Curt\"\n   - \"CoffeeAtJoes\"\n-vpxChecksum: \"718FCC42B734560B683EB3847D944054\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"718FCC42B734560B683EB3847D944054\"\n+  - \"59BC5F0D0CAE2B33EED13DC15D4DEC15\"\n vpxVPSId: \"9ciUIvCG\""}
@@ -22,7 +22,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-christine/table.ini", "diff": "diff --git a/external/vpx-christine/table.ini b/external/vpx-christine/table.ini\nindex f409f145..4f2a40da 100644\n--- a/external/vpx-christine/table.ini\n+++ b/external/vpx-christine/table.ini\n@@ -1,18 +1,18 @@\n [Player]\n BallTrailStrength = 0.290196\n OverrideTableEmissionScale = 0\n-AAFactor = .95\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.169850\n-ViewCabScaleY = 1.130170\n+ViewCabScaleX = 1.150692\n+ViewCabScaleY = 0.999933\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -95.360390\n-ViewCabWindowTop = 325.541931\n-ViewCabWindowBot = 83.953270\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 52.316856\n+ViewCabWindowBot = 52.409294\n \n [Standalone]\n+B2SHideB2SDMD = 1\n PinMAMEWindow = 0\n\\ No newline at end of file"},
@@ -42,7 +42,7 @@
       {
         "hash": "16bc607c1b0d2d4e1ae30613e939e048e0ec9308",
         "date": "2025-10-14 15:52:02 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.ini\n\nRemove PinMAME DMD so you can see creepy eyes.\n",
         "files": [
           {"status": "M", "path": "external/vpx-christine/table.ini", "diff": "diff --git a/external/vpx-christine/table.ini b/external/vpx-christine/table.ini\nindex b72960e3..f409f145 100644\n--- a/external/vpx-christine/table.ini\n+++ b/external/vpx-christine/table.ini\n@@ -12,4 +12,7 @@ ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n ViewCabVOfs = -95.360390\n ViewCabWindowTop = 325.541931\n-ViewCabWindowBot = 83.953270\n\\ No newline at end of file\n+ViewCabWindowBot = 83.953270\n+\n+[Standalone]\n+PinMAMEWindow = 0\n\\ No newline at end of file\n"}
@@ -51,7 +51,7 @@
       {
         "hash": "c9e6550db80b3d689d65fbbacb83ea695ac61695",
         "date": "2025-10-14 10:35:24 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "image mambo\n",
         "files": [
           {"status": "M", "path": "external/vpx-christine/dmd.png"}
@@ -60,7 +60,7 @@
       {
         "hash": "e74cfeee13be10ec11a30b587b5552d10e07871d",
         "date": "2025-10-14 10:25:42 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Rename DMD.png to dmd.png",
         "files": [
           {"status": "A", "path": "external/vpx-christine/dmd.png"},
@@ -70,7 +70,7 @@
       {
         "hash": "1ff6da34b76f0254ec3fa908a34b556c1b01dfbc",
         "date": "2025-10-13 10:22:31 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "fixed rom names\n",
         "files": [
           {"status": "M", "path": "external/vpx-christine/table.yml", "diff": "diff --git a/external/vpx-christine/table.yml b/external/vpx-christine/table.yml\nindex 1de7ee55..0690263f 100644\n--- a/external/vpx-christine/table.yml\n+++ b/external/vpx-christine/table.yml\n@@ -6,7 +6,7 @@ fps: 60\n romChecksum: \"D631076325A51E518A14F4510772BEBB\"\n romNotes: \"Download dragon.zip\"\n romUrlOverride: \"https://vpuniverse.com/files/file/1698-dragon/\"\n-romVersionOverride: \"dragon.zip\"\n+romVersionOverride: \"dragon\"\n tableVPSId: \"nb55OEzc\"\n tagline: \"Body by Buick, soul by Anti-Chrysler\"\n testers:"}
@@ -79,7 +79,7 @@
       {
         "hash": "714182bafa7ce0c382d8ece08160e85558aa8038",
         "date": "2025-10-13 09:57:22 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-christine/table.yml", "diff": "diff --git a/external/vpx-christine/table.yml b/external/vpx-christine/table.yml\nindex 8dffcfe4..1de7ee55 100644\n--- a/external/vpx-christine/table.yml\n+++ b/external/vpx-christine/table.yml\n@@ -6,7 +6,7 @@ fps: 60\n romChecksum: \"D631076325A51E518A14F4510772BEBB\"\n romNotes: \"Download dragon.zip\"\n romUrlOverride: \"https://vpuniverse.com/files/file/1698-dragon/\"\n-romVersionOverride: 1\n+romVersionOverride: \"dragon.zip\"\n tableVPSId: \"nb55OEzc\"\n tagline: \"Body by Buick, soul by Anti-Chrysler\"\n testers:\n"}
@@ -88,7 +88,7 @@
       {
         "hash": "a8f47923f07f2e395fd3aba143e0027e95f9d804",
         "date": "2025-10-13 09:56:37 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-christine/table.yml", "diff": "diff --git a/external/vpx-christine/table.yml b/external/vpx-christine/table.yml\nindex dbaf1ac8..8dffcfe4 100644\n--- a/external/vpx-christine/table.yml\n+++ b/external/vpx-christine/table.yml\n@@ -6,6 +6,7 @@ fps: 60\n romChecksum: \"D631076325A51E518A14F4510772BEBB\"\n romNotes: \"Download dragon.zip\"\n romUrlOverride: \"https://vpuniverse.com/files/file/1698-dragon/\"\n+romVersionOverride: 1\n tableVPSId: \"nb55OEzc\"\n tagline: \"Body by Buick, soul by Anti-Chrysler\"\n testers:\n"}
@@ -97,7 +97,7 @@
       {
         "hash": "fa869992429da68a4cb14be1e80c4bdb6c4f773e",
         "date": "2025-09-08 11:14:17 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "rom link update\n",
         "files": [
           {"status": "M", "path": "external/vpx-christine/table.yml", "diff": "diff --git a/external/vpx-christine/table.yml b/external/vpx-christine/table.yml\nindex f3bdc10e..dbaf1ac8 100644\n--- a/external/vpx-christine/table.yml\n+++ b/external/vpx-christine/table.yml\n@@ -3,7 +3,6 @@ backglassBundled: true\n backglassChecksum: \"095A0E6333E62C470D2115F81872D875\"\n backglassNotes: \"Included with table download\"\n fps: 60\n-romBundled: true\n romChecksum: \"D631076325A51E518A14F4510772BEBB\"\n romNotes: \"Download dragon.zip\"\n romUrlOverride: \"https://vpuniverse.com/files/file/1698-dragon/\"\n@@ -11,6 +10,6 @@ tableVPSId: \"nb55OEzc\"\n tagline: \"Body by Buick, soul by Anti-Chrysler\"\n testers:\n   - \"evilwraith\"\n-  - \"Old-Cyrus\"\n+  - \"Curt\"\n vpxChecksum: \"718FCC42B734560B683EB3847D944054\"\n vpxVPSId: \"9ciUIvCG\""}
@@ -106,7 +106,7 @@
       {
         "hash": "3baadcf2bacb37c50d12f55de017d12fb914296e",
         "date": "2025-09-01 20:11:30 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Art\n",
         "files": [
           {"status": "A", "path": "external/vpx-christine/DMD.png"}
@@ -115,7 +115,7 @@
       {
         "hash": "f32f04a236e2a41bcacbdc9256d81dc3b47eaccb",
         "date": "2025-09-01 10:52:11 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "ymls and art\n",
         "files": [
           {"status": "A", "path": "external/vpx-christine/table.yml", "diff": "diff --git a/external/vpx-christine/table.yml b/external/vpx-christine/table.yml\nnew file mode 100644\nindex 00000000..f3bdc10e\n--- /dev/null\n+++ b/external/vpx-christine/table.yml\n@@ -0,0 +1,16 @@\n+---\n+backglassBundled: true\n+backglassChecksum: \"095A0E6333E62C470D2115F81872D875\"\n+backglassNotes: \"Included with table download\"\n+fps: 60\n+romBundled: true\n+romChecksum: \"D631076325A51E518A14F4510772BEBB\"\n+romNotes: \"Download dragon.zip\"\n+romUrlOverride: \"https://vpuniverse.com/files/file/1698-dragon/\"\n+tableVPSId: \"nb55OEzc\"\n+tagline: \"Body by Buick, soul by Anti-Chrysler\"\n+testers:\n+  - \"evilwraith\"\n+  - \"Old-Cyrus\"\n+vpxChecksum: \"718FCC42B734560B683EB3847D944054\"\n+vpxVPSId: \"9ciUIvCG\""},
@@ -125,7 +125,7 @@
       {
         "hash": "dbc3fbdda72036fa978c0b03db9e335386363ae7",
         "date": "2025-08-31 19:15:54 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "3 tables\n\nDragon (Gottlieb)\nDragon (Interflip)\nChristine (based on Dragon (Gottlieb)\n",
         "files": [
           {"status": "A", "path": "external/vpx-christine/launcher.png"},

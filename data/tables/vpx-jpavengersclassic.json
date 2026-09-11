@@ -13,7 +13,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpavengersclassic/table.ini", "diff": "diff --git a/external/vpx-jpavengersclassic/table.ini b/external/vpx-jpavengersclassic/table.ini\nindex 9a9d78d1..72cac532 100644\n--- a/external/vpx-jpavengersclassic/table.ini\n+++ b/external/vpx-jpavengersclassic/table.ini\n@@ -5,20 +5,17 @@ JoyAddCredit2Key = 1\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.305478\n-ViewCabScaleY = 1.051021\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.232964\n+ViewCabScaleY = 0.990833\n+ViewCabScaleZ = 0.939812\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -8.912732\n-ViewCabWindowTop = 314.535950\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 284.659973\n ViewCabWindowBot = 64.276215\n \n-[Standalone]\n-WindowRenderMode = 0\n-\n [TableOption]\n Select LUT = 0.000000\n Desktop DMD = 0.000000\n-Cabinet Rails = 1.000000\n-Side Blades = 1.000000\n\\ No newline at end of file\n+Cabinet Rails = 0.000000\n+Side Blades = 1.000000"},
@@ -23,7 +23,7 @@
       {
         "hash": "3c686f855383baf4ac36786aff7121cd4b81a294",
         "date": "2025-11-11 23:37:17 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Tricking git part 2\n",
         "files": [
           {"status": "R-to", "path": "external/vpx-avengersclassic/README.md->external/vpx-jpavengersclassic/README.md", "diff": "diff --git a/external/vpx-avengersclassic/README.md b/external/vpx-jpavengersclassic/README.md\nsimilarity index 100%\nrename from external/vpx-avengersclassic/README.md\nrename to external/vpx-jpavengersclassic/README.md"},
@@ -37,7 +37,7 @@
       {
         "hash": "cce4b81aa1dc59d0e5f0aa49dd176b61ef17a508",
         "date": "2025-11-11 23:36:47 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "tricking git part 1\n",
         "files": [
           {"status": "R-from", "path": "external/vpx-jpavengersclassic/README.md->external/vpx-avengersclassic/README.md", "diff": "diff --git a/external/vpx-jpavengersclassic/README.md b/external/vpx-avengersclassic/README.md\nsimilarity index 100%\nrename from external/vpx-jpavengersclassic/README.md\nrename to external/vpx-avengersclassic/README.md"},
@@ -51,7 +51,7 @@
       {
         "hash": "bcc4d54cda4bb31cdf5ebdbeabc3aa7b67ada1a9",
         "date": "2025-10-27 23:35:18 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpavengersclassic/table.ini", "diff": "diff --git a/external/vpx-jpavengersclassic/table.ini b/external/vpx-jpavengersclassic/table.ini\nindex 9009a0d4..9a9d78d1 100644\n--- a/external/vpx-jpavengersclassic/table.ini\n+++ b/external/vpx-jpavengersclassic/table.ini\n@@ -15,4 +15,10 @@ ViewCabWindowTop = 314.535950\n ViewCabWindowBot = 64.276215\n \n [Standalone]\n-WindowRenderMode = 0\n\\ No newline at end of file\n+WindowRenderMode = 0\n+\n+[TableOption]\n+Select LUT = 0.000000\n+Desktop DMD = 0.000000\n+Cabinet Rails = 1.000000\n+Side Blades = 1.000000\n\\ No newline at end of file\n"}
@@ -60,7 +60,7 @@
       {
         "hash": "79c08df5ce05fcf825a1eb15da82677fec77738e",
         "date": "2025-10-27 22:11:47 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fixes\n\nFixed Avengers Backglass\nFixed JP's Terminator 2 backglass link in the wizard page.\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpavengersclassic/table.yml", "diff": "diff --git a/external/vpx-jpavengersclassic/table.yml b/external/vpx-jpavengersclassic/table.yml\nindex ea8769b2..90d5bf65 100644\n--- a/external/vpx-jpavengersclassic/table.yml\n+++ b/external/vpx-jpavengersclassic/table.yml\n@@ -2,9 +2,9 @@\n tableVPSId: \"Ws7aL7yM\"\n vpxVPSId: \"u2JkAJ_T\"\n vpxChecksum: \"324BE7712F84BC6449882586D399773C\"\n-backglassVPSId: \"qxmpiq2p\"\n-backglassChecksum: \"9D8758DD0F063AEE90D7A7C79BBE03F5\"\n-backglassNotes: \"Download 'JP's Avengers LE (Stern - 2012).rar'\"\n+backglassVPSId: \"G-FLZgoP_F\"\n+backglassChecksum: \"49A257D5898CFE48920AE16B1653E332\"\n+backglassNotes: \"Avengers (Stern 2012) directb2s 2.0b.directb2s.zip'\"\n romVPSId: \"olV01dSQ\"\n romChecksum: \"6F85F6F7CD6DC946DDE7B26C0F55EDC1\"\n romNotes: \"Download 'avs_170h.zip'\""}
@@ -69,7 +69,7 @@
       {
         "hash": "57f4cdc6d0ea04ea3ad8c7cd20468f116663a4f5",
         "date": "2025-10-25 21:20:46 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-jpavengersclassic/table.yml", "diff": "diff --git a/external/vpx-jpavengersclassic/table.yml b/external/vpx-jpavengersclassic/table.yml\nindex e4cf13ef..ea8769b2 100644\n--- a/external/vpx-jpavengersclassic/table.yml\n+++ b/external/vpx-jpavengersclassic/table.yml\n@@ -6,7 +6,7 @@ backglassVPSId: \"qxmpiq2p\"\n backglassChecksum: \"9D8758DD0F063AEE90D7A7C79BBE03F5\"\n backglassNotes: \"Download 'JP's Avengers LE (Stern - 2012).rar'\"\n romVPSId: \"olV01dSQ\"\n-romChecksum: \"AC1E7C2A5CB369A1AB739A9FF39CD782\"\n+romChecksum: \"6F85F6F7CD6DC946DDE7B26C0F55EDC1\"\n romNotes: \"Download 'avs_170h.zip'\"\n fps: 59\n testers:\n"}
@@ -78,7 +78,7 @@
       {
         "hash": "52992572392988a85dd58d359ed3c38dc6d5b25a",
         "date": "2025-10-25 19:19:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Wizard omnibus update\n\nRenamed several of JPSalas' tables specifically named JP's <tablename> to reduce confusion and unify naming.\n\nvpx-avengersclassic to vpx-jpavengersclassic\nvpx-ironman2jp to vpx-jpironman2\nvpx-slimerjp to vpx-jpslimer\nvpx-startreklejp to vpx-jpstartrekle\nvpx-t2jp to vpx-jpt2\n\nUpdated BigBang Bar SERUM to v2\nUpdated JP's Avengers Classic to 6.0.0\nUpdated Bram Stoker's Dracula to 3.0\n",
         "files": [
           {"status": "A", "path": "external/vpx-jpavengersclassic/table.yml", "diff": "diff --git a/external/vpx-jpavengersclassic/table.yml b/external/vpx-jpavengersclassic/table.yml\nnew file mode 100644\nindex 00000000..e4cf13ef\n--- /dev/null\n+++ b/external/vpx-jpavengersclassic/table.yml\n@@ -0,0 +1,16 @@\n+---\n+tableVPSId: \"Ws7aL7yM\"\n+vpxVPSId: \"u2JkAJ_T\"\n+vpxChecksum: \"324BE7712F84BC6449882586D399773C\"\n+backglassVPSId: \"qxmpiq2p\"\n+backglassChecksum: \"9D8758DD0F063AEE90D7A7C79BBE03F5\"\n+backglassNotes: \"Download 'JP's Avengers LE (Stern - 2012).rar'\"\n+romVPSId: \"olV01dSQ\"\n+romChecksum: \"AC1E7C2A5CB369A1AB739A9FF39CD782\"\n+romNotes: \"Download 'avs_170h.zip'\"\n+fps: 59\n+testers:\n+  - \"mcap\"\n+  - \"SilentKat\"\n+  - \"OminousOsie\"\n+tableNotes: \"Download 'JP's Avengers Classic LE (Stern - 2012) v600.zip'\""},

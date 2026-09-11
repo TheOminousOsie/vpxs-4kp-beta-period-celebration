@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-jurassicpark/table.yml", "diff": "diff --git a/external/vpx-jurassicpark/table.yml b/external/vpx-jurassicpark/table.yml\nindex 995a25d4..31336f27 100644\n--- a/external/vpx-jurassicpark/table.yml\n+++ b/external/vpx-jurassicpark/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"18fdf34ee41e8cfb58672cfa675a07d4\"\n-  - \"15E795BDA0D785B7E22C115E3BC016BC\"\n+backglassChecksum: \"18fdf34ee41e8cfb58672cfa675a07d4\"\n backglassVPSId: \"ulmJn9mNE6\"\n coloredROMChecksum: \"323336DD285312CB49A2E684527E7FC1\"\n coloredROMNotes: \"Download version 1.0.0\"\n@@ -20,8 +17,5 @@ testers:\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n   - \"kingargyle\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"202A0FA0FF0869776026B182CEB8A029\"\n-  - \"F1A14D9105D84DBE11C958D6BB8D5A68\"\n+vpxChecksum: \"202A0FA0FF0869776026B182CEB8A029\"\n vpxVPSId: \"a4IeNxW1\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-jurassicpark/table.yml", "diff": "diff --git a/external/vpx-jurassicpark/table.yml b/external/vpx-jurassicpark/table.yml\nindex 31336f27..995a25d4 100644\n--- a/external/vpx-jurassicpark/table.yml\n+++ b/external/vpx-jurassicpark/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"18fdf34ee41e8cfb58672cfa675a07d4\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"18fdf34ee41e8cfb58672cfa675a07d4\"\n+  - \"15E795BDA0D785B7E22C115E3BC016BC\"\n backglassVPSId: \"ulmJn9mNE6\"\n coloredROMChecksum: \"323336DD285312CB49A2E684527E7FC1\"\n coloredROMNotes: \"Download version 1.0.0\"\n@@ -17,5 +20,8 @@ testers:\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n   - \"kingargyle\"\n-vpxChecksum: \"202A0FA0FF0869776026B182CEB8A029\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"202A0FA0FF0869776026B182CEB8A029\"\n+  - \"F1A14D9105D84DBE11C958D6BB8D5A68\"\n vpxVPSId: \"a4IeNxW1\""}
@@ -40,7 +40,7 @@
       {
         "hash": "27d0b8f6a76989b6e7fc81ba789ad045c40f59e3",
         "date": "2026-07-17 01:36:32 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Jurassic Park rom fix\n",
         "files": [
           {"status": "M", "path": "external/vpx-jurassicpark/table.yml", "diff": "diff --git a/external/vpx-jurassicpark/table.yml b/external/vpx-jurassicpark/table.yml\nindex f547b1b9..31336f27 100644\n--- a/external/vpx-jurassicpark/table.yml\n+++ b/external/vpx-jurassicpark/table.yml\n@@ -1,23 +1,21 @@\n ---\n-backglassVPSId: \"ulmJn9mNE6\"\n backglassChecksum: \"18fdf34ee41e8cfb58672cfa675a07d4\"\n+backglassVPSId: \"ulmJn9mNE6\"\n coloredROMChecksum: \"323336DD285312CB49A2E684527E7FC1\"\n coloredROMNotes: \"Download version 1.0.0\"\n coloredROMVPSId: \"u-tQIZEs\"\n-romVPSId: \"PVVM6I7jEI\"\n-romChecksums:\n-  - \"68a0d9b3221137ed2d7015a7c4094ca2\"\n-  - \"DE03B99E2AB4F8A23C91117126C54975\"\n-romVersionOverride: \"jupk_600\"\n-romNotes: \"jupk_600.zip\"\n fps: 60\n+romBundled: true\n+romChecksum: \"68a0d9b3221137ed2d7015a7c4094ca2\"\n+romNotes: \"Download jupk_600.zip\"\n+romUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=11339\"\n+romVersionOverride: \"jupk_600\"\n tableVPSId: \"i47o-Nvr\"\n-tablenotes: \"Download version 2.0\"\n tagline: \"Welcome... to Jurassic Park!\"\n testers:\n   - \"mcap\"\n   - \"OminousOsie\"\n   - \"CoffeeAtJoes\"\n   - \"kingargyle\"\n-vpxVPSId: \"a4IeNxW1\"\n vpxChecksum: \"202A0FA0FF0869776026B182CEB8A029\"\n+vpxVPSId: \"a4IeNxW1\"\n"}
@@ -49,7 +49,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-jurassicpark/nvram.nv"},

@@ -22,7 +22,7 @@
       {
         "hash": "2ab62c360d52ada0545e2cac6801810c79f84235",
         "date": "2026-08-17 16:31:38 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-batmanforever/table.yml", "diff": "diff --git a/external/vpx-batmanforever/table.yml b/external/vpx-batmanforever/table.yml\nindex 4d28a1df..43508da8 100644\n--- a/external/vpx-batmanforever/table.yml\n+++ b/external/vpx-batmanforever/table.yml\n@@ -1,7 +1,7 @@\n ---\n backglassVPSId: \"iGjH6vrsAW\"\n backglassChecksum: \"da15bc73d9076cf40a7e04a3b3ccc207\"\n-fps: 45\n+fps: 60\n romVPSId: \"x2GGUoY-\"\n romChecksum: \"66d63871f98b5efefd7a67c4189c6946\"\n tableVPSId: \"nQzXPTZz\""}
@@ -31,7 +31,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-batmanforever/table.yml", "diff": "diff --git a/external/vpx-batmanforever/table.yml b/external/vpx-batmanforever/table.yml\nindex ce705993..4d28a1df 100644\n--- a/external/vpx-batmanforever/table.yml\n+++ b/external/vpx-batmanforever/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassVPSId: \"iGjH6vrsAW\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"da15bc73d9076cf40a7e04a3b3ccc207\"\n-  - \"F76F48F6CD03C93767C267E676C67B85\"\n-fps: 60\n+backglassChecksum: \"da15bc73d9076cf40a7e04a3b3ccc207\"\n+fps: 45\n romVPSId: \"x2GGUoY-\"\n romChecksum: \"66d63871f98b5efefd7a67c4189c6946\"\n tableVPSId: \"nQzXPTZz\""}
@@ -40,7 +40,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-batmanforever/table.yml", "diff": "diff --git a/external/vpx-batmanforever/table.yml b/external/vpx-batmanforever/table.yml\nindex 91c9d9c9..ce705993 100644\n--- a/external/vpx-batmanforever/table.yml\n+++ b/external/vpx-batmanforever/table.yml\n@@ -4,7 +4,7 @@ backglassArchiveFormat: \"zip\"\n backglassChecksum:\n   - \"da15bc73d9076cf40a7e04a3b3ccc207\"\n   - \"F76F48F6CD03C93767C267E676C67B85\"\n-fps: 45\n+fps: 60\n romVPSId: \"x2GGUoY-\"\n romChecksum: \"66d63871f98b5efefd7a67c4189c6946\"\n tableVPSId: \"nQzXPTZz\""}
@@ -49,7 +49,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-batmanforever/table.yml", "diff": "diff --git a/external/vpx-batmanforever/table.yml b/external/vpx-batmanforever/table.yml\nindex 4d28a1df..91c9d9c9 100644\n--- a/external/vpx-batmanforever/table.yml\n+++ b/external/vpx-batmanforever/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"iGjH6vrsAW\"\n-backglassChecksum: \"da15bc73d9076cf40a7e04a3b3ccc207\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"da15bc73d9076cf40a7e04a3b3ccc207\"\n+  - \"F76F48F6CD03C93767C267E676C67B85\"\n fps: 45\n romVPSId: \"x2GGUoY-\"\n romChecksum: \"66d63871f98b5efefd7a67c4189c6946\""}
@@ -58,7 +58,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-batmanforever/table.ini", "diff": "diff --git a/external/vpx-batmanforever/table.ini b/external/vpx-batmanforever/table.ini\nindex 3fa6cc4e..9e8cc200 100644\n--- a/external/vpx-batmanforever/table.ini\n+++ b/external/vpx-batmanforever/table.ini\n@@ -1,22 +1,20 @@\n-[Standalone]\n-BackBufferScale = 0.416666\n-\n [Player]\n BallTrailStrength = 0.392157\n OverrideTableEmissionScale = 0\n-ScreenPlayerZ = 100.301239\n+ScreenPlayerZ = 89.972633\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n JoyAddCredit2Key = 1\n+ScreenPlayerY = 15.039346\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.057124\n-ViewCabScaleY = 1.045558\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.108142\n+ViewCabScaleY = 0.996985\n+ViewCabScaleZ = 0.945750\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -38.180683\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 82.953217\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 296.736969\n+ViewCabWindowBot = 102.889229"},
@@ -204,7 +204,7 @@
       {
         "hash": "7303f312f10ddd4423617ebfab92511ce97ce3ec",
         "date": "2025-03-24 21:03:52 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Batman Forever launcher.cfg\n",
         "files": [
           {"status": "A", "path": "external/vpx-batmanforever/launcher.cfg", "diff": "diff --git a/external/vpx-batmanforever/launcher.cfg b/external/vpx-batmanforever/launcher.cfg\nnew file mode 100644\nindex 00000000..dbb25a10\n--- /dev/null\n+++ b/external/vpx-batmanforever/launcher.cfg\n@@ -0,0 +1,3 @@\n+[buttonLabels]\n+dpadLeft = \"Adj. Lighting\"\n+dpadRight = \"Adj. Lighting\"\n\\ No newline at end of file\n"}
@@ -258,7 +258,7 @@
       {
         "hash": "1bbfce80b9053bd9636be24d7610de402d42a755",
         "date": "2025-03-20 11:22:21 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update README.md\n",
         "files": [
           {"status": "M", "path": "external/vpx-batmanforever/README.md", "diff": "diff --git a/external/vpx-batmanforever/README.md b/external/vpx-batmanforever/README.md\nindex ad5fc0c6..f7fd545b 100644\n--- a/external/vpx-batmanforever/README.md\n+++ b/external/vpx-batmanforever/README.md\n@@ -20,7 +20,7 @@\n **Minimum VPX Standalone build:** 10.8.0-1983-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 45 |\n \n ---\n \n"}
@@ -276,7 +276,7 @@
       {
         "hash": "d03811b2583c5fdef0f3068ae3ff5ba4aefcdcf4",
         "date": "2025-03-18 21:07:48 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.vbs\n",
         "files": [
           {"status": "M", "path": "external/vpx-batmanforever/table.vbs", "diff": "diff --git a/external/vpx-batmanforever/table.vbs b/external/vpx-batmanforever/table.vbs\nindex c37dc7a5..3563da4e 100644\n--- a/external/vpx-batmanforever/table.vbs\n+++ b/external/vpx-batmanforever/table.vbs\n@@ -77,8 +77,8 @@ Const TargetBouncerEnabled = 0 \t\t'0 = normal standup targets, 1 = bouncy targets\n Const TargetBouncerFactor = 0.7 \t'Level of bounces. Recommmended value of 0.7\n \n '----- Shadow Options -----\n-Const DynamicBallShadowsOn = 1\t\t'0 = no dynamic ball shadow (\"triangles\" near slings and such), 1 = enable dynamic ball shadow\n-Const AmbientBallShadowOn = 1\t\t'0 = Static shadow under ball (\"flasher\" image, like JP's)\n+Const DynamicBallShadowsOn = 0\t\t'0 = no dynamic ball shadow (\"triangles\" near slings and such), 1 = enable dynamic ball shadow\n+Const AmbientBallShadowOn = 0\t\t'0 = Static shadow under ball (\"flasher\" image, like JP's)\n \t\t\t\t\t\t\t\t\t'1 = Moving ball shadow (\"primitive\" object, like ninuzzu's) - This is the only one that shows up on the pf when in ramps and fades when close to lights!\n \t\t\t\t\t\t\t\t\t'2 = flasher image shadow, but it moves like ninuzzu's\n \n"}
@@ -285,7 +285,7 @@
       {
         "hash": "56cbb9a4e4cdd5c9c1704d19d903958598d89aea",
         "date": "2025-03-18 20:20:53 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-batmanforever/table.ini", "diff": "diff --git a/external/vpx-batmanforever/table.ini b/external/vpx-batmanforever/table.ini\nindex 9d0c2ac2..a6c75c91 100644\n--- a/external/vpx-batmanforever/table.ini\n+++ b/external/vpx-batmanforever/table.ini\n@@ -1,22 +1,21 @@\n [Standalone]\n-PinMAMEWindowX = 3840\n-PinMAMEWindowY = 0\n-PinMAMEWindowWidth = 1200\n-PinMAMEWindowHeight = 380\n-PinMAMEWindowRotation = 1\n+BackBufferScale = 0.416666\n \n [Player]\n-BallAntiStretch = 1\n+BallTrailStrength = 0.392157\n+OverrideTableEmissionScale = 0\n+ScreenPlayerZ = 100.301239\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.948172\n-ViewCabScaleY = 1.037503\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = -37.673004\n-ViewCabPlayerY = -0.000000\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 7.770338\n-ViewCabLayback = 48.791210\n\\ No newline at end of file\n+ViewCabMode = 2\n+ViewCabScaleX = 1.057124\n+ViewCabScaleY = 1.045558\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -38.180683\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 82.953217\n\\ No newline at end of file\n"}
@@ -327,7 +327,7 @@
       {
         "hash": "37a229dc0dff1d0759ec58a2c4fef8e6c9bbac92",
         "date": "2025-01-20 22:19:17 -0600",
-        "author": "James Rainaldi",
+        "author": "James R.",
         "message": "chore: updated vpx-batmanforever README\n",
         "files": [
           {"status": "M", "path": "external/vpx-batmanforever/README.md", "diff": "diff --git a/external/vpx-batmanforever/README.md b/external/vpx-batmanforever/README.md\nindex 19aa163b..ad5fc0c6 100644\n--- a/external/vpx-batmanforever/README.md\n+++ b/external/vpx-batmanforever/README.md\n@@ -2,40 +2,34 @@\n \n ![Table Preview](https://github.com/Bla1ze/vpx-images/blob/main/vpx-batmanforever.png)\n \n-Author: [drakkon](https://vpuniverse.com/profile/51568-drakkon/) \n+---\n \n-Tested by: Bla1ze\n+## Files\n+| File Type | Link | Version | Author | \n+|-----------|--------|----------|--------------|\n+| **VPX** | [VP Universe](https://vpuniverse.com/files/file/11601-batman-forever-sega-1995-with-vr-room/) | 1.3 | [drakkon](https://vpuniverse.com/profile/51568-drakkon/) |\n+| **B2S & DMD** | [VP Universe](https://vpuniverse.com/files/file/17563-batman-forever-sega-1995-b2s-with-full-dmd/) | 1.0 | [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/) |\n+| **ROM** | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=871) | **SHA:** a93b6f149547dcf93ba524c0b8234592e1cbc12e <br />**MD5:** 66d63871f98b5efefd7a67c4189c6946 |  |\n \n-Version: 1.3\n+**Tested by:** [Bla1ze]\n \n-Download: [VP Universe](https://vpuniverse.com/files/file/11601-batman-forever-sega-1995-with-vr-room/)\n-\n-DirectB2S\n-\n-Author: [Hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)  \n-\n-Version: 1.0\n-\n-Download: [VP Universe](https://vpuniverse.com/files/file/17563-batman-forever-sega-1995-b2s-with-full-dmd/)\n-\n-ROM\n-\n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=871)\n-\n-SHA: a93b6f149547dcf93ba524c0b8234592e1cbc12e\n-\n-MD5: 66d63871f98b5efefd7a67c4189c6946\n+---\n \n ## Status \n \n-Minimum VPX Standalone build: 10.8.0-1983-a764013\n+**Minimum VPX Standalone build:** 10.8.0-1983-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n \n+---\n+\n ## Instructions\n \n - Copy the contents of this repo folder to your USB drive\n-- Add your personalized launcher.elf and rename it to vpx-batmanforever.elf\n-- Download the table, ROM and directb2s versions listed above and copy them into this folder\n-- Do you have a thing for bats? 🦇\n+- Add your personalized launcher.elf and rename it to `vpx-batmanforever.elf`\n+- Download the table and directb2s versions listed above, extract (if necessary) and copy them into `vpx-batmanforever`\n+- Rom file (`batmanf.zip`) stays in zip folder, place zip file in `vpx-batmanforever/pinmame/roms`\n+- Make sure `(.vpx)` `(.direct2b2s)` `(.vbs)` and `(.ini)` are all named the same.\n+> Do you have a thing for bats? 🦇\n+s\n\\ No newline at end of file\n"}

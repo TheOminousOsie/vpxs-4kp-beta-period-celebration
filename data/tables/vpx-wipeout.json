@@ -4,7 +4,7 @@
       {
         "hash": "25924861c5a917d4f8efde60e74049c8fcf8bcaf",
         "date": "2026-07-19 20:30:50 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fixes\n\nPin-Bot table hash\nTron Legacy PUP required\nDemolition Man color rom link\nSouth Park color rom link\nPirates of the Caribbean color rom link\nWipeout removed color rom vpsid\n",
         "files": [
           {"status": "M", "path": "external/vpx-wipeout/table.yml", "diff": "diff --git a/external/vpx-wipeout/table.yml b/external/vpx-wipeout/table.yml\nindex f908cb03..a65cc068 100644\n--- a/external/vpx-wipeout/table.yml\n+++ b/external/vpx-wipeout/table.yml\n@@ -2,7 +2,7 @@\n backglassChecksum: \"B85A17A6131DB8D149F9EE0BA1377ECB\"\n backglassNotes: \"\"\n backglassVPSId: \"yY6Q3FvnHV\"\n-coloredROMVPSId: \"4-rKkJ69T8\"\n+coloredROMVPSId: \"\"\n coloredROMChecksum: \"17A99C6CA5E3EC828521C1BBD6DAD7D3\"\n coloredROMNotes: \"Download and extract 'GLaltcolor.7z'. Use file in 'freddy'\"\n coloredROMUrlOverride: \"https://vpuniverse.com/files/file/5120-glaltcolor7z/\"\n"}
@@ -13,7 +13,7 @@
       {
         "hash": "c472d47f37846a39486724312d06b53c6cabcfc6",
         "date": "2026-07-19 20:30:50 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fixes\n\nPin-Bot table hash\nTron Legacy PUP required\nDemolition Man color rom link\nSouth Park color rom link\nPirates of the Caribbean color rom link\nWipeout removed color rom vpsid\n",
         "files": [
           {"status": "M", "path": "external/vpx-wipeout/table.yml", "diff": "diff --git a/external/vpx-wipeout/table.yml b/external/vpx-wipeout/table.yml\nindex f908cb03..a65cc068 100644\n--- a/external/vpx-wipeout/table.yml\n+++ b/external/vpx-wipeout/table.yml\n@@ -2,7 +2,7 @@\n backglassChecksum: \"B85A17A6131DB8D149F9EE0BA1377ECB\"\n backglassNotes: \"\"\n backglassVPSId: \"yY6Q3FvnHV\"\n-coloredROMVPSId: \"4-rKkJ69T8\"\n+coloredROMVPSId: \"\"\n coloredROMChecksum: \"17A99C6CA5E3EC828521C1BBD6DAD7D3\"\n coloredROMNotes: \"Download and extract 'GLaltcolor.7z'. Use file in 'freddy'\"\n coloredROMUrlOverride: \"https://vpuniverse.com/files/file/5120-glaltcolor7z/\"\n"}
@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-wipeout/table.yml", "diff": "diff --git a/external/vpx-wipeout/table.yml b/external/vpx-wipeout/table.yml\nindex 2da99a7d..f908cb03 100644\n--- a/external/vpx-wipeout/table.yml\n+++ b/external/vpx-wipeout/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"B85A17A6131DB8D149F9EE0BA1377ECB\"\n-  - \"36F0B71AE7629FF049EA3983486107BF\"\n+backglassChecksum: \"B85A17A6131DB8D149F9EE0BA1377ECB\"\n backglassNotes: \"\"\n backglassVPSId: \"yY6Q3FvnHV\"\n coloredROMVPSId: \"4-rKkJ69T8\"\n@@ -11,10 +8,7 @@ coloredROMNotes: \"Download and extract 'GLaltcolor.7z'. Use file in 'freddy'\"\n coloredROMUrlOverride: \"https://vpuniverse.com/files/file/5120-glaltcolor7z/\"\n tableVPSId: \"b31KZ92B\"\n vpxVPSId: \"eahB14sy\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"b866c873d66323803be0dad4299758c9\"\n-  - \"AB5384C9925C67272C786BB652D24D50\"\n+vpxChecksum: \"b866c873d66323803be0dad4299758c9\"\n tableNotes: \"Wipe Out (Premier 1993) 1.1.0.zip\"\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/b31KZ92B_b2s_1661263797943.webp\""}
@@ -31,7 +31,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-wipeout/table.yml", "diff": "diff --git a/external/vpx-wipeout/table.yml b/external/vpx-wipeout/table.yml\nindex eaf2ac5b..2da99a7d 100644\n--- a/external/vpx-wipeout/table.yml\n+++ b/external/vpx-wipeout/table.yml\n@@ -22,7 +22,7 @@ romUrlOverride: \"https://pinballnirvana.com/forums/resources/wipeout.2596/\"\n romVersionOverride: \"wipeout\"\n romNotes: \"wipeout.zip\"\n romChecksum: \"a192a69c51e0f57318b5ddd18152d321\"\n-fps: 60\n+fps: 58\n tagline: \"The ski lift is now open!\"\n testers:\n   - \"Boris\"\n"}
@@ -40,7 +40,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-wipeout/table.yml", "diff": "diff --git a/external/vpx-wipeout/table.yml b/external/vpx-wipeout/table.yml\nindex 5c3a8bf1..eaf2ac5b 100644\n--- a/external/vpx-wipeout/table.yml\n+++ b/external/vpx-wipeout/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"B85A17A6131DB8D149F9EE0BA1377ECB\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"B85A17A6131DB8D149F9EE0BA1377ECB\"\n+  - \"36F0B71AE7629FF049EA3983486107BF\"\n backglassNotes: \"\"\n backglassVPSId: \"yY6Q3FvnHV\"\n coloredROMVPSId: \"4-rKkJ69T8\"\n@@ -8,7 +11,10 @@ coloredROMNotes: \"Download and extract 'GLaltcolor.7z'. Use file in 'freddy'\"\n coloredROMUrlOverride: \"https://vpuniverse.com/files/file/5120-glaltcolor7z/\"\n tableVPSId: \"b31KZ92B\"\n vpxVPSId: \"eahB14sy\"\n-vpxChecksum: \"b866c873d66323803be0dad4299758c9\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"b866c873d66323803be0dad4299758c9\"\n+  - \"AB5384C9925C67272C786BB652D24D50\"\n tableNotes: \"Wipe Out (Premier 1993) 1.1.0.zip\"\n # yamllint disable-line rule:line-length\n backglassImageOverride: \"https://virtualpinballspreadsheet.github.io/vps-db/img/b31KZ92B_b2s_1661263797943.webp\""}
@@ -49,7 +49,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "D", "path": "external/vpx-wipeout/backglass.png"},
@@ -105,7 +105,7 @@
       {
         "hash": "c2c9e81c26b5fd4b2cb77c7ff83399874a4f2af3",
         "date": "2025-05-26 16:26:15 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add Countdown art\n",
         "files": [
           {"status": "M", "path": "external/vpx-wipeout/table.yml", "diff": "diff --git a/external/vpx-wipeout/table.yml b/external/vpx-wipeout/table.yml\nindex dfc27e39..ac26aadc 100644\n--- a/external/vpx-wipeout/table.yml\n+++ b/external/vpx-wipeout/table.yml\n@@ -16,3 +16,4 @@ testers:\n   - \"Boris\"\n applyFixes: \n   - \"bass\"\n+\n"}
@@ -114,7 +114,7 @@
       {
         "hash": "ba2357ad9a2b0e50522fde212310b6f3f5dee614",
         "date": "2025-05-26 15:31:25 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml\n",
         "files": [
           {"status": "M", "path": "external/vpx-wipeout/table.yml", "diff": "diff --git a/external/vpx-wipeout/table.yml b/external/vpx-wipeout/table.yml\nindex cbd7d462..dfc27e39 100644\n--- a/external/vpx-wipeout/table.yml\n+++ b/external/vpx-wipeout/table.yml\n@@ -1,7 +1,7 @@\n ---\n tableVPSId: \"b31KZ92B\"\n vpxVPSId: \"eahB14sy\"\n-vpxChecksum: \"ab5384c9925c67272c786bb652d24d50\"\n+vpxChecksum: \"b866c873d66323803be0dad4299758c9\"\n tableNotes: \"Wipe Out (Premier 1993) 1.1.0.zip\"\n #backglassVPSId: \"\"\n #backglassChecksum: \"\"\n"}
@@ -123,7 +123,7 @@
       {
         "hash": "ae07a4eb873ae45eadddecd88ebc7ed8961f2059",
         "date": "2025-05-26 11:09:59 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add Wipeout\n",
         "files": [
           {"status": "A", "path": "external/vpx-wipeout/backglass.png"},

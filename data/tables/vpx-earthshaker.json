@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-earthshaker/table.yml", "diff": "diff --git a/external/vpx-earthshaker/table.yml b/external/vpx-earthshaker/table.yml\nindex f1ca4df7..af962b37 100644\n--- a/external/vpx-earthshaker/table.yml\n+++ b/external/vpx-earthshaker/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassVPSId: \"DmmYx5LWbi\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"494783f5c5e5efce18aa1a5ff0ff15b4\"\n-  - \"D7815E534B63168C9F6694C7F619D8E1\"\n-fps: 60\n+backglassChecksum: \"494783f5c5e5efce18aa1a5ff0ff15b4\"\n+fps: 58\n romVPSId: \"iAxB54qv\"\n romChecksum: \"0854daf7ebd8d4591744a26968e5f9e6\"\n tableVPSId: \"HB-50MQb\"\n@@ -15,7 +12,4 @@ testers:\n   - \"OminousOsie\"\n   - \"Wraith\"\n vpxVPSId: \"crFmm7IfsF\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"A8CBA655AEE3BDF1EDFFC9C5D75513AF\"\n-  - \"538CF338AD74C81F0AD4734DC003BFCF\"\n+vpxChecksum: \"A8CBA655AEE3BDF1EDFFC9C5D75513AF\""}
@@ -22,7 +22,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-earthshaker/table.yml", "diff": "diff --git a/external/vpx-earthshaker/table.yml b/external/vpx-earthshaker/table.yml\nindex bd7b7543..f1ca4df7 100644\n--- a/external/vpx-earthshaker/table.yml\n+++ b/external/vpx-earthshaker/table.yml\n@@ -4,7 +4,7 @@ backglassArchiveFormat: \"zip\"\n backglassChecksum:\n   - \"494783f5c5e5efce18aa1a5ff0ff15b4\"\n   - \"D7815E534B63168C9F6694C7F619D8E1\"\n-fps: 58\n+fps: 60\n romVPSId: \"iAxB54qv\"\n romChecksum: \"0854daf7ebd8d4591744a26968e5f9e6\"\n tableVPSId: \"HB-50MQb\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-earthshaker/table.yml", "diff": "diff --git a/external/vpx-earthshaker/table.yml b/external/vpx-earthshaker/table.yml\nindex af962b37..bd7b7543 100644\n--- a/external/vpx-earthshaker/table.yml\n+++ b/external/vpx-earthshaker/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"DmmYx5LWbi\"\n-backglassChecksum: \"494783f5c5e5efce18aa1a5ff0ff15b4\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"494783f5c5e5efce18aa1a5ff0ff15b4\"\n+  - \"D7815E534B63168C9F6694C7F619D8E1\"\n fps: 58\n romVPSId: \"iAxB54qv\"\n romChecksum: \"0854daf7ebd8d4591744a26968e5f9e6\"\n@@ -12,4 +15,7 @@ testers:\n   - \"OminousOsie\"\n   - \"Wraith\"\n vpxVPSId: \"crFmm7IfsF\"\n-vpxChecksum: \"A8CBA655AEE3BDF1EDFFC9C5D75513AF\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"A8CBA655AEE3BDF1EDFFC9C5D75513AF\"\n+  - \"538CF338AD74C81F0AD4734DC003BFCF\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-earthshaker/table.ini", "diff": "diff --git a/external/vpx-earthshaker/table.ini b/external/vpx-earthshaker/table.ini\nindex bcc9b333..efdc3834 100644\n--- a/external/vpx-earthshaker/table.ini\n+++ b/external/vpx-earthshaker/table.ini\n@@ -1,13 +1,22 @@\n+[Standalone]\n+4kpVLMGIKeepPercent = 5 \n+; GI count budget (main lever) Default 100\n+4kpVLMBakeBrightness = 2.5\n+; Default 1.0\n+4kpVLMMinIntensityNonGI = 30\n+; trims fading flashers (free) Default 30\n+PinMAMEWindow = 0\n+\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.333088\n-ViewCabScaleY = 1.100415\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.273575\n+ViewCabScaleY = 1.000485\n+ViewCabScaleZ = 0.869888\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -109.450287\n-ViewCabWindowTop = 370.574066\n-ViewCabWindowBot = 218.957306\n+ViewCabVOfs = 0.038202\n+ViewCabWindowTop = 308.479065\n+ViewCabWindowBot = 107.149231\n \n [Player]\n ScreenPlayerY = 17.296146\n@@ -18,6 +27,15 @@ ScreenInclination = 0.000000\n OverrideTableEmissionScale = 1\n DynamicDayNight = 0\n EmissionScale = 0.300195\n+AAFactor = 0.90\n \n-[Standalone]\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+[TableOption]\n+Refraction Setting = 0.000000\n+Earthquake Institute Mod = 1.000000\n+Outpost Difficulty = 0.000000\n+Shaker SSF = 1.000000\n+Shaker SSF Intensity = 1.000000\n+Mech Volume = 0.800000\n+Ball Roll Volume = 0.500000\n+Ramp Roll Volume = 0.500000\n+VR Room = 3.000000\n\\ No newline at end of file"},

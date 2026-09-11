@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-harleyd/table.yml", "diff": "diff --git a/external/vpx-harleyd/table.yml b/external/vpx-harleyd/table.yml\nindex fc4e5b32..5d0a3b4e 100644\n--- a/external/vpx-harleyd/table.yml\n+++ b/external/vpx-harleyd/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"qevYdcn8gm\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"edf005ec52dda2eb18ff60aaa1f233d0\"\n-  - \"0A6E20A663B498259B685738B0C036EC\"\n+backglassChecksum: \"edf005ec52dda2eb18ff60aaa1f233d0\"\n backglassNotes: \"Download version 1.0.0\"\n fps: 58\n romVPSId: \"-XgDH4d3tp\"\n@@ -15,8 +12,5 @@ testers:\n   - \"OminousOsie\"\n   - \"evilwraith\"\n vpxVPSId: \"eoovupCgVg\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"a9045c51caaed6e898317dab8b87c972\"\n-  - \"6AEE47BBDF9508D0B5F34C186040D781\"\n+vpxChecksum: \"a9045c51caaed6e898317dab8b87c972\"\n tableNotes: \"Download version 1.12\""}
@@ -22,7 +22,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-harleyd/table.yml", "diff": "diff --git a/external/vpx-harleyd/table.yml b/external/vpx-harleyd/table.yml\nindex c1b3c624..fc4e5b32 100644\n--- a/external/vpx-harleyd/table.yml\n+++ b/external/vpx-harleyd/table.yml\n@@ -5,7 +5,7 @@ backglassChecksum:\n   - \"edf005ec52dda2eb18ff60aaa1f233d0\"\n   - \"0A6E20A663B498259B685738B0C036EC\"\n backglassNotes: \"Download version 1.0.0\"\n-fps: 54\n+fps: 58\n romVPSId: \"-XgDH4d3tp\"\n romChecksum: \"8e6453e95f91bfc774479b4ebef92a02\"\n tableVPSId: \"4jP_7ljN\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-harleyd/table.yml", "diff": "diff --git a/external/vpx-harleyd/table.yml b/external/vpx-harleyd/table.yml\nindex 66e7e02a..c1b3c624 100644\n--- a/external/vpx-harleyd/table.yml\n+++ b/external/vpx-harleyd/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"qevYdcn8gm\"\n-backglassChecksum: \"edf005ec52dda2eb18ff60aaa1f233d0\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"edf005ec52dda2eb18ff60aaa1f233d0\"\n+  - \"0A6E20A663B498259B685738B0C036EC\"\n backglassNotes: \"Download version 1.0.0\"\n fps: 54\n romVPSId: \"-XgDH4d3tp\"\n@@ -12,5 +15,8 @@ testers:\n   - \"OminousOsie\"\n   - \"evilwraith\"\n vpxVPSId: \"eoovupCgVg\"\n-vpxChecksum: \"a9045c51caaed6e898317dab8b87c972\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"a9045c51caaed6e898317dab8b87c972\"\n+  - \"6AEE47BBDF9508D0B5F34C186040D781\"\n tableNotes: \"Download version 1.12\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-harleyd/table.ini", "diff": "diff --git a/external/vpx-harleyd/table.ini b/external/vpx-harleyd/table.ini\nindex 8812d974..82314beb 100644\n--- a/external/vpx-harleyd/table.ini\n+++ b/external/vpx-harleyd/table.ini\n@@ -12,10 +12,9 @@ ViewCabScaleY = 1.029698\n ViewCabScaleZ = 0.883039\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -19.513996\n+ViewCabVOfs = 0\n ViewCabWindowTop = 291.821014\n ViewCabWindowBot = 83.953270\n \n [Standalone]\n BackBufferScale = 0.416666\n-WindowRenderMode = 0"},
@@ -59,7 +59,7 @@
       {
         "hash": "38b857e903cc03583368bd210a37cf70ae19e220",
         "date": "2025-10-13 17:07:29 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Updated README\n",
         "files": [
           {"status": "M", "path": "external/vpx-harleyd/README.md", "diff": "diff --git a/external/vpx-harleyd/README.md b/external/vpx-harleyd/README.md\nindex f98c29f1..2eb22538 100644\n--- a/external/vpx-harleyd/README.md\n+++ b/external/vpx-harleyd/README.md\n@@ -1,34 +1,62 @@\n-﻿# Harley Davidson (Sega 1999)\n-Tested By: kaoticBPR\n+# Harley-Davidson (Sega 1999)\n \n-![Table Preview](../../images/vpx-harleyd.png)\n+![Table Preview](../../images/eoovupCgVg-preview.webp)\n \n-Authors: [nestorgian](https://vpuniverse.com/profile/27437-nestorgian/)\n-Version: 1.12\n-Download: [VPUniverse](https://vpuniverse.com/files/file/10908-harley-davidson-sega-1999/?tab=details)\n+<br>\n \n-DirectB2S\n+## *️⃣  Table Statistics\n \n-Authors: [hauntfreaks](https://vpuniverse.com/profile/5216-hauntfreaks/)\n-Version: 1.0.0\n-Download: [VPUniverse](https://vpuniverse.com/files/file/15283-harley-davidson-sega-1999-b2s-with-full-dmd/)\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 54 |\n \n-ROM\n+<br>\n \n-Download: [vpforums](https://www.vpforums.org/index.php?app=downloads&showfile=1089)\n-ROM Name and version: harl_a30\n+**VPXS 4KP Testers:**\n+  - kaoticBPR\n+  - Ominous Osie 🌸\n+  - evilwraith\n \n-## Status \n+<br>\n \n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 40 |\n+---\n \n-## Instructions\n+<br>\n \n-- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n-- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n-- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n-- \"Born to be Wild\"\n+## ❇️ Available in the Wizard! 🪄✨\n \n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Harley-Davidson (Sega 1999)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"Born to be Wild\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>\n"}
@@ -86,7 +86,7 @@
       {
         "hash": "134d6a77c8f8889b3fd317d4618f73540d8a26ea",
         "date": "2025-09-22 18:11:25 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "forgot the launcher config\n",
         "files": [
           {"status": "A", "path": "external/vpx-harleyd/launcher.cfg", "diff": "diff --git a/external/vpx-harleyd/launcher.cfg b/external/vpx-harleyd/launcher.cfg\nnew file mode 100644\nindex 00000000..039bca5a\n--- /dev/null\n+++ b/external/vpx-harleyd/launcher.cfg\n@@ -0,0 +1,2 @@\n+[buttonLabels]\n+dpadUp = \"Launch\"\n\\ No newline at end of file\n"}
@@ -95,7 +95,7 @@
       {
         "hash": "3b4afe29262f733296a553b3c74b6a4f530aa782",
         "date": "2025-09-22 16:20:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update nvram.nv\n",
         "files": [
           {"status": "M", "path": "external/vpx-harleyd/nvram.nv"}
@@ -104,7 +104,7 @@
       {
         "hash": "56d7569ef858a787edc4ec1759a18014889174e6",
         "date": "2025-09-22 16:18:56 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "HD and Golden Cue\n",
         "files": [
           {"status": "A", "path": "external/vpx-harleyd/nvram.nv"},

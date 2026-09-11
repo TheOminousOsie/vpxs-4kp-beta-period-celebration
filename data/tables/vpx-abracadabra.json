@@ -13,7 +13,7 @@
       {
         "hash": "f8c4eaf5866e51161d0285e15411516c7ba5cc8c",
         "date": "2026-08-05 14:37:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Abra Ca Dabra updates\n",
         "files": [
           {"status": "A", "path": "external/vpx-abracadabra/table.yml", "diff": "diff --git a/external/vpx-abracadabra/table.yml b/external/vpx-abracadabra/table.yml\nnew file mode 100644\nindex 00000000..54f62d23\n--- /dev/null\n+++ b/external/vpx-abracadabra/table.yml\n@@ -0,0 +1,14 @@\n+---\n+backglassChecksum: \"6612F824930E70199AA5387334E65486\"\n+backglassNotes: \"Download Version 1.0\"\n+backglassVPSId: \"hrkNeksvoF\"\n+fps: 60\n+tableNotes: \"Download version 8.0\"\n+tableVPSId: \"OmWHC8EW\"\n+tagline: \"Abra Ca Dabra, B!\"\n+testers:\n+  - \"Boris\"\n+  - \"Curt\"\n+tutorialVPSId: \"e8yfmtuTNQ\"\n+vpxChecksum: \"6CADB785E85635B4406407FD8DF31A9E\"\n+vpxVPSId: \"VcgDWPC7\"\n"},
@@ -24,7 +24,7 @@
       {
         "hash": "fea6ea48f1bcafe489a0e38c0b71310819839754",
         "date": "2026-08-04 18:40:02 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update AbraCaDabra art\n",
         "files": [
           {"status": "A", "path": "external/vpx-abracadabra/dmd.png"},
@@ -70,7 +70,7 @@
       {
         "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
         "date": "2025-03-19 14:01:02 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Large README Updates\n\n46 README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex 5d9450a1..c00ebf60 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -2,28 +2,29 @@\n \n ![Table Preview](../../images/vpx-abracadabra.png)\n \n-Authors: [Batch](https://www.vpforums.org/index.php?showuser=30858)  \n-Version: 1.1  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13283)\n+---\n \n-DirectB2S\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13283) | 1.1 | [Batch](https://www.vpforums.org/index.php?showuser=30858) |\n+| B2S | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13216) | 1.0 | [hauntfreaks](https://www.vpforums.org/index.php?showuser=73849) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | N/A | N/A | N/A |\n \n-Authors: [hauntfreaks](https://www.vpforums.org/index.php?showuser=73849)  \n-Version 1.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=13216) \n+**Tested by:** [Boris]\n \n-Tested by: Boris\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | 49 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy the contents of this repo folder to your USB drive\n - Add your personalized launcher.elf and rename it to vpx-abracadabra.elf\n - Download the table and directb2s versions listed above, extract (if necessary) and copy them to external/vpx-abracadabra"}
@@ -79,7 +79,7 @@
       {
         "hash": "3c477066d5f42047d6243f2876b8c9b3310213a6",
         "date": "2025-03-19 10:04:31 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Delete external/vpx-abracadabra/table.yml",
         "files": [
           {"status": "D", "path": "external/vpx-abracadabra/table.yml", "diff": "diff --git a/external/vpx-abracadabra/table.yml b/external/vpx-abracadabra/table.yml\ndeleted file mode 100644\nindex 58d7afa8..00000000\n--- a/external/vpx-abracadabra/table.yml\n+++ /dev/null\n@@ -1,6 +0,0 @@\n----\n-tableVPSId: FDc21ZJEP9\n-vpxVPSId: TOF-LubuVs\n-backglassVPSId: NZXXtTMgoJ\n-romVPSId: \n-coloredROMVPSId:\n\\ No newline at end of file\n"}
@@ -114,7 +114,7 @@
       {
         "hash": "a20c28c275f2751f2109b5f182efb45e918c8d8b",
         "date": "2025-02-26 14:31:51 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add yml for smattering of tables\n\nBig Horse\nBig Indian\nBig Trouble\nBig Star\n250cc\n301 Bullseye\n4 Aces\nAce High\nAlice In Wonderland\nAli JP\n",
         "files": [
           {"status": "A", "path": "external/vpx-abracadabra/table.yml", "diff": "diff --git a/external/vpx-abracadabra/table.yml b/external/vpx-abracadabra/table.yml\nnew file mode 100644\nindex 00000000..58d7afa8\n--- /dev/null\n+++ b/external/vpx-abracadabra/table.yml\n@@ -0,0 +1,6 @@\n+---\n+tableVPSId: FDc21ZJEP9\n+vpxVPSId: TOF-LubuVs\n+backglassVPSId: NZXXtTMgoJ\n+romVPSId: \n+coloredROMVPSId:\n\\ No newline at end of file"}
@@ -123,7 +123,7 @@
       {
         "hash": "30af48fd4f9bccf84b667a750f42ce3a10f74cf8",
         "date": "2025-02-23 08:41:48 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Fix image path abracadabra",
         "files": [
           {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex 6194f2c4..5d9450a1 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -1,6 +1,6 @@\n # Abra Ca Dabra (Gottlieb 1975)\n \n-![Table Preview](../../vpx-abracadabra.png)\n+![Table Preview](../../images/vpx-abracadabra.png)\n \n Authors: [Batch](https://www.vpforums.org/index.php?showuser=30858)  \n Version: 1.1  \n"}
@@ -132,7 +132,7 @@
       {
         "hash": "1f02914d05b9785f64382a82076c6960ebfed237",
         "date": "2025-02-21 15:26:53 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add preview images to repo and update readmes\n\nTables affected:\nvpx-\nabracadabra\ncapersville\ncountdownjp\npirategold\nwhoanellie\n",
         "files": [
           {"status": "M", "path": "external/vpx-abracadabra/README.md", "diff": "diff --git a/external/vpx-abracadabra/README.md b/external/vpx-abracadabra/README.md\nindex 0a0c622f..6194f2c4 100755\n--- a/external/vpx-abracadabra/README.md\n+++ b/external/vpx-abracadabra/README.md\n@@ -1,6 +1,6 @@\n # Abra Ca Dabra (Gottlieb 1975)\n \n-![Table Preview](https://github.com/BorisUndead/vpx-images/blob/main/vpx-abracadabra.png)\n+![Table Preview](../../vpx-abracadabra.png)\n \n Authors: [Batch](https://www.vpforums.org/index.php?showuser=30858)  \n Version: 1.1  "}
@@ -150,7 +150,7 @@
       {
         "hash": "42d1afd80c0374c47fbc084efa10be6aec010ad9",
         "date": "2025-01-13 12:47:49 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add vpx-abracadabra\n\nAdd vpx-abracadabra table and update rootme Readme\n",
         "files": [
           {"status": "A", "path": "external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini", "diff": "diff --git a/external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini b/external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini\nnew file mode 100755\nindex 00000000..dccfd7a6\n--- /dev/null\n+++ b/external/vpx-abracadabra/Abra Ca Dabra (Gottlieb 1975).ini\t\n@@ -0,0 +1,37 @@\n+[Player]\n+BallTrailStrength = 0.392157\n+AlphaRampAccuracy = 10\n+OverrideTableEmissionScale = 0\n+\n+[TableOverride]\n+ViewDTLookAt = 50.000000\n+ViewDTFOV = 36.000000\n+ViewDTLayback = 0.000000\n+ViewDTRotation = 0.000000\n+ViewDTScaleX = 1.000000\n+ViewDTScaleY = 1.000000\n+ViewDTScaleZ = 1.000000\n+ViewDTPlayerX = 0.000000\n+ViewDTPlayerY = 0.000000\n+ViewDTPlayerZ = -250.000000\n+ViewCabLookAt = 2.315498\n+ViewCabFOV = 26.000000\n+ViewCabLayback = 76.000000\n+ViewCabRotation = 90.000000\n+ViewCabScaleX = 0.900000\n+ViewCabScaleY = 1.050000\n+ViewCabScaleZ = 1.000000\n+ViewCabPlayerX = -10.201999\n+ViewCabPlayerY = 0.000000\n+ViewCabPlayerZ = -371.050018\n+ViewFSSLookAt = 54.000000\n+ViewFSSFOV = 32.000000\n+ViewFSSLayback = 0.000000\n+ViewFSSRotation = 180.000000\n+ViewFSSScaleX = 1.130000\n+ViewFSSScaleY = 1.130000\n+ViewFSSScaleZ = 1.000000\n+ViewFSSPlayerX = 0.000000\n+ViewFSSPlayerY = 0.000000\n+ViewFSSPlayerZ = 0.000000\n+ViewCabMode = 0\n\\ No newline at end of file"},

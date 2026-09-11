@@ -4,7 +4,7 @@
       {
         "hash": "d42490bc5e4da87bf6a5f58227236c89f957978c",
         "date": "2026-07-23 20:48:33 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "updated readmes\n",
         "files": [
           {"status": "M", "path": "external/vpx-potc/README.md", "diff": "diff --git a/external/vpx-potc/README.md b/external/vpx-potc/README.md\nindex cb39eb9f..8d514474 100755\n--- a/external/vpx-potc/README.md\n+++ b/external/vpx-potc/README.md\n@@ -6,9 +6,9 @@\n \n ## *️⃣  Table Statistics\n \n-| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n-|-----------|----------|-----------|-----|--------------|-----|\n-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 55 |\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 58 |\n \n <br>\n \n@@ -33,7 +33,7 @@ This table is available through the Table Manager Wizard, which makes installati\n 1.  Open the **Table Manager**\n 2.  Click the **Add Table** button\n 3.  Select the **Wizard** tab\n-4.  Find and select this table from the dropdown menu: **`Pirates of the Caribbean`**\n+4.  Find and select this table from the dropdown menu: **`Pirates of the Caribbean (Stern 2006)`**\n 5.  Follow the on-screen instructions to download and upload the required files\n 6. *\"But.. why is the rum all gone?\"*\n \n@@ -59,4 +59,3 @@ __*We hope you enjoy!!*__\n <br>\n <br>\n <br>\n-"}
@@ -13,7 +13,7 @@
       {
         "hash": "25924861c5a917d4f8efde60e74049c8fcf8bcaf",
         "date": "2026-07-19 20:30:50 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fixes\n\nPin-Bot table hash\nTron Legacy PUP required\nDemolition Man color rom link\nSouth Park color rom link\nPirates of the Caribbean color rom link\nWipeout removed color rom vpsid\n",
         "files": [
           {"status": "M", "path": "external/vpx-potc/table.yml", "diff": "diff --git a/external/vpx-potc/table.yml b/external/vpx-potc/table.yml\nindex e0623d48..f74f7856 100644\n--- a/external/vpx-potc/table.yml\n+++ b/external/vpx-potc/table.yml\n@@ -1,20 +1,20 @@\n ---\n backglassChecksum: \"CB48BDDE9B9C9B9EE809604E13353465\"\n-backglassNotes: \"\"\n backglassVPSId: \"aneW70BPl0\"\n coloredROMChecksum: \"D606D8D8A2215E5E11F0EBA2FB4A5FC3\"\n-coloredROMNotes: \"pal file only\"\n-coloredROMVPSId: \"H8O2wVzh\"\n+coloredROMNotes: \"Download 'pin2dmd.pal'\"\n+# yamllint disable-line rule:line-length\n+coloredROMUrlOverride: \"https://montetoncab.fr/leslipdejoane/Pincab/Medias/VPX/rom_color_pour_VPX_4_et_16_couleurs/DMD_Colorisee_patche/DMD_Colorise_16_color/Potc600af/potc_600af/\"\n+coloredROMVersionOverride: \"potc600_as\"\n fps: 58\n-romVPSId: \"PRebrQRQ\"\n-romNotes: \"Download potc_600as\"\n romChecksum: \"7F2C8108D34A861AA565B70377ADFBDF\"\n-tableVPSId: \"fhehIu6i\"\n+romNotes: \"Download potc_600as\"\n+romVPSId: \"PRebrQRQ\"\n tableNotes: \"Download version 1.0.0\"\n+tableVPSId: \"fhehIu6i\"\n tagline: \"But.. why is the rum all gone?\"\n testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n-vpxVPSId: \"rOx6ED7h\"\n vpxChecksum: \"E5579122D8F31D188FFF65906BFBDF24\"\n-\n+vpxVPSId: \"rOx6ED7h\""}
@@ -22,7 +22,7 @@
       {
         "hash": "c472d47f37846a39486724312d06b53c6cabcfc6",
         "date": "2026-07-19 20:30:50 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fixes\n\nPin-Bot table hash\nTron Legacy PUP required\nDemolition Man color rom link\nSouth Park color rom link\nPirates of the Caribbean color rom link\nWipeout removed color rom vpsid\n",
         "files": [
           {"status": "M", "path": "external/vpx-potc/table.yml", "diff": "diff --git a/external/vpx-potc/table.yml b/external/vpx-potc/table.yml\nindex e0623d48..f74f7856 100644\n--- a/external/vpx-potc/table.yml\n+++ b/external/vpx-potc/table.yml\n@@ -1,20 +1,20 @@\n ---\n backglassChecksum: \"CB48BDDE9B9C9B9EE809604E13353465\"\n-backglassNotes: \"\"\n backglassVPSId: \"aneW70BPl0\"\n coloredROMChecksum: \"D606D8D8A2215E5E11F0EBA2FB4A5FC3\"\n-coloredROMNotes: \"pal file only\"\n-coloredROMVPSId: \"H8O2wVzh\"\n+coloredROMNotes: \"Download 'pin2dmd.pal'\"\n+# yamllint disable-line rule:line-length\n+coloredROMUrlOverride: \"https://montetoncab.fr/leslipdejoane/Pincab/Medias/VPX/rom_color_pour_VPX_4_et_16_couleurs/DMD_Colorisee_patche/DMD_Colorise_16_color/Potc600af/potc_600af/\"\n+coloredROMVersionOverride: \"potc600_as\"\n fps: 58\n-romVPSId: \"PRebrQRQ\"\n-romNotes: \"Download potc_600as\"\n romChecksum: \"7F2C8108D34A861AA565B70377ADFBDF\"\n-tableVPSId: \"fhehIu6i\"\n+romNotes: \"Download potc_600as\"\n+romVPSId: \"PRebrQRQ\"\n tableNotes: \"Download version 1.0.0\"\n+tableVPSId: \"fhehIu6i\"\n tagline: \"But.. why is the rum all gone?\"\n testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n-vpxVPSId: \"rOx6ED7h\"\n vpxChecksum: \"E5579122D8F31D188FFF65906BFBDF24\"\n-\n+vpxVPSId: \"rOx6ED7h\""}
@@ -31,7 +31,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-potc/table.yml", "diff": "diff --git a/external/vpx-potc/table.yml b/external/vpx-potc/table.yml\nindex 30faddb7..e0623d48 100644\n--- a/external/vpx-potc/table.yml\n+++ b/external/vpx-potc/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"CB48BDDE9B9C9B9EE809604E13353465\"\n-  - \"0E719FDD2D7B76C19851A308AADDFDF2\"\n+backglassChecksum: \"CB48BDDE9B9C9B9EE809604E13353465\"\n backglassNotes: \"\"\n backglassVPSId: \"aneW70BPl0\"\n coloredROMChecksum: \"D606D8D8A2215E5E11F0EBA2FB4A5FC3\"\n@@ -19,8 +16,5 @@ testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"rOx6ED7h\"\n-vpxArchiveFormat: \"rar\"\n-vpxChecksum:\n-  - \"E5579122D8F31D188FFF65906BFBDF24\"\n-  - \"C68404BA2FF584F0820B8F9234578419\"\n+vpxChecksum: \"E5579122D8F31D188FFF65906BFBDF24\"\n "}
@@ -40,7 +40,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-potc/table.yml", "diff": "diff --git a/external/vpx-potc/table.yml b/external/vpx-potc/table.yml\nindex 814b3d37..30faddb7 100644\n--- a/external/vpx-potc/table.yml\n+++ b/external/vpx-potc/table.yml\n@@ -8,7 +8,7 @@ backglassVPSId: \"aneW70BPl0\"\n coloredROMChecksum: \"D606D8D8A2215E5E11F0EBA2FB4A5FC3\"\n coloredROMNotes: \"pal file only\"\n coloredROMVPSId: \"H8O2wVzh\"\n-fps: 60\n+fps: 58\n romVPSId: \"PRebrQRQ\"\n romNotes: \"Download potc_600as\"\n romChecksum: \"7F2C8108D34A861AA565B70377ADFBDF\""}
@@ -49,7 +49,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-potc/table.yml", "diff": "diff --git a/external/vpx-potc/table.yml b/external/vpx-potc/table.yml\nindex dd7f9129..814b3d37 100644\n--- a/external/vpx-potc/table.yml\n+++ b/external/vpx-potc/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"CB48BDDE9B9C9B9EE809604E13353465\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"CB48BDDE9B9C9B9EE809604E13353465\"\n+  - \"0E719FDD2D7B76C19851A308AADDFDF2\"\n backglassNotes: \"\"\n backglassVPSId: \"aneW70BPl0\"\n coloredROMChecksum: \"D606D8D8A2215E5E11F0EBA2FB4A5FC3\"\n@@ -16,5 +19,8 @@ testers:\n   - \"Bla1ze\"\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"rOx6ED7h\"\n-vpxChecksum: \"E5579122D8F31D188FFF65906BFBDF24\"\n+vpxArchiveFormat: \"rar\"\n+vpxChecksum:\n+  - \"E5579122D8F31D188FFF65906BFBDF24\"\n+  - \"C68404BA2FF584F0820B8F9234578419\"\n "}
@@ -58,7 +58,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-potc/table.ini", "diff": "diff --git a/external/vpx-potc/table.ini b/external/vpx-potc/table.ini\nindex fcbed49e..922b0065 100644\n--- a/external/vpx-potc/table.ini\n+++ b/external/vpx-potc/table.ini\n@@ -8,17 +8,15 @@ EmissionScale = 0.400420\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n+AAFactor = 0.90\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.219336\n-ViewCabScaleY = 1.043710\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.225610\n+ViewCabScaleY = 1.000076\n+ViewCabScaleZ = 0.956365\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 4.381298\n-ViewCabVOfs = -27.370508\n-ViewCabWindowTop = 362.369934\n-ViewCabWindowBot = 138.953217\n-\n-[Standalone]\n-BackBufferScale = 0.355729\n\\ No newline at end of file\n+ViewCabHOfs = 0.034798\n+ViewCabVOfs = 0.018696\n+ViewCabWindowTop = 303.029968\n+ViewCabWindowBot = 138.953217\n\\ No newline at end of file"},
@@ -77,7 +77,7 @@
       {
         "hash": "e5673ad99b45b626ee0ed3c73222b36dbc514a3b",
         "date": "2025-06-14 10:40:59 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update table.yml\n\nRemoved backglass fields as they are unneeded",
         "files": [
           {"status": "M", "path": "external/vpx-potc/table.yml", "diff": "diff --git a/external/vpx-potc/table.yml b/external/vpx-potc/table.yml\nindex a85c6058..75b70520 100644\n--- a/external/vpx-potc/table.yml\n+++ b/external/vpx-potc/table.yml\n@@ -1,7 +1,6 @@\n ---\n-backglassBundled: true\n-backglassNotes: \"Wizard will install backglass\"\n-backglassChecksum: \"68301E32D51C994075C2BA0BAC85D419\"\n+applyFixes:\n+  - \"bass\"\n fps: 55\n romVPSId: \"PRebrQRQ\"\n romNotes: \"Download potc_600as\"\n@@ -14,5 +13,4 @@ testers:\n   - \"CoffeeAtJoes\"\n vpxVPSId: \"rOx6ED7h\"\n vpxChecksum: \"E5579122D8F31D188FFF65906BFBDF24\"\n-applyFixes:\n-  - \"bass\"\n+\n"}
@@ -104,7 +104,7 @@
       {
         "hash": "84ec701c04a63f9f568279714fe476e9982abf9f",
         "date": "2025-06-13 12:44:10 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "removed quotes from booleans\n",
         "files": [
           {"status": "M", "path": "external/vpx-potc/table.yml", "diff": "diff --git a/external/vpx-potc/table.yml b/external/vpx-potc/table.yml\nindex a3799eea..a85c6058 100644\n--- a/external/vpx-potc/table.yml\n+++ b/external/vpx-potc/table.yml\n@@ -1,5 +1,5 @@\n ---\n-backglassBundled: \"true\"\n+backglassBundled: true\n backglassNotes: \"Wizard will install backglass\"\n backglassChecksum: \"68301E32D51C994075C2BA0BAC85D419\"\n fps: 55"}

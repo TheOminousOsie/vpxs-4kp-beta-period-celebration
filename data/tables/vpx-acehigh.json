@@ -22,7 +22,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-acehigh/table.yml", "diff": "diff --git a/external/vpx-acehigh/table.yml b/external/vpx-acehigh/table.yml\nindex 9f1dbf10..0bc3c150 100644\n--- a/external/vpx-acehigh/table.yml\n+++ b/external/vpx-acehigh/table.yml\n@@ -1,10 +1,7 @@\n ---\n backglassBundled: true\n backglassVPSId: \"NZXXtTMgoJ\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"0C6011FCB50129F9F5E06BEC9A0929CE\"\n-  - \"6E92FA3E2A5277AF26BE14959CD111E7\"\n+backglassChecksum: \"0C6011FCB50129F9F5E06BEC9A0929CE\"\n backglassNotes: \"Download 'Ace High (Gottlieb 1957) JP_VPX8.directb2s.zip'\"\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n@@ -16,7 +13,4 @@ testers:\n   - \"OminousOsie\"\n   - \"pointdablame\"\n vpxVPSId: \"TOF-LubuVs\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"C1B96608006BD4AF8CD68B2BEB7F2A61\"\n-  - \"7EC639A7298EA30337961572206408E1\"\n+vpxChecksum: \"C1B96608006BD4AF8CD68B2BEB7F2A61\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-acehigh/table.yml", "diff": "diff --git a/external/vpx-acehigh/table.yml b/external/vpx-acehigh/table.yml\nindex 0bc3c150..9f1dbf10 100644\n--- a/external/vpx-acehigh/table.yml\n+++ b/external/vpx-acehigh/table.yml\n@@ -1,7 +1,10 @@\n ---\n backglassBundled: true\n backglassVPSId: \"NZXXtTMgoJ\"\n-backglassChecksum: \"0C6011FCB50129F9F5E06BEC9A0929CE\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"0C6011FCB50129F9F5E06BEC9A0929CE\"\n+  - \"6E92FA3E2A5277AF26BE14959CD111E7\"\n backglassNotes: \"Download 'Ace High (Gottlieb 1957) JP_VPX8.directb2s.zip'\"\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n@@ -13,4 +16,7 @@ testers:\n   - \"OminousOsie\"\n   - \"pointdablame\"\n vpxVPSId: \"TOF-LubuVs\"\n-vpxChecksum: \"C1B96608006BD4AF8CD68B2BEB7F2A61\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"C1B96608006BD4AF8CD68B2BEB7F2A61\"\n+  - \"7EC639A7298EA30337961572206408E1\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-acehigh/table.yml", "diff": "diff --git a/external/vpx-acehigh/table.yml b/external/vpx-acehigh/table.yml\nindex fb00cb6f..0bc3c150 100644\n--- a/external/vpx-acehigh/table.yml\n+++ b/external/vpx-acehigh/table.yml\n@@ -1,6 +1,4 @@\n ---\n-applyFixes: \n-  - \"bass\"\n backglassBundled: true\n backglassVPSId: \"NZXXtTMgoJ\"\n backglassChecksum: \"0C6011FCB50129F9F5E06BEC9A0929CE\""}
@@ -49,7 +49,7 @@
       {
         "hash": "688ec61c6bd9a567e41b60eb2948b47c6652ad0f",
         "date": "2025-09-10 12:40:08 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "JPSalas v600 updates\n\nCurrent as of 9/10/25. More to come.\n",
         "files": [
           {"status": "M", "path": "external/vpx-acehigh/table.yml", "diff": "diff --git a/external/vpx-acehigh/table.yml b/external/vpx-acehigh/table.yml\nindex 781dbbe3..fb00cb6f 100644\n--- a/external/vpx-acehigh/table.yml\n+++ b/external/vpx-acehigh/table.yml\n@@ -7,7 +7,7 @@ backglassChecksum: \"0C6011FCB50129F9F5E06BEC9A0929CE\"\n backglassNotes: \"Download 'Ace High (Gottlieb 1957) JP_VPX8.directb2s.zip'\"\n fps: 60\n mainNotes: \"Press right on the control panel to load a ball from the hopper\"\n-tableNotes: \"Download v55_VPX8.zip\"\n+tableNotes: \"Download v600.zip\"\n tableVPSId: \"FDc21ZJEP9\"\n tagline: \"Amusement Pinballs, as American as Baseball and Hot Dogs!\"\n testers:\n@@ -15,4 +15,4 @@ testers:\n   - \"OminousOsie\"\n   - \"pointdablame\"\n vpxVPSId: \"TOF-LubuVs\"\n-vpxChecksum: \"4C7204204A2523C88076F22ADD91D9CB\"\n+vpxChecksum: \"C1B96608006BD4AF8CD68B2BEB7F2A61\""}
@@ -161,7 +161,7 @@
       {
         "hash": "91c9d658cacf06f49f47d1e2e25f03fe1533ccdf",
         "date": "2025-03-19 14:01:02 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Large README Updates\n\n46 README Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-acehigh/README.md", "diff": "diff --git a/external/vpx-acehigh/README.md b/external/vpx-acehigh/README.md\nindex d47c5d03..d1fb4be1 100755\n--- a/external/vpx-acehigh/README.md\n+++ b/external/vpx-acehigh/README.md\n@@ -2,30 +2,29 @@\n \n ![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-acehigh.png)\n \n-Table\n+---\n \n-Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=18167)\n+## Files\n+| File Type | Link | Version | Author |\n+|:---------:|:----:|:-------:|:------:|\n+| VPX | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=18167) | 5.5.0 | [JPSalas](https://www.vpforums.org/index.php?showuser=277) |\n+| B2S | [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=18167) | 5.5.0 | [JPSalas](https://www.vpforums.org/index.php?showuser=277) |\n+| DMD | N/A | N/A | N/A |\n+| ROM | N/A | N/A | N/A |\n \n-DirectB2S\n+**Tested by:** [Boris]\n \n-Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n-Version: 5.5.0  \n-Download: [VP Forums](https://www.vpforums.org/index.php?app=downloads&showfile=18167)\n-\n-Tested by: Boris\n+---\n \n ## Status \n-\n-Minimum VPX Standalone build: 10.8.0-1989-a764013\n-\n+**Minimum VPX Standalone build:** 10.8.0-1989-a764013\n | Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n |-----------|----------|-----------|-----|--------------|-----|\n | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n \n-## Instructions\n+---\n \n+## Instructions\n - Copy this repo folder into the \"external\" folder on your USB drive\n - Add your personalized launcher.elf and rename it to vpx-acehigh.elf\n - Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-acehigh\n@@ -33,4 +32,4 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Download the ROM listed above and copy it to vpx-acehigh\\pinmame\\roms. DO NOT UNZIP!\n \n ## Notes\n-Press right on the control panel to load a ball from the hopper\n+- Press right on the control panel to load a ball from the hopper"}
@@ -170,7 +170,7 @@
       {
         "hash": "f0471d1bcbf7694cf68018da367bf3c2352a3ad2",
         "date": "2025-03-19 10:04:20 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Delete external/vpx-acehigh/table.yml",
         "files": [
           {"status": "D", "path": "external/vpx-acehigh/table.yml", "diff": "diff --git a/external/vpx-acehigh/table.yml b/external/vpx-acehigh/table.yml\ndeleted file mode 100644\nindex 8c37f0ef..00000000\n--- a/external/vpx-acehigh/table.yml\n+++ /dev/null\n@@ -1,4 +0,0 @@\n----\n-tableVPSId: 9kjJEqftU6\n-vpxVPSId: EQParLHs3z\n-backglassVPSId: aE0MrrW6W3\n"}
@@ -179,7 +179,7 @@
       {
         "hash": "1abc5970f1251beba21e83a343c35317c6537e96",
         "date": "2025-03-19 09:53:29 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.yml",
         "files": [
           {"status": "M", "path": "external/vpx-acehigh/table.yml", "diff": "diff --git a/external/vpx-acehigh/table.yml b/external/vpx-acehigh/table.yml\nindex ed981693..8c37f0ef 100644\n--- a/external/vpx-acehigh/table.yml\n+++ b/external/vpx-acehigh/table.yml\n@@ -2,5 +2,3 @@\n tableVPSId: 9kjJEqftU6\n vpxVPSId: EQParLHs3z\n backglassVPSId: aE0MrrW6W3\n-romVPSId: \n-coloredROMVPSId:\n\\ No newline at end of file\n"}
@@ -214,7 +214,7 @@
       {
         "hash": "a20c28c275f2751f2109b5f182efb45e918c8d8b",
         "date": "2025-02-26 14:31:51 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add yml for smattering of tables\n\nBig Horse\nBig Indian\nBig Trouble\nBig Star\n250cc\n301 Bullseye\n4 Aces\nAce High\nAlice In Wonderland\nAli JP\n",
         "files": [
           {"status": "A", "path": "external/vpx-acehigh/table.yml", "diff": "diff --git a/external/vpx-acehigh/table.yml b/external/vpx-acehigh/table.yml\nnew file mode 100644\nindex 00000000..ed981693\n--- /dev/null\n+++ b/external/vpx-acehigh/table.yml\n@@ -0,0 +1,6 @@\n+---\n+tableVPSId: 9kjJEqftU6\n+vpxVPSId: EQParLHs3z\n+backglassVPSId: aE0MrrW6W3\n+romVPSId: \n+coloredROMVPSId:\n\\ No newline at end of file"}
@@ -232,7 +232,7 @@
       {
         "hash": "16b631575136910cb794d2aca0accde7974c63db",
         "date": "2025-02-03 09:03:19 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update README.md\n\nChanged preview path to a png file extension. This file downloaded as a png for some reason.\n",
         "files": [
           {"status": "M", "path": "external/vpx-acehigh/README.md", "diff": "diff --git a/external/vpx-acehigh/README.md b/external/vpx-acehigh/README.md\nindex 0717c42b..5fcc4353 100755\n--- a/external/vpx-acehigh/README.md\n+++ b/external/vpx-acehigh/README.md\n@@ -1,6 +1,6 @@\n # Ace High (Gottlieb 1957)\n \n-![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-acehigh.jpg)\n+![Table Preview](https://github.com/LegendsUnchained/vpx-standalone-alp4k/blob/main/images/vpx-acehigh.png)\n \n Table\n Authors: [JPSalas](https://www.vpforums.org/index.php?showuser=277)  \n"}
@@ -241,7 +241,7 @@
       {
         "hash": "68bc63bb990ef5c63db9ff701352a94adbac8918",
         "date": "2025-02-03 09:01:22 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update README.md\n\nadd note to press right to load a ball\n",
         "files": [
           {"status": "M", "path": "external/vpx-acehigh/README.md", "diff": "diff --git a/external/vpx-acehigh/README.md b/external/vpx-acehigh/README.md\nindex 965a1322..0717c42b 100755\n--- a/external/vpx-acehigh/README.md\n+++ b/external/vpx-acehigh/README.md\n@@ -29,3 +29,6 @@ Minimum VPX Standalone build: 10.8.0-1989-a764013\n - Download the table and directb2s versions listed above, extract them (if necessary) and copy them to external/vpx-acehigh/\n - Make sure any (.vpx), (.directb2s), (.vbs), and (.ini) files are all named the same\n - Download the ROM listed above and copy it to vpx-acehigh\\pinmame\\roms. DO NOT UNZIP!\n+\n+## Notes\n+Press right on the control panel to load a ball from the hopper\n"}
@@ -250,7 +250,7 @@
       {
         "hash": "e48b3684b40b6442de372821cf4cd9aceac94380",
         "date": "2025-02-03 08:58:54 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add Ace High\n\nAdd vpx-acehigh table, update root readme, add preview image\n",
         "files": [
           {"status": "A", "path": "external/vpx-acehigh/Ace High (Gottlieb 1957) v55_VPX8.ini", "diff": "diff --git a/external/vpx-acehigh/Ace High (Gottlieb 1957) v55_VPX8.ini b/external/vpx-acehigh/Ace High (Gottlieb 1957) v55_VPX8.ini\nnew file mode 100755\nindex 00000000..93fa2de1\n--- /dev/null\n+++ b/external/vpx-acehigh/Ace High (Gottlieb 1957) v55_VPX8.ini\t\n@@ -0,0 +1,28 @@\n+[TableOverride]\n+ViewDTLookAt = 43.000000\n+ViewDTFOV = 43.000000\n+ViewDTLayback = 0.000000\n+ViewDTRotation = 0.000000\n+ViewDTScaleX = 1.000000\n+ViewDTScaleY = 1.000000\n+ViewDTScaleZ = 1.000000\n+ViewDTPlayerX = 0.000000\n+ViewDTPlayerY = -50.000000\n+ViewDTPlayerZ = -300.000000\n+ViewCabLookAt = 0.000000\n+ViewCabFOV = 22.000000\n+ViewCabLayback = 60.000000\n+ViewCabRotation = 90.000000\n+ViewCabScaleX = 1.000000\n+ViewCabScaleY = 1.150000\n+ViewCabScaleZ = 1.000000\n+ViewCabPlayerX = -22.065990\n+ViewCabPlayerY = 0.000000\n+ViewCabPlayerZ = -95.629990\n+ViewCabMode = 0\n+\n+[Standadlone]\n+BackBuffer Scale = 0.75\n+\n+[Player]\n+FXXAA = 1\n\\ No newline at end of file"},

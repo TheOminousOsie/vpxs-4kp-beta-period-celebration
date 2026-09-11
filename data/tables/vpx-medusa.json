@@ -4,7 +4,7 @@
       {
         "hash": "0833b9357f52a8e068b183fa3cad04ef37619091",
         "date": "2026-09-03 16:41:47 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Update with original tester\n",
         "files": [
           {"status": "M", "path": "external/vpx-medusa/table.yml", "diff": "diff --git a/external/vpx-medusa/table.yml b/external/vpx-medusa/table.yml\nindex 04a2bc3b..a0a78a05 100644\n--- a/external/vpx-medusa/table.yml\n+++ b/external/vpx-medusa/table.yml\n@@ -7,5 +7,6 @@ romVPSId: \"YCVL8tpz\"\n tableVPSId: \"wEOAp90_\"\n testers:\n   - \"Wraith\"\n+  - \"kaoticBPR\"\n vpxChecksum: \"C4BA7D8084F0327CA0C056A095D87E58\"\n vpxVPSId: \"_LUBPJb51L\"\n"}
@@ -13,7 +13,7 @@
       {
         "hash": "68d854d01b66fccd20bc7719060db9fb6cc1dc42",
         "date": "2026-09-03 16:39:26 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Medusa\n",
         "files": [
           {"status": "A", "path": "external/vpx-medusa/table.yml", "diff": "diff --git a/external/vpx-medusa/table.yml b/external/vpx-medusa/table.yml\nnew file mode 100644\nindex 00000000..04a2bc3b\n--- /dev/null\n+++ b/external/vpx-medusa/table.yml\n@@ -0,0 +1,11 @@\n+---\n+backglassChecksum: \"A0D46D84422F66B1DE86D136ADB39C4B\"\n+backglassVPSId: \"zTVGMra15e\"\n+fps: 60\n+romChecksum: \"19EC698D1643F8676A7CABC12312D268\"\n+romVPSId: \"YCVL8tpz\"\n+tableVPSId: \"wEOAp90_\"\n+testers:\n+  - \"Wraith\"\n+vpxChecksum: \"C4BA7D8084F0327CA0C056A095D87E58\"\n+vpxVPSId: \"_LUBPJb51L\"\n"},
@@ -106,7 +106,7 @@
       {
         "hash": "61ddb955a1e2052e2ac4be1472de7710585ed99b",
         "date": "2025-03-07 12:30:50 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add launcher configs to multiple tables\n\nHumpty Dumpty > Right, Release ball\nAlice in Wonderland  > Right, Release ball\nThe Shadow > Right, Toggle ramps\nAttack From Mars > Up, Launcher\nT2 > Up, Launcher\nWWE Royal Rumble > Left, Right, Mag Saves (I think)\nJohnny Mnemonic >left and right change table colors. (Sorry don't know what the effect is called )\nWCS - Left is magnasave\nBlack Knight 2000 > Right, mag save\nBlack Knight: L/R nudge = L/R magna save\nBlack Knight 2000: L/R nudge = L/R magna save\nViper: L nudge = viper reverse, R nudge = viper strike\nMedusa: R nudge = shield post\n",
         "files": [
           {"status": "A", "path": "external/vpx-medusa/launcher.cfg", "diff": "diff --git a/external/vpx-medusa/launcher.cfg b/external/vpx-medusa/launcher.cfg\nnew file mode 100644\nindex 00000000..9b143709\n--- /dev/null\n+++ b/external/vpx-medusa/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+; dpadUp = \"Launch\"\n+; dpadDown = \"Down\"\n+; dpadLeft = \"Magnasave\"\n+dpadRight = \"Shield Post\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start\"\n+; menu = \"Menu\"\n\\ No newline at end of file"}

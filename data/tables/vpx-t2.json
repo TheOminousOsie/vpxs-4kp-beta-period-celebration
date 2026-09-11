@@ -4,7 +4,7 @@
       {
         "hash": "2c6cdf7fba6e37e0cda9335e89398622c331622e",
         "date": "2026-09-09 22:10:48 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Coffee Joe Launcher updates\n\nPlayboy 2002\nSexy Girl\nSexy Girl Music Mod\nTerminator 2\nBaywatch\nCity Slicker\nFlash Gordon\nFuturama\nJaws 50th\nJohn Wick\nDeadpool\nBig Bang Bar\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/launcher.png"}
@@ -40,7 +40,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/table.yml", "diff": "diff --git a/external/vpx-t2/table.yml b/external/vpx-t2/table.yml\nindex a4f23f63..8712a6e1 100644\n--- a/external/vpx-t2/table.yml\n+++ b/external/vpx-t2/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"xHWfrWoj0i\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"0517D601DAA8703B72315DB3B2F9DAFF\"\n-  - \"2F5F2007A51E93B6DABBF352993BF337\"\n+backglassChecksum: \"0517D601DAA8703B72315DB3B2F9DAFF\"\n backglassNotes: \"Download - Terminator 2 (Williams 1991) full dmd.zip\"\n coloredROMChecksum: \"7F09F2105EF1E48F870D28B5BE73D286\"\n coloredROMNotes: \"Download 'Williams Terminator 2 -IPDB2524 - Update 2025 V1_0.pac'\""}
@@ -49,7 +49,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/table.yml", "diff": "diff --git a/external/vpx-t2/table.yml b/external/vpx-t2/table.yml\nindex 63df4711..a4f23f63 100644\n--- a/external/vpx-t2/table.yml\n+++ b/external/vpx-t2/table.yml\n@@ -11,7 +11,7 @@ coloredROMVPSId: \"XifyT-dteV\"\n romVPSId: \"0zPMCWcA\"\n romChecksum: \"F4D3810B45EFBAE942176C8BA5E1002C\"\n romNotes: \"Download -  t2_l8.zip\"\n-fps: 58\n+fps: 56\n tableVPSId: \"BunvWvh9\"\n tagline: \"I'll be back...\"\n testers:"}
@@ -58,7 +58,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/table.yml", "diff": "diff --git a/external/vpx-t2/table.yml b/external/vpx-t2/table.yml\nindex 6f0cf844..63df4711 100644\n--- a/external/vpx-t2/table.yml\n+++ b/external/vpx-t2/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"xHWfrWoj0i\"\n-backglassChecksum: \"0517D601DAA8703B72315DB3B2F9DAFF\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"0517D601DAA8703B72315DB3B2F9DAFF\"\n+  - \"2F5F2007A51E93B6DABBF352993BF337\"\n backglassNotes: \"Download - Terminator 2 (Williams 1991) full dmd.zip\"\n coloredROMChecksum: \"7F09F2105EF1E48F870D28B5BE73D286\"\n coloredROMNotes: \"Download 'Williams Terminator 2 -IPDB2524 - Update 2025 V1_0.pac'\""}
@@ -67,7 +67,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/table.ini", "diff": "diff --git a/external/vpx-t2/table.ini b/external/vpx-t2/table.ini\nindex 5f75d84a..f567ba58 100644\n--- a/external/vpx-t2/table.ini\n+++ b/external/vpx-t2/table.ini\n@@ -7,19 +7,26 @@ EmissionScale = 0.160000\n ScreenPlayerY = 15.950002\n ScreenPlayerZ = 99.951218\n JoyAddCredit2Key = 1\n+AAFactor = 0.85\n \n [TableOverride]\n ToneMapper = 0\n ViewCabMode = 2\n ViewCabScaleX = 1.299854\n-ViewCabScaleY = 1.126009\n+ViewCabScaleY = 1.117647\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 4.483798\n-ViewCabVOfs = -52.021000\n-ViewCabWindowTop = 370.541931\n+ViewCabVOfs = -49.905373\n+ViewCabWindowTop = 361.833954\n ViewCabWindowBot = 83.953217\n \n-[Standalone]\n-WindowRenderMode = 0\n-BackBufferScale = 0.416666\n\\ No newline at end of file\n+[TableOption]\n+Laser Mod = 1.000000\n+Skull Mod = 1.000000\n+Flippers = 1.000000\n+Dynamic Ball Shadows = 0.000000\n+Ambient Ball Shadows = 1.000000\n+Mech Volume = 0.800000\n+Ball Roll Volume = 0.500000\n+Ramp Roll Volume = 0.500000\n\\ No newline at end of file"},
@@ -185,7 +185,7 @@
       {
         "hash": "9fa29557e25aa47707a2ee0291e0dfabd01b030a",
         "date": "2025-03-30 20:09:39 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "Merge remote-tracking branch 'upstream/main'\n",
         "files": [
           {"status": "MM", "path": "external/vpx-t2/table.yml", "diff": "diff --cc external/vpx-t2/table.yml\nindex 753fc336,2bfb512f..b5268c9d\n--- a/external/vpx-t2/table.yml\n+++ b/external/vpx-t2/table.yml\n@@@ -1,15 -1,19 +1,19 @@@\n  ---\n--backglassVPSId: \"xHWfrWoj0i\"\n--backglassChecksum: \"0517D601DAA8703B72315DB3B2F9DAFF\"\n--backglassNotes: \"Download - Terminator 2 (Williams 1991) full dmd.zip\"\n--romVPSId: \"0zPMCWcA\"\n--romChecksum: \"F4D3810B45EFBAE942176C8BA5E1002C\"\n--romNotes: \"Download -  t2_l8.zip\"\n++backglassVPSId: 'xHWfrWoj0i'\n++backglassChecksum: '0517D601DAA8703B72315DB3B2F9DAFF'\n++backglassNotes: 'Download - Terminator 2 (Williams 1991) full dmd.zip'\n++romVPSId: '0zPMCWcA'\n++romChecksum: 'F4D3810B45EFBAE942176C8BA5E1002C'\n++romNotes: 'Download -  t2_l8.zip'\n  fps: 42\n--tableVPSId: \"BunvWvh9\"\n++tableVPSId: 'BunvWvh9'\n  tagline: \"I'll be back...\"\n  testers:\n--  - \"mcap\"\n -  - \"evilwraith\"\n -  - \"OminousOsie\"\n--vpxVPSId: \"3a3JZPkj\"\n--vpxChecksum: \"0CF8D81A3EAD67EE5952749637AC5E6A\"\n--tableNotes: \"Download - 1431544526_Terminator2(Williams1991)g5kv1.1d.vpx\"\n++  - 'mcap'\n++  - 'evilwraith'\n++  - 'OminousOsie'\n++vpxVPSId: '3a3JZPkj'\n++vpxChecksum: '0CF8D81A3EAD67EE5952749637AC5E6A'\n++tableNotes: 'Download - 1431544526_Terminator2(Williams1991)g5kv1.1d.vpx'\n+ applyFixes:\n -  - \"bass\"\n++  - 'bass'"}
@@ -240,7 +240,7 @@
       {
         "hash": "d14dd907a2aa6661a0033936d39abfacef43337e",
         "date": "2025-03-25 16:19:00 -0500",
-        "author": "MoxAssault",
+        "author": "Mox",
         "message": "INI and YML Updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/table.ini", "diff": "diff --git a/external/vpx-t2/table.ini b/external/vpx-t2/table.ini\nindex 2eb19853..5f75d84a 100644\n--- a/external/vpx-t2/table.ini\n+++ b/external/vpx-t2/table.ini\n@@ -6,15 +6,16 @@ DynamicDayNight = 0\n EmissionScale = 0.160000\n ScreenPlayerY = 15.950002\n ScreenPlayerZ = 99.951218\n+JoyAddCredit2Key = 1\n \n [TableOverride]\n ToneMapper = 0\n ViewCabMode = 2\n-ViewCabScaleX = 1.249985\n+ViewCabScaleX = 1.299854\n ViewCabScaleY = 1.126009\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.000000\n+ViewCabHOfs = 4.483798\n ViewCabVOfs = -52.021000\n ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 83.953217"},
@@ -295,7 +295,7 @@
       {
         "hash": "8b28904f1082ea97e0afc865f6509e575ed56086",
         "date": "2025-03-22 13:18:31 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "T2 VPSId updated\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/table.yml", "diff": "diff --git a/external/vpx-t2/table.yml b/external/vpx-t2/table.yml\nindex baf57a10..9ceb5468 100644\n--- a/external/vpx-t2/table.yml\n+++ b/external/vpx-t2/table.yml\n@@ -1,10 +1,7 @@\n ---\n-backglassVPSId: \"5Dsr1y57\"\n+backglassVPSId: \"xHWfrWoj0i\"\n backglassChecksum: \"0517D601DAA8703B72315DB3B2F9DAFF\"\n-backglassNotes: \n-coloredROMVPSId: \n-coloredROMChecksum: \n-fps: \"42\"\n+backglassNotes: \"Download 'Terminator 2 (Williams 1991) full dmd.zip'\"\n romVPSId: \"0zPMCWcA\"\n romChecksum: \"F4D3810B45EFBAE942176C8BA5E1002C\"\n tableVPSId: \"BunvWvh9\"\n@@ -13,5 +10,4 @@ testers:\n - \"mcap\"\n vpxVPSId: \"3a3JZPkj\"\n vpxChecksum: \"0CF8D81A3EAD67EE5952749637AC5E6A\"\n-tableNotes: \"Use 1431544526_Terminator2(Williams1991)g5kv1.1d.vpx\"\n-mainNotes: \n\\ No newline at end of file\n+tableNotes: \"Use 1431544526_Terminator2(Williams1991)g5kv1.1d.vpx\"\n\\ No newline at end of file\n"}
@@ -304,7 +304,7 @@
       {
         "hash": "3a114e3735092c6af2e6ece7b125bd75715eb8ce",
         "date": "2025-03-22 12:03:29 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "2 tables corrected\n\nT2 - changed FPS and added tester\nWhirlwind - Added Ominous Osie's optimizations\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/table.yml", "diff": "diff --git a/external/vpx-t2/table.yml b/external/vpx-t2/table.yml\nindex 13f95c1f..baf57a10 100644\n--- a/external/vpx-t2/table.yml\n+++ b/external/vpx-t2/table.yml\n@@ -4,13 +4,13 @@ backglassChecksum: \"0517D601DAA8703B72315DB3B2F9DAFF\"\n backglassNotes: \n coloredROMVPSId: \n coloredROMChecksum: \n-fps: \"60\"\n+fps: \"42\"\n romVPSId: \"0zPMCWcA\"\n romChecksum: \"F4D3810B45EFBAE942176C8BA5E1002C\"\n tableVPSId: \"BunvWvh9\"\n tagline: \"I'll be back...\"\n testers: \n-- \n+- \"mcap\"\n vpxVPSId: \"3a3JZPkj\"\n vpxChecksum: \"0CF8D81A3EAD67EE5952749637AC5E6A\"\n tableNotes: \"Use 1431544526_Terminator2(Williams1991)g5kv1.1d.vpx\""}
@@ -313,7 +313,7 @@
       {
         "hash": "ba2a2c075af30fc9a50fe27384dfae475bb4a45e",
         "date": "2025-03-20 20:51:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "sfII and T2\n",
         "files": [
           {"status": "A", "path": "external/vpx-t2/table.yml", "diff": "diff --git a/external/vpx-t2/table.yml b/external/vpx-t2/table.yml\nnew file mode 100644\nindex 00000000..13f95c1f\n--- /dev/null\n+++ b/external/vpx-t2/table.yml\n@@ -0,0 +1,17 @@\n+---\n+backglassVPSId: \"5Dsr1y57\"\n+backglassChecksum: \"0517D601DAA8703B72315DB3B2F9DAFF\"\n+backglassNotes: \n+coloredROMVPSId: \n+coloredROMChecksum: \n+fps: \"60\"\n+romVPSId: \"0zPMCWcA\"\n+romChecksum: \"F4D3810B45EFBAE942176C8BA5E1002C\"\n+tableVPSId: \"BunvWvh9\"\n+tagline: \"I'll be back...\"\n+testers: \n+- \n+vpxVPSId: \"3a3JZPkj\"\n+vpxChecksum: \"0CF8D81A3EAD67EE5952749637AC5E6A\"\n+tableNotes: \"Use 1431544526_Terminator2(Williams1991)g5kv1.1d.vpx\"\n+mainNotes: \n\\ No newline at end of file\n"}
@@ -340,7 +340,7 @@
       {
         "hash": "59883d3aecf977956d6459516dc0da66e1c45c84",
         "date": "2025-03-13 16:06:57 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.ini\n\nreduce back buffer scale. get dem FRAMES\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/table.ini", "diff": "diff --git a/external/vpx-t2/table.ini b/external/vpx-t2/table.ini\nindex 491d52bc..04f11064 100644\n--- a/external/vpx-t2/table.ini\n+++ b/external/vpx-t2/table.ini\n@@ -20,4 +20,5 @@ ViewCabWindowTop = 370.541931\n ViewCabWindowBot = 83.953217\n \n [Standalone]\n-WindowRenderMode = 0\n\\ No newline at end of file\n+WindowRenderMode = 0\n+BackBufferScale = 0.40\n\\ No newline at end of file\n"}
@@ -367,7 +367,7 @@
       {
         "hash": "6fb8fe6822a7941c4f119fa3b83088f7925704ec",
         "date": "2025-03-12 13:10:03 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.ini\n\nupdate t2 ini for dmd render mode\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/table.ini", "diff": "diff --git a/external/vpx-t2/table.ini b/external/vpx-t2/table.ini\nindex ff967f3a..491d52bc 100644\n--- a/external/vpx-t2/table.ini\n+++ b/external/vpx-t2/table.ini\n@@ -17,4 +17,7 @@ ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n ViewCabVOfs = -52.021000\n ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 83.953217\n\\ No newline at end of file\n+ViewCabWindowBot = 83.953217\n+\n+[Standalone]\n+WindowRenderMode = 0\n\\ No newline at end of file\n"}
@@ -376,7 +376,7 @@
       {
         "hash": "6ef494da8d943683036bd016cb29ca4eae704582",
         "date": "2025-03-12 10:22:41 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.ini\n\nupdate t2 table.ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/table.ini", "diff": "diff --git a/external/vpx-t2/table.ini b/external/vpx-t2/table.ini\nindex 247303df..ff967f3a 100644\n--- a/external/vpx-t2/table.ini\n+++ b/external/vpx-t2/table.ini\n@@ -1,17 +1,20 @@\n-[Player]\n-BallTrailStrength = 0.490196\n-AlphaRampAccuracy = 10\n-OverrideTableEmissionScale = 0\n-\n-[TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 0.803087\n-ViewCabScaleY = 0.988721\n-ViewCabScaleZ = 0.904995\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 90.786118\n-ViewCabPlayerY = 0.846003\n-ViewCabPlayerZ = -340.000000\n-ViewCabLookAt = 5.000000\n-ViewCabFOV = 42.999908\n-ViewCabLayback = 48.000000\n\\ No newline at end of file\n+[Player]\n+BallTrailStrength = 0.490196\n+AlphaRampAccuracy = 10\n+OverrideTableEmissionScale = 1\n+DynamicDayNight = 0\n+EmissionScale = 0.160000\n+ScreenPlayerY = 15.950002\n+ScreenPlayerZ = 99.951218\n+\n+[TableOverride]\n+ToneMapper = 0\n+ViewCabMode = 2\n+ViewCabScaleX = 1.249985\n+ViewCabScaleY = 1.126009\n+ViewCabScaleZ = 1.000000\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -52.021000\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 83.953217\n\\ No newline at end of file\n"}
@@ -407,7 +407,7 @@
       {
         "hash": "b6a672541fb0813aab7de76e8bf601ad71d01e40",
         "date": "2025-03-07 12:33:23 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update launcher.cfg\n\nt2 clarify\n",
         "files": [
           {"status": "M", "path": "external/vpx-t2/launcher.cfg", "diff": "diff --git a/external/vpx-t2/launcher.cfg b/external/vpx-t2/launcher.cfg\nindex 6ed1e19d..a79c6d2d 100644\n--- a/external/vpx-t2/launcher.cfg\n+++ b/external/vpx-t2/launcher.cfg\n@@ -1,5 +1,5 @@\n [buttonLabels]\n-dpadUp = \"Launch\"\n+dpadUp = \"Launch/Cannon\"\n ; dpadDown = \"Down\"\n ; dpadLeft = \"Left\"\n ; dpadRight = \"Right\"\n"}
@@ -416,7 +416,7 @@
       {
         "hash": "61ddb955a1e2052e2ac4be1472de7710585ed99b",
         "date": "2025-03-07 12:30:50 -0500",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Add launcher configs to multiple tables\n\nHumpty Dumpty > Right, Release ball\nAlice in Wonderland  > Right, Release ball\nThe Shadow > Right, Toggle ramps\nAttack From Mars > Up, Launcher\nT2 > Up, Launcher\nWWE Royal Rumble > Left, Right, Mag Saves (I think)\nJohnny Mnemonic >left and right change table colors. (Sorry don't know what the effect is called )\nWCS - Left is magnasave\nBlack Knight 2000 > Right, mag save\nBlack Knight: L/R nudge = L/R magna save\nBlack Knight 2000: L/R nudge = L/R magna save\nViper: L nudge = viper reverse, R nudge = viper strike\nMedusa: R nudge = shield post\n",
         "files": [
           {"status": "A", "path": "external/vpx-t2/launcher.cfg", "diff": "diff --git a/external/vpx-t2/launcher.cfg b/external/vpx-t2/launcher.cfg\nnew file mode 100644\nindex 00000000..6ed1e19d\n--- /dev/null\n+++ b/external/vpx-t2/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+dpadUp = \"Launch\"\n+; dpadDown = \"Down\"\n+; dpadLeft = \"Left\"\n+; dpadRight = \"Right\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start\"\n+; menu = \"Menu\"\n\\ No newline at end of file"}

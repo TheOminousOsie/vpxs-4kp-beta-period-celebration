@@ -4,7 +4,7 @@
       {
         "hash": "7801bbad4d531ea9ac89f86eadc3ea38234fa273",
         "date": "2026-08-26 16:46:53 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Fix Granny and the Gators coin button\n",
         "files": [
           {"status": "M", "path": "external/vpx-granny/table.ini", "diff": "diff --git a/external/vpx-granny/table.ini b/external/vpx-granny/table.ini\nindex c82526ef..3a526b28 100644\n--- a/external/vpx-granny/table.ini\n+++ b/external/vpx-granny/table.ini\n@@ -14,14 +14,15 @@ JoyLTiltKey = 0\n JoyRTiltKey = 0\n JoyFrameCount = 4\n JoyPMCoinDoor = 0\n-JoyCustom1Key                   = 200\n-JoyCustom2Key                   = 208\n-JoyCustom3Key                   = 203\n-JoyCustom4Key                   = 205\n-JoyCustom1                      = 6\n-JoyCustom2                      = 3\n-JoyCustom3                      = 8\n-JoyCustom4                      = 9\n+JoyAddCredit2Key = 1\n+JoyCustom1Key = 200\n+JoyCustom2Key = 208\n+JoyCustom3Key = 203\n+JoyCustom4Key = 205\n+JoyCustom1 = 6\n+JoyCustom2 = 3\n+JoyCustom3 = 8\n+JoyCustom4 = 9\n BallTrailStrength = 0.392157\n OverrideTableEmissionScale = 0\n \n"}
@@ -22,7 +22,7 @@
       {
         "hash": "213359f87074fc29b9096adedf5e5bba415cb4e5",
         "date": "2026-07-20 17:55:21 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Granny and the Gators\n\nUpdated VPXS required\nVPinballX_GL-10.8.0-5c6e9e6-1784580735-alp4k\n",
         "files": [
           {"status": "A", "path": "external/vpx-granny/launcher.cfg", "diff": "diff --git a/external/vpx-granny/launcher.cfg b/external/vpx-granny/launcher.cfg\nnew file mode 100644\nindex 00000000..a305266f\n--- /dev/null\n+++ b/external/vpx-granny/launcher.cfg\n@@ -0,0 +1,12 @@\n+[buttonLabels]\n+dpadUp = \"Fire\"\n+dpadDown = \"Special\"\n+dpadLeft = \"Paddle Left\"\n+dpadRight = \"Paddle Right\"\n+; leftFlipper = \"Left Flipper\"\n+; rightFlipper = \"Right Flipper\"\n+; leftNudge = \"Left Nudge\"\n+; rightNudge = \"Right Nudge\"\n+; nudge = \"Nudge\"\n+; start = \"Start / Menu Select\"\n+; menu = \"Menu\"\n\\ No newline at end of file"},
@@ -32,7 +32,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-granny/table.yml", "diff": "diff --git a/external/vpx-granny/table.yml b/external/vpx-granny/table.yml\nindex 3c88c379..d9c706a4 100644\n--- a/external/vpx-granny/table.yml\n+++ b/external/vpx-granny/table.yml\n@@ -1,8 +1,5 @@\n ---\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"8698a938231730deda29f18f8ea690c5\"\n-  - \"8F64026CC4EFBB0C619F52DB3CD0243F\"\n+backglassChecksum: \"8698a938231730deda29f18f8ea690c5\"\n backglassVPSId: \"x5b2yXrP\"\n enabled: false\n fps: 60\n@@ -12,8 +9,5 @@ tableVPSId: \"CcjhKd_m\"\n tableNotes: \"Requires granny.vbs in table folder\"\n testers:\n   - \"Wraith\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"f84232e947d499f2f015c0dcde877a8c\"\n-  - \"47D177B44AE4514C0C8927B3E88935BF\"\n+vpxChecksum: \"f84232e947d499f2f015c0dcde877a8c\"\n vpxVPSId: \"HYJXHFww\""}
@@ -41,7 +41,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-granny/table.yml", "diff": "diff --git a/external/vpx-granny/table.yml b/external/vpx-granny/table.yml\nindex d9c706a4..3c88c379 100644\n--- a/external/vpx-granny/table.yml\n+++ b/external/vpx-granny/table.yml\n@@ -1,5 +1,8 @@\n ---\n-backglassChecksum: \"8698a938231730deda29f18f8ea690c5\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"8698a938231730deda29f18f8ea690c5\"\n+  - \"8F64026CC4EFBB0C619F52DB3CD0243F\"\n backglassVPSId: \"x5b2yXrP\"\n enabled: false\n fps: 60\n@@ -9,5 +12,8 @@ tableVPSId: \"CcjhKd_m\"\n tableNotes: \"Requires granny.vbs in table folder\"\n testers:\n   - \"Wraith\"\n-vpxChecksum: \"f84232e947d499f2f015c0dcde877a8c\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"f84232e947d499f2f015c0dcde877a8c\"\n+  - \"47D177B44AE4514C0C8927B3E88935BF\"\n vpxVPSId: \"HYJXHFww\""}
@@ -50,7 +50,7 @@
       {
         "hash": "e0cd418fbfd1766b3c9e1b277399788caef4dc17",
         "date": "2026-07-17 01:08:53 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Granny and the Gators\n\ndisabled for now\n",
         "files": [
           {"status": "A", "path": "external/vpx-granny/README.md", "diff": "diff --git a/external/vpx-granny/README.md b/external/vpx-granny/README.md\nnew file mode 100644\nindex 00000000..c231becf\n--- /dev/null\n+++ b/external/vpx-granny/README.md\n@@ -0,0 +1,60 @@\n+# Granny and the Gators (Bally 1984)\n+\n+![Table Preview](../../images/HYJXHFww-preview.webp)\n+\n+<br>\n+\n+## *️⃣  Table Statistics\n+\n+| Backglass | DMD | ROM Required | Has Puppack | FPS |\n+|-----------|-----|-----|-----|-----|\n+| ✅ | ✅ | ✅ | ❌ | 60 |\n+\n+<br>\n+\n+**VPXS 4KP Testers:**\n+  - Wraith\n+\n+<br>\n+\n+---\n+\n+<br>\n+\n+## ❇️ Available in the Wizard! 🪄✨\n+\n+<br>\n+\n+This table is available through the Table Manager Wizard, which makes installation quick and easy!\n+\n+### How to install:\n+\n+1.  Open the **Table Manager**\n+2.  Click the **Add Table** button\n+3.  Select the **Wizard** tab\n+4.  Find and select this table from the dropdown menu: **`Granny and the Gators (Bally 1984)`**\n+5.  Follow the on-screen instructions to download and upload the required files\n+6. *\"\"*\n+\n+<br>\n+\n+Using the Wizard ensures you get the latest table version, have all required files (ROM, backglass, etc.), and have all the VPXS 4KP team's table tweaks and improvements!\n+\n+<br>\n+\n+__*We hope you enjoy!!*__\n+\n+*The VPXS 4KP Wizard team:*\n+<pre>\n+- n-i-x            - Mox              - Lloydbraun\n+- Boris Undead     - 'Coffee' Joe     - Ominous Osie 🌸\n+- Bla1ze           - evilwraith       - Silentkat        \n+- mrandromeda      - SScorpio         - pointdablame\n+</pre>\n+\n+\n+<br>\n+<br>\n+<br>\n+<br>\n+<br>"},

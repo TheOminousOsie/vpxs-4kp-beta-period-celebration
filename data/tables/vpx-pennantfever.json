@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-pennantfever/table.yml", "diff": "diff --git a/external/vpx-pennantfever/table.yml b/external/vpx-pennantfever/table.yml\nindex 2371efd6..24d1e4a0 100644\n--- a/external/vpx-pennantfever/table.yml\n+++ b/external/vpx-pennantfever/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"prnFmYEK8-\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"04cf395574d9832772c712282207f57a\"\n-  - \"29785AF5A8EC90E7DC97A09A52126BFE\"\n+backglassChecksum: \"04cf395574d9832772c712282207f57a\"\n backglassAuthorsOverride:\n   - \"CoffeeAtJoes\"\n backglassNotes: \"Download version 1.0\"\n@@ -19,8 +16,5 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"OminousOsie\"\n vpxVPSId: \"R1GOpnk4\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"9559f3acfb5f56eab7e83944ba42a031\"\n-  - \"CEEAFC24CFB97FCFB361843CA6D42816\"\n+vpxChecksum: \"9559f3acfb5f56eab7e83944ba42a031\"\n tableNotes: \"Download version 1.0\""}
@@ -22,7 +22,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-pennantfever/table.yml", "diff": "diff --git a/external/vpx-pennantfever/table.yml b/external/vpx-pennantfever/table.yml\nindex 7a17762b..2371efd6 100644\n--- a/external/vpx-pennantfever/table.yml\n+++ b/external/vpx-pennantfever/table.yml\n@@ -7,7 +7,7 @@ backglassChecksum:\n backglassAuthorsOverride:\n   - \"CoffeeAtJoes\"\n backglassNotes: \"Download version 1.0\"\n-fps: 56\n+fps: 57\n romChecksum: \"fefe4744771fecc3d2e6b5e568469611\"\n romNotes: \"Download version 'pfevr_p3'\"\n romUrlOverride: \"https://www.vpforums.org/index.php?app=downloads&showfile=513\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-pennantfever/table.yml", "diff": "diff --git a/external/vpx-pennantfever/table.yml b/external/vpx-pennantfever/table.yml\nindex e4b2945e..7a17762b 100644\n--- a/external/vpx-pennantfever/table.yml\n+++ b/external/vpx-pennantfever/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"prnFmYEK8-\"\n-backglassChecksum: \"04cf395574d9832772c712282207f57a\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"04cf395574d9832772c712282207f57a\"\n+  - \"29785AF5A8EC90E7DC97A09A52126BFE\"\n backglassAuthorsOverride:\n   - \"CoffeeAtJoes\"\n backglassNotes: \"Download version 1.0\"\n@@ -16,5 +19,8 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"OminousOsie\"\n vpxVPSId: \"R1GOpnk4\"\n-vpxChecksum: \"9559f3acfb5f56eab7e83944ba42a031\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"9559f3acfb5f56eab7e83944ba42a031\"\n+  - \"CEEAFC24CFB97FCFB361843CA6D42816\"\n tableNotes: \"Download version 1.0\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-pennantfever/table.ini", "diff": "diff --git a/external/vpx-pennantfever/table.ini b/external/vpx-pennantfever/table.ini\nindex 5b9b7328..4a693a0e 100644\n--- a/external/vpx-pennantfever/table.ini\n+++ b/external/vpx-pennantfever/table.ini\n@@ -1,3 +1,6 @@\n+[Standalone]\n+BackBufferScale = 0.666666\n+\n [Player]\n BallTrailStrength = 0.490196\n AlphaRampAccuracy = 10\n@@ -6,14 +9,15 @@ ScreenPlayerZ = 100.252731\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n+AAFactor = 0.90\n \n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.103665\n-ViewCabScaleY = 1.106485\n+ViewCabScaleX = 1.001012\n+ViewCabScaleY = 1.016952\n ViewCabScaleZ = 1.000000\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -78.933159\n-ViewCabWindowTop = 370.541931\n-ViewCabWindowBot = 138.953217\n\\ No newline at end of file\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 188.432068\n+ViewCabWindowBot = 105.613220"},
@@ -87,7 +87,7 @@
       {
         "hash": "f5a35aeb6c8f2667c8acdcccf6a58ce302f18b74",
         "date": "2025-04-29 17:29:11 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update table.ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-pennantfever/table.ini", "diff": "diff --git a/external/vpx-pennantfever/table.ini b/external/vpx-pennantfever/table.ini\nindex a160dbd8..5b9b7328 100644\n--- a/external/vpx-pennantfever/table.ini\n+++ b/external/vpx-pennantfever/table.ini\n@@ -1,19 +1,19 @@\n [Player]\n BallTrailStrength = 0.490196\n AlphaRampAccuracy = 10\n-ScreenPlayerX = 0.000000\n-ScreenPlayerY = 0.000000\n-ScreenPlayerZ = 70.000000\n+ScreenPlayerY = 19.278864\n+ScreenPlayerZ = 100.252731\n+ScreenWidth = 0.000000\n+ScreenHeight = 0.000000\n+ScreenInclination = 0.000000\n \n [TableOverride]\n-ViewCabMode = 0\n-ViewCabScaleX = 1.080000\n-ViewCabScaleY = 1.150000\n+ViewCabMode = 2\n+ViewCabScaleX = 1.103665\n+ViewCabScaleY = 1.106485\n ViewCabScaleZ = 1.000000\n-ViewCabRotation = 90.000000\n-ViewCabPlayerX = 59.265030\n-ViewCabPlayerY = 0.000000\n-ViewCabPlayerZ = -100.000000\n-ViewCabLookAt = 2.000006\n-ViewCabFOV = 20.000000\n-ViewCabLayback = 54.600071\n+ViewCabRotation = 180.000000\n+ViewCabHOfs = 0.000000\n+ViewCabVOfs = -78.933159\n+ViewCabWindowTop = 370.541931\n+ViewCabWindowBot = 138.953217\n\\ No newline at end of file\n"}
@@ -96,7 +96,7 @@
       {
         "hash": "16cd903142c48f545c14db957d75c382ac9bdce6",
         "date": "2025-04-29 17:17:50 -0400",
-        "author": "Brandon",
+        "author": "Boris",
         "message": "Update Pennant Fever and Wrath of Olympus\n",
         "files": [
           {"status": "M", "path": "external/vpx-pennantfever/table.ini", "diff": "diff --git a/external/vpx-pennantfever/table.ini b/external/vpx-pennantfever/table.ini\nindex bdb9171a..a160dbd8 100644\n--- a/external/vpx-pennantfever/table.ini\n+++ b/external/vpx-pennantfever/table.ini\n@@ -17,6 +17,3 @@ ViewCabPlayerZ = -100.000000\n ViewCabLookAt = 2.000006\n ViewCabFOV = 20.000000\n ViewCabLayback = 54.600071\n-\n-[Standalone]\n-BackBufferScale = 0.666666\n\\ No newline at end of file"}

@@ -4,7 +4,7 @@
       {
         "hash": "9a3129658aad23e056f315ea509e1bdfcf9ccb22",
         "date": "2026-09-01 10:43:06 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Hook Backglass update\n",
         "files": [
           {"status": "M", "path": "external/vpx-hook/table.yml", "diff": "diff --git a/external/vpx-hook/table.yml b/external/vpx-hook/table.yml\nindex b8e1d735..c5ac3840 100644\n--- a/external/vpx-hook/table.yml\n+++ b/external/vpx-hook/table.yml\n@@ -1,5 +1,6 @@\n ---\n-backglassChecksum: \"EB37C7760616089CE3E36D2AE56452DF\"\n+backglassChecksum: \"DC98D5A2EBADE586F2A0D48C516D3E4C\"\n+backglassNotes: \"Download Version 3.0\"\n backglassVPSId: \"Tq9w-QZkLW\"\n diffAuthorsOverride:\n   - \"capnclaw\"\n"}

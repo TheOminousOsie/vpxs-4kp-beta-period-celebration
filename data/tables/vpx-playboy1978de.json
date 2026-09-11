@@ -13,7 +13,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-playboy1978de/table.yml", "diff": "diff --git a/external/vpx-playboy1978de/table.yml b/external/vpx-playboy1978de/table.yml\nindex eb2a7659..f660c094 100644\n--- a/external/vpx-playboy1978de/table.yml\n+++ b/external/vpx-playboy1978de/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassBundled: true\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"40C4BAEFC422C340EA52F66A638607C5\"\n-  - \"C396CDA4360F3804E14F447109AEC526\"\n+backglassChecksum: \"40C4BAEFC422C340EA52F66A638607C5\"\n backglassNotes: \"Download 'Playboy (Bally 1978) B2S.zip', use 'Playboy (Bally 1978) 4.0.directB2S'\"\n fps: 60\n romChecksum: \"90810C525E3B78EA87EBBFA7D54228C1\"\n@@ -15,8 +12,5 @@ tableVPSId: \"4TmYoWjO\"\n testers:\n   - \"Wraith\"\n   - \"CoffeeAtJoes\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"828BA312735FC19DF9CCAE6551FCFC45\"\n-  - \"6BC40360F6B5FF42A5570793635C8737\"\n+vpxChecksum: \"828BA312735FC19DF9CCAE6551FCFC45\"\n vpxVPSId: \"QTmGXiYi\""}
@@ -22,7 +22,7 @@
       {
         "hash": "c42d1116fc5caba09a19f1e3f86642f037f807e0",
         "date": "2026-07-17 19:48:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "FPS updates\n",
         "files": [
           {"status": "M", "path": "external/vpx-playboy1978de/table.yml", "diff": "diff --git a/external/vpx-playboy1978de/table.yml b/external/vpx-playboy1978de/table.yml\nindex 18c1d944..eb2a7659 100644\n--- a/external/vpx-playboy1978de/table.yml\n+++ b/external/vpx-playboy1978de/table.yml\n@@ -5,7 +5,7 @@ backglassChecksum:\n   - \"40C4BAEFC422C340EA52F66A638607C5\"\n   - \"C396CDA4360F3804E14F447109AEC526\"\n backglassNotes: \"Download 'Playboy (Bally 1978) B2S.zip', use 'Playboy (Bally 1978) 4.0.directB2S'\"\n-fps: 52\n+fps: 60\n romChecksum: \"90810C525E3B78EA87EBBFA7D54228C1\"\n romNotes: \"Download playboyb.zip\"\n romVPSId: \"vReHOmteHm\""}
@@ -31,7 +31,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-playboy1978de/table.yml", "diff": "diff --git a/external/vpx-playboy1978de/table.yml b/external/vpx-playboy1978de/table.yml\nindex fb76a226..18c1d944 100644\n--- a/external/vpx-playboy1978de/table.yml\n+++ b/external/vpx-playboy1978de/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassBundled: true\n-backglassChecksum: \"40C4BAEFC422C340EA52F66A638607C5\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"40C4BAEFC422C340EA52F66A638607C5\"\n+  - \"C396CDA4360F3804E14F447109AEC526\"\n backglassNotes: \"Download 'Playboy (Bally 1978) B2S.zip', use 'Playboy (Bally 1978) 4.0.directB2S'\"\n fps: 52\n romChecksum: \"90810C525E3B78EA87EBBFA7D54228C1\"\n@@ -12,5 +15,8 @@ tableVPSId: \"4TmYoWjO\"\n testers:\n   - \"Wraith\"\n   - \"CoffeeAtJoes\"\n-vpxChecksum: \"828BA312735FC19DF9CCAE6551FCFC45\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"828BA312735FC19DF9CCAE6551FCFC45\"\n+  - \"6BC40360F6B5FF42A5570793635C8737\"\n vpxVPSId: \"QTmGXiYi\""}
@@ -40,7 +40,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-playboy1978de/table.ini", "diff": "diff --git a/external/vpx-playboy1978de/table.ini b/external/vpx-playboy1978de/table.ini\nindex cb291c93..0421203f 100644\n--- a/external/vpx-playboy1978de/table.ini\n+++ b/external/vpx-playboy1978de/table.ini\n@@ -1,14 +1,14 @@\n+[Standalone]\n+PinMAMEWindow = 0\n+B2SHideB2SDMD = 1\n+\n [TableOverride]\n ViewCabMode = 2\n-ViewCabScaleX = 1.169850\n-ViewCabScaleY = 1.108015\n-ViewCabScaleZ = 1.000000\n+ViewCabScaleX = 1.147486\n+ViewCabScaleY = 0.999521\n+ViewCabScaleZ = 0.891506\n ViewCabRotation = 180.000000\n ViewCabHOfs = 0.000000\n-ViewCabVOfs = -90.223541\n-ViewCabWindowTop = 246.160873\n-ViewCabWindowBot = 83.953270\n-\n-\n-[Player]\n-AAFactor = .95\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 55.757862\n+ViewCabWindowBot = 56.425274\n\\ No newline at end of file"},
@@ -59,7 +59,7 @@
       {
         "hash": "3b0a3e69b665bbb9b261274119589b5d4f163931",
         "date": "2025-11-10 23:03:29 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Playboy 1978 wiz\n\nPlayboy (Bally 1978)\nPlayboy (Bally 1978) Definitive Edition\nPlayboy (Bally 1978) Definitive Edition Nude Mod\n",
         "files": [
           {"status": "A", "path": "external/vpx-playboy1978de/README.md", "diff": "diff --git a/external/vpx-playboy1978de/README.md b/external/vpx-playboy1978de/README.md\nnew file mode 100644\nindex 00000000..eef213aa\n--- /dev/null\n+++ b/external/vpx-playboy1978de/README.md\n@@ -0,0 +1,33 @@\n+﻿# Playboy (Bally 1978)\n+\n+![Table Preview](../../images/vpx-playboy1978.png)\n+\n+Author: [HSM](https://www.vpforums.org/index.php?showuser=78127)  \n+Version: 1.0  \n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=13571)\n+\n+**DirectB2S**\n+\n+Author: [HiRez00](https://www.vpforums.org/index.php?showuser=125278)  \n+Version: 1.0  \n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=15396)\n+\n+**ROM**\n+\n+Download: [VPForums](https://www.vpforums.org/index.php?app=downloads&showfile=701)\n+\n+## Status \n+\n+Minimum VPX Standalone build: 10.8.0-1989-a764013\n+\n+| Playfield | Controls | Backglass | DMD | ROM Required | FPS | \n+|-----------|----------|-----------|-----|--------------|-----|\n+| :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | 60 |\n+\n+## Instructions\n+\n+- Install this table through the Table Manager, using the `Add Table` > `Manual` page\n+- If you need help, more information found on the wiki: [TM - Add Table - Manual](https://github.com/LegendsUnchained/vpx-standalone-alp4k/wiki/%5B04%5D-%F0%9F%A7%A1-TM-%E2%80%90-Other-Features#add-table---manual)\n+- If the table requires any additional files/steps, click `GO TO TABLE` after adding, and the TM will open to the relevant table folder.\n+- Party like Hef. 👯‍♂️\n+"},

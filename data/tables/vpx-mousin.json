@@ -4,7 +4,7 @@
       {
         "hash": "546749ff3a3c6a74942c28d68a2305c7d18883f7",
         "date": "2026-09-03 14:47:41 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Updates\n\nAdd PBW23 to BTILC testers\nAdd changed art for Mousin' Around\nChange Tee'd Off to not use .pal and just use built-in light change, change brightness.\n",
         "files": [
           {"status": "M", "path": "external/vpx-mousin/dmd.png"},
@@ -23,7 +23,7 @@
       {
         "hash": "f6361a233628640faeb4a7aac1ff943524c901a1",
         "date": "2026-07-17 22:08:52 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "revert checksum changes\n",
         "files": [
           {"status": "M", "path": "external/vpx-mousin/table.yml", "diff": "diff --git a/external/vpx-mousin/table.yml b/external/vpx-mousin/table.yml\nindex 4f2a9cd7..b51471d9 100644\n--- a/external/vpx-mousin/table.yml\n+++ b/external/vpx-mousin/table.yml\n@@ -1,9 +1,6 @@\n ---\n backglassVPSId: \"gkFcS4tRQG\"\n-backglassArchiveFormat: \"zip\"\n-backglassChecksum:\n-  - \"60b282db76ed446a70a32e238b45b121\"\n-  - \"028C43055DD2D6C4844A1A084FA26E02\"\n+backglassChecksum: \"60b282db76ed446a70a32e238b45b121\"\n backglassNotes: \"Mousin Around (Bally 1989) b2s authentic 2.0\"\n fps: 55\n romVPSId: \"uTb3zlcm\"\n@@ -14,10 +11,7 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"Sscorpio\"\n vpxVPSId: \"zfBJdPcA\"\n-vpxArchiveFormat: \"zip\"\n-vpxChecksum:\n-  - \"b914bac4ab0a196c2e8b5adae9bbbe8e\"\n-  - \"72050D4B45648744040503E72CF4A478\"\n+vpxChecksum: \"b914bac4ab0a196c2e8b5adae9bbbe8e\"\n tableNotes: \"Mousin' Around! (Bally 1989) 1.1\"\n mainNotes: >-\n   Note: There is a known issue regarding the 1-2-3"}
@@ -32,7 +32,7 @@
       {
         "hash": "1bc79afe48cd14e7e518ad36e6537399e53cdf96",
         "date": "2026-07-17 16:20:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "compressed file checksums\n\nadded compressed file checksums\n",
         "files": [
           {"status": "M", "path": "external/vpx-mousin/table.yml", "diff": "diff --git a/external/vpx-mousin/table.yml b/external/vpx-mousin/table.yml\nindex b51471d9..4f2a9cd7 100644\n--- a/external/vpx-mousin/table.yml\n+++ b/external/vpx-mousin/table.yml\n@@ -1,6 +1,9 @@\n ---\n backglassVPSId: \"gkFcS4tRQG\"\n-backglassChecksum: \"60b282db76ed446a70a32e238b45b121\"\n+backglassArchiveFormat: \"zip\"\n+backglassChecksum:\n+  - \"60b282db76ed446a70a32e238b45b121\"\n+  - \"028C43055DD2D6C4844A1A084FA26E02\"\n backglassNotes: \"Mousin Around (Bally 1989) b2s authentic 2.0\"\n fps: 55\n romVPSId: \"uTb3zlcm\"\n@@ -11,7 +14,10 @@ testers:\n   - \"CoffeeAtJoes\"\n   - \"Sscorpio\"\n vpxVPSId: \"zfBJdPcA\"\n-vpxChecksum: \"b914bac4ab0a196c2e8b5adae9bbbe8e\"\n+vpxArchiveFormat: \"zip\"\n+vpxChecksum:\n+  - \"b914bac4ab0a196c2e8b5adae9bbbe8e\"\n+  - \"72050D4B45648744040503E72CF4A478\"\n tableNotes: \"Mousin' Around! (Bally 1989) 1.1\"\n mainNotes: >-\n   Note: There is a known issue regarding the 1-2-3"}
@@ -41,7 +41,7 @@
       {
         "hash": "3f7a13321adc1449a50a78751d8d393316bb64cf",
         "date": "2026-07-11 13:51:12 -0400",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mega PR\n\nAdd altsound support to table.yml schema and vpsdb resolver\n\nAdds the full altSound field group (vpsid, urlOverride/versionOverride,\nauthorsOverride, checksum, notes, bundled, archiveFormat, archiveRoot) to\ntable.yml, resolves it in vpsdb.py (also fixes a latent KeyError where\naltSoundVersion was read but never initialized), and validates it in\nvalidate-table-yaml.py. Enables altsound on vpx-cactuscanyon.\n\nBaby Pac-Man\n\nUpdate Golden Cue and Sharkey's entries\n\nRefresh Golden Cue metadata, add the new Sharkey's Shootout package with README, table config, NVRAM, and preview image, and remove the old `vpx-shrkysht` assets now superseded by the renamed entry.\n\nAdd Diablo2\n\nPause menu change\n\nTAF backglass change\n\n2 tables\n\nEnabled John Wick and Star Trek 25th\n\nMegaPR\n\nUpdates everything.\n\nRevert AAFactor\n\nback to 0.95\n\nSaner defaults\n\nAdds ShowFPS\nAAFactor defaults to 1\n\nFix Big Buck Hunter color\n\nAdd Zelda (Original 2015) table package\n\nIntroduce a new `external/vpx-zelda` table entry for The Legend of Zelda (Original 2015), including Wizard-facing docs, table metadata (`table.yml`), and tuned VPX player/cab settings (`table.ini`). Adds the launcher and preview artwork so the table is fully represented in the manager with its required PuP-Pack download details and tester attribution.\n\nUpdates\n\nPal/VNI\n\nPal/VNI\n\nAdd local manifest tooling; share process_title; starwars additionalRoms\n\n- generate-manifest.py: render a table's wizard manifest locally (no release),\n  reusing vpsdb rendering. Move process_title into vpsdb.py and call it from\n  generate-release.py so both stay in lockstep.\n- scripts/generate-test-manifest.py: write manifest.json + the table's config\n  zip to a gitignored manifest-tester/ folder for the Manifest Tester; fail if\n  the GL structure (launcher image) is incomplete.\n- vpx-starwars: new primary ROM and an additionalRoms entry.\n\nfeat: add support for additional roms\n\nStar Wars Multirom take 2\n\nStar Wars Multirom\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n",
         "files": [
           {"status": "M", "path": "external/vpx-mousin/table.ini", "diff": "diff --git a/external/vpx-mousin/table.ini b/external/vpx-mousin/table.ini\nindex 268919bf..fc4ff7d4 100644\n--- a/external/vpx-mousin/table.ini\n+++ b/external/vpx-mousin/table.ini\n@@ -1,17 +1,19 @@\n [Standalone]\n-BackBufferScale = 0.355729\n+PinMAMEWindow = 0\n+B2SHideB2SDMD = 1\n \n [Player]\n BallTrailStrength = 0.501961\n JoyAddCredit2Key = 1\n OverrideTableEmissionScale = 1\n-ScreenPlayerY = 19.983887\n-ScreenPlayerZ = 100.029572\n+ScreenPlayerY = 14.998085\n+ScreenPlayerZ = 90.002853\n ScreenWidth = 0.000000\n ScreenHeight = 0.000000\n ScreenInclination = 0.000000\n DynamicDayNight = 0\n EmissionScale = 0.334235\n+AAFactor = 0.80\n \n \n [TableOverride]\n@@ -20,9 +22,9 @@ ViewCabScaleX = 1.210431\n ViewCabScaleY = 1.029604\n ViewCabScaleZ = 1.043933\n ViewCabRotation = 180.000000\n-ViewCabHOfs = 0.782900\n-ViewCabVOfs = 4.963874\n-ViewCabWindowTop = 166.672882\n-ViewCabWindowBot = 93.246162\n+ViewCabHOfs = 0.008900\n+ViewCabVOfs = 0.000000\n+ViewCabWindowTop = 175.319656\n+ViewCabWindowBot = 64.709167\n ToneMapper = 0\n Difficulty = 0.100295"},
@@ -51,7 +51,7 @@
       {
         "hash": "8487c32499cc7335d2756ef048b862accbe42ca0",
         "date": "2025-11-04 16:40:08 -0500",
-        "author": "evilwraith",
+        "author": "Wraith",
         "message": "Mousin Around wiz update\n\nFree Play nvram\nUpdated ini\n",
         "files": [
           {"status": "M", "path": "external/vpx-mousin/nvram.nv"},
