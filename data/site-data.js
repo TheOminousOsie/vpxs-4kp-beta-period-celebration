@@ -15,6 +15,15 @@ window.SITE_DATA = {
     { value: "30,249", label: "file changes added, modified or removed" }
   ],
 
+  kpiWiki: [
+    { value: "19 JUL 2024", label: "the wiki's first real commit — SScorpio00, “Initial Home page”" },
+    { value: "26 FEB 2025", label: "OminousOsie's first wiki commit" },
+    { value: "1,220", label: "total wiki commits, all time" },
+    { value: "973", label: "of those commits are OminousOsie's — about 80%" },
+    { value: "13 MAR 2025", label: "biggest day: 33 commits, ~3,860 lines changed across 19 markdown files, almost all additions, by OminousOsie in one 25-minute burst" },
+    { value: "68,365", label: "words written across the wiki's lifetime — a 200+ page novel's worth" }
+  ],
+
   monthlyCommits: {
     max: 1125,
     data: [
@@ -149,8 +158,10 @@ window.SITE_DATA = {
     { date: "JAN 2025", who: "16 new names", title: "The largest intake of the beta", body: "Sixteen people made their first commit in January, more than any other month. Volume jumped back to 709 commits after a quiet December.", meta: "16 first-time contributors", color: "#ffb84d" },
     { date: "6 FEB 2025", who: "'Coffee' Joe", title: "'Coffee' Joe joins the mod team", body: "Promoted to moderator on Mox's Game Room — one more steady hand keeping the community running while the wizard was just getting off the ground.", meta: "Mox's Game Room · moderator", color: "#ffb3d1" },
     { date: "20 — 26 FEB 2025", who: "OminousOsie", title: "World Cup Soccer ⚽🏆 — the first VPXS tournament", body: "Four players signed up, not really knowing what they were starting. OminousOsie ran the whole thing over a single week — every VPXS tournament since has been measured against it.", meta: "4 participants · first VPXS tournament", color: "#ffb84d" },
+    { date: "26 FEB 2025", who: "OminousOsie", title: "OminousOsie starts writing the wiki", body: "One quiet commit, squeezed in during tournament week. It wouldn't stay quiet for long — this is the start of a habit that never really stopped.", meta: "OminousOsie · first wiki commit", color: "#ffb84d" },
     { date: "3 MAR 2025", who: "Dr Wraith", title: "Second installation guide", body: "The beta had grown enough since the first guide to need a sequel — an updated walkthrough for an install process that had moved on.", meta: "5,692 views · installation guide", color: "#2c8fa3" },
     { date: "10 MAR 2025", who: "OminousOsie", title: "Moved all files to new file naming structure", body: "The single largest commit in the history: 5,900 files touched in one go. Everything downstream — the wizard manifest, the catalog, the installer — depends on this rename.", meta: "5,900 files changed · largest commit", color: "#ffb84d" },
+    { date: "13 MAR 2025", who: "OminousOsie", title: "The busiest day the wiki ever had", body: "33 commits and roughly 3,860 lines across 19 markdown files, almost all in one 25-minute burst — OminousOsie sat down to write and didn't stop until the wiki looked like a different site.", meta: "33 commits · 19 files · ~3,860 lines", color: "#ffb84d" },
     { date: "20 — 23 MAR 2025", who: "n-i-x, OminousOsie", title: "The wizard gets formalised", body: "CODEOWNERS for wizard configs, a configVersion in the metadata, quoted JSON values, testers named on every table. The catalog stops being a folder and becomes a contract. The 23rd closed at 97 commits — the busiest day of the entire beta.", meta: "97 commits on 23 Mar · busiest single day", color: "#4de3ff" },
     { date: "24 MAR 2025", who: "v0.1.5", title: "First tagged release", body: "Three quick tags in two days to get the release pipeline working. No tables yet — just proof that the thing could ship.", meta: "v0.1.5, v0.1.6, v0.1.7", color: "#2c8fa3" },
     { date: "29 MAR 2025 · 23:22", who: "v1.0.0", title: "Wizard Released", body: "The Add Table wizard goes live with 61 tables ready to install. From here on, adding a table means answering a few questions instead of hand-editing INI files — and every table that follows arrives through it.", meta: "v1.0.0 · 61 tables at launch", color: "#ffb3d1", featured: true },

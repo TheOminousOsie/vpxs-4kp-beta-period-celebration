@@ -194,6 +194,7 @@
   function renderAllCharts() {
     renderKpiStrip(document.getElementById("kpiOverview"), D.kpiOverview);
     renderKpiStrip(document.getElementById("kpiTimeline"), D.kpiTimeline);
+    renderKpiStrip(document.getElementById("kpiWiki"), D.kpiWiki);
     renderMonthlyChart();
     renderLeaderboard(document.getElementById("contributorRows"), D.contributors.data, D.contributors.max,
       (i) => i < 2 ? "var(--pink)" : i < 5 ? "var(--pink-mid)" : "var(--pink-deep)", true);
