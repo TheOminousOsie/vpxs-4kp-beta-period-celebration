@@ -286,6 +286,9 @@ button { font-family: inherit; cursor: pointer; }
 }
 .letter-btn:hover { border-color: var(--cyan); }
 .letter-btn.selected { color: var(--on-cyan); background: var(--cyan); border-color: var(--cyan); }
+.letter-btn.fav-btn { color: var(--amber); border-color: var(--amber-deep); font-size: 15px; }
+.letter-btn.fav-btn:hover { border-color: var(--amber); background: rgba(255,184,77,.1); }
+.letter-btn.fav-btn.selected { color: #1a1400; background: var(--amber); border-color: var(--amber); }
 .result-count { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: .08em; color: var(--ink-faint); }
 
 .table-list { padding: 0 56px 60px; border-top: 1px solid var(--rule); }

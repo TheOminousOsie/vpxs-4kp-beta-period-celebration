@@ -4,9 +4,18 @@
   }[c]));
   const fmt = (n) => Number(n || 0).toLocaleString("en-US");
 
+  const FAVOURITES = [
+    "vpx-deadpool", "vpx-spacecadetge", "vpx-pennantfever", "vpx-taf",
+    "vpx-jpattackfrommars", "vpx-fireball", "vpx-baywatch", "vpx-tna",
+    "vpx-godzilla", "vpx-demoman", "vpx-id4", "vpx-indianajonestpa",
+    "vpx-mousin", "vpx-hardbody", "vpx-cftbl", "vpx-sopranos",
+    "vpx-bop", "vpx-xfiles", "vpx-tommy", "vpx-dcrystalpup", "vpx-2001"
+  ];
+
   let INDEX = [];
   let query = "";
   let letter = "all";
+  let favMode = false;
   let openTable = null;
   let historyOpen = false;
   const openCommits = new Set();
@@ -29,21 +38,34 @@
     }
     const options = ["all", ...(present.has("0-9") ? ["0-9"] : []), ...letters];
     const el = document.getElementById("letterFilter");
-    el.innerHTML = options.map(opt => {
+    const starHtml = `<button class="letter-btn fav-btn${favMode ? " selected" : ""}" id="favToggle" title="Team favourites" aria-pressed="${favMode}">★</button>`;
+    el.innerHTML = starHtml + options.map(opt => {
       const label = opt === "all" ? "All" : (opt === "0-9" ? "0–9" : opt);
-      return `<button class="letter-btn${opt === letter ? " selected" : ""}" data-letter="${opt}">${label}</button>`;
+      return `<button class="letter-btn${(!favMode && opt === letter) ? " selected" : ""}" data-letter="${opt}">${label}</button>`;
     }).join("");
-    el.querySelectorAll(".letter-btn").forEach(btn => {
+    document.getElementById("favToggle").addEventListener("click", () => {
+      favMode = !favMode;
+      query = "";
+      document.getElementById("catalogSearch").value = "";
+      buildLetterFilter();
+      renderList();
+    });
+    el.querySelectorAll(".letter-btn[data-letter]").forEach(btn => {
       btn.addEventListener("click", () => {
         letter = btn.dataset.letter;
         query = "";
+        favMode = false;
         document.getElementById("catalogSearch").value = "";
+        buildLetterFilter();
         renderList();
       });
     });
   }
 
   function filteredEntries() {
+    if (favMode) {
+      return FAVOURITES.map(slug => INDEX.find(e => e.slug === slug)).filter(Boolean);
+    }
     if (query.trim()) {
       const q = query.trim().toLowerCase();
       return INDEX.filter(e => (e.slug + " " + e.name).toLowerCase().includes(q));
@@ -59,7 +81,8 @@
     const n = list.length;
     const noun = n === 1 ? "TABLE" : "TABLES";
     let suffix = "";
-    if (query.trim()) suffix = ` MATCHING “${query.trim()}”`;
+    if (favMode) suffix = ` · TEAM FAVOURITES ★`;
+    else if (query.trim()) suffix = ` MATCHING “${query.trim()}”`;
     else if (letter !== "all") suffix = ` UNDER ${letter === "0-9" ? "0–9" : letter.toUpperCase()}`;
     el.textContent = `${fmt(n)} ${noun}${suffix}`;
   }
@@ -324,6 +347,7 @@
     document.getElementById("catalogSearch").addEventListener("input", (e) => {
       query = e.target.value;
       letter = "all";
+      favMode = false;
       buildLetterFilter();
       renderList();
     });
