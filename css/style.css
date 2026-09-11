@@ -518,3 +518,30 @@ body.lightbox-locked { overflow: hidden; }
   .fireworks-toggle { bottom: 14px; right: 14px; padding: 8px 12px; gap: 8px; }
   .fireworks-toggle-label { font-size: 10px; }
 }
+
+/* ---------- Cross-page CTA cards ---------- */
+.page-cta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 22px; }
+.page-cta-card {
+  display: block; width: 100%; text-align: left; box-sizing: border-box;
+  background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--cyan);
+  border-radius: 14px; padding: 28px 28px 26px; cursor: pointer; font-family: 'Space Grotesk', sans-serif; color: inherit;
+  transition: transform .25s cubic-bezier(.34,1.56,.64,1), border-color .25s ease, background .25s ease;
+}
+.page-cta-card:hover { transform: translateY(-5px); border-color: var(--border-accent); background: var(--surface-raised); }
+.page-cta-card.pink { border-top-color: var(--pink); }
+.page-cta-card.amber { border-top-color: var(--amber); }
+.page-cta-eyebrow {
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--cyan); margin-bottom: 14px;
+}
+.page-cta-card.pink .page-cta-eyebrow { color: var(--pink); }
+.page-cta-card.amber .page-cta-eyebrow { color: var(--amber); }
+.page-cta-card h3 { font-size: 22px; font-weight: 700; letter-spacing: -.01em; margin: 0 0 10px; }
+.page-cta-card p { font-size: 14px; color: var(--ink-subtle); line-height: 1.6; margin: 0 0 20px; max-width: 480px; }
+.page-cta-arrow {
+  font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; color: var(--cyan);
+  display: inline-flex; align-items: center; gap: 6px; transition: gap .2s ease;
+}
+.page-cta-card.pink .page-cta-arrow { color: var(--pink); }
+.page-cta-card.amber .page-cta-arrow { color: var(--amber); }
+.page-cta-card:hover .page-cta-arrow { gap: 10px; }
