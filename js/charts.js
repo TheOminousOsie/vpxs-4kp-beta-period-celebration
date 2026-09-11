@@ -159,7 +159,9 @@
   }
 
   function eventBody(ev) {
-    return esc(ev.body).replace(/BOOM!/g, `<span class="text-red">BOOM!</span>`);
+    return esc(ev.body)
+      .replace(/BOOM!/g, `<span class="text-red">BOOM!</span>`)
+      .replace(/Baywatch/g, `<span class="text-cyan">Baywatch</span>`);
   }
 
   function renderEventSpine() {
