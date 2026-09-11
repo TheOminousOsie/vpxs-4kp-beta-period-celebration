@@ -128,6 +128,7 @@ button { font-family: inherit; cursor: pointer; }
 .num-accent.amber { color: var(--amber); }
 .num-accent.pink { color: var(--pink); }
 .text-pink { color: var(--pink); }
+.text-red { color: #ff4d4d; font-weight: 700; }
 .eyebrow {
   font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500;
   letter-spacing: .16em; color: var(--cyan); margin-bottom: 22px; text-transform: uppercase;

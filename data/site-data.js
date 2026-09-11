@@ -139,6 +139,7 @@ window.SITE_DATA = {
 
   timelineEvents: [
     { date: "14 JUL 2024", who: "n-i-x", title: "Initial commit", body: "Two files. By the end of the month thirteen people had pushed something — the core group that would carry the whole beta.", meta: "e70cbcb · 266 commits in July 2024", color: "#4de3ff" },
+    { date: "16 JUL 2024", who: "n-i-x", title: "Deadpool joins as the first table", body: "The first real table config lands in the repo — all 323 other wiz tables follow from this one. BOOM!", meta: "vpx-deadpool · first table added", color: "#4de3ff" },
     { date: "16 JUL 2024", who: "PDubs, n-i-x", title: "First VPXS showcase stream", body: "Two days after the initial commit, PDubs and n-i-x sat down and showed the beta off live — 16,473 views before the project had even shipped a release.", meta: "16,473 views · showcase stream", color: "#4de3ff" },
     { date: "AUG 2024", who: "27 contributors", title: "The busiest month of the beta", body: "1,125 commits in thirty-one days, peaking at 88 on the 31st. This is where the launcher, the file layout and the config conventions got built.", meta: "1,125 commits · busiest single month", color: "#4de3ff" },
     { date: "23 AUG 2024", who: "Dr Wraith", title: "First installation guide goes up", body: "In the middle of the busiest month of the beta, testers finally got a proper how-to — Dr Wraith walking new arrivals through setup step by step.", meta: "7,521 views · installation guide", color: "#2c8fa3" },

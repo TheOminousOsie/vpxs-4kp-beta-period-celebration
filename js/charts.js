@@ -158,6 +158,10 @@
     return `<a href="${esc(ev.link)}" target="_blank" rel="noopener">${esc(ev.meta)}</a>`;
   }
 
+  function eventBody(ev) {
+    return esc(ev.body).replace(/BOOM!/g, `<span class="text-red">BOOM!</span>`);
+  }
+
   function renderEventSpine() {
     const el = document.getElementById("eventSpine");
     el.innerHTML = D.timelineEvents.map(ev => {
@@ -168,7 +172,7 @@
             <div class="event-dot" style="background:${ev.color}"></div>
             <div class="event-eyebrow">★ MILESTONE</div>
             <div class="event-title">${esc(ev.title)}</div>
-            <p class="event-body">${esc(ev.body)}</p>
+            <p class="event-body">${eventBody(ev)}</p>
             <div class="event-meta mono">${eventMeta(ev)}</div>
           </div>
         </div>`;
@@ -178,7 +182,7 @@
         <div class="event-right">
           <div class="event-dot" style="background:${ev.color}"></div>
           <div class="event-title">${esc(ev.title)}</div>
-          <p class="event-body">${esc(ev.body)}</p>
+          <p class="event-body">${eventBody(ev)}</p>
           <div class="event-meta mono">${eventMeta(ev)}</div>
         </div>
       </div>`;
