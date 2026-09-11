@@ -103,7 +103,7 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 16px; font-weight: 600; padding: 16px 32px; border-radius: 10px; border: none;
   transition: transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease;
 }
-.btn-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 24px rgba(77,227,255,.25); }
+.btn-primary:hover, .btn-primary:focus { color: var(--on-cyan); transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 24px rgba(77,227,255,.25); }
 .footer-row {
   padding: 34px 56px 60px; display: flex; justify-content: space-between;
   font-size: 13px; color: var(--ink-faint); flex-wrap: wrap; gap: 16px;
