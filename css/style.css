@@ -452,8 +452,37 @@ img.zoomable:hover { filter: brightness(1.08); }
 @media (max-width: 640px) {
   .site-header, .footer-row, .cta-block, .section, .catalog-header, .catalog-controls,
   .table-list, .timeline-header, .event-spine, .two-col { padding-left: 20px; padding-right: 20px; }
-  .table-row { grid-template-columns: 26px 36px minmax(0,1fr) auto; }
-  .row-badge { display: none; }
+  .table-row { grid-template-columns: 26px 36px minmax(0,1fr); gap: 12px; }
+  .table-row .thumb { width: 36px; height: 49px; }
+  .row-badge, .row-cta { display: none; }
+
+  .event-spine { padding: 44px 20px; }
+  .event { grid-template-columns: 80px 1fr; gap: 14px; }
+  .event-left { text-align: left; }
+  .event-date { font-size: 10px; }
+  .event-right { padding-left: 18px; }
+  .event-title { font-size: 18px; }
+  .event.featured .event-title { font-size: 24px; }
+  .event.featured .event-right { padding: 22px 20px; }
+  .weekday-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px 8px; }
+  .weekday-card { padding: 14px 10px; }
+  .weekday-count { font-size: 20px; }
+
+  .commit-row {
+    grid-template-columns: 24px minmax(0, 1fr) auto;
+    grid-template-areas: "btn msg msg" "btn date author";
+    row-gap: 6px; gap: 10px; padding: 14px 4px;
+  }
+  .commit-btn { grid-area: btn; }
+  .commit-msg { grid-area: msg; white-space: normal; overflow-wrap: anywhere; }
+  .commit-date { grid-area: date; }
+  .commit-author { grid-area: author; text-align: right; }
+  .commit-hash { display: none; }
+  .commit-expanded { padding-left: 30px; }
+}
+
+@media (max-width: 420px) {
+  .weekday-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 /* ---------- Lightbox ---------- */
