@@ -315,6 +315,8 @@ button { font-family: inherit; cursor: pointer; }
 .table-body { padding: 10px 6px 44px 58px; }
 .art-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 48px; align-items: start; margin-bottom: 48px; }
 .art-meta img.launcher-art { max-width: 300px; width: 100%; border: 1px solid var(--border-strong); border-radius: 12px; display: block; }
+img.zoomable { cursor: zoom-in; transition: filter .2s ease; }
+img.zoomable:hover { filter: brightness(1.08); }
 .tagline { font-size: 17px; color: var(--pink); font-style: italic; margin-bottom: 26px; }
 .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 40px; }
 .meta-pair { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
@@ -448,4 +450,38 @@ button { font-family: inherit; cursor: pointer; }
   .table-list, .timeline-header, .event-spine, .two-col { padding-left: 20px; padding-right: 20px; }
   .table-row { grid-template-columns: 26px 36px minmax(0,1fr) auto; }
   .row-badge { display: none; }
+}
+
+/* ---------- Lightbox ---------- */
+body.lightbox-locked { overflow: hidden; }
+.lightbox-overlay {
+  position: fixed; inset: 0; z-index: 10000; background: rgba(5,7,9,.92);
+  display: none; align-items: center; justify-content: center; padding: 48px;
+  opacity: 0; transition: opacity .2s ease;
+}
+.lightbox-overlay.open { display: flex; opacity: 1; }
+.lightbox-scroll {
+  max-width: 100%; max-height: 100%; overflow: auto; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.lightbox-scroll.zoomed { display: block; cursor: grab; }
+.lightbox-img {
+  max-width: 100%; max-height: calc(100vh - 96px); object-fit: contain; cursor: zoom-in;
+  border-radius: 6px; box-shadow: 0 20px 60px rgba(0,0,0,.5); display: block;
+}
+.lightbox-img.zoomed { max-width: none; max-height: none; width: auto; cursor: zoom-out; }
+.lightbox-close {
+  position: fixed; top: 24px; right: 28px; width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--border-strong); background: var(--surface-raised); color: var(--ink);
+  font-size: 24px; line-height: 1; cursor: pointer; transition: transform .2s ease, border-color .2s ease;
+}
+.lightbox-close:hover { transform: scale(1.08) rotate(90deg); border-color: var(--cyan); }
+.lightbox-caption {
+  position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
+  font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-faint);
+  max-width: 80vw; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+@media (max-width: 640px) {
+  .lightbox-overlay { padding: 16px; }
+  .lightbox-close { top: 12px; right: 12px; width: 38px; height: 38px; font-size: 20px; }
 }

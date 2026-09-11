@@ -134,7 +134,7 @@
     const entry = entryBySlug(slug);
     const m = window.TABLE_META && window.TABLE_META[slug];
     const artHtml = entry.art
-      ? `<img class="launcher-art" src="assets/launchers/${slug}.png" alt="${esc(entry.name)} launcher art">`
+      ? `<img class="launcher-art zoomable" src="assets/launchers/${slug}.png" alt="${esc(entry.name)} launcher art">`
       : `<div class="thumb" style="width:100%;max-width:300px;height:300px"></div>`;
 
     let metaHtml;
@@ -161,7 +161,7 @@
       <div class="history-block">
         <h4>launcher.png history</h4>
         <p class="desc">Every launcher art revision for this table, side by side.</p>
-        <div class="history-frame"><img src="assets/launcher-history/${slug}.png" alt="${esc(entry.name)} launcher history"></div>
+        <div class="history-frame"><img class="zoomable" src="assets/launcher-history/${slug}.png" alt="${esc(entry.name)} launcher history"></div>
       </div>` : "";
 
     el.innerHTML = `
