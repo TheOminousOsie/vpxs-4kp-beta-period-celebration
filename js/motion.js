@@ -89,6 +89,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     if (window.initClickBurst) window.initClickBurst();
+    if (window.initFireworksToggle) window.initFireworksToggle();
     initKpiReveal();
     initGrowReveal();
     initEventReveal();

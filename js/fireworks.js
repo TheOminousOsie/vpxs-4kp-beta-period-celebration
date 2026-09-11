@@ -1,10 +1,27 @@
 (function () {
   const PALETTE = ["#4de3ff", "#ffb84d", "#ffffff", "#7bf0d0", "#ff8fb1"];
 
+  let fireworksEnabled = true;
+  try {
+    const stored = localStorage.getItem("fireworksDisabled");
+    if (stored !== null) fireworksEnabled = stored !== "1";
+  } catch (e) {}
+  const toggleListeners = [];
+
+  function setFireworksEnabled(v) {
+    fireworksEnabled = v;
+    try { localStorage.setItem("fireworksDisabled", v ? "0" : "1"); } catch (e) {}
+    toggleListeners.forEach((fn) => fn(v));
+  }
+  window.setFireworksEnabled = setFireworksEnabled;
+  window.isFireworksEnabled = () => fireworksEnabled;
+  window.onFireworksToggle = (fn) => toggleListeners.push(fn);
+
   function initFireworks(canvas) {
     const ctx = canvas.getContext("2d");
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const state = {
-      on: !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+      on: fireworksEnabled && !reduced,
       rate: 2,
       rockets: [],
       particles: [],
@@ -117,12 +134,17 @@
     }
     state.raf = requestAnimationFrame(frame);
 
+    function onToggle(v) { state.on = v && !reduced; }
+    toggleListeners.push(onToggle);
+
     return {
       setOn(v) { state.on = v; },
       setRate(v) { state.rate = v; },
       destroy() {
         cancelAnimationFrame(state.raf);
         ro.disconnect();
+        const idx = toggleListeners.indexOf(onToggle);
+        if (idx > -1) toggleListeners.splice(idx, 1);
       }
     };
   }
@@ -197,14 +219,38 @@
 
     if (!reduced) {
       document.addEventListener("click", (e) => {
-        if (particles.length > 600) return;
+        if (!fireworksEnabled || particles.length > 600) return;
+        if (e.target.closest(".fireworks-toggle, .lightbox-overlay")) return;
         burst(e.clientX, e.clientY, null, (36 + Math.random() * 32) | 0, 2);
       });
     }
 
-    window.spawnBurst = burst;
+    window.spawnBurst = (x, y, color, size, scale) => {
+      if (!fireworksEnabled) return;
+      burst(x, y, color, size, scale);
+    };
+  }
+
+  function initFireworksToggle() {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const widget = document.createElement("div");
+    widget.className = "fireworks-toggle";
+    widget.innerHTML = `
+      <span class="fireworks-toggle-label">🎆 Fireworks</span>
+      <label class="fw-switch">
+        <input type="checkbox" id="fireworksEnableCheckbox"${fireworksEnabled ? " checked" : ""}>
+        <span class="fw-slider"></span>
+      </label>
+    `;
+    document.body.appendChild(widget);
+    const checkbox = widget.querySelector("#fireworksEnableCheckbox");
+    checkbox.addEventListener("change", () => setFireworksEnabled(checkbox.checked));
+    if (reduced) {
+      widget.querySelector(".fireworks-toggle-label").textContent = "🎆 Fireworks (reduced motion on)";
+    }
   }
 
   window.initFireworks = initFireworks;
   window.initClickBurst = initClickBurst;
+  window.initFireworksToggle = initFireworksToggle;
 })();
