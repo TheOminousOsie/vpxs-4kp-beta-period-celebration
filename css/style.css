@@ -187,6 +187,7 @@ button { font-family: inherit; cursor: pointer; }
 .section { padding: 72px 56px; border-bottom: 1px solid var(--rule); }
 .section h2 { font-size: 36px; font-weight: 700; letter-spacing: -.02em; margin: 0 0 12px; }
 .section .body-copy { font-size: 16px; color: var(--ink-subtle); max-width: 620px; margin-bottom: 44px; line-height: 1.6; }
+.section .two-col { padding-left: 0; padding-right: 0; border-bottom: none; }
 
 /* ---------- Bar chart (generic) ---------- */
 .bar-chart { display: flex; align-items: flex-end; gap: 6px; border-bottom: 1px solid var(--border-strong); }
@@ -464,6 +465,7 @@ img.zoomable:hover { filter: brightness(1.08); }
 @media (max-width: 640px) {
   .site-header, .footer-row, .cta-block, .section, .catalog-header, .catalog-controls,
   .table-list, .timeline-header, .event-spine, .two-col { padding-left: 20px; padding-right: 20px; }
+  .section .two-col { padding-left: 0; padding-right: 0; }
   .table-row { grid-template-columns: 26px 36px minmax(0,1fr); gap: 12px; }
   .table-row .thumb { width: 36px; height: 49px; }
   .row-badge, .row-cta { display: none; }
