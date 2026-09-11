@@ -166,8 +166,9 @@ window.SITE_DATA = {
     { date: "18 JUL 2026", who: "v2.0.0", title: "Version 2 of the wizard", body: "Seventy-four tables revised against the new config format in one release, followed by ten more releases inside a fortnight as the format settled.", meta: "v2.0.0 · +9 tables, 74 updated", color: "#ffb84d" },
     { date: "22 JUL 2026", who: "Wraith", title: "Total Nuclear Annihilation joins the wizard", body: "A genuine technical achievement to get running — Wraith worked relentlessly to make it happen. Osie's white whale, finally landed.", meta: "Wraith · wizard release", color: "#4de3ff" },
     { date: "AUG — SEP 2026", who: "pinballwizard2023, Wraith, dasme, Bla1ze", title: "The final table push", body: "Twenty-five tables added to the wizard in the last eight weeks of beta, alongside a full pass of launcher logo and art updates.", meta: "25 wizard additions · 240 commits", color: "#4de3ff" },
-    { date: "7 SEP 2026", who: "v2.0.10", title: "Last release of the beta", body: "Twenty-one new tables and sixteen updates — the biggest single addition since April 2025, three days before the beta closed.", meta: "v2.0.10 · +21 tables, 16 updated", color: "#4de3ff" },
-    { date: "10 SEP 2026", who: "pinballwizard2023", title: "Adding Alien Poker to Wiz", body: "02:04 in the morning, table 315, the last commit of the beta. The Public Release ships this week.", meta: "47c157b · #2205", color: "#ffb3d1" }
+    { date: "7 SEP 2026", who: "v2.0.10", title: "Biggest release in over a year", body: "Twenty-one new tables and sixteen updates — the biggest release in over a year, eight days before the beta closed.", meta: "v2.0.10 · +21 tables, 16 updated", color: "#4de3ff" },
+    { date: "10 SEP 2026 · 23:18", who: "v2.0.11", title: "One last release, quietly", body: "Nine new tables and twenty-eight updates slipped in just hours before the public release — proof the project didn't slow down even at the very end.", meta: "v2.0.11 · +9 tables, 28 updated", color: "#4de3ff" },
+    { date: "15 SEP 2026", who: "Everyone", title: "PUBLIC RELEASE! 🎉", body: "Two years, 788 days, 7,819 commits and 324 tables later, Table Manager is out of beta and into everyone's hands. Every name on this page helped build it — thank you.", meta: "Public Release · 324 tables shipped", color: "#ffb3d1", featured: true }
   ],
 
   joinsByMonth: {
