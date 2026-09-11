@@ -533,6 +533,17 @@ body.lightbox-locked { overflow: hidden; }
   .lightbox-close { top: 12px; right: 12px; width: 38px; height: 38px; font-size: 20px; }
 }
 
+/* ---------- Accuracy note ---------- */
+.accurate-note {
+  position: fixed; bottom: 22px; left: 22px; z-index: 9998;
+  background: var(--surface-raised); border: 1px solid var(--border-strong); border-radius: 999px;
+  padding: 10px 16px; font-size: 12px; color: var(--ink-faint);
+  box-shadow: 0 8px 24px rgba(0,0,0,.4);
+}
+@media (max-width: 640px) {
+  .accurate-note { left: 12px; bottom: 12px; padding: 8px 12px; font-size: 11px; }
+}
+
 /* ---------- Fireworks toggle ---------- */
 .fireworks-toggle {
   position: fixed; bottom: 22px; right: 22px; z-index: 9998;
