@@ -106,7 +106,7 @@ window.SITE_DATA = {
     ["n-i-x", 550], ["Boris", 275], ["Kaoticbpr", 176], ["Old-Cyrus", 171],
     ["psybocilin", 156], ["T3chZombie", 143], ["bhhobb", 137], ["Mike", 128],
     ["mrandromeda", 92], ["tschules17", 85], ["shavendave", 77], ["Silentkat4000", 69],
-    ["MoxAssault", 66], ["Mar3nBu", 51], ["kingargyle", 44], ["James Rainaldi", 37],
+    ["Mox", 66], ["Mar3nBu", 51], ["kingargyle", 44], ["James Rainaldi", 37],
     ["SScorpio", 33], ["Harley", 28], ["Reboot", 28], ["CoffeeAtJoes", 27],
     ["SScorpio00", 26], ["Parceval81", 26], ["Officially-Unofficial", 22], ["Silentkat", 21],
     ["bhobman", 21], ["ricardoHoarH", 18], ["sotie99", 18], ["Travis", 17],
