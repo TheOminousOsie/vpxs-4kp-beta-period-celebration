@@ -184,7 +184,10 @@
       <div class="history-block">
         <h4>launcher.png history</h4>
         <p class="desc">Every launcher art revision for this table, side by side.</p>
-        <div class="history-frame"><img class="zoomable" src="assets/launcher-history/${slug}.png" alt="${esc(entry.name)} launcher history"></div>
+        <div class="history-frame">
+          <div class="history-loading mono">LOADING…</div>
+          <img class="zoomable" src="assets/launcher-history/${slug}.png" alt="${esc(entry.name)} launcher history" loading="lazy" onload="this.parentElement.classList.add('loaded')" onerror="this.parentElement.classList.add('loaded')">
+        </div>
         <p class="credit mono"><span class="credit-label">Art by the Legends Unchained Art Department:</span> <span class="credit-names">'Coffee' Joe, pointdablame, fluons, Wraith</span></p>
         <p class="credit-note mono">Hand made exclusive custom wheel art, launcher images, dmd images and more!</p>
       </div>` : "";

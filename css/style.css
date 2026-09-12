@@ -341,9 +341,21 @@ img.zoomable:hover { filter: brightness(1.08); }
 .history-block .desc { font-size: 14px; color: var(--ink-subtle); max-width: 660px; margin-bottom: 20px; line-height: 1.6; }
 .history-frame {
   border: 1px solid var(--border); border-radius: 12px; background: var(--surface-deep); padding: 16px;
-  overflow-x: auto;
+  overflow-x: auto; position: relative; min-height: 170px;
 }
-.history-frame img { width: 100%; min-width: 860px; display: block; }
+.history-frame img { width: 100%; min-width: 860px; display: block; opacity: 0; transition: opacity .3s ease; }
+.history-frame.loaded img { opacity: 1; }
+.history-loading {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  gap: 10px; font-size: 11px; letter-spacing: .12em; color: var(--ink-faint);
+}
+.history-loading::before {
+  content: ""; width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid var(--border-strong); border-top-color: var(--cyan);
+  animation: history-spin .8s linear infinite;
+}
+.history-frame.loaded .history-loading { display: none; }
+@keyframes history-spin { to { transform: rotate(360deg); } }
 .history-block .credit { font-size: 12px; letter-spacing: .04em; color: var(--ink-faint); margin-top: 10px; }
 .history-block .credit-label { color: var(--amber); font-weight: 600; }
 .history-block .credit-names { color: var(--cyan); }
