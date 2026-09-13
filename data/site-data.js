@@ -2,7 +2,7 @@ window.SITE_DATA = {
   kpiOverview: [
     { value: "250", label: "members in the beta Discord" },
     { value: "7,819", label: "commits across the whole beta" },
-    { value: "63", label: "of those 250 pushed commits" },
+    { value: "60", label: "of those 250 pushed commits" },
     { value: "324", label: "wizard-ready tables at launch" },
     { value: "1,926", label: "pull requests merged" },
     { value: "788", label: "days from first commit to public release" }
@@ -103,21 +103,20 @@ window.SITE_DATA = {
 
   contributorWall: [
     ["lilalien", 1933], ["OminousOsie", 1704], ["Bla1ze", 817], ["Wraith", 600],
-    ["n-i-x", 550], ["Boris", 275], ["Kaoticbpr", 176], ["Old-Cyrus", 171],
-    ["psybocilin", 156], ["T3chZombie", 143], ["bhhobb", 137], ["Mike", 128],
-    ["mrandromeda", 92], ["tschules17", 85], ["shavendave", 77], ["Silentkat4000", 69],
-    ["Mox", 66], ["Mar3nBu", 51], ["kingargyle", 44], ["James R.", 37],
-    ["SScorpio", 33], ["Harley", 28], ["Reboot", 28], ["CoffeeAtJoes", 27],
-    ["SScorpio00", 26], ["Parceval81", 26], ["Officially-Unofficial", 22], ["Silentkat", 21],
-    ["bhobman", 21], ["ricardoHoarH", 18], ["sotie99", 18], ["Travis", 17],
-    ["damien-crypto", 16], ["MissleToad", 14], ["FilthTribeFTP", 13], ["Brian-CK", 13],
-    ["pointdablame", 12], ["vfirebirdGH", 12], ["Joe F.", 12], ["ShotgunSean", 12],
-    ["Chad S.", 11], ["HereForGear", 11], ["pinballwizard2023", 10], ["Marine50", 10],
-    ["Matt C.", 10], ["Skully1963", 9], ["github-actions[bot]", 8], ["Mr-Blue", 6],
-    ["rocjr73", 6], ["Paul B.", 6], ["dasme", 5], ["Khrymsyn", 5],
-    ["cth77277", 5], ["Dr-Wraith", 3], ["Blue Öyster Curt on Discord", 2], ["dioskilos", 2],
-    ["B-Woo7376", 2], ["thtanner", 2], ["ricardo-hoar", 2], ["Mr-Blue0815", 1],
-    ["David C.", 1], ["Victor P.", 1], ["vicpac73", 1]
+    ["n-i-x", 550], ["Boris", 275], ["Kaoticbpr", 176], ["Curt", 171],
+    ["psybocilin", 156], ["TechZombie", 143], ["bhhob", 137], ["mcap", 128],
+    ["mrandromeda", 92], ["Silentkat", 90], ["tschules17", 85], ["shaver", 77],
+    ["Mox", 66], ["Mar3nBu", 51], ["kingargyle", 45], ["lloydbraun", 37],
+    ["SScorpio", 33], ["fAthAwg", 28], ["Reboot", 28], ["Coffee Joe", 27],
+    ["SScorpio00", 26], ["Parceval", 26], ["Officially-Unofficial", 22], ["bhobman", 21],
+    ["Rick", 18], ["sotie99", 18], ["Travis", 17], ["bofgi", 16],
+    ["Missile Toad", 14], ["vicpac73", 13], ["Filth", 13], ["BrianCK", 13],
+    ["pointdablame", 12], ["gyrojoe", 12], ["ShotgunSean", 12], ["lordskylar", 11],
+    ["HereForGear", 11], ["pinballwizard2023", 10], ["Marine50", 10], ["colforbin13", 10],
+    ["Skully1963", 9], ["github-actions[bot]", 8], ["Mr-Blue", 6], ["rocjr73", 6],
+    ["Sscorpio", 6], ["dasme", 5], ["Khrymsyn", 5], ["cth77277", 5],
+    ["Dr-Wraith", 3], ["Blue Öyster Curt on Discord", 2], ["dioskilos", 2], ["B-Woo", 2],
+    ["thtanner", 2], ["ricardo-hoar", 2], ["Mr-Blue0815", 1], ["Victor P.", 1]
   ],
 
   discordJoins: {
